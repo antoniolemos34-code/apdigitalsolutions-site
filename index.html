@@ -6,6 +6,7 @@
   <title>AP Digital Solutions Jersey</title>
 
   <meta name="description" content="AP Digital Solutions Jersey — Websites, chatbots e presença digital para negócios locais em Jersey.">
+  <meta name="author" content="AP Digital Solutions Jersey">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,375 +19,532 @@
       --bg: #f8f3e8;
       --panel: #ffffff;
       --panel-soft: #f5ecde;
-      --text: #163328;
-      --muted: #6f756e;
-      --accent: #0c5f42;
-      --accent-2: #084d34;
+      --text: #132920;
+      --muted: #6b716b;
+      --accent: #0b5b3e;
+      --accent-2: #08412c;
       --border: #e1d5c2;
-      --link: #0c5f42;
+      --link: #0b5b3e;
     }
 
     body {
       margin: 0;
-      font-family: 'Poppins', system-ui, sans-serif;
-      background: #f8f3e8;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background:
+        radial-gradient(circle at top left, #fdf7ec 0, transparent 55%),
+        radial-gradient(circle at bottom right, #e6f3eb 0, #f8f3e8 70%);
       color: var(--text);
       line-height: 1.5;
     }
 
-    a { color: var(--link); }
+    a { color: var(--link); text-decoration: none; }
 
     .page {
       max-width: 1100px;
-      margin: 12px auto;
-      background: #fff;
+      margin: 14px auto 24px;
+      background: rgba(255,255,255,0.95);
       border-radius: 22px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.07);
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 0 35px rgba(0,0,0,0.08);
       overflow: hidden;
-      border: 1px solid #eee;
     }
 
+    /* TOPBAR */
     .topbar {
       background: var(--accent);
-      color: white;
-      padding: 7px 18px;
+      color: #fff;
       font-size: 0.85rem;
+      padding: 6px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .topbar a {
+      color:#fff;
+      font-weight:600;
     }
 
+    /* NAV */
     header {
       position: sticky;
       top: 0;
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      z-index: 20;
+      background: #fffdf8d9;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
     }
-
     .nav {
       max-width: 1050px;
-      margin: auto;
-      padding: 14px 20px;
+      margin: 0 auto;
+      padding: 12px 20px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
     }
-
-    .logo-circle {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 700;
-    }
-
     .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--text);
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      font-weight: 700;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--text);
+    }
+    .logo-circle {
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:0.9rem;
+      font-weight:700;
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);
+    }
+    .logo-text {
+      text-transform:uppercase;
+      font-size:0.9rem;
+      letter-spacing:0.06em;
+      font-weight:700;
     }
 
+    nav {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:0.85rem;
+      flex-wrap:wrap;
+    }
     nav a {
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-left: 12px;
+      color:var(--muted);
     }
-
+    nav a:hover {
+      color:var(--text);
+      text-decoration:underline;
+    }
     .nav-wa {
-      background: var(--accent);
-      padding: 7px 14px;
-      border-radius: 999px;
-      color: white !important;
-      font-weight: 600;
+      padding:7px 14px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#fff !important;
+      font-weight:600;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
     }
 
-    section { padding: 60px 0; }
-
-    .hero-section {
-      padding: 70px 0;
-      text-align: left;
-      background: radial-gradient(circle at top right, rgba(12,95,66,0.12), transparent 70%);
+    .container {
+      max-width:1050px;
+      margin:0 auto;
+      padding:0 20px;
     }
 
+    section {
+      padding:58px 0;
+    }
+
+    /* HERO */
+    .hero {
+      padding:70px 0 60px;
+      text-align:left;
+      background:
+        radial-gradient(circle at top right, rgba(11,91,62,0.10), transparent 65%);
+    }
     .hero-inner {
-      max-width: 650px;
-      margin-left: 20px;
+      max-width:680px;
     }
-
     .hero-label {
-      font-size: 0.75rem;
-      background: #fff3df;
-      border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 999px;
-      color: var(--muted);
-      display: inline-block;
-      margin-bottom: 10px;
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      background:#fff3df;
+      border:1px solid var(--border);
+      font-size:0.75rem;
+      color:var(--muted);
+      margin-bottom:10px;
     }
-
-    .hero-text { color: var(--muted); }
-
+    h1 {
+      margin:0 0 10px;
+      font-size:clamp(30px,5vw,44px);
+    }
+    h1 span {
+      color:var(--accent-2);
+    }
+    .hero-text {
+      color:var(--muted);
+      font-size:0.96rem;
+      max-width:520px;
+      margin-bottom:18px;
+    }
+    .hero-ctas {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:12px;
+    }
     .btn-primary {
-      background: var(--accent);
-      color: white;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      margin-right: 10px;
-      display: inline-block;
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#fff;
+      font-weight:600;
+      font-size:0.9rem;
+      box-shadow:0 8px 18px rgba(0,0,0,0.28);
     }
-
     .btn-outline {
-      border: 1px solid var(--border);
-      padding: 10px 18px;
-      border-radius: 999px;
-      color: var(--muted);
-      text-decoration: none;
+      display:inline-block;
+      padding:9px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fffaf2;
+      color:var(--muted);
+      font-size:0.85rem;
+    }
+    .hero-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      font-size:0.8rem;
+      color:var(--muted);
     }
 
-    .section-title {
-      text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 6px;
+    /* SECTIONS */
+    h2.section-title {
+      text-align:center;
+      font-size:1.7rem;
+      margin:0 0 6px;
     }
-
     .sub {
-      text-align: center;
-      color: var(--muted);
-      margin-bottom: 20px;
+      text-align:center;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin:0 0 24px;
     }
 
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
     }
 
     .card {
-      background: white;
-      border-radius: 18px;
-      padding: 20px;
-      border: 1px solid var(--border);
+      background:var(--panel);
+      border-radius:18px;
+      padding:20px;
+      border:1px solid var(--border);
+      box-shadow:0 8px 16px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin:0 0 8px;
+      font-size:1.05rem;
+      color:var(--accent-2);
+    }
+    .card p {
+      margin:0;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    .pill-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:10px;
+    }
+    .pill {
+      font-size:0.75rem;
+      padding:4px 9px;
+      border-radius:999px;
+      background:#fff6e6;
+      border:1px solid var(--border);
+      color:var(--muted);
+    }
+
+    .pricing .price {
+      font-size:1.6rem;
+      font-weight:700;
+      color:var(--accent-2);
+      margin:4px 0 10px;
+    }
+    .tag {
+      display:inline-block;
+      font-size:0.7rem;
+      text-transform:uppercase;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#e7f3ec;
+      color:var(--accent-2);
+      margin-bottom:6px;
+    }
+    .list {
+      margin:0;
+      padding-left:18px;
+      font-size:0.9rem;
+      color:var(--muted);
     }
 
     .portfolio-box {
-      background: #f6efe2;
-      border: 1px dashed var(--border);
-      padding: 14px;
-      border-radius: 14px;
-      font-size: 0.9rem;
-      color: var(--muted);
+      border-radius:14px;
+      background:linear-gradient(135deg,rgba(11,91,62,0.06),rgba(255,244,228,0.85));
+      border:1px dashed var(--border);
+      padding:14px;
+      font-size:0.9rem;
+      color:var(--muted);
+      min-height:110px;
+    }
+
+    /* CONTACT / SOCIAL */
+    .contact-card {
+      text-align:center;
+    }
+    .contact-card p {
+      margin:4px 0;
+      font-size:0.95rem;
+    }
+    .social-links {
+      margin-top:12px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      font-size:0.9rem;
+    }
+    .social-links a {
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fffaf2;
+      color:var(--accent-2);
     }
 
     footer {
-      text-align: center;
-      padding: 18px;
-      background: #fff4e3;
-      font-size: 0.85rem;
-      color: var(--muted);
+      text-align:center;
+      padding:16px;
+      font-size:0.85rem;
+      color:var(--muted);
+      background:#fff4e4;
+      border-top:1px solid var(--border);
+    }
+
+    @media (max-width: 720px) {
+      .nav { justify-content:space-between; }
     }
   </style>
 </head>
-
 <body>
+  <div class="page">
 
-<div class="page">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <span>AP Digital Solutions • Jersey, Channel Islands</span>
+      <a href="https://wa.me/447700704591" target="_blank" rel="noopener">WhatsApp: 07700 704591</a>
+    </div>
 
-  <!-- Top WhatsApp Bar -->
-  <div class="topbar">
-    <span>AP Digital Solutions • Jersey</span>
-    <a href="https://wa.me/447700704591" target="_blank">WhatsApp: 07700 704591</a>
+    <!-- HEADER -->
+    <header>
+      <div class="nav">
+        <a href="#home" class="logo-wrap">
+          <div class="logo-circle">AP</div>
+          <div class="logo-text">AP Digital Solutions</div>
+        </a>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#jersey">Jersey</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a href="https://wa.me/447700704591" class="nav-wa" target="_blank" rel="noopener">WhatsApp</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO (sem box, sem imagens) -->
+    <main id="home">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-label">Websites • Chatbots • Social Media</div>
+            <h1>Helping <span>Jersey businesses</span> look professional online.</h1>
+            <p class="hero-text">
+              Simple, modern websites and AI chatbots that send clients straight to your WhatsApp — ideal for cafés, trades and small local businesses in Jersey.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              <a class="btn-outline" href="#pricing">See pricing</a>
+            </div>
+            <div class="hero-meta">
+              <span>3–5 day delivery</span>
+              <span>Made in Jersey</span>
+              <span>No long contracts</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">Services</h2>
+          <p class="sub">Everything you need for a clean online presence in Jersey.</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Website Development</h3>
+              <p>Modern, mobile-friendly sites that look good on phones and send people to your WhatsApp.</p>
+              <div class="pill-row">
+                <span class="pill">1–3 pages</span>
+                <span class="pill">Hosting help</span>
+                <span class="pill">Local SEO basics</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Chatbot Creation</h3>
+              <p>AI chatbots that answer common questions 24/7 and collect leads while you work.</p>
+              <div class="pill-row">
+                <span class="pill">Website &amp; WhatsApp</span>
+                <span class="pill">Custom flows</span>
+                <span class="pill">Lead capture</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Social Media Setup</h3>
+              <p>Facebook and Instagram setup or refresh, with everything linked to your site and WhatsApp.</p>
+              <div class="pill-row">
+                <span class="pill">Facebook</span>
+                <span class="pill">Instagram</span>
+                <span class="pill">Link in bio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- JERSEY -->
+      <section id="jersey">
+        <div class="container">
+          <h2 class="section-title">Jersey Inspired</h2>
+          <p class="sub">Start simple now. Later you can add your own Jersey photos and work examples.</p>
+          <div class="grid">
+            <div class="card">
+              <div class="portfolio-box">
+                Clean hero section with strong message and WhatsApp button — works with or without images.
+              </div>
+            </div>
+            <div class="card">
+              <div class="portfolio-box">
+                Service cards highlighting what you do in Jersey, easy to read on mobile.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing">
+        <div class="container">
+          <h2 class="section-title">Pricing</h2>
+          <p class="sub">Simple packages for small Jersey businesses.</p>
+          <div class="grid pricing">
+            <div class="card">
+              <span class="tag">Starter</span>
+              <h3>Starter Site</h3>
+              <div class="price">£199</div>
+              <ul class="list">
+                <li>One-page website</li>
+                <li>Mobile-friendly design</li>
+                <li>WhatsApp &amp; contact buttons</li>
+                <li>Basic SEO setup</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">Popular</span>
+              <h3>Business Chatbot</h3>
+              <div class="price">£99 + £10/mo</div>
+              <ul class="list">
+                <li>Website or WhatsApp chatbot</li>
+                <li>Predefined answers</li>
+                <li>Leads sent to your email</li>
+                <li>Small monthly tweaks included</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">Bundle</span>
+              <h3>Pro Bundle</h3>
+              <div class="price">£349</div>
+              <ul class="list">
+                <li>Website + chatbot</li>
+                <li>Social media setup</li>
+                <li>Local SEO basics</li>
+                <li>One month of support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS – só 2, sem Bernardo -->
+      <section id="testimonials">
+        <div class="container">
+          <h2 class="section-title">Testimonials</h2>
+          <p class="sub">Examples of how digital can help local businesses.</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Local Café, St Helier</h3>
+              <p>“Super quick and friendly service. Our customers get answers instantly and stop calling just for simple questions.”</p>
+            </div>
+            <div class="card">
+              <h3>Cleaning Services Jersey</h3>
+              <p>“Great value. The chatbot reduced our phone calls by half and clients now contact us outside office hours.”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="container">
+          <h2 class="section-title">FAQ</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>How fast is delivery?</h3>
+              <p>Normally 3–5 days depending on the package and how quickly you send us your information.</p>
+            </div>
+            <div class="card">
+              <h3>Can you manage my site?</h3>
+              <p>Yes. We can update your site monthly, add new content and change text or photos when needed.</p>
+            </div>
+            <div class="card">
+              <h3>Is WhatsApp included?</h3>
+              <p>Yes. All packages include WhatsApp buttons and we can connect the chatbot to WhatsApp as well.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <p class="sub">One WhatsApp message and we guide you step by step.</p>
+          <div class="card contact-card">
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/447700704591" target="_blank" rel="noopener">07700 704591</a></p>
+            <p><strong>Email:</strong> <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a></p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/apdigitalsolution.je?igsh=MXA1dXMzaTh5bG1ncg==" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://x.com" target="_blank" rel="noopener">X</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 AP Digital Solutions | Jersey, Channel Islands
+    </footer>
   </div>
-
-  <!-- Header -->
-  <header>
-    <div class="nav">
-      <a class="logo-wrap" href="#">
-        <div class="logo-circle">AP</div>
-        <span>AP Digital Solutions</span>
-      </a>
-
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#jersey">Jersey</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-wa" href="https://wa.me/447700704591" target="_blank">WhatsApp</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO (Sem box ao lado) -->
-  <section class="hero-section">
-    <div class="hero-inner">
-      <div class="hero-label">Websites • Chatbots • Social Media</div>
-
-      <h1>Helping <span style="color:var(--accent-2)">Jersey businesses</span> look professional online.</h1>
-
-      <p class="hero-text">
-        Simple, modern websites and AI chatbots that send clients straight to your WhatsApp – perfect for cafés, trades and local businesses.
-      </p>
-
-      <a class="btn-primary" href="https://wa.me/447700704591" target="_blank">Chat on WhatsApp</a>
-      <a class="btn-outline" href="#pricing">See pricing</a>
-
-      <p style="margin-top:14px; font-size:0.85rem; color:var(--muted);">
-        3–5 day delivery • Made in Jersey • No long contracts
-      </p>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Services</h2>
-      <p class="sub">Everything your small business needs.</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Website Development</h3>
-          <p>Modern, mobile-friendly, WhatsApp-connected websites.</p>
-        </div>
-
-        <div class="card">
-          <h3>Chatbot Creation</h3>
-          <p>AI chatbots for website and WhatsApp with custom answers.</p>
-        </div>
-
-        <div class="card">
-          <h3>Social Media Setup</h3>
-          <p>Facebook & Instagram setup with everything linked to your site.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- JERSEY -->
-  <section id="jersey">
-    <div class="container">
-      <h2 class="section-title">Jersey Inspired</h2>
-      <p class="sub">Add your own photos later if you want.</p>
-
-      <div class="grid">
-        <div class="card">
-          <div class="portfolio-box">
-            Clean hero section with WhatsApp button — no image required.
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="portfolio-box">
-            Simple layout that works with or without photos.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing">
-    <div class="container">
-      <h2 class="section-title">Pricing</h2>
-      <p class="sub">Affordable for small Jersey businesses.</p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Starter Site</h3>
-          <p><strong>£199</strong></p>
-          <p>One-page website, WhatsApp buttons, SEO basics.</p>
-        </div>
-
-        <div class="card">
-          <h3>Business Chatbot</h3>
-          <p><strong>£99 + £10/mo</strong></p>
-          <p>Website or WhatsApp chatbot with predefined answers.</p>
-        </div>
-
-        <div class="card">
-          <h3>Pro Bundle</h3>
-          <p><strong>£349</strong></p>
-          <p>Website + chatbot + social setup + SEO basics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS (Sem Bernardo) -->
-  <section id="testimonials">
-    <div class="container">
-      <h2 class="section-title">Testimonials</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Local Café, St Helier</h3>
-          <p>“Super quick and friendly service. Customers get answers instantly.”</p>
-        </div>
-
-        <div class="card">
-          <h3>Cleaning Services Jersey</h3>
-          <p>“Great value. Calls reduced by half thanks to the chatbot.”</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <h2 class="section-title">FAQ</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Delivery time?</h3>
-          <p>Usually 3–5 days depending on the project.</p>
-        </div>
-
-        <div class="card">
-          <h3>Site management?</h3>
-          <p>We can update your site monthly if needed.</p>
-        </div>
-
-        <div class="card">
-          <h3>WhatsApp included?</h3>
-          <p>Yes, all websites include WhatsApp buttons.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="sub">One WhatsApp message and we help you.</p>
-
-      <div class="card contact-card" style="text-align:center">
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/447700704591" target="_blank">07700 704591</a></p>
-        <p><strong>Email:</strong> apdigitalsolutions.je@outlook.com</p>
-      </div>
-
-    </div>
-  </section>
-
-</div>
-
-<footer>© 2025 AP Digital Solutions | Jersey</footer>
-
 </body>
 </html>
