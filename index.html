@@ -26,8 +26,6 @@
   --link: #0c5f42;
 }
 
-    
-
     body {
       margin: 0;
       font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -92,12 +90,22 @@
       text-decoration:none;
       color:var(--text);
     }
-    .logo-wrap img {
+
+    /* LOGO SIMPLES SEM FOTO */
+    .logo-circle {
       width:40px;
       height:40px;
       border-radius:50%;
-      object-fit:cover;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:0.8rem;
+      font-weight:700;
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);
     }
+
     .logo-wrap span {
       font-weight:700;
       letter-spacing:0.04em;
@@ -212,22 +220,44 @@
     .hero-media {
       background:var(--panel-soft);
       border-radius:18px;
-      padding:8px;
+      padding:16px;
       border:1px solid var(--border);
+      text-align:left;
     }
-    .hero-media img {
-      width:100%;
-      height:260px;
+
+    /* CAIXA EM VEZ DA FOTO NO TOPO */
+    .hero-media-title {
+      font-size:0.85rem;
+      font-weight:600;
+      color:var(--accent-2);
+      margin-bottom:6px;
+      text-transform:uppercase;
+      letter-spacing:0.04em;
+    }
+    .hero-media-box {
       border-radius:14px;
-      object-fit:cover;
-      display:block;
-    }
-    .hero-caption {
-      font-size:0.8rem;
-      color:var(--muted);
-      margin-top:6px;
+      min-height:180px;
+      background: linear-gradient(135deg, rgba(12,95,66,0.12), rgba(8,77,52,0.07));
+      border:1px dashed var(--border);
+      padding:14px;
       display:flex;
+      flex-direction:column;
       justify-content:space-between;
+      font-size:0.85rem;
+      color:var(--muted);
+    }
+    .hero-media-tags {
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:10px;
+      font-size:0.75rem;
+    }
+    .hero-media-tag {
+      padding:4px 9px;
+      border-radius:999px;
+      background:#fffaf2;
+      border:1px solid var(--border);
     }
 
     h2.section-title {
@@ -306,18 +336,29 @@
       margin-bottom:6px;
     }
 
-    /* PORTFOLIO */
-    .portfolio-img {
-      width:100%;
-      height:210px;
+    /* PORTFOLIO – SEM FOTOS, SÓ CAIXAS */
+    .portfolio-box {
       border-radius:14px;
-      object-fit:cover;
-      display:block;
-      margin-bottom:8px;
+      background:linear-gradient(135deg, rgba(12,95,66,0.08), rgba(255,244,228,0.7));
+      border:1px dashed var(--border);
+      padding:14px;
+      font-size:0.9rem;
+      color:var(--muted);
+      min-height:120px;
     }
+    .portfolio-label {
+      font-size:0.75rem;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      color:var(--accent-2);
+      margin-bottom:6px;
+    }
+
     .portfolio-caption {
       font-size:0.85rem;
       color:var(--muted);
+      margin-top:10px;
     }
 
     /* CONTACTO + REDES */
@@ -446,7 +487,7 @@
     <header>
       <div class="nav">
         <a href="#home" class="logo-wrap">
-          <img src="logo-ap.png" alt="AP Digital Solutions logo">
+          <div class="logo-circle">AP</div>
           <span>AP Digital Solutions</span>
         </a>
         <nav>
@@ -481,10 +522,16 @@
             </div>
           </div>
           <div class="hero-media">
-            <img src="hero-jersey.jpg" alt="Jersey coastline with tower">
-            <div class="hero-caption">
-              <span>Real Jersey photo on your site.</span>
-              <span>AP Digital Solutions</span>
+            <div class="hero-media-title">Digital marketing preview</div>
+            <div class="hero-media-box">
+              <div>
+                Looks like a clean digital marketing dashboard: website, chat bubbles and social icons – without needing a real photo.
+              </div>
+              <div class="hero-media-tags">
+                <span class="hero-media-tag">No images needed</span>
+                <span class="hero-media-tag">Fast loading</span>
+                <span class="hero-media-tag">Ready for your photos later</span>
+              </div>
             </div>
           </div>
         </div>
@@ -529,18 +576,24 @@
       <section id="jersey">
         <div class="container">
           <h2 class="section-title">Jersey Inspired</h2>
-          <p class="sub">Use your own photos so your site feels local, not like a generic template.</p>
+          <p class="sub">Later, you can add your own Jersey photos so your site feels local, not like a generic template.</p>
           <div class="grid">
             <div class="card">
-              <img class="portfolio-img" src="jersey-beach.jpg" alt="Beach in Jersey">
+              <div class="portfolio-box">
+                <div class="portfolio-label">Hero section</div>
+                Clean banner at the top with strong text and a WhatsApp button – works even without an image.
+              </div>
               <div class="portfolio-caption">
-                Hero sections and banners with real beaches and views your clients recognise.
+                When you have your own photo, we can replace this box with a real Jersey view.
               </div>
             </div>
             <div class="card">
-              <img class="portfolio-img" src="hero-jersey.jpg" alt="Coastline in Jersey">
+              <div class="portfolio-box">
+                <div class="portfolio-label">Service highlights</div>
+                Simple blocks describing your business and location, easy to read on mobile.
+              </div>
               <div class="portfolio-caption">
-                Show your island, your story and your work in one clean, simple page.
+                Perfect while you are still collecting photos or logos from your business.
               </div>
             </div>
           </div>
@@ -741,5 +794,3 @@
   </script>
 </body>
 </html>
-
- 
