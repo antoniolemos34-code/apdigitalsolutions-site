@@ -383,10 +383,27 @@
       border-top:1px solid var(--border);
     }
 
+    /* CHAT TOGGLE BUTTON */
+    .chat-toggle {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 49;
+      border-radius: 999px;
+      border: none;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+      cursor: pointer;
+    }
+
     /* CHATBOX */
     .chatbox {
       position: fixed;
-      bottom: 16px;
+      bottom: 60px;
       right: 16px;
       width: 280px;
       max-width: 90vw;
@@ -394,7 +411,7 @@
       border-radius:14px;
       box-shadow:0 10px 24px rgba(0,0,0,0.25);
       border:1px solid var(--border);
-      display:flex;
+      display:none; /* 🔴 AGORA COMEÇA ESCONDIDO */
       flex-direction:column;
       font-size:0.85rem;
       z-index: 50;
@@ -461,7 +478,8 @@
 
     @media (max-width: 720px) {
       .nav { justify-content:space-between; }
-      .chatbox { right:10px; left:10px; }
+      .chatbox { right:10px; left:10px; width:auto; }
+      .chat-toggle { right:10px; }
       .lang-switch { justify-content:flex-start; }
     }
   </style>
@@ -697,8 +715,13 @@
     </footer>
   </div>
 
+  <!-- BOTÃO PARA ABRIR O CHAT -->
+  <button class="chat-toggle" id="chat-toggle" aria-expanded="false" aria-controls="chatbox">
+    💬 Chat assistant
+  </button>
+
   <!-- CHATBOX INTERATIVO -->
-  <div class="chatbox" aria-live="polite">
+  <div class="chatbox" id="chatbox" aria-live="polite">
     <div class="chatbox-header">
       <span>AP Chat Assistant</span>
       <span class="badge">Online</span>
@@ -783,6 +806,21 @@
       }, 300);
     });
 
+    // BOTÃO ABRE / FECHA CHAT
+    const chatbox = document.getElementById('chatbox');
+    const chatToggle = document.getElementById('chat-toggle');
+
+    chatToggle.addEventListener('click', () => {
+      const isOpen = chatbox.style.display === 'flex';
+      if (isOpen) {
+        chatbox.style.display = 'none';
+        chatToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        chatbox.style.display = 'flex';
+        chatToggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+
     // MULTI-LANGUAGE TEXTS
     const translations = {
       en: {
@@ -862,7 +900,6 @@
       document.getElementById('chat-greeting').textContent = t.chatGreeting;
       document.getElementById('chat-input').placeholder = t.chatPlaceholder;
 
-      // update active button
       document.querySelectorAll('.lang-switch button').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
       });
@@ -879,4 +916,4 @@
     setLanguage('en');
   </script>
 </body>
-</html>
+      </html>
