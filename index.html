@@ -655,142 +655,91 @@
       &copy; 2025 AP Digital Solutions | Jersey, Channel Islands
     </footer>
   </div>
-
-  <!-- Chatbox -->
+  <!-- CHATBOX NOVA -->
   <div class="chatbox" aria-live="polite">
     <div class="chatbox-header">
       <span>AP Chat Assistant</span>
-      <span class="badge">Demo</span>
+      <span class="badge">Online</span>
     </div>
     <div id="chat-messages" class="chatbox-messages">
       <div class="msg bot">
         <div class="bubble">
-          Hi! Ask me about websites, chatbots, prices or delivery time.
+          Olá! 👋 Sou o assistente da AP Digital Solutions.  
+          Pergunta-me sobre websites, chatbots, preços ou tempo de entrega.
         </div>
       </div>
     </div>
     <form id="chat-form" class="chatbox-input">
-      <input id="chat-input" type="text" placeholder="Type a message..." aria-label="Type a message">
-      <button type="submit">Send</button>
+      <input id="chat-input" type="text" placeholder="Escreve a tua pergunta..." aria-label="Escreve a tua pergunta" />
+      <button type="submit">Enviar</button>
     </form>
-  </div><script>
-  const messages = document.getElementById('chat-messages');
-  const form = document.getElementById('chat-form');
-  const input = document.getElementById('chat-input');
+  </div>
 
-  function addMessage(role, text) {
-    const wrap = document.createElement('div');
-    wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
-    const bubble = document.createElement('div');
-    bubble.className = 'bubble';
-    bubble.textContent = text;
-    wrap.appendChild(bubble);
-    messages.appendChild(wrap);
-    messages.scrollTop = messages.scrollHeight;
-  }
+  <script>
+    const messages = document.getElementById('chat-messages');
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('chat-input');
 
-  function botReply(userText) {
-    const t = userText.toLowerCase();
-
-    // PALAVRAS EM PORTUGUÊS
-    if (t.includes('preço') || t.includes('precos') || t.includes('preço') || t.includes('price') || t.includes('cost')) {
-      return 'Starter Site £199 · Chatbot £99 + £10/mês · Pro Bundle £349. Posso explicar melhor no WhatsApp.';
+    function addMessage(role, text) {
+      const wrap = document.createElement('div');
+      wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      bubble.textContent = text;
+      wrap.appendChild(bubble);
+      messages.appendChild(wrap);
+      messages.scrollTop = messages.scrollHeight;
     }
 
-    if (t.includes('chatbot') || t.includes('bot') || t.includes('mensagem automática')) {
-      return 'Criamos chatbots para website e WhatsApp com respostas automáticas. Entrega em 3–5 dias.';
+    function botReply(userText) {
+      const t = userText.toLowerCase();
+
+      // Preços
+      if (t.includes('preço') || t.includes('precos') || t.includes('preco') || t.includes('price') || t.includes('cost')) {
+        return 'Starter Site £199 · Chatbot £99 + £10/mês · Pro Bundle £349. 👌 Podemos falar detalhes no WhatsApp: 07700 704591.';
+      }
+
+      // Chatbot
+      if (t.includes('chatbot') || t.includes('bot') || t.includes('mensagem automática') || t.includes('mensagens automaticas')) {
+        return 'Criamos chatbots para website e WhatsApp que respondem 24/7 e enviam leads para ti.';
+      }
+
+      // Website / site
+      if (t.includes('site') || t.includes('website') || t.includes('página') || t.includes('pagina')) {
+        return 'Construímos sites simples, modernos e preparados para telemóvel, com botão direto para o teu WhatsApp.';
+      }
+
+      // Tempo / entrega
+      if (t.includes('tempo') || t.includes('entrega') || t.includes('quando') || t.includes('time') || t.includes('delivery')) {
+        return 'Normalmente entregamos em 3–5 dias, dependendo do que precisas.';
+      }
+
+      // Contacto / WhatsApp
+      if (t.includes('whatsapp') || t.includes('contacto') || t.includes('contato') || t.includes('contact')) {
+        return 'O melhor é falarmos direto no WhatsApp 📲 07700 704591. Também tens botões verdes no site para clicar.';
+      }
+
+      // Resposta geral
+      return 'Obrigado pela mensagem! 😊 Para orçamento rápido, envia-me agora uma mensagem no WhatsApp: 07700 704591.';
     }
 
-    if (t.includes('site') || t.includes('website') || t.includes('pagina')) {
-      return 'Construímos sites simples, modernos e preparados para telemóvel, com botão direto para o teu WhatsApp.';
-    }
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
 
-    if (t.includes('tempo') || t.includes('entrega') || t.includes('quando') || t.includes('time') || t.includes('delivery')) {
-      return 'Normalmente entregamos em 3–5 dias, dependendo do que precisas.';
-    }
+      // Mostra a mensagem do utilizador
+      addMessage('user', text);
+      input.value = '';
 
-    if (t.includes('whatsapp') || t.includes('contacto') || t.includes('contato') || t.includes('contact')) {
-      return 'O melhor é falarmos direto no WhatsApp: 07700 704591. Clica no botão verde “Chat on WhatsApp”.';
-    }
+      // Resposta automática
+      setTimeout(() => {
+        const reply = botReply(text);
+        addMessage('bot', reply);
+      }, 300);
+    });
+  </script>
+</body>
+</html>
 
-    // RESPOSTA GERAL
-    return 'Obrigado pela mensagem! 😊 Para um orçamento rápido, fala comigo no WhatsApp: 07700 704591.';
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const text = input.value.trim();
-    if (!text) return;
-
-    // Mostra a mensagem do utilizador no chat
-    addMessage('user', text);
-    input.value = '';
-
-    // Resposta automática no chat
-    setTimeout(() => {
-      const reply = botReply(text);
-      addMessage('bot', reply);
-    }, 300);
-  });
-<script>
-  const messages = document.getElementById('chat-messages');
-  const form = document.getElementById('chat-form');
-  const input = document.getElementById('chat-input');
-
-  function addMessage(role, text) {
-    const wrap = document.createElement('div');
-    wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
-    const bubble = document.createElement('div');
-    bubble.className = 'bubble';
-    bubble.textContent = text;
-    wrap.appendChild(bubble);
-    messages.appendChild(wrap);
-    messages.scrollTop = messages.scrollHeight;
-  }
-
-  function botReply(userText) {
-    const t = userText.toLowerCase();
-
-    // PALAVRAS EM PORTUGUÊS
-    if (t.includes('preço') || t.includes('precos') || t.includes('preço') || t.includes('price') || t.includes('cost')) {
-      return 'Starter Site £199 · Chatbot £99 + £10/mês · Pro Bundle £349. Posso explicar melhor no WhatsApp.';
-    }
-
-    if (t.includes('chatbot') || t.includes('bot') || t.includes('mensagem automática')) {
-      return 'Criamos chatbots para website e WhatsApp com respostas automáticas. Entrega em 3–5 dias.';
-    }
-
-    if (t.includes('site') || t.includes('website') || t.includes('pagina')) {
-      return 'Construímos sites simples, modernos e preparados para telemóvel, com botão direto para o teu WhatsApp.';
-    }
-
-    if (t.includes('tempo') || t.includes('entrega') || t.includes('quando') || t.includes('time') || t.includes('delivery')) {
-      return 'Normalmente entregamos em 3–5 dias, dependendo do que precisas.';
-    }
-
-    if (t.includes('whatsapp') || t.includes('contacto') || t.includes('contato') || t.includes('contact')) {
-      return 'O melhor é falarmos direto no WhatsApp: 07700 704591. Clica no botão verde “Chat on WhatsApp”.';
-    }
-
-    // RESPOSTA GERAL
-    return 'Obrigado pela mensagem! 😊 Para um orçamento rápido, fala comigo no WhatsApp: 07700 704591.';
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const text = input.value.trim();
-    if (!text) return;
-
-    // Mostra a mensagem do utilizador no chat
-    addMessage('user', text);
-    input.value = '';
-
-    // Resposta automática no chat
-    setTimeout(() => {
-      const reply = botReply(text);
-      addMessage('bot', reply);
-    }, 300);
-  });
-</script>
-
-
+ 
