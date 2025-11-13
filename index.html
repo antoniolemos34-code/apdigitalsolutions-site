@@ -52,9 +52,16 @@
       text-decoration:none;
       color:var(--text);
     }
-    .logo svg { width:34px; height:34px; }
-    .logo span { font-weight:700; letter-spacing:0.3px; }
-
+    .logo img {
+      height:40px;
+      width:auto;
+      border-radius:999px;
+      display:block;
+    }
+    .logo span {
+      font-weight:700;
+      letter-spacing:0.3px;
+    }
     nav a {
       color: var(--text);
       text-decoration:none;
@@ -148,6 +155,31 @@
       border-top:1px solid var(--border);
     }
 
+    /* Galerias */
+    .gallery-block-title {
+      font-size:1.1rem;
+      font-weight:600;
+      margin:20px 0 12px;
+      color: var(--accent);
+      text-align:left;
+    }
+    .gallery-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:18px;
+    }
+    .gallery-grid img {
+      width:100%;
+      border-radius:14px;
+      display:block;
+      border:1px solid var(--border);
+    }
+    .gallery-caption {
+      margin-top:6px;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
     /* Chatbox */
     .chatbox {
       position: fixed;
@@ -230,7 +262,7 @@
     }
     @media (max-width: 640px) {
       .chatbox { right:12px; left:12px; width:auto; }
-      nav { display:none; } /* simplificar no telemóvel */
+      nav { display:none; }
     }
   </style>
 </head>
@@ -238,20 +270,12 @@
   <header>
     <div class="nav">
       <a class="logo" href="#home" aria-label="AP Digital Solutions">
-        <svg viewBox="0 0 64 64" role="img" aria-label="AP Logo">
-          <defs>
-            <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stop-color="#d4af37"/>
-              <stop offset="1" stop-color="#b38728"/>
-            </linearGradient>
-          </defs>
-          <rect x="4" y="4" width="56" height="56" rx="12" fill="none" stroke="url(#g)" stroke-width="4"/>
-          <path d="M18 44L28 20h4l10 24h-5l-2.5-6h-9L23 44h-5zm12-10h6l-3-7.4L30 34z" fill="url(#g)"/>
-        </svg>
+        <img src="logo-ap-digital.png" alt="AP Digital Solutions logo" />
         <span>AP Digital Solutions</span>
       </a>
       <nav>
         <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
         <a href="#pricing">Pricing</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#faq">FAQ</a>
@@ -284,6 +308,50 @@
         <div class="card">
           <h3>Social Media Setup</h3>
           <p>We set up or refresh your profiles and connect them to your website to bring more local customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="gallery">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+      <p class="sub">A quick look at the kind of digital presence we create for Jersey businesses.</p>
+
+      <div class="gallery-block">
+        <div class="gallery-block-title">Digital Services</div>
+        <div class="gallery-grid">
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=Chatbots+%26+Automation" alt="Chatbot support example">
+            <div class="gallery-caption">Chatbot & automation for customer support.</div>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=Modern+Websites" alt="Modern website on laptop and phone">
+            <div class="gallery-caption">Modern websites that look great on phone and desktop.</div>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=Social+Media+Management" alt="Social media marketing dashboard">
+            <div class="gallery-caption">Social media setups and simple marketing flows.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-block">
+        <div class="gallery-block-title">Jersey Businesses</div>
+        <div class="gallery-grid">
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=St+Helier+High+Street" alt="Jersey high street">
+            <div class="gallery-caption">Helping local shops in St Helier get online.</div>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=Local+Cafes+%26+Services" alt="Local cafe in Jersey">
+            <div class="gallery-caption">Cafés, trades and services with simple booking sites.</div>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=Jersey+Small+Businesses" alt="Small business front in Jersey">
+            <div class="gallery-caption">Clean landing pages for Jersey small businesses.</div>
+          </div>
         </div>
       </div>
     </div>
