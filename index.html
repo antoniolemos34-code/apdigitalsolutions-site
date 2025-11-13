@@ -82,17 +82,17 @@
       overflow: hidden;
     }
 
-    /* TOPBAR */
+    /* TOPBAR (MAIS CURTA) */
     .topbar {
       background: var(--accent);
       color: #fff;
-      font-size: 0.85rem;
-      padding: 6px 18px;
+      font-size: 0.78rem;
+      padding: 3px 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
     }
     .topbar a {
       color:#fff;
@@ -111,7 +111,7 @@
     .nav {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 12px 20px 4px;
+      padding: 10px 20px 4px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -326,30 +326,6 @@
       color:var(--muted);
     }
 
-    .pricing .price {
-      font-size:1.6rem;
-      font-weight:700;
-      color:var(--accent-2);
-      margin:4px 0 10px;
-    }
-    .tag {
-      display:inline-block;
-      font-size:0.7rem;
-      text-transform:uppercase;
-      padding:4px 8px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#e7f3ec;
-      color:var(--accent-2);
-      margin-bottom:6px;
-    }
-    .list {
-      margin:0;
-      padding-left:18px;
-      font-size:0.9rem;
-      color:var(--muted);
-    }
-
     /* CONTACT / SOCIAL */
     .contact-card {
       text-align:center;
@@ -411,7 +387,7 @@
       border-radius:14px;
       box-shadow:0 10px 24px rgba(0,0,0,0.25);
       border:1px solid var(--border);
-      display:none; /* 🔴 AGORA COMEÇA ESCONDIDO */
+      display:none;
       flex-direction:column;
       font-size:0.85rem;
       z-index: 50;
@@ -503,7 +479,6 @@
         <nav>
           <a href="#services">Services</a>
           <a href="#worldwide">Worldwide</a>
-          <a href="#pricing">Pricing</a>
           <a href="#testimonials">Testimonials</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
@@ -521,7 +496,7 @@
       </div>
     </header>
 
-    <!-- HERO COM IMAGEM -->
+    <!-- HERO -->
     <main id="home">
       <section class="hero">
         <div class="container">
@@ -537,7 +512,7 @@
             </p>
             <div class="hero-ctas">
               <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
-              <a class="btn-outline" href="#pricing">See pricing</a>
+              <a class="btn-outline" href="#services">View services</a>
             </div>
             <div class="hero-meta" id="hero-meta">
               <span>Fast delivery</span>
@@ -597,49 +572,6 @@
             Sitios web y chatbots para negocios en todo el mundo.  
             Sites web et chatbots pour entreprises dans le monde entier.
           </p>
-        </div>
-      </section>
-
-      <!-- PRICING -->
-      <section id="pricing">
-        <div class="container">
-          <h2 class="section-title">Pricing</h2>
-          <p class="sub" id="pricing-sub">Simple packages for small businesses worldwide.</p>
-          <div class="grid pricing">
-            <div class="card">
-              <span class="tag">Starter</span>
-              <h3>Starter Site</h3>
-              <div class="price">£199</div>
-              <ul class="list">
-                <li>One-page website</li>
-                <li>Mobile-friendly design</li>
-                <li>WhatsApp &amp; contact buttons</li>
-                <li>Basic SEO setup</li>
-              </ul>
-            </div>
-            <div class="card">
-              <span class="tag">Popular</span>
-              <h3>Business Chatbot</h3>
-              <div class="price">£99 + £10/mo</div>
-              <ul class="list">
-                <li>Website or WhatsApp chatbot</li>
-                <li>Predefined answers</li>
-                <li>Leads sent to your email</li>
-                <li>Small monthly tweaks included</li>
-              </ul>
-            </div>
-            <div class="card">
-              <span class="tag">Bundle</span>
-              <h3>Pro Bundle</h3>
-              <div class="price">£349</div>
-              <ul class="list">
-                <li>Website + chatbot</li>
-                <li>Social media setup</li>
-                <li>Basic SEO</li>
-                <li>One month of support</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -730,7 +662,7 @@
       <div class="msg bot">
         <div class="bubble" id="chat-greeting">
           Olá! 👋 Sou o assistente da AP Digital Solutions.  
-          Pergunta-me sobre websites, chatbots, preços ou tempo de entrega.
+          Pergunta-me sobre websites, chatbots ou como podemos adaptar algo ao teu negócio.
         </div>
       </div>
     </div>
@@ -759,10 +691,11 @@
     function botReply(userText) {
       const t = userText.toLowerCase();
 
-      // Preços
+      // Preços / orçamento – sem valores
       if (t.includes('preço') || t.includes('precos') || t.includes('preco') ||
-          t.includes('price') || t.includes('cost') || t.includes('quanto')) {
-        return 'Starter Site £199 · Chatbot £99 + £10/mês · Pro Bundle £349. 👌 Para mais detalhes, clica em qualquer botão de WhatsApp no site.';
+          t.includes('price') || t.includes('cost') || t.includes('quanto') ||
+          t.includes('budget') || t.includes('orçamento') || t.includes('orcamento')) {
+        return 'Posso adaptar uma solução simples ao teu orçamento. 😊 Fala comigo no WhatsApp e digo-te quanto fica para o teu tipo de negócio.';
       }
 
       // Chatbot
@@ -789,7 +722,7 @@
       }
 
       // Resposta geral
-      return 'Obrigado pela mensagem! 😊 Para orçamento rápido, clica em qualquer botão de WhatsApp aqui no site.';
+      return 'Obrigado pela mensagem! 😊 Para um orçamento rápido e adaptado ao teu caso, clica em qualquer botão de WhatsApp aqui no site.';
     }
 
     form.addEventListener('submit', (e) => {
@@ -830,10 +763,9 @@
         heroMeta: ['Fast delivery','Remote & worldwide','No long contracts'],
         servicesSub: 'Everything you need for a clean online presence — in English, Portuguese, Spanish or French.',
         worldwideSub: 'Websites & chatbots for businesses worldwide. Websites and chatbots tailored to your language and market.',
-        pricingSub: 'Simple packages for small businesses worldwide.',
         testimonialsSub: 'How digital tools can help local and global businesses.',
         contactSub: 'One WhatsApp message and we guide you step by step — wherever you are in the world.',
-        chatGreeting: 'Hi! 👋 I\'m the AP Digital Solutions assistant. Ask me about websites, chatbots, pricing or delivery time.',
+        chatGreeting: 'Hi! 👋 I\'m the AP Digital Solutions assistant. Ask me about websites, chatbots or how we can adapt something to your business.',
         chatPlaceholder: 'Type your question...'
       },
       pt: {
@@ -843,10 +775,9 @@
         heroMeta: ['Entrega rápida','Trabalho 100% online','Sem contratos longos'],
         servicesSub: 'Tudo o que precisas para uma presença online simples e limpa — em inglês, português, espanhol ou francês.',
         worldwideSub: 'Websites e chatbots para negócios em todo o mundo, adaptados ao teu idioma e mercado.',
-        pricingSub: 'Pacotes simples para pequenos negócios em qualquer parte do mundo.',
         testimonialsSub: 'Como as ferramentas digitais podem ajudar negócios locais e internacionais.',
         contactSub: 'Uma mensagem no WhatsApp e explicamos tudo passo a passo — estejas onde estiveres.',
-        chatGreeting: 'Olá! 👋 Sou o assistente da AP Digital Solutions. Pergunta-me sobre websites, chatbots, preços ou tempo de entrega.',
+        chatGreeting: 'Olá! 👋 Sou o assistente da AP Digital Solutions. Pergunta-me sobre websites, chatbots ou como adaptar isto ao teu negócio.',
         chatPlaceholder: 'Escreve a tua pergunta...'
       },
       es: {
@@ -856,10 +787,9 @@
         heroMeta: ['Entrega rápida','Trabajo 100% remoto','Sin contratos largos'],
         servicesSub: 'Todo lo que necesitas para una presencia online clara — en inglés, portugués, español o francés.',
         worldwideSub: 'Sitios web y chatbots para negocios en todo el mundo, adaptados a tu idioma y mercado.',
-        pricingSub: 'Paquetes sencillos para pequeños negocios en cualquier parte del mundo.',
         testimonialsSub: 'Cómo las herramientas digitales pueden ayudar a negocios locales e internacionales.',
         contactSub: 'Con un mensaje por WhatsApp te guiamos paso a paso — estés donde estés.',
-        chatGreeting: '¡Hola! 👋 Soy el asistente de AP Digital Solutions. Pregúntame sobre sitios web, chatbots, precios o tiempo de entrega.',
+        chatGreeting: '¡Hola! 👋 Soy el asistente de AP Digital Solutions. Pregúntame sobre sitios web, chatbots o cómo adaptarlo a tu negocio.',
         chatPlaceholder: 'Escribe tu pregunta...'
       },
       fr: {
@@ -869,10 +799,9 @@
         heroMeta: ['Livraison rapide','Travail 100% à distance','Sans contrats longue durée'],
         servicesSub: 'Tout ce dont vous avez besoin pour une présence en ligne claire — en anglais, portugais, espagnol ou français.',
         worldwideSub: 'Sites web et chatbots pour entreprises dans le monde entier, adaptés à votre langue et à votre marché.',
-        pricingSub: 'Offres simples pour petites entreprises, partout dans le monde.',
         testimonialsSub: 'Comment les outils numériques peuvent aider les entreprises locales et internationales.',
         contactSub: 'Un message WhatsApp et nous vous guidons étape par étape — où que vous soyez.',
-        chatGreeting: 'Bonjour ! 👋 Je suis l’assistant AP Digital Solutions. Posez-moi vos questions sur les sites web, chatbots, prix ou délais de livraison.',
+        chatGreeting: 'Bonjour ! 👋 Je suis l’assistant AP Digital Solutions. Posez-moi vos questions sur les sites web, chatbots ou comment adapter cela à votre activité.',
         chatPlaceholder: 'Écrivez votre question...'
       }
     };
@@ -894,7 +823,6 @@
 
       document.getElementById('services-sub').textContent = t.servicesSub;
       document.getElementById('worldwide-sub').textContent = t.worldwideSub;
-      document.getElementById('pricing-sub').textContent = t.pricingSub;
       document.getElementById('testimonials-sub').textContent = t.testimonialsSub;
       document.getElementById('contact-sub').textContent = t.contactSub;
       document.getElementById('chat-greeting').textContent = t.chatGreeting;
@@ -916,4 +844,4 @@
     setLanguage('en');
   </script>
 </body>
-      </html>
+  </html>
