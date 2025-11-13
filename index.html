@@ -25,8 +25,8 @@
     header { position: sticky; top: 0; z-index: 20; background: #0d0d10cc; backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); }
     .nav { display:flex; align-items:center; justify-content:space-between; padding: 14px 20px; max-width:1100px; margin:0 auto; }
     .logo { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text); }
-    .logo svg { width:34px; height:34px; }
     .logo span { font-weight:700; letter-spacing:0.3px; }
+    .logo img { width:34px; height:34px; border-radius:999px; object-fit:cover; }
     nav a { color: var(--text); text-decoration:none; margin-left:16px; opacity:0.9; }
     nav a:hover { opacity:1; text-decoration: underline; }
     .container { max-width:1100px; margin:0 auto; padding:0 20px; }
@@ -45,7 +45,6 @@
     .list { margin:0; padding-left:18px; color: var(--muted); }
     .contact-card { text-align:center; }
     footer { background:#0b0b0c; color:#bdbdc5; text-align:center; padding:22px; font-size:0.95rem; border-top:1px solid var(--border); }
-    /* Chatbox */
     .chatbox { position: fixed; bottom: 20px; right: 20px; background: var(--panel); width: 320px; border-radius: 14px; box-shadow: 0 8px 30px rgba(0,0,0,0.35); overflow: hidden; display:flex; flex-direction:column; border:1px solid var(--border); }
     .chatbox-header { background: #15151a; color: var(--accent); padding: 10px 12px; font-weight: 700; font-size: 0.95rem; display:flex; justify-content:space-between; align-items:center; }
     .chatbox-messages { flex:1; padding:10px; overflow-y:auto; font-size:0.92rem; background:#0f0f13; }
@@ -59,6 +58,8 @@
     .chatbox-input input { flex:1; border:none; padding:12px; font-size:0.95rem; outline:none; background:#0f0f13; color: var(--text); }
     .chatbox-input button { background: linear-gradient(180deg, var(--accent), var(--accent-2)); color:#171717; border:none; padding:0 16px; cursor:pointer; font-weight:700; }
     .badge { background:#212127; color: var(--accent); font-weight:700; padding:2px 8px; border-radius:999px; font-size:0.75rem; margin-left:8px; border:1px solid #2a2a33;}
+    .jersey-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:22px; }
+    .jersey-grid img { width:100%; border-radius:14px; max-height:260px; object-fit:cover; }
     @media (max-width: 640px) { .chatbox { right:12px; left:12px; width:auto; } }
   </style>
 </head>
@@ -66,16 +67,7 @@
   <header>
     <div class="nav">
       <a class="logo" href="#home" aria-label="AP Digital Solutions">
-        <svg viewBox="0 0 64 64" role="img" aria-label="AP Logo">
-          <defs>
-            <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stop-color="#d4af37"/>
-              <stop offset="1" stop-color="#b38728"/>
-            </linearGradient>
-          </defs>
-          <rect x="4" y="4" width="56" height="56" rx="12" fill="none" stroke="url(#g)" stroke-width="4"/>
-          <path d="M18 44L28 20h4l10 24h-5l-2.5-6h-9L23 44h-5zm12-10h6l-3-7.4L30 34z" fill="url(#g)"/>
-        </svg>
+        <img src="ap-logo.png" alt="AP Digital Solutions logo">
         <span>AP Digital Solutions</span>
       </a>
       <nav>
@@ -171,6 +163,17 @@
         <div class="card"><h3>How fast is delivery?</h3><p>Typical delivery is 3–5 days depending on the package.</p></div>
         <div class="card"><h3>Can you manage my site?</h3><p>Yes, we can maintain and update your site monthly if you prefer.</p></div>
         <div class="card"><h3>Is WhatsApp included?</h3><p>We add WhatsApp buttons to your site and can connect the chatbot to it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="jersey">
+    <div class="container">
+      <h2 class="section-title">Made in Jersey</h2>
+      <p class="sub">Local photos from Jersey, showing where AP Digital Solutions was born.</p>
+      <div class="jersey-grid">
+        <img src="jersey1.jpg" alt="Beach and cliffs in Jersey">
+        <img src="jersey2.jpg" alt="Coastline and tower in Jersey">
       </div>
     </div>
   </section>
