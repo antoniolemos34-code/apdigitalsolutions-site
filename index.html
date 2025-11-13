@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AP Digital Solutions Jersey – Websites & Chatbots for Businesses Worldwide</title>
+  <title>AP Digital Solutions – Websites & Chatbots for Small Businesses Worldwide</title>
 
   <!-- SEO PRINCIPAL -->
-  <meta name="description" content="AP Digital Solutions Jersey cria websites rápidos, profissionais e chatbots inteligentes para negócios em todo o mundo. Soluções digitais com WhatsApp direto, SEO básico e entrega rápida.">
+  <meta name="description" content="AP Digital Solutions cria websites modernos e chatbots inteligentes ligados ao WhatsApp para pequenos negócios em qualquer parte do mundo. Soluções simples, rápidas e orientadas a resultados.">
   <meta name="author" content="AP Digital Solutions Jersey">
 
   <!-- GOOGLE SEARCH CONSOLE (SUBSTITUI O CONTENT PELO TEU CÓDIGO VERDADEIRO) -->
   <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
 
   <!-- OPEN GRAPH / SOCIAL -->
-  <meta property="og:title" content="AP Digital Solutions Jersey – Websites & Chatbots for Businesses Worldwide">
-  <meta property="og:description" content="Websites modernos e chatbots com WhatsApp direto para negócios em todo o mundo.">
+  <meta property="og:title" content="AP Digital Solutions – Websites & Chatbots for Small Businesses Worldwide">
+  <meta property="og:description" content="Sites modernos e chatbots com WhatsApp direto para negócios em qualquer país.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://antoniolemos34-code.github.io/apdigitalsolutions-site/">
   <meta property="og:image" content="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop">
@@ -30,8 +30,8 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "AP Digital Solutions Jersey",
-    "description": "Websites e chatbots para negócios em todo o mundo, com WhatsApp direto e entrega rápida.",
+    "name": "AP Digital Solutions",
+    "description": "Websites e chatbots para pequenos negócios em todo o mundo, com WhatsApp direto e entrega rápida.",
     "url": "https://antoniolemos34-code.github.io/apdigitalsolutions-site/",
     "areaServed": {
       "@type": "AdministrativeArea",
@@ -82,7 +82,7 @@
       overflow: hidden;
     }
 
-    /* TOPBAR (MAIS CURTA) */
+    /* TOPBAR (CURTA) */
     .topbar {
       background: var(--accent);
       color: #fff;
@@ -209,7 +209,7 @@
       position: relative;
       color: #ffffff;
       background:
-        linear-gradient(135deg, rgba(0,0,0,0.60), rgba(0,0,0,0.65)),
+        linear-gradient(135deg, rgba(0,0,0,0.68), rgba(0,0,0,0.72)),
         url("https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop")
           center/cover no-repeat;
     }
@@ -240,6 +240,9 @@
       font-size:0.96rem;
       max-width:520px;
       margin-bottom:18px;
+    }
+    .hero-text strong {
+      font-weight:600;
     }
     .hero-ctas {
       display:flex;
@@ -324,6 +327,87 @@
       background:#fff6e6;
       border:1px solid var(--border);
       color:var(--muted);
+    }
+
+    /* WHY US */
+    .icons-row {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:18px;
+      margin-top:10px;
+    }
+    .icon-item {
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+    .icon-circle {
+      width:26px;
+      height:26px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:0.82rem;
+      background:#fffaf2;
+    }
+    .icon-item h3 {
+      margin:0 0 4px;
+      font-size:0.98rem;
+      color:var(--accent-2);
+    }
+    .icon-item p {
+      margin:0;
+      font-size:0.86rem;
+      color:var(--muted);
+    }
+
+    /* PROCESS */
+    .steps-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+      margin-top:16px;
+    }
+    .step {
+      background:var(--panel);
+      border-radius:16px;
+      border:1px solid var(--border);
+      padding:16px 16px 14px;
+    }
+    .step-number {
+      display:inline-block;
+      font-size:0.75rem;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      padding:3px 8px;
+      border-radius:999px;
+      background:#e7f3ec;
+      color:var(--accent-2);
+      margin-bottom:6px;
+    }
+    .step h3 {
+      margin:0 0 6px;
+      font-size:1rem;
+      color:var(--accent-2);
+    }
+    .step p {
+      margin:0;
+      font-size:0.86rem;
+      color:var(--muted);
+    }
+
+    /* INDUSTRIES */
+    .pill-cloud {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:center;
+      margin-top:8px;
+    }
+    .pill-cloud .pill {
+      background:#fff;
     }
 
     /* CONTACT / SOCIAL */
@@ -465,7 +549,7 @@
 
     <!-- TOPBAR -->
     <div class="topbar">
-      <span>AP Digital Solutions • Worldwide • Global • Internacional</span>
+      <span>AP Digital Solutions • Websites & Chatbots • Worldwide</span>
       <a href="https://wa.me/447700704591" target="_blank" rel="noopener">WhatsApp</a>
     </div>
 
@@ -477,7 +561,9 @@
           <div class="logo-text">AP Digital Solutions</div>
         </a>
         <nav>
+          <a href="#why">Why us</a>
           <a href="#services">Services</a>
+          <a href="#process">How it works</a>
           <a href="#worldwide">Worldwide</a>
           <a href="#testimonials">Testimonials</a>
           <a href="#faq">FAQ</a>
@@ -502,22 +588,55 @@
         <div class="container">
           <div class="hero-inner">
             <div class="hero-label" id="hero-label">
-              Websites • Chatbots • Social Media · Worldwide
+              Websites • Chatbots • Automation · Worldwide
             </div>
             <h1 id="hero-title">
-              Helping <span>businesses worldwide</span> look professional online.
+              Turn <span>messages into clients</span> with a simple website and smart chatbot.
             </h1>
             <p class="hero-text" id="hero-sub">
-              Simple, modern websites and AI chatbots that send clients straight to your WhatsApp — ideal for cafés, trades and small businesses around the world.
+              I help small businesses get a clean website and an AI chatbot connected to WhatsApp, so you answer less on the phone and close more work — even while you’re busy or offline.
             </p>
             <div class="hero-ctas">
-              <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">Talk to me on WhatsApp</a>
               <a class="btn-outline" href="#services">View services</a>
             </div>
             <div class="hero-meta" id="hero-meta">
-              <span>Fast delivery</span>
-              <span>Remote & worldwide</span>
+              <span>Done-for-you setup</span>
+              <span>100% remote worldwide</span>
               <span>No long contracts</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section id="why">
+        <div class="container">
+          <h2 class="section-title">Why AP Digital Solutions?</h2>
+          <p class="sub">
+            You don’t need a complicated agency. You need something that works, is simple to use and doesn’t eat your time.
+          </p>
+          <div class="icons-row">
+            <div class="icon-item">
+              <div class="icon-circle">⚙️</div>
+              <div>
+                <h3>Focused on small business</h3>
+                <p>Built for cafés, trades, cleaning, beauty, independent professionals and local services — not big corporates.</p>
+              </div>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">🤝</div>
+              <div>
+                <h3>Human + AI together</h3>
+                <p>AI helps answer common questions. You still control the important conversations in WhatsApp.</p>
+              </div>
+            </div>
+            <div class="icon-item">
+              <div class="icon-circle">📲</div>
+              <div>
+                <h3>Everything leads to WhatsApp</h3>
+                <p>Buttons, forms and chatbot are all designed to send people to one place: your WhatsApp.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -528,35 +647,62 @@
         <div class="container">
           <h2 class="section-title">Services</h2>
           <p class="sub" id="services-sub">
-            Everything you need for a clean online presence — in English, Portuguese, Spanish or French.
+            Everything you need for a clear, professional online presence — in English, Portuguese, Spanish or French.
           </p>
           <div class="grid">
             <div class="card">
-              <h3>Website Development</h3>
-              <p>Modern, mobile-friendly sites that look good on phones and send people to your WhatsApp.</p>
+              <h3>Website in 1–3 pages</h3>
+              <p>A simple, clean website that shows who you are, what you do and how people can contact you — without distractions.</p>
               <div class="pill-row">
-                <span class="pill">1–3 pages</span>
-                <span class="pill">Hosting help</span>
+                <span class="pill">Mobile-first design</span>
+                <span class="pill">WhatsApp buttons</span>
                 <span class="pill">Basic SEO</span>
               </div>
             </div>
             <div class="card">
-              <h3>Chatbot Creation</h3>
-              <p>AI chatbots that answer common questions 24/7 and collect leads while you work.</p>
+              <h3>WhatsApp & site chatbot</h3>
+              <p>An AI chatbot that answers FAQs, collects leads and sends details to your WhatsApp or email while you work.</p>
               <div class="pill-row">
-                <span class="pill">Website &amp; WhatsApp</span>
-                <span class="pill">Custom flows</span>
+                <span class="pill">FAQ replies</span>
                 <span class="pill">Lead capture</span>
+                <span class="pill">24/7 automation</span>
               </div>
             </div>
             <div class="card">
-              <h3>Social Media Setup</h3>
-              <p>Facebook and Instagram setup or refresh, with everything linked to your site and WhatsApp.</p>
+              <h3>Social media connection</h3>
+              <p>Connect your website and chatbot with Facebook, Instagram or link-in-bio so people can contact you from anywhere.</p>
               <div class="pill-row">
-                <span class="pill">Facebook</span>
-                <span class="pill">Instagram</span>
+                <span class="pill">Facebook / Instagram</span>
                 <span class="pill">Link in bio</span>
+                <span class="pill">Call to action</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="process">
+        <div class="container">
+          <h2 class="section-title">How it works</h2>
+          <p class="sub">
+            A simple, done-for-you process. You send basic info — I turn it into a website and chatbot ready to use.
+          </p>
+          <div class="steps-grid">
+            <div class="step">
+              <span class="step-number">Step 1</span>
+              <h3>Quick WhatsApp chat</h3>
+              <p>You send me what you do, areas you cover and how clients normally contact you. Voice messages are welcome.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">Step 2</span>
+              <h3>I build your website & chatbot</h3>
+              <p>I create a clean one-page site and a simple chatbot with answers for your type of business and language.</p>
+            </div>
+            <div class="step">
+              <span class="step-number">Step 3</span>
+              <h3>We test & go live</h3>
+              <p>You test on your phone, we adjust text if needed and then I connect everything to your WhatsApp.</p>
             </div>
           </div>
         </div>
@@ -565,13 +711,18 @@
       <!-- WORLDWIDE -->
       <section id="worldwide">
         <div class="container">
-          <h2 class="section-title">Worldwide Focus</h2>
+          <h2 class="section-title">Worldwide & multilingual</h2>
           <p class="sub" id="worldwide-sub">
-            Websites & chatbots for businesses worldwide.  
-            Websites e chatbots para negócios em todo o mundo.  
-            Sitios web y chatbots para negocios en todo el mundo.  
-            Sites web et chatbots pour entreprises dans le monde entier.
+            Work with clients anywhere. The website and chatbot can be set up in English, Portuguese, Spanish or French — or a mix.
           </p>
+          <div class="pill-cloud">
+            <span class="pill">Cafés & restaurants</span>
+            <span class="pill">Cleaning & maintenance</span>
+            <span class="pill">Trades & construction</span>
+            <span class="pill">Beauty & wellness</span>
+            <span class="pill">Coaches & consultants</span>
+            <span class="pill">Independent professionals</span>
+          </div>
         </div>
       </section>
 
@@ -579,15 +730,15 @@
       <section id="testimonials">
         <div class="container">
           <h2 class="section-title">Testimonials</h2>
-          <p class="sub" id="testimonials-sub">How digital tools can help local and global businesses.</p>
+          <p class="sub" id="testimonials-sub">Examples of how digital tools can help small businesses save time and get better clients.</p>
           <div class="grid">
             <div class="card">
-              <h3>Café – Local Business</h3>
-              <p>“Super quick and friendly service. Our customers get answers instantly and stop calling just for simple questions.”</p>
+              <h3>Café – Local business</h3>
+              <p>“Now people see our menu, opening hours and location without calling. The WhatsApp button made everything easier.”</p>
             </div>
             <div class="card">
-              <h3>Cleaning Services – International Client</h3>
-              <p>“Great value. The chatbot reduced our phone calls by half and clients now contact us outside office hours.”</p>
+              <h3>Cleaning services – International client</h3>
+              <p>“The chatbot collects name, address and type of service. We start the day already with organised requests.”</p>
             </div>
           </div>
         </div>
@@ -599,16 +750,16 @@
           <h2 class="section-title">FAQ</h2>
           <div class="grid">
             <div class="card">
-              <h3>How fast is delivery?</h3>
-              <p>Normally a few days, depending on the package and how quickly you send us your information.</p>
+              <h3>Do I need to be good with technology?</h3>
+              <p>No. You just need to use WhatsApp. I handle the technical side and show you how to use everything on your phone.</p>
             </div>
             <div class="card">
-              <h3>Can you manage my site?</h3>
-              <p>Yes. We can update your site monthly, add new content and change text or photos when needed.</p>
+              <h3>Can I update text or photos later?</h3>
+              <p>Yes. We can update wording, add new services or tweak the chatbot messages as your business grows.</p>
             </div>
             <div class="card">
-              <h3>Is WhatsApp included?</h3>
-              <p>Yes. All packages include WhatsApp buttons and we can connect the chatbot to WhatsApp as well.</p>
+              <h3>Which countries do you work with?</h3>
+              <p>I work 100% online with clients worldwide. If you use WhatsApp, we can work together.</p>
             </div>
           </div>
         </div>
@@ -619,10 +770,10 @@
         <div class="container">
           <h2 class="section-title">Contact</h2>
           <p class="sub" id="contact-sub">
-            One WhatsApp message and we guide you step by step — wherever you are in the world.
+            Send one WhatsApp message with your business name and what you do — I’ll reply with a simple plan for you.
           </p>
           <div class="card contact-card">
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/447700704591" target="_blank" rel="noopener">Falar no WhatsApp</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/447700704591" target="_blank" rel="noopener">Talk on WhatsApp</a></p>
             <p><strong>Email:</strong> <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a></p>
             <div class="social-links">
               <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">Facebook</a>
@@ -636,10 +787,10 @@
 
     <!-- TEXTO SEO ESCONDIDO -->
     <div style="font-size:0.01rem; color:transparent; height:0; overflow:hidden;">
-      AP Digital Solutions Jersey oferece websites modernos, rápidos e otimizados para telemóveis, criados especialmente para negócios em todo o mundo, incluindo cafés, carpinteiros, empresas de limpeza, trades e serviços profissionais.
-      Também criamos chatbots inteligentes que respondem automaticamente a clientes 24/7, enviam contactos para WhatsApp e ajudam pequenas empresas e empreendedores a ganhar tempo.
-      Soluções digitais com SEO básico, suporte remoto e entrega rápida. Websites simples, profissionais e acessíveis para quem trabalha em qualquer país.
-      Web design worldwide, websites global, chatbots worldwide, WhatsApp business, digital solutions worldwide, soluciones digitales internacionales, solutions digitales internationales.
+      AP Digital Solutions cria websites modernos, rápidos e otimizados para telemóveis, focados em pequenos negócios em qualquer país.
+      Especializado em cafés, trades, carpinteiros, empresas de limpeza, beleza, serviços locais e profissionais independentes.
+      Criação de chatbots inteligentes ligados ao WhatsApp para responder automaticamente a perguntas frequentes, recolher contactos e organizar pedidos 24/7.
+      Soluções simples, com foco em resultados, presença online clara e ligação direta ao WhatsApp. Web design worldwide, websites para pequenos negócios, chatbots para WhatsApp, automação para pequenos negócios, digital solutions worldwide.
     </div>
 
     <footer>
@@ -662,7 +813,7 @@
       <div class="msg bot">
         <div class="bubble" id="chat-greeting">
           Olá! 👋 Sou o assistente da AP Digital Solutions.  
-          Pergunta-me sobre websites, chatbots ou como podemos adaptar algo ao teu negócio.
+          Pergunta-me sobre websites, chatbots ou como isto pode funcionar para o teu tipo de negócio.
         </div>
       </div>
     </div>
@@ -691,38 +842,38 @@
     function botReply(userText) {
       const t = userText.toLowerCase();
 
-      // Preços / orçamento – sem valores
+      // Preço / orçamento – sem valores
       if (t.includes('preço') || t.includes('precos') || t.includes('preco') ||
           t.includes('price') || t.includes('cost') || t.includes('quanto') ||
           t.includes('budget') || t.includes('orçamento') || t.includes('orcamento')) {
-        return 'Posso adaptar uma solução simples ao teu orçamento. 😊 Fala comigo no WhatsApp e digo-te quanto fica para o teu tipo de negócio.';
+        return 'Consigo adaptar algo simples ao teu orçamento. 😊 Manda-me uma mensagem no WhatsApp com o que fazes e eu respondo com uma sugestão para ti.';
       }
 
       // Chatbot
       if (t.includes('chatbot') || t.includes('bot') ||
           t.includes('mensagem automática') || t.includes('mensagens automaticas')) {
-        return 'Criamos chatbots para website e WhatsApp que respondem 24/7, fazem perguntas ao cliente e enviam os dados para ti.';
+        return 'Criamos chatbots para website e WhatsApp que respondem a perguntas frequentes, recolhem dados e enviam tudo para ti.';
       }
 
       // Website / site
       if (t.includes('site') || t.includes('website') || t.includes('página') || t.includes('pagina')) {
-        return 'Construímos sites simples, modernos e preparados para telemóvel, com botão direto para o teu WhatsApp.';
+        return 'Construímos sites simples, rápidos e preparados para telemóvel, sempre com chamada para ação clara para o teu WhatsApp.';
       }
 
       // Tempo / entrega
       if (t.includes('tempo') || t.includes('entrega') ||
           t.includes('quando') || t.includes('time') || t.includes('delivery')) {
-        return 'Normalmente entregamos em poucos dias, dependendo do que precisas e da informação que envias.';
+        return 'Normalmente consigo preparar uma versão inicial em poucos dias, dependendo da informação que envias.';
       }
 
       // Contacto / WhatsApp
       if (t.includes('whatsapp') || t.includes('contacto') ||
           t.includes('contato') || t.includes('contact')) {
-        return 'O melhor é usares os botões de WhatsApp no site 📲 assim falamos direto por mensagem.';
+        return 'O melhor é usares os botões de WhatsApp aqui no site 📲 assim continuamos a conversa diretamente por mensagem.';
       }
 
       // Resposta geral
-      return 'Obrigado pela mensagem! 😊 Para um orçamento rápido e adaptado ao teu caso, clica em qualquer botão de WhatsApp aqui no site.';
+      return 'Obrigado pela mensagem! 😊 Se quiseres algo feito para o teu caso específico, envia-me já uma mensagem no WhatsApp e explico o próximo passo.';
     }
 
     form.addEventListener('submit', (e) => {
@@ -757,51 +908,51 @@
     // MULTI-LANGUAGE TEXTS
     const translations = {
       en: {
-        heroLabel: 'Websites • Chatbots • Social Media · Worldwide',
-        heroTitle: 'Helping <span>businesses worldwide</span> look professional online.',
-        heroSub: 'Simple, modern websites and AI chatbots that send clients straight to your WhatsApp — ideal for cafés, trades and small businesses around the world.',
-        heroMeta: ['Fast delivery','Remote & worldwide','No long contracts'],
-        servicesSub: 'Everything you need for a clean online presence — in English, Portuguese, Spanish or French.',
-        worldwideSub: 'Websites & chatbots for businesses worldwide. Websites and chatbots tailored to your language and market.',
-        testimonialsSub: 'How digital tools can help local and global businesses.',
-        contactSub: 'One WhatsApp message and we guide you step by step — wherever you are in the world.',
-        chatGreeting: 'Hi! 👋 I\'m the AP Digital Solutions assistant. Ask me about websites, chatbots or how we can adapt something to your business.',
+        heroLabel: 'Websites • Chatbots • Automation · Worldwide',
+        heroTitle: 'Turn <span>messages into clients</span> with a simple website and smart chatbot.',
+        heroSub: 'I help small businesses get a clean website and an AI chatbot connected to WhatsApp, so you answer less on the phone and close more work — even while you’re busy or offline.',
+        heroMeta: ['Done-for-you setup','100% remote worldwide','No long contracts'],
+        servicesSub: 'Everything you need for a clear, professional online presence — in English, Portuguese, Spanish or French.',
+        worldwideSub: 'Websites & chatbots for businesses worldwide, tailored to your language and market.',
+        testimonialsSub: 'Examples of how digital tools can help small businesses save time and get better clients.',
+        contactSub: 'Send one WhatsApp message with your business name and what you do — I’ll reply with a simple plan for you.',
+        chatGreeting: 'Hi! 👋 I\'m the AP Digital Solutions assistant. Ask me about websites, chatbots or how this can work for your business.',
         chatPlaceholder: 'Type your question...'
       },
       pt: {
-        heroLabel: 'Websites • Chatbots • Redes Sociais · Mundo',
-        heroTitle: 'Ajudamos <span>negócios em todo o mundo</span> a ter uma presença profissional online.',
-        heroSub: 'Websites simples e modernos e chatbots com IA que enviam clientes direto para o teu WhatsApp — ideal para cafés, trades e pequenos negócios em qualquer país.',
-        heroMeta: ['Entrega rápida','Trabalho 100% online','Sem contratos longos'],
-        servicesSub: 'Tudo o que precisas para uma presença online simples e limpa — em inglês, português, espanhol ou francês.',
-        worldwideSub: 'Websites e chatbots para negócios em todo o mundo, adaptados ao teu idioma e mercado.',
-        testimonialsSub: 'Como as ferramentas digitais podem ajudar negócios locais e internacionais.',
-        contactSub: 'Uma mensagem no WhatsApp e explicamos tudo passo a passo — estejas onde estiveres.',
-        chatGreeting: 'Olá! 👋 Sou o assistente da AP Digital Solutions. Pergunta-me sobre websites, chatbots ou como adaptar isto ao teu negócio.',
+        heroLabel: 'Websites • Chatbots • Automação · Mundo',
+        heroTitle: 'Transforma <span>mensagens em clientes</span> com um site simples e um chatbot inteligente.',
+        heroSub: 'Ajudo pequenos negócios a ter um website limpo e um chatbot de IA ligado ao WhatsApp, para responderes menos ao telefone e ganhares mais trabalho — mesmo quando estás ocupado ou offline.',
+        heroMeta: ['Feito por ti','Trabalho 100% online','Sem contratos longos'],
+        servicesSub: 'Tudo o que precisas para uma presença online clara e profissional — em inglês, português, espanhol ou francês.',
+        worldwideSub: 'Websites e chatbots para negócios em qualquer país, adaptados ao teu idioma e mercado.',
+        testimonialsSub: 'Exemplos de como ferramentas digitais podem ajudar pequenos negócios a poupar tempo e ter melhores clientes.',
+        contactSub: 'Envia uma mensagem no WhatsApp com o nome do teu negócio e o que fazes — eu respondo com um plano simples para ti.',
+        chatGreeting: 'Olá! 👋 Sou o assistente da AP Digital Solutions. Pergunta-me sobre websites, chatbots ou como isto pode funcionar para o teu negócio.',
         chatPlaceholder: 'Escreve a tua pergunta...'
       },
       es: {
-        heroLabel: 'Sitios web • Chatbots • Redes Sociales · Mundial',
-        heroTitle: 'Ayudamos a que <span>negocios de todo el mundo</span> se vean profesionales online.',
-        heroSub: 'Sitios web sencillos y modernos y chatbots de IA que envían clientes directamente a tu WhatsApp — ideal para cafés, oficios y pequeños negocios en cualquier país.',
-        heroMeta: ['Entrega rápida','Trabajo 100% remoto','Sin contratos largos'],
-        servicesSub: 'Todo lo que necesitas para una presencia online clara — en inglés, portugués, español o francés.',
-        worldwideSub: 'Sitios web y chatbots para negocios en todo el mundo, adaptados a tu idioma y mercado.',
-        testimonialsSub: 'Cómo las herramientas digitales pueden ayudar a negocios locales e internacionales.',
-        contactSub: 'Con un mensaje por WhatsApp te guiamos paso a paso — estés donde estés.',
-        chatGreeting: '¡Hola! 👋 Soy el asistente de AP Digital Solutions. Pregúntame sobre sitios web, chatbots o cómo adaptarlo a tu negocio.',
+        heroLabel: 'Sitios web • Chatbots • Automatización · Mundial',
+        heroTitle: 'Convierte <span>mensajes en clientes</span> con un sitio sencillo y un chatbot inteligente.',
+        heroSub: 'Ayudo a pequeños negocios a tener un sitio web claro y un chatbot de IA conectado a WhatsApp, para responder menos llamadas y cerrar más trabajos incluso cuando estás ocupado.',
+        heroMeta: ['Configuración hecha por mí','Trabajo 100% remoto','Sin contratos largos'],
+        servicesSub: 'Todo lo que necesitas para una presencia online clara y profesional — en inglés, portugués, español o francés.',
+        worldwideSub: 'Sitios web y chatbots para negocios en cualquier país, adaptados a tu idioma y mercado.',
+        testimonialsSub: 'Ejemplos de cómo las herramientas digitales pueden ayudar a pequeños negocios a ahorrar tiempo y conseguir mejores clientes.',
+        contactSub: 'Envía un mensaje por WhatsApp con el nombre de tu negocio y lo que haces — te respondo con un plan sencillo.',
+        chatGreeting: '¡Hola! 👋 Soy el asistente de AP Digital Solutions. Pregúntame sobre sitios web, chatbots o cómo esto puede funcionar para tu negocio.',
         chatPlaceholder: 'Escribe tu pregunta...'
       },
       fr: {
-        heroLabel: 'Sites web • Chatbots • Réseaux sociaux · Monde',
-        heroTitle: 'Nous aidons <span>les entreprises du monde entier</span> à être professionnelles en ligne.',
-        heroSub: 'Sites web simples et modernes et chatbots IA qui envoient les clients directement sur votre WhatsApp — idéal pour cafés, artisans et petites entreprises, partout.',
-        heroMeta: ['Livraison rapide','Travail 100% à distance','Sans contrats longue durée'],
-        servicesSub: 'Tout ce dont vous avez besoin pour une présence en ligne claire — en anglais, portugais, espagnol ou français.',
+        heroLabel: 'Sites web • Chatbots • Automatisation · Monde',
+        heroTitle: 'Transformez <span>vos messages en clients</span> avec un site simple et un chatbot intelligent.',
+        heroSub: 'J’aide les petites entreprises à avoir un site clair et un chatbot IA connecté à WhatsApp, pour moins d’appels et plus de clients, même lorsque vous êtes occupé.',
+        heroMeta: ['Mise en place clé en main','100% à distance, partout','Sans contrats longue durée'],
+        servicesSub: 'Tout ce dont vous avez besoin pour une présence en ligne claire et professionnelle — en anglais, portugais, espagnol ou français.',
         worldwideSub: 'Sites web et chatbots pour entreprises dans le monde entier, adaptés à votre langue et à votre marché.',
-        testimonialsSub: 'Comment les outils numériques peuvent aider les entreprises locales et internationales.',
-        contactSub: 'Un message WhatsApp et nous vous guidons étape par étape — où que vous soyez.',
-        chatGreeting: 'Bonjour ! 👋 Je suis l’assistant AP Digital Solutions. Posez-moi vos questions sur les sites web, chatbots ou comment adapter cela à votre activité.',
+        testimonialsSub: 'Exemples de la façon dont les outils numériques aident les petites entreprises à gagner du temps et de meilleurs clients.',
+        contactSub: 'Envoyez un message WhatsApp avec le nom de votre activité et ce que vous faites — je vous réponds avec un plan simple.',
+        chatGreeting: 'Bonjour ! 👋 Je suis l’assistant AP Digital Solutions. Posez-moi vos questions sur les sites web, les chatbots ou la façon dont cela peut fonctionner pour votre activité.',
         chatPlaceholder: 'Écrivez votre question...'
       }
     };
@@ -844,4 +995,4 @@
     setLanguage('en');
   </script>
 </body>
-  </html>
+          </html>
