@@ -67,4 +67,816 @@
         radial-gradient(circle at top left, #fdf7ec 0, transparent 55%),
         radial-gradient(circle at bottom right, #e6f3eb 0, #f8f3e8 70%);
       color: var(--text);
-      line-height: 1.
+      line-height: 1.5;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+
+    .page {
+      max-width: 1100px;
+      margin: 14px auto 24px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 22px;
+      border: 1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 0 35px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 6px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .topbar a {
+      color:#fff;
+      font-weight:600;
+    }
+
+    /* NAV */
+    header {
+      position: sticky;
+      top: 0;
+      background: #fffdf8d9;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    .nav {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 12px 20px 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .logo-wrap {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--text);
+    }
+    .logo-circle {
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-size:0.9rem;
+      font-weight:700;
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);
+    }
+    .logo-text {
+      text-transform:uppercase;
+      font-size:0.9rem;
+      letter-spacing:0.06em;
+      font-weight:700;
+    }
+
+    nav {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:0.85rem;
+      flex-wrap:wrap;
+    }
+    nav a {
+      color:var(--muted);
+    }
+    nav a:hover {
+      color:var(--text);
+      text-decoration:underline;
+    }
+    .nav-wa {
+      padding:7px 14px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#fff !important;
+      font-weight:600;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .container {
+      max-width:1050px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    section {
+      padding:58px 0;
+    }
+
+    /* LANGUAGE SWITCHER */
+    .lang-switch {
+      width: 100%;
+      max-width: 1050px;
+      margin: 0 auto 8px;
+      padding: 0 20px 10px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      font-size: 0.8rem;
+    }
+    .lang-switch button {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fffaf2;
+      padding: 4px 10px;
+      cursor: pointer;
+      font-size: 0.75rem;
+    }
+    .lang-switch button.active {
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      color: #fff;
+      border-color: transparent;
+    }
+
+    /* HERO COM IMAGEM */
+    .hero {
+      padding:70px 0 60px;
+      text-align:left;
+      position: relative;
+      color: #ffffff;
+      background:
+        linear-gradient(135deg, rgba(0,0,0,0.60), rgba(0,0,0,0.65)),
+        url("https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600&auto=format&fit=crop")
+          center/cover no-repeat;
+    }
+    .hero-inner {
+      max-width:680px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-label {
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,0.20);
+      border:1px solid rgba(255,255,255,0.55);
+      font-size:0.75rem;
+      color:#ffffff;
+      margin-bottom:10px;
+    }
+    h1 {
+      margin:0 0 10px;
+      font-size:clamp(30px,5vw,44px);
+    }
+    h1 span {
+      color:#fddf9a;
+    }
+    .hero-text {
+      color:#f5f5f5;
+      font-size:0.96rem;
+      max-width:520px;
+      margin-bottom:18px;
+    }
+    .hero-ctas {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .btn-primary {
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      color:#fff;
+      font-weight:600;
+      font-size:0.9rem;
+      box-shadow:0 8px 18px rgba(0,0,0,0.28);
+    }
+    .btn-outline {
+      display:inline-block;
+      padding:9px 16px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.7);
+      background:rgba(0,0,0,0.25);
+      color:#f5f5f5;
+      font-size:0.85rem;
+    }
+    .hero-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      font-size:0.8rem;
+      color:#f5f5f5;
+    }
+
+    /* SECTIONS */
+    h2.section-title {
+      text-align:center;
+      font-size:1.7rem;
+      margin:0 0 6px;
+    }
+    .sub {
+      text-align:center;
+      font-size:0.9rem;
+      color:var(--muted);
+      margin:0 0 24px;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card {
+      background:var(--panel);
+      border-radius:18px;
+      padding:20px;
+      border:1px solid var(--border);
+      box-shadow:0 8px 16px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin:0 0 8px;
+      font-size:1.05rem;
+      color:var(--accent-2);
+    }
+    .card p {
+      margin:0;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    .pill-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:10px;
+    }
+    .pill {
+      font-size:0.75rem;
+      padding:4px 9px;
+      border-radius:999px;
+      background:#fff6e6;
+      border:1px solid var(--border);
+      color:var(--muted);
+    }
+
+    .pricing .price {
+      font-size:1.6rem;
+      font-weight:700;
+      color:var(--accent-2);
+      margin:4px 0 10px;
+    }
+    .tag {
+      display:inline-block;
+      font-size:0.7rem;
+      text-transform:uppercase;
+      padding:4px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#e7f3ec;
+      color:var(--accent-2);
+      margin-bottom:6px;
+    }
+    .list {
+      margin:0;
+      padding-left:18px;
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    /* CONTACT / SOCIAL */
+    .contact-card {
+      text-align:center;
+    }
+    .contact-card p {
+      margin:4px 0;
+      font-size:0.95rem;
+    }
+    .social-links {
+      margin-top:12px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      font-size:0.9rem;
+    }
+    .social-links a {
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#fffaf2;
+      color:var(--accent-2);
+    }
+
+    footer {
+      text-align:center;
+      padding:16px;
+      font-size:0.85rem;
+      color:var(--muted);
+      background:#fff4e4;
+      border-top:1px solid var(--border);
+    }
+
+    /* CHATBOX */
+    .chatbox {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      width: 280px;
+      max-width: 90vw;
+      background:#ffffff;
+      border-radius:14px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.25);
+      border:1px solid var(--border);
+      display:flex;
+      flex-direction:column;
+      font-size:0.85rem;
+      z-index: 50;
+    }
+    .chatbox-header {
+      padding:8px 10px;
+      background:#e6f3ec;
+      color:var(--accent-2);
+      font-weight:600;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .chatbox-header span.badge {
+      padding:2px 6px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-size:0.7rem;
+    }
+    .chatbox-messages {
+      padding:8px;
+      background:#f5faf7;
+      max-height:200px;
+      overflow-y:auto;
+    }
+    .msg { display:flex; margin:6px 0; }
+    .msg.bot { justify-content:flex-start; }
+    .msg.user { justify-content:flex-end; }
+    .bubble {
+      max-width:80%;
+      padding:6px 9px;
+      border-radius:12px;
+      font-size:0.8rem;
+    }
+    .bot .bubble {
+      background:#ffffff;
+      border:1px solid #dfe7dd;
+    }
+    .user .bubble {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+    }
+    .chatbox-input {
+      display:flex;
+      border-top:1px solid #dfe7dd;
+      background:#f0f6f2;
+    }
+    .chatbox-input input {
+      flex:1;
+      border:none;
+      padding:7px 8px;
+      font-size:0.8rem;
+      background:transparent;
+      outline:none;
+    }
+    .chatbox-input button {
+      border:none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+      padding:0 10px;
+      font-size:0.8rem;
+      cursor:pointer;
+    }
+
+    @media (max-width: 720px) {
+      .nav { justify-content:space-between; }
+      .chatbox { right:10px; left:10px; }
+      .lang-switch { justify-content:flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <span>AP Digital Solutions • Worldwide • Global • Internacional</span>
+      <a href="https://wa.me/447700704591" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+      <div class="nav">
+        <a href="#home" class="logo-wrap">
+          <div class="logo-circle">AP</div>
+          <div class="logo-text">AP Digital Solutions</div>
+        </a>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#worldwide">Worldwide</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a href="https://wa.me/447700704591" class="nav-wa" target="_blank" rel="noopener">WhatsApp</a>
+        </nav>
+      </div>
+
+      <!-- LANGUAGE SWITCHER -->
+      <div class="lang-switch">
+        <span style="align-self:center; font-size:0.75rem; color:var(--muted); margin-right:4px;">Language:</span>
+        <button type="button" data-lang="en" class="active">EN</button>
+        <button type="button" data-lang="pt">PT</button>
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
+    </header>
+
+    <!-- HERO COM IMAGEM -->
+    <main id="home">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-label" id="hero-label">
+              Websites • Chatbots • Social Media · Worldwide
+            </div>
+            <h1 id="hero-title">
+              Helping <span>businesses worldwide</span> look professional online.
+            </h1>
+            <p class="hero-text" id="hero-sub">
+              Simple, modern websites and AI chatbots that send clients straight to your WhatsApp — ideal for cafés, trades and small businesses around the world.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              <a class="btn-outline" href="#pricing">See pricing</a>
+            </div>
+            <div class="hero-meta" id="hero-meta">
+              <span>Fast delivery</span>
+              <span>Remote & worldwide</span>
+              <span>No long contracts</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">Services</h2>
+          <p class="sub" id="services-sub">
+            Everything you need for a clean online presence — in English, Portuguese, Spanish or French.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <h3>Website Development</h3>
+              <p>Modern, mobile-friendly sites that look good on phones and send people to your WhatsApp.</p>
+              <div class="pill-row">
+                <span class="pill">1–3 pages</span>
+                <span class="pill">Hosting help</span>
+                <span class="pill">Basic SEO</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Chatbot Creation</h3>
+              <p>AI chatbots that answer common questions 24/7 and collect leads while you work.</p>
+              <div class="pill-row">
+                <span class="pill">Website &amp; WhatsApp</span>
+                <span class="pill">Custom flows</span>
+                <span class="pill">Lead capture</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Social Media Setup</h3>
+              <p>Facebook and Instagram setup or refresh, with everything linked to your site and WhatsApp.</p>
+              <div class="pill-row">
+                <span class="pill">Facebook</span>
+                <span class="pill">Instagram</span>
+                <span class="pill">Link in bio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORLDWIDE -->
+      <section id="worldwide">
+        <div class="container">
+          <h2 class="section-title">Worldwide Focus</h2>
+          <p class="sub" id="worldwide-sub">
+            Websites & chatbots for businesses worldwide.  
+            Websites e chatbots para negócios em todo o mundo.  
+            Sitios web y chatbots para negocios en todo el mundo.  
+            Sites web et chatbots pour entreprises dans le monde entier.
+          </p>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing">
+        <div class="container">
+          <h2 class="section-title">Pricing</h2>
+          <p class="sub" id="pricing-sub">Simple packages for small businesses worldwide.</p>
+          <div class="grid pricing">
+            <div class="card">
+              <span class="tag">Starter</span>
+              <h3>Starter Site</h3>
+              <div class="price">£199</div>
+              <ul class="list">
+                <li>One-page website</li>
+                <li>Mobile-friendly design</li>
+                <li>WhatsApp &amp; contact buttons</li>
+                <li>Basic SEO setup</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">Popular</span>
+              <h3>Business Chatbot</h3>
+              <div class="price">£99 + £10/mo</div>
+              <ul class="list">
+                <li>Website or WhatsApp chatbot</li>
+                <li>Predefined answers</li>
+                <li>Leads sent to your email</li>
+                <li>Small monthly tweaks included</li>
+              </ul>
+            </div>
+            <div class="card">
+              <span class="tag">Bundle</span>
+              <h3>Pro Bundle</h3>
+              <div class="price">£349</div>
+              <ul class="list">
+                <li>Website + chatbot</li>
+                <li>Social media setup</li>
+                <li>Basic SEO</li>
+                <li>One month of support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials">
+        <div class="container">
+          <h2 class="section-title">Testimonials</h2>
+          <p class="sub" id="testimonials-sub">How digital tools can help local and global businesses.</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Café – Local Business</h3>
+              <p>“Super quick and friendly service. Our customers get answers instantly and stop calling just for simple questions.”</p>
+            </div>
+            <div class="card">
+              <h3>Cleaning Services – International Client</h3>
+              <p>“Great value. The chatbot reduced our phone calls by half and clients now contact us outside office hours.”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq">
+        <div class="container">
+          <h2 class="section-title">FAQ</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>How fast is delivery?</h3>
+              <p>Normally a few days, depending on the package and how quickly you send us your information.</p>
+            </div>
+            <div class="card">
+              <h3>Can you manage my site?</h3>
+              <p>Yes. We can update your site monthly, add new content and change text or photos when needed.</p>
+            </div>
+            <div class="card">
+              <h3>Is WhatsApp included?</h3>
+              <p>Yes. All packages include WhatsApp buttons and we can connect the chatbot to WhatsApp as well.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <p class="sub" id="contact-sub">
+            One WhatsApp message and we guide you step by step — wherever you are in the world.
+          </p>
+          <div class="card contact-card">
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/447700704591" target="_blank" rel="noopener">Falar no WhatsApp</a></p>
+            <p><strong>Email:</strong> <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a></p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/apdigitalsolution.je?igsh=MXA1dXMzaTh5bG1ncg==" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://x.com" target="_blank" rel="noopener">X</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- TEXTO SEO ESCONDIDO -->
+    <div style="font-size:0.01rem; color:transparent; height:0; overflow:hidden;">
+      AP Digital Solutions Jersey oferece websites modernos, rápidos e otimizados para telemóveis, criados especialmente para negócios em todo o mundo, incluindo cafés, carpinteiros, empresas de limpeza, trades e serviços profissionais.
+      Também criamos chatbots inteligentes que respondem automaticamente a clientes 24/7, enviam contactos para WhatsApp e ajudam pequenas empresas e empreendedores a ganhar tempo.
+      Soluções digitais com SEO básico, suporte remoto e entrega rápida. Websites simples, profissionais e acessíveis para quem trabalha em qualquer país.
+      Web design worldwide, websites global, chatbots worldwide, WhatsApp business, digital solutions worldwide, soluciones digitales internacionales, solutions digitales internationales.
+    </div>
+
+    <footer>
+      &copy; 2025 AP Digital Solutions | Worldwide
+    </footer>
+  </div>
+
+  <!-- CHATBOX INTERATIVO -->
+  <div class="chatbox" aria-live="polite">
+    <div class="chatbox-header">
+      <span>AP Chat Assistant</span>
+      <span class="badge">Online</span>
+    </div>
+    <div id="chat-messages" class="chatbox-messages">
+      <div class="msg bot">
+        <div class="bubble" id="chat-greeting">
+          Olá! 👋 Sou o assistente da AP Digital Solutions.  
+          Pergunta-me sobre websites, chatbots, preços ou tempo de entrega.
+        </div>
+      </div>
+    </div>
+    <form id="chat-form" class="chatbox-input">
+      <input id="chat-input" type="text" placeholder="Escreve a tua pergunta..." aria-label="Escreve a tua pergunta" />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <script>
+    const messages = document.getElementById('chat-messages');
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('chat-input');
+
+    function addMessage(role, text) {
+      const wrap = document.createElement('div');
+      wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      bubble.textContent = text;
+      wrap.appendChild(bubble);
+      messages.appendChild(wrap);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function botReply(userText) {
+      const t = userText.toLowerCase();
+
+      // Preços
+      if (t.includes('preço') || t.includes('precos') || t.includes('preco') ||
+          t.includes('price') || t.includes('cost') || t.includes('quanto')) {
+        return 'Starter Site £199 · Chatbot £99 + £10/mês · Pro Bundle £349. 👌 Para mais detalhes, clica em qualquer botão de WhatsApp no site.';
+      }
+
+      // Chatbot
+      if (t.includes('chatbot') || t.includes('bot') ||
+          t.includes('mensagem automática') || t.includes('mensagens automaticas')) {
+        return 'Criamos chatbots para website e WhatsApp que respondem 24/7, fazem perguntas ao cliente e enviam os dados para ti.';
+      }
+
+      // Website / site
+      if (t.includes('site') || t.includes('website') || t.includes('página') || t.includes('pagina')) {
+        return 'Construímos sites simples, modernos e preparados para telemóvel, com botão direto para o teu WhatsApp.';
+      }
+
+      // Tempo / entrega
+      if (t.includes('tempo') || t.includes('entrega') ||
+          t.includes('quando') || t.includes('time') || t.includes('delivery')) {
+        return 'Normalmente entregamos em poucos dias, dependendo do que precisas e da informação que envias.';
+      }
+
+      // Contacto / WhatsApp
+      if (t.includes('whatsapp') || t.includes('contacto') ||
+          t.includes('contato') || t.includes('contact')) {
+        return 'O melhor é usares os botões de WhatsApp no site 📲 assim falamos direto por mensagem.';
+      }
+
+      // Resposta geral
+      return 'Obrigado pela mensagem! 😊 Para orçamento rápido, clica em qualquer botão de WhatsApp aqui no site.';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      addMessage('user', text);
+      input.value = '';
+
+      setTimeout(() => {
+        const reply = botReply(text);
+        addMessage('bot', reply);
+      }, 300);
+    });
+
+    // MULTI-LANGUAGE TEXTS
+    const translations = {
+      en: {
+        heroLabel: 'Websites • Chatbots • Social Media · Worldwide',
+        heroTitle: 'Helping <span>businesses worldwide</span> look professional online.',
+        heroSub: 'Simple, modern websites and AI chatbots that send clients straight to your WhatsApp — ideal for cafés, trades and small businesses around the world.',
+        heroMeta: ['Fast delivery','Remote & worldwide','No long contracts'],
+        servicesSub: 'Everything you need for a clean online presence — in English, Portuguese, Spanish or French.',
+        worldwideSub: 'Websites & chatbots for businesses worldwide. Websites and chatbots tailored to your language and market.',
+        pricingSub: 'Simple packages for small businesses worldwide.',
+        testimonialsSub: 'How digital tools can help local and global businesses.',
+        contactSub: 'One WhatsApp message and we guide you step by step — wherever you are in the world.',
+        chatGreeting: 'Hi! 👋 I\'m the AP Digital Solutions assistant. Ask me about websites, chatbots, pricing or delivery time.',
+        chatPlaceholder: 'Type your question...'
+      },
+      pt: {
+        heroLabel: 'Websites • Chatbots • Redes Sociais · Mundo',
+        heroTitle: 'Ajudamos <span>negócios em todo o mundo</span> a ter uma presença profissional online.',
+        heroSub: 'Websites simples e modernos e chatbots com IA que enviam clientes direto para o teu WhatsApp — ideal para cafés, trades e pequenos negócios em qualquer país.',
+        heroMeta: ['Entrega rápida','Trabalho 100% online','Sem contratos longos'],
+        servicesSub: 'Tudo o que precisas para uma presença online simples e limpa — em inglês, português, espanhol ou francês.',
+        worldwideSub: 'Websites e chatbots para negócios em todo o mundo, adaptados ao teu idioma e mercado.',
+        pricingSub: 'Pacotes simples para pequenos negócios em qualquer parte do mundo.',
+        testimonialsSub: 'Como as ferramentas digitais podem ajudar negócios locais e internacionais.',
+        contactSub: 'Uma mensagem no WhatsApp e explicamos tudo passo a passo — estejas onde estiveres.',
+        chatGreeting: 'Olá! 👋 Sou o assistente da AP Digital Solutions. Pergunta-me sobre websites, chatbots, preços ou tempo de entrega.',
+        chatPlaceholder: 'Escreve a tua pergunta...'
+      },
+      es: {
+        heroLabel: 'Sitios web • Chatbots • Redes Sociales · Mundial',
+        heroTitle: 'Ayudamos a que <span>negocios de todo el mundo</span> se vean profesionales online.',
+        heroSub: 'Sitios web sencillos y modernos y chatbots de IA que envían clientes directamente a tu WhatsApp — ideal para cafés, oficios y pequeños negocios en cualquier país.',
+        heroMeta: ['Entrega rápida','Trabajo 100% remoto','Sin contratos largos'],
+        servicesSub: 'Todo lo que necesitas para una presencia online clara — en inglés, portugués, español o francés.',
+        worldwideSub: 'Sitios web y chatbots para negocios en todo el mundo, adaptados a tu idioma y mercado.',
+        pricingSub: 'Paquetes sencillos para pequeños negocios en cualquier parte del mundo.',
+        testimonialsSub: 'Cómo las herramientas digitales pueden ayudar a negocios locales e internacionales.',
+        contactSub: 'Con un mensaje por WhatsApp te guiamos paso a paso — estés donde estés.',
+        chatGreeting: '¡Hola! 👋 Soy el asistente de AP Digital Solutions. Pregúntame sobre sitios web, chatbots, precios o tiempo de entrega.',
+        chatPlaceholder: 'Escribe tu pregunta...'
+      },
+      fr: {
+        heroLabel: 'Sites web • Chatbots • Réseaux sociaux · Monde',
+        heroTitle: 'Nous aidons <span>les entreprises du monde entier</span> à être professionnelles en ligne.',
+        heroSub: 'Sites web simples et modernes et chatbots IA qui envoient les clients directement sur votre WhatsApp — idéal pour cafés, artisans et petites entreprises, partout.',
+        heroMeta: ['Livraison rapide','Travail 100% à distance','Sans contrats longue durée'],
+        servicesSub: 'Tout ce dont vous avez besoin pour une présence en ligne claire — en anglais, portugais, espagnol ou français.',
+        worldwideSub: 'Sites web et chatbots pour entreprises dans le monde entier, adaptés à votre langue et à votre marché.',
+        pricingSub: 'Offres simples pour petites entreprises, partout dans le monde.',
+        testimonialsSub: 'Comment les outils numériques peuvent aider les entreprises locales et internationales.',
+        contactSub: 'Un message WhatsApp et nous vous guidons étape par étape — où que vous soyez.',
+        chatGreeting: 'Bonjour ! 👋 Je suis l’assistant AP Digital Solutions. Posez-moi vos questions sur les sites web, chatbots, prix ou délais de livraison.',
+        chatPlaceholder: 'Écrivez votre question...'
+      }
+    };
+
+    function setLanguage(lang) {
+      const t = translations[lang] || translations.en;
+
+      document.getElementById('hero-label').textContent = t.heroLabel;
+      document.getElementById('hero-title').innerHTML = t.heroTitle;
+      document.getElementById('hero-sub').textContent = t.heroSub;
+
+      const heroMeta = document.getElementById('hero-meta');
+      heroMeta.innerHTML = '';
+      t.heroMeta.forEach(text => {
+        const span = document.createElement('span');
+        span.textContent = text;
+        heroMeta.appendChild(span);
+      });
+
+      document.getElementById('services-sub').textContent = t.servicesSub;
+      document.getElementById('worldwide-sub').textContent = t.worldwideSub;
+      document.getElementById('pricing-sub').textContent = t.pricingSub;
+      document.getElementById('testimonials-sub').textContent = t.testimonialsSub;
+      document.getElementById('contact-sub').textContent = t.contactSub;
+      document.getElementById('chat-greeting').textContent = t.chatGreeting;
+      document.getElementById('chat-input').placeholder = t.chatPlaceholder;
+
+      // update active button
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        setLanguage(lang);
+      });
+    });
+
+    // default language EN
+    setLanguage('en');
+  </script>
+</body>
+</html>
