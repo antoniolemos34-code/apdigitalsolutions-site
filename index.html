@@ -144,7 +144,7 @@
       padding:58px 0;
     }
 
-    /* HERO COM IMAGEM DE DIGITAL MARKETING */
+    /* HERO COM IMAGEM */
     .hero {
       padding:70px 0 60px;
       text-align:left;
@@ -175,7 +175,7 @@
       font-size:clamp(30px,5vw,44px);
     }
     h1 span {
-      color:#fddf9a; /* destaque no título */
+      color:#fddf9a;
     }
     .hero-text {
       color:#f5f5f5;
@@ -335,8 +335,85 @@
       border-top:1px solid var(--border);
     }
 
+    /* CHATBOX */
+    .chatbox {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      width: 280px;
+      max-width: 90vw;
+      background:#ffffff;
+      border-radius:14px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.25);
+      border:1px solid var(--border);
+      display:flex;
+      flex-direction:column;
+      font-size:0.85rem;
+      z-index: 50;
+    }
+    .chatbox-header {
+      padding:8px 10px;
+      background:#e6f3ec;
+      color:var(--accent-2);
+      font-weight:600;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .chatbox-header span.badge {
+      padding:2px 6px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-size:0.7rem;
+    }
+    .chatbox-messages {
+      padding:8px;
+      background:#f5faf7;
+      max-height:200px;
+      overflow-y:auto;
+    }
+    .msg { display:flex; margin:6px 0; }
+    .msg.bot { justify-content:flex-start; }
+    .msg.user { justify-content:flex-end; }
+    .bubble {
+      max-width:80%;
+      padding:6px 9px;
+      border-radius:12px;
+      font-size:0.8rem;
+    }
+    .bot .bubble {
+      background:#ffffff;
+      border:1px solid #dfe7dd;
+    }
+    .user .bubble {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+    }
+    .chatbox-input {
+      display:flex;
+      border-top:1px solid #dfe7dd;
+      background:#f0f6f2;
+    }
+    .chatbox-input input {
+      flex:1;
+      border:none;
+      padding:7px 8px;
+      font-size:0.8rem;
+      background:transparent;
+      outline:none;
+    }
+    .chatbox-input button {
+      border:none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color:#fff;
+      padding:0 10px;
+      font-size:0.8rem;
+      cursor:pointer;
+    }
+
     @media (max-width: 720px) {
       .nav { justify-content:space-between; }
+      .chatbox { right:10px; left:10px; }
     }
   </style>
 </head>
@@ -432,16 +509,26 @@
       <section id="jersey">
         <div class="container">
           <h2 class="section-title">Jersey Inspired</h2>
-          <p class="sub">Clear, simple layouts that make sense for local Jersey businesses.</p>
+          <p class="sub">Real examples of how AP Digital Solutions can present Jersey businesses online.</p>
+
           <div class="grid">
             <div class="card">
               <div class="portfolio-box">
-                Hero section focused on your message and WhatsApp contact, so clients know exactly how to reach you.
+                <strong>Websites for local trades</strong><br><br>
+                • Carpentry &amp; building services in St Helier<br>
+                • Cleaning companies that want quick WhatsApp quotes<br>
+                • Small cafés and takeaways that need menus and opening hours online<br><br>
+                Each website is one clean page with your services, Jersey location and a big WhatsApp button so people can message you directly.
               </div>
             </div>
+
             <div class="card">
               <div class="portfolio-box">
-                Service cards that explain what you do in Jersey in a clean, easy-to-read structure.
+                <strong>Chatbots for Jersey services</strong><br><br>
+                • Answer “what time do you open?”, “where are you?” and prices 24/7<br>
+                • Collect name, phone and what the client needs and send it to your WhatsApp or email<br>
+                • Perfect for hairdressers, cleaners, handymen and small local businesses that don’t always pick up the phone<br><br>
+                The chatbot speaks for you when you are working, so you don’t lose simple enquiries during the day or at night.
               </div>
             </div>
           </div>
@@ -491,7 +578,7 @@
         </div>
       </section>
 
-      <!-- TESTIMONIALS – só 2, sem Bernardo -->
+      <!-- TESTIMONIALS -->
       <section id="testimonials">
         <div class="container">
           <h2 class="section-title">Testimonials</h2>
@@ -552,5 +639,92 @@
       &copy; 2025 AP Digital Solutions | Jersey, Channel Islands
     </footer>
   </div>
+
+  <!-- CHATBOX INTERATIVO -->
+  <div class="chatbox" aria-live="polite">
+    <div class="chatbox-header">
+      <span>AP Chat Assistant</span>
+      <span class="badge">Online</span>
+    </div>
+    <div id="chat-messages" class="chatbox-messages">
+      <div class="msg bot">
+        <div class="bubble">
+          Olá! 👋 Sou o assistente da AP Digital Solutions.  
+          Pergunta-me sobre websites, chatbots, preços ou tempo de entrega.
+        </div>
+      </div>
+    </div>
+    <form id="chat-form" class="chatbox-input">
+      <input id="chat-input" type="text" placeholder="Escreve a tua pergunta..." aria-label="Escreve a tua pergunta" />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <script>
+    const messages = document.getElementById('chat-messages');
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('chat-input');
+
+    function addMessage(role, text) {
+      const wrap = document.createElement('div');
+      wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      bubble.textContent = text;
+      wrap.appendChild(bubble);
+      messages.appendChild(wrap);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function botReply(userText) {
+      const t = userText.toLowerCase();
+
+      // Preços
+      if (t.includes('preço') || t.includes('precos') || t.includes('preco') ||
+          t.includes('price') || t.includes('cost') || t.includes('quanto')) {
+        return 'Starter Site £199 · Chatbot £99 + £10/mês · Pro Bundle £349. 👌 Para mais detalhes, fala comigo no WhatsApp: 07700 704591.';
+      }
+
+      // Chatbot
+      if (t.includes('chatbot') || t.includes('bot') ||
+          t.includes('mensagem automática') || t.includes('mensagens automaticas')) {
+        return 'Criamos chatbots para website e WhatsApp que respondem 24/7, fazem perguntas ao cliente e enviam os dados para ti.';
+      }
+
+      // Website / site
+      if (t.includes('site') || t.includes('website') || t.includes('página') || t.includes('pagina')) {
+        return 'Construímos sites simples, modernos e preparados para telemóvel, com botão direto para o teu WhatsApp.';
+      }
+
+      // Tempo / entrega
+      if (t.includes('tempo') || t.includes('entrega') ||
+          t.includes('quando') || t.includes('time') || t.includes('delivery')) {
+        return 'Normalmente entregamos em 3–5 dias, dependendo do que precisas e da informação que envias.';
+      }
+
+      // Contacto / WhatsApp
+      if (t.includes('whatsapp') || t.includes('contacto') ||
+          t.includes('contato') || t.includes('contact')) {
+        return 'O melhor é falarmos direto no WhatsApp 📲 07700 704591. Também tens vários botões verdes no site para clicar.';
+      }
+
+      // Resposta geral
+      return 'Obrigado pela mensagem! 😊 Para orçamento rápido, envia-me agora uma mensagem no WhatsApp: 07700 704591.';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      addMessage('user', text);
+      input.value = '';
+
+      setTimeout(() => {
+        const reply = botReply(text);
+        addMessage('bot', reply);
+      }, 300);
+    });
+  </script>
 </body>
 </html>
