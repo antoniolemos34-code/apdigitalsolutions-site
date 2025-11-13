@@ -145,7 +145,55 @@
       padding:56px 0;
     }
 
-    /* HERO */
+    /* HERO COM IMAGEM DIGITAL MARKETING NO TOPO */
+    .hero-section {
+      position: relative;
+      padding: 72px 0;
+      background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content:'';
+      position:absolute;
+      inset:0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.70), rgba(0,0,0,0.55));
+    }
+    .hero-section .hero-grid {
+      position:relative;
+      z-index:1;
+      color:#ffffff;
+    }
+    .hero-section .hero-text,
+    .hero-section .hero-meta span {
+      color: #f4f4f4;
+    }
+    .hero-section .hero-label {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.25);
+      color:#f7f7f7;
+    }
+    .hero-section h1 span {
+      color:#fddf9a;
+    }
+    .hero-section .hero-media {
+      background: rgba(0,0,0,0.40);
+      border-color: rgba(255,255,255,0.25);
+    }
+    .hero-section .hero-media-box {
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-color: rgba(255,255,255,0.28);
+      color:#f4f4f4;
+    }
+    .hero-section .hero-media-tag {
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.25);
+      color:#fefefe;
+    }
+
+    /* HERO GRID */
     .hero-grid {
       display:grid;
       grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
@@ -503,7 +551,8 @@
     </header>
 
     <main id="home">
-      <section>
+      <!-- HERO COM IMAGEM DIGITAL MARKETING NO TOPO -->
+      <section class="hero-section">
         <div class="container hero-grid">
           <div>
             <div class="hero-label">Websites • Chatbots • Social Media</div>
