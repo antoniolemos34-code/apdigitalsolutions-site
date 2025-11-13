@@ -674,41 +674,40 @@
       <button type="submit">Send</button>
     </form>
   </div>
+<script>
+  const messages = document.getElementById('chat-messages');
+  const form = document.getElementById('chat-form');
+  const input = document.getElementById('chat-input');
 
-  <script>
-    const messages = document.getElementById('chat-messages');
-    const form = document.getElementById('chat-form');
-    const input = document.getElementById('chat-input');
+  function addMessage(role, text) {
+    const wrap = document.createElement('div');
+    wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    bubble.textContent = text;
+    wrap.appendChild(bubble);
+    messages.appendChild(wrap);
+    messages.scrollTop = messages.scrollHeight;
+  }
 
-    function addMessage(role, text) {
-      const wrap = document.createElement('div');
-      wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
-      const bubble = document.createElement('div');
-      bubble.className = 'bubble';
-      bubble.textContent = text;
-      wrap.appendChild(bubble);
-      messages.appendChild(wrap);
-      messages.scrollTop = messages.scrollHeight;
-    }
+  function botReply(userText) {
+    const t = userText.toLowerCase();
+    if (t.includes('price') || t.includes('cost')) return 'Starter Site £199 · Chatbot £99 + £10/mo · Pro Bundle £349.';
+    if (t.includes('chatbot')) return 'We build website + WhatsApp chatbots with custom flows and AI. Delivery 3–5 days.';
+    if (t.includes('website')) return 'Simple, fast websites for phones and desktops. Hosting help included.';
+    if (t.includes('time') || t.includes('delivery')) return 'Typical delivery: 3–5 days depending on package.';
+    if (t.includes('whatsapp') || t.includes('contact')) return 'Message us on WhatsApp: 07700 704591.';
+    return 'Thanks! Want to continue on WhatsApp? 07700 704591';
+  }
 
-    function botReply(userText) {
-      const t = userText.toLowerCase();
-      if (t.includes('price') || t.includes('cost')) return 'Starter Site £199 · Chatbot £99 + £10/mo · Pro Bundle £349.';
-      if (t.includes('chatbot')) return 'We build website + WhatsApp chatbots with custom flows and AI. Delivery 3–5 days.';
-      if (t.includes('website')) return 'Simple, fast websites for phones and desktops. Hosting help included.';
-      if (t.includes('time') || t.includes('delivery')) return 'Typical delivery: 3–5 days depending on package.';
-      if (t.includes('whatsapp') || t.includes('contact')) return 'Message us on WhatsApp: 07700 704591.';
-      return 'Thanks! Want to continue on WhatsApp? 07700 704591';
-    }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+    addMessage('user', text);
+    input.value = '';
+    setTimeout(() => addMessage('bot', botReply(text)), 300);
+  });
+</script>
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const text = input.value.trim();
-      if (!text) return;
-      addMessage('user', text);
-      input.value = '';
-      setTimeout(() => addMessage('bot', botReply(text)), 300);
-    });
-  </script>
-</body>
-</html>
+ 
