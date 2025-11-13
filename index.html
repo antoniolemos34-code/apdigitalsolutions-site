@@ -28,6 +28,28 @@
       line-height: 1.5; 
     }
     a { color: var(--link); }
+
+    /* Top bar WhatsApp */
+    .topbar {
+      background: #1d4ed8;
+      color: #ffffff;
+      font-size: 0.9rem;
+      padding: 6px 16px;
+    }
+    .topbar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:8px;
+    }
+    .topbar a {
+      color:#ffffff;
+      text-decoration:none;
+      font-weight:600;
+    }
+
     header { 
       position: sticky; 
       top: 0; 
@@ -53,10 +75,11 @@
     }
     .logo svg { width:34px; height:34px; }
     .logo span { font-weight:700; letter-spacing:0.3px; }
+    nav { display:flex; align-items:center; gap:10px; }
     nav a { 
       color: var(--text); 
       text-decoration:none; 
-      margin-left:16px; 
+      margin-left:12px; 
       opacity:0.85; 
       font-size:0.95rem;
     }
@@ -64,6 +87,17 @@
       opacity:1; 
       text-decoration: underline; 
     }
+    .nav-whatsapp-btn {
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      color:#ffffff;
+      padding: 7px 12px;
+      border-radius:999px;
+      text-decoration:none;
+      font-size:0.85rem;
+      font-weight:600;
+      box-shadow:0 3px 10px rgba(37,99,235,0.35);
+    }
+
     .container { 
       max-width:1100px; 
       margin:0 auto; 
@@ -71,7 +105,7 @@
     }
     section { padding: 64px 0; }
     .hero { 
-      padding: 110px 0 80px; 
+      padding: 90px 0 80px; 
       background: radial-gradient(800px 300px at 50% -50%, #dbeafe, transparent 60%); 
       text-align: center; 
     }
@@ -248,6 +282,16 @@
   </style>
 </head>
 <body>
+  <!-- WhatsApp logo / contacto no topo -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>AP Digital Solutions • Jersey</span>
+      <a href="https://wa.me/447700704591" target="_blank" rel="noopener">
+        WhatsApp: 07700 704591
+      </a>
+    </div>
+  </div>
+
   <header>
     <div class="nav">
       <a class="logo" href="#home" aria-label="AP Digital Solutions">
@@ -269,6 +313,9 @@
         <a href="#testimonials">Testimonials</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
+        <a class="nav-whatsapp-btn" href="https://wa.me/447700704591" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
       </nav>
     </div>
   </header>
