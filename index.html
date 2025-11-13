@@ -1,103 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AP Digital Solutions | Jersey</title>
-
+  <meta name="description" content="AP Digital Solutions helps Jersey businesses go digital with chatbots, websites, and social media setup.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #000000;
-      color: #f0f0f0;
+    * { box-sizing: border-box; }
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #1d4ed8; /* blue */
+      --accent-2: #1e40af; 
+      --link: #1d4ed8;
+      --border: #e5e7eb;
+    }
+    body { 
+      margin: 0; 
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; 
+      background-color: var(--bg); 
+      color: var(--text); 
+      line-height: 1.5; 
+    }
+    a { color: var(--link); }
+    header { 
+      position: sticky; 
+      top: 0; 
+      z-index: 20; 
+      background: #ffffffcc; 
+      backdrop-filter: blur(6px); 
+      border-bottom: 1px solid var(--border); 
+    }
+    .nav { 
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      padding: 14px 20px; 
+      max-width:1100px; 
+      margin:0 auto; 
+    }
+    .logo { 
+      display:flex; 
+      align-items:center; 
+      gap:12px; 
+      text-decoration:none; 
+      color:var(--text); 
+    }
+    .logo svg { width:34px; height:34px; }
+    .logo span { font-weight:700; letter-spacing:0.3px; }
+    nav a { 
+      color: var(--text); 
+      text-decoration:none; 
+      margin-left:16px; 
+      opacity:0.85; 
+      font-size:0.95rem;
+    }
+    nav a:hover { 
+      opacity:1; 
+      text-decoration: underline; 
+    }
+    .container { 
+      max-width:1100px; 
+      margin:0 auto; 
+      padding:0 20px; 
+    }
+    section { padding: 64px 0; }
+    .hero { 
+      padding: 110px 0 80px; 
+      background: radial-gradient(800px 300px at 50% -50%, #dbeafe, transparent 60%); 
+      text-align: center; 
+    }
+    .hero h1 { 
+      font-size: clamp(30px, 6vw, 52px); 
+      margin: 0 0 12px; 
+      color:#0f172a;
+    }
+    .hero p { 
+      color: var(--muted); 
+      max-width: 760px; 
+      margin: 0 auto 20px; 
+    }
+    .cta { 
+      display:inline-block; 
+      margin-top:8px; 
+      background: linear-gradient(180deg, var(--accent), var(--accent-2)); 
+      color:#ffffff; 
+      padding: 12px 18px; 
+      border-radius: 12px; 
+      text-decoration:none; 
+      font-weight:700; 
+      box-shadow: 0 6px 18px rgba(37,99,235,0.35); 
+      font-size:0.98rem;
+    }
+    h2.section-title { 
+      text-align:center; 
+      font-size:1.8rem; 
+      margin:0 0 22px; 
+      color: var(--text); 
+    }
+    .sub { 
+      text-align:center; 
+      color: var(--muted); 
+      margin-top:-8px; 
+      margin-bottom:24px; 
+    }
+    .grid { 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+      gap:22px; 
+    }
+    .card { 
+      background: var(--panel); 
+      padding:22px; 
+      border-radius:14px; 
+      border:1px solid var(--border); 
+      box-shadow: 0 6px 16px rgba(15,23,42,0.04);
+    }
+    .card h3 { 
+      color: var(--accent); 
+      margin:0 0 10px; 
+      font-size:1.15rem; 
+    }
+    .card p { 
+      margin: 8px 0 0; 
+      color: var(--muted); 
+    }
+    .pricing .price { 
+      font-size: 2rem; 
+      font-weight:700; 
+      color: var(--accent); 
+      margin: 6px 0 14px; 
+    }
+    .list { 
+      margin:0; 
+      padding-left:18px; 
+      color: var(--muted); 
+    }
+    .contact-card { 
+      text-align:center; 
+    }
+    footer { 
+      background:#ffffff; 
+      color:#6b7280; 
+      text-align:center; 
+      padding:22px; 
+      font-size:0.95rem; 
+      border-top:1px solid var(--border); 
     }
 
-    header {
-      background: #111;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #d4af37; /* gold */
+    /* Chatbox */
+    .chatbox { 
+      position: fixed; 
+      bottom: 20px; 
+      right: 20px; 
+      background: var(--panel); 
+      width: 320px; 
+      border-radius: 14px; 
+      box-shadow: 0 8px 30px rgba(15,23,42,0.28); 
+      overflow: hidden; 
+      display:flex; 
+      flex-direction:column; 
+      border:1px solid var(--border); 
     }
-
-    header h1 {
-      margin: 0;
-      color: #d4af37;
-      font-size: 28px;
+    .chatbox-header { 
+      background: #e5edff; 
+      color: var(--accent-2); 
+      padding: 10px 12px; 
+      font-weight: 700; 
+      font-size: 0.95rem; 
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center; 
     }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
+    .chatbox-messages { 
+      flex:1; 
+      padding:10px; 
+      overflow-y:auto; 
+      font-size:0.92rem; 
+      background:#f3f4ff; 
     }
-
-    .title {
-      text-align: center;
-      font-size: 26px;
-      color: #d4af37;
-      margin-bottom: 15px;
+    .msg { 
+      display:flex; 
+      margin:8px 0; 
     }
-
-    p {
-      text-align: center;
-      color: #ccc;
-      max-width: 800px;
-      margin: auto;
+    .msg.bot { justify-content:flex-start; }
+    .msg.user { justify-content:flex-end; }
+    .bubble { 
+      max-width:80%; 
+      padding:8px 12px; 
+      border-radius:14px; 
     }
-
-    /* FOTO GALERIA */
-    .gallery {
-      margin-top: 30px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 18px;
+    .bot .bubble { 
+      background:#e5e7ff; 
+      color: #111827; 
+      border:1px solid #cbd5f5; 
     }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      border: 2px solid #d4af37;
-      object-fit: cover;
-      height: 220px;
-      background: #222;
+    .user .bubble { 
+      background: linear-gradient(180deg, var(--accent), var(--accent-2)); 
+      color:#ffffff; 
+      font-weight:700; 
     }
-
-    footer {
-      background: #111;
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-      margin-top: 40px;
-      border-top: 1px solid #333;
+    .chatbox-input { 
+      display:flex; 
+      border-top:1px solid #d1d5db; 
+      background:#eef2ff;
     }
-
+    .chatbox-input input { 
+      flex:1; 
+      border:none; 
+      padding:12px; 
+      font-size:0.95rem; 
+      outline:none; 
+      background:transparent; 
+      color: var(--text); 
+    }
+    .chatbox-input button { 
+      background: linear-gradient(180deg, var(--accent), var(--accent-2)); 
+      color:#ffffff; 
+      border:none; 
+      padding:0 16px; 
+      cursor:pointer; 
+      font-weight:700; 
+      font-size:0.95rem;
+    }
+    .badge { 
+      background:#eef2ff; 
+      color: var(--accent-2); 
+      font-weight:700; 
+      padding:2px 8px; 
+      border-radius:999px; 
+      font-size:0.75rem; 
+      margin-left:8px; 
+      border:1px solid #cbd5f5;
+    }
+    @media (max-width: 640px) { 
+      .chatbox { 
+        right:12px; 
+        left:12px; 
+        width:auto; 
+      } 
+    }
   </style>
 </head>
-
 <body>
+  <header>
+    <div class="nav">
+      <a class="logo" href="#home" aria-label="AP Digital Solutions">
+        <svg viewBox="0 0 64 64" role="img" aria-label="AP Logo">
+          <defs>
+            <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#1d4ed8"/>
+              <stop offset="1" stop-color="#1e40af"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="4" width="56" height="56" rx="12" fill="none" stroke="url(#g)" stroke-width="4"/>
+          <path d="M18 44L28 20h4l10 24h-5l-2.5-6h-9L23 44h-5zm12-10h6l-3-7.4L30 34z" fill="url(#g)"/>
+        </svg>
+        <span>AP Digital Solutions</span>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>AP Digital Solutions</h1>
-</header>
+  <main id="home" class="hero">
+    <div class="container">
+      <h1>Helping Jersey Businesses Go Digital</h1>
+      <p>We build chatbots, websites, and online presence for local businesses. Fast delivery. Friendly support.</p>
+      <a class="cta" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </main>
 
-<section>
-  <h2 class="title">Helping Businesses Go Digital</h2>
-  <p>Websites • Chatbots • Social Media • Local Digital Services for Jersey</p>
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="sub">Everything you need to get found online in Jersey.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Chatbot Creation</h3>
+          <p>Automate customer replies on your website, WhatsApp, or Facebook. Custom flows and AI answers.</p>
+        </div>
+        <div class="card">
+          <h3>Website Development</h3>
+          <p>Modern, responsive websites that look great on phones and computers. Hosting help included.</p>
+        </div>
+        <div class="card">
+          <h3>Social Media Setup</h3>
+          <p>We set up or refresh your profiles and connect them to your website to bring more local customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2 class="title" style="margin-top:40px;">Our Work (Photos)</h2>
-  <p>Below are example project images. Add your own photos inside a folder called <strong>fotos</strong>.</p>
+  <section id="pricing">
+    <div class="container">
+      <h2 class="section-title">Pricing</h2>
+      <p class="sub">Simple packages for small businesses.</p>
+      <div class="grid pricing">
+        <div class="card">
+          <h3>Starter Site</h3>
+          <div class="price">£199</div>
+          <ul class="list">
+            <li>1-page website</li>
+            <li>Mobile-friendly design</li>
+            <li>Contact & WhatsApp buttons</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Business Chatbot</h3>
+          <div class="price">£99 + £10/mo</div>
+          <ul class="list">
+            <li>Website chatbot</li>
+            <li>Predefined answers</li>
+            <li>Leads sent to your email</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pro Bundle</h3>
+          <div class="price">£349</div>
+          <ul class="list">
+            <li>Website + Chatbot</li>
+            <li>Basic SEO</li>
+            <li>Social setup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="gallery">
-    <img src="fotos/foto1.jpg" alt="Project Photo 1">
-    <img src="fotos/foto2.jpg" alt="Project Photo 2">
-    <img src="fotos/foto3.jpg" alt="Project Photo 3">
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="grid">
+        <div class="card">
+          <p>“Super quick and friendly service. Our customers get answers instantly.”</p>
+          <p><strong>— Local Café, St Helier</strong></p>
+        </div>
+        <div class="card">
+          <p>“Website live in 3 days. Exactly what we needed for our carpentry business.”</p>
+          <p><strong>— B. Gomes Carpentry</strong></p>
+        </div>
+        <div class="card">
+          <p>“Great value. The chatbot reduced our phone calls by half.”</p>
+          <p><strong>— Cleaning Services Jersey</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>How fast is delivery?</h3>
+          <p>Typical delivery is 3–5 days depending on the package.</p>
+        </div>
+        <div class="card">
+          <h3>Can you manage my site?</h3>
+          <p>Yes, we can maintain and update your site monthly if you prefer.</p>
+        </div>
+        <div class="card">
+          <h3>Is WhatsApp included?</h3>
+          <p>We add WhatsApp buttons to your site and can connect the chatbot to it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="card contact-card">
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/447700704591" target="_blank" rel="noopener">07700 704591</a></p>
+        <p><strong>Email:</strong> <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a></p>
+        <div class="contact-links" style="margin-top:10px;">
+          <a class="cta" href="https://wa.me/447700704591" target="_blank" rel="noopener" style="text-decoration:none;">Start WhatsApp Chat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AP Digital Solutions | Jersey, Channel Islands</p>
+  </footer>
+
+  <div class="chatbox" aria-live="polite">
+    <div class="chatbox-header">AP Chat Assistant <span class="badge">Demo</span></div>
+    <div id="chat-messages" class="chatbox-messages">
+      <div class="msg bot">
+        <div class="bubble">
+          Hi! I’m the AP assistant. Ask me about chatbots, websites, prices, or delivery time.
+        </div>
+      </div>
+    </div>
+    <form id="chat-form" class="chatbox-input">
+      <input id="chat-input" type="text" placeholder="Type a message..." aria-label="Type a message" />
+      <button type="submit">Send</button>
+    </form>
   </div>
-</section>
 
-<footer>
-  © 2025 AP Digital Solutions | Jersey
-</footer>
+  <script>
+    const messages = document.getElementById('chat-messages');
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('chat-input');
 
+    function addMessage(role, text) {
+      const wrap = document.createElement('div');
+      wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      bubble.textContent = text;
+      wrap.appendChild(bubble);
+      messages.appendChild(wrap);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function botReply(userText) {
+      const t = userText.toLowerCase();
+      if (t.includes('price') || t.includes('cost')) return 'Starter Site £199 · Chatbot £99 + £10/mo · Pro Bundle £349.';
+      if (t.includes('chatbot')) return 'We build website + WhatsApp chatbots with custom flows and AI. Delivery 3–5 days.';
+      if (t.includes('website')) return 'Simple, fast websites for phones and desktops. Hosting help included.';
+      if (t.includes('time') || t.includes('delivery')) return 'Typical delivery: 3–5 days depending on package.';
+      if (t.includes('whatsapp') || t.includes('contact')) return 'Message us on WhatsApp: 07700 704591.';
+      return 'Thanks! Want to continue on WhatsApp? 07700 704591';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      addMessage('user', text);
+      input.value = '';
+      setTimeout(() => addMessage('bot', botReply(text)), 300);
+    });
+  </script>
 </body>
 </html>
