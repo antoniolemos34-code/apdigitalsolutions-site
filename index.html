@@ -4,243 +4,213 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AP Digital Solutions – Websites & Chatbots in Jersey</title>
+  <title>AP Digital Solutions – Websites & Chatbots for Local Businesses</title>
 
-  <!-- BASIC SEO -->
-  <meta name="description" content="AP Digital Solutions builds modern websites and smart chatbots for local businesses in Jersey. Simple, fast and professional – all connected to WhatsApp, Facebook and Instagram.">
+  <!-- SEO -->
+  <meta name="description" content="AP Digital Solutions creates modern websites and smart chatbots for local businesses in Jersey. Clean design, direct WhatsApp contact and social media integration.">
   <meta name="author" content="AP Digital Solutions">
 
-  <!-- OPEN GRAPH (SOCIAL) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="AP Digital Solutions – Websites & Chatbots in Jersey">
-  <meta property="og:description" content="Websites and chatbots for small local businesses that want to look professional online and get more clients.">
+  <meta property="og:description" content="Clean, modern websites and AI chatbots connected to WhatsApp, Facebook and Instagram.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apdigitalsolutions.digital">
 
   <style>
     :root {
-      --green-main: #1f7a4a;
-      --green-dark: #145036;
-      --green-soft: #2fa06a;
-      --cream: #f6f1e7;
-      --bg: #050816;
-      --card: #ffffff;
-      --text-main: #111827;
-      --text-soft: #6b7280;
-      --border-soft: #e5e7eb;
-      --accent: #f4b76b;
-      --radius-lg: 18px;
-      --radius-xl: 28px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.18);
+      --gold: #cfa14a;
+      --gold-soft: #f4e4bf;
+      --black: #111111;
+      --dark-grey: #333333;
+      --light-grey: #f5f5f7;
+      --white: #ffffff;
+      --border-radius: 16px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.08);
+      --max-width: 1080px;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, #0b1723 0, #050816 45%, #02010a 100%);
-      color: #f9fafb;
+      background: var(--light-grey);
+      color: var(--dark-grey);
       line-height: 1.6;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
+    /* Layout base */
     .page {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 18px 16px 80px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    /* HEADER */
-    .site-header {
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      padding: 12px 16px;
-      border-radius: 999px;
-      background: linear-gradient(
-        90deg,
-        rgba(15, 23, 42, 0.92),
-        rgba(15, 23, 42, 0.72)
-      );
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
-      backdrop-filter: blur(16px);
-      position: sticky;
-      top: 10px;
-      z-index: 50;
     }
 
-    .logo-block {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
-    .logo-circle {
+    .brand-logo {
       width: 40px;
       height: 40px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #ffffff 0, #bdebd3 40%, #1f7a4a 100%);
+      border-radius: 50%;
+      background: var(--black);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 18px;
-      color: #0b1120;
-      letter-spacing: 0.05em;
-    }
-
-    .logo-text-main {
-      font-size: 15px;
+      color: var(--gold);
       font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 1px;
     }
 
-    .logo-text-sub {
+    .brand-text-title {
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--black);
+    }
+
+    .brand-text-sub {
       font-size: 12px;
-      color: #e5e7eb;
+      color: #777;
     }
 
-    .nav-links {
+    .nav-cta {
       display: flex;
-      flex-wrap: wrap;
       gap: 10px;
-      justify-content: flex-end;
       align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: #e5e7eb;
-      background: rgba(15, 23, 42, 0.7);
-    }
-
-    .nav-links a:hover {
-      background: rgba(34, 197, 94, 0.12);
-      border-color: rgba(34, 197, 94, 0.7);
-    }
-
-    .nav-whatsapp-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(16, 185, 129, 0.08);
-      border: 1px solid rgba(16, 185, 129, 0.5);
-      color: #bbf7d0;
-    }
-
-    .nav-whatsapp-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
-    }
-
-    /* LAYOUT */
-    main {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    @media (max-width: 880px) {
-      .site-header {
-        border-radius: 18px;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      main {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .nav-links {
-        justify-content: flex-start;
-      }
-    }
-
-    /* HERO LEFT */
-    .hero-left {
-      border-radius: 30px;
-      background:
-        radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), transparent 50%),
-        radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.18), transparent 55%),
-        linear-gradient(135deg, #020617, #020617);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      box-shadow: var(--shadow-soft);
-      padding: 24px 20px 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-pill-row {
-      display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
     }
 
-    .hero-pill {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      padding: 5px 10px;
+    .btn {
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: #e5e7eb;
+      border: none;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      white-space: nowrap;
     }
 
-    .hero-pill strong {
-      color: #bbf7d0;
+    .btn-primary {
+      background: var(--black);
+      color: var(--white);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      color: var(--dark-grey);
+    }
+
+    .btn-outline:hover {
+      background: var(--black);
+      color: var(--white);
+      border-color: var(--black);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .section {
+      padding: 40px 18px;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
     }
 
     .hero-title {
-      font-size: clamp(26px, 4vw, 34px);
-      line-height: 1.15;
-      margin-bottom: 10px;
+      font-size: clamp(26px, 3vw + 12px, 36px);
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
     }
 
-    .hero-title span.highlight {
-      color: #a7f3d0;
+    .hero-highlight {
+      color: var(--gold);
     }
 
-    .hero-subtitle {
+    .hero-text {
       font-size: 14px;
-      color: #e5e7eb;
-      max-width: 34rem;
-      margin-bottom: 18px;
-    }
-
-    .hero-subtitle span {
-      color: #facc15;
-      font-weight: 500;
+      color: #555;
+      margin-bottom: 20px;
     }
 
     .hero-actions {
@@ -250,769 +220,757 @@
       margin-bottom: 16px;
     }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #022c22;
-      box-shadow: 0 18px 40px rgba(22, 163, 74, 0.65);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 50px rgba(22, 163, 74, 0.8);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.85);
-      color: #e5e7eb;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(15, 23, 42, 0.98);
-    }
-
-    .hero-note {
+    .hero-meta {
       font-size: 12px;
-      color: #9ca3af;
-      margin-bottom: 12px;
+      color: #777;
     }
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 11px;
-      color: #e5e7eb;
+    /* HERO cards */
+    .hero-card-stack {
+      display: grid;
+      gap: 12px;
     }
 
-    .hero-badge {
-      padding: 5px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    /* HERO RIGHT - IMAGE & CARDS */
-    .hero-right {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .hero-image-card {
-      border-radius: 26px;
-      overflow: hidden;
-      background: var(--cream);
+    .hero-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 16px 16px 14px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    .hero-image-wrapper {
+      border: 1px solid rgba(0, 0, 0, 0.03);
       position: relative;
-      height: 210px;
       overflow: hidden;
     }
 
-    .hero-image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(1.1);
-    }
-
-    .hero-image-tag {
-      position: absolute;
-      left: 12px;
-      bottom: 12px;
-      background: rgba(15, 23, 42, 0.9);
-      color: #f9fafb;
+    .hero-card-label {
       font-size: 11px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #999;
+      margin-bottom: 6px;
     }
 
-    .hero-image-tag span.dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
-
-    .hero-image-body {
-      padding: 12px 14px 12px;
-      font-size: 12px;
-      color: var(--text-soft);
-    }
-
-    .mini-cards-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .mini-card {
-      border-radius: 16px;
-      background: var(--cream);
-      padding: 10px 11px;
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      font-size: 12px;
-      color: var(--text-soft);
-    }
-
-    .mini-card-title {
-      font-weight: 600;
-      color: var(--green-dark);
-      margin-bottom: 4px;
-      font-size: 12px;
-    }
-
-    /* SIDE CARDS BELOW / SERVICES */
-    .side-column {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
-      gap: 14px;
-    }
-
-    @media (max-width: 880px) {
-      .side-column {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .card {
-      border-radius: var(--radius-lg);
-      background: var(--cream);
-      color: var(--text-main);
-      padding: 18px 16px 16px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-    }
-
-    .card-title {
+    .hero-card-title {
       font-size: 15px;
       font-weight: 700;
       margin-bottom: 6px;
-      color: #1f2933;
+      color: var(--black);
     }
 
-    .card-sub {
+    .hero-card-text {
       font-size: 13px;
-      color: var(--text-soft);
-      margin-bottom: 10px;
+      color: #666;
     }
 
-    .service-list {
-      list-style: none;
-      font-size: 13px;
-      color: var(--text-soft);
-      display: grid;
-      gap: 4px;
-      margin-bottom: 10px;
-    }
-
-    .service-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-    }
-
-    .service-list li span.bullet {
-      color: var(--green-main);
-      font-size: 12px;
-      margin-top: 3px;
-    }
-
-    .steps-list {
-      list-style: none;
-      display: grid;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    .steps-list li span.step-label {
-      font-weight: 600;
-      color: var(--green-dark);
-      margin-right: 4px;
-    }
-
-    .highlight-box {
-      margin-top: 6px;
-      padding: 8px 9px;
-      border-radius: 14px;
-      background: #ecfdf3;
-      border: 1px solid rgba(21, 128, 61, 0.35);
-      font-size: 12px;
-      color: #166534;
-    }
-
-    .social-row {
+    .hero-tag-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      margin-top: 10px;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--light-grey);
+      color: #555;
+    }
+
+    .hero-card-pill {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--black);
+      color: var(--gold-soft);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* SERVICES */
+    .sec-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--black);
+    }
+
+    .sec-subtitle {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 16px 16px 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      color: var(--gold);
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .card-list {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #666;
+      padding-left: 18px;
+    }
+
+    /* WHY US */
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .pill {
+      display: inline-flex;
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--black);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .list-check {
+      list-style: none;
       margin-top: 8px;
     }
 
-    .social-btn {
-      display: inline-flex;
+    .list-check li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .check-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      display: flex;
       align-items: center;
-      gap: 6px;
-      padding: 8px 11px;
-      border-radius: 999px;
-      border: 1px solid rgba(15, 23, 42, 0.12);
+      justify-content: center;
+      font-size: 11px;
+      color: var(--gold);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .highlight-box {
+      background: var(--black);
+      color: var(--gold-soft);
+      border-radius: var(--border-radius);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
+    }
+
+    .highlight-box strong {
+      color: var(--gold);
+    }
+
+    /* CONTACT */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      font-size: 13px;
+      color: #555;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .chip {
       font-size: 12px;
-      cursor: pointer;
-      background: #111827;
-      color: #f9fafb;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: #555;
+      background: var(--light-grey);
     }
 
-    .social-btn.instagram {
-      background: linear-gradient(135deg, #f97316, #ec4899, #8b5cf6);
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .social-btn.facebook {
-      background: #1d4ed8;
+    .social-btn {
+      flex: 1 1 120px;
+      justify-content: center;
     }
 
-    .social-btn:hover {
-      opacity: 0.95;
+    .social-btn--fb {
+      background: #1877f2;
+      color: #fff;
     }
 
-    .contact-note {
-      margin-top: 6px;
-      font-size: 11px;
-      color: var(--text-soft);
+    .social-btn--ig {
+      background: #f00075;
+      color: #fff;
     }
 
+    .social-btn--wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .social-btn--fb:hover,
+    .social-btn--ig:hover,
+    .social-btn--wa:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    /* FOOTER */
     footer {
-      margin-top: 30px;
-      text-align: center;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      background: #f9fafb;
+      padding: 18px;
       font-size: 11px;
-      color: #9ca3af;
+      color: #777;
     }
 
-    footer a {
-      color: #a5b4fc;
-      text-decoration: none;
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* FLOATING CHATBOX */
-    .chat-fab {
+    /* CHATBOX FLOATING */
+    .chat-launcher {
       position: fixed;
-      right: 18px;
       bottom: 18px;
-      width: 54px;
-      height: 54px;
+      right: 18px;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chat-launcher-text {
+      background: var(--black);
+      color: var(--gold-soft);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      box-shadow: var(--shadow-soft);
+      display: none;
+    }
+
+    .chat-launcher-btn {
+      width: 52px;
+      height: 52px;
       border-radius: 999px;
       border: none;
-      cursor: pointer;
-      background: radial-gradient(circle at 30% 20%, #ffffff 0, #bbf7d0 40%, #16a34a 100%);
-      box-shadow: 0 18px 40px rgba(4, 120, 87, 0.7);
+      background: var(--gold);
+      color: var(--black);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 24px;
-      color: #022c22;
-      z-index: 70;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
     }
 
-    .chat-fab:active {
-      transform: translateY(1px) scale(0.98);
-      box-shadow: 0 14px 28px rgba(4, 120, 87, 0.8);
+    .chat-launcher-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 46px rgba(0, 0, 0, 0.3);
+      background: #e1b85a;
     }
 
     .chatbox {
       position: fixed;
-      right: 18px;
       bottom: 80px;
+      right: 18px;
       width: 290px;
-      max-width: calc(100% - 40px);
-      border-radius: 18px;
-      background: #020617;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
-      overflow: hidden;
-      font-size: 13px;
+      max-height: 420px;
+      background: var(--white);
+      border-radius: 22px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(0, 0, 0, 0.08);
       display: none;
-      z-index: 69;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 45;
     }
 
     .chatbox-header {
-      padding: 10px 12px;
-      background: linear-gradient(135deg, #16a34a, #15803d);
-      color: #f9fafb;
+      padding: 12px 14px;
+      background: var(--black);
+      color: var(--gold-soft);
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 8px;
-    }
-
-    .chatbox-header-left {
-      display: flex;
       align-items: center;
-      gap: 8px;
     }
 
-    .chatbox-avatar {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: #022c22;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-    }
-
-    .chatbox-title {
-      font-weight: 600;
-      font-size: 13px;
-    }
-
-    .chatbox-subtitle {
-      font-size: 11px;
-      opacity: 0.9;
-    }
-
-    .chatbox-close {
-      border: none;
-      background: transparent;
-      color: #ecfdf3;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .chatbox-body {
-      padding: 10px 12px 12px;
-      max-height: 320px;
-      overflow-y: auto;
-      background: radial-gradient(circle at top, #0f172a, #020617);
-    }
-
-    .chat-message {
-      margin-bottom: 8px;
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: rgba(15, 23, 42, 0.92);
-      color: #e5e7eb;
-    }
-
-    .chat-message strong {
-      color: #a7f3d0;
-    }
-
-    .chat-buttons-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .chat-button {
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-      color: #e5e7eb;
-      padding: 7px 9px;
-      font-size: 12px;
-      cursor: pointer;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .chat-button span.icon {
+    .chatbox-header h3 {
       font-size: 14px;
     }
 
-    .chat-button-full {
-      width: 100%;
-      margin-top: 6px;
-      justify-content: center;
-      text-align: center;
+    .chatbox-header span {
+      font-size: 11px;
+      color: #d5c79e;
     }
 
-    .chat-small-note {
-      margin-top: 6px;
-      font-size: 10px;
-      color: #9ca3af;
+    .chatbox-close {
+      background: transparent;
+      border: none;
+      color: var(--gold-soft);
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .chatbox-body {
+      padding: 10px 14px 12px;
+      font-size: 13px;
+      color: #444;
+      background: #fcfcfd;
+    }
+
+    .chatbot-bubble {
+      background: var(--gold-soft);
+      border-radius: 14px;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+    }
+
+    .chatbox-quick {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .chatbox-quick button,
+    .chatbox-quick a {
+      border-radius: 999px;
+      border: none;
+      padding: 7px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--black);
+      color: var(--gold-soft);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      text-decoration: none;
+    }
+
+    .chatbox-quick button:hover,
+    .chatbox-quick a:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+      background: #1c1c1c;
+    }
+
+    .chatbox-footer {
+      padding: 8px 14px 12px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      font-size: 11px;
+      color: #888;
+      background: #f7f7f9;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .why-grid,
+      .contact-wrapper {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 640px) {
-      .chatbox {
-        right: 10px;
-        bottom: 74px;
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
       }
-      .chat-fab {
+      .cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .chat-launcher {
         right: 14px;
         bottom: 14px;
+      }
+      .chatbox {
+        right: 14px;
+        left: 14px;
+        width: auto;
+      }
+      .chat-launcher-text {
+        display: none;
+      }
+    }
+
+    @media (min-width: 641px) {
+      .chat-launcher-text {
+        display: block;
       }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="logo-block">
-        <div class="logo-circle">AP</div>
-        <div>
-          <div class="logo-text-main">AP DIGITAL SOLUTIONS</div>
-          <div class="logo-text-sub">Websites & chatbots for small businesses in Jersey</div>
+    <header>
+      <nav class="nav">
+        <div class="brand">
+          <div class="brand-logo">AP</div>
+          <div>
+            <div class="brand-text-title">AP Digital Solutions</div>
+            <div class="brand-text-sub">Websites & Chatbots – Jersey</div>
+          </div>
         </div>
-      </div>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#process">How it works</a>
-        <a href="#contact">Contact</a>
-        <div class="nav-whatsapp-badge">
-          <span class="nav-whatsapp-dot"></span>
-          <span>Chat via WhatsApp available</span>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-outline">Contact</a>
+          <a href="https://wa.me/447700704591" target="_blank" rel="noopener" class="btn btn-primary">
+            Talk on WhatsApp
+          </a>
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- HERO LEFT -->
-      <section class="hero-left">
-        <div class="hero-pill-row">
-          <div class="hero-pill">Based in <strong>Jersey, Channel Islands</strong></div>
-          <div class="hero-pill">Focused on <strong>local small businesses</strong></div>
-        </div>
+      <!-- HERO -->
+      <section class="section hero">
+        <div class="section-inner hero-grid">
+          <div>
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Jersey Small Business Support
+            </div>
+            <h1 class="hero-title">
+              Clean, modern <span class="hero-highlight">websites</span> and
+              <span class="hero-highlight">chatbots</span> for local businesses.
+            </h1>
+            <p class="hero-text">
+              AP Digital Solutions helps small businesses in Jersey get online fast.
+              Simple websites, smart chatbots and direct contact via WhatsApp, Facebook and Instagram.
+            </p>
+            <div class="hero-actions">
+              <a href="https://wa.me/447700704591" target="_blank" rel="noopener" class="btn btn-primary">
+                Start a WhatsApp chat
+              </a>
+              <a href="https://www.instagram.com/apdigitalsolutions.je" target="_blank" rel="noopener" class="btn btn-outline">
+                View Instagram
+              </a>
+            </div>
+            <div class="hero-meta">
+              No technical drama. Just a friendly service and a clean online presence for your business.
+            </div>
+          </div>
 
-        <h1 class="hero-title">
-          Simple, modern <span class="highlight">websites & chatbots</span>
-          that make your business look professional online.
-        </h1>
+          <div class="hero-card-stack">
+            <article class="hero-card">
+              <div class="hero-card-label">Service</div>
+              <div class="hero-card-title">Websites that look good on any device</div>
+              <p class="hero-card-text">
+                One-page or simple multi-page sites, built to load fast and look professional on phones,
+                tablets and computers.
+              </p>
+              <div class="hero-tag-row">
+                <span class="hero-tag">Mobile friendly</span>
+                <span class="hero-tag">Clean layout</span>
+                <span class="hero-tag">Easy to update</span>
+              </div>
+              <span class="hero-card-pill">Websites</span>
+            </article>
 
-        <p class="hero-subtitle">
-          AP Digital Solutions helps small businesses in Jersey get online with
-          clean websites, direct WhatsApp contact and smart chatbots – without
-          complicated tech or agency prices. <span>You send your idea, we build it for you.</span>
-        </p>
+            <article class="hero-card">
+              <div class="hero-card-label">Service</div>
+              <div class="hero-card-title">Chatbots that reply 24/7</div>
+              <p class="hero-card-text">
+                Simple flows and smart answers to help customers even when you are busy or closed.
+              </p>
+              <div class="hero-tag-row">
+                <span class="hero-tag">FAQ replies</span>
+                <span class="hero-tag">Lead capture</span>
+                <span class="hero-tag">WhatsApp & web</span>
+              </div>
+              <span class="hero-card-pill">Chatbots</span>
+            </article>
 
-        <div class="hero-actions">
-          <!-- WhatsApp: direct link, number not shown on the page -->
-          <a
-            class="btn-primary"
-            href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%2C%20I%27d%20like%20to%20talk%20about%20a%20website%20or%20chatbot%20for%20my%20business."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>💬</span>
-            <span>Chat on WhatsApp</span>
-          </a>
-
-          <a
-            class="btn-secondary"
-            href="#services"
-          >
-            📋 See what we can do
-          </a>
-        </div>
-
-        <p class="hero-note">
-          No prices on the website – every project is quoted individually depending on
-          what you need. You always approve everything before anything goes live.
-        </p>
-
-        <div class="hero-badges">
-          <div class="hero-badge">Websites in 3–7 days (typical)</div>
-          <div class="hero-badge">Copywriting help included</div>
-          <div class="hero-badge">WhatsApp, Facebook & Instagram connected</div>
+            <article class="hero-card">
+              <div class="hero-card-label">Support</div>
+              <div class="hero-card-title">Local, friendly help</div>
+              <p class="hero-card-text">
+                Built for Jersey businesses that want results, not complicated tech.
+              </p>
+              <div class="hero-tag-row">
+                <span class="hero-tag">Small business focus</span>
+                <span class="hero-tag">Simple language</span>
+                <span class="hero-tag">Quick turnaround</span>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <!-- HERO RIGHT: IMAGE + MINI CARDS -->
-      <section class="hero-right">
-        <article class="hero-image-card">
-          <div class="hero-image-wrapper">
-            <!-- Hero image from Unsplash -->
-            <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=900&q=80" alt="Designer working on a website on laptop and phone" />
-            <div class="hero-image-tag">
-              <span class="dot"></span>
-              <span>Digital presence for local businesses</span>
-            </div>
-          </div>
-          <div class="hero-image-body">
-            Clean, modern layouts tailored to your business – from coffee vans and
-            beauty salons to trades, barbers, shops and more.
-          </div>
-        </article>
+      <!-- SERVICES -->
+      <section class="section">
+        <div class="section-inner">
+          <h2 class="sec-title">What we can help you with</h2>
+          <p class="sec-subtitle">
+            Pick one service or combine everything into a simple package for your business.
+          </p>
 
-        <div class="mini-cards-row">
-          <div class="mini-card">
-            <div class="mini-card-title">Websites that feel like your business</div>
-            <div>
-              We match your colours, logo and style so your site feels familiar to
-              clients who already know you.
-            </div>
+          <div class="cards-grid">
+            <article class="card">
+              <div class="card-icon">🌐</div>
+              <div class="card-title">Website Creation</div>
+              <p class="card-text">
+                Modern one-page or small multi-page sites with clean design and clear calls to action.
+              </p>
+              <ul class="card-list">
+                <li>Branded to your business</li>
+                <li>Works on phone, tablet & desktop</li>
+                <li>Contact and social media links</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🤖</div>
+              <div class="card-title">Chatbot Setup</div>
+              <p class="card-text">
+                Simple chatbots to answer common questions, collect leads and send enquiries to you.
+              </p>
+              <ul class="card-list">
+                <li>Pre-defined questions & answers</li>
+                <li>Lead capture forms</li>
+                <li>Website & WhatsApp connection</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">📲</div>
+              <div class="card-title">Online Presence</div>
+              <p class="card-text">
+                Help with your basic online presence so people actually find you when they search.
+              </p>
+              <ul class="card-list">
+                <li>Facebook & Instagram setup</li>
+                <li>Link-in-bio and contact buttons</li>
+                <li>Simple advice on what to post</li>
+              </ul>
+            </article>
           </div>
-          <div class="mini-card">
-            <div class="mini-card-title">Chatbots that work while you work</div>
-            <div>
-              Answer basic questions automatically and send serious enquiries directly
-              to your WhatsApp.
+        </div>
+      </section>
+
+      <!-- WHY US -->
+      <section class="section">
+        <div class="section-inner why-grid">
+          <div>
+            <div class="pill">Why AP Digital Solutions</div>
+            <h2 class="sec-title">Made for Jersey small businesses</h2>
+            <p class="sec-subtitle">
+              We focus on simple, clear solutions that help your business look professional online without big agency prices.
+            </p>
+            <ul class="list-check">
+              <li>
+                <span class="check-icon">✓</span>
+                <span>Clear communication in English or Portuguese – no complicated tech talk.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>Light, elegant design using white, black and gold accents.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>Direct contact via WhatsApp so you can manage everything from your phone.</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>Built for service businesses: cafés, trades, salons, cleaning, care and more.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="highlight-box">
+            <strong>What you get:</strong><br /><br />
+            A clean, modern website, a simple chatbot and clear social links – all focused on one thing:
+            making it easier for customers to contact you and trust your business.<br /><br />
+            You don’t need to learn design, code or marketing. Just share a few details about your business
+            and we handle the rest.
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="section-inner contact-wrapper">
+          <div class="contact-card">
+            <h2 class="sec-title">Ready to talk?</h2>
+            <p>
+              Send a quick message with your business name and what you’re looking for
+              (website, chatbot, social, or all together).
+            </p>
+            <div class="contact-row">
+              <span class="chip">Jersey based</span>
+              <span class="chip">Small business friendly</span>
+              <span class="chip">Simple, clear process</span>
             </div>
+            <p style="margin-top:14px;font-size:12px;color:#777;">
+              We usually reply the same day or within 24 hours.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <p style="font-weight:600;margin-bottom:10px;">Choose how you want to say hello:</p>
+            <div class="social-buttons">
+              <a href="https://wa.me/447700704591" target="_blank" rel="noopener" class="btn social-btn social-btn--wa">
+                WhatsApp
+              </a>
+              <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener" class="btn social-btn social-btn--fb">
+                Facebook Page
+              </a>
+              <a href="https://www.instagram.com/apdigitalsolutions.je" target="_blank" rel="noopener" class="btn social-btn social-btn--ig">
+                Instagram Profile
+              </a>
+            </div>
+            <p style="margin-top:14px;font-size:12px;color:#777;">
+              Prefer email? You can send a message via social and we’ll reply with an address to use.
+            </p>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- SERVICES & PROCESS -->
-    <section class="side-column" id="services">
-      <article class="card">
-        <h2 class="card-title">What we build for you</h2>
-        <p class="card-sub">
-          Everything is built around your business: your logo, your colours and
-          your way of talking to clients.
-        </p>
-        <ul class="service-list">
-          <li>
-            <span class="bullet">✓</span>
-            <span>Modern one-page or multi-page websites for local businesses.</span>
-          </li>
-          <li>
-            <span class="bullet">✓</span>
-            <span>Chatbots connected to WhatsApp to answer common questions 24/7.</span>
-          </li>
-          <li>
-            <span class="bullet">✓</span>
-            <span>Direct links to Facebook and Instagram so people can follow you easily.</span>
-          </li>
-          <li>
-            <span class="bullet">✓</span>
-            <span>Basic SEO so Google can understand what your business does.</span>
-          </li>
-        </ul>
-        <div class="highlight-box">
-          We write or improve the text for you, so the website sounds clear and
-          professional in simple English.
-        </div>
-      </article>
-
-      <article class="card" id="process">
-        <h2 class="card-title">How the process works</h2>
-        <p class="card-sub">
-          Simple steps. No stress. Most small projects are finished within one week.
-        </p>
-        <ul class="steps-list">
-          <li>
-            <span class="step-label">1.</span>
-            <span>You send a WhatsApp, Facebook or Instagram message with a short description of your business.</span>
-          </li>
-          <li>
-            <span class="step-label">2.</span>
-            <span>We reply with a few questions and a clear quote for your project.</span>
-          </li>
-          <li>
-            <span class="step-label">3.</span>
-            <span>You send logo, photos (if you have) and any text you want to include.</span>
-          </li>
-          <li>
-            <span class="step-label">4.</span>
-            <span>We design the website and chatbot and send you a preview.</span>
-          </li>
-          <li>
-            <span class="step-label">5.</span>
-            <span>You approve, we publish the website and connect WhatsApp, Facebook and Instagram.</span>
-          </li>
-        </ul>
-      </article>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="side-column" id="contact">
-      <article class="card">
-        <h2 class="card-title">Ready to talk about your project?</h2>
-        <p class="card-sub">
-          Choose the app you prefer. Messages come directly to AP Digital Solutions.
-        </p>
-
-        <div class="social-row">
-          <!-- WhatsApp (hidden number, only link) -->
-          <a
-            class="social-btn"
-            href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%2C%20I%27m%20interested%20in%20a%20website%20or%20chatbot."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            💬 WhatsApp
-          </a>
-
-          <a
-            class="social-btn facebook"
-            href="https://www.facebook.com/share/1KY87NG73M/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📘 Facebook
-          </a>
-
-          <a
-            class="social-btn instagram"
-            href="https://www.instagram.com/apdigitalsolution.je?igsh=MXA1dXMzaTh5bG1ncg=="
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📸 Instagram
-          </a>
-        </div>
-
-        <p class="contact-note">
-          Your phone number never appears on the website. Visitors only see buttons
-          like “Chat on WhatsApp” or “Message us on Facebook”.
-        </p>
-      </article>
-
-      <article class="card">
-        <h2 class="card-title">A look behind the screens</h2>
-        <p class="card-sub">
-          We use modern tools and clean code so your site is fast, light and easy to update in the future.
-        </p>
-        <div class="hero-image-wrapper" style="height: 150px; border-radius: 16px; overflow: hidden;">
-          <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Laptop and code on screen in a modern workspace" />
-        </div>
-      </article>
-    </section>
-
     <footer>
-      <p>AP Digital Solutions · Jersey, Channel Islands · Websites & chatbots for small businesses.</p>
+      <div class="footer-inner">
+        <span>© <span id="year"></span> AP Digital Solutions – Jersey, Channel Islands</span>
+        <span>Websites & Chatbots for local businesses</span>
+      </div>
     </footer>
   </div>
 
-  <!-- FLOATING CHATBOX (INTERACTIVE) -->
-  <button
-    class="chat-fab"
-    type="button"
-    aria-label="Chat with AP Digital Solutions"
-    id="chatFab"
-  >
-    💬
-  </button>
-
+  <!-- Floating chat -->
   <div class="chatbox" id="chatbox">
     <div class="chatbox-header">
-      <div class="chatbox-header-left">
-        <div class="chatbox-avatar">AP</div>
-        <div>
-          <div class="chatbox-title">AP Digital Solutions</div>
-          <div class="chatbox-subtitle">Quick chat – choose an option</div>
-        </div>
+      <div>
+        <h3>AP Chat Assistant</h3>
+        <span>Quick questions, no pressure.</span>
       </div>
-      <button class="chatbox-close" type="button" id="chatboxClose">×</button>
+      <button class="chatbox-close" id="chatbox-close" aria-label="Close chat">×</button>
     </div>
     <div class="chatbox-body">
-      <div class="chat-message">
-        Hi! 👋<br>
-        <strong>How would you like to talk to us?</strong> Choose one of the options below.
+      <div class="chatbot-bubble">
+        Hi! I can help you understand how AP Digital Solutions works. Choose a quick option or open a WhatsApp chat.
       </div>
-
-      <button
-        class="chat-button chat-button-full"
-        type="button"
-        onclick="openWhatsApp('Hi AP Digital Solutions, I would like help with a website for my business in Jersey.')"
-      >
-        <span class="icon">⚡</span> Chat on WhatsApp
-      </button>
-
-      <div class="chat-buttons-grid">
-        <button
-          class="chat-button"
-          type="button"
-          onclick="openWhatsApp('Hi AP Digital Solutions, I am interested in a WEBSITE for my business.')"
-        >
-          <span class="icon">🖥️</span>
-          <span>Website</span>
+      <div class="chatbox-quick">
+        <button type="button" data-message="I’m interested in a website.">
+          I want a website
         </button>
-        <button
-          class="chat-button"
-          type="button"
-          onclick="openWhatsApp('Hi AP Digital Solutions, I am interested in a CHATBOT for my business.')"
-        >
-          <span class="icon">🤖</span>
-          <span>Chatbot</span>
+        <button type="button" data-message="I’d like to know more about chatbots.">
+          I want a chatbot
         </button>
-        <button
-          class="chat-button"
-          type="button"
-          onclick="openWhatsApp('Hi AP Digital Solutions, I would like BOTH website and chatbot.')"
-        >
-          <span class="icon">✨</span>
-          <span>Both</span>
+        <button type="button" data-message="How long does it usually take?">
+          How long does it take?
         </button>
-        <button
-          class="chat-button"
-          type="button"
-          onclick="window.open('https://www.facebook.com/share/1KY87NG73M/', '_blank', 'noopener');"
-        >
-          <span class="icon">📘</span>
-          <span>Facebook</span>
-        </button>
+        <a href="https://wa.me/447700704591" target="_blank" rel="noopener">
+          Continue on WhatsApp
+        </a>
       </div>
-
-      <button
-        class="chat-button chat-button-full"
-        type="button"
-        onclick="window.open('https://www.instagram.com/apdigitalsolution.je?igsh=MXA1dXMzaTh5bG1ncg==', '_blank', 'noopener');"
-      >
-        <span class="icon">📸</span>
-        <span>Instagram</span>
-      </button>
-
-      <div class="chat-small-note">
-        Your phone number is never shown on the website. We only use it inside WhatsApp links to open the chat.
-      </div>
+    </div>
+    <div class="chatbox-footer">
+      This is a simple demo assistant. For real answers, continue the conversation on WhatsApp.
     </div>
   </div>
 
+  <div class="chat-launcher" id="chat-launcher">
+    <div class="chat-launcher-text">Questions? Ask the AP assistant.</div>
+    <button class="chat-launcher-btn" aria-label="Open chat assistant">💬</button>
+  </div>
+
   <script>
-    const chatFab = document.getElementById('chatFab');
-    const chatbox = document.getElementById('chatbox');
-    const chatboxClose = document.getElementById('chatboxClose');
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    chatFab.addEventListener('click', () => {
-      const isVisible = chatbox.style.display === 'block';
-      chatbox.style.display = isVisible ? 'none' : 'block';
+    const chatbox = document.getElementById("chatbox");
+    const launcher = document.getElementById("chat-launcher");
+    const closeBtn = document.getElementById("chatbox-close");
+
+    launcher.addEventListener("click", () => {
+      chatbox.style.display = "flex";
     });
 
-    chatboxClose.addEventListener('click', () => {
-      chatbox.style.display = 'none';
+    closeBtn.addEventListener("click", () => {
+      chatbox.style.display = "none";
     });
 
-    function openWhatsApp(message) {
-      const encoded = encodeURIComponent(message);
-      const url = `https://wa.me/447700704591?text=${encoded}`;
-      window.open(url, '_blank', 'noopener');
-    }
+    // Quick reply buttons – just show alert with text (no phone number)
+    document.querySelectorAll(".chatbox-quick button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const msg = btn.getAttribute("data-message");
+        alert(msg + " Please send this as a message on WhatsApp so we can reply.");
+      });
+    });
   </script>
 </body>
-</html>
+                                                </html>
