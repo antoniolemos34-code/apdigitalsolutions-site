@@ -85,12 +85,11 @@
 
     .brand { display: flex; align-items: center; gap: 12px; }
 
-    .brand-logo {
-      width: 40px; height: 40px;
+    .brand-logo-img {
+      width: 40px;
+      height: 40px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #bbf7d0 0, #22c55e 35%, #16a34a 70%, #052e16 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 20px; color: #022c22;
+      object-fit: cover;
       box-shadow: var(--glow);
     }
 
@@ -166,7 +165,7 @@
       border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
       background:
-        linear-gradient(120deg, rgba(15,23,42,0.85), rgba(15,23,42,0.95)),
+        linear-gradient(120deg, rgba(15,23,42,0.88), rgba(15,23,42,0.96)),
         url("https://images.unsplash.com/photo-1536818968680-deeec2a9bc47?auto=format&fit=crop&w=1400&q=80")
         center/cover no-repeat;
       padding: 26px 24px 26px;
@@ -279,7 +278,7 @@
 
     .card {
       background:
-        linear-gradient(145deg, rgba(15,23,42,0.96), rgba(15,23,42,0.98));
+        linear-gradient(145deg, rgba(15,23,42,0.96), rgba(2,6,23,0.98));
       border-radius: var(--radius-xl);
       padding: 18px 18px 18px;
       border: 1px solid var(--border);
@@ -326,10 +325,10 @@
       color: var(--accent-soft);
     }
 
-    /* CARD COM IMAGEM DE FUTURO / SITE */
+    /* CARD COM IMAGEM DE SITE NEGÓCIO */
     .card.mockup {
       background:
-        linear-gradient(145deg, rgba(15,23,42,0.95), rgba(2,6,23,0.98)),
+        linear-gradient(145deg, rgba(15,23,42,0.9), rgba(2,6,23,0.96)),
         url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80")
         center/cover no-repeat;
     }
@@ -469,11 +468,6 @@
       color: var(--accent-soft);
       text-decoration: none;
       font-size: 12px;
-    }
-
-    .phone {
-      font-family: ui-monospace, Menlo, Monaco, Consolas, "Courier New", monospace;
-      letter-spacing: 0.05em;
     }
 
     /* CHATBOT FLOATING BUTTON + WIDGET */
@@ -617,7 +611,8 @@
   <div class="page">
     <header>
       <div class="brand">
-        <div class="brand-logo">AP</div>
+        <!-- usa o ficheiro do logo que subiste (ex: logo-ap-future.png) -->
+        <img src="logo-ap-future.png" alt="AP Digital Solutions logo" class="brand-logo-img" />
         <div class="brand-text">
           <span class="brand-title">AP Digital Solutions</span>
           <span class="brand-sub">Websites · Chatbots · Automations</span>
@@ -631,6 +626,7 @@
         <a href="#contact">Contact</a>
       </nav>
 
+      <!-- ligação direta para WhatsApp, sem mostrar o número -->
       <a class="cta-whatsapp" href="https://wa.me/447700704591" target="_blank" rel="noopener">
         <span class="icon">💬</span>
         <span>Chat on WhatsApp</span>
@@ -789,8 +785,7 @@
               <li>WhatsApp contact button</li>
             </ul>
             <p style="font-size:12px;color:var(--muted);">
-              Good for cleaners, trades and solo services.  
-              <strong>Ask for a quote on WhatsApp.</strong>
+              Good for cleaners, trades and solo services.
             </p>
           </div>
 
@@ -803,8 +798,7 @@
               <li>Simple automations for leads</li>
             </ul>
             <p style="font-size:12px;color:var(--muted);">
-              For businesses that receive lots of messages or repeat questions.  
-              <strong>We send a fixed price after understanding your needs.</strong>
+              For businesses that receive lots of messages or repeat questions.
             </p>
           </div>
 
@@ -826,12 +820,13 @@
       <section id="contact">
         <h2>Ready to build something?</h2>
         <p class="section-lead">
-          Send a message on WhatsApp with your business name and what you’d like to build, and we’ll reply with next steps and a fixed quote.
+          Send a message on WhatsApp or reach us on social – we’ll reply with next steps and a fixed quote.
         </p>
 
-        <p style="font-size:14px;margin-bottom:8px;">
-          <strong>WhatsApp:</strong> <span class="phone">07700 704591</span>
+        <p style="font-size:13px;margin-bottom:8px;">
+          <strong>Contact:</strong> use the WhatsApp, Instagram or Facebook buttons on this page.
         </p>
+
         <p style="font-size:13px;margin-bottom:12px;">
           Or email: <a href="mailto:apdigitalsolutions.je@outlook.com" style="color:var(--accent-soft);text-decoration:none;">apdigitalsolutions.je@outlook.com</a>
         </p>
@@ -848,7 +843,7 @@
     </footer>
   </div>
 
-  <!-- CHATBOT FLOATING BUTTON + WIDGET -->
+  <!-- BOTÃO FLOANTE + CHATBOT COM LIGAÇÕES DIRETAS -->
   <button class="chatbot-toggle" onclick="toggleChatbot()">
     <span class="icon">🤖</span>
     Chatbot demo
@@ -858,48 +853,54 @@
     <div class="chatbot-header">
       <div class="chatbot-header-title">
         <strong>AP Digital Chatbot (demo)</strong>
-        <span>Ask a quick question</span>
+        <span>Choose how you want to talk</span>
       </div>
       <button class="chatbot-close" onclick="toggleChatbot()">✕</button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
       <div class="msg bot">
         Hi 👋 I’m the AP Digital chatbot demo.  
-        Ask something like “Can you build a website for a cleaning company in Jersey?”.
+        Pick WhatsApp, Instagram or Facebook and we’ll open it for you.
       </div>
     </div>
     <div class="chatbot-quick">
-      <div class="chip" onclick="sendDemo('Can you build a website for my business?')">
-        Website for my business
-      </div>
-      <div class="chip" onclick="sendDemo('How long does a project take?')">
-        Project timeline
-      </div>
-      <div class="chip" onclick="sendDemo('Do you make WhatsApp chatbots?')">
-        WhatsApp chatbots
-      </div>
+      <div class="chip" onclick="contactVia('whatsapp')">WhatsApp (recommended)</div>
+      <div class="chip" onclick="contactVia('instagram')">Instagram</div>
+      <div class="chip" onclick="contactVia('facebook')">Facebook</div>
     </div>
   </div>
 
   <script>
+    const LINKS = {
+      whatsapp: "https://wa.me/447700704591",
+      instagram: "https://www.instagram.com/apdigitalsolution.je",
+      facebook: "https://www.facebook.com/apdigitalsolutions.je"
+    };
+
     function toggleChatbot() {
       const box = document.getElementById('chatbot');
       box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
     }
-    function sendDemo(text) {
+
+    function contactVia(channel) {
       const box = document.getElementById('chatbotMessages');
+
       const user = document.createElement('div');
       user.className = 'msg user';
-      user.textContent = text;
+      user.textContent = "Open " + channel + " chat";
       box.appendChild(user);
 
       const bot = document.createElement('div');
       bot.className = 'msg bot';
-      bot.textContent =
-        'This is a demo. For a real project, send a message on WhatsApp and we’ll reply with a custom answer for your business in Jersey.';
+      bot.textContent = "Opening " + channel + "…";
       box.appendChild(bot);
 
       box.scrollTop = box.scrollHeight;
+
+      const url = LINKS[channel];
+      if (url) {
+        window.open(url, "_blank");
+      }
     }
   </script>
 </body>
