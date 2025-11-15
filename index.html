@@ -14,9 +14,6 @@
   <meta property="og:title" content="AP Digital Solutions – Websites & Chatbots in Jersey">
   <meta property="og:description" content="Websites and chatbots for small local businesses that want to look professional online and get more clients.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://apdigitalsolutions.je">
-  <!-- Optional cover image if you add one later -->
-  <!-- <meta property="og:image" content="https://apdigitalsolutions.je/og-image.jpg"> -->
 
   <style>
     :root {
@@ -164,7 +161,7 @@
     main {
       margin-top: 22px;
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
       gap: 24px;
       align-items: stretch;
     }
@@ -186,8 +183,8 @@
       }
     }
 
-    /* HERO */
-    .hero-card {
+    /* HERO LEFT */
+    .hero-left {
       border-radius: 30px;
       background:
         radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), transparent 50%),
@@ -313,11 +310,96 @@
       background: rgba(15, 23, 42, 0.9);
     }
 
-    /* SIDE CARDS */
-    .side-column {
+    /* HERO RIGHT - IMAGE & CARDS */
+    .hero-right {
       display: flex;
       flex-direction: column;
       gap: 14px;
+    }
+
+    .hero-image-card {
+      border-radius: 26px;
+      overflow: hidden;
+      background: var(--cream);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.1);
+    }
+
+    .hero-image-tag {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      color: #f9fafb;
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-image-tag span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-image-body {
+      padding: 12px 14px 12px;
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .mini-cards-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .mini-card {
+      border-radius: 16px;
+      background: var(--cream);
+      padding: 10px 11px;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .mini-card-title {
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    /* SIDE CARDS BELOW / SERVICES */
+    .side-column {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 14px;
+    }
+
+    @media (max-width: 880px) {
+      .side-column {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
@@ -441,13 +523,13 @@
       text-decoration: underline;
     }
 
-    /* FLOATING WHATSAPP BUBBLE */
-    .whatsapp-fab {
+    /* FLOATING CHATBOX */
+    .chat-fab {
       position: fixed;
-      right: 16px;
+      right: 18px;
       bottom: 18px;
-      width: 56px;
-      height: 56px;
+      width: 54px;
+      height: 54px;
       border-radius: 999px;
       border: none;
       cursor: pointer;
@@ -456,26 +538,142 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 26px;
+      font-size: 24px;
       color: #022c22;
-      z-index: 60;
+      z-index: 70;
     }
 
-    .whatsapp-fab-label {
+    .chat-fab:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: 0 14px 28px rgba(4, 120, 87, 0.8);
+    }
+
+    .chatbox {
       position: fixed;
-      right: 82px;
-      bottom: 24px;
+      right: 18px;
+      bottom: 80px;
+      width: 290px;
+      max-width: calc(100% - 40px);
+      border-radius: 18px;
+      background: #020617;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
+      overflow: hidden;
+      font-size: 13px;
+      display: none;
+      z-index: 69;
+    }
+
+    .chatbox-header {
+      padding: 10px 12px;
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .chatbox-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chatbox-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #022c22;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .chatbox-title {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .chatbox-subtitle {
       font-size: 11px;
+      opacity: 0.9;
+    }
+
+    .chatbox-close {
+      border: none;
+      background: transparent;
+      color: #ecfdf3;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .chatbox-body {
+      padding: 10px 12px 12px;
+      max-height: 320px;
+      overflow-y: auto;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+    }
+
+    .chat-message {
+      margin-bottom: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
       background: rgba(15, 23, 42, 0.92);
       color: #e5e7eb;
-      padding: 6px 10px;
+    }
+
+    .chat-message strong {
+      color: #a7f3d0;
+    }
+
+    .chat-buttons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .chat-button {
       border-radius: 999px;
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      padding: 7px 9px;
+      font-size: 12px;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chat-button span.icon {
+      font-size: 14px;
+    }
+
+    .chat-button-full {
+      width: 100%;
+      margin-top: 6px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .chat-small-note {
+      margin-top: 6px;
+      font-size: 10px;
+      color: #9ca3af;
     }
 
     @media (max-width: 640px) {
-      .whatsapp-fab-label {
-        display: none;
+      .chatbox {
+        right: 10px;
+        bottom: 74px;
+      }
+      .chat-fab {
+        right: 14px;
+        bottom: 14px;
       }
     }
   </style>
@@ -497,14 +695,14 @@
         <a href="#contact">Contact</a>
         <div class="nav-whatsapp-badge">
           <span class="nav-whatsapp-dot"></span>
-          <span>Chat available via WhatsApp</span>
+          <span>Chat via WhatsApp available</span>
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- HERO -->
-      <section class="hero-card">
+      <!-- HERO LEFT -->
+      <section class="hero-left">
         <div class="hero-pill-row">
           <div class="hero-pill">Based in <strong>Jersey, Channel Islands</strong></div>
           <div class="hero-pill">Focused on <strong>local small businesses</strong></div>
@@ -553,130 +751,268 @@
         </div>
       </section>
 
-      <!-- SIDE COLUMN -->
-      <section class="side-column">
-        <!-- SERVICES -->
-        <article id="services" class="card">
-          <h2 class="card-title">What we build for you</h2>
-          <p class="card-sub">
-            Everything is built around your business: your logo, your colours and
-            your way of talking to clients.
-          </p>
-          <ul class="service-list">
-            <li>
-              <span class="bullet">✓</span>
-              <span>Modern one-page or multi-page websites for local businesses.</span>
-            </li>
-            <li>
-              <span class="bullet">✓</span>
-              <span>Chatbots connected to WhatsApp to answer common questions 24/7.</span>
-            </li>
-            <li>
-              <span class="bullet">✓</span>
-              <span>Direct links to Facebook and Instagram so people can follow you easily.</span>
-            </li>
-            <li>
-              <span class="bullet">✓</span>
-              <span>Basic SEO so Google can understand what your business does.</span>
-            </li>
-          </ul>
-          <div class="highlight-box">
-            We write or improve the text for you, so the website sounds clear and
-            professional in simple English.
+      <!-- HERO RIGHT: IMAGE + MINI CARDS -->
+      <section class="hero-right">
+        <article class="hero-image-card">
+          <div class="hero-image-wrapper">
+            <!-- Hero image from Unsplash -->
+            <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=900&q=80" alt="Designer working on a website on laptop and phone" />
+            <div class="hero-image-tag">
+              <span class="dot"></span>
+              <span>Digital presence for local businesses</span>
+            </div>
+          </div>
+          <div class="hero-image-body">
+            Clean, modern layouts tailored to your business – from coffee vans and
+            beauty salons to trades, barbers, shops and more.
           </div>
         </article>
 
-        <!-- PROCESS -->
-        <article id="process" class="card">
-          <h2 class="card-title">How the process works</h2>
-          <p class="card-sub">
-            Simple steps. No stress. Most small projects are finished within one week.
-          </p>
-          <ul class="steps-list">
-            <li>
-              <span class="step-label">1.</span>
-              <span>You send a WhatsApp, Facebook or Instagram message with a short description of your business.</span>
-            </li>
-            <li>
-              <span class="step-label">2.</span>
-              <span>We reply with a few questions and a clear quote for your project.</span>
-            </li>
-            <li>
-              <span class="step-label">3.</span>
-              <span>You send logo, photos (if you have) and any text you want to include.</span>
-            </li>
-            <li>
-              <span class="step-label">4.</span>
-              <span>We design the website and chatbot and send you a preview.</span>
-            </li>
-            <li>
-              <span class="step-label">5.</span>
-              <span>You approve, we publish the website and connect WhatsApp, Facebook and Instagram.</span>
-            </li>
-          </ul>
-        </article>
-
-        <!-- CONTACT -->
-        <article id="contact" class="card">
-          <h2 class="card-title">Ready to talk about your project?</h2>
-          <p class="card-sub">
-            Choose the app you prefer. Messages come directly to AP Digital Solutions.
-          </p>
-
-          <div class="social-row">
-            <!-- WhatsApp (hidden number, only link) -->
-            <a
-              class="social-btn"
-              href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%2C%20I%27m%20interested%20in%20a%20website%20or%20chatbot."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💬 WhatsApp
-            </a>
-
-            <a
-              class="social-btn facebook"
-              href="https://www.facebook.com/share/1KY87NG73M/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📘 Facebook
-            </a>
-
-            <a
-              class="social-btn instagram"
-              href="https://www.instagram.com/apdigitalsolution.je?igsh=MXA1dXMzaTh5bG1ncg=="
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              📸 Instagram
-            </a>
+        <div class="mini-cards-row">
+          <div class="mini-card">
+            <div class="mini-card-title">Websites that feel like your business</div>
+            <div>
+              We match your colours, logo and style so your site feels familiar to
+              clients who already know you.
+            </div>
           </div>
-
-          <p class="contact-note">
-            Your phone number never appears on the website. Visitors only see buttons
-            like “Chat on WhatsApp” or “Message us on Facebook”.
-          </p>
-        </article>
+          <div class="mini-card">
+            <div class="mini-card-title">Chatbots that work while you work</div>
+            <div>
+              Answer basic questions automatically and send serious enquiries directly
+              to your WhatsApp.
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <!-- SERVICES & PROCESS -->
+    <section class="side-column" id="services">
+      <article class="card">
+        <h2 class="card-title">What we build for you</h2>
+        <p class="card-sub">
+          Everything is built around your business: your logo, your colours and
+          your way of talking to clients.
+        </p>
+        <ul class="service-list">
+          <li>
+            <span class="bullet">✓</span>
+            <span>Modern one-page or multi-page websites for local businesses.</span>
+          </li>
+          <li>
+            <span class="bullet">✓</span>
+            <span>Chatbots connected to WhatsApp to answer common questions 24/7.</span>
+          </li>
+          <li>
+            <span class="bullet">✓</span>
+            <span>Direct links to Facebook and Instagram so people can follow you easily.</span>
+          </li>
+          <li>
+            <span class="bullet">✓</span>
+            <span>Basic SEO so Google can understand what your business does.</span>
+          </li>
+        </ul>
+        <div class="highlight-box">
+          We write or improve the text for you, so the website sounds clear and
+          professional in simple English.
+        </div>
+      </article>
+
+      <article class="card" id="process">
+        <h2 class="card-title">How the process works</h2>
+        <p class="card-sub">
+          Simple steps. No stress. Most small projects are finished within one week.
+        </p>
+        <ul class="steps-list">
+          <li>
+            <span class="step-label">1.</span>
+            <span>You send a WhatsApp, Facebook or Instagram message with a short description of your business.</span>
+          </li>
+          <li>
+            <span class="step-label">2.</span>
+            <span>We reply with a few questions and a clear quote for your project.</span>
+          </li>
+          <li>
+            <span class="step-label">3.</span>
+            <span>You send logo, photos (if you have) and any text you want to include.</span>
+          </li>
+          <li>
+            <span class="step-label">4.</span>
+            <span>We design the website and chatbot and send you a preview.</span>
+          </li>
+          <li>
+            <span class="step-label">5.</span>
+            <span>You approve, we publish the website and connect WhatsApp, Facebook and Instagram.</span>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="side-column" id="contact">
+      <article class="card">
+        <h2 class="card-title">Ready to talk about your project?</h2>
+        <p class="card-sub">
+          Choose the app you prefer. Messages come directly to AP Digital Solutions.
+        </p>
+
+        <div class="social-row">
+          <!-- WhatsApp (hidden number, only link) -->
+          <a
+            class="social-btn"
+            href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%2C%20I%27m%20interested%20in%20a%20website%20or%20chatbot."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💬 WhatsApp
+          </a>
+
+          <a
+            class="social-btn facebook"
+            href="https://www.facebook.com/share/1KY87NG73M/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📘 Facebook
+          </a>
+
+          <a
+            class="social-btn instagram"
+            href="https://www.instagram.com/apdigitalsolution.je?igsh=MXA1dXMzaTh5bG1ncg=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📸 Instagram
+          </a>
+        </div>
+
+        <p class="contact-note">
+          Your phone number never appears on the website. Visitors only see buttons
+          like “Chat on WhatsApp” or “Message us on Facebook”.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">A look behind the screens</h2>
+        <p class="card-sub">
+          We use modern tools and clean code so your site is fast, light and easy to update in the future.
+        </p>
+        <div class="hero-image-wrapper" style="height: 150px; border-radius: 16px; overflow: hidden;">
+          <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80" alt="Laptop and code on screen in a modern workspace" />
+        </div>
+      </article>
+    </section>
 
     <footer>
       <p>AP Digital Solutions · Jersey, Channel Islands · Websites & chatbots for small businesses.</p>
     </footer>
   </div>
 
-  <!-- FLOATING WHATSAPP BUTTON (NUMBER HIDDEN, ONLY LINK USED) -->
+  <!-- FLOATING CHATBOX (INTERACTIVE) -->
   <button
-    class="whatsapp-fab"
+    class="chat-fab"
     type="button"
-    aria-label="Chat on WhatsApp with AP Digital Solutions"
-    onclick="window.open('https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%2C%20I%27d%20like%20to%20talk%20about%20my%20business.', '_blank', 'noopener');"
+    aria-label="Chat with AP Digital Solutions"
+    id="chatFab"
   >
     💬
   </button>
-  <div class="whatsapp-fab-label">
-    Chat with AP Digital Solutions
+
+  <div class="chatbox" id="chatbox">
+    <div class="chatbox-header">
+      <div class="chatbox-header-left">
+        <div class="chatbox-avatar">AP</div>
+        <div>
+          <div class="chatbox-title">AP Digital Solutions</div>
+          <div class="chatbox-subtitle">Quick chat – choose an option</div>
+        </div>
+      </div>
+      <button class="chatbox-close" type="button" id="chatboxClose">×</button>
+    </div>
+    <div class="chatbox-body">
+      <div class="chat-message">
+        Hi! 👋<br>
+        <strong>How would you like to talk to us?</strong> Choose one of the options below.
+      </div>
+
+      <button
+        class="chat-button chat-button-full"
+        type="button"
+        onclick="openWhatsApp('Hi AP Digital Solutions, I would like help with a website for my business in Jersey.')"
+      >
+        <span class="icon">⚡</span> Chat on WhatsApp
+      </button>
+
+      <div class="chat-buttons-grid">
+        <button
+          class="chat-button"
+          type="button"
+          onclick="openWhatsApp('Hi AP Digital Solutions, I am interested in a WEBSITE for my business.')"
+        >
+          <span class="icon">🖥️</span>
+          <span>Website</span>
+        </button>
+        <button
+          class="chat-button"
+          type="button"
+          onclick="openWhatsApp('Hi AP Digital Solutions, I am interested in a CHATBOT for my business.')"
+        >
+          <span class="icon">🤖</span>
+          <span>Chatbot</span>
+        </button>
+        <button
+          class="chat-button"
+          type="button"
+          onclick="openWhatsApp('Hi AP Digital Solutions, I would like BOTH website and chatbot.')"
+        >
+          <span class="icon">✨</span>
+          <span>Both</span>
+        </button>
+        <button
+          class="chat-button"
+          type="button"
+          onclick="window.open('https://www.facebook.com/share/1KY87NG73M/', '_blank', 'noopener');"
+        >
+          <span class="icon">📘</span>
+          <span>Facebook</span>
+        </button>
+      </div>
+
+      <button
+        class="chat-button chat-button-full"
+        type="button"
+        onclick="window.open('https://www.instagram.com/apdigitalsolution.je?igsh=MXA1dXMzaTh5bG1ncg==', '_blank', 'noopener');"
+      >
+        <span class="icon">📸</span>
+        <span>Instagram</span>
+      </button>
+
+      <div class="chat-small-note">
+        Your phone number is never shown on the website. We only use it inside WhatsApp links to open the chat.
+      </div>
+    </div>
   </div>
+
+  <script>
+    const chatFab = document.getElementById('chatFab');
+    const chatbox = document.getElementById('chatbox');
+    const chatboxClose = document.getElementById('chatboxClose');
+
+    chatFab.addEventListener('click', () => {
+      const isVisible = chatbox.style.display === 'block';
+      chatbox.style.display = isVisible ? 'none' : 'block';
+    });
+
+    chatboxClose.addEventListener('click', () => {
+      chatbox.style.display = 'none';
+    });
+
+    function openWhatsApp(message) {
+      const encoded = encodeURIComponent(message);
+      const url = `https://wa.me/447700704591?text=${encoded}`;
+      window.open(url, '_blank', 'noopener');
+    }
+  </script>
 </body>
 </html>
