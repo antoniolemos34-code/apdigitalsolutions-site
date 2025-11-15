@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AP Digital Solutions – Websites & Chatbots em Jersey</title>
+  <title>AP Digital Solutions – Future-ready Websites & Chatbots in Jersey</title>
 
-  <meta name="description" content="AP Digital Solutions cria websites modernos, chatbots inteligentes e automações simples para negócios locais em Jersey. Design profissional, entrega rápida e apoio direto por WhatsApp.">
+  <meta name="description" content="AP Digital Solutions builds future-ready websites, chatbots and simple automations for local businesses in Jersey. Modern design, fast delivery and direct WhatsApp support.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,10 +27,6 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: radial-gradient(circle at top left, #0f172a 0, #020617 40%, #000 100%);
@@ -49,7 +45,6 @@
         radial-gradient(circle at 10% 0%, rgba(56,189,248,0.18), transparent 55%),
         radial-gradient(circle at 90% 10%, rgba(34,197,94,0.18), transparent 55%),
         radial-gradient(circle at 0% 60%, rgba(59,130,246,0.17), transparent 55%);
-      animation: floatGlow 18s infinite alternate ease-in-out;
     }
 
     .grid-overlay {
@@ -86,7 +81,6 @@
       top: 12px;
       z-index: 10;
       backdrop-filter: blur(18px);
-      animation: fadeDown 0.7s ease-out both;
     }
 
     .brand { display: flex; align-items: center; gap: 12px; }
@@ -118,7 +112,6 @@
     nav { display: flex; gap: 16px; font-size: 13px; }
 
     nav a {
-      position: relative;
       color: var(--muted);
       text-decoration: none;
       padding: 6px 10px;
@@ -126,27 +119,9 @@
       transition: 0.18s;
     }
 
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 2px;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #22c55e, #4ade80);
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 0.18s ease-out;
-    }
-
     nav a:hover {
       color: var(--text);
       background-color: rgba(15,23,42,0.7);
-    }
-
-    nav a:hover::after {
-      transform: scaleX(1);
     }
 
     .cta-whatsapp {
@@ -162,7 +137,6 @@
       font-size: 13px;
       font-weight: 500;
       box-shadow: 0 0 0 1px rgba(16,185,129,0.4);
-      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
     }
 
     .cta-whatsapp span.icon {
@@ -173,12 +147,6 @@
       color: #022c22;
       font-size: 13px;
       font-weight: 700;
-    }
-
-    .cta-whatsapp:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 0 0 1px rgba(74,222,128,0.7), 0 18px 40px rgba(0,0,0,0.6);
-      background: radial-gradient(circle at top left, rgba(74,222,128,0.28), transparent 60%);
     }
 
     .layout {
@@ -197,12 +165,10 @@
       border: 1px solid var(--border);
       box-shadow: var(--shadow-soft);
       background:
-        linear-gradient(130deg, rgba(15,23,42,0.9), rgba(6,95,70,0.95)),
+        linear-gradient(120deg, rgba(15,23,42,0.88), rgba(15,23,42,0.96)),
         url("https://images.unsplash.com/photo-1536818968680-deeec2a9bc47?auto=format&fit=crop&w=1400&q=80")
         center/cover no-repeat;
       padding: 26px 24px 26px;
-      background-blend-mode: overlay;
-      animation: heroFloat 18s infinite alternate ease-in-out;
     }
 
     .hero-inner { position: relative; z-index: 1; }
@@ -290,12 +256,6 @@
       font-size: 14px;
       text-decoration: none;
       box-shadow: var(--glow);
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 0 0 1px rgba(74,222,128,0.7), 0 20px 50px rgba(0,0,0,0.7);
     }
 
     .btn-ghost {
@@ -306,13 +266,6 @@
       color: var(--text);
       font-size: 13px;
       text-decoration: none;
-      transition: background 0.16s ease, transform 0.16s ease, border-color 0.16s ease;
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15,23,42,0.95);
-      border-color: rgba(148,163,184,0.7);
-      transform: translateY(-1px);
     }
 
     .hero-footnote {
@@ -332,13 +285,6 @@
       box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(148,163,184,0.6);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.8);
     }
 
     .card h2 { font-size: 15px; margin-bottom: 8px; }
@@ -417,13 +363,6 @@
       border-radius: 20px;
       padding: 14px 14px 16px;
       border: 1px solid var(--border);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(148,163,184,0.6);
-      box-shadow: 0 16px 45px rgba(0,0,0,0.7);
     }
 
     .service-card h3 { font-size: 15px; margin-bottom: 6px; }
@@ -457,13 +396,6 @@
       border-radius: 18px;
       padding: 14px;
       border: 1px solid var(--border);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-
-    .how-step:hover {
-      transform: translateY(-3px);
-      border-color: rgba(148,163,184,0.6);
-      box-shadow: 0 16px 45px rgba(0,0,0,0.7);
     }
 
     .how-step span.badge {
@@ -491,18 +423,11 @@
       padding: 14px;
       border: 1px solid var(--border);
       position: relative;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
     }
 
     .pricing-card.highlight {
       border-color: rgba(34,197,94,0.7);
       box-shadow: var(--glow);
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(148,163,184,0.6);
-      box-shadow: 0 18px 55px rgba(0,0,0,0.8);
     }
 
     .pricing-card h3 { font-size: 15px; margin-bottom: 4px; }
@@ -563,7 +488,6 @@
       border: none;
       box-shadow: 0 18px 40px rgba(0,0,0,0.55);
       cursor: pointer;
-      transition: transform 0.16s ease, box-shadow 0.16s ease;
     }
     .chatbot-toggle span.icon {
       width: 22px; height: 22px;
@@ -572,10 +496,6 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 13px;
       color: #bbf7d0;
-    }
-    .chatbot-toggle:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 22px 50px rgba(0,0,0,0.75);
     }
 
     .chatbot-widget {
@@ -592,8 +512,6 @@
       flex-direction: column;
       overflow: hidden;
       z-index: 29;
-      transform-origin: bottom right;
-      animation: fadeInChat 0.25s ease-out;
     }
 
     .chatbot-header {
@@ -667,43 +585,6 @@
       background: rgba(15,23,42,0.9);
       color: var(--muted);
       cursor: pointer;
-      transition: background 0.16s ease, transform 0.16s ease, border-color 0.16s ease;
-    }
-    .chip:hover {
-      background: rgba(15,23,42,0.98);
-      border-color: rgba(148,163,184,0.8);
-      transform: translateY(-1px);
-    }
-
-    /* REVEAL ANIMATIONS */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @keyframes floatGlow {
-      from { transform: translate3d(0,0,0); }
-      to   { transform: translate3d(0,10px,0); }
-    }
-
-    @keyframes heroFloat {
-      from { background-position: center; }
-      to   { background-position: center 12px; }
-    }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInChat {
-      from { opacity: 0; transform: scale(0.9); }
-      to   { opacity: 1; transform: scale(1); }
     }
 
     @media (max-width: 840px) {
@@ -731,7 +612,7 @@
     <header>
       <div class="brand">
         <!-- usa o ficheiro do logo que subiste (ex: logo-ap-future.png) -->
-        <img src="logo-ap-future.png" alt="Logótipo AP Digital Solutions" class="brand-logo-img" />
+        <img src="logo-ap-future.png" alt="AP Digital Solutions logo" class="brand-logo-img" />
         <div class="brand-text">
           <span class="brand-title">AP Digital Solutions</span>
           <span class="brand-sub">Websites · Chatbots · Automations</span>
@@ -739,22 +620,22 @@
       </div>
 
       <nav>
-        <a href="#services">Serviços</a>
-        <a href="#how">Como funciona</a>
-        <a href="#pricing">Pacotes</a>
-        <a href="#contact">Contacto</a>
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Packages</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <!-- ligação direta para WhatsApp, sem mostrar o número -->
       <a class="cta-whatsapp" href="https://wa.me/447700704591" target="_blank" rel="noopener">
         <span class="icon">💬</span>
-        <span>Falar no WhatsApp</span>
+        <span>Chat on WhatsApp</span>
       </a>
     </header>
 
     <main>
       <div class="layout">
-        <section class="hero reveal">
+        <section class="hero">
           <div class="hero-inner">
             <div class="hero-tag">
               <span class="hero-tag-dot"></span>
@@ -762,203 +643,203 @@
             </div>
 
             <h1>
-              Websites & chatbots prontos para o futuro<br>
-              <span class="highlight">para negócios locais em Jersey.</span>
+              Future-ready websites & chatbots<br>
+              <span class="highlight">for local businesses in Jersey.</span>
             </h1>
 
             <p class="lead">
-              A AP Digital Solutions cria experiências digitais simples, modernas e rápidas – para o seu negócio parecer profissional online, sem complicar.
+              AP Digital Solutions builds simple, modern and fast digital experiences – so your business looks professional online without overcomplicating things.
             </p>
 
             <div class="hero-list">
-              <span><i>✓</i> Landing pages de 1 página ou multi-secção</span>
-              <span><i>✓</i> Chatbots para website e WhatsApp</span>
-              <span><i>✓</i> Configuração de Google, Facebook & Instagram</span>
-              <span><i>✓</i> Pensado primeiro para telemóvel, depois computador</span>
+              <span><i>✓</i> 1-page or multi-section landing sites</span>
+              <span><i>✓</i> WhatsApp + website chatbots</span>
+              <span><i>✓</i> Google, Facebook & Instagram setup</span>
+              <span><i>✓</i> Built for phones first, desktops second</span>
             </div>
 
             <div class="hero-actions">
-              <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">Começar projeto no WhatsApp</a>
-              <a class="btn-ghost" href="#pricing">Ver tipos de pacotes</a>
+              <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">Start a project on WhatsApp</a>
+              <a class="btn-ghost" href="#pricing">See typical packages</a>
             </div>
 
             <p class="hero-footnote">
-              Estúdio pequeno sediado em Jersey – respostas rápidas, âmbito claro, orçamento fechado depois de uma breve conversa no WhatsApp.
+              Small studio based in Jersey – quick answers, clear scope, fixed quote after a short WhatsApp chat.
             </p>
           </div>
         </section>
 
         <aside class="aside">
-          <div class="card reveal">
-            <h2>O que fazemos</h2>
-            <p>Ajudamos negócios em Jersey a ficar “future ready” com websites, chatbots e automações simples que trabalham em segundo plano.</p>
+          <div class="card">
+            <h2>What we do</h2>
+            <p>We help Jersey businesses look “future ready” with websites, chatbots and simple automations that work quietly in the background.</p>
             <div class="pill-row">
               <span class="pill">Landing pages</span>
-              <span class="pill">Sites para pequenos negócios</span>
-              <span class="pill">Chatbots com IA</span>
-              <span class="pill">Formulários & marcações</span>
-              <span class="pill">Configuração de redes sociais</span>
+              <span class="pill">Small business sites</span>
+              <span class="pill">AI chatbots</span>
+              <span class="pill">Booking & forms</span>
+              <span class="pill">Social media setup</span>
             </div>
             <div class="metrics">
               <div>
-                <strong>3–5 dias</strong>
-                Entrega na maioria dos projetos
+                <strong>3–5 days</strong>
+                Delivery for most projects
               </div>
               <div>
                 <strong>Local</strong>
-                Baseado em Jersey, Channel Islands
+                Based in Jersey, Channel Islands
               </div>
             </div>
           </div>
 
-          <div class="card mockup reveal">
-            <h2>Exemplo: website de negócio local</h2>
-            <p>Design limpo e focado para um pequeno negócio em Jersey: serviços, sobre, contacto e botão de WhatsApp – tudo numa só página.</p>
-            <p style="font-size:12px;color:var(--muted);margin-top:4px;">Peça o link de demonstração em direto pelo WhatsApp.</p>
+          <div class="card mockup">
+            <h2>Example: local business website</h2>
+            <p>Clean, focused design for a small Jersey business: services, about, contact and WhatsApp button – all on one page.</p>
+            <p style="font-size:12px;color:var(--muted);margin-top:4px;">Ask to see the live demo link on WhatsApp.</p>
           </div>
         </aside>
       </div>
 
-      <section id="services" class="reveal">
-        <h2>Serviços</h2>
+      <section id="services">
+        <h2>Services</h2>
         <p class="section-lead">
-          Tudo o que precisa para colocar um pequeno negócio online – sem agências grandes nem projetos complicados.
+          Everything you need to bring a small business online – without a big agency or a complicated project.
         </p>
 
         <div class="services-grid">
           <article class="service-card">
             <h3>Websites & landing pages</h3>
-            <p>Sites modernos, rápidos e pensados primeiro para telemóvel.</p>
+            <p>Modern, fast and mobile-first sites built for local businesses.</p>
             <ul>
-              <li>Layout de 1 página ou multi-secção</li>
-              <li>Serviços, sobre, testemunhos & contacto</li>
-              <li>Apoio na configuração de domínio e e-mail</li>
+              <li>1-page or multi-section layouts</li>
+              <li>Services, about, testimonials & contact</li>
+              <li>Custom domain & email setup support</li>
             </ul>
           </article>
 
           <article class="service-card">
-            <h3>Chatbots & automações</h3>
-            <p>Chatbots inteligentes que respondem às perguntas mais comuns 24/7.</p>
+            <h3>Chatbots & automations</h3>
+            <p>Smart chatbots that answer common questions 24/7.</p>
             <ul>
-              <li>Widget de chat no website</li>
-              <li>Fluxos de chatbot para WhatsApp</li>
-              <li>Recolha de contactos & automações simples</li>
+              <li>Website chat widget</li>
+              <li>WhatsApp chatbot flows</li>
+              <li>Lead capture & simple automations</li>
             </ul>
           </article>
 
           <article class="service-card">
-            <h3>Presença digital completa</h3>
-            <p>Fique bem apresentado e fácil de encontrar onde os clientes pesquisam.</p>
+            <h3>Digital presence setup</h3>
+            <p>Get properly listed and reachable where customers search.</p>
             <ul>
-              <li>Google Business & Google Maps</li>
-              <li>Páginas de Facebook & Instagram</li>
-              <li>SEO básico & optimização on-page</li>
+              <li>Google Business & Maps</li>
+              <li>Facebook & Instagram pages</li>
+              <li>Basic SEO & on-page optimisation</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="how" class="reveal">
-        <h2>Como funciona</h2>
+      <section id="how">
+        <h2>How it works</h2>
         <p class="section-lead">
-          Processo simples e transparente: menos reuniões, mais entrega.
+          Simple, transparent process: we keep calls and meetings to a minimum and focus on delivery.
         </p>
 
         <div class="how-steps">
           <div class="how-step">
             <span class="badge">1</span>
-            <strong>Conversa no WhatsApp</strong>
-            <p>Envie alguns detalhes sobre o seu negócio e o que quer alcançar online.</p>
+            <strong>Chat on WhatsApp</strong>
+            <p>Send a few details about your business and what you’d like to achieve online.</p>
           </div>
           <div class="how-step">
             <span class="badge">2</span>
-            <strong>Proposta clara</strong>
-            <p>Recebe uma proposta simples com o que está incluído e um valor fechado.</p>
+            <strong>Scope & proposal</strong>
+            <p>You’ll receive a clear proposal with what’s included and a fixed quote.</p>
           </div>
           <div class="how-step">
             <span class="badge">3</span>
-            <strong>Construção & afinação</strong>
-            <p>Criamos o site/chatbot, enviamos o link de pré-visualização e fazemos 1–2 rondas de ajustes.</p>
+            <strong>Build & refine</strong>
+            <p>We build your site/chatbot, share a preview link and do 1–2 rounds of tweaks.</p>
           </div>
           <div class="how-step">
             <span class="badge">4</span>
-            <strong>Lançamento & apoio</strong>
-            <p>Ajudamos a ligar o domínio, configurar e-mails e ficamos disponíveis para pequenas atualizações.</p>
+            <strong>Launch & support</strong>
+            <p>We help connect your domain, set up emails and stay available for small updates.</p>
           </div>
         </div>
       </section>
 
-      <section id="pricing" class="reveal">
-        <h2>Pacotes (sem preços no site)</h2>
+      <section id="pricing">
+        <h2>Packages (no prices shown)</h2>
         <p class="section-lead">
-          Pacotes pensados para pequenos negócios. O valor final é fechado depois de uma breve conversa no WhatsApp – sem surpresas.
+          Clear packages for small businesses. You’ll get a fixed price after a short WhatsApp chat – no surprises.
         </p>
 
         <div class="pricing">
           <div class="pricing-card">
-            <h3>Website inicial</h3>
-            <div class="price-label">Pacote de entrada típico</div>
+            <h3>Starter website</h3>
+            <div class="price-label">Typical entry package</div>
             <ul>
-              <li>Site de 1 página ou multi-secção simples</li>
-              <li>Design mobile-first</li>
-              <li>Botão de contacto por WhatsApp</li>
+              <li>1-page site or simple multi-section</li>
+              <li>Mobile-first design</li>
+              <li>WhatsApp contact button</li>
             </ul>
             <p style="font-size:12px;color:var(--muted);">
-              Ideal para limpeza, construção, serviços individuais e negócios locais.
+              Good for cleaners, trades and solo services.
             </p>
           </div>
 
           <div class="pricing-card highlight">
-            <h3>Website + chatbot</h3>
-            <div class="price-label">Opção mais escolhida</div>
+            <h3>Website + chatbot bundle</h3>
+            <div class="price-label">Most popular option</div>
             <ul>
-              <li>Website inicial incluído</li>
-              <li>Chatbot para website & WhatsApp</li>
-              <li>Automações simples para novos contactos</li>
+              <li>Starter website included</li>
+              <li>Website & WhatsApp chatbot</li>
+              <li>Simple automations for leads</li>
             </ul>
             <p style="font-size:12px;color:var(--muted);">
-              Perfeito para negócios que recebem muitas mensagens ou perguntas repetidas.
+              For businesses that receive lots of messages or repeat questions.
             </p>
           </div>
 
           <div class="pricing-card">
-            <h3>Presença digital</h3>
-            <div class="price-label">Extras que pode adicionar</div>
+            <h3>Digital presence setup</h3>
+            <div class="price-label">Optional add-ons</div>
             <ul>
-              <li>Google Business & Google Maps</li>
-              <li>Facebook / Instagram configurados</li>
-              <li>Melhorias de SEO básico</li>
+              <li>Google Business & Maps listing</li>
+              <li>Facebook / Instagram pages</li>
+              <li>Basic SEO improvements</li>
             </ul>
             <p style="font-size:12px;color:var(--muted);">
-              Pode ser adicionado a qualquer projeto de website ou chatbot.
+              Can be added to any website or chatbot project.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="reveal">
-        <h2>Pronto para começar?</h2>
+      <section id="contact">
+        <h2>Ready to build something?</h2>
         <p class="section-lead">
-          Envie mensagem por WhatsApp ou redes sociais – respondemos com os próximos passos e um valor fechado.
+          Send a message on WhatsApp or reach us on social – we’ll reply with next steps and a fixed quote.
         </p>
 
         <p style="font-size:13px;margin-bottom:8px;">
-          <strong>Contacto:</strong> use os botões de WhatsApp, Instagram ou Facebook disponíveis nesta página.
+          <strong>Contact:</strong> use the WhatsApp, Instagram or Facebook buttons on this page.
         </p>
 
         <p style="font-size:13px;margin-bottom:12px;">
-          Ou envie um e-mail para: <a href="mailto:apdigitalsolutions.je@outlook.com" style="color:var(--accent-soft);text-decoration:none;">apdigitalsolutions.je@outlook.com</a>
+          Or email: <a href="mailto:apdigitalsolutions.je@outlook.com" style="color:var(--accent-soft);text-decoration:none;">apdigitalsolutions.je@outlook.com</a>
         </p>
 
         <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">
-          Falar com a AP Digital Solutions no WhatsApp
+          Message AP Digital Solutions on WhatsApp
         </a>
       </section>
     </main>
 
     <footer>
       <span>© AP Digital Solutions – Jersey, Channel Islands</span>
-      <span>Websites & chatbots prontos para o futuro, para negócios locais.</span>
+      <span>Future-ready websites & chatbots for local business.</span>
     </footer>
   </div>
 
@@ -972,18 +853,18 @@
     <div class="chatbot-header">
       <div class="chatbot-header-title">
         <strong>AP Digital Chatbot (demo)</strong>
-        <span>Escolha onde quer falar connosco</span>
+        <span>Choose how you want to talk</span>
       </div>
       <button class="chatbot-close" onclick="toggleChatbot()">✕</button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
       <div class="msg bot">
-        Olá 👋 sou o chatbot de demonstração da AP Digital Solutions.<br>
-        Escolha WhatsApp, Instagram ou Facebook e abrimos a conversa para si.
+        Hi 👋 I’m the AP Digital chatbot demo.  
+        Pick WhatsApp, Instagram or Facebook and we’ll open it for you.
       </div>
     </div>
     <div class="chatbot-quick">
-      <div class="chip" onclick="contactVia('whatsapp')">WhatsApp (recomendado)</div>
+      <div class="chip" onclick="contactVia('whatsapp')">WhatsApp (recommended)</div>
       <div class="chip" onclick="contactVia('instagram')">Instagram</div>
       <div class="chip" onclick="contactVia('facebook')">Facebook</div>
     </div>
@@ -1006,12 +887,12 @@
 
       const user = document.createElement('div');
       user.className = 'msg user';
-      user.textContent = "Abrir chat em " + channel;
+      user.textContent = "Open " + channel + " chat";
       box.appendChild(user);
 
       const bot = document.createElement('div');
       bot.className = 'msg bot';
-      bot.textContent = "A abrir " + channel + "...";
+      bot.textContent = "Opening " + channel + "…";
       box.appendChild(bot);
 
       box.scrollTop = box.scrollHeight;
@@ -1021,19 +902,6 @@
         window.open(url, "_blank");
       }
     }
-
-    // animações ao fazer scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
-  </html>
+</html>
