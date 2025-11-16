@@ -12,7 +12,8 @@
   <meta property="og:description" content="Websites, chatbots and digital presence for small businesses in Jersey.">
   <meta property="og:url" content="https://apdigitalsolutions.digital/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://apdigitalsolutions.digital/logo-ap.png">
+  <!-- Usa a foto colorida do portátil como preview -->
+  <meta property="og:image" content="https://apdigitalsolutions.digital/ap-color-laptop.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,15 +23,15 @@
     * { box-sizing: border-box; }
 
     :root {
-      --bg-main: #e0f2ff;       /* azul bebé claro */
-      --bg-soft: #f4f9ff;      /* azul ainda mais claro */
-      --bg-warm: #fff7e0;      /* branco amarelado suave */
+      --bg-main: #e0f2ff;
+      --bg-soft: #f4f9ff;
+      --bg-warm: #fff7e0;
       --panel: #ffffff;
       --panel-soft: #fdfcf7;
-      --text-main: #0f172a;    /* azul escuro */
+      --text-main: #0f172a;
       --text-muted: #64748b;
-      --accent: #2563eb;       /* azul forte */
-      --accent-soft: #93c5fd;  /* azul pastel */
+      --accent: #2563eb;
+      --accent-soft: #93c5fd;
       --border: #d0e2ff;
       --radius: 16px;
       --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
@@ -74,18 +75,6 @@
       gap: 10px;
       text-decoration: none;
       color: var(--text-main);
-    }
-
-    .logo-img {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid var(--accent-soft);
-      box-shadow: 0 0 14px rgba(37, 99, 235, 0.35);
-    }
-
-    .logo span {
       font-weight: 700;
       letter-spacing: 0.2px;
       font-size: 0.95rem;
@@ -110,7 +99,7 @@
 
     section { padding: 64px 0; }
 
-    /* HERO COM FOTO DE FUNDO */
+    /* HERO COM FOTO COLORIDA AO FUNDO (ap-color-laptop.jpg) */
     .hero {
       padding: 90px 0 70px;
       position: relative;
@@ -123,7 +112,7 @@
       inset: 0;
       background:
         linear-gradient(to right, rgba(224, 242, 254, 0.96), rgba(255, 247, 224, 0.88)),
-        url("hero-bg.jpg") center right / cover no-repeat;
+        url("ap-color-laptop.jpg") center right / cover no-repeat;
       opacity: 1;
       pointer-events: none;
       z-index: -1;
@@ -136,9 +125,7 @@
       align-items: center;
     }
 
-    .hero-text {
-      max-width: 560px;
-    }
+    .hero-text { max-width: 560px; }
 
     .hero h1 {
       font-size: clamp(30px, 6vw, 46px);
@@ -283,7 +270,7 @@
       gap: 22px;
     }
 
-    /* SEÇÃO SERVIÇOS COM FOTO SUAVE AO FUNDO */
+    /* SEÇÃO SERVIÇOS COM FUNDO ap-code-laptop.jpg */
     #services {
       position: relative;
     }
@@ -294,7 +281,7 @@
       inset: 0;
       background:
         linear-gradient(to bottom, rgba(244, 249, 255, 0.96), rgba(255, 247, 224, 0.94)),
-        url("services-bg.jpg") center / cover no-repeat;
+        url("ap-code-laptop.jpg") center / cover no-repeat;
       opacity: 0.55;
       z-index: -1;
     }
@@ -347,7 +334,7 @@
       font-size: 0.93rem;
     }
 
-    /* TESTEMUNHOS + FAQ fundo mais neutro */
+    /* TESTEMUNHOS + FAQ */
     #testimonials, #faq {
       background: linear-gradient(to bottom, var(--bg-soft), #ffffff);
     }
@@ -357,7 +344,7 @@
       background: rgba(255, 255, 255, 0.96);
     }
 
-    /* CONTACTO COM FOTO */
+    /* CONTACTO COM FUNDO ap-work-laptop.jpg e ap-social-phone.jpg */
     #contact {
       position: relative;
       background: linear-gradient(to bottom, rgba(224, 242, 254, 0.85), rgba(255, 251, 235, 0.9));
@@ -367,9 +354,23 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url("contact-bg.jpg") center / cover no-repeat;
+      background: url("ap-work-laptop.jpg") center / cover no-repeat;
       opacity: 0.32;
       z-index: -1;
+    }
+
+    .contact-photo {
+      max-width: 420px;
+      margin: 0 auto 16px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.25);
+      border: 1px solid rgba(209,213,219,0.8);
+    }
+
+    .contact-photo img {
+      width: 100%;
+      display: block;
     }
 
     .social-links {
@@ -485,9 +486,7 @@
       background: #f9fafb;
     }
 
-    .bot-line {
-      margin-bottom: 8px;
-    }
+    .bot-line { margin-bottom: 8px; }
 
     .chip-row {
       display: flex;
@@ -538,14 +537,14 @@
     }
 
     @media (max-width: 700px) {
-      nav { display: none; } /* móvel simples */
+      nav { display: none; }
       .hero {
         padding-top: 70px;
       }
       .hero::before {
         background:
           linear-gradient(to bottom, rgba(224, 242, 254, 0.98), rgba(255, 247, 224, 0.95)),
-          url("hero-bg.jpg") center / cover no-repeat;
+          url("ap-color-laptop.jpg") center / cover no-repeat;
       }
       .chat-toggle {
         right: 12px;
@@ -568,9 +567,9 @@
 <body>
   <header>
     <div class="nav">
+      <!-- Sem logo, só o nome -->
       <a class="logo" href="#top" aria-label="AP Digital Solutions">
-        <img src="logo-ap.png" alt="AP Digital Solutions logo" class="logo-img" />
-        <span>AP Digital Solutions</span>
+        AP Digital Solutions
       </a>
       <nav>
         <a href="#services">Services</a>
@@ -728,6 +727,12 @@
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
+
+      <!-- foto do telemóvel social (ap-social-phone.jpg) -->
+      <div class="contact-photo">
+        <img src="ap-social-phone.jpg" alt="Social media icons on a phone over a keyboard" />
+      </div>
+
       <div class="card contact-card">
         <p><strong>Ready to be online?</strong></p>
         <p style="color:var(--text-muted);">
@@ -817,4 +822,4 @@
     }
   </script>
 </body>
-  </html>
+</html>
