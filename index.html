@@ -365,6 +365,7 @@
       </p>
       <small>Local studio · Fast delivery · Friendly support</small>
       <div>
+        <!-- botão direto para WhatsApp (número só no link, não aparece no texto) -->
         <a class="cta" href="https://wa.me/447700704591" target="_blank" rel="noopener">
           Chat on WhatsApp
         </a>
@@ -515,29 +516,32 @@
     <p>&copy; 2025 AP Digital Solutions · Jersey, Channel Islands · The Solutions to Be Online</p>
   </footer>
 
-  <!-- Chatbox demo -->
+  <!-- Chatbox que envia direto para o WhatsApp -->
   <div class="chatbox" aria-live="polite">
     <div class="chatbox-header">
-      AP Chat Assistant <span class="badge">Demo</span>
+      AP Chat Assistant <span class="badge">Live to WhatsApp</span>
     </div>
     <div id="chat-messages" class="chatbox-messages">
       <div class="msg bot">
         <div class="bubble">
-          Hi! I’m the AP assistant. Ask me about chatbots, websites, prices or delivery time.
-          You can also type <strong>WhatsApp</strong> and I’ll remind you to use the button on the page.
+          Hi! I’m the AP assistant 👋<br>
+          Tell me briefly what you need (website, chatbot, both…) and I’ll open a WhatsApp chat with your message ready to send.
         </div>
       </div>
     </div>
     <form id="chat-form" class="chatbox-input">
-      <input id="chat-input" type="text" placeholder="Type a message..." aria-label="Type a message" />
+      <input id="chat-input" type="text" placeholder="Example: I need a website and chatbot" aria-label="Type a message" />
       <button type="submit">Send</button>
     </form>
   </div>
 
   <script>
-    const messages = document.getElementById('chat-messages');
-    const form = document.getElementById('chat-form');
-    const input = document.getElementById('chat-input');
+    // número só aqui dentro, nunca aparece no texto do site
+    const WHATSAPP_BASE = "https://wa.me/447700704591";
+
+    const messagesEl = document.getElementById('chat-messages');
+    const formEl = document.getElementById('chat-form');
+    const inputEl = document.getElementById('chat-input');
 
     function addMessage(role, text) {
       const wrap = document.createElement('div');
@@ -546,39 +550,25 @@
       bubble.className = 'bubble';
       bubble.textContent = text;
       wrap.appendChild(bubble);
-      messages.appendChild(wrap);
-      messages.scrollTop = messages.scrollHeight;
+      messagesEl.appendChild(wrap);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
     }
 
-    function botReply(userText) {
-      const t = userText.toLowerCase();
-
-      if (t.includes('price') || t.includes('cost') || t.includes('pricing')) {
-        return 'Starter Site £199 · Business Chatbot £99 + £10/mo · Pro Bundle £349.';
-      }
-      if (t.includes('chatbot')) {
-        return 'We build simple chatbots for your website and WhatsApp with clear flows and smart answers. Typical delivery 3–5 days.';
-      }
-      if (t.includes('website')) {
-        return 'We create clean, modern websites that work great on phones and desktops. Domain and hosting help included.';
-      }
-      if (t.includes('time') || t.includes('delivery')) {
-        return 'Most projects are delivered in 3–5 days after we agree the content.';
-      }
-      if (t.includes('whatsapp') || t.includes('contact')) {
-        return 'Click the gold “Chat on WhatsApp” button on the page to open a chat with us.';
-      }
-
-      return 'Thanks! If you want to talk now, just use the WhatsApp button on the page and we will reply as soon as possible.';
+    function openWhatsApp(text) {
+      const base = "Hello, this is a new enquiry from the AP Digital Solutions website.\n\n";
+      const fullText = base + (text && text.trim() ? '"' + text.trim() + '"' : "I would like to know more about your services.");
+      const url = WHATSAPP_BASE + "?text=" + encodeURIComponent(fullText);
+      window.open(url, "_blank");
     }
 
-    form.addEventListener('submit', (e) => {
+    formEl.addEventListener('submit', (e) => {
       e.preventDefault();
-      const text = input.value.trim();
+      const text = inputEl.value.trim();
       if (!text) return;
       addMessage('user', text);
-      input.value = '';
-      setTimeout(() => addMessage('bot', botReply(text)), 300);
+      inputEl.value = '';
+      addMessage('bot', "Great, I’m opening WhatsApp for you now…");
+      setTimeout(() => openWhatsApp(text), 400);
     });
   </script>
 </body>
