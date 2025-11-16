@@ -1,8 +1,3 @@
-<!--
-  Este ficheiro é uma evolução do template anterior.
-  Mantém o tema escuro e os destaques dourados, com um layout profissional inspirado em sites de agências digitais.
-  Inclui meta tags melhoradas, SEO, OpenGraph e um widget de chat que abre o WhatsApp sem expor o número no HTML visível.
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>AP – The Solutions to Be Online | Jersey</title>
-  <meta name="description" content="AP Digital Solutions ajuda pequenos negócios em Jersey a estar online com websites simples, chatbots e presença digital. Entrega rápida e suporte local amigável.">
+  <meta name="description" content="AP Digital Solutions helps small businesses in Jersey be online with simple websites, chatbots and digital presence. Fast delivery and friendly local support.">
 
-  <!-- Open Graph -->
+  <!-- OPEN GRAPH / SOCIAL -->
   <meta property="og:title" content="AP – The Solutions to Be Online | Jersey">
-  <meta property="og:description" content="Websites, chatbots e presença digital para pequenos negócios em Jersey.">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Websites, chatbots and digital presence for small businesses in Jersey.">
   <meta property="og:url" content="https://apdigitalsolutions.digital/">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="https://apdigitalsolutions.digital/logo-ap.png">
 
-  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,161 +22,85 @@
     * { box-sizing: border-box; }
 
     :root {
-      --bg: #050507;
-      --panel: #101015;
-      --panel-soft: #14141c;
-      --text: #f5f5f5;
-      --muted: #c9c9cf;
-      --accent: #d4af37;
-      --accent-dark: #b38728;
-      --link: #f5d97a;
-      --border: #1f1f25;
+      --bg-main: #e0f2ff;       /* azul bebé claro */
+      --bg-soft: #f4f9ff;      /* azul ainda mais claro */
+      --bg-warm: #fff7e0;      /* branco amarelado suave */
+      --panel: #ffffff;
+      --panel-soft: #fdfcf7;
+      --text-main: #0f172a;    /* azul escuro */
+      --text-muted: #64748b;
+      --accent: #2563eb;       /* azul forte */
+      --accent-soft: #93c5fd;  /* azul pastel */
+      --border: #d0e2ff;
       --radius: 16px;
-      --shadow: 0 20px 40px rgba(0,0,0,0.55);
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
     }
 
     body {
       margin: 0;
       font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
       background:
-        radial-gradient(900px 400px at 20% -20%, #171720, transparent 60%),
-        radial-gradient(700px 400px at 80% -40%, rgba(212,175,55,0.12), transparent 60%),
-        var(--bg);
-      color: var(--text);
+        radial-gradient(900px 400px at 10% -20%, rgba(148, 163, 184, 0.25), transparent 60%),
+        radial-gradient(900px 500px at 80% -30%, rgba(254, 240, 138, 0.35), transparent 65%),
+        var(--bg-main);
+      color: var(--text-main);
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--link); }
+    a { color: var(--accent); }
 
     header {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: #050507e6;
+      background: rgba(244, 249, 255, 0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(209, 213, 219, 0.7);
     }
 
     .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: var(--text);
       text-decoration: none;
+      color: var(--text-main);
     }
 
     .logo-img {
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 34px;
       border-radius: 999px;
       object-fit: cover;
-      border: 2px solid var(--accent);
-      box-shadow: 0 0 20px rgba(212,175,55,0.35);
+      border: 2px solid var(--accent-soft);
+      box-shadow: 0 0 14px rgba(37, 99, 235, 0.35);
     }
 
     .logo span {
       font-weight: 700;
-      font-size: 0.96rem;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
+      font-size: 0.95rem;
     }
 
     nav a {
-      margin-left: 18px;
-      color: var(--text);
+      color: var(--text-main);
       text-decoration: none;
-      font-size: 0.9rem;
+      margin-left: 16px;
       opacity: 0.86;
-      transition: opacity 0.2s ease;
-    }
-
-    nav a:hover { opacity: 1; text-decoration: underline; }
-
-    /* Hero layout */
-    .hero {
-      padding: 100px 0 80px;
-    }
-
-    .hero-content {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-text h1 {
-      font-size: clamp(32px, 6vw, 54px);
-      margin: 0 0 14px;
-    }
-
-    .hero-text h1 span {
-      background: linear-gradient(120deg, var(--accent), var(--accent-dark));
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-text p {
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 14px;
-      max-width: 600px;
-    }
-
-    .cta-main {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: #141414;
-      padding: 12px 20px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      box-shadow: var(--shadow);
-      cursor: pointer;
-    }
-
-    .cta-main span.icon {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      background: #141414;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 0.9rem;
+      transition: opacity 0.18s ease, color 0.18s ease;
     }
 
-    .hero-img {
-      text-align: center;
-    }
-
-    .hero-img img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.5);
-    }
-
-    /* Sections */
-    section {
-      padding: 70px 0;
-    }
+    nav a:hover { opacity: 1; color: var(--accent); }
 
     .container {
       max-width: 1100px;
@@ -190,32 +108,203 @@
       padding: 0 20px;
     }
 
+    section { padding: 64px 0; }
+
+    /* HERO COM FOTO DE FUNDO */
+    .hero {
+      padding: 90px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, rgba(224, 242, 254, 0.96), rgba(255, 247, 224, 0.88)),
+        url("hero-bg.jpg") center right / cover no-repeat;
+      opacity: 1;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 560px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 6vw, 46px);
+      margin: 0 0 12px;
+      animation: fade-up 0.6s ease-out both;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(120deg, #2563eb, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      margin: 0 0 14px;
+      font-size: 0.98rem;
+      animation: fade-up 0.6s ease-out 0.1s both;
+    }
+
+    .hero small {
+      display: block;
+      color: var(--text-muted);
+      opacity: 0.9;
+      margin-bottom: 18px;
+      font-size: 0.85rem;
+      animation: fade-up 0.6s ease-out 0.18s both;
+    }
+
+    .cta-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      color: #f9fafb;
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-soft);
+      border: none;
+      cursor: pointer;
+      animation: fade-up 0.6s ease-out 0.26s both;
+    }
+
+    .cta-main span.icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+      color: #2563eb;
+      font-size: 0.83rem;
+    }
+
+    .hero-secondary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      animation: fade-up 0.6s ease-out 0.34s both;
+    }
+
+    .hero-secondary span {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      padding: 6px 10px;
+      border: 1px solid rgba(191, 219, 254, 0.8);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid rgba(191, 219, 254, 0.9);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-badge span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 18px 16px;
+      border-radius: 20px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
+      border: 1px solid rgba(209, 213, 219, 0.7);
+    }
+
+    .hero-card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .hero-card p {
+      margin: 4px 0;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
     h2.section-title {
       text-align: center;
-      font-size: 2rem;
-      margin: 0 0 12px;
-      color: var(--text);
+      font-size: 1.8rem;
+      margin: 0 0 10px;
+      color: var(--text-main);
     }
 
     .sub {
       text-align: center;
-      color: var(--muted);
-      font-size: 1rem;
+      color: var(--text-muted);
+      margin-top: -4px;
       margin-bottom: 24px;
+      font-size: 0.95rem;
     }
 
     .grid {
       display: grid;
-      gap: 24px;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    /* SEÇÃO SERVIÇOS COM FOTO SUAVE AO FUNDO */
+    #services {
+      position: relative;
+    }
+
+    #services::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(244, 249, 255, 0.96), rgba(255, 247, 224, 0.94)),
+        url("services-bg.jpg") center / cover no-repeat;
+      opacity: 0.55;
+      z-index: -1;
     }
 
     .card {
-      background: var(--panel);
-      padding: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 22px;
       border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+      border: 1px solid rgba(209, 213, 219, 0.8);
+      box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
     }
@@ -224,9 +313,9 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top left, rgba(212,175,55,0.14), transparent 55%);
+      background: radial-gradient(circle at top left, rgba(147, 197, 253, 0.28), transparent 60%);
       opacity: 0;
-      transition: opacity 0.25s ease;
+      transition: opacity 0.2s ease;
       pointer-events: none;
     }
 
@@ -234,218 +323,258 @@
 
     .card h3 {
       color: var(--accent);
-      margin: 0 0 8px;
-      font-size: 1.1rem;
+      margin: 0 0 10px;
+      font-size: 1.02rem;
     }
 
     .card p {
-      color: var(--muted);
-      margin: 6px 0 0;
-      font-size: 0.95rem;
+      margin: 8px 0 0;
+      color: var(--text-muted);
+      font-size: 0.94rem;
     }
 
     .pricing .price {
-      font-size: 2.2rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: var(--accent);
-      margin: 6px 0 12px;
+      margin: 6px 0 14px;
     }
 
     .list {
       margin: 0;
       padding-left: 18px;
-      color: var(--muted);
+      color: var(--text-muted);
       font-size: 0.93rem;
     }
 
-    /* Testimonials */
-    .testimonial {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 6px;
+    /* TESTEMUNHOS + FAQ fundo mais neutro */
+    #testimonials, #faq {
+      background: linear-gradient(to bottom, var(--bg-soft), #ffffff);
     }
 
-    .testimonial strong {
-      color: var(--accent);
-    }
-
-    /* FAQ */
-    .faq-question {
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    /* Contact */
     .contact-card {
       text-align: center;
-      background: var(--panel-soft);
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    /* CONTACTO COM FOTO */
+    #contact {
+      position: relative;
+      background: linear-gradient(to bottom, rgba(224, 242, 254, 0.85), rgba(255, 251, 235, 0.9));
+    }
+
+    #contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("contact-bg.jpg") center / cover no-repeat;
+      opacity: 0.32;
+      z-index: -1;
     }
 
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 14px;
+      gap: 12px;
+      margin-top: 14px;
       flex-wrap: wrap;
-      margin-top: 20px;
     }
 
     .social-links a {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       text-decoration: none;
-      padding: 6px 10px;
+      padding: 6px 11px;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #15151b;
-      color: var(--muted);
-      transition: all 0.2s ease;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--text-muted);
+      transition: all 0.18s ease;
     }
 
     .social-links a:hover {
       border-color: var(--accent);
-      color: var(--text);
-      background: #191922;
+      color: var(--accent);
+      background: #ffffff;
     }
 
     footer {
-      background: var(--bg);
-      color: #bdbdc5;
+      background: #0f172a;
+      color: #e5e7eb;
       text-align: center;
-      padding: 24px;
-      font-size: 0.95rem;
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
+      padding: 22px;
+      font-size: 0.9rem;
+      margin-top: 0;
     }
 
-    /* Chat Widget */
+    /* CHATBOT FLOATING WIDGET */
     .chat-toggle {
       position: fixed;
       right: 18px;
       bottom: 18px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-      color: #141414;
-      padding: 10px 18px;
+      z-index: 40;
+      background: linear-gradient(135deg, #2563eb, #22c55e);
       border-radius: 999px;
       border: none;
-      cursor: pointer;
+      color: #f9fafb;
+      padding: 9px 15px;
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: var(--shadow);
-      z-index: 50;
       font-weight: 700;
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      font-size: 0.9rem;
     }
 
     .chat-toggle span.icon {
       width: 22px;
       height: 22px;
       border-radius: 999px;
-      background: #141414;
-      color: var(--accent);
+      background: #f1f5f9;
+      color: #2563eb;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
     .chatbot {
       position: fixed;
       right: 18px;
-      bottom: 74px;
-      width: min(360px, 92vw);
-      max-height: 72vh;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      border-radius: 20px;
-      overflow: hidden;
+      bottom: 72px;
+      width: min(340px, 92vw);
+      max-height: 70vh;
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid rgba(209, 213, 219, 0.9);
+      box-shadow: var(--shadow-soft);
       display: none;
       flex-direction: column;
-      z-index: 49;
+      overflow: hidden;
+      z-index: 39;
     }
 
-    .chatbot.open { display: flex; }
+    .chatbot.is-open { display: flex; }
 
     .chatbot-header {
-      background: #14141c;
-      padding: 10px 14px;
+      padding: 10px 12px;
+      background: #eff6ff;
+      border-bottom: 1px solid rgba(209, 213, 219, 0.9);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
     }
 
-    .chatbot-header strong {
-      color: var(--accent);
-      font-size: 0.95rem;
-    }
+    .chatbot-header strong { color: var(--accent); }
 
     .chatbot-header button {
       background: none;
       border: none;
-      color: var(--muted);
-      font-size: 1rem;
+      color: var(--text-muted);
       cursor: pointer;
+      font-size: 1rem;
     }
 
     .chatbot-body {
-      flex: 1;
-      overflow-y: auto;
-      padding: 12px 14px;
-      color: var(--muted);
+      padding: 10px 12px 6px;
       font-size: 0.9rem;
+      color: var(--text-muted);
+      overflow-y: auto;
+      flex: 1;
+      background: #f9fafb;
+    }
+
+    .bot-line {
+      margin-bottom: 8px;
     }
 
     .chip-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
+      gap: 6px;
+      margin: 4px 0 10px;
     }
 
     .chip {
-      background: #171720;
-      padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      padding: 4px 9px;
+      background: #ffffff;
+      color: var(--text-muted);
       font-size: 0.8rem;
-      color: var(--muted);
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.16s ease;
     }
 
     .chip:hover {
-      background: #1b1b24;
       border-color: var(--accent);
-      color: var(--text);
+      color: var(--accent);
+      background: #eff6ff;
     }
 
     .chatbot-footer {
-      background: #14141c;
-      padding: 8px 14px;
-      border-top: 1px solid var(--border);
-      font-size: 0.75rem;
-      color: var(--muted);
+      padding: 8px 10px 10px;
+      border-top: 1px solid rgba(209, 213, 219, 0.9);
+      background: #ffffff;
+    }
+
+    .chatbot-footer small {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    .chatbot-footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 26px;
+      }
     }
 
     @media (max-width: 700px) {
-      nav { display: none; }
-      .hero-content { grid-template-columns: 1fr; text-align: center; }
-      .hero-img { order: -1; }
-      .chatbot { right: 12px; left: 12px; bottom: 78px; width: auto; }
+      nav { display: none; } /* móvel simples */
+      .hero {
+        padding-top: 70px;
+      }
+      .hero::before {
+        background:
+          linear-gradient(to bottom, rgba(224, 242, 254, 0.98), rgba(255, 247, 224, 0.95)),
+          url("hero-bg.jpg") center / cover no-repeat;
+      }
+      .chat-toggle {
+        right: 12px;
+        bottom: 14px;
+      }
+      .chatbot {
+        right: 12px;
+        left: 12px;
+        bottom: 70px;
+        width: auto;
+      }
+    }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
   <header>
     <div class="nav">
-      <a class="logo" href="#top">
+      <a class="logo" href="#top" aria-label="AP Digital Solutions">
         <img src="logo-ap.png" alt="AP Digital Solutions logo" class="logo-img" />
         <span>AP Digital Solutions</span>
       </a>
       <nav>
         <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
+        <a href="#pricing">Pricing</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -453,30 +582,51 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="hero">
-    <div class="hero-content">
+  <main id="top" class="hero">
+    <div class="container hero-inner">
       <div class="hero-text">
-        <h1>AP – <span>The Solutions to Be Online</span> in Jersey</h1>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span>Local studio in Jersey · Small business friendly</span>
+        </div>
+        <h1>
+          AP – <span>The Solutions to Be Online</span> in Jersey
+        </h1>
         <p>
-          Hi, I’m <strong>Antonio Pereira</strong>. I help small businesses in Jersey get online with simple websites, chatbots and digital presence that look professional without being complicated.
+          Hi, I’m <strong>Antonio Pereira</strong>. I help small businesses in Jersey get online
+          with simple websites, chatbots and digital presence that look professional without
+          being complicated.
         </p>
-        <a class="cta-main" href="#contact">
-          <span class="icon">💬</span> Talk to us now
-        </a>
+        <small>Fast delivery · Clear pricing · Friendly WhatsApp support</small>
+
+        <button class="cta-main" type="button" onclick="toggleChatbot()">
+          <span class="icon">💬</span>
+          <span>Talk to us now</span>
+        </button>
+
+        <div class="hero-secondary">
+          <span>Websites for trades, cafés, cleaners, salons and more.</span>
+          <span>Chatbots that answer your customers 24/7.</span>
+        </div>
       </div>
-      <div class="hero-img">
-        <!-- pode mudar a imagem para algo do seu negócio -->
-        <img src="hero-laptop.jpg" alt="Website mockup on laptop" />
-      </div>
+
+      <aside class="hero-card">
+        <h3>What we can set up for you</h3>
+        <p>From idea to live website and chatbot in just a few days.</p>
+        <ul>
+          <li>Online presence that looks good on mobile</li>
+          <li>WhatsApp buttons so clients talk to you directly</li>
+          <li>Chatbots that answer common questions for you</li>
+        </ul>
+      </aside>
     </div>
   </main>
 
-  <!-- Services -->
   <section id="services">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
       <p class="sub">Everything you need to be visible online in Jersey.</p>
+
       <div class="grid">
         <div class="card">
           <h3>Chatbot Creation</h3>
@@ -484,7 +634,7 @@
         </div>
         <div class="card">
           <h3>Website Development</h3>
-          <p>Modern, mobile-first websites that look great on phones and computers. Domain & hosting help included if you need it.</p>
+          <p>Modern, mobile-first websites that look great on phones and computers. Domain &amp; hosting help included if you need it.</p>
         </div>
         <div class="card">
           <h3>Digital Presence Setup</h3>
@@ -494,11 +644,11 @@
     </div>
   </section>
 
-  <!-- Packages -->
-  <section id="packages">
+  <section id="pricing">
     <div class="container">
-      <h2 class="section-title">Packages</h2>
-      <p class="sub">Clear packages for small businesses.</p>
+      <h2 class="section-title">Pricing</h2>
+      <p class="sub">Simple packages for small businesses.</p>
+
       <div class="grid pricing">
         <div class="card">
           <h3>Starter Site</h3>
@@ -506,9 +656,10 @@
           <ul class="list">
             <li>1-page website</li>
             <li>Mobile-friendly design</li>
-            <li>Contact & WhatsApp buttons</li>
+            <li>Contact &amp; WhatsApp buttons</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Business Chatbot</h3>
           <div class="price">£99 + £10/mo</div>
@@ -518,6 +669,7 @@
             <li>Leads sent to your email</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Pro Bundle</h3>
           <div class="price">£349</div>
@@ -531,120 +683,138 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section id="testimonials">
     <div class="container">
       <h2 class="section-title">Testimonials</h2>
+
       <div class="grid">
         <div class="card">
-          <p class="testimonial">“Super quick and friendly service. Our customers get answers instantly.”</p>
+          <p>“Super quick and friendly service. Our customers get answers instantly.”</p>
           <p><strong>— Local café owner, St Helier</strong></p>
         </div>
         <div class="card">
-          <p class="testimonial">“Website live in 3 days. Exactly what we needed for our carpentry work.”</p>
+          <p>“Website live in 3 days. Exactly what we needed for our carpentry work.”</p>
           <p><strong>— Carpenter in Jersey</strong></p>
         </div>
         <div class="card">
-          <p class="testimonial">“Great value. The chatbot reduced our phone calls by half.”</p>
+          <p>“Great value. The chatbot reduced our phone calls by half.”</p>
           <p><strong>— Cleaning business in Jersey</strong></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq">
     <div class="container">
       <h2 class="section-title">FAQ</h2>
+
       <div class="grid">
         <div class="card">
-          <h3 class="faq-question">How fast is delivery?</h3>
+          <h3>How fast is delivery?</h3>
           <p>Typical delivery is 3–5 days depending on the package and how fast you send the content.</p>
         </div>
         <div class="card">
-          <h3 class="faq-question">Do you manage everything?</h3>
+          <h3>Do you manage everything?</h3>
           <p>Yes. We can register or connect your domain, configure hosting and help with small updates later.</p>
         </div>
         <div class="card">
-          <h3 class="faq-question">Is WhatsApp included?</h3>
+          <h3>Is WhatsApp included?</h3>
           <p>We add WhatsApp buttons to the site and can connect the chatbot so clients can message you any time.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <div class="card contact-card">
         <p><strong>Ready to be online?</strong></p>
-        <p style="color:var(--muted);">
-          Use the chat button in the corner to open a WhatsApp chat with AP Digital Solutions.
+        <p style="color:var(--text-muted);">
+          Use the chatbot button in the corner to open a WhatsApp chat with AP Digital Solutions.
         </p>
-        <p style="margin-top:18px;font-size:0.9rem;color:var(--muted);">
+
+        <p style="margin-top:18px;font-size:0.9rem;color:var(--text-muted);">
           Or email:<br>
           <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a>
         </p>
+
         <div class="social-links">
-          <a href="https://www.instagram.com/apdigitalsolution.je" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/apdigitalsolution.je" target="_blank" rel="noopener">
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">
+            Facebook
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 AP Digital Solutions – Jersey, Channel Islands – The Solutions to Be Online</p>
+    <p>&copy; 2025 AP Digital Solutions · Jersey, Channel Islands · The Solutions to Be Online</p>
   </footer>
 
-  <!-- Floating Chat Button -->
-  <button class="chat-toggle" onclick="toggleChat()">
-    <span class="icon">🤖</span> AP Chat Assistant
+  <!-- BOTÃO FLOANTE E CHATBOT FUNCIONAL PARA WHATSAPP -->
+  <button class="chat-toggle" type="button" onclick="toggleChatbot()">
+    <span class="icon">🤖</span>
+    <span>AP Chat Assistant</span>
   </button>
 
-  <!-- Chat Widget -->
-  <div id="chatbot" class="chatbot">
+  <div class="chatbot" id="chatbot">
     <div class="chatbot-header">
       <div>
         <strong>AP Chat Assistant</strong><br>
-        <span style="color:var(--muted);font-size:0.8rem;">Choose an option to talk on WhatsApp</span>
+        <span style="color:var(--text-muted);font-size:0.8rem;">Choose an option to talk on WhatsApp</span>
       </div>
-      <button type="button" onclick="toggleChat()">✕</button>
+      <button type="button" onclick="toggleChatbot()">✕</button>
     </div>
     <div class="chatbot-body">
-      <div class="bot-line">Hi 👋 I’m the AP assistant. How can I help you?</div>
-      <div class="chip-row">
-        <div class="chip" onclick="openWhatsApp('I would like a new website for my business in Jersey.')">I want a website</div>
-        <div class="chip" onclick="openWhatsApp('I am interested in a chatbot for my business in Jersey.')">I want a chatbot</div>
-        <div class="chip" onclick="openWhatsApp('I want help with Google, Facebook and Instagram for my business.')">Help with Google / social</div>
-        <div class="chip" onclick="openWhatsApp('I would like to know your prices and packages.')">Ask about prices</div>
+      <div class="bot-line">
+        Hi 👋 I’m the AP assistant. What do you want help with?
       </div>
-      <div class="bot-line">You can also send your own message after WhatsApp opens.</div>
+      <div class="chip-row">
+        <div class="chip" onclick="openWhatsApp('I would like a new website for my business in Jersey.')">
+          I want a website
+        </div>
+        <div class="chip" onclick="openWhatsApp('I am interested in a chatbot for my business in Jersey.')">
+          I want a chatbot
+        </div>
+        <div class="chip" onclick="openWhatsApp('I want help with Google, Facebook and Instagram for my business.')">
+          Help with Google / social
+        </div>
+        <div class="chip" onclick="openWhatsApp('I would like to know your prices and packages.')">
+          Ask about prices
+        </div>
+      </div>
+      <div class="bot-line">
+        You can also send your own message after WhatsApp opens.
+      </div>
     </div>
     <div class="chatbot-footer">
-      <small>By clicking an option, a chat will open in WhatsApp with AP Digital Solutions. You can cancel any message before sending.</small>
+      <small>
+        By clicking an option, a chat will open in WhatsApp with AP Digital Solutions.
+        You stay in control and can cancel any message before sending.
+      </small>
     </div>
   </div>
 
   <script>
-    // WhatsApp number stored only in JavaScript
     const WHATSAPP_NUMBER = "447700704591";
 
-    function toggleChat() {
-      const widget = document.getElementById('chatbot');
-      if (widget) {
-        widget.classList.toggle('open');
-      }
+    function toggleChatbot() {
+      const box = document.getElementById("chatbot");
+      if (!box) return;
+      box.classList.toggle("is-open");
     }
 
     function openWhatsApp(message) {
       const base = "https://wa.me/";
+      const phone = WHATSAPP_NUMBER;
       const text = message || "Hi, I would like to talk with AP Digital Solutions.";
-      const url = base + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
+      const url = base + phone + "?text=" + encodeURIComponent(text);
       window.open(url, "_blank");
     }
   </script>
 </body>
-</html>
+  </html>
