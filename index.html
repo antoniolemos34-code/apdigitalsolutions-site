@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>AP – The Solutions to Be Online | Jersey</title>
   <meta name="description" content="AP Digital Solutions helps small businesses in Jersey be online with simple websites, chatbots and digital presence. Fast delivery and friendly local support.">
 
-  <!-- OPEN GRAPH / SOCIAL -->
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="AP – The Solutions to Be Online | Jersey">
   <meta property="og:description" content="Websites, chatbots and digital presence for small businesses in Jersey.">
   <meta property="og:url" content="https://apdigitalsolutions.digital/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://apdigitalsolutions.digital/logo-ap.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --bg: #050507;
@@ -32,72 +31,66 @@
       --link: #f5d97a;
       --border: #1f1f25;
       --radius: 14px;
-      --shadow-soft: 0 20px 40px rgba(0,0,0,0.55);
+      --shadow-soft: 0 18px 32px rgba(0,0,0,0.5);
     }
 
     body {
-      margin: 0;
-      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: radial-gradient(900px 400px at 20% -20%, #171720, transparent 60%),
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(1000px 400px at 30% -20%, #171720, transparent 60%),
                   radial-gradient(700px 400px at 80% -40%, rgba(212,175,55,0.12), transparent 60%),
-                  #050507;
+                  var(--bg);
       color: var(--text);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
 
-    a { color: var(--link); }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
 
     header {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: #050507e6;
+      background: rgba(5,5,7,0.9);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 12px 20px;
+      align-items: center;
       max-width: 1100px;
       margin: 0 auto;
+      padding: 12px 20px;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
-      text-decoration: none;
       color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 700;
     }
 
     .logo-img {
       width: 34px;
       height: 34px;
       border-radius: 999px;
-      object-fit: cover;
       border: 1px solid var(--accent);
-      box-shadow: 0 0 18px rgba(212,175,55,0.35);
-    }
-
-    .logo span {
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      font-size: 0.95rem;
+      object-fit: cover;
+      box-shadow: 0 0 18px rgba(212,175,55,0.4);
     }
 
     nav a {
-      color: var(--text);
-      text-decoration: none;
       margin-left: 16px;
-      opacity: 0.86;
+      color: var(--text);
       font-size: 0.9rem;
-      transition: opacity 0.18s ease;
+      opacity: 0.85;
+      transition: opacity 0.2s;
     }
-
     nav a:hover { opacity: 1; text-decoration: underline; }
 
     .container {
@@ -108,207 +101,130 @@
 
     section { padding: 64px 0; }
 
+    /* HERO */
     .hero {
-      padding: 96px 0 72px;
       text-align: center;
+      padding: 96px 0 80px;
     }
-
     .hero h1 {
-      font-size: clamp(30px, 6vw, 48px);
-      margin: 0 0 12px;
-      animation: fade-up 0.6s ease-out both;
-    }
-
-    .hero h1 span {
+      font-size: clamp(32px, 6vw, 48px);
+      margin-bottom: 12px;
       background: linear-gradient(120deg, var(--accent), var(--accent-2));
       -webkit-background-clip: text;
       color: transparent;
     }
-
     .hero p {
       color: var(--muted);
-      max-width: 760px;
-      margin: 0 auto 16px;
-      font-size: 0.98rem;
-      animation: fade-up 0.6s ease-out 0.1s both;
+      max-width: 700px;
+      margin: 0 auto 18px;
+      font-size: 1rem;
     }
-
     .hero small {
-      display: block;
       color: var(--muted);
       opacity: 0.85;
-      margin-bottom: 14px;
+      display: block;
+      margin-bottom: 16px;
       font-size: 0.85rem;
-      animation: fade-up 0.6s ease-out 0.18s both;
     }
-
     .cta-main {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      margin-top: 8px;
+      gap: 8px;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: #141414;
-      padding: 11px 18px;
+      padding: 12px 18px;
       border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.97rem;
+      font-weight: 600;
+      font-size: 0.95rem;
       box-shadow: var(--shadow-soft);
       border: none;
       cursor: pointer;
-      animation: fade-up 0.6s ease-out 0.26s both;
     }
-
     .cta-main span.icon {
-      width: 20px;
-      height: 20px;
-      border-radius: 999px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
       background: #141414;
       color: var(--accent);
-      font-size: 0.83rem;
+      font-size: 0.8rem;
     }
-
     .hero-secondary {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 18px;
+      margin-top: 22px;
       font-size: 0.88rem;
       color: var(--muted);
-      animation: fade-up 0.6s ease-out 0.34s both;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    h2.section-title {
-      text-align: center;
-      font-size: 1.8rem;
-      margin: 0 0 10px;
-      color: var(--text);
-    }
-
-    .sub {
-      text-align: center;
-      color: var(--muted);
-      margin-top: -4px;
-      margin-bottom: 24px;
-      font-size: 0.95rem;
-    }
-
+    /* GRID STYLES */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
-
     .card {
       background: var(--panel);
-      padding: 22px;
-      border-radius: var(--radius);
       border: 1px solid var(--border);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow-soft);
       position: relative;
       overflow: hidden;
     }
-
     .card::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top left, rgba(212,175,55,0.14), transparent 55%);
+      background: radial-gradient(circle at top left, rgba(212,175,55,0.2), transparent 55%);
       opacity: 0;
-      transition: opacity 0.2s ease;
+      transition: opacity 0.2s;
       pointer-events: none;
     }
-
     .card:hover::before { opacity: 1; }
-
     .card h3 {
       color: var(--accent);
-      margin: 0 0 10px;
-      font-size: 1.08rem;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
     }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 4px; }
 
-    .card p {
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
+    /* PACKAGES */
     .pricing .price {
       font-size: 2rem;
       font-weight: 700;
       color: var(--accent);
-      margin: 6px 0 14px;
+      margin: 6px 0 12px;
     }
-
     .list {
-      margin: 0;
+      color: var(--muted);
       padding-left: 18px;
-      color: var(--muted);
-      font-size: 0.93rem;
+      font-size: 0.92rem;
     }
 
-    .contact-card { text-align: center; background: var(--panel-soft); }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 14px;
-      flex-wrap: wrap;
-    }
-
-    .social-links a {
-      font-size: 0.88rem;
-      text-decoration: none;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #15151b;
-      color: var(--muted);
-      transition: all 0.18s ease;
-    }
-
-    .social-links a:hover {
-      border-color: var(--accent);
-      color: var(--text);
-      background: #191922;
-    }
-
-    footer {
-      background: #050507;
-      color: #bdbdc5;
-      text-align: center;
-      padding: 22px;
-      font-size: 0.95rem;
-      border-top: 1px solid var(--border);
-      margin-top: 32px;
-    }
-
-    /* CHATBOT FLOATING WIDGET */
+    /* CHAT */
     .chat-toggle {
       position: fixed;
       right: 18px;
       bottom: 18px;
-      z-index: 40;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #141414;
       border-radius: 999px;
       border: none;
-      color: #141414;
       padding: 10px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
       display: flex;
       align-items: center;
       gap: 8px;
-      font-weight: 700;
-      box-shadow: var(--shadow-soft);
       cursor: pointer;
-      font-size: 0.94rem;
+      box-shadow: var(--shadow-soft);
+      z-index: 100;
     }
-
     .chat-toggle span.icon {
       width: 22px;
       height: 22px;
@@ -320,99 +236,74 @@
       justify-content: center;
       font-size: 0.92rem;
     }
-
     .chatbot {
       position: fixed;
       right: 18px;
-      bottom: 72px;
+      bottom: 74px;
       width: min(340px, 92vw);
       max-height: 70vh;
       background: var(--panel);
-      border-radius: 18px;
       border: 1px solid var(--border);
+      border-radius: 18px;
       box-shadow: var(--shadow-soft);
       display: none;
       flex-direction: column;
+      z-index: 99;
       overflow: hidden;
-      z-index: 39;
     }
-
     .chatbot.is-open { display: flex; }
-
     .chatbot-header {
-      padding: 10px 12px;
-      background: #14141c;
+      padding: 10px 14px;
+      background: var(--panel-soft);
       border-bottom: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
     .chatbot-header strong { color: var(--accent); }
-
-    .chatbot-header button {
-      background: none;
-      border: none;
-      color: var(--muted);
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
     .chatbot-body {
-      padding: 10px 12px 6px;
+      padding: 12px;
+      flex: 1;
       font-size: 0.9rem;
       color: var(--muted);
       overflow-y: auto;
-      flex: 1;
     }
-
-    .bot-line {
-      margin-bottom: 8px;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 4px 0 10px;
-    }
-
+    .bot-line { margin-bottom: 12px; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
     .chip {
       border-radius: 999px;
       border: 1px solid var(--border);
-      padding: 4px 9px;
+      padding: 4px 10px;
       background: #171720;
       color: var(--muted);
       font-size: 0.8rem;
       cursor: pointer;
-      transition: all 0.16s ease;
+      transition: all 0.16s;
     }
-
     .chip:hover {
       border-color: var(--accent);
       color: var(--text);
-      background: #1b1b24;
+      background: #1c1c25;
     }
-
     .chatbot-footer {
-      padding: 8px 10px 10px;
+      padding: 8px 12px 12px;
       border-top: 1px solid var(--border);
-    }
-
-    .chatbot-footer small {
-      display: block;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: var(--muted);
     }
 
-    .chatbot-footer a {
-      color: var(--link);
-      text-decoration: none;
+    footer {
+      text-align: center;
+      padding: 22px 0;
+      border-top: 1px solid var(--border);
+      color: #bdbdc5;
+      font-size: 0.92rem;
+      margin-top: 32px;
     }
 
     @media (max-width: 700px) {
-      nav { display: none; } /* simples para telemóvel */
+      nav { display: none; }
       .chat-toggle {
         right: 12px;
         bottom: 14px;
@@ -420,28 +311,22 @@
       .chatbot {
         right: 12px;
         left: 12px;
-        bottom: 70px;
+        bottom: 74px;
         width: auto;
       }
-    }
-
-    @keyframes fade-up {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="nav">
-      <a class="logo" href="#top" aria-label="AP Digital Solutions">
-        <!-- certifica-te que o ficheiro existe no repositório com este nome -->
-        <img src="logo-ap.png" alt="AP Digital Solutions logo" class="logo-img" />
+      <a class="logo" href="#" aria-label="AP Digital Solutions">
+        <img src="logo-ap.png" alt="AP Digital Solutions logo" class="logo-img">
         <span>AP Digital Solutions</span>
       </a>
       <nav>
         <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#pricing">Packages</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -449,24 +334,15 @@
     </div>
   </header>
 
-  <main id="top" class="hero">
+  <main class="hero">
     <div class="container">
-      <h1>
-        AP – <span>The Solutions to Be Online</span> in Jersey
-      </h1>
-      <p>
-        Hi, I’m <strong>Antonio Pereira</strong>. I help small businesses in Jersey get online
-        with simple websites, chatbots and digital presence that look professional without
-        being complicated.
-      </p>
+      <h1>AP – The Solutions to Be Online</h1>
+      <p>Hi, I’m <strong>Antonio Pereira</strong>. I help small businesses in Jersey get online with simple websites, chatbots and digital presence that look professional without being complicated.</p>
       <small>Local studio · Fast delivery · Friendly support</small>
-
-      <!-- botão principal abre o chatbot, não mostra número -->
       <button class="cta-main" type="button" onclick="toggleChatbot()">
         <span class="icon">💬</span>
         <span>Talk to us now</span>
       </button>
-
       <div class="hero-secondary">
         <span>Websites for trades, cafés, cleaners, salons and more.</span>
         <span>Chatbots that answer your customers 24/7.</span>
@@ -474,11 +350,11 @@
     </div>
   </main>
 
+  <!-- Services -->
   <section id="services">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
       <p class="sub">Everything you need to be visible online in Jersey.</p>
-
       <div class="grid">
         <div class="card">
           <h3>Chatbot Creation</h3>
@@ -486,7 +362,7 @@
         </div>
         <div class="card">
           <h3>Website Development</h3>
-          <p>Modern, mobile-first websites that look great on phones and computers. Domain &amp; hosting help included if you need it.</p>
+          <p>Modern, mobile-first websites that look great on phones and computers. Domain & hosting help included if you need it.</p>
         </div>
         <div class="card">
           <h3>Digital Presence Setup</h3>
@@ -496,11 +372,11 @@
     </div>
   </section>
 
+  <!-- Packages / Pricing -->
   <section id="pricing">
     <div class="container">
-      <h2 class="section-title">Pricing</h2>
+      <h2 class="section-title">Packages</h2>
       <p class="sub">Simple packages for small businesses.</p>
-
       <div class="grid pricing">
         <div class="card">
           <h3>Starter Site</h3>
@@ -508,37 +384,35 @@
           <ul class="list">
             <li>1-page website</li>
             <li>Mobile-friendly design</li>
-            <li>Contact &amp; WhatsApp buttons</li>
+            <li>Contact & WhatsApp buttons</li>
           </ul>
         </div>
-
         <div class="card">
-          <h3>Business Chatbot</h3>
-          <div class="price">£99 + £10/mo</div>
-          <ul class="list">
-            <li>Website chatbot</li>
-            <li>Pre-defined answers</li>
-            <li>Leads sent to your email</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Pro Bundle</h3>
+          <h3>Website + Chatbot</h3>
           <div class="price">£349</div>
           <ul class="list">
-            <li>Website + Chatbot</li>
-            <li>Basic SEO</li>
-            <li>Social setup (Google, Facebook, Instagram)</li>
+            <li>Starter Site included</li>
+            <li>Website & WhatsApp chatbot</li>
+            <li>Lead capture automations</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Digital Presence Setup</h3>
+          <div class="price">£99 + £10/mo</div>
+          <ul class="list">
+            <li>Google Business & Maps</li>
+            <li>Facebook & Instagram pages</li>
+            <li>Basic SEO & on-page optimisation</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Testimonials -->
   <section id="testimonials">
     <div class="container">
       <h2 class="section-title">Testimonials</h2>
-
       <div class="grid">
         <div class="card">
           <p>“Super quick and friendly service. Our customers get answers instantly.”</p>
@@ -556,10 +430,10 @@
     </div>
   </section>
 
+  <!-- FAQ -->
   <section id="faq">
     <div class="container">
       <h2 class="section-title">FAQ</h2>
-
       <div class="grid">
         <div class="card">
           <h3>How fast is delivery?</h3>
@@ -573,42 +447,39 @@
           <h3>Is WhatsApp included?</h3>
           <p>We add WhatsApp buttons to the site and can connect the chatbot so clients can message you any time.</p>
         </div>
+        <div class="card">
+          <h3>Can I add extra pages?</h3>
+          <p>Yes, we can add more sections or pages as your business grows. We’ll provide a clear quote based on your needs.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <div class="card contact-card">
         <p><strong>Ready to be online?</strong></p>
-        <p style="color:var(--muted);">
-          Use the chatbot button in the corner to open a WhatsApp chat with AP Digital Solutions.
-        </p>
-
+        <p style="color:var(--muted);">Use the chat button in the corner to open a WhatsApp conversation with AP Digital Solutions.</p>
         <p style="margin-top:18px;font-size:0.9rem;color:var(--muted);">
           Or email:<br>
           <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a>
         </p>
-
         <div class="social-links">
-          <a href="https://www.instagram.com/apdigitalsolution.je" target="_blank" rel="noopener">
-            Instagram
-          </a>
-          <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">
-            Facebook
-          </a>
+          <a href="https://www.instagram.com/apdigitalsolution.je" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">Facebook</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 AP Digital Solutions · Jersey, Channel Islands · The Solutions to Be Online</p>
+    &copy; 2025 AP Digital Solutions – Jersey, Channel Islands – The Solutions to Be Online
   </footer>
 
-  <!-- BOTÃO FLOANTE E CHATBOT FUNCIONAL PARA WHATSAPP -->
-  <button class="chat-toggle" type="button" onclick="toggleChatbot()">
+  <!-- Floating Chat Button and Widget -->
+  <button class="chat-toggle" onclick="toggleChatbot()">
     <span class="icon">🤖</span>
     <span>AP Chat Assistant</span>
   </button>
@@ -617,48 +488,32 @@
     <div class="chatbot-header">
       <div>
         <strong>AP Chat Assistant</strong><br>
-        <span style="color:var(--muted);font-size:0.8rem;">Choose an option to talk on WhatsApp</span>
+        <span style="color:var(--muted);font-size:0.8rem;">Choose a quick option or send your own message</span>
       </div>
-      <button type="button" onclick="toggleChatbot()">✕</button>
+      <button type="button" onclick="toggleChatbot()" style="background:none;border:none;color:var(--muted);cursor:pointer;">✕</button>
     </div>
     <div class="chatbot-body">
-      <div class="bot-line">
-        Hi 👋 I’m the AP assistant. What do you want help with?
-      </div>
+      <div class="bot-line">Hi 👋 I’m the AP assistant. What do you need help with?</div>
       <div class="chip-row">
-        <div class="chip" onclick="openWhatsApp('I would like a new website for my business in Jersey.')">
-          I want a website
-        </div>
-        <div class="chip" onclick="openWhatsApp('I am interested in a chatbot for my business in Jersey.')">
-          I want a chatbot
-        </div>
-        <div class="chip" onclick="openWhatsApp('I want help with Google, Facebook and Instagram for my business.')">
-          Help with Google / social
-        </div>
-        <div class="chip" onclick="openWhatsApp('I would like to know your prices and packages.')">
-          Ask about prices
-        </div>
+        <div class="chip" onclick="openWhatsApp('I would like a new website for my business in Jersey.')">I want a website</div>
+        <div class="chip" onclick="openWhatsApp('I am interested in a chatbot for my business in Jersey.')">I want a chatbot</div>
+        <div class="chip" onclick="openWhatsApp('I want help with Google, Facebook and Instagram for my business.')">Help with social</div>
+        <div class="chip" onclick="openWhatsApp('I would like to know your prices and packages.')">Ask about prices</div>
       </div>
-      <div class="bot-line">
-        You can also send your own message after WhatsApp opens.
-      </div>
+      <div class="bot-line">You can also type your own question once WhatsApp opens.</div>
     </div>
     <div class="chatbot-footer">
-      <small>
-        By clicking an option, a chat will open in WhatsApp with AP Digital Solutions.  
-        You stay in control and can cancel any message before sending.
-      </small>
+      <small>By clicking an option, WhatsApp will open with AP Digital Solutions. You can edit or cancel your message before sending.</small>
     </div>
   </div>
 
   <script>
-    // número guardado só no JavaScript (não aparece no texto da página)
+    // hidden number for WhatsApp (not shown to users)
     const WHATSAPP_NUMBER = "447700704591";
 
     function toggleChatbot() {
-      const box = document.getElementById("chatbot");
-      if (!box) return;
-      box.classList.toggle("is-open");
+      const bot = document.getElementById('chatbot');
+      if (bot) bot.classList.toggle('is-open');
     }
 
     function openWhatsApp(message) {
