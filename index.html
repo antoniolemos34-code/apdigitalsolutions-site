@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AP Digital Solutions – Websites & Chatbots for Jersey Businesses</title>
+  <title>AP Digital Solutions – Dark & Gold Websites and Chatbots in Jersey</title>
 
-  <meta name="description" content="AP Digital Solutions builds modern websites and WhatsApp-connected chatbots for local businesses in Jersey. Look real, trusted and professional online.">
+  <meta name="description" content="AP Digital Solutions is a small studio in Jersey that builds dark & gold, Apple-inspired websites and WhatsApp-connected chatbots for local businesses.">
 
   <style>
     :root {
       --bg: #020617;
       --bg-soft: #020617;
-      --surface: #0b1120;
-      --surface-soft: #020617;
+      --surface: #020617;
+      --surface-alt: #020617;
+      --card: #020617;
       --text-main: #f9fafb;
       --text-muted: #9ca3af;
-      --accent: #d4af37;   /* gold */
-      --border: #1f2937;
+      --accent: #facc6b;      /* strong gold */
+      --accent-deep: #f59e0b; /* deeper gold */
+      --border: #111827;
       --radius-lg: 26px;
       --radius-md: 18px;
+      --shadow-strong: 0 24px 60px rgba(0,0,0,0.85);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -35,12 +38,16 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* HEADER */
+
     header {
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 10;
-      backdrop-filter: blur(18px);
-      background: rgba(15,23,42,0.92);
+      left: 0;
+      right: 0;
+      z-index: 20;
+      backdrop-filter: blur(24px);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.9), rgba(15,23,42,0.2));
       border-bottom: 1px solid rgba(15,23,42,0.9);
     }
 
@@ -71,7 +78,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      box-shadow: 0 0 0 1px rgba(148,163,184,0.5);
+      box-shadow: 0 0 0 1px rgba(148,163,184,0.7);
     }
 
     .brand-mark img {
@@ -82,11 +89,16 @@
       display: block;
     }
 
-    .brand span {
-      font-size: 0.78rem;
+    .brand-text-main {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 0.7rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: var(--accent);
     }
 
     nav ul {
@@ -101,7 +113,26 @@
       font-weight: 500;
     }
 
-    nav a:hover { color: var(--text-main); }
+    nav a:hover { color: var(--accent); }
+
+    .nav-cta {
+      border-radius: 999px;
+      padding: 7px 16px;
+      border: 1px solid rgba(250,204,21,0.8);
+      background: radial-gradient(circle at 30% 0, rgba(250,204,21,0.16), rgba(0,0,0,0.3));
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .nav-cta:hover {
+      background: radial-gradient(circle at 30% 0, rgba(250,204,21,0.28), rgba(0,0,0,0.4));
+      text-decoration: none;
+    }
+
+    /* LAYOUT */
 
     .container {
       max-width: 1040px;
@@ -109,32 +140,71 @@
       padding: 0 20px;
     }
 
+    main {
+      padding-top: 70px; /* space for fixed header */
+    }
+
     section { padding: 70px 0; }
 
-    /* HERO */
+    /* HERO COM VÍDEO */
+
     .hero {
-      padding-top: 96px;
+      position: relative;
+      padding: 0;
+      min-height: 72vh;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-video-wrapper {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .hero-video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.65;
+      filter: saturate(1.2);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at top left, rgba(250,204,21,0.2), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(15,23,42,0.9), #000);
     }
 
     .hero-inner {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 80px 20px 90px;
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.3fr);
       gap: 40px;
       align-items: center;
     }
 
     .hero-eyebrow {
       font-size: 0.78rem;
-      letter-spacing: .18em;
+      letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 10px;
     }
 
     .hero h1 {
-      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-size: clamp(2.2rem, 4vw, 3rem);
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
     }
 
     .hero h1 span {
@@ -145,6 +215,7 @@
       color: var(--text-muted);
       font-size: 0.98rem;
       margin-bottom: 22px;
+      max-width: 34rem;
     }
 
     .hero-cta {
@@ -156,27 +227,34 @@
 
     .btn-primary {
       border-radius: 999px;
-      padding: 10px 22px;
+      padding: 11px 24px;
       border: none;
-      background: radial-gradient(circle at 30% 0, #facc6b, #f59e0b 65%);
+      background: radial-gradient(circle at 30% 0, var(--accent), var(--accent-deep) 70%);
       color: #111827;
       font-weight: 600;
       font-size: 0.95rem;
       cursor: pointer;
-      box-shadow: 0 14px 40px rgba(234,179,8,0.55);
+      box-shadow: 0 16px 50px rgba(234,179,8,0.6);
+      text-decoration: none;
     }
 
-    .btn-primary:hover { filter: brightness(1.05); }
+    .btn-primary:hover { filter: brightness(1.05); text-decoration: none; }
 
     .btn-ghost {
       border-radius: 999px;
-      padding: 10px 18px;
-      border: 1px solid var(--border);
-      background: transparent;
+      padding: 11px 20px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.6);
       color: var(--text-main);
       font-weight: 500;
       font-size: 0.95rem;
       cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      text-decoration: none;
     }
 
     .hero-note {
@@ -185,27 +263,52 @@
       margin-top: 4px;
     }
 
-    .hero-media {
+    .hero-side-card {
       border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      box-shadow: 0 22px 50px rgba(15,23,42,0.9);
+      background: rgba(15,23,42,0.88);
+      border: 1px solid rgba(148,163,184,0.6);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-strong);
+      backdrop-filter: blur(18px);
     }
 
-    .hero-media img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      opacity: 0.96;
+    .hero-side-card h3 {
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .hero-side-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-side-taglist {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .hero-chip {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(156,163,175,0.7);
+      color: var(--text-muted);
+      background: rgba(15,23,42,0.9);
     }
 
     /* TITLES */
+
     .section-title {
       text-align: center;
       font-size: 1.6rem;
       margin-bottom: 6px;
+      color: var(--accent);
     }
 
     .section-sub {
@@ -216,6 +319,7 @@
     }
 
     /* GRID / CARDS */
+
     .grid {
       display: grid;
       gap: 22px;
@@ -223,11 +327,11 @@
     }
 
     .card {
-      background: var(--surface);
+      background: rgba(15,23,42,0.94);
       border-radius: var(--radius-md);
       border: 1px solid var(--border);
       padding: 18px 20px;
-      box-shadow: 0 16px 40px rgba(15,23,42,0.8);
+      box-shadow: var(--shadow-strong);
     }
 
     .card h3 {
@@ -246,6 +350,7 @@
       margin-bottom: 10px;
       object-fit: cover;
       max-height: 220px;
+      display: block;
     }
 
     .list {
@@ -257,7 +362,8 @@
 
     .list li { margin-bottom: 4px; }
 
-    /* TWO COL */
+    /* TWO COL BLOCS */
+
     .two-col {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
@@ -306,23 +412,24 @@
 
     .notice {
       font-size: 0.86rem;
-      color: #fecaca;
-      background: rgba(127,29,29,0.16);
+      color: #fed7aa;
+      background: rgba(124,45,18,0.22);
       border-radius: 14px;
-      border: 1px solid rgba(127,29,29,0.45);
+      border: 1px solid rgba(124,45,18,0.5);
       padding: 10px 12px;
     }
 
     /* CONTACT */
+
     .contact-card {
       max-width: 540px;
       margin: 0 auto;
       text-align: center;
-      background: var(--surface);
+      background: rgba(15,23,42,0.96);
       border-radius: var(--radius-md);
       border: 1px solid var(--border);
       padding: 20px 22px;
-      box-shadow: 0 18px 45px rgba(15,23,42,0.85);
+      box-shadow: var(--shadow-strong);
     }
 
     .contact-card p { margin-bottom: 6px; }
@@ -347,10 +454,18 @@
     }
 
     @media (max-width: 820px) {
-      .hero-inner { grid-template-columns: 1fr; }
       nav ul { display: none; }
-      .hero { padding-top: 80px; }
-      .two-col { grid-template-columns: 1fr; }
+      .nav { justify-content: space-between; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 90px;
+        padding-bottom: 60px;
+      }
+      .hero-side-card {
+        margin-top: 22px;
+      }
+      section { padding: 56px 0; }
+      main { padding-top: 64px; }
     }
   </style>
 </head>
@@ -362,82 +477,105 @@
           <img src="Logo.png" alt="AP Digital Solutions logo">
         </div>
         <div>
-          <div style="font-size:0.9rem;">AP DIGITAL SOLUTIONS</div>
-          <span>The Solutions to Be Online</span>
+          <div class="brand-text-main">AP DIGITAL SOLUTIONS</div>
+          <div class="brand-tagline">THE SOLUTIONS TO BE ONLINE</div>
         </div>
       </div>
+
       <nav>
         <ul>
-          <li><a href="#why-online">Why be online</a></li>
+          <li><a href="#why-online">Why online</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#how-it-works">Process</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <a class="nav-cta" href="#contact">Let’s talk</a>
     </div>
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- HERO COM VÍDEO -->
     <section class="hero">
-      <div class="container hero-inner">
+      <div class="hero-video-wrapper">
+        <video src="hero-video.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-inner">
         <div>
-          <div class="hero-eyebrow">Websites • Chatbots • WhatsApp</div>
+          <div class="hero-eyebrow">Dark & gold web studio · Jersey</div>
           <h1>
-            Modern websites and chatbots that make your business <span>look real online.</span>
+            Websites and chatbots that make your small business
+            <span>look like a big brand.</span>
           </h1>
           <p>
-            AP Digital Solutions helps small businesses in Jersey get a clean, professional online presence –
-            with websites that are easy to understand and WhatsApp-connected chatbots that reply even when you’re busy.
+            AP Digital Solutions is a tiny studio in Jersey that builds Apple-inspired, dark & gold
+            websites and WhatsApp-first chatbots. No agency drama, no tech talk – just a clean online
+            presence that feels serious and brings you real enquiries.
           </p>
           <div class="hero-cta">
-            <a class="btn-primary" href="#contact">Talk to us on WhatsApp</a>
-            <a class="btn-ghost" href="#services">See what we build</a>
+            <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">
+              Start a WhatsApp chat
+            </a>
+            <a class="btn-ghost" href="#services">
+              See what we build
+            </a>
           </div>
           <p class="hero-note">
-            We explain everything in simple language – no tech jargon. You tell us what you do, we turn it into a website that works.
+            Tell us what you do in a few lines. We’ll reply with what we would actually build for you –
+            no obligation, no pressure.
           </p>
         </div>
 
-        <div class="hero-media" aria-label="Preview of AP Digital Solutions work">
-          <img
-            src="tablet-coffee.jpg"
-            alt="Person using laptop and tablet in a modern workspace."
-          />
-        </div>
+        <aside class="hero-side-card">
+          <h3>What you get with us</h3>
+          <p>
+            We focus on a small number of Jersey businesses and give each one a custom, dark & gold
+            online identity – not another generic template.
+          </p>
+          <div class="hero-side-taglist">
+            <span class="hero-chip">1–3 page websites</span>
+            <span class="hero-chip">WhatsApp chatbots</span>
+            <span class="hero-chip">Local SEO basics</span>
+            <span class="hero-chip">Domain & email help</span>
+            <span class="hero-chip">Ongoing small updates</span>
+          </div>
+        </aside>
       </div>
     </section>
 
     <!-- WHY ONLINE -->
     <section id="why-online">
       <div class="container">
-        <h2 class="section-title">Why does your business need to be online?</h2>
+        <h2 class="section-title">Why show up online like a real brand?</h2>
         <p class="section-sub">
-          In Jersey, people search Google and social media before they call or visit.  
-          If your business doesn’t appear, they go to the next option.
+          In Jersey, people check their phones before they trust a business.  
+          If they don’t find you – or your site looks old – they move on.
         </p>
 
         <div class="two-col">
           <div>
             <p>
-              Many good local businesses still run only on word of mouth.  
-              That works – until someone new searches on their phone and can’t find you.
+              Maybe you already have regular clients and word of mouth. That’s great – but new people
+              still Google you. If they only find a Facebook page or nothing at all, it creates doubt.
             </p>
             <br />
             <p>
-              A clear website plus simple automations means people can see what you do,
-              trust you faster and contact you in one tap, without scrolling through old posts.
+              A clear website plus a simple chatbot can answer the basic questions for you, 24/7:
+              what you do, where you are, how much it roughly costs and how to contact you in one tap.
             </p>
           </div>
 
           <div class="card">
-            <h3>What a basic online presence should do</h3>
+            <h3>What a serious online presence does</h3>
             <ul class="list">
-              <li>Explain in seconds what your business actually does.</li>
-              <li>Show real services, photos and where you are based.</li>
-              <li>Make it easy to contact you via WhatsApp, call or email.</li>
-              <li>Answer common questions without you repeating yourself all day.</li>
-              <li>Look clean and trustworthy on any phone or laptop.</li>
+              <li>Makes you look like a real, established brand – not a side-gig.</li>
+              <li>Explains in seconds what you offer and who it’s for.</li>
+              <li>Brings people straight to your WhatsApp instead of long forms.</li>
+              <li>Saves you time answering the same questions again and again.</li>
+              <li>Works nicely on any phone your clients use.</li>
             </ul>
           </div>
         </div>
@@ -447,57 +585,58 @@
     <!-- SERVICES -->
     <section id="services">
       <div class="container">
-        <h2 class="section-title">What we build for Jersey businesses</h2>
+        <h2 class="section-title">What we actually build</h2>
         <p class="section-sub">
-          Not just “a website”. We build a small digital system: website, WhatsApp chatbot and simple support.
+          Think of it as a small digital system around your business: website, WhatsApp chatbot and
+          simple support. Everything dark, gold and consistent.
         </p>
 
         <div class="grid">
           <article class="card">
             <img
-              src="_keyboard-key.jpg"
-              alt="Keyboard key symbolising a modern website."
+              src="tablet-coffee.jpg"
+              alt="Laptop and tablet on a dark desk, representing a modern website."
             />
-            <h3>Modern, clear websites</h3>
+            <h3>Signature dark & gold website</h3>
             <p>
-              One-page or simple multi-page websites focused on clarity: who you are, what you offer,
-              why people should trust you and how to contact you quickly.
+              A focused 1–3 page site that feels premium: who you are, what you do, proof you’re
+              real and a clear next step. Built to load fast and look sharp on mobile.
             </p>
           </article>
 
           <article class="card">
             <img
               src="social-phone.jpg"
-              alt="Smartphone with social notifications, representing a chatbot."
+              alt="Smartphone with social icons, representing a chatbot."
             />
-            <h3>WhatsApp-connected chatbots</h3>
+            <h3>WhatsApp-first chatbot</h3>
             <p>
-              Small, smart chatbots that answer basic questions 24/7 and then send people to your WhatsApp.
-              No complicated dashboards – everything ends where you already talk to clients.
+              A small, smart chatbot that welcomes people, answers basic questions and then
+              forwards them into your WhatsApp. You keep the conversation where you already work.
             </p>
           </article>
 
           <article class="card">
             <img
               src="shopping-phone.jpg"
-              alt="Hand holding a smartphone showing shopping icons, symbolising online presence."
+              alt="Phone with shopping icons, symbolising online presence."
             />
-            <h3>Simple brand & social setup</h3>
+            <h3>Brand & social starter kit</h3>
             <p>
-              Consistent colours, fonts and links between your website, Google profile and main social networks,
-              so your business feels like one clear brand everywhere.
+              Consistent dark & gold visuals for your website, Google Business profile and main social
+              channels, so everything feels like one brand and not a mix of styles.
             </p>
           </article>
 
           <article class="card">
             <img
               src="marketing-book.png"
-              alt="Marketing book on a desk, representing support and guidance."
+              alt="Marketing book on a desk, representing support."
             />
-            <h3>Support without drama</h3>
+            <h3>Care and small updates</h3>
             <p>
-              We take care of domains, hosting basics and small content updates.
-              You always know who to message when something needs to change.
+              We handle domains, basic hosting questions and text or photo changes. When something needs
+              updating, you send a message – we tweak it and keep the site fresh.
             </p>
           </article>
         </div>
@@ -507,9 +646,9 @@
     <!-- HOW IT WORKS -->
     <section id="how-it-works">
       <div class="container">
-        <h2 class="section-title">How we work with you</h2>
+        <h2 class="section-title">How we work together</h2>
         <p class="section-sub">
-          A simple, human process – built for people who don’t live in front of a computer.
+          No endless meetings or 20-page proposals. Just a simple, human process built around your time.
         </p>
 
         <div class="two-col">
@@ -517,51 +656,51 @@
             <div class="step">
               <div class="step-number">1</div>
               <div class="step-text">
-                <strong>Short WhatsApp or call</strong><br />
-                You tell us what your business does and what you need: more bookings, clearer info,
-                less time explaining the same things.
+                <strong>Quick WhatsApp intro</strong><br />
+                You send us a short voice note or text explaining what you do and what you’re
+                struggling with online right now.
               </div>
             </div>
             <div class="step">
               <div class="step-number">2</div>
               <div class="step-text">
-                <strong>Plan & simple proposal</strong><br />
-                We suggest the structure of your website and chatbot in plain English – no pages
-                or features you don’t need.
+                <strong>Idea & structure</strong><br />
+                We reply with the website structure and chatbot idea we would build for you – in plain
+                language, no tech talk or hidden extras.
               </div>
             </div>
             <div class="step">
               <div class="step-number">3</div>
               <div class="step-text">
-                <strong>Build & connect</strong><br />
-                We build the site, set up the chatbot and connect everything to your domain,
-                email and WhatsApp.
+                <strong>Build in dark & gold</strong><br />
+                You send any logo, photos or texts you already have. We design the pages, connect
+                WhatsApp and tune the chatbot to your business.
               </div>
             </div>
             <div class="step">
               <div class="step-number">4</div>
               <div class="step-text">
-                <strong>Launch & small updates</strong><br />
-                Your business goes live online. If you need text or photo changes later,
-                you send us a message and we update it.
+                <strong>Launch & refine</strong><br />
+                We publish the site under your domain, test everything on mobile and then keep making
+                small adjustments as you use it.
               </div>
             </div>
           </div>
 
           <div class="card">
-            <h3>What we focus on</h3>
-            <p>Instead of complicated dashboards, we keep things simple:</p>
+            <h3>What we focus on (not buzzwords)</h3>
+            <p>We don’t try to impress you with technical jargon. Instead we care about:</p>
             <div class="pill-row">
               <span class="pill">Clear copywriting</span>
-              <span class="pill">Mobile-first design</span>
+              <span class="pill">Minimal design</span>
               <span class="pill">Fast loading</span>
-              <span class="pill">WhatsApp first contact</span>
+              <span class="pill">WhatsApp as main channel</span>
               <span class="pill">Local SEO basics</span>
             </div>
             <br />
             <p class="notice">
-              We are not a big agency. We work with a small number of clients and give each
-              project real attention, so your site doesn’t look like a generic template.
+              We’re small on purpose. That means we say “no” to work that doesn’t fit, and “yes” to
+              projects where we can make a real difference.
             </p>
           </div>
         </div>
@@ -571,9 +710,10 @@
     <!-- CONTACT -->
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Ready to take your business online?</h2>
+        <h2 class="section-title">Want to see what we’d build for you?</h2>
         <p class="section-sub">
-          You don’t need to know what pages you want. Just tell us what you do – we’ll suggest the rest.
+          You don’t need a full brief. Just tell us what you do and how people usually contact you.
+          We’ll answer with a simple plan in dark & gold.
         </p>
 
         <div class="contact-card">
@@ -586,19 +726,19 @@
             <a href="mailto:info@apdigitalsolutions.digital">info@apdigitalsolutions.digital</a>
           </p>
           <p style="font-size:0.9rem; color:var(--text-muted); margin-top:6px;">
-            Send a short message with your business name, what you offer and how people contact you today.
-            We’ll reply with what we would build for you – in simple language, no pressure.
+            Send a short message with your business name, what you offer and what you’d like your
+            website to do for you (more bookings, clearer info, fewer messages, etc.).
           </p>
 
           <div class="contact-tags">
             <span>Made for Jersey businesses</span>
+            <span>Dark & gold visual style</span>
             <span>Websites & chatbots</span>
-            <span>Simple, clear, modern</span>
           </div>
 
           <div style="margin-top:18px;">
             <a class="btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">
-              Message us on WhatsApp
+              Message AP Digital Solutions
             </a>
           </div>
         </div>
@@ -607,7 +747,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 AP Digital Solutions – Websites & Chatbots for Jersey Businesses.</p>
+    <p>&copy; 2025 AP Digital Solutions – Dark & Gold Websites & Chatbots in Jersey.</p>
   </footer>
 </body>
 </html>
