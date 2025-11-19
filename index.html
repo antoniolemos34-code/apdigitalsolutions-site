@@ -5,101 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AP Digital Solutions – Future-ready Websites & Chatbots in Jersey</title>
   <meta name="description" content="AP Digital Solutions builds modern websites, chatbots and automations for local businesses in Jersey.">
+
+  <!-- Open Graph básico (opcional, ajusta o URL se quiseres) -->
+  <meta property="og:title" content="AP Digital Solutions – Future-ready Websites & Chatbots in Jersey">
+  <meta property="og:description" content="Websites modernos, chatbots inteligentes e presença digital completa para negócios em Jersey.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="ap-digital-banner.jpg">
+
   <style>
     :root{
-      --bg-main:#050816;
-      --bg-soft:#0b1220;
-      --card:#0b1731;
+      --bg-main:#f5f5f7;
+      --bg-soft:#ffffff;
+      --card:#ffffff;
       --accent:#22c55e;
-      --accent-soft:#4ade80;
-      --text-main:#e2e8f0;
-      --text-muted:#94a3b8;
-      --border:#13263c;
-      --radius-lg:20px;
-      --shadow-soft:0 24px 60px rgba(15,23,42,0.6);
+      --accent-soft:#16a34a;
+      --accent-subtle:#dcfce7;
+      --text-main:#111827;
+      --text-muted:#6b7280;
+      --border:#e5e7eb;
+      --border-soft:#d4d4d8;
+      --radius-lg:26px;
+      --radius-md:18px;
+      --shadow-soft:0 24px 80px rgba(15,23,42,0.10);
     }
 
     *{box-sizing:border-box;margin:0;padding:0;}
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;
-      background:radial-gradient(circle at top,#111827 0,#020617 55%,#000 100%);
+      background:radial-gradient(circle at top,#ffffff 0,#f5f5f7 40%,#e5e7eb 100%);
       color:var(--text-main);
+      -webkit-font-smoothing:antialiased;
     }
 
     header{
       position:sticky;top:0;
       display:flex;justify-content:space-between;align-items:center;
-      background:rgba(3,7,18,0.9);
-      padding:10px 20px;
-      border-bottom:1px solid var(--border);
-      backdrop-filter:blur(14px);
+      background:rgba(245,245,247,0.96);
+      padding:10px 24px;
+      border-bottom:1px solid rgba(209,213,219,0.9);
+      backdrop-filter:blur(20px);
       z-index:100;
     }
 
     header a.logo{
       font-weight:650;
-      font-size:1.1rem;
-      letter-spacing:0.08em;
+      font-size:1.05rem;
+      letter-spacing:0.18em;
       text-transform:uppercase;
-      color:var(--accent);
+      color:#111827;
       text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
 
-    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;}
+    .logo-dot{
+      width:18px;height:18px;
+      border-radius:999px;
+      background:radial-gradient(circle at 30% 30%,#bbf7d0,#22c55e);
+      box-shadow:0 0 0 4px #e5f9ed;
+    }
+
+    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;}
     nav a{
       color:var(--text-muted);
       text-decoration:none;
-      font-size:0.9rem;
+      font-size:0.92rem;
     }
-    nav a:hover{color:var(--accent);}
+    nav a:hover{color:var(--text-main);}
 
     .cta{
       background:var(--accent);
-      color:#020617;
-      padding:8px 18px;
+      color:#ffffff;
+      padding:8px 20px;
       border-radius:9999px;
       text-decoration:none;
       font-weight:600;
       font-size:0.9rem;
       border:0;
       cursor:pointer;
-      display:inline-block;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      box-shadow:0 10px 25px rgba(34,197,94,0.32);
+      transition:transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
-    .cta:hover{background:var(--accent-soft);}
+    .cta:hover{
+      background:var(--accent-soft);
+      transform:translateY(-1px);
+      box-shadow:0 14px 30px rgba(34,197,94,0.40);
+    }
 
-    main{max-width:1100px;margin:auto;padding:24px 16px 40px;}
+    main{max-width:1100px;margin:auto;padding:28px 16px 50px;}
 
-    /* HERO */
+    /* HERO – APPLE STYLE */
 
     .hero{
-      padding:70px 0 40px;
+      padding:60px 0 40px;
     }
 
     .hero-inner{
       display:grid;
-      grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+      grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
       gap:40px;
       align-items:center;
     }
 
     .hero-kicker{
-      font-size:0.8rem;
+      font-size:0.78rem;
       text-transform:uppercase;
-      letter-spacing:0.18em;
+      letter-spacing:0.22em;
+      color:var(--text-muted);
+      margin-bottom:8px;
+    }
+
+    .hero-kicker span{
+      padding:3px 10px;
+      border-radius:999px;
+      background:var(--accent-subtle);
       color:var(--accent-soft);
-      margin-bottom:10px;
+      margin-left:8px;
+      font-weight:600;
     }
 
     .hero h1{
-      font-size:2.6rem;
+      font-size:2.7rem;
       line-height:1.05;
       margin-bottom:14px;
       color:var(--text-main);
     }
 
-    .hero h1 span{color:var(--accent);}
+    .hero h1 span{color:var(--accent-soft);}
 
     .hero p{
       color:var(--text-muted);
@@ -113,6 +155,7 @@
       flex-wrap:wrap;
       gap:10px 16px;
       align-items:center;
+      margin-bottom:18px;
     }
 
     .hero-note{
@@ -120,157 +163,259 @@
       color:var(--text-muted);
     }
 
-    .hero-image-wrapper{
-      background:linear-gradient(145deg,#020617,#111827);
-      border-radius:26px;
-      padding:10px;
+    /* HERO MEDIA (VÍDEO + MOCKUP) */
+
+    .hero-media{
+      background:var(--bg-soft);
+      border-radius:var(--radius-lg);
+      padding:14px;
       box-shadow:var(--shadow-soft);
-      border:1px solid rgba(148,163,184,0.25);
+      border:1px solid var(--border);
     }
 
-    .hero-image-main{
+    .hero-device{
+      border-radius:22px;
+      background:#020617;
+      padding:10px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-device::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:22px;
+      border:1px solid rgba(148,163,184,0.45);
+      pointer-events:none;
+    }
+
+    .hero-video{
       display:block;
       width:100%;
-      border-radius:20px;
+      border-radius:16px;
       object-fit:cover;
+      background:#000;
     }
 
-    .hero-tag{
+    .hero-badge{
       position:absolute;
-      bottom:10px;
+      bottom:12px;
       left:14px;
       right:14px;
       border-radius:9999px;
-      background:rgba(15,23,42,0.75);
+      background:rgba(15,23,42,0.9);
       padding:6px 14px;
-      font-size:0.8rem;
-      color:var(--text-muted);
+      font-size:0.78rem;
+      color:#e5e7eb;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(12px);
     }
-    .hero-tag span strong{color:var(--accent);}
+    .hero-badge span strong{color:#bbf7d0;}
 
-    .hero-image-shell{
-      position:relative;
-      overflow:hidden;
-      border-radius:18px;
-    }
-
-    /* MINI GALERIA NO TOPO */
+    /* MINI GALERIA */
 
     .hero-gallery{
-      margin-top:26px;
+      margin-top:20px;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-      gap:12px;
+      gap:10px;
     }
 
     .hero-gallery img{
       width:100%;
-      height:100px;
+      height:88px;
       object-fit:cover;
       border-radius:14px;
-      border:1px solid rgba(148,163,184,0.3);
+      border:1px solid var(--border);
+      background:#e5e7eb;
+      transition:transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+
+    .hero-gallery img:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 26px rgba(15,23,42,0.20);
+      border-color:#cbd5f5;
     }
 
     /* SEÇÕES */
 
-    .services, .how-it-works, .packages{margin:60px 0;}
-
-    .services h2,
-    .how-it-works h2,
-    .packages h2{
-      font-size:1.4rem;
-      margin-bottom:18px;
+    .section{
+      margin:60px 0;
     }
 
-    .services .cards,
-    .how-it-works .steps,
-    .packages .cards{
+    .section-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:16px;
+      margin-bottom:22px;
+      flex-wrap:wrap;
+    }
+
+    .section h2{
+      font-size:1.45rem;
+      margin:0;
+    }
+
+    .section p.lead{
+      color:var(--text-muted);
+      font-size:0.9rem;
+      max-width:420px;
+    }
+
+    .cards,
+    .steps-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+      gap:18px;
     }
 
     .card{
       background:var(--card);
       padding:20px;
       border:1px solid var(--border);
-      border-radius:var(--radius-lg);
+      border-radius:var(--radius-md);
+      transition:transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
     }
 
-    .card h3{margin-top:0;margin-bottom:8px;color:var(--text-main);}
-    .card p{color:var(--text-muted);font-size:0.9rem;margin-bottom:8px;}
-    .card ul{padding-left:18px;color:var(--text-muted);font-size:0.9rem;}
+    .card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 18px 40px rgba(15,23,42,0.18);
+      border-color:#d1d5db;
+    }
+
+    .card h3{
+      margin-top:0;
+      margin-bottom:8px;
+      color:var(--text-main);
+      font-size:1.05rem;
+    }
+
+    .card p{
+      color:var(--text-muted);
+      font-size:0.9rem;
+      margin-bottom:8px;
+    }
+
+    .card ul{
+      padding-left:18px;
+      color:var(--text-muted);
+      font-size:0.9rem;
+      margin-top:6px;
+    }
+
     .card ul li{margin-bottom:4px;}
+
+    /* STEPS */
 
     .step{
       background:var(--card);
       padding:20px;
       border:1px solid var(--border);
-      border-radius:var(--radius-lg);
-      text-align:center;
+      border-radius:var(--radius-md);
+      text-align:left;
     }
+
     .step span{
-      display:inline-block;
-      background:var(--accent);
-      color:#020617;
-      border-radius:50%;
-      width:32px;height:32px;
-      line-height:32px;
-      font-weight:bold;
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      background:#f3f4f6;
+      color:#111827;
+      border-radius:999px;
+      width:30px;height:30px;
+      font-weight:600;
       margin-bottom:10px;
-      font-size:0.9rem;
+      font-size:0.85rem;
     }
-    .step p{color:var(--text-muted);font-size:0.9rem;}
+
+    .step h3{
+      margin:0 0 6px;
+      font-size:0.98rem;
+    }
+
+    .step p{
+      color:var(--text-muted);
+      font-size:0.88rem;
+    }
+
+    /* PACKAGES */
+
+    .packages-note{
+      font-size:0.8rem;
+      color:var(--text-muted);
+      margin-top:4px;
+    }
+
+    /* CONTACT */
 
     .contact{
       text-align:center;
-      padding:40px 20px;
-      background:rgba(15,23,42,0.9);
+      padding:38px 20px;
+      background:var(--bg-soft);
       border-radius:var(--radius-lg);
       margin-bottom:60px;
       border:1px solid var(--border);
+      box-shadow:0 18px 60px rgba(15,23,42,0.08);
     }
+
+    .contact p{
+      color:var(--text-muted);
+      font-size:0.92rem;
+      max-width:520px;
+      margin:0 auto 6px;
+    }
+
+    .contact a{
+      color:var(--accent-soft);
+      text-decoration:none;
+    }
+    .contact a:hover{text-decoration:underline;}
 
     /* links sociais */
 
-    .social-links{margin-top:12px;}
+    .social-links{margin-top:14px;}
     .social-links a{
-      color:var(--accent);
+      color:#4b5563;
       text-decoration:none;
       margin:0 8px;
       font-size:0.9rem;
     }
-    .social-links a:hover{text-decoration:underline;}
+    .social-links a:hover{color:#111827;}
 
     footer{
       text-align:center;
-      padding:20px 0 10px;
+      padding:16px 0 18px;
       font-size:0.8rem;
-      color:#64748b;
-      border-top:1px solid var(--border);
+      color:#9ca3af;
+      border-top:1px solid var(--border-soft);
+      max-width:1100px;
+      margin:0 auto;
     }
 
     @media (max-width:860px){
-      .hero-inner{grid-template-columns:1fr;gap:26px;}
-      .hero{padding-top:60px;}
-      .hero h1{font-size:2.1rem;}
+      .hero-inner{grid-template-columns:1fr;gap:30px;}
+      .hero{padding-top:40px;}
+      .hero h1{font-size:2.2rem;}
     }
 
     @media (max-width:600px){
-      header{gap:8px;}
-      nav ul{gap:12px;}
-      .hero h1{font-size:1.8rem;}
-      .hero-gallery img{height:90px;}
+      header{gap:10px;padding-inline:14px;}
+      nav{display:none;} /* mobile super minimal Apple vibe */
+      .hero h1{font-size:1.9rem;}
+      .hero-gallery img{height:82px;}
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="#" class="logo">AP Digital Solutions</a>
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      <span>AP Digital Solutions</span>
+    </a>
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
@@ -279,7 +424,9 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="cta" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    <a class="cta" href="https://wa.me/447700704591" target="_blank" rel="noopener">
+      Chat on WhatsApp
+    </a>
   </header>
 
   <main>
@@ -287,7 +434,10 @@
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <div class="hero-kicker">Jersey • Web & Chatbots</div>
+          <div class="hero-kicker">
+            Jersey • Web & Chatbots
+            <span>AP Studio</span>
+          </div>
           <h1>Your online partner for <span>websites</span> & <span>chatbots</span></h1>
           <p>We design clean, modern and fast digital experiences so your business looks premium online without overcomplicating anything.</p>
 
@@ -298,20 +448,34 @@
             <span class="hero-note">Reply usually within a few hours.</span>
           </div>
 
-          <!-- mini galeria com várias fotos -->
+          <!-- mini galeria com as TUAS fotos -->
           <div class="hero-gallery">
-            <img src="marketing-book.jpg" alt="Marketing book cover">
-            <img src="man-tablet.jpg" alt="Man using a tablet with coffee">
-            <img src="keyboard-key.jpg" alt="Key on keyboard">
-            <img src="social-phone.jpg" alt="Social media icons on smartphone">
+            <img src="marketing-book.jpg" alt="Marketing book cover on a desk">
+            <img src="keyboard-key.jpg" alt="Golden key on computer keyboard, symbolising digital opportunities">
+            <img src="social-phone.jpg" alt="Smartphone with social media icons on screen">
+            <img src="shopping-phone.jpg" alt="Person browsing an online shop on their phone">
           </div>
         </div>
 
-        <div class="hero-image-wrapper">
-          <div class="hero-image-shell">
-            <!-- IMAGEM PRINCIPAL DO TOPO -->
-            <img src="ap-digital-solutions.jpg" alt="AP Digital Solutions banner" class="hero-image-main">
-            <div class="hero-tag">
+        <!-- MEDIA: VÍDEO PRINCIPAL -->
+        <div class="hero-media">
+          <div class="hero-device">
+            <!--
+              Coloca o ficheiro do vídeo na mesma pasta do index.html
+              com o nome: ap-digital-solutions-video.mp4
+              e o banner dourado como: ap-digital-banner.jpg
+            -->
+            <video
+              class="hero-video"
+              src="ap-digital-solutions-video.mp4"
+              poster="ap-digital-banner.jpg"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+
+            <div class="hero-badge">
               <span>Future-ready <strong>websites & chatbots</strong></span>
               <span>Built for Jersey</span>
             </div>
@@ -321,12 +485,15 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="services">
-      <h2>Services</h2>
+    <section id="services" class="section services">
+      <div class="section-header">
+        <h2>Services</h2>
+        <p class="lead">From a simple one-page site to a full digital presence with chatbots and WhatsApp automation.</p>
+      </div>
       <div class="cards">
         <div class="card">
           <h3>Websites & landing pages</h3>
-          <p>Modern, fast and mobile-first sites built for local businesses.</p>
+          <p>Modern, fast and mobile-first sites built for local businesses in Jersey.</p>
           <ul>
             <li>One-page or multi-section layouts</li>
             <li>Services, about, testimonials & contact</li>
@@ -355,9 +522,12 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="how-it-works">
-      <h2>How it works</h2>
-      <div class="steps">
+    <section id="how" class="section how-it-works">
+      <div class="section-header">
+        <h2>How it works</h2>
+        <p class="lead">A simple, clear process — all handled over WhatsApp if you prefer.</p>
+      </div>
+      <div class="steps-grid">
         <div class="step">
           <span>1</span>
           <h3>Chat on WhatsApp</h3>
@@ -382,9 +552,13 @@
     </section>
 
     <!-- PACKAGES -->
-    <section id="packages" class="packages">
-      <h2>Packages (no prices shown)</h2>
-      <div class="cards">
+    <section id="packages" class="section packages">
+      <div class="section-header">
+        <h2>Packages</h2>
+        <p class="lead">Different levels, same mindset: keep it simple, fast and clear.</p>
+      </div>
+      <p class="packages-note">No prices shown online. You’ll receive a fixed quote after a short WhatsApp chat.</p>
+      <div class="cards" style="margin-top:18px;">
         <div class="card">
           <h3>Starter website</h3>
           <p>Perfect for cleaners, trades & small services.</p>
@@ -417,17 +591,20 @@
 
     <!-- CONTACT -->
     <section id="contact" class="contact">
-      <h2>Ready to build something?</h2>
+      <h2 style="margin-bottom:8px;">Ready to build something?</h2>
       <p>Send a message on WhatsApp or reach us on Instagram/Facebook – we’ll reply with next steps and a fixed quote.</p>
-      <p><a class="cta" href="https://wa.me/447700704591" target="_blank">Chat on WhatsApp</a></p>
-      <p style="margin-top:10px;font-size:0.9rem;">Or email us:
-        <a href="mailto:apdigitalsolutions.je@outlook.com" style="color:var(--accent);">
+      <p style="margin-top:12px;">
+        <a class="cta" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </p>
+      <p style="margin-top:12px;font-size:0.9rem;">
+        Or email us:
+        <a href="mailto:apdigitalsolutions.je@outlook.com">
           apdigitalsolutions.je@outlook.com
         </a>
       </p>
 
       <div class="social-links">
-        <span style="font-size:0.9rem;">Follow us:</span>
+        <span style="font-size:0.9rem;color:#6b7280;">Follow us:</span>
         <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/apdigitalsolution.je" target="_blank" rel="noopener">Instagram</a>
       </div>
