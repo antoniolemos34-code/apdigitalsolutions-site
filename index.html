@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AP Digital Solutions – Modern Digital Experiences</title>
 
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
   body {
     margin: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: #000;
     color: #fff;
   }
@@ -39,7 +42,7 @@
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(0,0,0,0.2),
+      rgba(0,0,0,0.25),
       rgba(0,0,0,0.85)
     );
     z-index: -1;
@@ -50,7 +53,7 @@
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-size: clamp(2.6rem, 4vw, 4rem);
     font-weight: 700;
     margin-bottom: 1rem;
   }
@@ -124,6 +127,22 @@
     color: #777;
     margin-top: 80px;
   }
+
+  /* CHATBOT BUTTON */
+  #chatButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #22c55e;
+    color: #000;
+    font-size: 26px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
 </style>
 </head>
 
@@ -136,7 +155,10 @@
 
   <div class="hero-content">
     <h1 class="hero-title">AP Digital Solutions</h1>
-    <p class="hero-sub">Modern digital experiences for local businesses in Jersey. Websites, chatbots and smart automations — built with a premium Apple-style approach.</p>
+    <p class="hero-sub">
+      Modern digital experiences for local businesses in Jersey.<br>
+      Websites, chatbots and smart automations — built with a premium Apple-style approach.
+    </p>
 
     <a class="btn btn-primary" href="https://wa.me/447700704591" target="_blank">Contact on WhatsApp</a>
     <a class="btn btn-ghost" href="#services">Explore Services</a>
@@ -163,6 +185,17 @@
     <p>Clean and elegant branding inspired by the Apple design philosophy.</p>
   </div>
 </section>
+
+<!-- CHATBOT (WhatsApp Launcher) -->
+<button id="chatButton" onclick="openChat()">💬</button>
+
+<script>
+function openChat() {
+  const number = "447700704591";
+  const text = encodeURIComponent("Hi! I’d like more information about your digital services.");
+  window.open("https://wa.me/" + number + "?text=" + text, "_blank");
+}
+</script>
 
 <footer>
   © 2025 AP Digital Solutions • All Rights Reserved
