@@ -1,185 +1,176 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AP Digital Solutions – Experiências Digitais Modernas</title>
-  <meta name="description"
-        content="Websites modernos, marketing digital e soluções de chatbot para pequenos negócios em Jersey." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Digital Solutions – Future-ready Websites & Chatbots in Jersey</title>
+  <meta name="description" content="AP Digital Solutions builds modern websites, chatbots and automations for local businesses in Jersey.">
   <style>
-    /* Paleta de cores inspirada nos sites da Apple */
-    :root {
-      --preto: #0a0a0a;
-      --cinza-escuro: #121212;
-      --cinza-claro: #333333;
-      --dourado: #d4b068;
-      --branco: #f5f5f5;
-      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    body {margin:0;font-family:sans-serif;background:#0d1b2a;color:#f1f5f9;}
+    header {position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;background:#08111f;padding:12px 20px;border-bottom:1px solid #13263c;z-index:100;}
+    header a.logo {font-weight:600;font-size:1.2rem;color:#22c55e;text-decoration:none;}
+    nav ul {display:flex;gap:20px;list-style:none;margin:0;padding:0;}
+    nav a {color:#94a3b8;text-decoration:none;font-size:0.9rem;}
+    nav a:hover {color:#22c55e;}
+    .cta {background:#22c55e;color:#0f172a;padding:8px 16px;border-radius:9999px;text-decoration:none;font-weight:600;}
+    .cta:hover {background:#4ade80;}
+    main {max-width:1024px;margin:auto;padding:20px;}
+    .hero {padding:80px 0;text-align:center;background:linear-gradient( to bottom,#08111f, #0d1b2a);}
+    .hero h1 {font-size:2.4rem;margin-bottom:10px;color:#e2e8f0;}
+    .hero h1 span {color:#22c55e;}
+    .hero p {color:#94a3b8;max-width:600px;margin:0 auto 20px;font-size:1rem;}
+    .services, .how-it-works, .packages {margin:60px 0;}
+    .services .cards, .how-it-works .steps, .packages .cards {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .card {background:#0a1731;padding:20px;border:1px solid #13263c;border-radius:16px;}
+    .card h3 {margin-top:0;color:#e2e8f0;}
+    .card p {color:#94a3b8;font-size:0.9rem;}
+    .card ul {padding-left:20px;color:#94a3b8;font-size:0.9rem;}
+    .card ul li {margin-bottom:4px;}
+    .step {background:#0a1731;padding:20px;border:1px solid #13263c;border-radius:16px;text-align:center;}
+    .step span {display:inline-block;background:#22c55e;color:#0f172a;border-radius:50%;width:32px;height:32px;line-height:32px;font-weight:bold;margin-bottom:10px;}
+    .contact {text-align:center;padding:40px 0;background:#08111f;border-radius:16px;margin-bottom:60px;}
+    footer {text-align:center;padding:20px 0;font-size:0.8rem;color:#64748b;border-top:1px solid #13263c;}
+
+    /* links sociais */
+    .social-links {margin-top:10px;}
+    .social-links a {
+      color:#22c55e;
+      text-decoration:none;
+      margin:0 8px;
+      font-size:0.9rem;
     }
-    body {
-      margin: 0;
-      font-family: var(--font-main);
-      background-color: var(--preto);
-      color: var(--branco);
-      line-height: 1.6;
+    .social-links a:hover {
+      text-decoration:underline;
     }
-    header, footer {
-      background-color: var(--cinza-escuro);
-      padding: 1rem 2rem;
-    }
-    header .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--dourado);
-    }
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-    }
-    /* Hero video */
-    .hero {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%; /* 16:9 ratio */
-      overflow: hidden;
-      margin-bottom: 3rem;
-    }
-    .hero video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0,0,0,0.45);
-      text-align: center;
-      color: var(--branco);
-      padding: 2rem;
-    }
-    .hero-overlay h1 {
-      margin: 0 0 .5rem;
-      font-size: 2rem;
-      color: var(--dourado);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    .hero-overlay p {
-      margin: 0 0 1rem;
-      max-width: 600px;
-    }
-    .btn-primary {
-      background: var(--dourado);
-      color: var(--preto);
-      padding: 0.8rem 1.6rem;
-      border: none;
-      border-radius: 30px;
-      text-transform: uppercase;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .section {
-      margin-bottom: 3rem;
-    }
-    .section h2 {
-      color: var(--dourado);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .card {
-      background: var(--cinza-escuro);
-      border-radius: 12px;
-      flex: 1 1 calc(50% - 1.5rem);
-      padding: 1.5rem;
-      min-width: 250px;
-      position: relative;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-      height: 180px;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-    .card h3 {
-      margin-top: 0;
-      color: var(--dourado);
-    }
-    @media (max-width: 768px) {
-      .cards {
-        flex-direction: column;
-      }
-    }
+
+    @media (max-width:600px){.hero h1{font-size:1.8rem;}}
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">AP Digital Solutions</div>
+    <a href="#" class="logo">AP Digital Solutions</a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="https://wa.me/447700704591" target="_blank" rel="noopener">Chat on WhatsApp</a>
   </header>
-
   <main>
-    <!-- Hero com vídeo -->
     <section class="hero">
-      <video autoplay muted loop playsinline>
-        <source src="Apresentação - Digital Solutions_20251119_160333_0000.mp4" type="video/mp4" />
-        O seu navegador não suporta vídeo HTML5.
-      </video>
-      <div class="hero-overlay">
-        <h1>AP Digital Solutions</h1>
-        <p>Transformamos a sua presença online com websites rápidos, chatbots inteligentes e estratégias de marketing digital.</p>
-        <button class="btn-primary" onclick="window.location='#servicos'">Ver Serviços</button>
-      </div>
+      <h1>Your online partner for <span>websites</span> & <span>chatbots</span></h1>
+      <p>We build simple, modern and fast digital experiences so your business looks professional online without overcomplicating things.</p>
+      <a class="cta" href="https://wa.me/447700704591" target="_blank">Start a project on WhatsApp</a>
     </section>
-
-    <!-- Secção de serviços -->
-    <section id="servicos" class="section">
-      <h2>O que fazemos</h2>
+    <section id="services" class="services">
+      <h2>Services</h2>
       <div class="cards">
         <div class="card">
-          <img src="seo-whitehat.jpg" alt="SEO White Hat">
-          <h3>SEO & Marketing</h3>
-          <p>Melhoramos a visibilidade do seu negócio através de técnicas de SEO éticas e campanhas digitais que atraem tráfego qualificado.</p>
+          <h3>Websites & landing pages</h3>
+          <p>Modern, fast and mobile-first sites built for local businesses.</p>
+          <ul>
+            <li>One-page or multi-section layouts</li>
+            <li>Services, about, testimonials & contact</li>
+            <li>Support for custom domain & email</li>
+          </ul>
         </div>
         <div class="card">
-          <img src="mobile-shopping.jpg" alt="E-commerce">
-          <h3>E-commerce & Lojas Online</h3>
-          <p>Criamos lojas virtuais intuitivas e focadas na conversão, para que os clientes comprem com facilidade a partir de qualquer dispositivo.</p>
+          <h3>Chatbots & automations</h3>
+          <p>Smart chatbots that answer common questions and capture leads 24/7.</p>
+          <ul>
+            <li>Website chat widget</li>
+            <li>WhatsApp chatbot flows</li>
+            <li>Simple automations for new contacts</li>
+          </ul>
         </div>
         <div class="card">
-          <img src="laptop-cart.jpg" alt="Design Responsivo">
-          <h3>Design Responsivo</h3>
-          <p>Desenvolvemos websites modernos e responsivos, garantindo carregamento rápido e experiência de navegação optimizada em todas as plataformas.</p>
-        </div>
-        <div class="card">
-          <img src="social-media.jpg" alt="Redes Sociais">
-          <h3>Redes Sociais & Automatização</h3>
-          <p>Integramos chatbots com WhatsApp, Facebook e Instagram, permitindo um atendimento rápido e eficiente aos seus clientes.</p>
+          <h3>Digital presence setup</h3>
+          <p>Get properly listed and reachable where customers search online.</p>
+          <ul>
+            <li>Google Business & Maps</li>
+            <li>Facebook & Instagram pages</li>
+            <li>Basic SEO & on-page optimisation</li>
+          </ul>
         </div>
       </div>
     </section>
+    <section id="how" class="how-it-works">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h3>Chat on WhatsApp</h3>
+          <p>Send a few details about your business and what you'd like to achieve online.</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <h3>Proposal & pricing</h3>
+          <p>You’ll receive a clear proposal with what’s included and a fixed quote.</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <h3>Build & refine</h3>
+          <p>We build your site/chatbot, share a preview link and iterate with your feedback.</p>
+        </div>
+        <div class="step">
+          <span>4</span>
+          <h3>Launch & support</h3>
+          <p>We help connect your domain, set up email and stay available for small updates.</p>
+        </div>
+      </div>
+    </section>
+    <section id="packages" class="packages">
+      <h2>Packages (no prices shown)</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Starter website</h3>
+          <p>Perfect for cleaners, trades & small services.</p>
+          <ul>
+            <li>1-page or simple multi-section site</li>
+            <li>Mobile-first design</li>
+            <li>WhatsApp contact button</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Website & chatbot</h3>
+          <p>Ideal if you receive lots of messages or repeat questions.</p>
+          <ul>
+            <li>Starter website included</li>
+            <li>Website & WhatsApp chatbot</li>
+            <li>Simple automations for leads</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Full digital presence</h3>
+          <p>Add ons for any project.</p>
+          <ul>
+            <li>Google Business & Maps</li>
+            <li>Facebook/Instagram pages</li>
+            <li>Basic SEO improvements</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <h2>Ready to build something?</h2>
+      <p>Send a message on WhatsApp or reach us on Instagram/Facebook – we’ll reply with next steps and a fixed quote.</p>
+      <p><a class="cta" href="https://wa.me/447700704591" target="_blank">Chat on WhatsApp</a></p>
+      <p style="margin-top:10px;font-size:0.9rem;">Or email us: <a href="mailto:apdigitalsolutions.je@outlook.com" style="color:#22c55e;">apdigitalsolutions.je@outlook.com</a></p>
 
-    <!-- Sobre -->
-    <section class="section">
-      <h2>Sobre nós</h2>
-      <p>Somos uma empresa sediada em Jersey e apaixonada por inovação digital. A nossa missão é ajudar pequenos negócios a terem uma presença online de destaque, combinando design minimalista com tecnologia de ponta.</p>
+      <!-- NOVO: links Facebook e Instagram -->
+      <div class="social-links">
+        <span style="font-size:0.9rem;">Follow us:</span>
+        <a href="https://www.facebook.com/apdigitalsolutions.je" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/apdigitalsolution.je" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </section>
   </main>
-
   <footer>
-    <p>&copy; 2025 AP Digital Solutions • Todos os direitos reservados.</p>
+    <p>© AP Digital Solutions – Jersey, Channel Islands</p>
+    <p>Future-ready websites & chatbots for local business.</p>
   </footer>
 </body>
 </html>
