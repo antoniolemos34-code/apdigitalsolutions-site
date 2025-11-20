@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AP Digital Solutions – The Solutions to Be Online</title>
 
-  <meta name="description" content="AP Digital Solutions helps Jersey businesses go online with premium black & gold websites, smart chatbots and social link hubs – all connected to WhatsApp and built around your brand.">
+  <meta name="description" content="AP Digital Solutions is a small digital company in Jersey that helps local businesses get a clear and modern online presence with websites, chatbots and social link pages connected to WhatsApp.">
   <meta name="author" content="AP Digital Solutions">
   <link rel="canonical" href="https://apdigitalsolutions.digital/">
 
@@ -52,6 +52,12 @@
     img, video {
       max-width: 100%;
       display: block;
+    }
+
+    /* ANIMAÇÃO SUAVE */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     /* HEADER */
@@ -152,6 +158,7 @@
       border: 1px solid var(--gold-soft);
       position: relative;
       overflow: hidden;
+      animation: fadeUp 0.8s ease-out both;
     }
 
     .hero-media video {
@@ -190,6 +197,10 @@
       border: 1px solid rgba(148, 118, 52, 0.8);
     }
 
+    .hero-copy {
+      animation: fadeUp 0.9s ease-out 0.05s both;
+    }
+
     .hero-copy-eyebrow {
       font-size: 0.8rem;
       font-weight: 600;
@@ -200,8 +211,8 @@
     }
 
     .hero-title {
-      font-size: clamp(2rem, 4vw, 2.7rem);
-      line-height: 1.15;
+      font-size: clamp(2.2rem, 4.2vw, 2.9rem);
+      line-height: 1.12;
       font-weight: 700;
       letter-spacing: -0.03em;
       margin-bottom: 12px;
@@ -216,7 +227,7 @@
     .hero-subtitle {
       font-size: 0.98rem;
       color: var(--text-muted);
-      max-width: 440px;
+      max-width: 460px;
       margin-bottom: 20px;
     }
 
@@ -596,7 +607,6 @@
   <header>
     <div class="nav">
       <a href="#top" class="logo">
-        <!-- Usa o ficheiro Logo.png do teu repo -->
         <img src="Logo.png" alt="AP Digital Solutions logo" class="logo-img" />
         <div>
           <div class="logo-text-main" id="logo-main">AP Digital Solutions</div>
@@ -608,6 +618,7 @@
         <a href="#why-online" id="nav-why">Why online?</a>
         <a href="#services" id="nav-services">Services</a>
         <a href="#story" id="nav-story">Brand story</a>
+        <a href="#work" id="nav-work">Work</a>
         <a href="#contact" id="nav-contact">Contact</a>
         <button type="button" class="lang-toggle" id="lang-toggle">PT</button>
       </nav>
@@ -636,31 +647,31 @@
           </video>
 
           <div class="hero-media-tagline" id="hero-video-tagline">
-            Black & gold. Clean. Focused on your brand – not on templates.
+            Clean, focused design built around your brand – not generic templates.
           </div>
         </div>
 
         <!-- TEXTO À DIREITA -->
-        <div>
+        <div class="hero-copy">
           <div class="hero-copy-eyebrow" id="hero-eyebrow">
             Jersey · Small businesses · Digital solutions
           </div>
           <h1 class="hero-title" id="hero-title">
-            Your brand deserves a <span>black & gold</span> online presence that feels premium, not generic.
+            Modern websites and simple automations for real businesses in <span>Jersey</span>.
           </h1>
           <p class="hero-subtitle" id="hero-subtitle">
-            AP Digital Solutions builds modern, minimalist websites and chatbots for Jersey businesses – using your logo, your colours and your story, not someone else’s.
+            AP Digital Solutions helps small local businesses look professional online with clear websites, chatbots and link pages connected to WhatsApp.
           </p>
 
           <div class="hero-cta-row">
             <a
               class="btn-primary"
               id="hero-cta-main"
-              href="https://wa.me/447700704591?text=Hi%2C%20I%20came%20from%20apdigitalsolutions.digital%20and%20want%20to%20talk%20about%20my%20brand%20online."
+              href="https://wa.me/447700704591?text=Hi%2C%20I%20came%20from%20apdigitalsolutions.digital%20and%20would%20like%20to%20talk%20about%20my%20online%20presence."
               target="_blank"
               rel="noopener noreferrer"
             >
-              ⚡ Start a WhatsApp conversation
+              ⚡ Talk to AP Digital Solutions
             </a>
 
             <a href="#why-online" class="btn-secondary" id="hero-cta-secondary">
@@ -669,7 +680,7 @@
           </div>
 
           <p class="hero-note" id="hero-note">
-            No Apple logos, no copy-paste themes. Just AP Digital Solutions and a clear, strong identity for your business.
+            No big agency attitude. Just a small digital company in Jersey, building simple and professional solutions for other small businesses.
           </p>
         </div>
       </section>
@@ -684,16 +695,16 @@
             If people can’t find you online, they find someone else.
           </h2>
           <p class="section-subtitle" id="why-subtitle">
-            Many Jersey businesses still don’t have a serious online presence. That means there is space for you – if your brand looks and feels trustworthy when people click.
+            Most customers search online before they contact a business. If your online presence is weak, unclear or doesn’t exist, they will choose another option that feels more professional and easier to trust.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="card">
             <div class="tag" id="why1-tag">01 · Trust</div>
-            <h3 id="why1-title">Look professional in seconds</h3>
+            <h3 id="why1-title">Look serious in seconds</h3>
             <p id="why1-text">
-              A black & gold website with your logo and message shows that you care about quality. It feels like a real brand, not a side project.
+              A clear website with your services, photos and story shows that your business is real and organised. It gives clients confidence to contact you.
             </p>
           </article>
 
@@ -701,15 +712,15 @@
             <div class="tag" id="why2-tag">02 · Speed</div>
             <h3 id="why2-title">Answer even when you’re busy</h3>
             <p id="why2-text">
-              Simple chatbots and clear contact buttons help clients reach you any time – while you work, rest or spend time with family.
+              Simple chatbots and contact buttons help clients reach you any time – while you are working, resting or spending time with family.
             </p>
           </article>
 
           <article class="card">
-            <div class="tag" id="why3-tag">03 · Simplicity</div>
-            <h3 id="why3-title">Everything leads back to you</h3>
+            <div class="tag" id="why3-tag">03 · Clarity</div>
+            <h3 id="why3-title">One place with everything</h3>
             <p id="why3-text">
-              Instagram, website, WhatsApp – everything points in one direction: real conversations with real clients, not likes without results.
+              Website, Instagram, Facebook and WhatsApp can all point to one clear page, so people always know where to click next.
             </p>
           </article>
         </div>
@@ -722,32 +733,32 @@
         <div class="section-header">
           <div class="section-eyebrow" id="services-eyebrow">Services</div>
           <h2 class="section-title" id="services-title">
-            What AP Digital Solutions creates for your brand
+            What AP Digital Solutions can build for your brand
           </h2>
           <p class="section-subtitle" id="services-subtitle">
-            Black & gold design, clear structure and everything connected to your WhatsApp and social media.
+            Modern, simple solutions made for small businesses that want to look professional online without complicated systems.
           </p>
         </div>
 
         <div class="grid-3">
           <article class="card">
-            <h3 id="svc1-title">One-page websites in black & gold</h3>
+            <h3 id="svc1-title">Modern small business websites</h3>
             <p id="svc1-text">
-              Minimal websites focused on your services, photos and story. Perfect for small businesses who want to look premium without feeling complicated.
+              One-page or small websites focused on your services, images and story. Fast to load, easy to navigate and adapted to your brand.
             </p>
           </article>
 
           <article class="card">
-            <h3 id="svc2-title">Chatbots that talk like your brand</h3>
+            <h3 id="svc2-title">Chatbots connected to WhatsApp</h3>
             <p id="svc2-text">
-              Simple bots that answer common questions and collect leads, then send everything to your WhatsApp or email – without showing the number on the page.
+              Simple bots that answer common questions, collect basic information and send everything directly to your WhatsApp or email – without showing your number on the page.
             </p>
           </article>
 
           <article class="card">
             <h3 id="svc3-title">Social link & promo pages</h3>
             <p id="svc3-text">
-              A clean black & gold page that becomes your “link in bio”: Instagram, Facebook, website, WhatsApp and any promotion you want to highlight.
+              A clean page that becomes your “link in bio”: Instagram, Facebook, website, WhatsApp and any promotion you want to highlight, all in one place.
             </p>
           </article>
         </div>
@@ -761,10 +772,11 @@
           <div>
             <div class="section-eyebrow" id="story-eyebrow">Brand story</div>
             <h2 class="section-title" id="story-title">
-              AP Digital Solutions was built between real shifts and real life in Jersey.
+              A small digital company that understands small businesses.
             </h2>
             <p class="section-subtitle" id="story-subtitle">
-              This project started from someone who works in healthcare in Jersey and, in free time, builds digital solutions for local companies. That’s why we understand small businesses that don’t live all day behind a computer.
+              AP Digital Solutions is a small, independent digital company based in Jersey.  
+              Because we are small, we understand the reality of local businesses: limited time, tight budgets and the need for simple solutions that still look professional.
             </p>
 
             <div class="process-steps">
@@ -773,7 +785,7 @@
                 <div>
                   <div class="step-title" id="step1-title">Quick WhatsApp chat</div>
                   <div id="step1-text">
-                    You send a short message with your business type, social links and what you would like to change online.
+                    You send a short message with your business type, social links and what you would like to improve online.
                   </div>
                 </div>
               </div>
@@ -783,7 +795,7 @@
                 <div>
                   <div class="step-title" id="step2-title">Simple plan</div>
                   <div id="step2-text">
-                    Together we choose the first step: a one-page website, a chatbot, a link page – or a small combination that fits your time and budget.
+                    Together, we choose the first step that makes sense: a website, a chatbot, a link page or a small combination that fits your reality.
                   </div>
                 </div>
               </div>
@@ -791,9 +803,9 @@
               <div class="step">
                 <div class="step-number">3</div>
                 <div>
-                  <div class="step-title" id="step3-title">Design & build in black & gold</div>
+                  <div class="step-title" id="step3-title">Design & build around your brand</div>
                   <div id="step3-text">
-                    We use your logo, photos and text to create a dark, elegant layout. You approve everything before it goes live.
+                    We use your logo, colours, photos and text to create a layout that feels like your business, not like a random template from the internet.
                   </div>
                 </div>
               </div>
@@ -803,7 +815,7 @@
                 <div>
                   <div class="step-title" id="step4-title">Launch & refine</div>
                   <div id="step4-text">
-                    Your domain and social links point to the new page. After that, we can adjust based on how clients interact with it.
+                    Your domain and social links point to the new page. After launch, we refine based on real questions and feedback from your clients.
                   </div>
                 </div>
               </div>
@@ -811,15 +823,39 @@
           </div>
 
           <div class="card">
-            <div class="tag" id="why-card-tag">Why brands choose AP</div>
-            <h3 id="why-card-title">Why local brands trust AP Digital Solutions</h3>
+            <div class="tag" id="why-card-tag">Why brands choose us</div>
+            <h3 id="why-card-title">Why local businesses trust AP Digital Solutions</h3>
             <ul class="why-list" id="why-card-list">
-              <li>Communication without heavy technical language.</li>
-              <li>Black & gold design that matches your logo and feels premium.</li>
-              <li>Focus on Jersey companies: cleaning, carpentry, therapies, cafés and more.</li>
-              <li>Respect for your time – everything organised around your routine.</li>
+              <li>We communicate clearly, without heavy technical language.</li>
+              <li>We adapt the design to your brand, instead of forcing a generic style.</li>
+              <li>We work with Jersey businesses: cleaning, carpentry, therapies, cafés and more.</li>
+              <li>We are a small business too, so we understand your reality and time limits.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / CASE STUDY -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow" id="work-eyebrow">Work</div>
+          <h2 class="section-title" id="work-title">
+            Real projects built around real people.
+          </h2>
+          <p class="section-subtitle" id="work-subtitle">
+            Every project starts with listening. Here is an example of how AP Digital Solutions turned an idea into a calm, modern online presence.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="tag" id="case1-tag">Ajudatotal.je · Case study</div>
+          <h3 id="case1-title">Ajudatotal.je – mental health support with a clear and gentle page</h3>
+          <p id="case1-text">
+            Ajudatotal.je is a mental health project that needed a simple, trustworthy website to explain structured sessions for anxiety, stress and self-esteem without feeling heavy or clinical.  
+            AP Digital Solutions created a modern layout, soft language and clear calls to action so people in Jersey can quickly understand the service and feel safe to reach out for support.
+          </p>
         </div>
       </div>
     </section>
@@ -830,7 +866,7 @@
         <div class="section-header">
           <div class="section-eyebrow" id="social-eyebrow">Social links</div>
           <h2 class="section-title" id="social-title">
-            One black & gold page behind every link in bio.
+            One simple page behind every “link in bio”.
           </h2>
           <p class="section-subtitle" id="social-subtitle">
             AP Digital Solutions can turn your Instagram and other profiles into a single, consistent journey that always leads people back to you.
@@ -840,7 +876,7 @@
         <div class="card">
           <p id="social-body">
             When someone taps the link in your bio, they should immediately understand who you are, what you offer and where to click next.
-            We connect your social content, your website and your WhatsApp into a small, focused page.
+            We connect your social content, website and WhatsApp into a small, focused page that works on any phone.
           </p>
 
           <div class="social-strip">
@@ -865,10 +901,10 @@
         <div class="section-header">
           <div class="section-eyebrow" id="contact-eyebrow">Contact</div>
           <h2 class="section-title" id="contact-title">
-            Ready to upgrade how your brand looks online?
+            Ready to improve how your business appears online?
           </h2>
           <p class="section-subtitle" id="contact-subtitle">
-            No pressure, no big sales pitch. Just a short message to see what makes sense for you now.
+            No pressure and no complicated sales talk. Just a short conversation to see what makes sense for your business right now.
           </p>
         </div>
 
@@ -883,7 +919,7 @@
               <a
                 class="btn-primary"
                 id="contact-cta"
-                href="https://wa.me/447700704591?text=Hi%2C%20I%20would%20like%20to%20talk%20about%20a%20black%20%26%20gold%20website%20for%20my%20business."
+                href="https://wa.me/447700704591?text=Hi%2C%20I%20would%20like%20to%20talk%20about%20a%20website%20or%20digital%20solution%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -900,9 +936,9 @@
             <div class="tag" id="contact-tag">What to say?</div>
             <h3 id="contact-h3">Easy first message ideas</h3>
             <ul class="why-list" id="contact-list">
-              <li>“I have a cleaning company and want a black & gold page.”</li>
-              <li>“I’m a carpenter and would like to show my work in a modern way.”</li>
-              <li>“I want a simple chatbot connected to WhatsApp.”</li>
+              <li>“I have a small business and need a simple website.”</li>
+              <li>“I want a clearer online presence for my services.”</li>
+              <li>“I’m interested in a basic chatbot connected to WhatsApp.”</li>
               <li>“I never had a website – where should I start?”</li>
             </ul>
           </div>
@@ -915,7 +951,7 @@
   <div class="whatsapp-float">
     <a
       class="whatsapp-button"
-      href="https://wa.me/447700704591?text=Hi%2C%20I%20came%20from%20your%20black%20%26%20gold%20website."
+      href="https://wa.me/447700704591?text=Hi%2C%20I%20came%20from%20your%20website%20and%20would%20like%20to%20talk%20about%20my%20business%20online."
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -927,13 +963,13 @@
   <!-- CHATBOT DEMO -->
   <div class="chatbox" aria-live="polite">
     <div class="chatbox-header">
-      <span id="chat-header">AP Brand Assistant</span>
+      <span id="chat-header">AP Digital Assistant</span>
       <span class="badge" id="chat-badge">Demo</span>
     </div>
     <div id="chat-messages" class="chatbox-messages">
       <div class="msg bot">
         <div class="bubble" id="chat-welcome">
-          Hi 👋 I’m the AP assistant. Ask me about black & gold websites, chatbots or social link pages.
+          Hi 👋 I’m the AP assistant. Ask me about websites, chatbots or link pages for small businesses.
         </div>
       </div>
     </div>
@@ -961,6 +997,7 @@
       'nav-why': { en: 'Why online?', pt: 'Porquê online?' },
       'nav-services': { en: 'Services', pt: 'Serviços' },
       'nav-story': { en: 'Brand story', pt: 'História da marca' },
+      'nav-work': { en: 'Work', pt: 'Trabalho' },
       'nav-contact': { en: 'Contact', pt: 'Contacto' },
 
       'hero-video-badge': {
@@ -968,32 +1005,32 @@
         pt: 'AP Digital Solutions · Vídeo da marca'
       },
       'hero-video-tagline': {
-        en: 'Black & gold. Clean. Focused on your brand – not on templates.',
-        pt: 'Preto e dourado. Limpo. Focado na tua marca – não em templates.'
+        en: 'Clean, focused design built around your brand – not generic templates.',
+        pt: 'Design limpo e focado, construído à volta da tua marca – não de templates genéricos.'
       },
       'hero-eyebrow': {
         en: 'Jersey · Small businesses · Digital solutions',
         pt: 'Jersey · Pequenos negócios · Soluções digitais'
       },
       'hero-title': {
-        en: 'Your brand deserves a black & gold online presence that feels premium, not generic.',
-        pt: 'A tua marca merece uma presença online em preto e dourado com ar premium, não genérico.'
+        en: 'Modern websites and simple automations for real businesses in Jersey.',
+        pt: 'Websites modernos e automações simples para negócios reais em Jersey.'
       },
       'hero-subtitle': {
-        en: 'AP Digital Solutions builds modern, minimalist websites and chatbots for Jersey businesses – using your logo, your colours and your story, not someone else’s.',
-        pt: 'A AP Digital Solutions cria websites modernos e chatbots minimalistas para negócios em Jersey – usando o teu logo, as tuas cores e a tua história, não as de outra empresa.'
+        en: 'AP Digital Solutions helps small local businesses look professional online with clear websites, chatbots and link pages connected to WhatsApp.',
+        pt: 'A AP Digital Solutions ajuda pequenos negócios locais a parecer profissionais online com websites claros, chatbots e páginas de links ligadas ao WhatsApp.'
       },
       'hero-cta-main': {
-        en: '⚡ Start a WhatsApp conversation',
-        pt: '⚡ Começar conversa no WhatsApp'
+        en: '⚡ Talk to AP Digital Solutions',
+        pt: '⚡ Falar com a AP Digital Solutions'
       },
       'hero-cta-secondary': {
         en: 'Why being online matters',
         pt: 'Por que é importante estar online'
       },
       'hero-note': {
-        en: 'No Apple logos, no copy-paste themes. Just AP Digital Solutions and a clear, strong identity for your business.',
-        pt: 'Sem logótipos da Apple, sem temas copiados. Só a AP Digital Solutions e uma identidade forte e clara para o teu negócio.'
+        en: 'No big agency attitude. Just a small digital company in Jersey, building simple and professional solutions for other small businesses.',
+        pt: 'Sem atitude de grande agência. Apenas uma pequena empresa digital em Jersey, a criar soluções simples e profissionais para outros pequenos negócios.'
       },
 
       'why-eyebrow': { en: 'Why online', pt: 'Porquê online' },
@@ -1002,113 +1039,135 @@
         pt: 'Se as pessoas não te encontram online, encontram outra pessoa.'
       },
       'why-subtitle': {
-        en: 'Many Jersey businesses still don’t have a serious online presence. That means there is space for you – if your brand looks and feels trustworthy when people click.',
-        pt: 'Muitos negócios em Jersey ainda não têm uma presença online séria. Isso significa que há espaço para ti – se a tua marca parecer confiável quando as pessoas clicam.'
+        en: 'Most customers search online before they contact a business. If your online presence is weak, unclear or doesn’t exist, they will choose another option that feels more professional and easier to trust.',
+        pt: 'A maioria dos clientes pesquisa online antes de contactar uma empresa. Se a tua presença online é fraca, confusa ou não existe, eles escolhem outra opção que pareça mais profissional e fácil de confiar.'
       },
       'why1-tag': { en: '01 · Trust', pt: '01 · Confiança' },
-      'why1-title': { en: 'Look professional in seconds', pt: 'Parecer profissional em segundos' },
+      'why1-title': { en: 'Look serious in seconds', pt: 'Parecer profissional em segundos' },
       'why1-text': {
-        en: 'A black & gold website with your logo and message shows that you care about quality. It feels like a real brand, not a side project.',
-        pt: 'Um website em preto e dourado com o teu logo e mensagem mostra que te preocupas com qualidade. Parece uma marca real, não um projeto de passagem.'
+        en: 'A clear website with your services, photos and story shows that your business is real and organised. It gives clients confidence to contact you.',
+        pt: 'Um website claro com os teus serviços, fotos e história mostra que o teu negócio é real e organizado. Dá confiança aos clientes para te contactarem.'
       },
       'why2-tag': { en: '02 · Speed', pt: '02 · Velocidade' },
       'why2-title': { en: 'Answer even when you’re busy', pt: 'Responder mesmo quando estás ocupado' },
       'why2-text': {
-        en: 'Simple chatbots and clear contact buttons help clients reach you any time – while you work, rest or spend time with family.',
+        en: 'Simple chatbots and contact buttons help clients reach you any time – while you are working, resting or spending time with family.',
         pt: 'Chatbots simples e botões de contacto claros ajudam os clientes a chegar até ti a qualquer hora – enquanto trabalhas, descansas ou estás com a família.'
       },
-      'why3-tag': { en: '03 · Simplicity', pt: '03 · Simplicidade' },
-      'why3-title': { en: 'Everything leads back to you', pt: 'Tudo leva de volta a ti' },
+      'why3-tag': { en: '03 · Clarity', pt: '03 · Clareza' },
+      'why3-title': { en: 'One place with everything', pt: 'Um só sítio com tudo' },
       'why3-text': {
-        en: 'Instagram, website, WhatsApp – everything points in one direction: real conversations with real clients, not likes without results.',
-        pt: 'Instagram, website, WhatsApp – tudo aponta para o mesmo sítio: conversas reais com clientes reais, não só “likes” sem resultado.'
+        en: 'Website, Instagram, Facebook and WhatsApp can all point to one clear page, so people always know where to click next.',
+        pt: 'Website, Instagram, Facebook e WhatsApp podem apontar todos para uma página clara, para que as pessoas saibam sempre onde clicar a seguir.'
       },
 
       'services-eyebrow': { en: 'Services', pt: 'Serviços' },
       'services-title': {
-        en: 'What AP Digital Solutions creates for your brand',
-        pt: 'O que a AP Digital Solutions cria para a tua marca'
+        en: 'What AP Digital Solutions can build for your brand',
+        pt: 'O que a AP Digital Solutions pode construir para a tua marca'
       },
       'services-subtitle': {
-        en: 'Black & gold design, clear structure and everything connected to your WhatsApp and social media.',
-        pt: 'Design em preto e dourado, estrutura clara e tudo ligado ao teu WhatsApp e redes sociais.'
+        en: 'Modern, simple solutions made for small businesses that want to look professional online without complicated systems.',
+        pt: 'Soluções modernas e simples, feitas para pequenos negócios que querem parecer profissionais online sem sistemas complicados.'
       },
       'svc1-title': {
-        en: 'One-page websites in black & gold',
-        pt: 'Websites de uma página em preto e dourado'
+        en: 'Modern small business websites',
+        pt: 'Websites modernos para pequenos negócios'
       },
       'svc1-text': {
-        en: 'Minimal websites focused on your services, photos and story. Perfect for small businesses who want to look premium without feeling complicated.',
-        pt: 'Websites minimalistas focados nos teus serviços, fotos e história. Perfeitos para pequenos negócios que querem ter ar premium sem complicações.'
+        en: 'One-page or small websites focused on your services, images and story. Fast to load, easy to navigate and adapted to your brand.',
+        pt: 'Websites de uma ou poucas páginas focados nos teus serviços, imagens e história. Rápidos a carregar, fáceis de navegar e adaptados à tua marca.'
       },
       'svc2-title': {
-        en: 'Chatbots that talk like your brand',
-        pt: 'Chatbots que falam como a tua marca'
+        en: 'Chatbots connected to WhatsApp',
+        pt: 'Chatbots ligados ao WhatsApp'
       },
       'svc2-text': {
-        en: 'Simple bots that answer common questions and collect leads, then send everything to your WhatsApp or email – without showing the number on the page.',
-        pt: 'Bots simples que respondem às perguntas mais comuns e recolhem contactos, enviando tudo para o teu WhatsApp ou email – sem mostrar o número na página.'
+        en: 'Simple bots that answer common questions, collect basic information and send everything directly to your WhatsApp or email – without showing your number on the page.',
+        pt: 'Bots simples que respondem às perguntas mais comuns, recolhem informação básica e enviam tudo diretamente para o teu WhatsApp ou email – sem mostrar o teu número na página.'
       },
       'svc3-title': {
         en: 'Social link & promo pages',
         pt: 'Páginas de links e promoções'
       },
       'svc3-text': {
-        en: 'A clean black & gold page that becomes your “link in bio”: Instagram, Facebook, website, WhatsApp and any promotion you want to highlight.',
-        pt: 'Uma página limpa em preto e dourado que se torna o teu “link na bio”: Instagram, Facebook, website, WhatsApp e qualquer promoção que queiras destacar.'
+        en: 'A clean page that becomes your “link in bio”: Instagram, Facebook, website, WhatsApp and any promotion you want to highlight, all in one place.',
+        pt: 'Uma página limpa que se torna o teu “link na bio”: Instagram, Facebook, website, WhatsApp e qualquer promoção que queiras destacar, tudo no mesmo sítio.'
       },
 
       'story-eyebrow': { en: 'Brand story', pt: 'História da marca' },
       'story-title': {
-        en: 'AP Digital Solutions was built between real shifts and real life in Jersey.',
-        pt: 'A AP Digital Solutions foi construída entre turnos reais e a vida real em Jersey.'
+        en: 'A small digital company that understands small businesses.',
+        pt: 'Uma pequena empresa digital que compreende pequenos negócios.'
       },
       'story-subtitle': {
-        en: 'This project started from someone who works in healthcare in Jersey and, in free time, builds digital solutions for local companies. That’s why we understand small businesses that don’t live all day behind a computer.',
-        pt: 'Este projeto começou com alguém que trabalha na área da saúde em Jersey e, no tempo livre, constrói soluções digitais para empresas locais. Por isso percebemos bem pequenos negócios que não vivem o dia todo atrás de um computador.'
+        en: 'AP Digital Solutions is a small, independent digital company based in Jersey.  Because we are small, we understand the reality of local businesses: limited time, tight budgets and the need for simple solutions that still look professional.',
+        pt: 'A AP Digital Solutions é uma pequena empresa digital independente com base em Jersey. Como também somos pequenos, percebemos a realidade dos negócios locais: pouco tempo, orçamentos apertados e a necessidade de soluções simples que continuem a parecer profissionais.'
       },
       'step1-title': { en: 'Quick WhatsApp chat', pt: 'Conversa rápida no WhatsApp' },
       'step1-text': {
-        en: 'You send a short message with your business type, social links and what you would like to change online.',
-        pt: 'Envias uma mensagem curta com o tipo de negócio, links das redes sociais e o que gostavas de mudar online.'
+        en: 'You send a short message with your business type, social links and what you would like to improve online.',
+        pt: 'Envias uma mensagem curta com o tipo de negócio, links das redes sociais e o que gostavas de melhorar online.'
       },
       'step2-title': { en: 'Simple plan', pt: 'Plano simples' },
       'step2-text': {
-        en: 'Together we choose the first step: a one-page website, a chatbot, a link page – or a small combination that fits your time and budget.',
-        pt: 'Juntos escolhemos o primeiro passo: um website de uma página, um chatbot, uma página de links – ou uma pequena combinação que caiba no teu tempo e bolso.'
+        en: 'Together, we choose the first step that makes sense: a website, a chatbot, a link page or a small combination that fits your reality.',
+        pt: 'Juntos escolhemos o primeiro passo que faça sentido: um website, um chatbot, uma página de links ou uma pequena combinação que encaixe na tua realidade.'
       },
-      'step3-title': { en: 'Design & build in black & gold', pt: 'Design & construção em preto e dourado' },
+      'step3-title': { en: 'Design & build around your brand', pt: 'Design & construção à volta da tua marca' },
       'step3-text': {
-        en: 'We use your logo, photos and text to create a dark, elegant layout. You approve everything before it goes live.',
-        pt: 'Usamos o teu logo, fotos e texto para criar um layout escuro e elegante. Aprovas tudo antes de ficar online.'
+        en: 'We use your logo, colours, photos and text to create a layout that feels like your business, not like a random template from the internet.',
+        pt: 'Usamos o teu logo, cores, fotos e texto para criar um layout que soe ao teu negócio, e não a um template qualquer da internet.'
       },
       'step4-title': { en: 'Launch & refine', pt: 'Lançamento & ajustes' },
       'step4-text': {
-        en: 'Your domain and social links point to the new page. After that, we can adjust based on how clients interact with it.',
-        pt: 'O teu domínio e links das redes passam a apontar para a nova página. Depois disso, ajustamos consoante a forma como os clientes a utilizam.'
+        en: 'Your domain and social links point to the new page. After launch, we refine based on real questions and feedback from your clients.',
+        pt: 'O teu domínio e links das redes passam a apontar para a nova página. Depois do lançamento, ajustamos com base em perguntas reais e feedback dos teus clientes.'
       },
-      'why-card-tag': { en: 'Why brands choose AP', pt: 'Porque escolhem a AP' },
+      'why-card-tag': { en: 'Why brands choose us', pt: 'Porque escolhem a AP' },
       'why-card-title': {
-        en: 'Why local brands trust AP Digital Solutions',
-        pt: 'Porque é que marcas locais confiam na AP Digital Solutions'
+        en: 'Why local businesses trust AP Digital Solutions',
+        pt: 'Porque é que negócios locais confiam na AP Digital Solutions'
       },
       'why-card-list': {
-        en: '• Communication without heavy technical language.\n• Black & gold design that matches your logo and feels premium.\n• Focus on Jersey companies: cleaning, carpentry, therapies, cafés and more.\n• Respect for your time – everything organised around your routine.',
-        pt: '• Comunicação sem linguagem técnica pesada.\n• Design em preto e dourado alinhado com o teu logo e com ar premium.\n• Foco em empresas de Jersey: limpezas, carpintarias, terapias, cafés e muito mais.\n• Respeito pelo teu tempo – tudo organizado à volta da tua rotina.'
+        en: '• We communicate clearly, without heavy technical language.\n• We adapt the design to your brand, instead of forcing a generic style.\n• We work with Jersey businesses: cleaning, carpentry, therapies, cafés and more.\n• We are a small business too, so we understand your reality and time limits.',
+        pt: '• Comunicamos de forma clara, sem linguagem técnica pesada.\n• Adaptamos o design à tua marca, em vez de forçar um estilo genérico.\n• Trabalhamos com negócios de Jersey: limpezas, carpintarias, terapias, cafés e muito mais.\n• Também somos um pequeno negócio, por isso compreendemos a tua realidade e limites de tempo.'
+      },
+
+      'work-eyebrow': { en: 'Work', pt: 'Trabalho' },
+      'work-title': {
+        en: 'Real projects built around real people.',
+        pt: 'Projetos reais construídos à volta de pessoas reais.'
+      },
+      'work-subtitle': {
+        en: 'Every project starts with listening. Here is an example of how AP Digital Solutions turned an idea into a calm, modern online presence.',
+        pt: 'Cada projeto começa por ouvir. Aqui está um exemplo de como a AP Digital Solutions transformou uma ideia numa presença online moderna e tranquila.'
+      },
+      'case1-tag': {
+        en: 'Ajudatotal.je · Case study',
+        pt: 'Ajudatotal.je · Caso prático'
+      },
+      'case1-title': {
+        en: 'Ajudatotal.je – mental health support with a clear and gentle page',
+        pt: 'Ajudatotal.je – apoio em saúde mental com uma página clara e acolhedora'
+      },
+      'case1-text': {
+        en: 'Ajudatotal.je is a mental health project that needed a simple, trustworthy website to explain structured sessions for anxiety, stress and self-esteem without feeling heavy or clinical.  AP Digital Solutions created a modern layout, soft language and clear calls to action so people in Jersey can quickly understand the service and feel safe to reach out for support.',
+        pt: 'A Ajudatotal.je é um projeto de saúde mental que precisava de um website simples e de confiança para explicar sessões estruturadas para ansiedade, stress e autoestima sem parecer pesado ou demasiado clínico. A AP Digital Solutions criou um layout moderno, linguagem suave e chamadas para ação claras para que as pessoas em Jersey possam perceber rapidamente o serviço e sentir-se seguras para pedir apoio.'
       },
 
       'social-eyebrow': { en: 'Social links', pt: 'Redes sociais' },
       'social-title': {
-        en: 'One black & gold page behind every link in bio.',
-        pt: 'Uma página em preto e dourado por trás de cada link na bio.'
+        en: 'One simple page behind every “link in bio”.',
+        pt: 'Uma página simples por trás de cada “link na bio”.'
       },
       'social-subtitle': {
         en: 'AP Digital Solutions can turn your Instagram and other profiles into a single, consistent journey that always leads people back to you.',
         pt: 'A AP Digital Solutions pode transformar o teu Instagram e outros perfis numa viagem simples e consistente que leva sempre as pessoas de volta a ti.'
       },
       'social-body': {
-        en: 'When someone taps the link in your bio, they should immediately understand who you are, what you offer and where to click next. We connect your social content, your website and your WhatsApp into a small, focused page.',
-        pt: 'Quando alguém toca no link da tua bio, deve perceber logo quem és, o que ofereces e onde clicar a seguir. Ligamos o teu conteúdo, o teu website e o teu WhatsApp numa página pequena e focada.'
+        en: 'When someone taps the link in your bio, they should immediately understand who you are, what you offer and where to click next. We connect your social content, website and WhatsApp into a small, focused page that works on any phone.',
+        pt: 'Quando alguém toca no link da tua bio, deve perceber logo quem és, o que ofereces e onde clicar a seguir. Ligamos o teu conteúdo, o teu website e o teu WhatsApp numa página pequena e focada que funciona em qualquer telemóvel.'
       },
       'social-ig': {
         en: '📸 Instagram profile',
@@ -1125,12 +1184,12 @@
 
       'contact-eyebrow': { en: 'Contact', pt: 'Contacto' },
       'contact-title': {
-        en: 'Ready to upgrade how your brand looks online?',
-        pt: 'Pronto para melhorar a forma como a tua marca aparece online?'
+        en: 'Ready to improve how your business appears online?',
+        pt: 'Pronto para melhorar a forma como o teu negócio aparece online?'
       },
       'contact-subtitle': {
-        en: 'No pressure, no big sales pitch. Just a short message to see what makes sense for you now.',
-        pt: 'Sem pressão e sem grandes discursos de vendas. Só uma mensagem breve para ver o que faz sentido para ti agora.'
+        en: 'No pressure and no complicated sales talk. Just a short conversation to see what makes sense for your business right now.',
+        pt: 'Sem pressão e sem discursos de vendas complicados. Apenas uma conversa curta para ver o que faz sentido para o teu negócio neste momento.'
       },
       'contact-whatsapp': {
         en: 'The fastest way to reach AP Digital Solutions is through WhatsApp.  Click the button to open a chat – you don’t need to save any number.',
@@ -1147,18 +1206,18 @@
       'contact-tag': { en: 'What to say?', pt: 'O que dizer?' },
       'contact-h3': { en: 'Easy first message ideas', pt: 'Ideias simples para a primeira mensagem' },
       'contact-list': {
-        en: '• “I have a cleaning company and want a black & gold page.”\n• “I’m a carpenter and would like to show my work in a modern way.”\n• “I want a simple chatbot connected to WhatsApp.”\n• “I never had a website – where should I start?”',
-        pt: '• “Tenho uma empresa de limpezas e quero uma página em preto e dourado.”\n• “Sou carpinteiro e gostava de mostrar o meu trabalho de forma moderna.”\n• “Quero um chatbot simples ligado ao WhatsApp.”\n• “Nunca tive website – por onde começo?”'
+        en: '• “I have a small business and need a simple website.”\n• “I want a clearer online presence for my services.”\n• “I’m interested in a basic chatbot connected to WhatsApp.”\n• “I never had a website – where should I start?”',
+        pt: '• “Tenho um pequeno negócio e preciso de um website simples.”\n• “Quero uma presença online mais clara para os meus serviços.”\n• “Estou interessado num chatbot básico ligado ao WhatsApp.”\n• “Nunca tive website – por onde começo?”'
       },
 
       'chat-header': {
-        en: 'AP Brand Assistant',
-        pt: 'Assistente da Marca AP'
+        en: 'AP Digital Assistant',
+        pt: 'Assistente Digital AP'
       },
       'chat-badge': { en: 'Demo', pt: 'Demo' },
       'chat-welcome': {
-        en: 'Hi 👋 I’m the AP assistant. Ask me about black & gold websites, chatbots or social link pages.',
-        pt: 'Olá 👋 Sou o assistente da AP. Pergunta-me sobre websites em preto e dourado, chatbots ou páginas de links.'
+        en: 'Hi 👋 I’m the AP assistant. Ask me about websites, chatbots or link pages for small businesses.',
+        pt: 'Olá 👋 Sou o assistente da AP. Pergunta-me sobre websites, chatbots ou páginas de links para pequenos negócios.'
       },
       'chat-send': { en: 'Send', pt: 'Enviar' },
 
@@ -1216,23 +1275,23 @@
 
       if (q.includes('website') || q.includes('site')) {
         return lang === 'en'
-          ? 'We can design a black & gold one-page site that tells your story, shows your services and gives clients a clear way to contact you.'
-          : 'Podemos criar um site de uma página em preto e dourado que conte a tua história, mostre os teus serviços e dê aos clientes uma forma clara de contacto.';
+          ? 'We design simple, modern websites that explain your services clearly and give clients an easy way to contact you.'
+          : 'Criamos websites simples e modernos que explicam os teus serviços de forma clara e dão aos clientes uma forma fácil de contacto.';
       }
       if (q.includes('chatbot') || q.includes('bot')) {
         return lang === 'en'
-          ? 'Our chatbots keep things simple, answer common questions and send leads straight to your WhatsApp or email.'
-          : 'Os nossos chatbots mantêm tudo simples, respondem às perguntas mais comuns e enviam contactos diretamente para o teu WhatsApp ou email.';
+          ? 'Our chatbots keep things easy: they answer common questions, collect basic details and send everything to your WhatsApp or email.'
+          : 'Os nossos chatbots mantêm tudo simples: respondem às perguntas mais comuns, recolhem alguns dados e enviam tudo para o teu WhatsApp ou email.';
       }
       if (q.includes('instagram') || q.includes('social') || q.includes('facebook')) {
         return lang === 'en'
-          ? 'We can build a black & gold link page for your Instagram bio so people always know where to go next.'
-          : 'Podemos criar uma página de links em preto e dourado para a tua bio do Instagram, para que as pessoas saibam sempre para onde ir a seguir.';
+          ? 'We can build a small link page for your social profiles so people always know where to go next.'
+          : 'Podemos criar uma pequena página de links para os teus perfis sociais, para que as pessoas saibam sempre para onde ir a seguir.';
       }
 
       return lang === 'en'
-        ? 'Nice question. For a detailed answer, tap “Open WhatsApp chat” and we can talk about your brand with real examples.'
-        : 'Boa pergunta. Para uma resposta mais detalhada, carrega em “Abrir conversa no WhatsApp” e falamos da tua marca com exemplos reais.';
+        ? 'Great question. For a more detailed answer, tap “Open WhatsApp chat” and we can talk about your business with real examples.'
+        : 'Boa pergunta. Para uma resposta mais detalhada, carrega em “Abrir conversa no WhatsApp” e falamos do teu negócio com exemplos reais.';
     }
 
     form.addEventListener('submit', (e) => {
@@ -1245,4 +1304,4 @@
     });
   </script>
 </body>
-</html>
+  </html>
