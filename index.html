@@ -167,36 +167,6 @@
       background: #020617;
     }
 
-    .hero-media-badge {
-      position: absolute;
-      top: 14px;
-      left: 18px;
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.96);
-      color: #f9fafb;
-      font-size: 0.74rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-media-badge span {
-      font-size: 1rem;
-    }
-
-    .hero-media-tagline {
-      position: absolute;
-      right: 18px;
-      bottom: 16px;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: rgba(5, 5, 10, 0.92);
-      color: #e5e7eb;
-      font-size: 0.74rem;
-      border: 1px solid rgba(148, 118, 52, 0.8);
-    }
-
     .hero-copy {
       animation: fadeUp 0.9s ease-out 0.05s both;
     }
@@ -279,9 +249,9 @@
     }
 
     .section-header {
-      text-align: center;
+      text-align: left;
       max-width: 640px;
-      margin: 0 auto 30px;
+      margin: 0 0 24px;
     }
 
     .section-eyebrow {
@@ -565,6 +535,66 @@
       color: #111111;
     }
 
+    /* LAYOUT SEÇÕES COM MEDIA */
+    .section-layout-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .section-media {
+      display: block;
+    }
+
+    .media-frame {
+      background: radial-gradient(circle at top, #1a1712 0, #050507 60%);
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .media-frame img {
+      border-radius: 18px;
+      border: 1px solid #262637;
+      object-fit: cover;
+      max-height: 320px;
+      width: 100%;
+    }
+
+    /* IMAGENS SERVIÇOS & CASE STUDY */
+    .service-img {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid #262637;
+      object-fit: cover;
+      max-height: 150px;
+      margin-bottom: 10px;
+    }
+
+    .case-img {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid #262637;
+      object-fit: cover;
+      max-height: 190px;
+      margin-bottom: 12px;
+    }
+
+    .contact-img {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid #262637;
+      object-fit: cover;
+      max-height: 170px;
+      margin-top: 14px;
+    }
+
+    footer img {
+      max-height: 18px;
+    }
+
     /* RESPONSIVO */
     @media (max-width: 900px) {
       .hero {
@@ -586,6 +616,14 @@
 
       .contact-card {
         grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section-layout-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .section-header {
+        text-align: left;
       }
     }
 
@@ -631,10 +669,6 @@
       <section class="hero">
         <!-- VÍDEO À ESQUERDA -->
         <div class="hero-media">
-          <div class="hero-media-badge" id="hero-video-badge">
-            <span>▶</span> AP Digital Solutions · Brand video
-          </div>
-
           <video
             src="hero-video.mp4"
             autoplay
@@ -645,10 +679,6 @@
           >
             Your browser doesn’t support HTML5 video.
           </video>
-
-          <div class="hero-media-tagline" id="hero-video-tagline">
-            Clean, focused design built around your brand – not generic templates.
-          </div>
         </div>
 
         <!-- TEXTO À DIREITA -->
@@ -689,40 +719,50 @@
     <!-- WHY ONLINE -->
     <section id="why-online" class="section">
       <div class="container">
-        <div class="section-header">
-          <div class="section-eyebrow" id="why-eyebrow">Why online</div>
-          <h2 class="section-title" id="why-title">
-            If people can’t find you online, they find someone else.
-          </h2>
-          <p class="section-subtitle" id="why-subtitle">
-            Most customers search online before they contact a business. If your online presence is weak, unclear or doesn’t exist, they will choose another option that feels more professional and easier to trust.
-          </p>
-        </div>
+        <div class="section-layout-2">
+          <div>
+            <div class="section-header">
+              <div class="section-eyebrow" id="why-eyebrow">Why online</div>
+              <h2 class="section-title" id="why-title">
+                If people can’t find you online, they find someone else.
+              </h2>
+              <p class="section-subtitle" id="why-subtitle">
+                Most customers search online before they contact a business. If your online presence is weak, unclear or doesn’t exist, they will choose another option that feels more professional and easier to trust.
+              </p>
+            </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <div class="tag" id="why1-tag">01 · Trust</div>
-            <h3 id="why1-title">Look serious in seconds</h3>
-            <p id="why1-text">
-              A clear website with your services, photos and story shows that your business is real and organised. It gives clients confidence to contact you.
-            </p>
-          </article>
+            <div class="grid-3">
+              <article class="card">
+                <div class="tag" id="why1-tag">01 · Trust</div>
+                <h3 id="why1-title">Look serious in seconds</h3>
+                <p id="why1-text">
+                  A clear website with your services, photos and story shows that your business is real and organised. It gives clients confidence to contact you.
+                </p>
+              </article>
 
-          <article class="card">
-            <div class="tag" id="why2-tag">02 · Speed</div>
-            <h3 id="why2-title">Answer even when you’re busy</h3>
-            <p id="why2-text">
-              Simple chatbots and contact buttons help clients reach you any time – while you are working, resting or spending time with family.
-            </p>
-          </article>
+              <article class="card">
+                <div class="tag" id="why2-tag">02 · Speed</div>
+                <h3 id="why2-title">Answer even when you’re busy</h3>
+                <p id="why2-text">
+                  Simple chatbots and contact buttons help clients reach you any time – while you are working, resting or spending time with family.
+                </p>
+              </article>
 
-          <article class="card">
-            <div class="tag" id="why3-tag">03 · Clarity</div>
-            <h3 id="why3-title">One place with everything</h3>
-            <p id="why3-text">
-              Website, Instagram, Facebook and WhatsApp can all point to one clear page, so people always know where to click next.
-            </p>
-          </article>
+              <article class="card">
+                <div class="tag" id="why3-tag">03 · Clarity</div>
+                <h3 id="why3-title">One place with everything</h3>
+                <p id="why3-text">
+                  Website, Instagram, Facebook and WhatsApp can all point to one clear page, so people always know where to click next.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="section-media">
+            <div class="media-frame">
+              <img src="tablet-coffee.jpg" alt="Person working on a tablet with coffee cup, representing online work" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -742,6 +782,7 @@
 
         <div class="grid-3">
           <article class="card">
+            <img src="_keyboard-key.jpg" alt="Keyboard key close-up representing websites" class="service-img">
             <h3 id="svc1-title">Modern small business websites</h3>
             <p id="svc1-text">
               One-page or small websites focused on your services, images and story. Fast to load, easy to navigate and adapted to your brand.
@@ -749,6 +790,7 @@
           </article>
 
           <article class="card">
+            <img src="social-phone.jpg" alt="Mobile phone with chat and social media" class="service-img">
             <h3 id="svc2-title">Chatbots connected to WhatsApp</h3>
             <p id="svc2-text">
               Simple bots that answer common questions, collect basic information and send everything directly to your WhatsApp or email – without showing your number on the page.
@@ -756,6 +798,7 @@
           </article>
 
           <article class="card">
+            <img src="shopping-phone.jpg" alt="Person holding smartphone with online content" class="service-img">
             <h3 id="svc3-title">Social link & promo pages</h3>
             <p id="svc3-text">
               A clean page that becomes your “link in bio”: Instagram, Facebook, website, WhatsApp and any promotion you want to highlight, all in one place.
@@ -851,6 +894,7 @@
 
         <div class="card">
           <div class="tag" id="case1-tag">Ajudatotal.je · Case study</div>
+          <img src="marketing-book.png" alt="Digital material and notebook on a desk" class="case-img">
           <h3 id="case1-title">Ajudatotal.je – mental health support with a clear and gentle page</h3>
           <p id="case1-text">
             Ajudatotal.je is a mental health project that needed a simple, trustworthy website to explain structured sessions for anxiety, stress and self-esteem without feeling heavy or clinical.  
@@ -941,6 +985,7 @@
               <li>“I’m interested in a basic chatbot connected to WhatsApp.”</li>
               <li>“I never had a website – where should I start?”</li>
             </ul>
+            <img src="social-phone.jpg" alt="Hand holding a phone with chat open" class="contact-img">
           </div>
         </div>
       </div>
@@ -1000,14 +1045,6 @@
       'nav-work': { en: 'Work', pt: 'Trabalho' },
       'nav-contact': { en: 'Contact', pt: 'Contacto' },
 
-      'hero-video-badge': {
-        en: 'AP Digital Solutions · Brand video',
-        pt: 'AP Digital Solutions · Vídeo da marca'
-      },
-      'hero-video-tagline': {
-        en: 'Clean, focused design built around your brand – not generic templates.',
-        pt: 'Design limpo e focado, construído à volta da tua marca – não de templates genéricos.'
-      },
       'hero-eyebrow': {
         en: 'Jersey · Small businesses · Digital solutions',
         pt: 'Jersey · Pequenos negócios · Soluções digitais'
@@ -1304,4 +1341,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
