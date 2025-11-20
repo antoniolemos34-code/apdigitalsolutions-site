@@ -3,970 +3,1246 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AP Digital Solutions – Websites & Chatbots for Jersey Businesses</title>
+  <title>AP Digital Solutions – The Solutions to Be Online</title>
 
-  <meta name="description" content="AP Digital Solutions builds modern websites and WhatsApp-connected chatbots for local businesses in Jersey. Simple, clear and adapted to your brand.">
-  <meta name="keywords" content="Jersey websites, WhatsApp chatbots, digital solutions, web design Jersey">
+  <meta name="description" content="AP Digital Solutions helps Jersey businesses go online with premium black & gold websites, smart chatbots and social link hubs – all connected to WhatsApp and built around your brand.">
   <meta name="author" content="AP Digital Solutions">
+  <link rel="canonical" href="https://apdigitalsolutions.digital/">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="Logo.png">
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #050509;
+      --bg: #050507;
       --bg-soft: #0b0b10;
-      --bg-card: #111118;
-      --text-main: #f9fafb;
-      --text-light: #d4d4d8;
-      --text-muted: #8b8b93;
-      --accent: #e4b455;      /* dourado suave */
-      --accent-soft: #f5e3b3;
-      --border: #27272f;
-      --radius-lg: 22px;
-      --radius-md: 14px;
-      --shadow-soft: 0 26px 80px rgba(0, 0, 0, 0.75);
-      --transition: all 0.35s ease;
+      --panel: #111118;
+      --text-main: #f5f5f5;
+      --text-muted: #a5a5b1;
+      --gold: #f4c05e;
+      --gold-strong: #dba43f;
+      --gold-soft: #3a2a10;
+      --border: #22222e;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.7);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
-      background: radial-gradient(circle at top, #111118 0, #050509 45%, #000 100%);
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, #1a150b 0, #050507 45%, #020204 100%);
       color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+      line-height: 1.6;
     }
 
     a {
+      color: inherit;
       text-decoration: none;
-      color: var(--accent);
-      transition: var(--transition);
     }
 
-    a:hover {
-      color: var(--accent-soft);
-    }
-
-    .container {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 20px;
+    img, video {
+      max-width: 100%;
+      display: block;
     }
 
     /* HEADER */
-
     header {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      backdrop-filter: blur(22px);
-      background: rgba(3, 3, 6, 0.85);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      transition: var(--transition);
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(5, 5, 8, 0.9);
+      border-bottom: 1px solid rgba(60, 60, 80, 0.7);
     }
 
     .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 56px;
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 20px;
+      gap: 16px;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .brand-mark {
-      width: 28px;
-      height: 28px;
-      border-radius: 9px;
-      background: radial-gradient(circle at 20% 0, var(--accent), #111118 55%, #000);
+    .logo-img {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.7);
+    }
+
+    .logo-text-main {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .logo-text-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    nav {
       display: flex;
       align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-    }
-
-    .brand-mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .brand-text span:first-child {
-      font-size: 16px;
-      letter-spacing: 0.06em;
-      font-weight: 600;
-    }
-
-    .brand-text span:last-child {
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 26px;
-      font-size: 14px;
+      gap: 18px;
+      font-size: 0.9rem;
     }
 
     nav a {
-      color: var(--text-light);
-      position: relative;
-      padding-bottom: 2px;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
-      background: linear-gradient(to right, var(--accent), var(--accent-soft));
-      transition: var(--transition);
+      color: var(--text-muted);
+      font-weight: 500;
     }
 
     nav a:hover {
       color: var(--text-main);
     }
 
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text-main);
-      font-size: 22px;
+    .lang-toggle {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #171720;
+      padding: 6px 10px;
+      font-size: 0.78rem;
       cursor: pointer;
-    }
-
-    /* HERO (vídeo + texto) */
-
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 56px; /* header */
-      overflow: hidden;
       color: var(--text-main);
+      font-weight: 500;
     }
 
-    .hero-video-bg {
-      position: absolute;
-      inset: 0;
-      z-index: -2;
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    main {
+      padding: 60px 0 70px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .hero-media {
+      background: radial-gradient(circle at top, #1b1510 0, #050507 55%, #020204 100%);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--gold-soft);
+      position: relative;
       overflow: hidden;
     }
 
-    .hero-video-bg video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(1.05) contrast(1.05);
-      background: #000;
+    .hero-media video {
+      border-radius: 18px;
+      border: 1px solid #262637;
+      background: #020617;
     }
 
-    .hero-overlay {
+    .hero-media-badge {
       position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.96)),
-        radial-gradient(circle at top left, rgba(228, 180, 85, 0.28), transparent 55%);
-      z-index: -1;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 60px;
+      top: 14px;
+      left: 18px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      color: #f9fafb;
+      font-size: 0.74rem;
+      display: inline-flex;
       align-items: center;
-      padding: 80px 0;
+      gap: 6px;
     }
 
-    .hero-kicker {
-      font-size: 13px;
-      letter-spacing: 0.16em;
+    .hero-media-badge span {
+      font-size: 1rem;
+    }
+
+    .hero-media-tagline {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(5, 5, 10, 0.92);
+      color: #e5e7eb;
+      font-size: 0.74rem;
+      border: 1px solid rgba(148, 118, 52, 0.8);
+    }
+
+    .hero-copy-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 600;
       text-transform: uppercase;
-      color: var(--accent-soft);
-      margin-bottom: 14px;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 10px;
     }
 
     .hero-title {
-      font-size: clamp(2.7rem, 4.8vw, 3.9rem);
-      line-height: 1.05;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.15;
       font-weight: 700;
-      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
     }
 
     .hero-title span {
-      color: var(--accent-soft);
-      display: block;
+      background: linear-gradient(120deg, #f4c05e, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
-    .hero-lead {
-      font-size: 18px;
-      color: var(--text-light);
-      max-width: 520px;
-      margin-bottom: 28px;
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 440px;
+      margin-bottom: 20px;
     }
 
-    .hero-cta {
+    .hero-cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 11px 24px;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      display: inline-flex;
+      gap: 12px;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: var(--transition);
-      white-space: nowrap;
+      margin-bottom: 16px;
     }
 
     .btn-primary {
-      background: linear-gradient(to right, var(--accent), var(--accent-soft));
-      color: #111118;
-      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.85);
+      border: none;
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #14110b;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-size: 0.94rem;
       font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px) scale(1.03);
-      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.95);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
     }
 
     .btn-secondary {
-      background: transparent;
+      border-radius: 999px;
+      background: #111118;
       border: 1px solid var(--border);
-      color: var(--text-light);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent-soft);
-      background: rgba(255, 255, 255, 0.02);
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      color: var(--text-muted);
     }
 
     .hero-note {
-      font-size: 14px;
+      font-size: 0.8rem;
       color: var(--text-muted);
-      max-width: 420px;
     }
 
-    .hero-right {
-      align-self: stretch;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-device {
-      width: 100%;
-      max-width: 360px;
-      border-radius: 32px;
-      padding: 14px;
-      background: radial-gradient(circle at top, #18181b, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-    }
-
-    .hero-device-inner {
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .hero-device-inner img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .hero-device-tag {
-      position: absolute;
-      bottom: 18px;
-      left: 18px;
-      font-size: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.7);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: var(--accent-soft);
-    }
-
-    /* GENERIC SECTIONS */
-
-    section.block {
-      padding: 96px 0 80px;
-      background: radial-gradient(circle at top, rgba(255,255,255,0.015), transparent 60%), var(--bg-soft);
-    }
-
-    section.block:nth-of-type(even) {
-      background: radial-gradient(circle at top, rgba(0,0,0,0.4), #050509 60%);
+    /* SEÇÕES */
+    .section {
+      padding: 40px 0 12px;
+      scroll-margin-top: 90px;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 64px;
+      max-width: 640px;
+      margin: 0 auto 30px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 8px;
     }
 
     .section-title {
-      font-size: clamp(2.1rem, 3.4vw, 2.7rem);
-      margin-bottom: 10px;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.03em;
     }
 
-    .section-sub {
-      max-width: 640px;
-      margin: 0 auto;
-      font-size: 18px;
-      color: var(--text-light);
+    .section-subtitle {
+      font-size: 0.96rem;
+      color: var(--text-muted);
     }
 
-    /* WHY ONLINE */
-
-    .two-col {
+    .grid-3 {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 56px;
-      align-items: start;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
     }
 
-    .paragraph-large {
-      font-size: 18px;
-      color: var(--text-light);
-      margin-bottom: 18px;
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: flex-start;
     }
 
     .card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
+      background: var(--panel);
+      border-radius: var(--radius-md);
+      padding: 20px 18px;
       border: 1px solid var(--border);
-      padding: 30px 26px;
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
     }
 
     .card h3 {
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-
-    .list {
-      list-style: none;
-      padding-left: 0;
-      color: var(--text-light);
-      font-size: 16px;
-    }
-
-    .list li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 10px;
-    }
-
-    .list li::before {
-      content: "";
-      position: absolute;
-      left: 4px;
-      top: 7px;
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: var(--accent);
-    }
-
-    /* SERVICES */
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 26px;
-    }
-
-    .card img {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      margin-bottom: 18px;
-      object-fit: cover;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.8);
+      font-size: 1.04rem;
+      margin-bottom: 6px;
+      color: var(--gold);
     }
 
     .card p {
-      font-size: 16px;
-      color: var(--text-light);
-      margin-top: 6px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
 
-    /* PROCESS */
-
-    .step {
-      display: flex;
-      gap: 18px;
-      padding-bottom: 24px;
-      margin-bottom: 24px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .step:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .step-number {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      display: flex;
+    .tag {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      color: var(--accent-soft);
-      flex-shrink: 0;
-    }
-
-    .step-text {
-      font-size: 16px;
-      color: var(--text-light);
-    }
-
-    .step-text strong {
-      display: block;
-      color: var(--text-main);
-      margin-bottom: 4px;
-      font-size: 18px;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
-    }
-
-    .pill {
-      font-size: 13px;
-      padding: 6px 12px;
+      gap: 6px;
+      padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--text-light);
-      background: rgba(0,0,0,0.4);
-    }
-
-    .pill:hover {
-      border-color: var(--accent);
-      color: var(--accent-soft);
-    }
-
-    .notice {
-      margin-top: 18px;
-      padding: 18px 16px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(228, 180, 85, 0.45);
-      background: rgba(228, 180, 85, 0.06);
-      color: var(--accent-soft);
-      font-size: 15px;
-    }
-
-    /* CONTACT */
-
-    .contact-card {
-      max-width: 680px;
-      margin: 0 auto;
-      background: radial-gradient(circle at top, rgba(228,180,85,0.09), transparent 55%), var(--bg-card);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      padding: 40px 28px 34px;
-      text-align: center;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .contact-card p {
-      font-size: 18px;
+      background: #181821;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 500;
       margin-bottom: 10px;
     }
 
-    .contact-card small {
-      display: block;
-      margin-top: 14px;
-      font-size: 14px;
+    .why-list {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .why-list li::before {
+      content: "▸";
+      color: var(--gold);
+      margin-right: 6px;
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 12px;
+      font-size: 0.9rem;
       color: var(--text-muted);
     }
 
-    .contact-tags {
+    .step {
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      margin-top: 18px;
-      font-size: 13px;
-      color: var(--text-muted);
+      gap: 10px;
+      align-items: flex-start;
     }
 
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .social-link {
-      width: 40px;
-      height: 40px;
+    .step-number {
+      width: 26px;
+      height: 26px;
       border-radius: 999px;
-      border: 1px solid var(--border);
+      background: #14141f;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      font-size: 0.8rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(0,0,0,0.7);
-      color: var(--text-light);
-      transition: var(--transition);
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
-    .social-link:hover {
-      background: linear-gradient(to right, var(--accent), var(--accent-soft));
-      color: #111118;
-      border-color: transparent;
+    .step-title {
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .social-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #14141f;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
 
     footer {
-      padding: 32px 0 40px;
+      padding: 22px 20px 30px;
       text-align: center;
-      font-size: 14px;
+      font-size: 0.8rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
+      margin-top: 40px;
+      background: #050507;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 50;
+    }
+
+    .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c16;
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85);
+    }
+
+    .whatsapp-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: #14532d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: #e5f9ed;
+    }
+
+    /* CHATBOX */
+    .chatbox {
+      position: fixed;
+      bottom: 18px;
+      left: 18px;
+      background: #0b0b12;
+      width: 320px;
+      border-radius: 18px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.9);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .chatbox-header {
+      background: #111827;
+      color: #f9fafb;
+      padding: 10px 12px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge {
+      background: rgba(249, 250, 251, 0.1);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--gold);
+    }
+
+    .chatbox-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
       background: #050509;
     }
 
-    /* MOBILE */
+    .msg {
+      display: flex;
+      margin: 8px 0;
+    }
+    .msg.bot { justify-content: flex-start; }
+    .msg.user { justify-content: flex-end; }
 
+    .bubble {
+      max-width: 80%;
+      padding: 8px 12px;
+      border-radius: 14px;
+      font-size: 0.86rem;
+    }
+
+    .bot .bubble {
+      background: #151521;
+      color: #f9fafb;
+      border: 1px solid #272739;
+    }
+
+    .user .bubble {
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #18120a;
+      font-weight: 500;
+    }
+
+    .chatbox-input {
+      display: flex;
+      border-top: 1px solid #262636;
+    }
+
+    .chatbox-input input {
+      flex: 1;
+      border: none;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      outline: none;
+      background: #050509;
+      color: #e5e7eb;
+    }
+
+    .chatbox-input button {
+      border: none;
+      padding: 0 14px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--gold);
+      color: #111111;
+    }
+
+    /* RESPONSIVO */
     @media (max-width: 900px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 64px 0 80px;
-        text-align: left;
-      }
-
-      .hero-right {
-        justify-content: flex-start;
-      }
-
-      .hero-device {
-        margin: 0 auto;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav ul {
-        position: fixed;
-        top: 56px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background: rgba(3,3,6,0.98);
-        padding: 14px 20px 18px;
-        gap: 0;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-      }
-
-      .nav ul.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-      }
-
-      nav li {
-        padding: 10px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-      }
-
-      nav li:last-child {
-        border-bottom: none;
-      }
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
       .hero {
-        min-height: 90vh;
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 10px;
       }
 
-      .hero-inner {
-        padding: 56px 0 72px;
+      main {
+        padding-top: 42px;
+      }
+
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-card {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
-    @media (max-width: 600px) {
-      .hero-title {
-        font-size: 2.3rem;
+    @media (max-width: 720px) {
+      .chatbox {
+        display: none;
       }
+    }
 
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        padding: 24px 20px;
-      }
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .whatsapp-button span.text { display: none; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <div class="brand-mark">
-        <img src="Logo.png" alt="AP Digital Solutions logo">
-      </div>
-      <div class="brand-text">
-        <span>AP DIGITAL</span>
-        <span>SOLUTIONS</span>
-      </div>
-    </div>
-
-    <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
-
-    <nav>
-      <ul>
-        <li><a href="#why-online">Why Online</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#how-it-works">Process</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <!-- HERO: vídeo de fundo + texto -->
-  <section class="hero">
-    <div class="hero-video-bg">
-      <video
-        id="hero-video"
-        src="hero-video.mp4"
-        muted
-        playsinline
-        autoplay
-        loop
-        controls
-        preload="auto"
-        poster="tablet-coffee.jpg"
-      ></video>
-    </div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-inner container">
-      <div>
-        <div class="hero-kicker">Websites · Chatbots · WhatsApp</div>
-        <h1 class="hero-title">
-          Professional digital presence
-          <span>for Jersey businesses.</span>
-        </h1>
-        <p class="hero-lead">
-          We design and build modern websites and WhatsApp-connected chatbots so your business can communicate clearly and professionally with customers in Jersey.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://wa.me/447700704591" target="_blank" rel="noopener">
-            Start a WhatsApp Conversation
-          </a>
-          <a class="btn btn-secondary" href="#services">
-            Explore Our Services
-          </a>
-        </div>
-        <p class="hero-note">
-          No technical knowledge required. We handle design, structure, hosting and basic SEO – all adapted to your brand.
-        </p>
-      </div>
-
-      <div class="hero-right">
-        <div class="hero-device">
-          <div class="hero-device-inner">
-            <img src="social-phone.jpg" alt="Website preview on mobile">
-          </div>
-          <div class="hero-device-tag">
-            Jersey businesses · WhatsApp ready
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY ONLINE -->
-  <section id="why-online" class="block">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Your Digital Storefront</h2>
-        <p class="section-sub">
-          For many customers, your website is the first contact with your business. We make sure that first impression is clear, credible and aligned with your brand.
-        </p>
-      </div>
-
-      <div class="two-col">
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <a href="#top" class="logo">
+        <!-- Usa o ficheiro Logo.png do teu repo -->
+        <img src="Logo.png" alt="AP Digital Solutions logo" class="logo-img" />
         <div>
-          <p class="paragraph-large">
-            Many established businesses in Jersey still rely mainly on word-of-mouth. That remains valuable, but more and more clients now search on their phone before they decide who to contact.
+          <div class="logo-text-main" id="logo-main">AP Digital Solutions</div>
+          <div class="logo-text-sub" id="logo-sub">The Solutions to Be Online</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#why-online" id="nav-why">Why online?</a>
+        <a href="#services" id="nav-services">Services</a>
+        <a href="#story" id="nav-story">Brand story</a>
+        <a href="#contact" id="nav-contact">Contact</a>
+        <button type="button" class="lang-toggle" id="lang-toggle">PT</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <div class="container">
+      <section class="hero">
+        <!-- VÍDEO À ESQUERDA -->
+        <div class="hero-media">
+          <div class="hero-media-badge" id="hero-video-badge">
+            <span>▶</span> AP Digital Solutions · Brand video
+          </div>
+
+          <video
+            src="hero-video.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="tablet-coffee.jpg"
+          >
+            Your browser doesn’t support HTML5 video.
+          </video>
+
+          <div class="hero-media-tagline" id="hero-video-tagline">
+            Black & gold. Clean. Focused on your brand – not on templates.
+          </div>
+        </div>
+
+        <!-- TEXTO À DIREITA -->
+        <div>
+          <div class="hero-copy-eyebrow" id="hero-eyebrow">
+            Jersey · Small businesses · Digital solutions
+          </div>
+          <h1 class="hero-title" id="hero-title">
+            Your brand deserves a <span>black & gold</span> online presence that feels premium, not generic.
+          </h1>
+          <p class="hero-subtitle" id="hero-subtitle">
+            AP Digital Solutions builds modern, minimalist websites and chatbots for Jersey businesses – using your logo, your colours and your story, not someone else’s.
           </p>
-          <p class="paragraph-large">
-            A focused website with a simple WhatsApp entry point tells your story in seconds: what you do, who you help and how to reach you – without noise or confusion.
+
+          <div class="hero-cta-row">
+            <a
+              class="btn-primary"
+              id="hero-cta-main"
+              href="https://wa.me/447700704591?text=Hi%2C%20I%20came%20from%20apdigitalsolutions.digital%20and%20want%20to%20talk%20about%20my%20brand%20online."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ⚡ Start a WhatsApp conversation
+            </a>
+
+            <a href="#why-online" class="btn-secondary" id="hero-cta-secondary">
+              Why being online matters
+            </a>
+          </div>
+
+          <p class="hero-note" id="hero-note">
+            No Apple logos, no copy-paste themes. Just AP Digital Solutions and a clear, strong identity for your business.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- WHY ONLINE -->
+    <section id="why-online" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow" id="why-eyebrow">Why online</div>
+          <h2 class="section-title" id="why-title">
+            If people can’t find you online, they find someone else.
+          </h2>
+          <p class="section-subtitle" id="why-subtitle">
+            Many Jersey businesses still don’t have a serious online presence. That means there is space for you – if your brand looks and feels trustworthy when people click.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="tag" id="why1-tag">01 · Trust</div>
+            <h3 id="why1-title">Look professional in seconds</h3>
+            <p id="why1-text">
+              A black & gold website with your logo and message shows that you care about quality. It feels like a real brand, not a side project.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="tag" id="why2-tag">02 · Speed</div>
+            <h3 id="why2-title">Answer even when you’re busy</h3>
+            <p id="why2-text">
+              Simple chatbots and clear contact buttons help clients reach you any time – while you work, rest or spend time with family.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="tag" id="why3-tag">03 · Simplicity</div>
+            <h3 id="why3-title">Everything leads back to you</h3>
+            <p id="why3-text">
+              Instagram, website, WhatsApp – everything points in one direction: real conversations with real clients, not likes without results.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow" id="services-eyebrow">Services</div>
+          <h2 class="section-title" id="services-title">
+            What AP Digital Solutions creates for your brand
+          </h2>
+          <p class="section-subtitle" id="services-subtitle">
+            Black & gold design, clear structure and everything connected to your WhatsApp and social media.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3 id="svc1-title">One-page websites in black & gold</h3>
+            <p id="svc1-text">
+              Minimal websites focused on your services, photos and story. Perfect for small businesses who want to look premium without feeling complicated.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 id="svc2-title">Chatbots that talk like your brand</h3>
+            <p id="svc2-text">
+              Simple bots that answer common questions and collect leads, then send everything to your WhatsApp or email – without showing the number on the page.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 id="svc3-title">Social link & promo pages</h3>
+            <p id="svc3-text">
+              A clean black & gold page that becomes your “link in bio”: Instagram, Facebook, website, WhatsApp and any promotion you want to highlight.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY / PROCESS -->
+    <section id="story" class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <div class="section-eyebrow" id="story-eyebrow">Brand story</div>
+            <h2 class="section-title" id="story-title">
+              AP Digital Solutions was built between real shifts and real life in Jersey.
+            </h2>
+            <p class="section-subtitle" id="story-subtitle">
+              This project started from someone who works in healthcare in Jersey and, in free time, builds digital solutions for local companies. That’s why we understand small businesses that don’t live all day behind a computer.
+            </p>
+
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                  <div class="step-title" id="step1-title">Quick WhatsApp chat</div>
+                  <div id="step1-text">
+                    You send a short message with your business type, social links and what you would like to change online.
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                  <div class="step-title" id="step2-title">Simple plan</div>
+                  <div id="step2-text">
+                    Together we choose the first step: a one-page website, a chatbot, a link page – or a small combination that fits your time and budget.
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                  <div class="step-title" id="step3-title">Design & build in black & gold</div>
+                  <div id="step3-text">
+                    We use your logo, photos and text to create a dark, elegant layout. You approve everything before it goes live.
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                  <div class="step-title" id="step4-title">Launch & refine</div>
+                  <div id="step4-text">
+                    Your domain and social links point to the new page. After that, we can adjust based on how clients interact with it.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="tag" id="why-card-tag">Why brands choose AP</div>
+            <h3 id="why-card-title">Why local brands trust AP Digital Solutions</h3>
+            <ul class="why-list" id="why-card-list">
+              <li>Communication without heavy technical language.</li>
+              <li>Black & gold design that matches your logo and feels premium.</li>
+              <li>Focus on Jersey companies: cleaning, carpentry, therapies, cafés and more.</li>
+              <li>Respect for your time – everything organised around your routine.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL LINKS -->
+    <section id="social" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow" id="social-eyebrow">Social links</div>
+          <h2 class="section-title" id="social-title">
+            One black & gold page behind every link in bio.
+          </h2>
+          <p class="section-subtitle" id="social-subtitle">
+            AP Digital Solutions can turn your Instagram and other profiles into a single, consistent journey that always leads people back to you.
           </p>
         </div>
 
         <div class="card">
-          <h3>What your site should do</h3>
-          <ul class="list">
-            <li>Explain what you offer in a few clear lines</li>
-            <li>Show real examples or photos of your work</li>
-            <li>Allow direct WhatsApp contact in one tap</li>
-            <li>Answer frequent questions automatically via chatbot</li>
-            <li>Work perfectly on phones and desktops</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="block">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Digital solutions built for Jersey</h2>
-        <p class="section-sub">
-          We don’t just deliver a website file – we create a small, complete digital system that fits how you actually work in your business.
-        </p>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-          <img src="tablet-coffee.jpg" alt="Modern website layout">
-          <h3>Professional Websites</h3>
-          <p>
-            Clear structure, fast loading and copy written to focus on your real services – not generic text. Built to look great on phones first.
+          <p id="social-body">
+            When someone taps the link in your bio, they should immediately understand who you are, what you offer and where to click next.
+            We connect your social content, your website and your WhatsApp into a small, focused page.
           </p>
-        </article>
 
-        <article class="card">
-          <img src="social-phone.jpg" alt="WhatsApp chatbot">
-          <h3>WhatsApp Chatbots</h3>
-          <p>
-            Simple chatbots that greet visitors, ask a few key questions and then pass the conversation directly to your WhatsApp, ready for you to answer.
-          </p>
-        </article>
-
-        <article class="card">
-          <img src="shopping-phone.jpg" alt="Brand identity">
-          <h3>Brand Integration</h3>
-          <p>
-            Colours, logo and tone adapted to your existing identity so everything – site, social media and offline material – feels consistent.
-          </p>
-        </article>
-
-        <article class="card">
-          <img src="marketing-book.png" alt="Support and updates">
-          <h3>Support & Updates</h3>
-          <p>
-            We help with domains, hosting choices, simple content changes and basic SEO so your online presence stays current and functional.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="how-it-works" class="block">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">A straightforward process</h2>
-        <p class="section-sub">
-          Designed for business owners who don’t want to become web developers – just want a professional result.
-        </p>
-      </div>
-
-      <div class="two-col">
-        <div>
-          <div class="step">
-            <div class="step-number">1</div>
-            <div class="step-text">
-              <strong>Initial Conversation</strong>
-              We speak about your business, services, target clients and what you want your website to achieve.
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">2</div>
-            <div class="step-text">
-              <strong>Structure & Proposal</strong>
-              You receive a simple outline showing page sections, chatbot flow and how WhatsApp will be integrated.
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">3</div>
-            <div class="step-text">
-              <strong>Design & Build</strong>
-              We create the design, copy and technical setup. You review and we adjust details until it matches your expectations.
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-number">4</div>
-            <div class="step-text">
-              <strong>Launch & Support</strong>
-              We publish the site and remain available for updates, improvements and future digital projects.
-            </div>
+          <div class="social-strip">
+            <!-- Troca os # pelos links reais quando quiseres -->
+            <a class="social-pill" href="#" target="_blank" rel="noopener noreferrer" id="social-ig">
+              📸 Instagram profile
+            </a>
+            <a class="social-pill" href="#" target="_blank" rel="noopener noreferrer" id="social-fb">
+              👍 Facebook page
+            </a>
+            <a class="social-pill" href="https://apdigitalsolutions.digital/" target="_blank" rel="noopener noreferrer" id="social-site">
+              🌐 apdigitalsolutions.digital
+            </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div>
-          <div class="card">
-            <h3>Design principles we follow</h3>
-            <p class="paragraph-large">
-              Everything we design is guided by a few simple rules so your site feels calm, clear and trustworthy.
+    <!-- CONTACTO -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow" id="contact-eyebrow">Contact</div>
+          <h2 class="section-title" id="contact-title">
+            Ready to upgrade how your brand looks online?
+          </h2>
+          <p class="section-subtitle" id="contact-subtitle">
+            No pressure, no big sales pitch. Just a short message to see what makes sense for you now.
+          </p>
+        </div>
+
+        <div class="card contact-card">
+          <div>
+            <p id="contact-whatsapp">
+              The fastest way to reach AP Digital Solutions is through WhatsApp.  
+              Click the button to open a chat – you don’t need to save any number.
             </p>
-            <div class="pill-row">
-              <span class="pill">Clarity over decoration</span>
-              <span class="pill">Phone-first layouts</span>
-              <span class="pill">Fast loading</span>
-              <span class="pill">Direct WhatsApp access</span>
-              <span class="pill">Local SEO basics</span>
+
+            <div style="margin-top:14px;">
+              <a
+                class="btn-primary"
+                id="contact-cta"
+                href="https://wa.me/447700704591?text=Hi%2C%20I%20would%20like%20to%20talk%20about%20a%20black%20%26%20gold%20website%20for%20my%20business."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open WhatsApp chat
+              </a>
             </div>
-            <div class="notice">
-              As a small studio based in Jersey, we intentionally keep a limited number of active projects so each business receives real attention – not a generic template.
-            </div>
+
+            <p style="margin-top:10px; font-size:0.88rem;" id="contact-email">
+              Prefer email? <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a>
+            </p>
+          </div>
+
+          <div>
+            <div class="tag" id="contact-tag">What to say?</div>
+            <h3 id="contact-h3">Easy first message ideas</h3>
+            <ul class="why-list" id="contact-list">
+              <li>“I have a cleaning company and want a black & gold page.”</li>
+              <li>“I’m a carpenter and would like to show my work in a modern way.”</li>
+              <li>“I want a simple chatbot connected to WhatsApp.”</li>
+              <li>“I never had a website – where should I start?”</li>
+            </ul>
           </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <!-- BOTÃO WHATSAPP -->
+  <div class="whatsapp-float">
+    <a
+      class="whatsapp-button"
+      href="https://wa.me/447700704591?text=Hi%2C%20I%20came%20from%20your%20black%20%26%20gold%20website."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="whatsapp-icon">🟢</div>
+      <span class="text">Chat on WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- CHATBOT DEMO -->
+  <div class="chatbox" aria-live="polite">
+    <div class="chatbox-header">
+      <span id="chat-header">AP Brand Assistant</span>
+      <span class="badge" id="chat-badge">Demo</span>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="block">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Begin your digital project</h2>
-        <p class="section-sub">
-          Share a little about your business and we’ll respond with clear next steps – not technical jargon.
-        </p>
-      </div>
-
-      <div class="contact-card">
-        <p>
-          <strong>WhatsApp:</strong>
-          <a href="https://wa.me/447700704591" target="_blank" rel="noopener">
-            Start a conversation on WhatsApp
-          </a>
-        </p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:apdigitalsolutions.je@outlook.com">
-            apdigitalsolutions.je@outlook.com
-          </a>
-        </p>
-
-        <small>
-          If possible, include your business name, main services and any existing online links (Facebook, Instagram, etc.).
-        </small>
-
-        <div class="contact-tags">
-          <span>Based in Jersey</span>
-          <span>Websites & Chatbots</span>
-          <span>Brand-focused design</span>
+    <div id="chat-messages" class="chatbox-messages">
+      <div class="msg bot">
+        <div class="bubble" id="chat-welcome">
+          Hi 👋 I’m the AP assistant. Ask me about black & gold websites, chatbots or social link pages.
         </div>
       </div>
     </div>
-  </section>
-</main>
+    <form id="chat-form" class="chatbox-input">
+      <input id="chat-input" type="text" placeholder="Type a question..." aria-label="Type a question">
+      <button type="submit" id="chat-send">Send</button>
+    </form>
+  </div>
 
-<footer>
-  &copy; 2025 AP Digital Solutions – Professional digital solutions for Jersey businesses.
-</footer>
+  <footer>
+    <p id="footer-text">
+      © 2025 AP Digital Solutions · Jersey, Channel Islands · The Solutions to Be Online
+    </p>
+  </footer>
 
-<script>
-  // Mobile navigation
-  const mobileBtn = document.querySelector('.mobile-menu-btn');
-  const navList = document.querySelector('nav ul');
+  <script>
+    // ---------- TRADUÇÃO EN / PT ----------
+    const state = { lang: 'en' };
 
-  if (mobileBtn && navList) {
-    mobileBtn.addEventListener('click', () => {
-      navList.classList.toggle('active');
-    });
+    const tr = {
+      'logo-sub': {
+        en: 'The Solutions to Be Online',
+        pt: 'As soluções para estar online'
+      },
+      'nav-why': { en: 'Why online?', pt: 'Porquê online?' },
+      'nav-services': { en: 'Services', pt: 'Serviços' },
+      'nav-story': { en: 'Brand story', pt: 'História da marca' },
+      'nav-contact': { en: 'Contact', pt: 'Contacto' },
 
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', () => navList.classList.remove('active'));
-    });
-  }
+      'hero-video-badge': {
+        en: 'AP Digital Solutions · Brand video',
+        pt: 'AP Digital Solutions · Vídeo da marca'
+      },
+      'hero-video-tagline': {
+        en: 'Black & gold. Clean. Focused on your brand – not on templates.',
+        pt: 'Preto e dourado. Limpo. Focado na tua marca – não em templates.'
+      },
+      'hero-eyebrow': {
+        en: 'Jersey · Small businesses · Digital solutions',
+        pt: 'Jersey · Pequenos negócios · Soluções digitais'
+      },
+      'hero-title': {
+        en: 'Your brand deserves a black & gold online presence that feels premium, not generic.',
+        pt: 'A tua marca merece uma presença online em preto e dourado com ar premium, não genérico.'
+      },
+      'hero-subtitle': {
+        en: 'AP Digital Solutions builds modern, minimalist websites and chatbots for Jersey businesses – using your logo, your colours and your story, not someone else’s.',
+        pt: 'A AP Digital Solutions cria websites modernos e chatbots minimalistas para negócios em Jersey – usando o teu logo, as tuas cores e a tua história, não as de outra empresa.'
+      },
+      'hero-cta-main': {
+        en: '⚡ Start a WhatsApp conversation',
+        pt: '⚡ Começar conversa no WhatsApp'
+      },
+      'hero-cta-secondary': {
+        en: 'Why being online matters',
+        pt: 'Por que é importante estar online'
+      },
+      'hero-note': {
+        en: 'No Apple logos, no copy-paste themes. Just AP Digital Solutions and a clear, strong identity for your business.',
+        pt: 'Sem logótipos da Apple, sem temas copiados. Só a AP Digital Solutions e uma identidade forte e clara para o teu negócio.'
+      },
 
-  // Simple header background tweak on scroll
-  window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 40) {
-      header.style.background = 'rgba(3,3,6,0.94)';
-    } else {
-      header.style.background = 'rgba(3,3,6,0.85)';
-    }
-  });
+      'why-eyebrow': { en: 'Why online', pt: 'Porquê online' },
+      'why-title': {
+        en: 'If people can’t find you online, they find someone else.',
+        pt: 'Se as pessoas não te encontram online, encontram outra pessoa.'
+      },
+      'why-subtitle': {
+        en: 'Many Jersey businesses still don’t have a serious online presence. That means there is space for you – if your brand looks and feels trustworthy when people click.',
+        pt: 'Muitos negócios em Jersey ainda não têm uma presença online séria. Isso significa que há espaço para ti – se a tua marca parecer confiável quando as pessoas clicam.'
+      },
+      'why1-tag': { en: '01 · Trust', pt: '01 · Confiança' },
+      'why1-title': { en: 'Look professional in seconds', pt: 'Parecer profissional em segundos' },
+      'why1-text': {
+        en: 'A black & gold website with your logo and message shows that you care about quality. It feels like a real brand, not a side project.',
+        pt: 'Um website em preto e dourado com o teu logo e mensagem mostra que te preocupas com qualidade. Parece uma marca real, não um projeto de passagem.'
+      },
+      'why2-tag': { en: '02 · Speed', pt: '02 · Velocidade' },
+      'why2-title': { en: 'Answer even when you’re busy', pt: 'Responder mesmo quando estás ocupado' },
+      'why2-text': {
+        en: 'Simple chatbots and clear contact buttons help clients reach you any time – while you work, rest or spend time with family.',
+        pt: 'Chatbots simples e botões de contacto claros ajudam os clientes a chegar até ti a qualquer hora – enquanto trabalhas, descansas ou estás com a família.'
+      },
+      'why3-tag': { en: '03 · Simplicity', pt: '03 · Simplicidade' },
+      'why3-title': { en: 'Everything leads back to you', pt: 'Tudo leva de volta a ti' },
+      'why3-text': {
+        en: 'Instagram, website, WhatsApp – everything points in one direction: real conversations with real clients, not likes without results.',
+        pt: 'Instagram, website, WhatsApp – tudo aponta para o mesmo sítio: conversas reais com clientes reais, não só “likes” sem resultado.'
+      },
 
-  // Video autoplay handling (mobile-friendly)
-  const video = document.getElementById('hero-video');
+      'services-eyebrow': { en: 'Services', pt: 'Serviços' },
+      'services-title': {
+        en: 'What AP Digital Solutions creates for your brand',
+        pt: 'O que a AP Digital Solutions cria para a tua marca'
+      },
+      'services-subtitle': {
+        en: 'Black & gold design, clear structure and everything connected to your WhatsApp and social media.',
+        pt: 'Design em preto e dourado, estrutura clara e tudo ligado ao teu WhatsApp e redes sociais.'
+      },
+      'svc1-title': {
+        en: 'One-page websites in black & gold',
+        pt: 'Websites de uma página em preto e dourado'
+      },
+      'svc1-text': {
+        en: 'Minimal websites focused on your services, photos and story. Perfect for small businesses who want to look premium without feeling complicated.',
+        pt: 'Websites minimalistas focados nos teus serviços, fotos e história. Perfeitos para pequenos negócios que querem ter ar premium sem complicações.'
+      },
+      'svc2-title': {
+        en: 'Chatbots that talk like your brand',
+        pt: 'Chatbots que falam como a tua marca'
+      },
+      'svc2-text': {
+        en: 'Simple bots that answer common questions and collect leads, then send everything to your WhatsApp or email – without showing the number on the page.',
+        pt: 'Bots simples que respondem às perguntas mais comuns e recolhem contactos, enviando tudo para o teu WhatsApp ou email – sem mostrar o número na página.'
+      },
+      'svc3-title': {
+        en: 'Social link & promo pages',
+        pt: 'Páginas de links e promoções'
+      },
+      'svc3-text': {
+        en: 'A clean black & gold page that becomes your “link in bio”: Instagram, Facebook, website, WhatsApp and any promotion you want to highlight.',
+        pt: 'Uma página limpa em preto e dourado que se torna o teu “link na bio”: Instagram, Facebook, website, WhatsApp e qualquer promoção que queiras destacar.'
+      },
 
-  if (video) {
-    video.muted = true;
-    const playAttempt = video.play();
-    if (playAttempt !== undefined) {
-      playAttempt.catch(() => {
-        // Se o autoplay for bloqueado, deixamos os controlos visíveis
-        video.controls = true;
+      'story-eyebrow': { en: 'Brand story', pt: 'História da marca' },
+      'story-title': {
+        en: 'AP Digital Solutions was built between real shifts and real life in Jersey.',
+        pt: 'A AP Digital Solutions foi construída entre turnos reais e a vida real em Jersey.'
+      },
+      'story-subtitle': {
+        en: 'This project started from someone who works in healthcare in Jersey and, in free time, builds digital solutions for local companies. That’s why we understand small businesses that don’t live all day behind a computer.',
+        pt: 'Este projeto começou com alguém que trabalha na área da saúde em Jersey e, no tempo livre, constrói soluções digitais para empresas locais. Por isso percebemos bem pequenos negócios que não vivem o dia todo atrás de um computador.'
+      },
+      'step1-title': { en: 'Quick WhatsApp chat', pt: 'Conversa rápida no WhatsApp' },
+      'step1-text': {
+        en: 'You send a short message with your business type, social links and what you would like to change online.',
+        pt: 'Envias uma mensagem curta com o tipo de negócio, links das redes sociais e o que gostavas de mudar online.'
+      },
+      'step2-title': { en: 'Simple plan', pt: 'Plano simples' },
+      'step2-text': {
+        en: 'Together we choose the first step: a one-page website, a chatbot, a link page – or a small combination that fits your time and budget.',
+        pt: 'Juntos escolhemos o primeiro passo: um website de uma página, um chatbot, uma página de links – ou uma pequena combinação que caiba no teu tempo e bolso.'
+      },
+      'step3-title': { en: 'Design & build in black & gold', pt: 'Design & construção em preto e dourado' },
+      'step3-text': {
+        en: 'We use your logo, photos and text to create a dark, elegant layout. You approve everything before it goes live.',
+        pt: 'Usamos o teu logo, fotos e texto para criar um layout escuro e elegante. Aprovas tudo antes de ficar online.'
+      },
+      'step4-title': { en: 'Launch & refine', pt: 'Lançamento & ajustes' },
+      'step4-text': {
+        en: 'Your domain and social links point to the new page. After that, we can adjust based on how clients interact with it.',
+        pt: 'O teu domínio e links das redes passam a apontar para a nova página. Depois disso, ajustamos consoante a forma como os clientes a utilizam.'
+      },
+      'why-card-tag': { en: 'Why brands choose AP', pt: 'Porque escolhem a AP' },
+      'why-card-title': {
+        en: 'Why local brands trust AP Digital Solutions',
+        pt: 'Porque é que marcas locais confiam na AP Digital Solutions'
+      },
+      'why-card-list': {
+        en: '• Communication without heavy technical language.\n• Black & gold design that matches your logo and feels premium.\n• Focus on Jersey companies: cleaning, carpentry, therapies, cafés and more.\n• Respect for your time – everything organised around your routine.',
+        pt: '• Comunicação sem linguagem técnica pesada.\n• Design em preto e dourado alinhado com o teu logo e com ar premium.\n• Foco em empresas de Jersey: limpezas, carpintarias, terapias, cafés e muito mais.\n• Respeito pelo teu tempo – tudo organizado à volta da tua rotina.'
+      },
+
+      'social-eyebrow': { en: 'Social links', pt: 'Redes sociais' },
+      'social-title': {
+        en: 'One black & gold page behind every link in bio.',
+        pt: 'Uma página em preto e dourado por trás de cada link na bio.'
+      },
+      'social-subtitle': {
+        en: 'AP Digital Solutions can turn your Instagram and other profiles into a single, consistent journey that always leads people back to you.',
+        pt: 'A AP Digital Solutions pode transformar o teu Instagram e outros perfis numa viagem simples e consistente que leva sempre as pessoas de volta a ti.'
+      },
+      'social-body': {
+        en: 'When someone taps the link in your bio, they should immediately understand who you are, what you offer and where to click next. We connect your social content, your website and your WhatsApp into a small, focused page.',
+        pt: 'Quando alguém toca no link da tua bio, deve perceber logo quem és, o que ofereces e onde clicar a seguir. Ligamos o teu conteúdo, o teu website e o teu WhatsApp numa página pequena e focada.'
+      },
+      'social-ig': {
+        en: '📸 Instagram profile',
+        pt: '📸 Perfil de Instagram'
+      },
+      'social-fb': {
+        en: '👍 Facebook page',
+        pt: '👍 Página de Facebook'
+      },
+      'social-site': {
+        en: '🌐 apdigitalsolutions.digital',
+        pt: '🌐 apdigitalsolutions.digital'
+      },
+
+      'contact-eyebrow': { en: 'Contact', pt: 'Contacto' },
+      'contact-title': {
+        en: 'Ready to upgrade how your brand looks online?',
+        pt: 'Pronto para melhorar a forma como a tua marca aparece online?'
+      },
+      'contact-subtitle': {
+        en: 'No pressure, no big sales pitch. Just a short message to see what makes sense for you now.',
+        pt: 'Sem pressão e sem grandes discursos de vendas. Só uma mensagem breve para ver o que faz sentido para ti agora.'
+      },
+      'contact-whatsapp': {
+        en: 'The fastest way to reach AP Digital Solutions is through WhatsApp.  Click the button to open a chat – you don’t need to save any number.',
+        pt: 'A forma mais rápida de falar com a AP Digital Solutions é pelo WhatsApp. Clica no botão para abrir a conversa – não precisas de guardar nenhum número.'
+      },
+      'contact-cta': {
+        en: 'Open WhatsApp chat',
+        pt: 'Abrir conversa no WhatsApp'
+      },
+      'contact-email': {
+        en: 'Prefer email? <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a>',
+        pt: 'Preferes email? <a href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a>'
+      },
+      'contact-tag': { en: 'What to say?', pt: 'O que dizer?' },
+      'contact-h3': { en: 'Easy first message ideas', pt: 'Ideias simples para a primeira mensagem' },
+      'contact-list': {
+        en: '• “I have a cleaning company and want a black & gold page.”\n• “I’m a carpenter and would like to show my work in a modern way.”\n• “I want a simple chatbot connected to WhatsApp.”\n• “I never had a website – where should I start?”',
+        pt: '• “Tenho uma empresa de limpezas e quero uma página em preto e dourado.”\n• “Sou carpinteiro e gostava de mostrar o meu trabalho de forma moderna.”\n• “Quero um chatbot simples ligado ao WhatsApp.”\n• “Nunca tive website – por onde começo?”'
+      },
+
+      'chat-header': {
+        en: 'AP Brand Assistant',
+        pt: 'Assistente da Marca AP'
+      },
+      'chat-badge': { en: 'Demo', pt: 'Demo' },
+      'chat-welcome': {
+        en: 'Hi 👋 I’m the AP assistant. Ask me about black & gold websites, chatbots or social link pages.',
+        pt: 'Olá 👋 Sou o assistente da AP. Pergunta-me sobre websites em preto e dourado, chatbots ou páginas de links.'
+      },
+      'chat-send': { en: 'Send', pt: 'Enviar' },
+
+      'footer-text': {
+        en: '© 2025 AP Digital Solutions · Jersey, Channel Islands · The Solutions to Be Online',
+        pt: '© 2025 AP Digital Solutions · Jersey, Channel Islands · As soluções para estar online'
+      }
+    };
+
+    function applyLang(lang) {
+      state.lang = lang;
+      Object.keys(tr).forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const value = tr[id][lang];
+
+        if (['why-card-list', 'contact-list'].includes(id)) {
+          el.innerHTML = value.split('\n').map(line => `<li>${line.replace(/^•\s*/, '')}</li>`).join('');
+        } else if (id === 'contact-email') {
+          el.innerHTML = value;
+        } else {
+          el.textContent = value;
+        }
       });
+
+      document.getElementById('lang-toggle').textContent = lang === 'en' ? 'PT' : 'EN';
     }
-  }
-</script>
+
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      applyLang(state.lang === 'en' ? 'pt' : 'en');
+    });
+
+    // começa em inglês
+    applyLang('en');
+
+    // ---------- CHATBOT DEMO ----------
+    const messagesEl = document.getElementById('chat-messages');
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('chat-input');
+
+    function addMsg(role, text) {
+      const wrap = document.createElement('div');
+      wrap.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      bubble.textContent = text;
+      wrap.appendChild(bubble);
+      messagesEl.appendChild(wrap);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function botReply(text) {
+      const q = text.toLowerCase();
+      const lang = state.lang;
+
+      if (q.includes('website') || q.includes('site')) {
+        return lang === 'en'
+          ? 'We can design a black & gold one-page site that tells your story, shows your services and gives clients a clear way to contact you.'
+          : 'Podemos criar um site de uma página em preto e dourado que conte a tua história, mostre os teus serviços e dê aos clientes uma forma clara de contacto.';
+      }
+      if (q.includes('chatbot') || q.includes('bot')) {
+        return lang === 'en'
+          ? 'Our chatbots keep things simple, answer common questions and send leads straight to your WhatsApp or email.'
+          : 'Os nossos chatbots mantêm tudo simples, respondem às perguntas mais comuns e enviam contactos diretamente para o teu WhatsApp ou email.';
+      }
+      if (q.includes('instagram') || q.includes('social') || q.includes('facebook')) {
+        return lang === 'en'
+          ? 'We can build a black & gold link page for your Instagram bio so people always know where to go next.'
+          : 'Podemos criar uma página de links em preto e dourado para a tua bio do Instagram, para que as pessoas saibam sempre para onde ir a seguir.';
+      }
+
+      return lang === 'en'
+        ? 'Nice question. For a detailed answer, tap “Open WhatsApp chat” and we can talk about your brand with real examples.'
+        : 'Boa pergunta. Para uma resposta mais detalhada, carrega em “Abrir conversa no WhatsApp” e falamos da tua marca com exemplos reais.';
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      addMsg('user', text);
+      input.value = '';
+      setTimeout(() => addMsg('bot', botReply(text)), 300);
+    });
+  </script>
 </body>
 </html>
