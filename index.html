@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AP Digital Solutions – Digital Luxury for Modern Businesses</title>
+  <title>AP Digital Solutions Jersey – Digital Luxury for Modern Businesses</title>
   <meta name="description" content="AP Digital Solutions cria websites premium, chatbots inteligentes e vídeos para negócios modernos em Jersey. Estilo Apple + Luxo, com entrega rápida e suporte direto por WhatsApp.">
   <meta name="author" content="AP Digital Solutions">
+  <link rel="icon" type="image/png" href="logo-ap.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,11 +31,7 @@
       --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.7);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
@@ -47,18 +44,14 @@
       background: transparent;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     /* Lang toggle */
     .lang-en { display: none; }
     html[data-lang="en"] .lang-en { display: inline; }
+    html[data-lang="en"] .lang-en.inline-block { display: inline-block; }
     html[data-lang="en"] .lang-pt { display: none; }
     html[data-lang="pt"] .lang-pt { display: inline; }
-    html[data-lang="pt"] .lang-en.inline-block { display: none; }
-    html[data-lang="en"] .lang-en.inline-block { display: inline-block; }
 
     .container {
       max-width: 1120px;
@@ -95,14 +88,17 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-      background: radial-gradient(circle at 30% 0, #ffe7a0, #f0ad39 45%, #8a5b12 100%);
+      background: black;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 18px;
-      color: #231709;
+    }
+
+    .brand-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .brand-text {
@@ -148,9 +144,7 @@
       transition: width 0.25s ease-out;
     }
 
-    nav a:hover::after {
-      width: 100%;
-    }
+    nav a:hover::after { width: 100%; }
 
     .lang-switch {
       display: inline-flex;
@@ -182,12 +176,8 @@
     }
 
     @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-      .nav {
-        padding-inline: 14px;
-      }
+      nav { display: none; }
+      .nav { padding-inline: 14px; }
     }
 
     /* HERO */
@@ -297,9 +287,7 @@
       text-decoration: none;
     }
 
-    .btn-primary span.icon {
-      font-size: 1rem;
-    }
+    .btn-primary span.icon { font-size: 1rem; }
 
     .btn-ghost {
       display: inline-flex;
@@ -328,22 +316,13 @@
     }
 
     @media (max-width: 600px) {
-      .hero-inner {
-        padding-top: 64px;
-      }
-      .hero-sub {
-        font-size: 0.9rem;
-      }
+      .hero-inner { padding-top: 64px; }
+      .hero-sub { font-size: 0.9rem; }
     }
 
-    /* Sections */
-    main {
-      background: radial-gradient(circle at top, #181824 0, #050509 55%);
-    }
+    main { background: radial-gradient(circle at top, #181824 0, #050509 55%); }
 
-    section {
-      padding: 72px 0;
-    }
+    section { padding: 72px 0; }
 
     .section-header {
       text-align: center;
@@ -375,18 +354,11 @@
       gap: 22px;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
     @media (max-width: 900px) {
-      .grid-3, .grid-2 {
-        grid-template-columns: 1fr;
-      }
+      .grid-3, .grid-2 { grid-template-columns: 1fr; }
     }
 
     .card {
@@ -408,9 +380,7 @@
       transition: opacity 0.35s ease-out;
     }
 
-    .card:hover::before {
-      opacity: 1;
-    }
+    .card:hover::before { opacity: 1; }
 
     .card-kicker {
       font-size: 0.7rem;
@@ -480,9 +450,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.04);
     }
 
-    .process-step:last-child {
-      border-bottom: none;
-    }
+    .process-step:last-child { border-bottom: none; }
 
     .step-number {
       width: 28px;
@@ -516,9 +484,7 @@
     }
 
     @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+      .contact-grid { grid-template-columns: 1fr; }
     }
 
     .contact-card {
@@ -553,9 +519,7 @@
       color: var(--text-muted);
     }
 
-    .contact-list-mini li {
-      margin-bottom: 4px;
-    }
+    .contact-list-mini li { margin-bottom: 4px; }
 
     .email-link {
       color: var(--accent-gold);
@@ -584,7 +548,6 @@
       background: radial-gradient(circle, #3af98b, #009b3a);
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid rgba(255,255,255,0.06);
       padding: 18px 20px 26px;
@@ -603,9 +566,7 @@
       flex-wrap: wrap;
     }
 
-    footer a {
-      color: var(--accent-gold);
-    }
+    footer a { color: var(--accent-gold); }
 
     /* WhatsApp floating button */
     .wa-float {
@@ -643,13 +604,10 @@
     }
 
     @media (max-width: 600px) {
-      .wa-btn {
-        padding-inline: 14px;
-        font-size: 0.8rem;
-      }
+      .wa-btn { padding-inline: 14px; font-size: 0.8rem; }
     }
 
-    /* Simple chatbot demo */
+    /* Chatbox (demo) */
     .chatbox {
       position: fixed;
       bottom: 76px;
@@ -715,13 +673,8 @@
       margin-bottom: 8px;
     }
 
-    .chat-msg.bot {
-      justify-content: flex-start;
-    }
-
-    .chat-msg.user {
-      justify-content: flex-end;
-    }
+    .chat-msg.bot { justify-content: flex-start; }
+    .chat-msg.user { justify-content: flex-end; }
 
     .chat-bubble {
       padding: 7px 10px;
@@ -767,10 +720,7 @@
     }
 
     @media (max-width: 600px) {
-      .chatbox {
-        right: 12px;
-        bottom: 72px;
-      }
+      .chatbox { right: 12px; bottom: 72px; }
     }
   </style>
 </head>
@@ -778,7 +728,9 @@
   <header>
     <div class="nav container">
       <a href="#top" class="brand" aria-label="AP Digital Solutions">
-        <div class="brand-logo">AP</div>
+        <div class="brand-logo">
+          <img src="logo-ap.png" alt="AP Digital Solutions logo" class="brand-logo-img">
+        </div>
         <div class="brand-text">
           <span>AP DIGITAL SOLUTIONS</span>
           <span class="lang-pt">Jersey · Channel Islands</span>
@@ -812,8 +764,8 @@
 
   <main id="top">
     <section class="hero-wrapper">
-      <!-- Troca o src abaixo pelo teu vídeo hero (MP4) -->
-      <video class="hero-video" src="media/apdigital-hero.mp4" autoplay muted loop playsinline poster="" aria-hidden="true"></video>
+      <!-- o teu vídeo (ficheiro hero-video.mp4 está na raiz do repo) -->
+      <video class="hero-video" src="hero-video.mp4" autoplay muted loop playsinline poster="" aria-hidden="true"></video>
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-inner container">
@@ -868,7 +820,7 @@
       </div>
     </section>
 
-    <!-- WHY / VALUE -->
+    <!-- WHY -->
     <section id="why">
       <div class="container">
         <div class="section-header">
@@ -1190,10 +1142,10 @@
                 </div>
                 <p class="step-body-text">
                   <span class="lang-pt">
-                    O site entra no ar, fazemos pequenos ajustes e combinamos possíveis melhorias futuras (chatbot, vídeo, etc.).
+                    O site entra no ar, fazemos pequenos ajustes e combinamos melhorias futuras (chatbot, vídeo, etc.).
                   </span>
                   <span class="lang-en">
-                    Site goes live, we refine small details and plan future upgrades (chatbot, video, etc.).
+                    Site goes live, we refine details and plan future upgrades (chatbot, video, etc.).
                   </span>
                 </p>
               </div>
@@ -1238,14 +1190,12 @@
                   <span class="lang-pt">Nome do negócio</span>
                   <span class="lang-en">Business name</span>
                 </label>
-                <input type="text" name="business" placeholder="" style="width:100%; margin-top:3px; padding:8px 9px; border-radius:10px; border:1px solid rgba(255,255,255,0.08); background:#050509; color:var(--text-main); font-size:0.8rem;">
+                <input type="text" name="business" style="width:100%; margin-top:3px; padding:8px 9px; border-radius:10px; border:1px solid rgba(255,255,255,0.08); background:#050509; color:var(--text-main); font-size:0.8rem;">
               </div>
 
               <div style="margin-bottom:10px;">
-                <label style="font-size:0.8rem; color:var(--apple-grey);">
-                  Email
-                </label>
-                <input type="email" name="email" placeholder="" style="width:100%; margin-top:3px; padding:8px 9px; border-radius:10px; border:1px solid rgba(255,255,255,0.08); background:#050509; color:var(--text-main); font-size:0.8rem;">
+                <label style="font-size:0.8rem; color:var(--apple-grey);">Email</label>
+                <input type="email" name="email" style="width:100%; margin-top:3px; padding:8px 9px; border-radius:10px; border:1px solid rgba(255,255,255,0.08); background:#050509; color:var(--text-main); font-size:0.8rem;">
               </div>
 
               <div style="margin-bottom:10px;">
@@ -1254,22 +1204,10 @@
                   <span class="lang-en">What type of project?</span>
                 </label>
                 <select name="type" style="width:100%; margin-top:3px; padding:8px 9px; border-radius:10px; border:1px solid rgba(255,255,255,0.08); background:#050509; color:var(--text-main); font-size:0.8rem;">
-                  <option value="website">
-                    <span class="lang-pt">Website</span>
-                    <span class="lang-en">Website</span>
-                  </option>
-                  <option value="chatbot">
-                    <span class="lang-pt">Chatbot</span>
-                    <span class="lang-en">Chatbot</span>
-                  </option>
-                  <option value="video">
-                    <span class="lang-pt">Vídeo & Branding</span>
-                    <span class="lang-en">Video & Branding</span>
-                  </option>
-                  <option value="bundle">
-                    <span class="lang-pt">Pacote completo</span>
-                    <span class="lang-en">Full bundle</span>
-                  </option>
+                  <option value="website">Website</option>
+                  <option value="chatbot">Chatbot</option>
+                  <option value="video">Vídeo / Video</option>
+                  <option value="bundle">Pacote completo / Full bundle</option>
                 </select>
               </div>
 
@@ -1305,9 +1243,7 @@
               </span>
             </p>
 
-            <p class="contact-label" style="margin-top:12px;">
-              Email
-            </p>
+            <p class="contact-label" style="margin-top:12px;">Email</p>
             <p class="contact-main-text">
               <a class="email-link" href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a>
             </p>
@@ -1329,9 +1265,7 @@
       <div>
         © <span id="year"></span> AP Digital Solutions · Jersey
       </div>
-      <div>
-        apdigitalsolutions.digital
-      </div>
+      <div>apdigitalsolutions.digital</div>
     </div>
   </footer>
 
@@ -1375,17 +1309,16 @@
       </div>
     </div>
     <form class="chatbox-input" id="chat-form">
-      <input id="chat-input" type="text" autocomplete="off"
-        placeholder="Escreve aqui..." />
+      <input id="chat-input" type="text" autocomplete="off" placeholder="Escreve aqui..." />
       <button type="submit">↩</button>
     </form>
   </div>
 
   <script>
-    // Year
+    // ano no rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Lang switcher
+    // switch PT / EN
     const htmlEl = document.documentElement;
     const langButtons = document.querySelectorAll('.lang-btn');
 
@@ -1400,7 +1333,7 @@
       btn.addEventListener('click', () => setLang(btn.dataset.lang-target));
     });
 
-    // Simple rule-based replies
+    // chatbot demo
     const chatForm = document.getElementById('chat-form');
     const chatBody = document.getElementById('chat-body');
     const chatInput = document.getElementById('chat-input');
@@ -1422,7 +1355,7 @@
 
       if (t.includes('price') || t.includes('preço') || t.includes('cost')) {
         return lang === 'pt'
-          ? 'Posso adaptar o projeto ao teu orçamento. Normalmente, landing pages simples começam em valores acessíveis para pequenos negócios de Jersey.'
+          ? 'Posso adaptar o projeto ao teu orçamento. Landing pages simples começam em valores acessíveis para pequenos negócios de Jersey.'
           : 'I can adapt the project to your budget. Simple landing pages usually start at a level that works well for small Jersey businesses.';
       }
       if (t.includes('chatbot')) {
@@ -1457,4 +1390,4 @@
     });
   </script>
 </body>
-</html>
+  </html>
