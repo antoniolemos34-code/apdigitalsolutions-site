@@ -2,37 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>AP Digital Solutions – Websites & SmartAI Automations</title>
-  <meta name="description"
-        content="AP Digital Solutions builds modern websites, chatbots and AI automations for local businesses. SmartAI Business Automation turns your business into autopilot.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AP Digital Solutions – Websites & AI Automations</title>
 
-  <!-- Font -->
+  <meta name="description" content="AP Digital Solutions builds modern websites and AI automations (SmartAI) for local businesses. Simple, clear and done-for-you.">
+  <meta name="author" content="AP Digital Solutions">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #050507;
       --bg-soft: #0b0b10;
-      --panel: #111119;
-      --panel-soft: #151521;
+      --panel: #111118;
       --text-main: #f5f5f7;
-      --text-muted: #a1a1aa;
-      --accent: #f5b84b;
-      --accent-soft: rgba(245, 184, 75, 0.18);
-      --border-subtle: rgba(255, 255, 255, 0.06);
+      --text-muted: #a0a0aa;
+      --gold: #f5b84b;
+      --gold-soft: #ffdd86;
+      --border-subtle: #262635;
       --radius-lg: 26px;
-      --radius-md: 18px;
+      --radius-md: 16px;
       --radius-pill: 999px;
-      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
+      --shadow-soft: 0 26px 80px rgba(0, 0, 0, 0.8);
     }
 
     * {
@@ -43,11 +37,10 @@
 
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #111118 0, #02020a 55%);
+        "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151521 0, #050507 40%, #020204 100%);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
     }
 
     a {
@@ -56,151 +49,156 @@
     }
 
     .page {
-      max-width: 1120px;
+      min-height: 100vh;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 20px 18px 80px;
+      padding: 24px 18px 80px;
     }
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      padding: 10px 0 24px;
+      align-items: center;
+      margin-bottom: 32px;
+      gap: 14px;
     }
 
-    .logo {
-      display: flex;
+    .logo-mark {
+      display: inline-flex;
       align-items: center;
       gap: 10px;
     }
 
-    .logo-mark {
+    .logo-circle {
       width: 32px;
       height: 32px;
-      border-radius: 14px;
-      background: radial-gradient(circle at 30% 20%, #ffe19c, #f5b84b 45%, #8a5a12 100%);
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, var(--gold-soft), var(--gold));
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
       font-size: 0.9rem;
       color: #111;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.65);
     }
 
-    .logo-text-main {
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-size: 0.95rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
-      font-size: 0.9rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .logo-text-sub {
-      font-size: 0.75rem;
+    .logo-text span:last-child {
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
     nav {
       display: flex;
+      gap: 18px;
       align-items: center;
-      gap: 16px;
       font-size: 0.85rem;
       color: var(--text-muted);
     }
 
     nav a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      transition: background 0.2s, color 0.2s;
+      position: relative;
+      padding-bottom: 2px;
     }
 
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--text-main);
+    nav a:hover::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 16px;
+      height: 1px;
+      background: var(--gold);
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      padding: 4px 10px 4px 5px;
       border-radius: var(--radius-pill);
-      padding: 4px 10px 4px 4px;
-      background: rgba(12, 12, 18, 0.9);
-      border: 1px solid rgba(245, 184, 75, 0.35);
-      color: var(--text-muted);
+      border: 1px solid rgba(245, 184, 75, 0.3);
+      background: linear-gradient(120deg, rgba(245, 184, 75, 0.16), rgba(0, 0, 0, 0.6));
       font-size: 0.75rem;
+      color: var(--gold-soft);
+      margin-bottom: 10px;
     }
 
     .pill-dot {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #ffe19c, #f5b84b 45%, #8a5a12 100%);
-      display: inline-flex;
+      background: radial-gradient(circle at 30% 30%, var(--gold-soft), var(--gold));
+      display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       color: #111;
-      box-shadow: 0 0 18px rgba(245, 184, 75, 0.8);
     }
 
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    /* Hero */
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-      gap: 30px;
-      align-items: center;
-      padding: 28px 20px;
+      background: radial-gradient(circle at top left, rgba(245, 184, 75, 0.12), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(60, 132, 246, 0.18), transparent 55%),
+                  var(--bg-soft);
       border-radius: var(--radius-lg);
-      background:
-        radial-gradient(circle at top left, rgba(245, 184, 75, 0.25) 0, transparent 52%),
-        linear-gradient(135deg, #050509, #080812 40%, #050509 100%);
-      border: 1px solid var(--border-subtle);
+      border: 1px solid rgba(94, 94, 120, 0.6);
       box-shadow: var(--shadow-soft);
-      margin-bottom: 40px;
+      padding: 26px 22px 26px;
+      display: grid;
+      gap: 22px;
     }
 
-    .hero-title {
-      font-size: clamp(2.3rem, 4vw, 2.9rem);
-      line-height: 1.03;
-      letter-spacing: 0.02em;
-      margin: 16px 0 12px;
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 3fr 2fr;
+        padding: 34px 30px 32px;
+      }
     }
 
-    .hero-title span {
-      background: linear-gradient(135deg, #ffd77a, #f5b84b);
+    .hero-main h1 {
+      font-size: clamp(2.15rem, 3.1vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .hero-main h1 span {
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
       -webkit-background-clip: text;
       color: transparent;
     }
 
-    .hero-sub {
+    .hero-main p.lead {
       font-size: 0.98rem;
       color: var(--text-muted);
-      max-width: 460px;
+      max-width: 480px;
       margin-bottom: 18px;
     }
 
-    .badge-row {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .badge {
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(12, 12, 18, 0.8);
-      color: var(--text-muted);
-    }
-
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 12px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
     .btn {
@@ -208,337 +206,265 @@
       align-items: center;
       justify-content: center;
       padding: 10px 18px;
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
       font-size: 0.9rem;
       font-weight: 500;
-      border: 1px solid transparent;
       cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease,
-        background 0.15s ease, border-color 0.15s ease;
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease, border-color 0.14s ease;
+      text-decoration: none;
       white-space: nowrap;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #f5b84b, #ffdf92);
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
       color: #111;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.9);
     }
 
     .btn-ghost {
       background: transparent;
-      border-color: rgba(245, 184, 75, 0.55);
-      color: var(--accent);
+      color: var(--text-main);
+      border-color: rgba(245, 184, 75, 0.6);
     }
 
     .btn-ghost:hover {
-      background: rgba(245, 184, 75, 0.12);
+      background: rgba(245, 184, 75, 0.06);
     }
 
     .hero-footnote {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
-    .hero-right {
-      border-radius: 22px;
-      background: radial-gradient(circle at top, rgba(245, 184, 75, 0.2), transparent 55%),
-        linear-gradient(145deg, #0b0b14, #050508);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 18px 18px 20px;
+    .hero-footnote span {
+      color: var(--gold-soft);
+    }
+
+    .hero-side {
+      border-radius: var(--radius-md);
+      background: radial-gradient(circle at top, rgba(245, 184, 75, 0.22), rgba(20, 20, 30, 0.96));
+      border: 1px solid rgba(96, 96, 120, 0.7);
+      padding: 16px 16px 18px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 14px;
     }
 
-    .mini-header {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .mini-pill {
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(7, 160, 80, 0.16);
-      border: 1px solid rgba(34, 197, 94, 0.4);
-      font-size: 0.7rem;
-      color: #bbf7d0;
-    }
-
-    .panel {
-      border-radius: 18px;
-      background: linear-gradient(150deg, #101018, #070711);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 14px 14px 16px;
-    }
-
-    .panel-title {
-      font-size: 0.86rem;
+    .hero-side h2 {
+      font-size: 1rem;
       margin-bottom: 4px;
     }
 
-    .panel-sub {
-      font-size: 0.78rem;
+    .hero-side p {
+      font-size: 0.84rem;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 0.7rem;
-    }
-
-    .tag {
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #e5e7eb;
-    }
-
-    .services {
-      margin-bottom: 32px;
-    }
-
-    .section-heading {
-      margin-bottom: 14px;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .section-heading h2 {
-      font-size: 1.35rem;
-    }
-
-    .section-heading p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .services-grid {
+    .metric-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 6px;
     }
 
-    .service-card {
-      border-radius: var(--radius-md);
-      background: radial-gradient(circle at top right, #1b1b2b, #090912);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 16px 16px 18px;
+    .metric-card {
+      background: rgba(5, 5, 10, 0.82);
+      border-radius: 14px;
+      padding: 10px 10px 9px;
+      border: 1px solid rgba(69, 69, 94, 0.9);
     }
 
-    .service-label {
-      font-size: 0.75rem;
-      color: var(--accent);
+    .metric-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
       margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
     }
 
-    .service-card h3 {
+    .metric-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold-soft);
+    }
+
+    .metric-note {
+      font-size: 0.7rem;
+      color: #9ea0b5;
+      margin-top: 2px;
+    }
+
+    /* Sections */
+    section {
+      background: rgba(7, 7, 15, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(38, 38, 60, 0.9);
+      padding: 22px 18px 22px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.85);
+    }
+
+    section + section {
+      margin-top: 14px;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+
+    section > p.section-lead {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      max-width: 620px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(245, 184, 75, 0.16), rgba(10, 10, 16, 0.98));
+      border-radius: var(--radius-md);
+      padding: 14px 14px 16px;
+      border: 1px solid rgba(55, 55, 80, 0.9);
+    }
+
+    .card h3 {
       font-size: 1rem;
       margin-bottom: 6px;
     }
 
-    .service-card p {
+    .card p {
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 10px;
     }
 
-    .service-list {
-      list-style: none;
-      font-size: 0.8rem;
+    .card ul {
+      margin-top: 6px;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      display: grid;
-      gap: 3px;
+      padding-left: 18px;
     }
 
-    .service-list li::before {
-      content: "•";
-      margin-right: 6px;
-      color: var(--accent);
+    /* SmartAI section */
+    #smartai {
+      background: radial-gradient(circle at top left, rgba(245, 184, 75, 0.16), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(62, 140, 255, 0.18), transparent 60%),
+                  #050507;
+      border-color: rgba(245, 184, 75, 0.35);
     }
 
-    .smartai-section {
-      margin-bottom: 34px;
-      padding: 26px 18px 26px;
-      border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top left, rgba(245, 184, 75, 0.22), transparent 60%),
-        linear-gradient(135deg, #050509, #0a0a14);
-      border: 1px solid rgba(245, 184, 75, 0.3);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .smartai-inner {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .smartai-header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .smartai-header h2 {
+    #smartai h2 {
       font-size: 1.5rem;
+      margin-bottom: 8px;
     }
 
-    .smartai-header p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 430px;
+    #smartai .smartai-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      #smartai .smartai-grid {
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+        align-items: flex-start;
+      }
     }
 
     .smartai-list {
       list-style: none;
-      font-size: 0.85rem;
+      padding: 0;
+      margin: 10px 0 16px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 6px 20px;
-      margin-bottom: 16px;
-    }
-
-    .smartai-list li {
-      display: flex;
-      align-items: flex-start;
       gap: 6px;
+      font-size: 0.86rem;
+      color: var(--text-main);
     }
 
     .smartai-list li::before {
       content: "✔";
-      color: var(--accent);
-      font-size: 0.8rem;
-      margin-top: 1px;
+      color: var(--gold-soft);
+      margin-right: 6px;
+    }
+
+    .smartai-side-box {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(245, 184, 75, 0.7);
+      background: rgba(5, 5, 10, 0.94);
+      padding: 14px 14px 16px;
+      font-size: 0.85rem;
+    }
+
+    .smartai-side-box h3 {
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+    }
+
+    .smartai-side-box ul {
+      margin-top: 4px;
+      padding-left: 16px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
     }
 
     .smartai-ctas {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .smartai-note {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .steps {
-      margin-bottom: 40px;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .step-card {
-      border-radius: 18px;
-      background: linear-gradient(145deg, #090913, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 14px 14px 16px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .step-number {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      background: rgba(245, 184, 75, 0.15);
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      margin-bottom: 6px;
-    }
-
-    .step-card h3 {
-      font-size: 0.96rem;
-      margin-bottom: 4px;
-      color: var(--text-main);
-    }
-
-    .contact {
-      border-radius: 18px;
-      background: linear-gradient(135deg, #080810, #050509);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 18px 16px 20px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-      gap: 14px;
-      align-items: center;
-    }
-
-    .contact p {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .contact strong {
-      color: var(--accent);
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .contact-links a {
-      font-size: 0.82rem;
-      padding: 7px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--text-muted);
-    }
-
-    .contact-links a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+      margin-top: 10px;
     }
 
     footer {
-      margin-top: 24px;
+      margin-top: 30px;
       font-size: 0.78rem;
       color: var(--text-muted);
       text-align: center;
-      padding-bottom: 40px;
     }
 
-    @media (max-width: 800px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
+    /* Floating SmartAI button */
+    .smartai-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color: #111;
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.85);
+    }
+
+    .smartai-float span {
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding-bottom: 90px;
       }
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 20px 16px 18px;
-      }
-      .hero-right {
-        order: -1;
-      }
-      .contact {
-        grid-template-columns: 1fr;
+      .smartai-float {
+        right: 12px;
+        bottom: 12px;
+        padding-inline: 13px;
       }
     }
   </style>
@@ -546,35 +472,215 @@
 <body>
   <div class="page">
     <header>
-      <div class="logo">
-        <div class="logo-mark">AP</div>
-        <div>
-          <div class="logo-text-main">AP DIGITAL SOLUTIONS</div>
-          <div class="logo-text-sub">Websites & AI Automations · Jersey</div>
+      <div class="logo-mark">
+        <div class="logo-circle">AP</div>
+        <div class="logo-text">
+          <span>AP DIGITAL</span>
+          <span>Websites & AI automations</span>
         </div>
       </div>
       <nav>
-        <a href="#services">Services</a>
-        <a href="#smartai">SmartAI</a>
+        <a href="#services">Websites</a>
+        <a href="#smartai">AI Automations</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="top">
-        <div>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-main">
           <div class="pill">
-            <span class="pill-dot">⚡</span>
-            AI-powered websites & automations for local businesses
+            <div class="pill-dot">⚡</div>
+            Smart websites & AI automations for local businesses
           </div>
-          <h1 class="hero-title">
-            Turn your business into <span>autopilot</span>.
+          <h1>
+            Get your business <span>online</span> and
+            <span>automated</span> – without lifting a finger.
           </h1>
-          <p class="hero-sub">
-            AP Digital Solutions builds clear websites, WhatsApp chat flows and
-            SmartAI automations so you can work less while your business keeps running.
+          <p class="lead">
+            I build clean websites and SmartAI automations that answer messages,
+            send reminders and follow up with your clients 24/7 – so you work less,
+            and your business works more.
           </p>
 
-          <div class="badge-row">
-            <div class="badge">Websites · Chatbots · AI automations</div>
-            <
+          <div class="hero-actions">
+            <a href="#smartai" class="btn btn-primary">See SmartAI automations</a>
+            <a href="https://tally.so/r/rjDRyL" target="_blank" rel="noopener" class="btn btn-ghost">
+              Request a free SmartAI demo
+            </a>
+          </div>
+
+          <p class="hero-footnote">
+            Built for small businesses, freelancers and solo entrepreneurs in
+            <span>Jersey & UK.</span>
+          </p>
+        </div>
+
+        <aside class="hero-side">
+          <div>
+            <h2>Done-for-you service.</h2>
+            <p>
+              You tell me what you do – I create your online presence and automations
+              from A to Z. No tech. No stress. Just results.
+            </p>
+          </div>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Typical response time</div>
+              <div class="metric-value">&lt; 1 min</div>
+              <div class="metric-note">With SmartAI auto-replies</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Follow-ups</div>
+              <div class="metric-value">100%</div>
+              <div class="metric-note">No more forgetting clients</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SERVICES: WEBSITES -->
+      <section id="services">
+        <h2>Websites that look modern and feel simple.</h2>
+        <p class="section-lead">
+          I create clean, mobile-friendly websites that show what you do, connect to
+          your WhatsApp and make it easy for people to contact you – even if you’ve
+          never had a website before.
+        </p>
+
+        <div class="grid grid-cols-2">
+          <div class="card">
+            <h3>Starter Website</h3>
+            <p>Perfect for freelancers and small services.</p>
+            <ul>
+              <li>Single-page website</li>
+              <li>Mobile-friendly design</li>
+              <li>Linked to WhatsApp and social media</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Business Website</h3>
+            <p>For growing businesses that need more space.</p>
+            <ul>
+              <li>Multiple sections (services, about, contact)</li>
+              <li>Photo gallery or portfolio</li>
+              <li>Contact forms and direct WhatsApp links</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SMARTAI AUTOMATIONS -->
+      <section id="smartai">
+        <div class="pill">
+          <div class="pill-dot">🤖</div>
+          SmartAI – Business Automation
+        </div>
+        <h2>Let SmartAI run your business on autopilot.</h2>
+        <p class="section-lead">
+          SmartAI connects your website, WhatsApp and tools like Zapier/Make to send
+          replies, reminders, follow-ups and review requests automatically – so you
+          don’t have to do everything by hand.
+        </p>
+
+        <div class="smartai-grid">
+          <div>
+            <ul class="smartai-list">
+              <li>24/7 instant replies on WhatsApp or your website</li>
+              <li>Automatic booking confirmations and reminders (24h & 2h)</li>
+              <li>Weekly and monthly follow-ups to keep clients coming back</li>
+              <li>Automatic review requests after each service</li>
+              <li>FAQ answers (prices, location, hours, services)</li>
+              <li>Lead capture integrated with Google Sheets / Notion / email</li>
+              <li>All customised to your business and done-for-you</li>
+            </ul>
+
+            <div class="smartai-ctas">
+              <a
+                href="https://tally.so/r/rjDRyL"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary"
+              >
+                Request your SmartAI demo
+              </a>
+              <a
+                href="https://wa.me/447700000000?text=Hi%2C%20I%27m%20interested%20in%20SmartAI%20automations."
+                target="_blank"
+                rel="noopener"
+                class="btn btn-ghost"
+              >
+                WhatsApp: ask a question
+              </a>
+            </div>
+          </div>
+
+          <div class="smartai-side-box">
+            <h3>How it works</h3>
+            <ul>
+              <li>You fill the SmartAI form with your business details.</li>
+              <li>I design the automations (flows, replies, reminders).</li>
+              <li>You review and approve everything.</li>
+              <li>We switch it on – and your business runs on autopilot.</li>
+            </ul>
+            <p style="margin-top:10px; color:var(--text-main); font-size:0.84rem;">
+              SmartAI is ideal for cleaning services, carpenters, barbers, therapists,
+              cafés and any small business that gets a lot of messages.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Let’s talk about your project.</h2>
+        <p class="section-lead">
+          Send me a quick message with what you do and what you’d like to improve –
+          your website, your automations or both – and I’ll come back with simple options.
+        </p>
+
+        <div class="grid grid-cols-2">
+          <div class="card">
+            <h3>Contact options</h3>
+            <ul>
+              <li>WhatsApp (fastest)</li>
+              <li>Email</li>
+              <li>SmartAI request form</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>SmartAI form</h3>
+            <p style="margin-bottom:8px;">
+              If you want to see how SmartAI can work in your business, start here:
+            </p>
+            <a
+              href="https://tally.so/r/rjDRyL"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary"
+            >
+              Open SmartAI request form
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        AP Digital Solutions – Websites & AI Automations · Built in Jersey 🇯🇪
+      </footer>
+    </main>
+  </div>
+
+  <!-- Floating SmartAI button -->
+  <a
+    href="https://tally.so/r/rjDRyL"
+    target="_blank"
+    rel="noopener"
+    class="smartai-float"
+  >
+    <span>🤖</span>
+    SmartAI Demo
+  </a>
+</body>
+</html>
