@@ -2,1052 +2,579 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>AP Digital Solutions – Websites & SmartAI Automations</title>
+  <meta name="description"
+        content="AP Digital Solutions builds modern websites, chatbots and AI automations for local businesses. SmartAI Business Automation turns your business into autopilot.">
 
-  <title>AP Digital Solutions Jersey – Digital Luxury for Modern Businesses</title>
-  <meta name="description" content="AP Digital Solutions creates premium websites, smart chatbots and short videos for modern businesses in Jersey. Clean, modern and professional.">
-  <meta name="author" content="AP Digital Solutions">
-  <link rel="icon" type="image/png" href="logo-ap.png" />
-
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
-      --bg: #f3f4f6;
-      --bg-soft: #ffffff;
-      --bg-soft-alt: #e5e7eb;
-      --border-soft: #d1d5db;
-      --border-subtle: #e5e7eb;
-
-      --text-main: #111827;
-      --text-muted: #6b7280;
-      --text-soft: #9ca3af;
-
-      --accent-gold: #f5b942;
-      --accent-gold-soft: #fcd48a;
-      --accent-ink: #1f2933;
-
-      --radius-xl: 28px;
-      --radius-lg: 20px;
-      --radius-md: 14px;
-
-      --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.12);
+      --bg: #050507;
+      --bg-soft: #0b0b10;
+      --panel: #111119;
+      --panel-soft: #151521;
+      --text-main: #f5f5f7;
+      --text-muted: #a1a1aa;
+      --accent: #f5b84b;
+      --accent-soft: rgba(245, 184, 75, 0.18);
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      scroll-behavior: smooth;
-      background: var(--bg);
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #111118 0, #02020a 55%);
       color: var(--text-main);
-      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    .container {
+    .page {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 20px 18px 80px;
     }
 
-    /* HEADER */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(243,244,246,0.95), rgba(243,244,246,0.92));
-      border-bottom: 1px solid rgba(209,213,219,0.8);
-    }
-
-    .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 20px;
-      gap: 16px;
+      gap: 18px;
+      padding: 10px 0 24px;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .brand-logo {
-      width: 40px;
-      height: 40px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 22px rgba(15,23,42,0.25);
-      background: #111827;
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 30% 20%, #ffe19c, #f5b84b 45%, #8a5a12 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .brand-logo-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .brand-text span:first-child {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.9rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-soft);
+      color: #111;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
     }
 
-    .brand-text span:last-child {
+    .logo-text-main {
       font-weight: 600;
-      font-size: 1rem;
-      color: var(--text-main);
+      letter-spacing: 0.06em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 18px;
-      font-size: 0.9rem;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
     }
 
     nav a {
-      color: var(--text-muted);
-      position: relative;
-      padding-bottom: 2px;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
-      background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-soft));
-      transition: width 0.2s ease-out;
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
     }
 
     nav a:hover {
+      background: rgba(255, 255, 255, 0.06);
       color: var(--text-main);
-    }
-
-    nav a:hover::after { width: 100%; }
-
-    @media (max-width: 768px) {
-      nav { display: none; }
-      .nav { padding-inline: 14px; }
-    }
-
-    /* HERO */
-    .hero-wrapper {
-      position: relative;
-      min-height: 80vh;
-      padding: 40px 0 60px;
-      background: radial-gradient(circle at top, #ffffff 0, #e5e7eb 55%);
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .hero-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-      gap: 30px;
-      align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .hero-layout {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .hero-text-block {
-      padding-right: 10px;
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: rgba(255,255,255,0.9);
-      color: var(--text-soft);
-      font-size: 0.75rem;
-      margin-bottom: 14px;
-      box-shadow: 0 10px 26px rgba(148,163,184,0.35);
-    }
-
-    .hero-kicker-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: radial-gradient(circle, #22c55e, #16a34a);
-    }
-
-    .hero-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: 0.01em;
-      margin-bottom: 12px;
-      color: var(--accent-ink);
-    }
-
-    .hero-title span.glow {
-      background: linear-gradient(135deg, #fbbf24, #f97316, #facc6b);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-sub {
-      color: var(--text-muted);
-      font-size: 0.96rem;
-      max-width: 520px;
-      margin-bottom: 24px;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 20px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-soft));
-      color: #1f2933;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      box-shadow: 0 16px 34px rgba(249, 181, 74, 0.5);
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-primary span.icon { font-size: 1rem; }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: #ffffff;
-      color: var(--text-main);
-      font-size: 0.9rem;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 10px 24px rgba(148,163,184,0.35);
-    }
-
-    .hero-meta {
-      font-size: 0.78rem;
-      color: var(--text-soft);
-    }
-
-    .hero-meta strong {
-      color: var(--accent-gold);
-      font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-      .hero-wrapper { padding-top: 28px; }
-      .hero-sub { font-size: 0.9rem; }
-    }
-
-    /* HERO VIDEO CARD */
-    .hero-video-card {
-      position: relative;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-soft);
-      background: #000;
-      border: 1px solid rgba(17,24,39,0.12);
-    }
-
-    .hero-video {
-      width: 100%;
-      height: 100%;
-      max-height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .hero-video-gradient-top {
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 35%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.55), transparent);
-      pointer-events: none;
-    }
-
-    .hero-video-badge {
-      position: absolute;
-      left: 16px;
-      top: 14px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      color: #e5e7eb;
-      background: rgba(15,23,42,0.75);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-video-badge span.dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
-
-    .hero-video-caption {
-      position: absolute;
-      left: 16px;
-      bottom: 14px;
-      right: 16px;
-      font-size: 0.78rem;
-      color: #e5e7eb;
-      text-shadow: 0 8px 18px rgba(0,0,0,0.9);
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: flex-end;
-    }
-
-    .hero-video-caption span.label {
-      opacity: 0.9;
-    }
-
-    .hero-video-caption span.domain {
-      font-weight: 600;
-    }
-
-    @media (max-width: 600px) {
-      .hero-video-caption {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    /* SECTIONS */
-    main { background: var(--bg); }
-
-    section { padding: 70px 0; }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .section-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.72rem;
-      color: var(--text-soft);
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: 1.7rem;
-      margin-bottom: 8px;
-      color: var(--accent-ink);
-    }
-
-    .section-sub {
-      max-width: 540px;
-      margin: 0 auto;
-      font-size: 0.96rem;
-      color: var(--text-muted);
-    }
-
-    .grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    @media (max-width: 900px) {
-      .grid-3, .grid-2 { grid-template-columns: 1fr; }
-    }
-
-    .card {
-      background: var(--bg-soft);
-      border-radius: var(--radius-lg);
-      padding: 20px 20px 18px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 10px 28px rgba(148,163,184,0.22);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: -50%;
-      background: radial-gradient(circle at top left, rgba(245,185,66,0.22), transparent 55%);
-      opacity: 0;
-      transition: opacity 0.25s ease-out;
-    }
-
-    .card:hover::before { opacity: 1; }
-
-    .card-kicker {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-soft);
-      margin-bottom: 6px;
-    }
-
-    .card-title {
-      font-size: 1.05rem;
-      margin-bottom: 8px;
-    }
-
-    .card-title span {
-      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-soft));
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .card-body {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .card-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-      font-size: 0.84rem;
-      color: var(--text-soft);
-    }
-
-    .card-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-
-    .card-list li::before {
-      content: "•";
-      color: var(--accent-gold);
-      font-size: 1rem;
-      line-height: 1;
-      margin-top: 1px;
     }
 
     .pill {
       display: inline-flex;
       align-items: center;
-      padding: 3px 9px;
+      gap: 8px;
+      border-radius: var(--radius-pill);
+      padding: 4px 10px 4px 4px;
+      background: rgba(12, 12, 18, 0.9);
+      border: 1px solid rgba(245, 184, 75, 0.35);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .pill-dot {
+      width: 20px;
+      height: 20px;
       border-radius: 999px;
-      border: 1px solid rgba(245,185,66,0.8);
-      font-size: 0.72rem;
-      color: #92400e;
-      background: #fffbeb;
-      margin-top: 6px;
-    }
-
-    /* PROCESS */
-    .process-section {
-      background: linear-gradient(to bottom, #e5e7eb, #f3f4f6);
-      border-top: 1px solid var(--border-soft);
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .process-step {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding: 14px 0;
-      border-bottom: 1px dashed var(--border-soft);
-    }
-
-    .process-step:last-child { border-bottom: none; }
-
-    .step-number {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      border: 1px solid rgba(245,185,66,0.9);
-      display: flex;
+      background: radial-gradient(circle at 30% 20%, #ffe19c, #f5b84b 45%, #8a5a12 100%);
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 0.8rem;
-      color: #92400e;
-      background: #fffbeb;
-      flex-shrink: 0;
+      color: #111;
+      box-shadow: 0 0 18px rgba(245, 184, 75, 0.8);
     }
 
-    .step-body-title {
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-      font-weight: 500;
-      color: var(--accent-ink);
-    }
-
-    .step-body-text {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    /* CONTACT */
-    .contact-grid {
+    .hero {
       display: grid;
-      gap: 22px;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
-    }
-
-    @media (max-width: 900px) {
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-
-    .contact-card {
-      background: var(--bg-soft);
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 30px;
+      align-items: center;
+      padding: 28px 20px;
       border-radius: var(--radius-lg);
-      padding: 22px 20px 20px;
+      background:
+        radial-gradient(circle at top left, rgba(245, 184, 75, 0.25) 0, transparent 52%),
+        linear-gradient(135deg, #050509, #080812 40%, #050509 100%);
       border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
+      margin-bottom: 40px;
     }
 
-    .contact-label {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      margin-bottom: 6px;
+    .hero-title {
+      font-size: clamp(2.3rem, 4vw, 2.9rem);
+      line-height: 1.03;
+      letter-spacing: 0.02em;
+      margin: 16px 0 12px;
     }
 
-    .contact-main-text {
-      font-size: 0.96rem;
-      margin-bottom: 12px;
-      color: var(--accent-ink);
+    .hero-title span {
+      background: linear-gradient(135deg, #ffd77a, #f5b84b);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
-    .contact-list-mini {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 8px;
-      font-size: 0.84rem;
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin-bottom: 18px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(12, 12, 18, 0.8);
       color: var(--text-muted);
     }
 
-    .contact-list-mini li { margin-bottom: 4px; }
-
-    .email-link {
-      color: #92400e;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    .badge-tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 3px 9px;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      border: 1px solid var(--border-soft);
-      color: var(--text-soft);
-      gap: 6px;
-      background: #ffffff;
-    }
-
-    .badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
-
-    footer {
-      border-top: 1px solid var(--border-soft);
-      padding: 18px 20px 26px;
-      background: #f9fafb;
-      font-size: 0.8rem;
-      color: var(--text-soft);
-    }
-
-    footer .footer-inner {
-      max-width: 1120px;
-      margin: 0 auto;
+    .hero-ctas {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
     }
 
-    /* WhatsApp floating button */
-    .wa-float {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      z-index: 50;
-    }
-
-    .wa-btn {
-      border-radius: 999px;
-      padding: 9px 14px;
+    .btn {
       display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      border: none;
-      cursor: pointer;
-      background: #22c55e;
-      color: #052e16;
-      font-weight: 600;
-      font-size: 0.82rem;
-      box-shadow: 0 16px 32px rgba(34,197,94,0.5);
-    }
-
-    .wa-icon {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: #052e16;
-      display: flex;
       align-items: center;
       justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
       font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease, border-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f5b84b, #ffdf92);
+      color: #111;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.9);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(245, 184, 75, 0.55);
+      color: var(--accent);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(245, 184, 75, 0.12);
+    }
+
+    .hero-footnote {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-right {
+      border-radius: 22px;
+      background: radial-gradient(circle at top, rgba(245, 184, 75, 0.2), transparent 55%),
+        linear-gradient(145deg, #0b0b14, #050508);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 18px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mini-header {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mini-pill {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(7, 160, 80, 0.16);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      font-size: 0.7rem;
       color: #bbf7d0;
     }
 
-    @media (max-width: 600px) {
-      .wa-btn { padding-inline: 12px; font-size: 0.78rem; }
+    .panel {
+      border-radius: 18px;
+      background: linear-gradient(150deg, #101018, #070711);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 14px 14px 16px;
     }
 
-    /* FORM INPUTS */
-    .form-field {
+    .panel-title {
+      font-size: 0.86rem;
+      margin-bottom: 4px;
+    }
+
+    .panel-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
       margin-bottom: 10px;
     }
 
-    .form-label {
-      font-size: 0.8rem;
-      color: var(--text-soft);
-      display: block;
-      margin-bottom: 3px;
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.7rem;
     }
 
-    .form-input,
-    .form-select,
-    .form-textarea {
-      width: 100%;
-      padding: 8px 9px;
-      border-radius: 10px;
-      border: 1px solid var(--border-soft);
-      background: #f9fafb;
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: #e5e7eb;
+    }
+
+    .services {
+      margin-bottom: 32px;
+    }
+
+    .section-heading {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: 1.35rem;
+    }
+
+    .section-heading p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .service-card {
+      border-radius: var(--radius-md);
+      background: radial-gradient(circle at top right, #1b1b2b, #090912);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 16px 16px 18px;
+    }
+
+    .service-label {
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .service-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .service-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: grid;
+      gap: 3px;
+    }
+
+    .service-list li::before {
+      content: "•";
+      margin-right: 6px;
+      color: var(--accent);
+    }
+
+    .smartai-section {
+      margin-bottom: 34px;
+      padding: 26px 18px 26px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(245, 184, 75, 0.22), transparent 60%),
+        linear-gradient(135deg, #050509, #0a0a14);
+      border: 1px solid rgba(245, 184, 75, 0.3);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .smartai-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .smartai-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .smartai-header h2 {
+      font-size: 1.5rem;
+    }
+
+    .smartai-header p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 430px;
+    }
+
+    .smartai-list {
+      list-style: none;
+      font-size: 0.85rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 6px 20px;
+      margin-bottom: 16px;
+    }
+
+    .smartai-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .smartai-list li::before {
+      content: "✔";
+      color: var(--accent);
+      font-size: 0.8rem;
+      margin-top: 1px;
+    }
+
+    .smartai-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .smartai-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .steps {
+      margin-bottom: 40px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .step-card {
+      border-radius: 18px;
+      background: linear-gradient(145deg, #090913, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 14px 14px 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .step-number {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(245, 184, 75, 0.15);
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+
+    .step-card h3 {
+      font-size: 0.96rem;
+      margin-bottom: 4px;
       color: var(--text-main);
-      font-size: 0.8rem;
-      outline: none;
     }
 
-    .form-textarea { resize: vertical; min-height: 70px; }
+    .contact {
+      border-radius: 18px;
+      background: linear-gradient(135deg, #080810, #050509);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 18px 16px 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+    }
 
-    .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus {
-      border-color: var(--accent-gold);
-      box-shadow: 0 0 0 1px rgba(245,185,66,0.4);
-      background: #ffffff;
+    .contact p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .contact strong {
+      color: var(--accent);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .contact-links a {
+      font-size: 0.82rem;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+    }
+
+    .contact-links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 20px 16px 18px;
+      }
+      .hero-right {
+        order: -1;
+      }
+      .contact {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav container">
-      <a href="#top" class="brand" aria-label="AP Digital Solutions">
-        <div class="brand-logo">
-          <img src="logo-ap.png" alt="AP Digital Solutions logo" class="brand-logo-img">
+  <div class="page">
+    <header>
+      <div class="logo">
+        <div class="logo-mark">AP</div>
+        <div>
+          <div class="logo-text-main">AP DIGITAL SOLUTIONS</div>
+          <div class="logo-text-sub">Websites & AI Automations · Jersey</div>
         </div>
-        <div class="brand-text">
-          <span>AP DIGITAL SOLUTIONS</span>
-          <span>Jersey · Channel Islands</span>
-        </div>
-      </a>
+      </div>
       <nav>
         <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#process">Process</a>
+        <a href="#smartai">SmartAI</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero-wrapper">
-      <div class="container hero-layout">
-        <!-- Text -->
-        <div class="hero-text-block">
-          <div class="hero-kicker">
-            <span class="hero-kicker-dot"></span>
-            <span>Digital studio · Websites · Chatbots · Video</span>
+    <main>
+      <section class="hero" id="top">
+        <div>
+          <div class="pill">
+            <span class="pill-dot">⚡</span>
+            AI-powered websites & automations for local businesses
           </div>
-
           <h1 class="hero-title">
-            Digital <span class="glow">luxury</span> for Jersey businesses.
+            Turn your business into <span>autopilot</span>.
           </h1>
-
           <p class="hero-sub">
-            Clean, professional websites, smart chatbots and short videos designed for clients visiting from their phone.
+            AP Digital Solutions builds clear websites, WhatsApp chat flows and
+            SmartAI automations so you can work less while your business keeps running.
           </p>
 
-          <div class="hero-cta-row">
-            <a href="#contact" class="btn-primary">
-              <span>Start a project</span>
-              <span class="icon">↗</span>
-            </a>
-
-            <a href="https://wa.me/447700704591" target="_blank" rel="noopener" class="btn-ghost">
-              <span class="icon">💬</span>
-              <span>Chat on WhatsApp</span>
-            </a>
-          </div>
-
-          <p class="hero-meta">
-            Official domain: <strong>apdigitalsolutions.digital</strong> · Typical delivery in 3–5 days.
-          </p>
-        </div>
-
-        <!-- Video -->
-        <div class="hero-video-card">
-          <video class="hero-video" src="hero-video.mp4" autoplay muted loop playsinline></video>
-          <div class="hero-video-gradient-top"></div>
-          <div class="hero-video-badge">
-            <span class="dot"></span>
-            <span>AP Digital Solutions Preview</span>
-          </div>
-          <div class="hero-video-caption">
-            <span class="label">Background video in focus</span>
-            <span class="domain">apdigitalsolutions.digital</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY -->
-    <section id="why">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Why AP Digital Solutions</div>
-          <h2 class="section-title">A modern, light website built for Jersey.</h2>
-          <p class="section-sub">
-            Focused on simplicity, clarity and results. Ideal if you want something professional, fast and easy to browse on mobile.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card">
-            <div class="card-kicker">Clean design</div>
-            <h3 class="card-title">
-              <span>Professional visuals</span>
-            </h3>
-            <p class="card-body">
-              Simple structure with breathing space, clear text and a layout designed to highlight your services.
-            </p>
-            <ul class="card-list">
-              <li>Perfect for team and service photos.</li>
-              <li>Easy-to-read text on any screen.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">Chatbots & contact</div>
-            <h3 class="card-title">
-              <span>WhatsApp at the centre</span>
-            </h3>
-            <p class="card-body">
-              The site gently pushes visitors to talk to you on WhatsApp with a simple, direct button.
-            </p>
-            <ul class="card-list">
-              <li>Floating WhatsApp button on every page.</li>
-              <li>Simple form that can evolve into a chatbot.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">Built for Jersey</div>
-            <h3 class="card-title">
-              <span>Local businesses first</span>
-            </h3>
-            <p class="card-body">
-              Designed for cleaning services, trades, therapies, hospitality and other local Jersey businesses.
-            </p>
-            <span class="pill">Built by someone in Jersey</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Services</div>
-          <h2 class="section-title">Three pillars for your online presence.</h2>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="card">
-            <div class="card-kicker">01 · Websites</div>
-            <h3 class="card-title"><span>Modern landing pages</span></h3>
-            <p class="card-body">
-              A clear one-page website with well-structured sections to present your services, photos and calls-to-action.
-            </p>
-            <ul class="card-list">
-              <li>Simple structure: hero, services, social proof and contact.</li>
-              <li>Optimised for mobile from day one.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">02 · Chatbots</div>
-            <h3 class="card-title"><span>Smart auto-replies</span></h3>
-            <p class="card-body">
-              A simple chatbot can answer common questions and capture leads while you're busy working.
-            </p>
-            <ul class="card-list">
-              <li>Basic FAQs automated.</li>
-              <li>Integration with email and WhatsApp.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">03 · Video & Branding</div>
-            <h3 class="card-title"><span>Brand that sells</span></h3>
-            <p class="card-body">
-              Short videos, social media covers and a strong logo to give your brand a consistent look.
-            </p>
-            <ul class="card-list">
-              <li>15–40s videos for Reels/TikTok and ads.</li>
-              <li>Templates you can reuse many times.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Examples & ideas</div>
-          <h2 class="section-title">Designed for real businesses in Jersey.</h2>
-        </div>
-
-        <div class="grid grid-3">
-          <!-- Example 1 -->
-          <article class="card">
-            <div class="card-kicker">Service Business · Example</div>
-            <h3 class="card-title"><span>Modern landing page</span></h3>
-            <p class="card-body">
-              Clear and simple service presentation with photos, key benefits and a WhatsApp call-to-action.
-            </p>
-          </article>
-
-          <!-- Example 2 -->
-          <article class="card">
-            <div class="card-kicker">Trades & Construction · Example</div>
-            <h3 class="card-title"><span>Portfolio showcase</span></h3>
-            <p class="card-body">
-              Before/after photos, structured service list and a professional layout designed to build trust.
-            </p>
-          </article>
-
-          <!-- Example 3 – FULL PACKAGE -->
-          <article class="card">
-            <div class="card-kicker">Full Package · Website + Chatbot + Branding</div>
-            <h3 class="card-title"><span>Total digital setup</span></h3>
-            <p class="card-body">
-              Complete online presence: clean website, automated chatbot, WhatsApp integration and a simple branding kit.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="process-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Process</div>
-          <h2 class="section-title">From WhatsApp message to live site in 4 steps.</h2>
-        </div>
-
-        <div class="grid grid-2">
-          <div>
-            <div class="process-step">
-              <div class="step-number">1</div>
-              <div>
-                <div class="step-body-title">Initial message</div>
-                <p class="step-body-text">
-                  Send a quick message explaining your business, what you do and what you want to show on the website.
-                </p>
-              </div>
-            </div>
-
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <div>
-                <div class="step-body-title">Draft & feedback</div>
-                <p class="step-body-text">
-                  You receive a proposal with the layout and base text, adjusted to your type of business.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <div>
-                <div class="step-body-title">Build & testing</div>
-                <p class="step-body-text">
-                  Technical build, connection to apdigitalsolutions.digital and testing on both mobile and desktop.
-                </p>
-              </div>
-            </div>
-
-            <div class="process-step">
-              <div class="step-number">4</div>
-              <div>
-                <div class="step-body-title">Launch & improvements</div>
-                <p class="step-body-text">
-                  The site goes live, we collect feedback and plan next steps (chatbot, extra pages, video, and more).
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Contact</div>
-          <h2 class="section-title">Ready to take your business online?</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <p class="contact-label">Quick form</p>
-            <p class="contact-main-text">
-              Share a few details and we’ll continue the conversation via WhatsApp or email.
-            </p>
-
-            <form>
-              <div class="form-field">
-                <label class="form-label">Business name</label>
-                <input type="text" name="business" class="form-input">
-              </div>
-
-              <div class="form-field">
-                <label class="form-label">Email</label>
-                <input type="email" name="email" class="form-input">
-              </div>
-
-              <div class="form-field">
-                <label class="form-label">Project type</label>
-                <select name="type" class="form-select">
-                  <option value="website">Website</option>
-                  <option value="chatbot">Chatbot</option>
-                  <option value="video">Video</option>
-                  <option value="bundle">Full bundle</option>
-                </select>
-              </div>
-
-              <div class="form-field">
-                <label class="form-label">Message</label>
-                <textarea name="message" class="form-textarea"></textarea>
-              </div>
-
-              <button type="button" class="btn-primary" onclick="window.location.href='https://wa.me/447700704591';">
-                <span>Send details via WhatsApp</span>
-                <span class="icon">💬</span>
-              </button>
-            </form>
-          </div>
-
-          <div class="contact-card">
-            <div class="badge-tag">
-              <span class="badge-dot"></span>
-              <span>Direct line</span>
-            </div>
-
-            <p class="contact-main-text" style="margin-top:10px;">
-              Prefer to jump straight into a chat? Use the WhatsApp button on the screen — the number itself doesn’t appear on the site.
-            </p>
-
-            <p class="contact-label" style="margin-top:12px;">Email</p>
-            <p class="contact-main-text">
-              <a class="email-link" href="mailto:apdigitalsolutions.je@outlook.com">apdigitalsolutions.je@outlook.com</a>
-            </p>
-
-            <ul class="contact-list-mini">
-              <li>Based in Jersey, available for local meetings.</li>
-              <li>Communication in English or Portuguese.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <div>
-        © <span id="year"></span> AP Digital Solutions · Jersey
-      </div>
-      <div>apdigitalsolutions.digital</div>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp -->
-  <div class="wa-float">
-    <button class="wa-btn" onclick="window.open('https://wa.me/447700704591','_blank','noopener');">
-      <div class="wa-icon">✚</div>
-      <span>Chat on WhatsApp</span>
-    </button>
-  </div>
-
-  <script>
-    // footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+          <div class="badge-row">
+            <div class="badge">Websites · Chatbots · AI automations</div>
+            <
