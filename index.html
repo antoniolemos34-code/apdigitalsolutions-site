@@ -1,1 +1,1008 @@
-working
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AP Digital Solutions – Modern Websites, AI & WhatsApp Automations</title>
+  <meta name="description"
+    content="AP Digital Solutions helps small businesses get a modern online presence with Apple-style websites, AI chatbots and WhatsApp automations – done for you, at a fair price.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f4f5fb;
+      --bg-soft: #ffffff;
+      --bg-soft-alt: #eef2ff;
+      --text-main: #0f172a;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --accent-strong: #4f46e5;
+      --border: #e2e8f0;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.12);
+      --whatsapp: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #eef2ff, #f9fafb);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* --------- LAYOUT --------- */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(
+        to bottom,
+        rgba(248, 250, 252, 0.94),
+        rgba(248, 250, 252, 0.78),
+        transparent
+      );
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: radial-gradient(circle at top, #f9fafb, #e5e7eb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .nav-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-title span:first-child {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-title span:last-child {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links a {
+      padding: 6px 0;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(34, 197, 94, 0.1);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #15803d;
+    }
+
+    .nav-cta span {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 780px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .section {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 18px 70px;
+    }
+
+    /* --------- HERO --------- */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 40px;
+      padding-top: 32px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .hero-tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(120deg, #2563eb, #4f46e5, #0ea5e9);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      max-width: 32rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e5f3ff;
+      color: #1d4ed8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      background: radial-gradient(circle at top left, #22c55e, #16a34a);
+      color: #ecfdf5;
+      font-size: 0.96rem;
+      font-weight: 600;
+      box-shadow: 0 16px 38px rgba(22, 163, 74, 0.55);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow: 0 22px 48px rgba(22, 163, 74, 0.65);
+    }
+
+    .btn-whatsapp span {
+      font-size: 1.1rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-video-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: radial-gradient(circle at top left, #e0f2fe, #e0e7ff);
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .hero-video-card video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.08), transparent);
+      pointer-events: none;
+    }
+
+    .hero-video-pill {
+      position: absolute;
+      left: 16px;
+      bottom: 16px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.76);
+      color: #e5e7eb;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-video-pill span {
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 24px;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-title {
+        font-size: 1.9rem;
+      }
+    }
+
+    /* --------- WHY ONLINE --------- */
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .section-heading h2 {
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+
+    .section-heading p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 32px rgba(148, 163, 184, 0.15);
+    }
+
+    .card-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-strong);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .cards-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* --------- SERVICES --------- */
+
+    .services-strip {
+      margin-top: 34px;
+      background: linear-gradient(120deg, #e0f2fe, #e9d5ff);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px 24px;
+    }
+
+    .services-strip-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .services-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .services-tags span {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.04);
+    }
+
+    /* --------- PRICING --------- */
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .pricing-card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      padding: 18px 18px 20px;
+      box-shadow: 0 18px 40px rgba(148, 163, 184, 0.18);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .pricing-badge {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-strong);
+      font-weight: 600;
+    }
+
+    .pricing-name {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .pricing-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-top: 4px;
+    }
+
+    .pricing-price span {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .pricing-list {
+      margin-top: 6px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: grid;
+      gap: 4px;
+    }
+
+    .pricing-list li {
+      list-style: none;
+      display: flex;
+      gap: 6px;
+    }
+
+    .pricing-list li::before {
+      content: "•";
+      color: #16a34a;
+      margin-top: 1px;
+    }
+
+    .pricing-footer {
+      margin-top: auto;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-featured {
+      border-width: 1.5px;
+      border-color: #4f46e5;
+      background: linear-gradient(180deg, #eef2ff, #ffffff);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 960px) {
+      .pricing-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .pricing-featured {
+        transform: none;
+      }
+    }
+
+    /* --------- HOW IT WORKS --------- */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .step {
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      padding: 16px 16px 18px;
+      border: 1px solid var(--border);
+    }
+
+    .step-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #1d4ed8;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .step-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .step-text {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .steps {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* --------- PORTFOLIO --------- */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .portfolio-card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .portfolio-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .portfolio-name {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .portfolio-text {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .portfolio-link {
+      font-size: 0.84rem;
+      color: var(--accent-strong);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    .portfolio-link span {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .portfolio-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* --------- CONTACT / FOOTER --------- */
+
+    .contact-strip {
+      margin-top: 30px;
+      background: #020617;
+      color: #e5e7eb;
+      border-radius: var(--radius-lg);
+      padding: 20px 22px 22px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .contact-text {
+      max-width: 420px;
+    }
+
+    .contact-text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .contact-text p {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .contact-socials {
+      display: flex;
+      gap: 10px;
+      font-size: 0.8rem;
+    }
+
+    .contact-socials a {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 18px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <a href="#top" class="nav-logo">
+          <!-- usa o teu logo -->
+          <img src="logo-ap.png" alt="AP Digital Solutions logo">
+        </a>
+        <div class="nav-title">
+          <span>AP DIGITAL SOLUTIONS</span>
+          <span>Websites · AI · WhatsApp automations</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#why-online">Why online</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <span>💬</span> WhatsApp assistant active
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="section">
+      <div class="hero">
+        <div>
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            Websites & AI for small businesses
+          </div>
+
+          <h1 class="hero-title">
+            Modern <span class="hero-highlight">Apple-style websites</span><br>
+            with a WhatsApp AI assistant.
+          </h1>
+
+          <p class="hero-subtitle">
+            AP Digital Solutions is a small studio in Jersey that builds clean,
+            modern websites connected to WhatsApp and AI – so your clients can
+            contact you in one tap and get answers instantly.
+          </p>
+
+          <div class="hero-bullets">
+            <span class="hero-badge">Done-for-you setup</span>
+            <span class="hero-badge">WhatsApp automation with AI</span>
+            <span class="hero-badge">No technical work for you</span>
+          </div>
+
+          <div class="hero-actions">
+            <!-- 🔹 ESTE BOTÃO ABRE DIRETO O TEU ASSISTENTE NO TIMELINE (via WhatsApp) -->
+            <a class="btn-whatsapp"
+               href="https://wa.me/message/RALOOUVER4QYB1"
+               target="_blank"
+               rel="noopener">
+              <span>💬</span>
+              Chat on WhatsApp
+            </a>
+            <div class="hero-note">
+              Answer a few questions and get a simple plan & price for your project.
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-video-card">
+          <!-- usa o teu vídeo local hero-video.mp4 -->
+          <video src="hero-video.mp4" autoplay muted loop playsinline></video>
+          <div class="hero-video-overlay"></div>
+          <div class="hero-video-pill">
+            <span>⚡</span>
+            Live demo · WhatsApp assistant + website preview
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ONLINE -->
+    <section class="section" id="why-online">
+      <div class="section-heading">
+        <h2>Why your business needs a clean online presence</h2>
+        <p>Make it easy for people to find you, understand what you do and contact you instantly.</p>
+      </div>
+
+      <div class="cards-3">
+        <div class="card">
+          <div class="card-label">01 · First impression</div>
+          <div class="card-title">Look professional in seconds</div>
+          <p class="card-text">
+            A modern website shows you take your work seriously. Clear sections,
+            strong visuals and simple text help clients trust you faster.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-label">02 · WhatsApp first</div>
+          <div class="card-title">Clients already use WhatsApp</div>
+          <p class="card-text">
+            Instead of long forms and emails, your website connects directly to WhatsApp.
+            Your AI assistant can reply, ask questions and collect details for you.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-label">03 · Simple for you</div>
+          <div class="card-title">We set up everything</div>
+          <p class="card-text">
+            You only tell us what you do and send a few details. We take care of
+            structure, design, hosting and the WhatsApp automation.
+          </p>
+        </div>
+      </div>
+
+      <div class="services-strip" id="services">
+        <div class="services-strip-title">
+          What AP Digital Solutions can build for you:
+        </div>
+        <div class="services-tags">
+          <span>Modern one-page websites</span>
+          <span>Service landing pages</span>
+          <span>AI WhatsApp assistants</span>
+          <span>Booking & enquiry flows</span>
+          <span>Link-in-bio pages</span>
+          <span>Basic automations & templates</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <div class="section-heading">
+        <h2>How the WhatsApp AI assistant works</h2>
+        <p>Everything starts with one green button – we connect it to your TimelineAI assistant.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-title">Client taps the WhatsApp button</div>
+          <p class="step-text">
+            From your website or link, the client taps the green WhatsApp button.
+            No phone number is shown – only the chat window opens.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-title">TimelineAI assistant replies</div>
+          <p class="step-text">
+            Your assistant in TimelineAI welcomes the client, asks a few questions
+            and collects all the important details for you.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-title">You receive clear information</div>
+          <p class="step-text">
+            You get a clear summary so you can answer when you are free, without
+            wasting time on back-and-forth messages.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="section-heading">
+        <h2>Simple packages for real businesses</h2>
+        <p>Clear prices in English. No hidden fees, no complicated contracts.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-badge">Starter</div>
+          <div class="pricing-name">Smart Link Page</div>
+          <div class="pricing-price">£149 <span>one-time</span></div>
+          <ul class="pricing-list">
+            <li>1-page “link in bio” style website</li>
+            <li>Modern design with your logo & colours</li>
+            <li>Direct WhatsApp contact button</li>
+            <li>Links to Instagram, Facebook, Google etc.</li>
+            <li>Basic copywriting done for you</li>
+          </ul>
+          <div class="pricing-footer">
+            Perfect if you want something clean and fast instead of only social media.
+          </div>
+        </div>
+
+        <div class="pricing-card pricing-featured">
+          <div class="pricing-badge">Most popular</div>
+          <div class="pricing-name">Business Website + WhatsApp AI</div>
+          <div class="pricing-price">£349 <span>one-time</span></div>
+          <ul class="pricing-list">
+            <li>Modern Apple-style one-page website</li>
+            <li>Sections for services, about, reviews & contact</li>
+            <li>WhatsApp button connected to TimelineAI assistant</li>
+            <li>We write and structure all the text</li>
+            <li>Basic SEO setup and mobile optimisation</li>
+          </ul>
+          <div class="pricing-footer">
+            Best option for small businesses and self-employed professionals in Jersey.
+          </div>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-badge">Pro</div>
+          <div class="pricing-name">Automations & Extras</div>
+          <div class="pricing-price">from £99 <span>add-ons</span></div>
+          <ul class="pricing-list">
+            <li>Extra pages (FAQ, blog, portfolio etc.)</li>
+            <li>Additional AI flows in WhatsApp</li>
+            <li>Simple booking or enquiry forms</li>
+            <li>Help connecting your domain</li>
+            <li>Content updates after launch</li>
+          </ul>
+          <div class="pricing-footer">
+            Tell us what you need on WhatsApp and we’ll create a custom add-on for you.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section" id="portfolio">
+      <div class="section-heading">
+        <h2>Recent projects & collaborations</h2>
+        <p>Websites and digital presence created with care for real people and services.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-label">Mental health & wellbeing</div>
+          <div class="portfolio-name">AJUDATOTAL.JE</div>
+          <p class="portfolio-text">
+            A calm, modern page for mental health support – clear sessions, simple
+            explanations and easy contact for people who need help.
+          </p>
+          <a href="https://ajudatotal.com/" target="_blank" rel="noopener" class="portfolio-link">
+            Visit ajudatotal.com <span>↗</span>
+          </a>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-label">Holistic therapies</div>
+          <div class="portfolio-name">Cátia Coutinho – Terapias Holísticas</div>
+          <p class="portfolio-text">
+            Soft, welcoming design for Reiki, numerology and holistic therapies,
+            with a structure that guides clients to pick the right service.
+          </p>
+          <a href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener" class="portfolio-link">
+            Visit catiacoutinhoholistica.com <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="contact-strip">
+        <div class="contact-text">
+          <h3>Ready to talk about your project?</h3>
+          <p>
+            Send a message on WhatsApp and our TimelineAI assistant will reply first.
+            You can answer when it’s convenient for you – with all the information
+            already collected.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn-whatsapp"
+             href="https://wa.me/message/RALOOUVER4QYB1"
+             target="_blank"
+             rel="noopener">
+            <span>💬</span>
+            Chat on WhatsApp now
+          </a>
+          <div class="contact-note">
+            No phone number shown. Click the green button and the chat opens directly.
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/ap_the_solution_to_be_online" target="_blank" rel="noopener">
+              Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1Dn1V8BD1T/" target="_blank" rel="noopener">
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> AP Digital Solutions · Jersey, Channel Islands</div>
+    <div>Websites · AI · WhatsApp automations for small businesses.</div>
+  </footer>
+</div>
+
+<script>
+  // update year automatically
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+  </html>
