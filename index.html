@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AP Digital Solutions – Websites, Automations & Digital Services</title>
+  <title>AP Digital Solutions – Modern Websites, AI & WhatsApp Automations for Jersey</title>
   <meta name="description"
-        content="AP Digital Solutions helps local businesses in Jersey get modern websites, Shopify stores, WhatsApp automations and digital designs – done for you, in English and Portuguese.">
+        content="AP Digital Solutions helps small businesses in Jersey get a modern online presence with websites, AI chatbots, WhatsApp automations and Jersey-themed designs connected to Shopify – done for you, at a fair price.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,9 @@
 
   <style>
     :root {
-      --bg: #0b1020;
-      --bg-soft: #111827;
-      --bg-soft-alt: #020617;
+      --bg: #050814;
+      --bg-soft: #0b1020;
       --accent: #22d3ee;
-      --accent-soft: rgba(34, 211, 238, 0.12);
       --accent-strong: #0ea5e9;
       --text-main: #e5e7eb;
       --text-muted: #9ca3af;
@@ -29,11 +27,7 @@
       --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.55);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
@@ -42,21 +36,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
 
     /* NAVBAR */
 
@@ -67,8 +50,8 @@
       backdrop-filter: blur(18px);
       background: linear-gradient(
         to bottom,
-        rgba(15, 23, 42, 0.9),
-        rgba(15, 23, 42, 0.65),
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.7),
         transparent
       );
       border-bottom: 1px solid rgba(30, 64, 175, 0.35);
@@ -77,39 +60,54 @@
     .nav-inner {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 14px 18px;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
     }
 
-    .logo {
-      display: inline-flex;
+    .logo-wrap {
+      display: flex;
       align-items: center;
       gap: 10px;
     }
 
     .logo-img {
-      height: 34px;
-      width: auto;
-      border-radius: 6px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: #000;
     }
 
-    .logo-text {
-      display: flex;
+    .logo {
+      display: inline-flex;
       flex-direction: column;
+      gap: 3px;
       line-height: 1.1;
     }
 
-    .logo-text-main {
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 0.03em;
+    .logo-main {
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #facc15, #eab308, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
-    .logo-text-sub {
+    .logo-sub {
       font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
       color: var(--text-muted);
     }
 
@@ -117,8 +115,6 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      font-size: 13px;
-      color: var(--text-muted);
     }
 
     .nav-links a {
@@ -146,6 +142,7 @@
       border: none;
       cursor: pointer;
       transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+      white-space: nowrap;
     }
 
     .nav-cta:hover {
@@ -154,23 +151,18 @@
       filter: brightness(1.03);
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 880px) {
       .nav-inner {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
       }
-      .nav-links {
-        display: none;
-      }
+      .nav-center { display: none; }
     }
 
-    /* MAIN CONTENT */
+    /* MAIN */
 
-    main {
-      flex: 1;
-    }
-
+    main { flex: 1; }
     .shell {
       max-width: 1120px;
       margin: 0 auto;
@@ -240,10 +232,7 @@
     }
 
     @media (max-width: 880px) {
-      .hero-text {
-        margin-left: auto;
-        margin-right: auto;
-      }
+      .hero-text { margin-left: auto; margin-right: auto; }
     }
 
     .hero-actions {
@@ -255,9 +244,7 @@
     }
 
     @media (max-width: 880px) {
-      .hero-actions {
-        justify-content: center;
-      }
+      .hero-actions { justify-content: center; }
     }
 
     .btn-primary {
@@ -275,6 +262,7 @@
       font-weight: 600;
       box-shadow: 0 22px 55px rgba(8, 145, 178, 0.65);
       transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+      text-decoration: none;
     }
 
     .btn-primary:hover {
@@ -297,6 +285,7 @@
       font-weight: 500;
       cursor: pointer;
       transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+      text-decoration: none;
     }
 
     .btn-ghost:hover {
@@ -310,9 +299,7 @@
       color: var(--text-muted);
     }
 
-    .hero-right {
-      position: relative;
-    }
+    .hero-right { position: relative; }
 
     .hero-card {
       border-radius: var(--radius-lg);
@@ -393,11 +380,29 @@
       color: var(--text-muted);
     }
 
-    /* GENERIC SECTION TITLE */
-
-    .section {
-      margin-bottom: 70px;
+    .hero-image-strip {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
     }
+
+    .hero-thumb {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      height: 58px;
+    }
+
+    .hero-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* SECTION GENERIC */
+
+    .section { margin-bottom: 70px; }
 
     .section-heading {
       display: flex;
@@ -428,39 +433,48 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
     }
 
-    @media (max-width: 900px) {
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-
     @media (max-width: 640px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
+      .services-grid { grid-template-columns: 1fr; }
     }
 
     .service-card {
       background: rgba(15, 23, 42, 0.9);
       border-radius: var(--radius-md);
-      padding: 16px 16px 14px;
+      padding: 14px 14px 14px;
       border: 1px solid rgba(30, 64, 175, 0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .service-image {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      height: 96px;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .service-title {
       font-size: 14px;
       font-weight: 600;
-      margin-bottom: 6px;
     }
 
     .service-text {
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 10px;
     }
 
     .service-tag-row {
@@ -479,20 +493,35 @@
       color: #9ca3af;
     }
 
-    /* SHOPIFY + SERVICES SECTION */
+    /* PROJECT LINK */
 
-    .aps-section-wrap {
+    .project-link {
+      font-size: 12px;
+      margin-top: 6px;
+      color: var(--accent-strong);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    /* JERSEY DIGITAL + SHOPIFY SECTION */
+
+    .jersey-section-wrap {
       padding: 60px 16px 10px;
       border-radius: var(--radius-lg);
       background: radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.15), transparent 55%),
                   radial-gradient(circle at 100% 100%, rgba(96, 165, 250, 0.18), transparent 45%),
-                  rgba(15, 23, 42, 0.9);
+                  rgba(15, 23, 42, 0.95);
       border: 1px solid rgba(30, 64, 175, 0.65);
       box-shadow: var(--shadow-soft);
       margin-bottom: 70px;
     }
 
-    .aps-section-inner {
+    .jersey-section-inner {
       max-width: 1120px;
       margin: 0 auto;
       display: grid;
@@ -502,12 +531,10 @@
     }
 
     @media (max-width: 900px) {
-      .aps-section-inner {
-        grid-template-columns: 1fr;
-      }
+      .jersey-section-inner { grid-template-columns: 1fr; }
     }
 
-    .aps-tag {
+    .jersey-tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -522,20 +549,20 @@
       margin-bottom: 12px;
     }
 
-    .aps-title {
+    .jersey-title {
       font-size: 26px;
       font-weight: 700;
       margin-bottom: 6px;
     }
 
-    .aps-subtitle {
+    .jersey-subtitle {
       font-size: 14px;
       color: var(--text-muted);
       margin-bottom: 22px;
       max-width: 480px;
     }
 
-    .aps-button-primary {
+    .jersey-button-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -551,13 +578,13 @@
       transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
     }
 
-    .aps-button-primary:hover {
+    .jersey-button-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 22px 55px rgba(34, 197, 94, 0.75);
       filter: brightness(1.04);
     }
 
-    .aps-button-secondary {
+    .jersey-button-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -568,9 +595,10 @@
       font-size: 12px;
       color: var(--text-muted);
       margin-left: 10px;
+      text-decoration: none;
     }
 
-    .aps-services-grid {
+    .jersey-services-grid {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 14px;
@@ -578,37 +606,35 @@
     }
 
     @media (max-width: 600px) {
-      .aps-services-grid {
-        grid-template-columns: 1fr;
-      }
+      .jersey-services-grid { grid-template-columns: 1fr; }
     }
 
-    .aps-service-card {
+    .jersey-service-card {
       padding: 12px 14px;
       border-radius: 16px;
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(148, 163, 184, 0.55);
     }
 
-    .aps-service-title {
+    .jersey-service-title {
       font-weight: 600;
       font-size: 13px;
       margin-bottom: 4px;
     }
 
-    .aps-service-text {
+    .jersey-service-text {
       font-size: 12px;
       color: var(--text-muted);
     }
 
-    .aps-pill-row {
+    .jersey-pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin-top: 14px;
     }
 
-    .aps-pill {
+    .jersey-pill {
       font-size: 11px;
       padding: 4px 9px;
       border-radius: 999px;
@@ -617,39 +643,39 @@
       background: rgba(15, 23, 42, 0.85);
     }
 
-    .aps-right-card {
+    .jersey-right-card {
       border-radius: var(--radius-md);
-      background: rgba(15, 23, 42, 0.88);
+      background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(30, 64, 175, 0.7);
       padding: 16px 16px 14px;
     }
 
-    .aps-right-heading {
+    .jersey-right-heading {
       font-size: 14px;
       font-weight: 600;
       margin-bottom: 4px;
     }
 
-    .aps-right-text {
+    .jersey-right-text {
       font-size: 12px;
       color: var(--text-muted);
       margin-bottom: 12px;
     }
 
-    .aps-right-list {
+    .jersey-right-list {
       list-style: none;
       font-size: 12px;
       color: var(--text-muted);
       margin-bottom: 10px;
     }
 
-    .aps-right-list li {
+    .jersey-right-list li {
       padding-left: 16px;
       position: relative;
       margin-bottom: 4px;
     }
 
-    .aps-right-list li::before {
+    .jersey-right-list li::before {
       content: "•";
       position: absolute;
       left: 4px;
@@ -664,7 +690,7 @@
       padding: 22px 18px;
       border: 1px dashed rgba(148, 163, 184, 0.5);
       background: radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.12), transparent 55%),
-                  rgba(15, 23, 42, 0.85);
+                  rgba(15, 23, 42, 0.9);
       margin-bottom: 30px;
       display: flex;
       flex-wrap: wrap;
@@ -705,6 +731,7 @@
       cursor: pointer;
       box-shadow: 0 18px 45px rgba(22, 163, 74, 0.6);
       transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+      text-decoration: none;
     }
 
     .btn-wa:hover {
@@ -720,6 +747,7 @@
       border: 1px solid rgba(148, 163, 184, 0.7);
       background: rgba(15, 23, 42, 0.9);
       color: var(--text-muted);
+      text-decoration: none;
     }
 
     /* FOOTER */
@@ -732,7 +760,6 @@
       text-align: center;
       background: #020617;
     }
-
   </style>
 </head>
 <body>
@@ -741,30 +768,33 @@
   <!-- NAVBAR -->
   <header class="nav">
     <div class="nav-inner">
-      <div class="logo">
-        <!-- coloca o ficheiro ap-logo-gold.png na mesma pasta do index.html -->
+      <div class="logo-wrap">
         <img src="ap-logo-gold.png" alt="AP Digital Solutions logo" class="logo-img">
-        <div class="logo-text">
-          <span class="logo-text-main">AP Digital Solutions</span>
-          <span class="logo-text-sub">Websites • Automations • AI</span>
+        <div class="logo">
+          <span class="logo-main">AP DIGITAL SOLUTIONS</span>
+          <span class="logo-sub">
+            Jersey · Websites · AI &amp; WhatsApp
+          </span>
         </div>
       </div>
 
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services-summary">Services</a>
-        <a href="#shopify-store">Shopify Store</a>
-      </nav>
+      <div class="nav-center">
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Work</a>
+          <a href="#jersey-digital">AI &amp; Automations</a>
+          <a href="#shop">Shop</a>
+        </nav>
+      </div>
 
-      <!-- WhatsApp CTA -->
       <a
         class="nav-cta"
-        href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20you%20via%20AP%20Digital%20Solutions%20website"
+        href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20AP%20Digital%20Solutions%20and%20I%27m%20interested%20in%20a%20project%20for%20my%20business%20in%20Jersey."
         target="_blank"
         rel="noopener"
       >
-        Chat about a project
-        <span>↗</span>
+        Chat on WhatsApp ↗
       </a>
     </div>
   </header>
@@ -777,31 +807,32 @@
         <div>
           <div class="hero-kicker">
             <span class="hero-kicker-dot"></span>
-            <span>Digital help for real businesses</span>
+            <span>
+              Digital made simple for Jersey businesses
+            </span>
           </div>
           <h1 class="hero-title">
-            Modern websites, automations &amp; designs for
-            <span>small businesses in Jersey.</span>
+            Modern websites &amp; AI automations
+            <span>for local businesses in Jersey.</span>
           </h1>
           <p class="hero-text">
-            AP Digital Solutions helps local and Portuguese entrepreneurs in Jersey get online with modern
-            websites, Shopify stores, WhatsApp chatbots and done-for-you digital services – without you
-            having to fight with the tech.
+            AP Digital Solutions helps cafés, trades, cleaners, therapists and side-hustles in
+            Jersey get online with clear websites, WhatsApp chatbots and Jersey-themed merch – no
+            tech headaches, no agency drama.
           </p>
 
           <div class="hero-actions">
-            <a href="#shopify-store" class="btn-primary">
-              Visit our Shopify store
-              <span>↗</span>
+            <a href="#services" class="btn-primary">
+              See what we can do ↗
             </a>
 
-            <a href="#services-summary" class="btn-ghost">
-              See what we can do for your business
+            <a href="#shop" class="btn-ghost">
+              Jersey designs &amp; hoodies shop
             </a>
           </div>
 
           <p class="hero-footnote">
-            English &amp; Portuguese • Flexible pricing • Focused on Jersey &amp; Channel Islands.
+            Based in Jersey · Support in English &amp; Portuguese · Friendly, human explanations.
           </p>
         </div>
 
@@ -811,234 +842,331 @@
               <div class="hero-card-header">
                 <span class="hero-chip">
                   <span class="hero-chip-dot"></span>
-                  Small Business Mode
+                  <span>Done-for-you setup</span>
                 </span>
                 <span style="font-size:11px; color:var(--text-muted);">
-                  Websites • Shopify • WhatsApp
+                  Websites · WhatsApp · Shopify
                 </span>
               </div>
 
               <div class="hero-card-title">
-                “I just want someone to set it up for me.”
+                “You tell me what you do – I turn it into something online that works.”
               </div>
               <div class="hero-card-copy">
-                That’s exactly what we do. You tell us what you do, we build the website, connect the
-                WhatsApp, design the visuals and, if you want, set up the Shopify store as well.
+                You send a few messages or voice notes on WhatsApp explaining your business.
+                I translate that into a clear website, automation or online shop and only ask
+                for feedback when there’s something real to see.
               </div>
 
               <div class="hero-pill-row">
-                <span class="hero-pill">One-page websites</span>
-                <span class="hero-pill">Shopify &amp; print-on-demand</span>
-                <span class="hero-pill">WhatsApp chatbots</span>
-                <span class="hero-pill">Portuguese &amp; English support</span>
+                <span class="hero-pill">Local SEO &amp; Google friendly</span>
+                <span class="hero-pill">WhatsApp first contact</span>
+                <span class="hero-pill">Jersey-style visuals</span>
+                <span class="hero-pill">Small-business pricing</span>
+              </div>
+
+              <div class="hero-image-strip">
+                <div class="hero-thumb">
+                  <img src="https://images.pexels.com/photos/1181465/pexels-photo-1181465.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       alt="Person working with a laptop in a café">
+                </div>
+                <div class="hero-thumb">
+                  <img src="https://images.pexels.com/photos/518244/pexels-photo-518244.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       alt="Small business team in a shop">
+                </div>
+                <div class="hero-thumb">
+                  <img src="https://images.pexels.com/photos/4049990/pexels-photo-4049990.jpeg?auto=compress&cs=tinysrgb&w=800"
+                       alt="Smartphone with chat messages">
+                </div>
               </div>
             </div>
 
             <div class="hero-card-footer">
-              <span>Done-for-you setup • No agency drama</span>
-              <span>From idea → online in days</span>
+              <span>From idea to online in a few days</span>
+              <span>Perfect for busy owners in Jersey</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVICES SUMMARY -->
-      <section class="section" id="services-summary">
+      <!-- SERVICES -->
+      <section class="section" id="services">
         <div class="section-heading">
-          <span class="section-kicker">Digital services</span>
-          <h2 class="section-title">What AP Digital Solutions can do for you</h2>
+          <span class="section-kicker">Services</span>
+          <h2 class="section-title">
+            What AP Digital Solutions does for Jersey
+          </h2>
           <p class="section-subtitle">
-            We focus on practical, fast and affordable solutions for local businesses – no big corporate jargon,
-            just clear results.
+            Clear and simple packages to help you get visible, get organised and get more
+            messages from the right clients – even if you hate technology.
           </p>
         </div>
 
         <div class="services-grid">
           <article class="service-card">
-            <h3 class="service-title">Websites &amp; link pages</h3>
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Website layout on a laptop">
+            </div>
+            <h3 class="service-title">
+              Modern one-page &amp; multi-page websites
+            </h3>
             <p class="service-text">
-              Apple-style one-page sites, business pages and link-in-bio pages built for your brand and language.
+              Clean, Apple-style sites for Jersey trades, cafés, therapists and side-hustles.
+              Focused on what you do, why you’re trusted and how to contact you.
             </p>
             <div class="service-tag-row">
-              <span class="service-tag">Responsive</span>
-              <span class="service-tag">Fast launch</span>
+              <span class="service-tag">Mobile-first</span>
+              <span class="service-tag">Copy written for you</span>
             </div>
           </article>
 
           <article class="service-card">
-            <h3 class="service-title">Shopify &amp; online stores</h3>
-            <p class="service-text">
-              Setup of Shopify stores, payment methods, print-on-demand (Printful, etc.) and basic automations.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">Print-on-demand</span>
-              <span class="service-tag">No stock needed</span>
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/4049694/pexels-photo-4049694.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Phone with message icons">
             </div>
-          </article>
-
-          <article class="service-card">
-            <h3 class="service-title">WhatsApp chatbots &amp; funnels</h3>
+            <h3 class="service-title">
+              WhatsApp chatbots &amp; TimelineAI flows
+            </h3>
             <p class="service-text">
-              Automate responses, capture leads and collect information using WhatsApp and tools like TimelineAI.
+              Smart WhatsApp flows that answer FAQs, collect info and send you qualified leads,
+              using TimelineAI and simple automations.
             </p>
             <div class="service-tag-row">
-              <span class="service-tag">Lead capture</span>
               <span class="service-tag">24/7 replies</span>
+              <span class="service-tag">Lead capture</span>
             </div>
           </article>
 
           <article class="service-card">
-            <h3 class="service-title">Designs &amp; print-ready art</h3>
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Social media on a phone">
+            </div>
+            <h3 class="service-title">
+              Link pages &amp; social presence
+            </h3>
             <p class="service-text">
-              Hoodie &amp; t-shirt designs, logos, QR codes, social media graphics and branding elements.
+              Simple “all-in-one” link pages with your WhatsApp, Facebook, Instagram and
+              bookings – perfect for bios, posters and QR codes around Jersey.
             </p>
             <div class="service-tag-row">
-              <span class="service-tag">PNG for Printful</span>
-              <span class="service-tag">Marketing visuals</span>
+              <span class="service-tag">One link for everything</span>
+              <span class="service-tag">Great with QR codes</span>
             </div>
           </article>
 
           <article class="service-card">
-            <h3 class="service-title">Digital setup &amp; “fix it for me” tasks</h3>
-            <p class="service-text">
-              We help with domains, basic SEO, Google Business, email setup and other small-but-important tasks.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">Domains &amp; DNS</span>
-              <span class="service-tag">Google Business</span>
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Online shop on a laptop">
             </div>
-          </article>
-
-          <article class="service-card">
-            <h3 class="service-title">Support for Portuguese community</h3>
+            <h3 class="service-title">
+              Shopify &amp; Jersey-themed merch
+            </h3>
             <p class="service-text">
-              Help for Portuguese-speaking entrepreneurs working in Jersey, with explanations in PT &amp; EN.
+              Setup of small Shopify stores, print-on-demand integration and Jersey designs
+              for hoodies, tees, mugs and more – shipped globally.
             </p>
             <div class="service-tag-row">
-              <span class="service-tag">Portuguese &amp; English</span>
-              <span class="service-tag">Local &amp; remote</span>
+              <span class="service-tag">No stock needed</span>
+              <span class="service-tag">Print-on-demand ready</span>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- SHOPIFY STORE + NEW SERVICES SECTION -->
-      <section id="shopify-store" class="aps-section-wrap">
-        <div class="aps-section-inner">
-          <!-- LEFT: SHOPIFY STORE -->
+      <!-- RECENT WORK -->
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <span class="section-kicker">Recent work</span>
+          <h2 class="section-title">
+            Some Jersey projects already online
+          </h2>
+          <p class="section-subtitle">
+            A few examples of projects built and supported by AP Digital Solutions, mixing
+            clear copy, simple structure and WhatsApp-first contact.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/2821220/pexels-photo-2821220.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Calm scene representing mental health support">
+            </div>
+            <h3 class="service-title">
+              AJUDATOTAL – Saúde Mental para a Vida Moderna
+            </h3>
+            <p class="service-text">
+              Landing page focused on mental health support, clear sessions structure and
+              simple contact options for people living in Jersey and abroad.
+            </p>
+            <a class="project-link" href="https://ajudatotal.com/" target="_blank" rel="noopener">
+              Visit website ↗
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Holistic therapy setting">
+            </div>
+            <h3 class="service-title">
+              Cátia Coutinho – Terapias Holísticas
+            </h3>
+            <p class="service-text">
+              Website for holistic therapies with sessions overview, benefits explained in
+              simple language and direct links to book via WhatsApp.
+            </p>
+            <a class="project-link" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">
+              Visit website ↗
+            </a>
+          </article>
+
+          <!-- espaço para futuros projetos -->
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/3738939/pexels-photo-3738939.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Small business owner using laptop">
+            </div>
+            <h3 class="service-title">
+              Your Jersey business could be next
+            </h3>
+            <p class="service-text">
+              From cleaning services to trades, cafés, wellbeing or side projects – we can
+              put your work online in a way that feels like you.
+            </p>
+            <a class="project-link"
+               href="https://wa.me/447700704591?text=Hi%2C%20I%20saw%20your%20recent%20work%20and%20I%20want%20to%20know%20what%20you%20can%20do%20for%20my%20business%20in%20Jersey."
+               target="_blank"
+               rel="noopener">
+              Talk about your project ↗
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- JERSEY DIGITAL & SHOP -->
+      <section id="jersey-digital" class="jersey-section-wrap">
+        <div class="jersey-section-inner">
+          <!-- LEFT -->
           <div>
-            <div class="aps-tag">
-              <span>New</span>
-              <span>Shopify Store</span>
+            <div class="jersey-tag">
+              Jersey · AI · Automations
             </div>
 
-            <h2 class="aps-title">Visit our Shopify store</h2>
-            <p class="aps-subtitle">
-              Explore ready-made designs, hoodies, t-shirts and digital products created by AP Digital Solutions.
-              Secure checkout, automatic fulfillment and worldwide shipping via print-on-demand.
+            <h2 class="jersey-title">
+              Automations &amp; WhatsApp flows built around how you really work
+            </h2>
+            <p class="jersey-subtitle">
+              Instead of big “systems” you’ll never use, we create small automations that make
+              sense for a busy Jersey day – messages, bookings, reminders and follow-ups
+              directly in WhatsApp and email.
             </p>
 
-            <div style="margin-bottom: 18px;">
+            <div style="margin-bottom:18px;">
               <a
-                href="https://ap-digital-solutions.myshopify.com/"
+                href="https://wa.me/447700704591?text=Hi%2C%20I%27m%20interested%20in%20an%20automation%20or%20WhatsApp%20flow%20for%20my%20business%20in%20Jersey."
                 target="_blank"
                 rel="noopener"
-                class="aps-button-primary"
+                class="jersey-button-primary"
               >
-                Open Shopify store
-                <span>↗</span>
+                Talk about an automation idea ↗
               </a>
 
-              <a href="#contact" class="aps-button-secondary">
-                Need something custom? Talk to us
+              <a href="#shop" class="jersey-button-secondary">
+                See Jersey merch &amp; designs
               </a>
             </div>
 
-            <div class="aps-right-card">
-              <div class="aps-right-heading">What you’ll find in the store</div>
-              <p class="aps-right-text">
-                Designs connected to Jersey, Portugal, Madeira and more – plus inspirational phrases
-                and future-focused graphics ready to print on demand.
+            <div class="jersey-right-card">
+              <div class="jersey-right-heading">
+                Examples of flows for Jersey businesses
+              </div>
+              <p class="jersey-right-text">
+                These are quick wins we can build fast – usually after a single chat where
+                you explain how your day looks and what slows you down.
               </p>
-              <ul class="aps-right-list">
-                <li>Print-on-demand hoodies &amp; t-shirts</li>
-                <li>Designs for locals, immigrants &amp; professionals</li>
-                <li>Digital files and future bundles</li>
+              <ul class="jersey-right-list">
+                <li>Auto-reply when people text your WhatsApp out of hours</li>
+                <li>Forms inside WhatsApp to book a clean, a quote or a session</li>
+                <li>Follow-up reminders so good leads don’t disappear</li>
+                <li>Simple dashboards with who contacted you and about what</li>
               </ul>
             </div>
           </div>
 
-          <!-- RIGHT: DIGITAL SERVICES -->
-          <div id="services">
-            <div class="aps-tag">
-              <span>Services</span>
-              <span>Digital &amp; Automation</span>
+          <!-- RIGHT: SHOP / MERCH -->
+          <div id="shop">
+            <div class="jersey-tag">
+              Jersey designs · Shopify
             </div>
 
-            <h3 class="aps-title" style="font-size: 22px; margin-bottom: 6px;">
-              Digital services for local businesses
+            <h3 class="jersey-title" style="font-size:22px; margin-bottom:6px;">
+              Jersey hoodies, tees &amp; digital designs
             </h3>
-            <p class="aps-subtitle" style="margin-bottom: 18px;">
-              We help small businesses and self-employed people in Jersey get online, automate conversations
-              and look more professional – without them having to deal with the technical side.
+            <p class="jersey-subtitle" style="margin-bottom:18px;">
+              I also create Jersey-inspired designs and phrases for hoodies, t-shirts, mugs,
+              bottles and more – perfect for locals, expats and gifts.
             </p>
 
-            <div class="aps-services-grid">
-              <div class="aps-service-card">
-                <div class="aps-service-title">Modern websites &amp; landing pages</div>
-                <div class="aps-service-text">
-                  Apple-style, mobile-ready websites and one-page sites built around what you offer.
+            <div class="jersey-services-grid">
+              <div class="jersey-service-card">
+                <div class="jersey-service-title">
+                  Ready-made designs
+                </div>
+                <div class="jersey-service-text">
+                  “Jersey Boys / Girls”, Jersey maps, local beaches, Portuguese community,
+                  funny quotes and more – ready to print.
                 </div>
               </div>
 
-              <div class="aps-service-card">
-                <div class="aps-service-title">Shopify &amp; online store setup</div>
-                <div class="aps-service-text">
-                  From zero to live store: products, payments, print-on-demand and simple automations.
+              <div class="jersey-service-card">
+                <div class="jersey-service-title">
+                  Custom ideas for your brand
                 </div>
-              </div>
-
-              <div class="aps-service-card">
-                <div class="aps-service-title">WhatsApp chatbots &amp; automations</div>
-                <div class="aps-service-text">
-                  Automated replies, lead capture, FAQs and data collection using WhatsApp and AI tools.
-                </div>
-              </div>
-
-              <div class="aps-service-card">
-                <div class="aps-service-title">Designs, banners &amp; digital assets</div>
-                <div class="aps-service-text">
-                  Artwork for print-on-demand, social media graphics, QR codes, promo banners and more.
+                <div class="jersey-service-text">
+                  Want merch for your own business or team in Jersey? We can adapt the style
+                  and colours to your logo.
                 </div>
               </div>
             </div>
 
-            <div class="aps-pill-row">
-              <span class="aps-pill">For small local businesses</span>
-              <span class="aps-pill">Portuguese &amp; English support</span>
-              <span class="aps-pill">Done-for-you setup</span>
+            <div class="jersey-pill-row">
+              <a
+                href="https://ap-digital-solutions.myshopify.com/"
+                target="_blank"
+                rel="noopener"
+                class="jersey-button-primary"
+                style="margin-top:10px;"
+              >
+                Visit the AP Digital Solutions Shopify ↗
+              </a>
+              <span class="jersey-pill">Worldwide shipping via print-on-demand</span>
+              <span class="jersey-pill">New designs added over time</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT / CTA -->
+      <!-- CONTACT -->
       <section id="contact" class="contact-section">
         <div>
           <div class="contact-text-main">
-            Want help with a website, Shopify store or automations?
+            Want help with a website, WhatsApp or Jersey merch?
           </div>
           <div class="contact-text-sub">
-            Send a quick message with what you do and what you need. We’ll reply with simple options
-            and clear prices.
+            Send a quick message explaining what you do and what you’re looking for.
+            I’ll reply with simple options and clear prices – no pressure to say yes.
           </div>
         </div>
 
         <div class="contact-actions">
-          <!-- WhatsApp link -->
           <a
             class="btn-wa"
-            href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20you%20via%20AP%20Digital%20Solutions%20website"
+            href="https://wa.me/447700704591?text=Hi%2C%20I%20saw%20your%20AP%20Digital%20Solutions%20website%20and%20I%27d%20like%20help%20with%20a%20project%20in%20Jersey."
             target="_blank"
             rel="noopener"
           >
@@ -1049,7 +1177,25 @@
             class="btn-email"
             href="mailto:apdigitalsolutions.je@outlook.com"
           >
-            Or email: apdigitalsolutions.je@outlook.com
+            Email: apdigitalsolutions.je@outlook.com
+          </a>
+
+          <a
+            class="btn-email"
+            href="https://www.facebook.com/share/1a8fiKUzAn/"
+            target="_blank"
+            rel="noopener"
+          >
+            Facebook
+          </a>
+
+          <a
+            class="btn-email"
+            href="https://www.instagram.com/ap_the_solution_to_be_online?igsh=MXA1dXMzaTh5bG1ncg=="
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
           </a>
         </div>
       </section>
@@ -1057,13 +1203,12 @@
   </main>
 
   <footer>
-    © <span id="year"></span> AP Digital Solutions · Jersey, Channel Islands · English &amp; Portuguese
+    © <span id="year"></span> AP Digital Solutions · Jersey, Channel Islands
   </footer>
 </div>
 
 <script>
-  // Ano automático no footer
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
-</html>
+  </html>
