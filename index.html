@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AP Digital Solutions – Modern Websites, AI & WhatsApp Automations</title>
+  <title>AP Digital Solutions – Websites, Automations & Digital Services</title>
   <meta name="description"
-    content="AP Digital Solutions helps small businesses get a modern online presence with Apple-style websites, AI chatbots and WhatsApp automations – done for you, at a fair price.">
+        content="AP Digital Solutions helps local businesses in Jersey get modern websites, Shopify stores, WhatsApp automations and digital designs – done for you, in English and Portuguese.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +14,19 @@
 
   <style>
     :root {
-      /* Fundo geral em cinzento claro e branco */
-      --bg: #f5f5f6;
-      --bg-soft: #ffffff;
-      --bg-soft-alt: #eeeeef;
-      --text-main: #0f172a;
-      --text-muted: #6b7280;
-      --accent: #2563eb;
-      --accent-soft: rgba(37, 99, 235, 0.06);
-      --accent-strong: #4f46e5;
-      --border: #e5e7eb;
+      --bg: #0b1020;
+      --bg-soft: #111827;
+      --bg-soft-alt: #020617;
+      --accent: #22d3ee;
+      --accent-soft: rgba(34, 211, 238, 0.12);
+      --accent-strong: #0ea5e9;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.35);
       --radius-lg: 26px;
       --radius-md: 18px;
-      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.08);
-      --whatsapp: #22c55e;
+      --radius-pill: 999px;
+      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.55);
     }
 
     * {
@@ -37,16 +36,10 @@
     }
 
     body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top left, #1e293b 0, #020617 48%, #000 100%);
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
     }
 
     a {
@@ -54,7 +47,10 @@
       text-decoration: none;
     }
 
-    /* --------- LAYOUT --------- */
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
     .page {
       min-height: 100vh;
@@ -62,69 +58,66 @@
       flex-direction: column;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.96),
-        rgba(255, 255, 255, 0.86),
-        transparent
-      );
-      border-bottom: 1px solid rgba(226, 232, 240, 0.7);
-    }
+    /* NAVBAR */
 
     .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.9),
+        rgba(15, 23, 42, 0.65),
+        transparent
+      );
+      border-bottom: 1px solid rgba(30, 64, 175, 0.35);
+    }
+
+    .nav-inner {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 12px 18px;
+      padding: 14px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 16px;
     }
 
-    .nav-left {
-      display: flex;
+    .logo {
+      display: inline-flex;
       align-items: center;
       gap: 10px;
     }
 
-    .nav-logo {
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
-      background: radial-gradient(circle at top, #f9fafb, #e5e7eb);
+    .logo-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 30% 20%, #22d3ee, #0f172a 65%, #020617 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
+      box-shadow: 0 16px 40px rgba(34, 211, 238, 0.5);
+      font-size: 16px;
+      font-weight: 700;
+      color: #0b1120;
     }
 
-    .nav-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .nav-title {
+    .logo-text {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      line-height: 1.1;
     }
 
-    .nav-title span:first-child {
-      font-size: 0.95rem;
+    .logo-text-main {
       font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 0.03em;
     }
 
-    .nav-title span:last-child {
-      font-size: 0.78rem;
+    .logo-text-sub {
+      font-size: 11px;
       color: var(--text-muted);
     }
 
@@ -132,118 +125,133 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      font-size: 0.86rem;
+      font-size: 13px;
       color: var(--text-muted);
     }
 
     .nav-links a {
-      padding: 6px 0;
+      padding: 4px 6px;
+      border-radius: 999px;
+      transition: color 0.15s ease, background 0.15s ease;
     }
 
     .nav-links a:hover {
       color: var(--text-main);
+      background: rgba(15, 23, 42, 0.6);
     }
 
     .nav-cta {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 14px;
+      padding: 7px 14px;
       border-radius: 999px;
-      border: none;
-      background: rgba(34, 197, 94, 0.1);
-      font-size: 0.8rem;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      font-size: 13px;
       font-weight: 500;
-      color: #15803d;
+      color: #f9fafb;
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.5);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
     }
 
-    .nav-cta span {
-      font-size: 1rem;
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(21, 128, 61, 0.6);
+      filter: brightness(1.03);
     }
 
-    @media (max-width: 780px) {
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
       .nav-links {
         display: none;
       }
     }
 
+    /* MAIN CONTENT */
+
     main {
       flex: 1;
     }
 
-    .section {
+    .shell {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 40px 18px 70px;
+      padding: 26px 18px 80px;
     }
 
-    /* --------- HERO --------- */
+    /* HERO */
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
       gap: 40px;
-      padding-top: 32px;
       align-items: center;
+      margin-top: 28px;
+      margin-bottom: 70px;
     }
 
-    .hero-tag {
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .hero-kicker {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 4px 10px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.18), transparent 60%);
+      font-size: 11px;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 10px;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 14px;
     }
 
-    .hero-tag-dot {
+    .hero-kicker-dot {
       width: 7px;
       height: 7px;
       border-radius: 999px;
       background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.28);
     }
 
     .hero-title {
-      font-size: 2.6rem;
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-      margin-bottom: 12px;
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
     }
 
-    .hero-highlight {
-      background: linear-gradient(120deg, #2563eb, #4f46e5, #0ea5e9);
+    .hero-title span {
+      background: linear-gradient(to right, #22d3ee, #a855f7);
       -webkit-background-clip: text;
       color: transparent;
     }
 
-    .hero-subtitle {
-      font-size: 0.98rem;
-      line-height: 1.6;
+    .hero-text {
+      font-size: 15px;
       color: var(--text-muted);
-      max-width: 32rem;
+      max-width: 480px;
       margin-bottom: 20px;
     }
 
-    .hero-bullets {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .hero-badge {
-      font-size: 0.8rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #e5f3ff;
-      color: #1d4ed8;
+    @media (max-width: 880px) {
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     .hero-actions {
@@ -251,758 +259,818 @@
       flex-wrap: wrap;
       gap: 12px;
       align-items: center;
+      margin-bottom: 18px;
     }
 
-    .btn-whatsapp {
+    @media (max-width: 880px) {
+      .hero-actions {
+        justify-content: center;
+      }
+    }
+
+    .btn-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 10px 20px;
+      padding: 14px 22px;
       border-radius: 999px;
       border: none;
-      background: radial-gradient(circle at top left, #22c55e, #16a34a);
-      color: #ecfdf5;
-      font-size: 0.96rem;
-      font-weight: 600;
-      box-shadow: 0 16px 38px rgba(22, 163, 74, 0.55);
       cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+      background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+      color: #0b1020;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 22px 55px rgba(8, 145, 178, 0.65);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
     }
 
-    .btn-whatsapp:hover {
+    .btn-primary:hover {
       transform: translateY(-1px);
+      box-shadow: 0 24px 60px rgba(14, 165, 233, 0.75);
       filter: brightness(1.05);
-      box-shadow: 0 22px 48px rgba(22, 163, 74, 0.65);
     }
 
-    .btn-whatsapp span {
-      font-size: 1.1rem;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-video-card {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: linear-gradient(135deg, #f9fafb, #e5e7eb);
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-
-    .hero-video-card video {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .hero-video-overlay {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.05), transparent);
-      pointer-events: none;
-    }
-
-    .hero-video-pill {
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
-      padding: 8px 11px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.76);
-      color: #e5e7eb;
-      font-size: 0.8rem;
+    .btn-ghost {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      backdrop-filter: blur(14px);
-    }
-
-    .hero-video-pill span {
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-        padding-top: 24px;
-      }
-
-      .hero-title {
-        font-size: 2.2rem;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .hero-title {
-        font-size: 1.9rem;
-      }
-    }
-
-    /* --------- WHY ONLINE --------- */
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 26px;
-    }
-
-    .section-heading h2 {
-      font-size: 1.7rem;
-      letter-spacing: -0.03em;
-      margin-bottom: 6px;
-    }
-
-    .section-heading p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    .cards-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--bg-soft);
-      border-radius: var(--radius-md);
-      padding: 18px 18px 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 14px 32px rgba(148, 163, 184, 0.12);
-    }
-
-    .card-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent-strong);
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-
-    .card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .card-text {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    @media (max-width: 900px) {
-      .cards-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* --------- SERVICES --------- */
-
-    .services-strip {
-      margin-top: 34px;
-      background: #f3f4f6;
-      border-radius: var(--radius-lg);
-      padding: 20px 22px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px 24px;
-    }
-
-    .services-strip-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .services-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 0.85rem;
-    }
-
-    .services-tags span {
-      padding: 6px 12px;
+      padding: 12px 18px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.04);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.45);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
     }
 
-    /* --------- PRICING --------- */
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 26px;
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.8);
+      border-color: rgba(148, 163, 184, 0.9);
+      color: var(--text-main);
     }
 
-    .pricing-card {
-      background: var(--bg-soft);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border);
-      padding: 18px 18px 20px;
-      box-shadow: 0 18px 40px rgba(148, 163, 184, 0.14);
+    .hero-footnote {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      background: radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.18), transparent 55%),
+                  radial-gradient(circle at 100% 100%, rgba(94, 234, 212, 0.14), transparent 60%),
+                  #020617;
+      border: 1px solid rgba(30, 64, 175, 0.4);
+      box-shadow: var(--shadow-soft);
+      min-height: 260px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      justify-content: space-between;
+      overflow: hidden;
     }
 
-    .pricing-badge {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent-strong);
-      font-weight: 600;
-    }
-
-    .pricing-name {
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .pricing-price {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      margin-top: 4px;
-    }
-
-    .pricing-price span {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .pricing-list {
-      margin-top: 6px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      display: grid;
-      gap: 4px;
-    }
-
-    .pricing-list li {
-      list-style: none;
+    .hero-card-header {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .hero-chip {
+      font-size: 11px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
       gap: 6px;
     }
 
-    .pricing-list li::before {
-      content: "•";
-      color: #16a34a;
-      margin-top: 1px;
+    .hero-chip-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
     }
 
-    .pricing-footer {
-      margin-top: auto;
-      font-size: 0.8rem;
+    .hero-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero-card-copy {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 11px;
+    }
+
+    .hero-pill {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.7);
+      color: #9ca3af;
+    }
+
+    .hero-card-footer {
+      border-top: 1px dashed rgba(148, 163, 184, 0.4);
+      margin-top: 12px;
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
       color: var(--text-muted);
     }
 
-    .pricing-featured {
-      border-width: 1.5px;
-      border-color: #4f46e5;
-      background: linear-gradient(180deg, #f3f4ff, #ffffff);
-      transform: translateY(-3px);
+    /* GENERIC SECTION TITLE */
+
+    .section {
+      margin-bottom: 70px;
     }
 
-    @media (max-width: 960px) {
-      .pricing-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .pricing-featured {
-        transform: none;
-      }
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 26px;
     }
 
-    /* --------- HOW IT WORKS --------- */
+    .section-kicker {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+    }
 
-    .steps {
+    .section-title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 480px;
+    }
+
+    /* SERVICES SUMMARY */
+
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
-      margin-top: 24px;
     }
 
-    .step {
-      background: var(--bg-soft);
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      background: rgba(15, 23, 42, 0.9);
       border-radius: var(--radius-md);
-      padding: 16px 16px 18px;
-      border: 1px solid var(--border);
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(30, 64, 175, 0.5);
     }
 
-    .step-number {
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      background: #e0f2fe;
-      color: #1d4ed8;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
+    .service-title {
+      font-size: 14px;
       font-weight: 600;
       margin-bottom: 6px;
     }
 
-    .step-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .step-text {
-      font-size: 0.86rem;
+    .service-text {
+      font-size: 13px;
       color: var(--text-muted);
-      line-height: 1.6;
+      margin-bottom: 10px;
     }
 
-    @media (max-width: 900px) {
-      .steps {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    /* --------- PORTFOLIO --------- */
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .portfolio-card {
-      background: var(--bg-soft);
-      border-radius: var(--radius-md);
-      padding: 16px 16px 14px;
-      border: 1px solid var(--border);
+    .service-tag-row {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .portfolio-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .portfolio-name {
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .portfolio-text {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    .portfolio-link {
-      font-size: 0.84rem;
-      color: var(--accent-strong);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+      flex-wrap: wrap;
+      gap: 6px;
       margin-top: 4px;
     }
 
-    .portfolio-link span {
-      font-size: 1rem;
+    .service-tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: #9ca3af;
+    }
+
+    /* SHOPIFY + SERVICES SECTION */
+
+    .aps-section-wrap {
+      padding: 60px 16px 10px;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.15), transparent 55%),
+                  radial-gradient(circle at 100% 100%, rgba(96, 165, 250, 0.18), transparent 45%),
+                  rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(30, 64, 175, 0.65);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 70px;
+    }
+
+    .aps-section-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      gap: 36px;
+      align-items: start;
     }
 
     @media (max-width: 900px) {
-      .portfolio-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .aps-section-inner {
+        grid-template-columns: 1fr;
       }
     }
 
-    /* --------- CONTACT / FOOTER --------- */
-
-    .contact-strip {
-      margin-top: 30px;
-      background: #f3f4f6;
-      color: #111827;
-      border-radius: var(--radius-lg);
-      padding: 20px 22px 22px;
-      display: flex;
-      flex-wrap: wrap;
+    .aps-tag {
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      gap: 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.7);
+      margin-bottom: 12px;
     }
 
-    .contact-text {
-      max-width: 420px;
+    .aps-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
-    .contact-text h3 {
-      font-size: 1.1rem;
+    .aps-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      max-width: 480px;
+    }
+
+    .aps-button-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #22c55e, #4ade80);
+      color: #022c22;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 18px 45px rgba(34, 197, 94, 0.6);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    .aps-button-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 55px rgba(34, 197, 94, 0.75);
+      filter: brightness(1.04);
+    }
+
+    .aps-button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-left: 10px;
+    }
+
+    .aps-services-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .aps-services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .aps-service-card {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+    }
+
+    .aps-service-title {
+      font-weight: 600;
+      font-size: 13px;
       margin-bottom: 4px;
     }
 
-    .contact-text p {
-      font-size: 0.9rem;
-      color: #4b5563;
+    .aps-service-text {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .aps-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .aps-pill {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      color: #cbd5f5;
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .aps-right-card {
+      border-radius: var(--radius-md);
+      background: rgba(15, 23, 42, 0.88);
+      border: 1px solid rgba(30, 64, 175, 0.7);
+      padding: 16px 16px 14px;
+    }
+
+    .aps-right-heading {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .aps-right-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .aps-right-list {
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .aps-right-list li {
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .aps-right-list li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      color: var(--accent);
+    }
+
+    /* CONTACT / CTA */
+
+    .contact-section {
+      border-radius: var(--radius-lg);
+      padding: 22px 18px;
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.12), transparent 55%),
+                  rgba(15, 23, 42, 0.85);
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contact-text-main {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .contact-text-sub {
+      font-size: 13px;
+      color: var(--text-muted);
     }
 
     .contact-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 14px;
-      align-items: center;
-    }
-
-    .contact-note {
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-
-    .contact-socials {
-      display: flex;
       gap: 10px;
-      font-size: 0.8rem;
     }
 
-    .contact-socials a {
-      padding: 6px 10px;
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
       border-radius: 999px;
-      background: #e5e7eb;
-      border: 1px solid #d1d5db;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #ecfdf5;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 18px 45px rgba(22, 163, 74, 0.6);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
     }
+
+    .btn-wa:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 55px rgba(22, 163, 74, 0.8);
+      filter: brightness(1.05);
+    }
+
+    .btn-email {
+      font-size: 13px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
 
     footer {
-      max-width: 1120px;
-      margin: 0 auto;
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
       padding: 18px;
-      font-size: 0.78rem;
+      font-size: 11px;
       color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
+      text-align: center;
+      background: #020617;
     }
+
   </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- HEADER -->
-  <header>
-    <div class="nav">
-      <div class="nav-left">
-        <a href="#top" class="nav-logo">
-          <!-- usa o teu logo -->
-          <img src="logo-ap.png" alt="AP Digital Solutions logo">
-        </a>
-        <div class="nav-title">
-          <span>AP DIGITAL SOLUTIONS</span>
-          <span>Websites · AI · WhatsApp automations</span>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-mark">AP</div>
+        <div class="logo-text">
+          <span class="logo-text-main">AP Digital Solutions</span>
+          <span class="logo-text-sub">Websites • Automations • AI</span>
         </div>
       </div>
 
       <nav class="nav-links">
-        <a href="#why-online">Why online</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#services-summary">Services</a>
+        <a href="#shopify-store">Shopify Store</a>
       </nav>
 
-      <div class="nav-cta">
-        <span>💬</span> WhatsApp assistant active
-      </div>
+      <!-- WhatsApp CTA (número não aparece no texto, só no link) -->
+      <a
+        class="nav-cta"
+        href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20you%20via%20AP%20Digital%20Solutions%20website"
+        target="_blank"
+        rel="noopener"
+      >
+        Chat about a project
+        <span>↗</span>
+      </a>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="section">
-      <div class="hero">
+  <main>
+    <div class="shell">
+
+      <!-- HERO -->
+      <section class="hero" id="about">
         <div>
-          <div class="hero-tag">
-            <span class="hero-tag-dot"></span>
-            Websites & AI for small businesses
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <span>Digital help for real businesses</span>
           </div>
-
           <h1 class="hero-title">
-            Modern <span class="hero-highlight">Apple-style websites</span><br>
-            with a WhatsApp AI assistant.
+            Modern websites, automations &amp; designs for
+            <span>small businesses in Jersey.</span>
           </h1>
-
-          <p class="hero-subtitle">
-            AP Digital Solutions is a small studio in Jersey that builds clean,
-            modern websites connected to WhatsApp and AI – so your clients can
-            contact you in one tap and get answers instantly.
+          <p class="hero-text">
+            AP Digital Solutions helps local and Portuguese entrepreneurs in Jersey get online with modern
+            websites, Shopify stores, WhatsApp chatbots and done-for-you digital services – without you
+            having to fight with the tech.
           </p>
 
-          <div class="hero-bullets">
-            <span class="hero-badge">Done-for-you setup</span>
-            <span class="hero-badge">WhatsApp automation with AI</span>
-            <span class="hero-badge">No technical work for you</span>
+          <div class="hero-actions">
+            <a href="#shopify-store" class="btn-primary">
+              Visit our Shopify store
+              <span>↗</span>
+            </a>
+
+            <a href="#services-summary" class="btn-ghost">
+              See what we can do for your business
+            </a>
           </div>
 
-          <div class="hero-actions">
-            <!-- 🔹 ESTE BOTÃO ABRE DIRETO O TEU ASSISTENTE NO TIMELINE (via WhatsApp) -->
-            <a class="btn-whatsapp"
-               href="https://wa.me/message/RALOOUVER4QYB1"
-               target="_blank"
-               rel="noopener">
-              <span>💬</span>
-              Chat on WhatsApp
-            </a>
-            <div class="hero-note">
-              Answer a few questions and get a simple plan & price for your project.
+          <p class="hero-footnote">
+            English &amp; Portuguese • Flexible pricing • Focused on Jersey &amp; Channel Islands.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div>
+              <div class="hero-card-header">
+                <span class="hero-chip">
+                  <span class="hero-chip-dot"></span>
+                  Small Business Mode
+                </span>
+                <span style="font-size:11px; color:var(--text-muted);">
+                  Websites • Shopify • WhatsApp
+                </span>
+              </div>
+
+              <div class="hero-card-title">
+                “I just want someone to set it up for me.”
+              </div>
+              <div class="hero-card-copy">
+                That’s exactly what we do. You tell us what you do, we build the website, connect the
+                WhatsApp, design the visuals and, if you want, set up the Shopify store as well.
+              </div>
+
+              <div class="hero-pill-row">
+                <span class="hero-pill">One-page websites</span>
+                <span class="hero-pill">Shopify &amp; print-on-demand</span>
+                <span class="hero-pill">WhatsApp chatbots</span>
+                <span class="hero-pill">Portuguese &amp; English support</span>
+              </div>
+            </div>
+
+            <div class="hero-card-footer">
+              <span>Done-for-you setup • No agency drama</span>
+              <span>From idea → online in days</span>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="hero-video-card">
-          <!-- usa o teu vídeo local hero-video.mp4 -->
-          <video src="hero-video.mp4" autoplay muted loop playsinline></video>
-          <div class="hero-video-overlay"></div>
-          <div class="hero-video-pill">
-            <span>⚡</span>
-            Live demo · WhatsApp assistant + website preview
+      <!-- SERVICES SUMMARY -->
+      <section class="section" id="services-summary">
+        <div class="section-heading">
+          <span class="section-kicker">Digital services</span>
+          <h2 class="section-title">What AP Digital Solutions can do for you</h2>
+          <p class="section-subtitle">
+            We focus on practical, fast and affordable solutions for local businesses – no big corporate jargon,
+            just clear results.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h3 class="service-title">Websites &amp; link pages</h3>
+            <p class="service-text">
+              Apple-style one-page sites, business pages and link-in-bio pages built for your brand and language.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">Responsive</span>
+              <span class="service-tag">Fast launch</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-title">Shopify &amp; online stores</h3>
+            <p class="service-text">
+              Setup of Shopify stores, payment methods, print-on-demand (Printful, etc.) and basic automations.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">Print-on-demand</span>
+              <span class="service-tag">No stock needed</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-title">WhatsApp chatbots &amp; funnels</h3>
+            <p class="service-text">
+              Automate responses, capture leads and collect information using WhatsApp and tools like TimelineAI.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">Lead capture</span>
+              <span class="service-tag">24/7 replies</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-title">Designs &amp; print-ready art</h3>
+            <p class="service-text">
+              Hoodie &amp; t-shirt designs, logos, QR codes, social media graphics and branding elements.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">PNG for Printful</span>
+              <span class="service-tag">Marketing visuals</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-title">Digital setup &amp; “fix it for me” tasks</h3>
+            <p class="service-text">
+              We help with domains, basic SEO, Google Business, email setup and other small-but-important tasks.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">Domains &amp; DNS</span>
+              <span class="service-tag">Google Business</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <h3 class="service-title">Support for Portuguese community</h3>
+            <p class="service-text">
+              Help for Portuguese-speaking entrepreneurs working in Jersey, with explanations in PT &amp; EN.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">Portuguese &amp; English</span>
+              <span class="service-tag">Local &amp; remote</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SHOPIFY STORE + NEW SERVICES SECTION -->
+      <section id="shopify-store" class="aps-section-wrap">
+        <div class="aps-section-inner">
+          <!-- LEFT: SHOPIFY STORE -->
+          <div>
+            <div class="aps-tag">
+              <span>New</span>
+              <span>Shopify Store</span>
+            </div>
+
+            <h2 class="aps-title">Visit our Shopify store</h2>
+            <p class="aps-subtitle">
+              Explore ready-made designs, hoodies, t-shirts and digital products created by AP Digital Solutions.
+              Secure checkout, automatic fulfillment and worldwide shipping via print-on-demand.
+            </p>
+
+            <div style="margin-bottom: 18px;">
+              <a
+                href="https://ap-digital-solutions.myshopify.com/"
+                target="_blank"
+                rel="noopener"
+                class="aps-button-primary"
+              >
+                Open Shopify store
+                <span>↗</span>
+              </a>
+
+              <a href="#contact" class="aps-button-secondary">
+                Need something custom? Talk to us
+              </a>
+            </div>
+
+            <div class="aps-right-card">
+              <div class="aps-right-heading">What you’ll find in the store</div>
+              <p class="aps-right-text">
+                Designs connected to Jersey, Portugal, Madeira and more – plus inspirational phrases
+                and future-focused graphics ready to print on demand.
+              </p>
+              <ul class="aps-right-list">
+                <li>Print-on-demand hoodies &amp; t-shirts</li>
+                <li>Designs for locals, immigrants &amp; professionals</li>
+                <li>Digital files and future bundles</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- RIGHT: DIGITAL SERVICES -->
+          <div id="services">
+            <div class="aps-tag">
+              <span>Services</span>
+              <span>Digital &amp; Automation</span>
+            </div>
+
+            <h3 class="aps-title" style="font-size: 22px; margin-bottom: 6px;">
+              Digital services for local businesses
+            </h3>
+            <p class="aps-subtitle" style="margin-bottom: 18px;">
+              We help small businesses and self-employed people in Jersey get online, automate conversations
+              and look more professional – without them having to deal with the technical side.
+            </p>
+
+            <div class="aps-services-grid">
+              <div class="aps-service-card">
+                <div class="aps-service-title">Modern websites &amp; landing pages</div>
+                <div class="aps-service-text">
+                  Apple-style, mobile-ready websites and one-page sites built around what you offer.
+                </div>
+              </div>
+
+              <div class="aps-service-card">
+                <div class="aps-service-title">Shopify &amp; online store setup</div>
+                <div class="aps-service-text">
+                  From zero to live store: products, payments, print-on-demand and simple automations.
+                </div>
+              </div>
+
+              <div class="aps-service-card">
+                <div class="aps-service-title">WhatsApp chatbots &amp; automations</div>
+                <div class="aps-service-text">
+                  Automated replies, lead capture, FAQs and data collection using WhatsApp and AI tools.
+                </div>
+              </div>
+
+              <div class="aps-service-card">
+                <div class="aps-service-title">Designs, banners &amp; digital assets</div>
+                <div class="aps-service-text">
+                  Artwork for print-on-demand, social media graphics, QR codes, promo banners and more.
+                </div>
+              </div>
+            </div>
+
+            <div class="aps-pill-row">
+              <span class="aps-pill">For small local businesses</span>
+              <span class="aps-pill">Portuguese &amp; English support</span>
+              <span class="aps-pill">Done-for-you setup</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- WHY ONLINE -->
-    <section class="section" id="why-online">
-      <div class="section-heading">
-        <h2>Why your business needs a clean online presence</h2>
-        <p>Make it easy for people to find you, understand what you do and contact you instantly.</p>
-      </div>
-
-      <div class="cards-3">
-        <div class="card">
-          <div class="card-label">01 · First impression</div>
-          <div class="card-title">Look professional in seconds</div>
-          <p class="card-text">
-            A modern website shows you take your work seriously. Clear sections,
-            strong visuals and simple text help clients trust you faster.
-          </p>
-        </div>
-        <div class="card">
-          <div class="card-label">02 · WhatsApp first</div>
-          <div class="card-title">Clients already use WhatsApp</div>
-          <p class="card-text">
-            Instead of long forms and emails, your website connects directly to WhatsApp.
-            Your AI assistant can reply, ask questions and collect details for you.
-          </p>
-        </div>
-        <div class="card">
-          <div class="card-label">03 · Simple for you</div>
-          <div class="card-title">We set up everything</div>
-          <p class="card-text">
-            You only tell us what you do and send a few details. We take care of
-            structure, design, hosting and the WhatsApp automation.
-          </p>
-        </div>
-      </div>
-
-      <div class="services-strip" id="services">
-        <div class="services-strip-title">
-          What AP Digital Solutions can build for you:
-        </div>
-        <div class="services-tags">
-          <span>Modern one-page websites</span>
-          <span>Service landing pages</span>
-          <span>AI WhatsApp assistants</span>
-          <span>Booking & enquiry flows</span>
-          <span>Link-in-bio pages</span>
-          <span>Basic automations & templates</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section">
-      <div class="section-heading">
-        <h2>How the WhatsApp AI assistant works</h2>
-        <p>Everything starts with one green button – we connect it to your TimelineAI assistant.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-title">Client taps the WhatsApp button</div>
-          <p class="step-text">
-            From your website or link, the client taps the green WhatsApp button.
-            No phone number is shown – only the chat window opens.
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-title">TimelineAI assistant replies</div>
-          <p class="step-text">
-            Your assistant in TimelineAI welcomes the client, asks a few questions
-            and collects all the important details for you.
-          </p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-title">You receive clear information</div>
-          <p class="step-text">
-            You get a clear summary so you can answer when you are free, without
-            wasting time on back-and-forth messages.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section" id="pricing">
-      <div class="section-heading">
-        <h2>Simple packages for real businesses</h2>
-        <p>Clear prices in English. No hidden fees, no complicated contracts.</p>
-      </div>
-
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-badge">Starter</div>
-          <div class="pricing-name">Smart Link Page</div>
-          <div class="pricing-price">£149 <span>one-time</span></div>
-          <ul class="pricing-list">
-            <li>1-page “link in bio” style website</li>
-            <li>Modern design with your logo & colours</li>
-            <li>Direct WhatsApp contact button</li>
-            <li>Links to Instagram, Facebook, Google etc.</li>
-            <li>Basic copywriting done for you</li>
-          </ul>
-          <div class="pricing-footer">
-            Perfect if you want something clean and fast instead of only social media.
+      <!-- CONTACT / CTA -->
+      <section id="contact" class="contact-section">
+        <div>
+          <div class="contact-text-main">
+            Want help with a website, Shopify store or automations?
           </div>
-        </div>
-
-        <div class="pricing-card pricing-featured">
-          <div class="pricing-badge">Most popular</div>
-          <div class="pricing-name">Business Website + WhatsApp AI</div>
-          <div class="pricing-price">£349 <span>one-time</span></div>
-          <ul class="pricing-list">
-            <li>Modern Apple-style one-page website</li>
-            <li>Sections for services, about, reviews & contact</li>
-            <li>WhatsApp button connected to TimelineAI assistant</li>
-            <li>We write and structure all the text</li>
-            <li>Basic SEO setup and mobile optimisation</li>
-          </ul>
-          <div class="pricing-footer">
-            Best option for small businesses and self-employed professionals in Jersey.
+          <div class="contact-text-sub">
+            Send a quick message with what you do and what you need. We’ll reply with simple options
+            and clear prices.
           </div>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-badge">Pro</div>
-          <div class="pricing-name">Automations & Extras</div>
-          <div class="pricing-price">from £99 <span>add-ons</span></div>
-          <ul class="pricing-list">
-            <li>Extra pages (FAQ, blog, portfolio etc.)</li>
-            <li>Additional AI flows in WhatsApp</li>
-            <li>Simple booking or enquiry forms</li>
-            <li>Help connecting your domain</li>
-            <li>Content updates after launch</li>
-          </ul>
-          <div class="pricing-footer">
-            Tell us what you need on WhatsApp and we’ll create a custom add-on for you.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section class="section" id="portfolio">
-      <div class="section-heading">
-        <h2>Recent projects & collaborations</h2>
-        <p>Websites and digital presence created with care for real people and services.</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <div class="portfolio-label">Mental health & wellbeing</div>
-          <div class="portfolio-name">AJUDATOTAL.JE</div>
-          <p class="portfolio-text">
-            A calm, modern page for mental health support – clear sessions, simple
-            explanations and easy contact for people who need help.
-          </p>
-          <a href="https://ajudatotal.com/" target="_blank" rel="noopener" class="portfolio-link">
-            Visit ajudatotal.com <span>↗</span>
-          </a>
-        </div>
-
-        <div class="portfolio-card">
-          <div class="portfolio-label">Holistic therapies</div>
-          <div class="portfolio-name">Cátia Coutinho – Terapias Holísticas</div>
-          <p class="portfolio-text">
-            Soft, welcoming design for Reiki, numerology and holistic therapies,
-            with a structure that guides clients to pick the right service.
-          </p>
-          <a href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener" class="portfolio-link">
-            Visit catiacoutinhoholistica.com <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="contact-strip">
-        <div class="contact-text">
-          <h3>Ready to talk about your project?</h3>
-          <p>
-            Send a message on WhatsApp and our TimelineAI assistant will reply first.
-            You can answer when it’s convenient for you – with all the information
-            already collected.
-          </p>
         </div>
 
         <div class="contact-actions">
-          <a class="btn-whatsapp"
-             href="https://wa.me/message/RALOOUVER4QYB1"
-             target="_blank"
-             rel="noopener">
-            <span>💬</span>
-            Chat on WhatsApp now
+          <!-- Botão WhatsApp com link direto (número não aparece no texto) -->
+          <a
+            class="btn-wa"
+            href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20you%20via%20AP%20Digital%20Solutions%20website"
+            target="_blank"
+            rel="noopener"
+          >
+            💬 Chat on WhatsApp
           </a>
-          <div class="contact-note">
-            No phone number shown. Click the green button and the chat opens directly.
-          </div>
 
-          <div class="contact-socials">
-            <a href="https://www.instagram.com/ap_the_solution_to_be_online" target="_blank" rel="noopener">
-              Instagram
-            </a>
-            <a href="https://www.facebook.com/share/1Dn1V8BD1T/" target="_blank" rel="noopener">
-              Facebook
-            </a>
-          </div>
+          <a
+            class="btn-email"
+            href="mailto:info@apdigitalsolutions.digital"
+          >
+            Or email: info@apdigitalsolutions.digital
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <div>© <span id="year"></span> AP Digital Solutions · Jersey, Channel Islands</div>
-    <div>Websites · AI · WhatsApp automations for small businesses.</div>
+    © <span id="year"></span> AP Digital Solutions · Jersey, Channel Islands · English &amp; Portuguese
   </footer>
 </div>
 
 <script>
-  // update year automatically
+  // Ano automático no footer
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 </body>
   </html>
