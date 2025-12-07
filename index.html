@@ -90,18 +90,10 @@
       gap: 10px;
     }
 
-    .logo-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 30% 20%, #22d3ee, #0f172a 65%, #020617 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 16px 40px rgba(34, 211, 238, 0.5);
-      font-size: 16px;
-      font-weight: 700;
-      color: #0b1120;
+    .logo-img {
+      height: 34px;
+      width: auto;
+      border-radius: 6px;
     }
 
     .logo-text {
@@ -112,7 +104,7 @@
 
     .logo-text-main {
       font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
       letter-spacing: 0.03em;
     }
 
@@ -750,7 +742,8 @@
   <header class="nav">
     <div class="nav-inner">
       <div class="logo">
-        <div class="logo-mark">AP</div>
+        <!-- coloca o ficheiro ap-logo-gold.png na mesma pasta do index.html -->
+        <img src="ap-logo-gold.png" alt="AP Digital Solutions logo" class="logo-img">
         <div class="logo-text">
           <span class="logo-text-main">AP Digital Solutions</span>
           <span class="logo-text-sub">Websites • Automations • AI</span>
@@ -763,7 +756,7 @@
         <a href="#shopify-store">Shopify Store</a>
       </nav>
 
-      <!-- WhatsApp CTA (número não aparece no texto, só no link) -->
+      <!-- WhatsApp CTA -->
       <a
         class="nav-cta"
         href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20you%20via%20AP%20Digital%20Solutions%20website"
@@ -1042,7 +1035,7 @@
         </div>
 
         <div class="contact-actions">
-          <!-- Botão WhatsApp com link direto (número não aparece no texto) -->
+          <!-- WhatsApp link -->
           <a
             class="btn-wa"
             href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20you%20via%20AP%20Digital%20Solutions%20website"
@@ -1054,9 +1047,9 @@
 
           <a
             class="btn-email"
-            href="mailto:info@apdigitalsolutions.digital"
+            href="mailto:apdigitalsolutions.je@outlook.com"
           >
-            Or email: info@apdigitalsolutions.digital
+            Or email: apdigitalsolutions.je@outlook.com
           </a>
         </div>
       </section>
@@ -1073,4 +1066,4 @@
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
-  </html>
+</html>
