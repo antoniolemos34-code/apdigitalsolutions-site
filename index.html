@@ -4,1211 +4,603 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AP Digital Solutions – Modern Websites, AI & WhatsApp Automations for Jersey</title>
-  <meta name="description"
-        content="AP Digital Solutions helps small businesses in Jersey get a modern online presence with websites, AI chatbots, WhatsApp automations and Jersey-themed designs connected to Shopify – done for you, at a fair price.">
+  <!-- SEO -->
+  <title>AP Digital Solutions | Shopify Websites, AI & WhatsApp Automation in Jersey</title>
+  <meta name="description" content="AP Digital Solutions builds modern Shopify websites, AI chatbots and WhatsApp automation for small businesses in Jersey. Shopify – done for you, at a fair price." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="AP Digital Solutions | Shopify Websites, AI & WhatsApp Automation in Jersey" />
+  <meta property="og:description" content="Modern Shopify websites, AI chatbots and WhatsApp automation for small businesses in Jersey. Done for you, at a fair price." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AP Digital Solutions | Shopify Websites in Jersey" />
+  <meta name="twitter:description" content="Shopify websites, AI chatbots and WhatsApp automation — done for you." />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicons (simple) -->
+  <link rel="icon" type="image/png" href="ap-logo-gold.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AP Digital Solutions",
+    "url": "https://apdigitalsolutions.digital/",
+    "areaServed": "Jersey, Channel Islands",
+    "serviceType": ["Shopify Website Design", "AI Chatbots", "WhatsApp Automation", "Website Design"],
+    "sameAs": [
+      "https://www.instagram.com/ap_the_solution_to_be_online?igsh=MXA1dXMzaTh5bG1ncg==",
+      "https://www.facebook.com/share/17Mt74px81/"
+    ]
+  }
+  </script>
 
   <style>
-    :root {
-      --bg: #050814;
-      --bg-soft: #0b1020;
-      --accent: #22d3ee;
-      --accent-strong: #0ea5e9;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --border-soft: rgba(148, 163, 184, 0.35);
-      --radius-lg: 26px;
-      --radius-md: 18px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.55);
+    :root{
+      --bg: #0b0d12;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --stroke: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.55);
+      --accent: #d7b96a; /* gold */
+      --accent2: #6ee7ff; /* subtle */
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 22px;
+      --radius2: 16px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(215,185,106,.18), transparent 55%),
+        radial-gradient(900px 600px at 80% 20%, rgba(110,231,255,.12), transparent 55%),
+        radial-gradient(900px 700px at 50% 90%, rgba(255,255,255,.06), transparent 60%),
+        linear-gradient(180deg, #07080c, #0b0d12 40%, #07080c);
+      overflow-x:hidden;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Top nav */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(10,12,18,.55);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 220px;
+    }
+    .brand img{
+      width:36px; height:36px; border-radius:12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.10);
+      object-fit:cover;
+    }
+    .brand .t1{font-weight:800; letter-spacing:-.02em; font-size:14px}
+    .brand .t2{font-weight:500; color:var(--muted2); font-size:12px}
+
+    .nav-links{display:flex; gap:18px; align-items:center}
+    .nav-links a{
+      color:var(--muted);
+      font-size:13px; font-weight:600;
+      padding:10px 10px;
+      border-radius:12px;
+      transition:.2s ease;
+    }
+    .nav-links a:hover{color:var(--text); background: rgba(255,255,255,.06)}
+
+    .nav-cta{display:flex; gap:10px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:700;
+      font-size:13px;
+      cursor:pointer;
+      transition:.2s ease;
+      box-shadow: 0 12px 35px rgba(0,0,0,.25);
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn.primary{
+      border-color: rgba(215,185,106,.45);
+      background: linear-gradient(135deg, rgba(215,185,106,.18), rgba(255,255,255,.06));
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
-      background: radial-gradient(circle at top left, #1e293b 0, #020617 48%, #000 100%);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
+    /* Hero */
+    .hero{padding:34px 0 22px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .panel{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .panel.pad{padding:26px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      color: var(--muted);
+      font-weight:700;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding:10px 12px;
+      border-radius:999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    h1{
+      margin:16px 0 10px;
+      font-size:42px;
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+    .lead{
+      margin:0;
+      color: var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      max-width: 58ch;
+    }
+    .hero-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+    .mini{
+      margin-top:14px;
+      display:flex; flex-wrap:wrap; gap:10px;
+      color: var(--muted2);
+      font-size:13px;
+    }
+    .pill{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
     }
 
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    /* Video panel */
+    .video-wrap{height:100%}
+    .video{
+      width:100%;
+      height:100%;
+      min-height: 360px;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.05);
+      transform: scale(1.03);
+    }
+    .video-overlay{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(600px 300px at 20% 20%, rgba(215,185,106,.16), transparent 55%),
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.55));
+      pointer-events:none;
+    }
+    .video-badge{
+      position:absolute; left:18px; bottom:18px;
+      display:flex; gap:10px; align-items:flex-start;
+      padding:14px 14px;
+      border-radius: 18px;
+      background: rgba(10,12,18,.55);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
+      max-width: 360px;
+    }
+    .video-badge b{display:block; font-size:13px}
+    .video-badge span{display:block; color:var(--muted); font-size:12px; line-height:1.4}
 
-    .page { min-height: 100vh; display: flex; flex-direction: column; }
-
-    /* NAVBAR */
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.95),
-        rgba(15, 23, 42, 0.7),
-        transparent
-      );
-      border-bottom: 1px solid rgba(30, 64, 175, 0.35);
+    /* Sections */
+    section{padding:18px 0}
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+    .card{
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      padding:18px;
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size:15px;
+      letter-spacing:-.01em;
+    }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      font-size:13.5px;
+      line-height:1.6;
     }
 
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 10px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size:20px;
+      letter-spacing:-.02em;
+    }
+    .section-title p{
+      margin:0;
+      color:var(--muted2);
+      font-size:13px;
+      max-width: 52ch;
+      line-height:1.4;
     }
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    /* Pricing */
+    .price{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
     }
-
-    .logo-img {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      object-fit: contain;
-      background: #000;
+    .plan{
+      border-radius: var(--radius2);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      padding:18px;
+      position:relative;
+      overflow:hidden;
     }
-
-    .logo {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 3px;
-      line-height: 1.1;
+    .plan.featured{
+      border-color: rgba(215,185,106,.40);
+      background: linear-gradient(135deg, rgba(215,185,106,.16), rgba(255,255,255,.04));
     }
-
-    .logo-main {
-      font-weight: 700;
-      font-size: 15px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      background: linear-gradient(to right, #facc15, #eab308, #f97316);
-      -webkit-background-clip: text;
-      color: transparent;
+    .plan .tag{
+      display:inline-block;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color: rgba(255,255,255,.85);
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      margin-bottom:10px;
     }
+    .plan h3{margin:0 0 6px; font-size:16px}
+    .plan .who{margin:0 0 12px; color:var(--muted); font-size:13px; line-height:1.5}
+    .list{margin:0; padding:0; list-style:none; display:grid; gap:8px}
+    .list li{color:var(--muted); font-size:13px; line-height:1.4}
+    .list li b{color:var(--text)}
+    .plan .actions{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
 
-    .logo-sub {
-      font-size: 11px;
-      color: var(--text-muted);
+    /* CTA */
+    .cta{
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(135deg, rgba(215,185,106,.14), rgba(110,231,255,.08), rgba(255,255,255,.03));
+      padding:22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      box-shadow: var(--shadow);
     }
+    .cta h2{margin:0; font-size:20px}
+    .cta p{margin:6px 0 0; color:var(--muted); font-size:13.5px; line-height:1.5}
+    .cta .right{display:flex; gap:10px; flex-wrap:wrap}
 
-    .nav-center {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 13px;
-      color: var(--text-muted);
+    /* Footer */
+    footer{
+      padding:26px 0 40px;
+      color: var(--muted2);
+      font-size:12.5px;
     }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
+    .foot{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top:16px;
+      flex-wrap:wrap;
     }
+    .social{display:flex; gap:10px; flex-wrap:wrap}
+    .social a{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-weight:700;
+      font-size:12px;
+    }
+    .social a:hover{color:var(--text); background: rgba(255,255,255,.06)}
 
-    .nav-links a {
-      padding: 4px 6px;
+    /* WhatsApp floating button */
+    .wa-float{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:60;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
       border-radius: 999px;
-      transition: color 0.15s ease, background 0.15s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
-      background: rgba(15, 23, 42, 0.6);
-    }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 14px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      font-size: 13px;
-      font-weight: 500;
-      color: #f9fafb;
-      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.5);
-      border: none;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-      white-space: nowrap;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 40px rgba(21, 128, 61, 0.6);
-      filter: brightness(1.03);
-    }
-
-    @media (max-width: 880px) {
-      .nav-inner {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-      }
-      .nav-center { display: none; }
-    }
-
-    /* MAIN */
-
-    main { flex: 1; }
-    .shell {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 26px 18px 80px;
-    }
-
-    /* HERO */
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 40px;
-      align-items: center;
-      margin-top: 28px;
-      margin-bottom: 70px;
-    }
-
-    @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.18), transparent 60%);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-    }
-
-    .hero-kicker-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.28);
-    }
-
-    .hero-title {
-      font-size: clamp(32px, 4vw, 44px);
-      line-height: 1.05;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
-    }
-
-    .hero-title span {
-      background: linear-gradient(to right, #22d3ee, #a855f7);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-text {
-      font-size: 15px;
-      color: var(--text-muted);
-      max-width: 480px;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 880px) {
-      .hero-text { margin-left: auto; margin-right: auto; }
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 18px;
-    }
-
-    @media (max-width: 880px) {
-      .hero-actions { justify-content: center; }
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 22px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, #22d3ee, #0ea5e9);
-      color: #0b1020;
-      font-size: 14px;
-      font-weight: 600;
-      box-shadow: 0 22px 55px rgba(8, 145, 178, 0.65);
-      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
-      text-decoration: none;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 24px 60px rgba(14, 165, 233, 0.75);
-      filter: brightness(1.05);
-    }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.45);
-      color: var(--text-muted);
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
-      text-decoration: none;
-    }
-
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.8);
-      border-color: rgba(148, 163, 184, 0.9);
-      color: var(--text-main);
-    }
-
-    .hero-footnote {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-right { position: relative; }
-
-    .hero-card {
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      background: radial-gradient(circle at 0% 0%, rgba(34, 211, 238, 0.18), transparent 55%),
-                  radial-gradient(circle at 100% 100%, rgba(94, 234, 212, 0.14), transparent 60%),
-                  #020617;
-      border: 1px solid rgba(30, 64, 175, 0.4);
-      box-shadow: var(--shadow-soft);
-      min-height: 260px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-
-    .hero-chip {
-      font-size: 11px;
-      padding: 5px 9px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-chip-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-    }
-
-    .hero-card-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .hero-card-copy {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    .hero-pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 11px;
-    }
-
-    .hero-pill {
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      background: rgba(15, 23, 42, 0.7);
-      color: #9ca3af;
-    }
-
-    .hero-card-footer {
-      border-top: 1px dashed rgba(148, 163, 184, 0.4);
-      margin-top: 12px;
-      padding-top: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .hero-image-strip {
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .hero-thumb {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      height: 58px;
-    }
-
-    .hero-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* SECTION GENERIC */
-
-    .section { margin-bottom: 70px; }
-
-    .section-heading {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-bottom: 26px;
-    }
-
-    .section-kicker {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-    }
-
-    .section-title {
-      font-size: 24px;
-      font-weight: 600;
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      max-width: 480px;
-    }
-
-    /* SERVICES SUMMARY */
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    @media (max-width: 1024px) {
-      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 640px) {
-      .services-grid { grid-template-columns: 1fr; }
-    }
-
-    .service-card {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: var(--radius-md);
-      padding: 14px 14px 14px;
-      border: 1px solid rgba(30, 64, 175, 0.5);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .service-image {
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      height: 96px;
-    }
-
-    .service-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .service-title {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .service-text {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .service-tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-
-    .service-tag {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #9ca3af;
-    }
-
-    /* PROJECT LINK */
-
-    .project-link {
-      font-size: 12px;
-      margin-top: 6px;
-      color: var(--accent-strong);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .project-link:hover {
-      text-decoration: underline;
-    }
-
-    /* JERSEY DIGITAL + SHOPIFY SECTION */
-
-    .jersey-section-wrap {
-      padding: 60px 16px 10px;
-      border-radius: var(--radius-lg);
-      background: radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.15), transparent 55%),
-                  radial-gradient(circle at 100% 100%, rgba(96, 165, 250, 0.18), transparent 45%),
-                  rgba(15, 23, 42, 0.95);
-      border: 1px solid rgba(30, 64, 175, 0.65);
-      box-shadow: var(--shadow-soft);
-      margin-bottom: 70px;
-    }
-
-    .jersey-section-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
-      gap: 36px;
-      align-items: start;
-    }
-
-    @media (max-width: 900px) {
-      .jersey-section-inner { grid-template-columns: 1fr; }
-    }
-
-    .jersey-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      padding: 5px 11px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.65);
-      color: var(--text-muted);
-      background: rgba(15, 23, 42, 0.7);
-      margin-bottom: 12px;
-    }
-
-    .jersey-title {
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .jersey-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 22px;
-      max-width: 480px;
-    }
-
-    .jersey-button-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 22px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #22c55e, #4ade80);
-      color: #022c22;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 18px 45px rgba(34, 197, 94, 0.6);
-      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
-    }
-
-    .jersey-button-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 55px rgba(34, 197, 94, 0.75);
-      filter: brightness(1.04);
-    }
-
-    .jersey-button-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.8);
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-left: 10px;
-      text-decoration: none;
-    }
-
-    .jersey-services-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 14px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      .jersey-services-grid { grid-template-columns: 1fr; }
-    }
-
-    .jersey-service-card {
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.55);
-    }
-
-    .jersey-service-title {
-      font-weight: 600;
-      font-size: 13px;
-      margin-bottom: 4px;
-    }
-
-    .jersey-service-text {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .jersey-pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 14px;
-    }
-
-    .jersey-pill {
-      font-size: 11px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.65);
-      color: #cbd5f5;
-      background: rgba(15, 23, 42, 0.85);
-    }
-
-    .jersey-right-card {
-      border-radius: var(--radius-md);
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(30, 64, 175, 0.7);
-      padding: 16px 16px 14px;
-    }
-
-    .jersey-right-heading {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .jersey-right-text {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
-    .jersey-right-list {
-      list-style: none;
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .jersey-right-list li {
-      padding-left: 16px;
-      position: relative;
-      margin-bottom: 4px;
-    }
-
-    .jersey-right-list li::before {
-      content: "•";
-      position: absolute;
-      left: 4px;
-      top: 0;
-      color: var(--accent);
-    }
-
-    /* CONTACT / CTA */
-
-    .contact-section {
-      border-radius: var(--radius-lg);
-      padding: 22px 18px;
-      border: 1px dashed rgba(148, 163, 184, 0.5);
-      background: radial-gradient(circle at 0 0, rgba(34, 211, 238, 0.12), transparent 55%),
-                  rgba(15, 23, 42, 0.9);
-      margin-bottom: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .contact-text-main {
-      font-size: 15px;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .contact-text-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn-wa {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: #ecfdf5;
-      font-size: 13px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 18px 45px rgba(22, 163, 74, 0.6);
-      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
-      text-decoration: none;
-    }
-
-    .btn-wa:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 22px 55px rgba(22, 163, 74, 0.8);
-      filter: brightness(1.05);
-    }
-
-    .btn-email {
-      font-size: 13px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid rgba(15, 23, 42, 0.9);
-      padding: 18px;
-      font-size: 11px;
-      color: var(--text-muted);
-      text-align: center;
-      background: #020617;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(10,12,18,.55);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 55px rgba(0,0,0,.45);
+      font-weight:800;
+      font-size:13px;
+    }
+    .wa-dot{
+      width:10px; height:10px; border-radius:999px;
+      background: rgba(110,231,255,.9);
+      box-shadow: 0 0 0 6px rgba(110,231,255,.12);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr; }
+      h1{font-size:36px}
+      .grid3, .price{grid-template-columns: 1fr}
+      .nav-links{display:none}
+      .brand{min-width:auto}
     }
   </style>
 </head>
-<body>
-<div class="page">
 
-  <!-- NAVBAR -->
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="logo-wrap">
-        <img src="ap-logo-gold.png" alt="AP Digital Solutions logo" class="logo-img">
-        <div class="logo">
-          <span class="logo-main">AP DIGITAL SOLUTIONS</span>
-          <span class="logo-sub">
-            Jersey · Websites · AI &amp; WhatsApp
-          </span>
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="AP Digital Solutions Home">
+          <img src="ap-logo-gold.png" alt="AP Digital Solutions logo">
+          <div>
+            <div class="t1">AP Digital Solutions</div>
+            <div class="t2">Shopify • AI • WhatsApp Automation</div>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#shopify">Shopify</a>
+          <a href="#pricing">Packages</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <a class="btn" href="#pricing">See packages</a>
+          <a class="btn primary" href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions!%20I%20want%20help%20with%20a%20Shopify%20website%20or%20automation." target="_blank" rel="noopener">Message on WhatsApp</a>
         </div>
       </div>
-
-      <div class="nav-center">
-        <nav class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Work</a>
-          <a href="#jersey-digital">AI &amp; Automations</a>
-          <a href="#shop">Shop</a>
-        </nav>
-      </div>
-
-      <a
-        class="nav-cta"
-        href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20AP%20Digital%20Solutions%20and%20I%27m%20interested%20in%20a%20project%20for%20my%20business%20in%20Jersey."
-        target="_blank"
-        rel="noopener"
-      >
-        Chat on WhatsApp ↗
-      </a>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <div class="shell">
+  <!-- HERO -->
+  <div id="top" class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
 
-      <!-- HERO -->
-      <section class="hero" id="about">
-        <div>
-          <div class="hero-kicker">
-            <span class="hero-kicker-dot"></span>
-            <span>
-              Digital made simple for Jersey businesses
-            </span>
-          </div>
-          <h1 class="hero-title">
-            Modern websites &amp; AI automations
-            <span>for local businesses in Jersey.</span>
-          </h1>
-          <p class="hero-text">
-            AP Digital Solutions helps cafés, trades, cleaners, therapists and side-hustles in
-            Jersey get online with clear websites, WhatsApp chatbots and Jersey-themed merch – no
-            tech headaches, no agency drama.
+        <div class="panel pad">
+          <div class="kicker">SHOPIFY WEBSITES • AI CHATBOTS • WHATSAPP AUTOMATION</div>
+
+          <h1>Shopify websites that look premium — and convert.</h1>
+          <p class="lead">
+            We help small businesses in <b>Jersey</b> launch fast with <b>Shopify store setup</b>,
+            modern design, AI chatbots and WhatsApp automation — <b>done for you</b>, at a fair price.
           </p>
 
           <div class="hero-actions">
-            <a href="#services" class="btn-primary">
-              See what we can do ↗
-            </a>
-
-            <a href="#shop" class="btn-ghost">
-              Jersey designs &amp; hoodies shop
-            </a>
+            <a class="btn primary" href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions!%20I%20want%20a%20Shopify%20website%20done%20for%20me." target="_blank" rel="noopener">Start on WhatsApp</a>
+            <a class="btn" href="#shopify">Why Shopify</a>
+            <a class="btn" href="#services">What we do</a>
           </div>
 
-          <p class="hero-footnote">
-            Based in Jersey · Support in English &amp; Portuguese · Friendly, human explanations.
-          </p>
+          <div class="mini">
+            <div class="pill">✅ Shopify store build & launch</div>
+            <div class="pill">✅ AI + WhatsApp automations</div>
+            <div class="pill">✅ Mobile-first, fast & clean</div>
+          </div>
         </div>
 
-        <div class="hero-right">
-          <div class="hero-card">
+        <div class="panel video-wrap" aria-label="Showreel video">
+          <video class="video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay"></div>
+
+          <div class="video-badge">
             <div>
-              <div class="hero-card-header">
-                <span class="hero-chip">
-                  <span class="hero-chip-dot"></span>
-                  <span>Done-for-you setup</span>
-                </span>
-                <span style="font-size:11px; color:var(--text-muted);">
-                  Websites · WhatsApp · Shopify
-                </span>
-              </div>
-
-              <div class="hero-card-title">
-                “You tell me what you do – I turn it into something online that works.”
-              </div>
-              <div class="hero-card-copy">
-                You send a few messages or voice notes on WhatsApp explaining your business.
-                I translate that into a clear website, automation or online shop and only ask
-                for feedback when there’s something real to see.
-              </div>
-
-              <div class="hero-pill-row">
-                <span class="hero-pill">Local SEO &amp; Google friendly</span>
-                <span class="hero-pill">WhatsApp first contact</span>
-                <span class="hero-pill">Jersey-style visuals</span>
-                <span class="hero-pill">Small-business pricing</span>
-              </div>
-
-              <div class="hero-image-strip">
-                <div class="hero-thumb">
-                  <img src="https://images.pexels.com/photos/1181465/pexels-photo-1181465.jpeg?auto=compress&cs=tinysrgb&w=800"
-                       alt="Person working with a laptop in a café">
-                </div>
-                <div class="hero-thumb">
-                  <img src="https://images.pexels.com/photos/518244/pexels-photo-518244.jpeg?auto=compress&cs=tinysrgb&w=800"
-                       alt="Small business team in a shop">
-                </div>
-                <div class="hero-thumb">
-                  <img src="https://images.pexels.com/photos/4049990/pexels-photo-4049990.jpeg?auto=compress&cs=tinysrgb&w=800"
-                       alt="Smartphone with chat messages">
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-card-footer">
-              <span>From idea to online in a few days</span>
-              <span>Perfect for busy owners in Jersey</span>
+              <b>Shopify + automation, simplified</b>
+              <span>Clean Apple-style design, fast setup, and a WhatsApp-first customer journey.</span>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- SERVICES -->
-      <section class="section" id="services">
-        <div class="section-heading">
-          <span class="section-kicker">Services</span>
-          <h2 class="section-title">
-            What AP Digital Solutions does for Jersey
-          </h2>
-          <p class="section-subtitle">
-            Clear and simple packages to help you get visible, get organised and get more
-            messages from the right clients – even if you hate technology.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Website layout on a laptop">
-            </div>
-            <h3 class="service-title">
-              Modern one-page &amp; multi-page websites
-            </h3>
-            <p class="service-text">
-              Clean, Apple-style sites for Jersey trades, cafés, therapists and side-hustles.
-              Focused on what you do, why you’re trusted and how to contact you.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">Mobile-first</span>
-              <span class="service-tag">Copy written for you</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/4049694/pexels-photo-4049694.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Phone with message icons">
-            </div>
-            <h3 class="service-title">
-              WhatsApp chatbots &amp; TimelineAI flows
-            </h3>
-            <p class="service-text">
-              Smart WhatsApp flows that answer FAQs, collect info and send you qualified leads,
-              using TimelineAI and simple automations.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">24/7 replies</span>
-              <span class="service-tag">Lead capture</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Social media on a phone">
-            </div>
-            <h3 class="service-title">
-              Link pages &amp; social presence
-            </h3>
-            <p class="service-text">
-              Simple “all-in-one” link pages with your WhatsApp, Facebook, Instagram and
-              bookings – perfect for bios, posters and QR codes around Jersey.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">One link for everything</span>
-              <span class="service-tag">Great with QR codes</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Online shop on a laptop">
-            </div>
-            <h3 class="service-title">
-              Shopify &amp; Jersey-themed merch
-            </h3>
-            <p class="service-text">
-              Setup of small Shopify stores, print-on-demand integration and Jersey designs
-              for hoodies, tees, mugs and more – shipped globally.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">No stock needed</span>
-              <span class="service-tag">Print-on-demand ready</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- RECENT WORK -->
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <span class="section-kicker">Recent work</span>
-          <h2 class="section-title">
-            Some Jersey projects already online
-          </h2>
-          <p class="section-subtitle">
-            A few examples of projects built and supported by AP Digital Solutions, mixing
-            clear copy, simple structure and WhatsApp-first contact.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/2821220/pexels-photo-2821220.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Calm scene representing mental health support">
-            </div>
-            <h3 class="service-title">
-              AJUDATOTAL – Saúde Mental para a Vida Moderna
-            </h3>
-            <p class="service-text">
-              Landing page focused on mental health support, clear sessions structure and
-              simple contact options for people living in Jersey and abroad.
-            </p>
-            <a class="project-link" href="https://ajudatotal.com/" target="_blank" rel="noopener">
-              Visit website ↗
-            </a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Holistic therapy setting">
-            </div>
-            <h3 class="service-title">
-              Cátia Coutinho – Terapias Holísticas
-            </h3>
-            <p class="service-text">
-              Website for holistic therapies with sessions overview, benefits explained in
-              simple language and direct links to book via WhatsApp.
-            </p>
-            <a class="project-link" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">
-              Visit website ↗
-            </a>
-          </article>
-
-          <!-- espaço para futuros projetos -->
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/3738939/pexels-photo-3738939.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Small business owner using laptop">
-            </div>
-            <h3 class="service-title">
-              Your Jersey business could be next
-            </h3>
-            <p class="service-text">
-              From cleaning services to trades, cafés, wellbeing or side projects – we can
-              put your work online in a way that feels like you.
-            </p>
-            <a class="project-link"
-               href="https://wa.me/447700704591?text=Hi%2C%20I%20saw%20your%20recent%20work%20and%20I%20want%20to%20know%20what%20you%20can%20do%20for%20my%20business%20in%20Jersey."
-               target="_blank"
-               rel="noopener">
-              Talk about your project ↗
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <!-- JERSEY DIGITAL & SHOP -->
-      <section id="jersey-digital" class="jersey-section-wrap">
-        <div class="jersey-section-inner">
-          <!-- LEFT -->
-          <div>
-            <div class="jersey-tag">
-              Jersey · AI · Automations
-            </div>
-
-            <h2 class="jersey-title">
-              Automations &amp; WhatsApp flows built around how you really work
-            </h2>
-            <p class="jersey-subtitle">
-              Instead of big “systems” you’ll never use, we create small automations that make
-              sense for a busy Jersey day – messages, bookings, reminders and follow-ups
-              directly in WhatsApp and email.
-            </p>
-
-            <div style="margin-bottom:18px;">
-              <a
-                href="https://wa.me/447700704591?text=Hi%2C%20I%27m%20interested%20in%20an%20automation%20or%20WhatsApp%20flow%20for%20my%20business%20in%20Jersey."
-                target="_blank"
-                rel="noopener"
-                class="jersey-button-primary"
-              >
-                Talk about an automation idea ↗
-              </a>
-
-              <a href="#shop" class="jersey-button-secondary">
-                See Jersey merch &amp; designs
-              </a>
-            </div>
-
-            <div class="jersey-right-card">
-              <div class="jersey-right-heading">
-                Examples of flows for Jersey businesses
-              </div>
-              <p class="jersey-right-text">
-                These are quick wins we can build fast – usually after a single chat where
-                you explain how your day looks and what slows you down.
-              </p>
-              <ul class="jersey-right-list">
-                <li>Auto-reply when people text your WhatsApp out of hours</li>
-                <li>Forms inside WhatsApp to book a clean, a quote or a session</li>
-                <li>Follow-up reminders so good leads don’t disappear</li>
-                <li>Simple dashboards with who contacted you and about what</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- RIGHT: SHOP / MERCH -->
-          <div id="shop">
-            <div class="jersey-tag">
-              Jersey designs · Shopify
-            </div>
-
-            <h3 class="jersey-title" style="font-size:22px; margin-bottom:6px;">
-              Jersey hoodies, tees &amp; digital designs
-            </h3>
-            <p class="jersey-subtitle" style="margin-bottom:18px;">
-              I also create Jersey-inspired designs and phrases for hoodies, t-shirts, mugs,
-              bottles and more – perfect for locals, expats and gifts.
-            </p>
-
-            <div class="jersey-services-grid">
-              <div class="jersey-service-card">
-                <div class="jersey-service-title">
-                  Ready-made designs
-                </div>
-                <div class="jersey-service-text">
-                  “Jersey Boys / Girls”, Jersey maps, local beaches, Portuguese community,
-                  funny quotes and more – ready to print.
-                </div>
-              </div>
-
-              <div class="jersey-service-card">
-                <div class="jersey-service-title">
-                  Custom ideas for your brand
-                </div>
-                <div class="jersey-service-text">
-                  Want merch for your own business or team in Jersey? We can adapt the style
-                  and colours to your logo.
-                </div>
-              </div>
-            </div>
-
-            <div class="jersey-pill-row">
-              <a
-                href="https://ap-digital-solutions.myshopify.com/"
-                target="_blank"
-                rel="noopener"
-                class="jersey-button-primary"
-                style="margin-top:10px;"
-              >
-                Visit the AP Digital Solutions Shopify ↗
-              </a>
-              <span class="jersey-pill">Worldwide shipping via print-on-demand</span>
-              <span class="jersey-pill">New designs added over time</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="contact-section">
-        <div>
-          <div class="contact-text-main">
-            Want help with a website, WhatsApp or Jersey merch?
-          </div>
-          <div class="contact-text-sub">
-            Send a quick message explaining what you do and what you’re looking for.
-            I’ll reply with simple options and clear prices – no pressure to say yes.
-          </div>
-        </div>
-
-        <div class="contact-actions">
-          <a
-            class="btn-wa"
-            href="https://wa.me/447700704591?text=Hi%2C%20I%20saw%20your%20AP%20Digital%20Solutions%20website%20and%20I%27d%20like%20help%20with%20a%20project%20in%20Jersey."
-            target="_blank"
-            rel="noopener"
-          >
-            💬 Chat on WhatsApp
-          </a>
-
-          <a
-            class="btn-email"
-            href="mailto:apdigitalsolutions.je@outlook.com"
-          >
-            Email: apdigitalsolutions.je@outlook.com
-          </a>
-
-          <a
-            class="btn-email"
-            href="https://www.facebook.com/share/1a8fiKUzAn/"
-            target="_blank"
-            rel="noopener"
-          >
-            Facebook
-          </a>
-
-          <a
-            class="btn-email"
-            href="https://www.instagram.com/ap_the_solution_to_be_online?igsh=MXA1dXMzaTh5bG1ncg=="
-            target="_blank"
-            rel="noopener"
-          >
-            Instagram
-          </a>
-        </div>
-      </section>
+      </div>
     </div>
-  </main>
+  </div>
 
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Everything you need to sell online — without the stress.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Shopify Website Design (Done-For-You)</h3>
+          <p>Premium layouts, mobile-first sections, product pages, collections, policies, and launch setup.</p>
+        </div>
+        <div class="card">
+          <h3>AI Chatbots & Lead Capture</h3>
+          <p>AI assistants that answer questions, qualify leads, and collect details — ready for your workflow.</p>
+        </div>
+        <div class="card">
+          <h3>WhatsApp Automation</h3>
+          <p>Direct WhatsApp journeys for customers: FAQs, quotes, bookings, and follow-up automations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOPIFY SEO SECTION -->
+  <section id="shopify">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Shopify Experts in Jersey</h2>
+        <p>Google understands this section — it helps you rank for “Shopify in Jersey”.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Fast setup</h3>
+          <p>We build your Shopify store structure: theme, navigation, collections, payments, shipping and essential settings.</p>
+        </div>
+        <div class="card">
+          <h3>Conversion-focused</h3>
+          <p>Clean design + clear CTAs, trust elements and a smooth path to checkout — made for real customers.</p>
+        </div>
+        <div class="card">
+          <h3>Automation-ready</h3>
+          <p>Connect Shopify with WhatsApp + AI so customers get answers instantly and you get qualified leads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Packages</h2>
+        <p>Simple tiers. Clear value. Upgrade anytime.</p>
+      </div>
+
+      <div class="price">
+        <div class="plan">
+          <div class="tag">Starter</div>
+          <h3>Launch</h3>
+          <p class="who">For new stores that need a clean, professional setup.</p>
+          <ul class="list">
+            <li><b>Shopify theme setup</b> + homepage</li>
+            <li>Up to <b>5 sections</b> customized</li>
+            <li>Collections & basic navigation</li>
+            <li>Essential pages (policies, contact)</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://wa.me/447700704591?text=Hi!%20I%20want%20the%20Starter%20Shopify%20package." target="_blank" rel="noopener">Ask on WhatsApp</a>
+            <a class="btn" href="#contact">Get a quote</a>
+          </div>
+        </div>
+
+        <div class="plan featured">
+          <div class="tag">Most Popular</div>
+          <h3>Growth</h3>
+          <p class="who">For businesses that want to look premium and sell more.</p>
+          <ul class="list">
+            <li>Everything in Starter</li>
+            <li><b>Product page optimization</b></li>
+            <li>Up to <b>10 sections</b> customized</li>
+            <li>Basic SEO (titles/descriptions)</li>
+            <li>WhatsApp buttons & tracking ready</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://wa.me/447700704591?text=Hi!%20I%20want%20the%20Growth%20Shopify%20package." target="_blank" rel="noopener">Ask on WhatsApp</a>
+            <a class="btn" href="#contact">Get a quote</a>
+          </div>
+        </div>
+
+        <div class="plan">
+          <div class="tag">Premium</div>
+          <h3>Automation</h3>
+          <p class="who">For stores that want AI + WhatsApp automation end-to-end.</p>
+          <ul class="list">
+            <li>Everything in Growth</li>
+            <li><b>AI chatbot</b> flow (lead qualify)</li>
+            <li><b>WhatsApp automation</b> journey</li>
+            <li>Lead capture + summary delivery</li>
+            <li>Priority setup & support</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://wa.me/447700704591?text=Hi!%20I%20want%20the%20Automation%20package%20with%20AI%20and%20WhatsApp." target="_blank" rel="noopener">Ask on WhatsApp</a>
+            <a class="btn" href="#contact">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>Ready to launch your Shopify store?</h2>
+          <p>Send a WhatsApp message and we’ll guide you through the next steps (no phone number shown on the site).</p>
+        </div>
+        <div class="right">
+          <a class="btn primary" href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions!%20I%20want%20a%20Shopify%20store%20and%20automation.%20My%20business%20is%3A%20" target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a class="btn" href="https://www.instagram.com/ap_the_solution_to_be_online?igsh=MXA1dXMzaTh5bG1ncg==" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn" href="https://www.facebook.com/share/17Mt74px81/" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    © <span id="year"></span> AP Digital Solutions · Jersey, Channel Islands
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <b>AP Digital Solutions</b><br/>
+          <span>Shopify Websites • AI Chatbots • WhatsApp Automation — Jersey</span>
+        </div>
+        <div class="social">
+          <a href="https://www.instagram.com/ap_the_solution_to_be_online?igsh=MXA1dXMzaTh5bG1ncg==" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/share/17Mt74px81/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions!" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
   </footer>
-</div>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions!%20I%20want%20help%20with%20Shopify." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="wa-dot"></span>
+    Chat on WhatsApp
+  </a>
+
 </body>
-  </html>
+</html>
