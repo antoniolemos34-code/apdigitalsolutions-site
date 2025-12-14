@@ -4,11 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AP Home & Lifestyle — Curated pieces for modern living</title>
-  <meta name="description" content="AP Home & Lifestyle — curated pieces for modern living. Discover premium essentials and shop securely via Shopify." />
+  <meta name="description" content="AP Home & Lifestyle — curated pieces for modern living. Shop premium essentials with secure checkout on Shopify." />
 
+  <!-- Open Graph -->
   <meta property="og:title" content="AP Home & Lifestyle" />
   <meta property="og:description" content="Curated pieces for modern living. Shop premium essentials with secure checkout." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="novo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +23,15 @@
       --ink:#0b1220;
       --muted:rgba(11,18,32,.68);
       --stroke:rgba(11,18,32,.14);
-      --glass:rgba(255,255,255,.62);
-      --glass2:rgba(255,255,255,.42);
-      --shadow:0 20px 70px rgba(11,18,32,.14);
+      --glass:rgba(255,255,255,.55);
+      --glass2:rgba(255,255,255,.40);
+      --shadow:0 22px 70px rgba(11,18,32,.14);
       --shadow2:0 14px 40px rgba(11,18,32,.10);
       --radius:26px;
       --max:1180px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -50,7 +52,7 @@
       padding: 14px 18px;
       border-radius: 999px;
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.72);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       box-shadow: 0 12px 36px rgba(11,18,32,.10);
@@ -59,7 +61,7 @@
     .mark{
       width:46px; height:46px; border-radius:16px;
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.75);
+      background: rgba(255,255,255,.78);
       display:grid; place-items:center;
       overflow:hidden;
     }
@@ -68,11 +70,11 @@
       padding:6px; display:block;
       filter: drop-shadow(0 10px 18px rgba(11,18,32,.12));
     }
-    .brand strong{font-weight:600; letter-spacing:.2px}
+    .brand strong{font-weight:650; letter-spacing:.2px}
     .sub{font-size:13px; color:rgba(11,18,32,.60)}
     .nav{display:flex; gap:12px; align-items:center; color: var(--muted); font-size:14px;}
     .nav a{padding:10px 12px; border-radius:999px; border:1px solid transparent;}
-    .nav a:hover{border-color: var(--stroke); background: rgba(255,255,255,.42);}
+    .nav a:hover{border-color: var(--stroke); background: rgba(255,255,255,.45);}
     .cta{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width: 280px;}
 
     .btn{
@@ -80,24 +82,23 @@
       height:42px; padding:0 16px;
       border-radius:999px;
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.72);
-      font-weight:600;
+      background: rgba(255,255,255,.74);
+      font-weight:650;
       font-size:14px;
       box-shadow: 0 10px 26px rgba(11,18,32,.10);
       transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
       white-space:nowrap;
       cursor:pointer;
     }
-    .btn:hover{transform: translateY(-1px); box-shadow: 0 16px 34px rgba(11,18,32,.12);}
+    .btn:hover{transform: translateY(-1px); box-shadow: 0 18px 42px rgba(11,18,32,.12);}
     .btn.primary{
       background: rgba(11,18,32,.96);
       color:#fff;
       border-color: rgba(11,18,32,.35);
     }
     .btn.primary:hover{background: rgba(11,18,32,.99);}
-    .btn.ghost{background: rgba(255,255,255,.50);}
+    .btn.ghost{background: rgba(255,255,255,.52);}
 
-    /* Cards / glass */
     .glass{
       border:1px solid var(--stroke);
       background: var(--glass2);
@@ -116,7 +117,6 @@
         radial-gradient(650px 420px at 20% 18%, rgba(255,255,255,.65), transparent 60%),
         radial-gradient(700px 520px at 85% 18%, rgba(255,255,255,.50), transparent 62%);
       pointer-events:none;
-      filter: blur(0px);
       opacity:.95;
     }
     .hero-inner{
@@ -130,7 +130,7 @@
       padding: 38px 28px;
       border-radius: 22px;
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.74);
+      background: rgba(255,255,255,.76);
       box-shadow: var(--shadow2);
       overflow:hidden;
     }
@@ -139,7 +139,7 @@
       padding:10px 14px;
       border-radius:999px;
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.74);
+      background: rgba(255,255,255,.76);
       color: rgba(11,18,32,.74);
       font-size: 13px;
     }
@@ -167,7 +167,7 @@
     .collage{
       border-radius: 22px;
       border:1px solid var(--stroke);
-      background: rgba(255,255,255,.42);
+      background: rgba(255,255,255,.44);
       overflow:hidden;
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -182,10 +182,11 @@
       position:relative;
       border:1px solid rgba(11,18,32,.10);
       background:#fff;
+      transform: translateZ(0);
     }
     .tile img{width:100%; height:100%; object-fit:cover; display:block; transform: scale(1.02);}
-    .tile::after{content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 52%, rgba(11,18,32,.20)); pointer-events:none;}
-    .tile .label{position:absolute; left:12px; bottom:12px; color:#fff; font-weight:700; font-size:14px; text-shadow: 0 10px 24px rgba(0,0,0,.36);}
+    .tile::after{content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 52%, rgba(11,18,32,.22)); pointer-events:none;}
+    .tile .label{position:absolute; left:12px; bottom:12px; color:#fff; font-weight:750; font-size:14px; text-shadow: 0 10px 24px rgba(0,0,0,.36);}
     .tile.big{grid-column: 1 / span 2; height: 240px;}
 
     /* Sections */
@@ -214,11 +215,25 @@
       grid-column: span 4;
       border:1px solid var(--stroke);
       border-radius: 22px;
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.72);
       box-shadow: var(--shadow2);
       overflow:hidden;
+      transition: transform .16s ease, box-shadow .16s ease;
     }
-    .card img{width:100%; height:220px; object-fit:cover; display:block;}
+    .card:hover{transform: translateY(-2px); box-shadow: 0 22px 56px rgba(11,18,32,.14);}
+    .media{
+      width:100%;
+      height:220px;
+      background: linear-gradient(180deg, rgba(11,18,32,.06), rgba(11,18,32,.02));
+      position:relative;
+      overflow:hidden;
+    }
+    .media img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.02);
+    }
     .card .body{padding:14px 14px 16px;}
     .card .title{font-weight:800; margin:0 0 6px; letter-spacing:.2px}
     .card .desc{margin:0; color: rgba(11,18,32,.70); font-size:14px; line-height:1.55;}
@@ -234,7 +249,7 @@
       grid-column: span 4;
       border:1px solid var(--stroke);
       border-radius: 22px;
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.72);
       box-shadow: var(--shadow2);
       padding:16px;
     }
@@ -260,7 +275,7 @@
     <header class="top">
       <div class="brand">
         <div class="mark">
-          <!-- fallback: tenta assets/logo.png, se falhar usa novo.png -->
+          <!-- Logo: tenta assets/logo.png, se falhar usa novo.png -->
           <img id="brandLogo" src="assets/logo.png" alt="AP Home & Lifestyle logo">
         </div>
         <div>
@@ -271,7 +286,7 @@
 
       <nav class="nav">
         <a href="#collections">Collections</a>
-        <a href="#trust">Why buy</a>
+        <a href="#why">Why buy</a>
         <a href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener">Store</a>
       </nav>
 
@@ -282,7 +297,7 @@
     </header>
 
     <!-- HERO -->
-    <main class="hero glass">
+    <main class="hero glass" id="top">
       <div class="hero-inner">
         <div class="hero-left">
           <div class="badge"><span class="dot"></span> Premium picks • Minimal aesthetic • Secure checkout</div>
@@ -303,18 +318,18 @@
 
         <div class="collage" aria-label="Lifestyle imagery">
           <div class="tile big">
-            <img alt="Modern home interior"
-              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80" />
+            <img data-fallback="1" alt="Modern interiors"
+                 src="https://source.unsplash.com/featured/1400x900?modern,interior" />
             <div class="label">Modern interiors</div>
           </div>
           <div class="tile">
-            <img alt="Desk essentials"
-              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" />
+            <img data-fallback="2" alt="Desk essentials"
+                 src="https://source.unsplash.com/featured/900x900?desk,minimal" />
             <div class="label">Desk</div>
           </div>
           <div class="tile">
-            <img alt="Kitchen essentials"
-              src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?auto=format&fit=crop&w=900&q=80" />
+            <img data-fallback="3" alt="Kitchen essentials"
+                 src="https://source.unsplash.com/featured/900x900?kitchen,aesthetic" />
             <div class="label">Kitchen</div>
           </div>
         </div>
@@ -333,8 +348,10 @@
 
       <div class="grid">
         <article class="card">
-          <img alt="Smart essentials"
-               src="https://images.unsplash.com/photo-1518444028785-8f5a4b1a95b6?auto=format&fit=crop&w=1400&q=80">
+          <div class="media">
+            <img data-fallback="4" alt="Smart essentials"
+                 src="https://source.unsplash.com/featured/1400x900?gadgets,minimal,tech">
+          </div>
           <div class="body">
             <p class="title">Smart essentials</p>
             <p class="desc">Modern tech for everyday convenience — minimal and practical.</p>
@@ -346,8 +363,10 @@
         </article>
 
         <article class="card">
-          <img alt="Home & decor"
-               src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=1400&q=80">
+          <div class="media">
+            <img data-fallback="5" alt="Home & decor"
+                 src="https://source.unsplash.com/featured/1400x900?home,decor,minimal">
+          </div>
           <div class="body">
             <p class="title">Home & decor</p>
             <p class="desc">Neutral tones and clean shapes — pieces that elevate your space.</p>
@@ -359,8 +378,10 @@
         </article>
 
         <article class="card">
-          <img alt="Lifestyle picks"
-               src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1400&q=80">
+          <div class="media">
+            <img data-fallback="6" alt="Lifestyle picks"
+                 src="https://source.unsplash.com/featured/1400x900?lifestyle,neutral,design">
+          </div>
           <div class="body">
             <p class="title">Lifestyle picks</p>
             <p class="desc">Small upgrades that feel premium — perfect for gifting.</p>
@@ -373,8 +394,8 @@
       </div>
     </section>
 
-    <!-- TRUST -->
-    <section id="trust" class="glass">
+    <!-- WHY BUY -->
+    <section id="why" class="glass">
       <div class="section-head">
         <div>
           <h2>Why buy</h2>
@@ -386,15 +407,15 @@
       <div class="trust">
         <div class="t">
           <b>Secure checkout</b>
-          <span>All payments and checkout happen on Shopify — safe and trusted.</span>
+          <span>Payments and checkout happen on Shopify — safe and trusted.</span>
         </div>
         <div class="t">
           <b>Fast browsing</b>
-          <span>A clean “front page” that sends customers straight to the products.</span>
+          <span>A clean front page that sends customers straight to products.</span>
         </div>
         <div class="t">
           <b>Premium feel</b>
-          <span>Minimal design, strong typography, and high-end product presentation.</span>
+          <span>Minimal design, strong typography, and high-end presentation.</span>
         </div>
       </div>
     </section>
@@ -410,10 +431,26 @@
     // Year
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Logo fallback (porque no teu repo tens "novo.png" na raiz)
+    // Logo fallback: no teu repo tens "novo.png" na raiz
     const logo = document.getElementById("brandLogo");
-    logo.addEventListener("error", () => {
-      logo.src = "novo.png";
+    logo.addEventListener("error", () => { logo.src = "novo.png"; });
+
+    // Image fallback: se alguma imagem falhar, troca por uma alternativa
+    const fallbacks = [
+      "https://images.unsplash.com/photo-1518444028785-8f5a4b1a95b6?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1496412705862-e0088f16f791?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1518444028785-8f5a4b1a95b6?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1400&q=80"
+    ];
+
+    document.querySelectorAll("img[data-fallback]").forEach(img => {
+      img.addEventListener("error", () => {
+        const idx = Math.min(parseInt(img.getAttribute("data-fallback") || "0", 10), fallbacks.length - 1);
+        img.src = fallbacks[idx] || fallbacks[0];
+      });
     });
   </script>
 </body>
