@@ -2,456 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AP Home & Lifestyle — Curated pieces for modern living</title>
-  <meta name="description" content="AP Home & Lifestyle — curated pieces for modern living. Shop premium essentials with secure checkout on Shopify." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="AP Home & Lifestyle" />
-  <meta property="og:description" content="Curated pieces for modern living. Shop premium essentials with secure checkout." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="novo.png" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AP Living — Modern living, curated</title>
+  <meta name="description" content="AP Living — modern essentials with a premium feel. Shop curated home & lifestyle picks." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg:#f5f1e8;
-      --bg2:#efe7da;
-      --ink:#0b1220;
-      --muted:rgba(11,18,32,.68);
-      --stroke:rgba(11,18,32,.14);
-      --glass:rgba(255,255,255,.55);
-      --glass2:rgba(255,255,255,.40);
-      --shadow:0 22px 70px rgba(11,18,32,.14);
-      --shadow2:0 14px 40px rgba(11,18,32,.10);
-      --radius:26px;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(1200px 900px at 14% 0%, rgba(255,255,255,.70), transparent 58%),
-        radial-gradient(900px 700px at 88% 14%, rgba(255,255,255,.55), transparent 55%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-      overflow-x:hidden;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
-
-    /* Top bar */
-    .top{
-      position: sticky; top: 16px; z-index: 50;
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      padding: 14px 18px;
-      border-radius: 999px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 12px 36px rgba(11,18,32,.10);
-    }
-    .brand{display:flex; align-items:center; gap:12px; min-width: 280px;}
-    .mark{
-      width:46px; height:46px; border-radius:16px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.78);
-      display:grid; place-items:center;
-      overflow:hidden;
-    }
-    .mark img{
-      width:100%; height:100%; object-fit:contain;
-      padding:6px; display:block;
-      filter: drop-shadow(0 10px 18px rgba(11,18,32,.12));
-    }
-    .brand strong{font-weight:650; letter-spacing:.2px}
-    .sub{font-size:13px; color:rgba(11,18,32,.60)}
-    .nav{display:flex; gap:12px; align-items:center; color: var(--muted); font-size:14px;}
-    .nav a{padding:10px 12px; border-radius:999px; border:1px solid transparent;}
-    .nav a:hover{border-color: var(--stroke); background: rgba(255,255,255,.45);}
-    .cta{display:flex; gap:10px; align-items:center; justify-content:flex-end; min-width: 280px;}
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      height:42px; padding:0 16px;
-      border-radius:999px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.74);
-      font-weight:650;
-      font-size:14px;
-      box-shadow: 0 10px 26px rgba(11,18,32,.10);
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-      white-space:nowrap;
-      cursor:pointer;
-    }
-    .btn:hover{transform: translateY(-1px); box-shadow: 0 18px 42px rgba(11,18,32,.12);}
-    .btn.primary{
-      background: rgba(11,18,32,.96);
-      color:#fff;
-      border-color: rgba(11,18,32,.35);
-    }
-    .btn.primary:hover{background: rgba(11,18,32,.99);}
-    .btn.ghost{background: rgba(255,255,255,.52);}
-
-    .glass{
-      border:1px solid var(--stroke);
-      background: var(--glass2);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
-
-    /* Hero */
-    .hero{margin-top: 18px; overflow:hidden; position:relative;}
-    .hero::before{
-      content:"";
-      position:absolute; inset:-40px;
-      background:
-        radial-gradient(650px 420px at 20% 18%, rgba(255,255,255,.65), transparent 60%),
-        radial-gradient(700px 520px at 85% 18%, rgba(255,255,255,.50), transparent 62%);
-      pointer-events:none;
-      opacity:.95;
-    }
-    .hero-inner{
-      position:relative;
-      display:grid;
-      grid-template-columns: 1.06fr .94fr;
-      gap: 18px;
-      padding: 18px;
-    }
-    .hero-left{
-      padding: 38px 28px;
-      border-radius: 22px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.76);
-      box-shadow: var(--shadow2);
-      overflow:hidden;
-    }
-    .badge{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.76);
-      color: rgba(11,18,32,.74);
-      font-size: 13px;
-    }
-    .dot{width:10px; height:10px; border-radius:999px; background: rgba(11,18,32,.90); box-shadow: 0 0 0 6px rgba(11,18,32,.08);}
-    h1{
-      margin: 18px 0 12px;
-      font-family: "Playfair Display", serif;
-      font-weight: 600;
-      font-size: clamp(44px, 4.8vw, 76px);
-      line-height: 1.02;
-      letter-spacing: -0.8px;
-    }
-    .tag{
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 62ch;
-    }
-    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px;}
-    .mini{margin-top: 14px; display:flex; flex-wrap:wrap; gap:10px; color: rgba(11,18,32,.62); font-size: 13px;}
-    .chip{padding:10px 12px; border-radius: 999px; border:1px solid var(--stroke); background: rgba(255,255,255,.62);}
-
-    /* Collage */
-    .collage{
-      border-radius: 22px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.44);
-      overflow:hidden;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 220px;
-      gap: 10px;
-      padding: 10px;
-      box-shadow: var(--shadow2);
-    }
-    .tile{
-      border-radius: 18px;
-      overflow:hidden;
-      position:relative;
-      border:1px solid rgba(11,18,32,.10);
-      background:#fff;
-      transform: translateZ(0);
-    }
-    .tile img{width:100%; height:100%; object-fit:cover; display:block; transform: scale(1.02);}
-    .tile::after{content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 52%, rgba(11,18,32,.22)); pointer-events:none;}
-    .tile .label{position:absolute; left:12px; bottom:12px; color:#fff; font-weight:750; font-size:14px; text-shadow: 0 10px 24px rgba(0,0,0,.36);}
-    .tile.big{grid-column: 1 / span 2; height: 240px;}
-
-    /* Sections */
-    section{margin-top:18px;}
-    .section-head{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
-      padding: 18px 22px;
-      border-bottom:1px solid var(--stroke);
-    }
-    .section-head h2{
-      margin:0;
-      font-size: 15px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: rgba(11,18,32,.72);
-    }
-    .section-head p{margin:6px 0 0; font-size: 14px; color: rgba(11,18,32,.60);}
-
-    .grid{
-      padding:18px;
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-    }
-    .card{
-      grid-column: span 4;
-      border:1px solid var(--stroke);
-      border-radius: 22px;
-      background: rgba(255,255,255,.72);
-      box-shadow: var(--shadow2);
-      overflow:hidden;
-      transition: transform .16s ease, box-shadow .16s ease;
-    }
-    .card:hover{transform: translateY(-2px); box-shadow: 0 22px 56px rgba(11,18,32,.14);}
-    .media{
-      width:100%;
-      height:220px;
-      background: linear-gradient(180deg, rgba(11,18,32,.06), rgba(11,18,32,.02));
-      position:relative;
-      overflow:hidden;
-    }
-    .media img{
-      width:100%; height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.02);
-    }
-    .card .body{padding:14px 14px 16px;}
-    .card .title{font-weight:800; margin:0 0 6px; letter-spacing:.2px}
-    .card .desc{margin:0; color: rgba(11,18,32,.70); font-size:14px; line-height:1.55;}
-    .card .actions{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;}
-
-    .trust{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-      padding:18px;
-    }
-    .t{
-      grid-column: span 4;
-      border:1px solid var(--stroke);
-      border-radius: 22px;
-      background: rgba(255,255,255,.72);
-      box-shadow: var(--shadow2);
-      padding:16px;
-    }
-    .t b{display:block; margin-bottom:6px}
-    .t span{color: rgba(11,18,32,.68); font-size:14px; line-height:1.55}
-
-    footer{padding: 28px 8px 46px; color: rgba(11,18,32,.55); font-size: 13px; text-align:center;}
-
-    @media (max-width: 980px){
-      .nav{display:none}
-      .hero-inner{grid-template-columns: 1fr; padding: 14px}
-      .card{grid-column: span 12}
-      .t{grid-column: span 12}
-      .brand,.cta{min-width:auto}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="wrap">
+  <header class="top">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img src="logo.svg" alt="AP Living logo" class="logo" />
+      </a>
 
-    <!-- TOP BAR -->
-    <header class="top">
-      <div class="brand">
-        <div class="mark">
-          <!-- Logo: tenta assets/logo.png, se falhar usa novo.png -->
-          <img id="brandLogo" src="assets/logo.png" alt="AP Home & Lifestyle logo">
-        </div>
-        <div>
-          <strong>AP Home & Lifestyle</strong><br>
-          <span class="sub">Curated pieces for modern living</span>
-        </div>
-      </div>
-
-      <nav class="nav">
-        <a href="#collections">Collections</a>
-        <a href="#why">Why buy</a>
-        <a href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener">Store</a>
+      <nav class="actions">
+        <a class="btn btn-ghost" href="#featured">Browse</a>
+        <a class="btn btn-solid" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">
+          Shop now
+        </a>
       </nav>
+    </div>
+  </header>
 
-      <div class="cta">
-        <a class="btn ghost" href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener">Browse</a>
-        <a class="btn primary" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop Now</a>
-      </div>
-    </header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pill">
+            <span class="dot"></span>
+            Premium picks • Minimal aesthetic • Secure checkout
+          </div>
 
-    <!-- HERO -->
-    <main class="hero glass" id="top">
-      <div class="hero-inner">
-        <div class="hero-left">
-          <div class="badge"><span class="dot"></span> Premium picks • Minimal aesthetic • Secure checkout</div>
-          <h1>Home & Lifestyle,<br>curated.</h1>
-          <p class="tag">
-            Discover clean, modern essentials designed to elevate everyday living — curated pieces with a premium feel.
+          <h1>Modern living, curated.</h1>
+          <p class="lead">
+            Clean, modern essentials designed to elevate everyday life — curated pieces with a premium feel.
           </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop all products</a>
-            <a class="btn" href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener">Open store</a>
+
+          <div class="cta-row">
+            <a class="btn btn-solid btn-lg" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">
+              Shop all products
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#featured">See highlights</a>
           </div>
-          <div class="mini">
-            <span class="chip">Gift-ready finds</span>
-            <span class="chip">Trending essentials</span>
-            <span class="chip">Fast checkout</span>
+
+          <div class="trust">
+            <div class="trust-item">Fast browsing</div>
+            <div class="trust-item">Mobile-first</div>
+            <div class="trust-item">Always clean & simple</div>
           </div>
         </div>
 
-        <div class="collage" aria-label="Lifestyle imagery">
-          <div class="tile big">
-            <img data-fallback="1" alt="Modern interiors"
-                 src="https://source.unsplash.com/featured/1400x900?modern,interior" />
-            <div class="label">Modern interiors</div>
-          </div>
-          <div class="tile">
-            <img data-fallback="2" alt="Desk essentials"
-                 src="https://source.unsplash.com/featured/900x900?desk,minimal" />
-            <div class="label">Desk</div>
-          </div>
-          <div class="tile">
-            <img data-fallback="3" alt="Kitchen essentials"
-                 src="https://source.unsplash.com/featured/900x900?kitchen,aesthetic" />
-            <div class="label">Kitchen</div>
-          </div>
-        </div>
-      </div>
-    </main>
+        <div class="hero-card">
+          <div class="card">
+            <div class="card-top">
+              <div class="mini">
+                <div class="mini-icon">AP</div>
+                <div class="mini-text">
+                  <div class="mini-title">AP Living</div>
+                  <div class="mini-sub">Home & Lifestyle</div>
+                </div>
+              </div>
+              <div class="badge">New</div>
+            </div>
 
-    <!-- COLLECTIONS -->
-    <section id="collections" class="glass">
-      <div class="section-head">
-        <div>
-          <h2>Collections</h2>
-          <p>Browse by vibe — clean, useful, premium-looking.</p>
-        </div>
-        <a class="btn" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">View all</a>
-      </div>
+            <div class="card-body">
+              <div class="big">Minimal. Premium. Practical.</div>
+              <div class="small">
+                Browse curated items and go straight to checkout via our Shopify store.
+              </div>
+            </div>
 
-      <div class="grid">
-        <article class="card">
-          <div class="media">
-            <img data-fallback="4" alt="Smart essentials"
-                 src="https://source.unsplash.com/featured/1400x900?gadgets,minimal,tech">
-          </div>
-          <div class="body">
-            <p class="title">Smart essentials</p>
-            <p class="desc">Modern tech for everyday convenience — minimal and practical.</p>
-            <div class="actions">
-              <a class="btn primary" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop now</a>
-              <a class="btn" href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener">Browse</a>
+            <div class="card-actions">
+              <a class="btn btn-solid" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Open store</a>
+              <a class="btn btn-ghost" href="#featured">Learn more</a>
             </div>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="media">
-            <img data-fallback="5" alt="Home & decor"
-                 src="https://source.unsplash.com/featured/1400x900?home,decor,minimal">
-          </div>
-          <div class="body">
-            <p class="title">Home & decor</p>
-            <p class="desc">Neutral tones and clean shapes — pieces that elevate your space.</p>
-            <div class="actions">
-              <a class="btn primary" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop now</a>
-              <a class="btn" href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener">Browse</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="media">
-            <img data-fallback="6" alt="Lifestyle picks"
-                 src="https://source.unsplash.com/featured/1400x900?lifestyle,neutral,design">
-          </div>
-          <div class="body">
-            <p class="title">Lifestyle picks</p>
-            <p class="desc">Small upgrades that feel premium — perfect for gifting.</p>
-            <div class="actions">
-              <a class="btn primary" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop now</a>
-              <a class="btn" href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener">Browse</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- WHY BUY -->
-    <section id="why" class="glass">
-      <div class="section-head">
-        <div>
-          <h2>Why buy</h2>
-          <p>Confidence boosters — simple, clear, and professional.</p>
-        </div>
-        <a class="btn primary" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop Now</a>
-      </div>
-
-      <div class="trust">
-        <div class="t">
-          <b>Secure checkout</b>
-          <span>Payments and checkout happen on Shopify — safe and trusted.</span>
-        </div>
-        <div class="t">
-          <b>Fast browsing</b>
-          <span>A clean front page that sends customers straight to products.</span>
-        </div>
-        <div class="t">
-          <b>Premium feel</b>
-          <span>Minimal design, strong typography, and high-end presentation.</span>
         </div>
       </div>
     </section>
 
-    <footer>
-      © <span id="y"></span> AP Home & Lifestyle •
-      <a href="https://srd8ja-i0.myshopify.com/" target="_blank" rel="noopener" style="text-decoration:underline;">Shopify Store</a>
-    </footer>
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured</h2>
+          <p>Quick highlights — then go straight to the shop.</p>
+        </div>
 
-  </div>
+        <div class="grid">
+          <article class="tile">
+            <h3>Home essentials</h3>
+            <p>Clean picks that fit modern spaces.</p>
+            <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop →</a>
+          </article>
 
-  <script>
-    // Year
-    document.getElementById("y").textContent = new Date().getFullYear();
+          <article class="tile">
+            <h3>Lifestyle upgrades</h3>
+            <p>Practical items with a premium feel.</p>
+            <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop →</a>
+          </article>
 
-    // Logo fallback: no teu repo tens "novo.png" na raiz
-    const logo = document.getElementById("brandLogo");
-    logo.addEventListener("error", () => { logo.src = "novo.png"; });
+          <article class="tile">
+            <h3>Minimal aesthetic</h3>
+            <p>Simple design. Easy choices.</p>
+            <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop →</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    // Image fallback: se alguma imagem falhar, troca por uma alternativa
-    const fallbacks = [
-      "https://images.unsplash.com/photo-1518444028785-8f5a4b1a95b6?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1496412705862-e0088f16f791?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1518444028785-8f5a4b1a95b6?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1400&q=80"
-    ];
+    <section class="section soft">
+      <div class="container cta">
+        <div>
+          <h2>Ready to shop?</h2>
+          <p>Go straight to the full collection in our Shopify store.</p>
+        </div>
+        <a class="btn btn-solid btn-lg" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">
+          View collection
+        </a>
+      </div>
+    </section>
+  </main>
 
-    document.querySelectorAll("img[data-fallback]").forEach(img => {
-      img.addEventListener("error", () => {
-        const idx = Math.min(parseInt(img.getAttribute("data-fallback") || "0", 10), fallbacks.length - 1);
-        img.src = fallbacks[idx] || fallbacks[0];
-      });
-    });
-  </script>
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-left">
+        <img src="logo.svg" alt="AP Living logo" class="logo small" />
+        <div class="foot-text">
+          <div class="foot-title">AP Living</div>
+          <div class="foot-sub">Modern living, curated.</div>
+        </div>
+      </div>
+
+      <div class="foot-right">
+        <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
