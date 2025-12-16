@@ -1,145 +1,266 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AP Living — Modern living, curated</title>
-  <meta name="description" content="AP Living — modern essentials with a premium feel. Shop curated home & lifestyle picks." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AP Living – Home & Lifestyle Deals</title>
+
+  <meta name="description" content="Top home & lifestyle deals. Best-selling products, fast checkout, secure shopping." />
+  <meta name="theme-color" content="#0f172a" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#111827;
+      --soft:#1f2933;
+      --text:#f9fafb;
+      --muted:#9ca3af;
+      --accent:#f59e0b;   /* Amazon-style */
+      --accent-dark:#d97706;
+      --good:#22c55e;
+      --radius:18px;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --max:1150px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#0f172a,#020617);
+      color:var(--text);
+    }
+
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    /* TOP BAR */
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(2,6,23,.85);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .topbar-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;gap:12px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      font-weight:800;letter-spacing:.4px;
+    }
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;
+      background:var(--accent);
+      color:#111;
+      font-weight:900;
+    }
+    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      padding:11px 16px;border-radius:14px;
+      font-weight:700;font-size:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background:#111827;color:var(--text);
+      cursor:pointer;
+    }
+    .btn-primary{
+      background:linear-gradient(180deg,var(--accent),var(--accent-dark));
+      color:#111;border:none;
+    }
+
+    /* HERO */
+    header{padding:36px 0}
+    .hero{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:18px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    h1{
+      font-size:clamp(30px,4.5vw,48px);
+      line-height:1.05;margin:0;
+    }
+    .hero p{
+      margin:14px 0 20px;
+      color:var(--muted);max-width:55ch;
+    }
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .badge{
+      font-size:12px;padding:6px 10px;border-radius:999px;
+      background:#020617;border:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+    }
+    .trust{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;font-size:13px;color:var(--muted)}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
+
+    .hero-right .mini{
+      background:#020617;border-radius:18px;padding:18px;
+      border:1px solid rgba(255,255,255,.08);
+      margin-bottom:12px;
+    }
+    .mini h3{margin:0 0 6px;font-size:15px}
+    .mini p{margin:0 0 12px;color:var(--muted);font-size:13px}
+
+    /* SECTIONS */
+    main{padding-bottom:60px}
+    .section{margin-top:28px}
+    .section h2{margin:0 0 12px;font-size:20px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+    .tile{
+      background:#020617;border-radius:18px;padding:18px;
+      border:1px solid rgba(255,255,255,.08);
+      transition:.15s;
+    }
+    .tile:hover{transform:translateY(-2px)}
+    .tile h3{margin:0 0 6px}
+    .tile p{margin:0 0 14px;color:var(--muted);font-size:14px}
+    .tile .btn{width:100%;text-align:center}
+
+    /* FINAL CTA */
+    .final{
+      margin-top:30px;
+      background:linear-gradient(180deg,#f59e0b,#d97706);
+      color:#111;border-radius:26px;
+      padding:26px;
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:14px;
+    }
+    .final h3{margin:0;font-size:22px}
+    .final p{margin:4px 0 0;font-size:14px}
+    .final .btn{background:#111;color:#fff;border:none}
+
+    footer{
+      margin-top:40px;padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.08);
+      font-size:12px;color:var(--muted);
+      display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 
 <body>
-  <header class="top">
-    <div class="container nav">
-      <a class="brand" href="#">
-        <img src="logo.svg" alt="AP Living logo" class="logo" />
+
+<script>
+  const SHOP_URL = "https://srd8ja-i0.myshopify.com/";
+  const ALL_PRODUCTS = "https://srd8ja-i0.myshopify.com/collections/all";
+</script>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="logo">AP</div>
+      AP Living
+    </div>
+    <div class="nav">
+      <a class="btn" href="#" onclick="go(ALL_PRODUCTS)">Browse</a>
+      <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header>
+  <div class="wrap hero">
+    <div class="card">
+      <div class="badges">
+        <span class="badge">🔥 Hot deals</span>
+        <span class="badge">✅ Secure checkout</span>
+        <span class="badge">📱 Mobile-first</span>
+      </div>
+
+      <h1>Top home & lifestyle deals — ready to shop</h1>
+      <p>
+        Best-selling practical products people buy every day.
+        Fast checkout. Clean selection. No nonsense.
+      </p>
+
+      <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">
+        Shop deals now
       </a>
 
-      <nav class="actions">
-        <a class="btn btn-ghost" href="#featured">Browse</a>
-        <a class="btn btn-solid" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">
-          Shop now
-        </a>
-      </nav>
+      <div class="trust">
+        <span><span class="dot"></span> Popular picks</span>
+        <span><span class="dot"></span> Secure payment</span>
+        <span><span class="dot"></span> Fast browsing</span>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="pill">
-            <span class="dot"></span>
-            Premium picks • Minimal aesthetic • Secure checkout
-          </div>
-
-          <h1>Modern living, curated.</h1>
-          <p class="lead">
-            Clean, modern essentials designed to elevate everyday life — curated pieces with a premium feel.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn btn-solid btn-lg" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">
-              Shop all products
-            </a>
-            <a class="btn btn-ghost btn-lg" href="#featured">See highlights</a>
-          </div>
-
-          <div class="trust">
-            <div class="trust-item">Fast browsing</div>
-            <div class="trust-item">Mobile-first</div>
-            <div class="trust-item">Always clean & simple</div>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="card">
-            <div class="card-top">
-              <div class="mini">
-                <div class="mini-icon">AP</div>
-                <div class="mini-text">
-                  <div class="mini-title">AP Living</div>
-                  <div class="mini-sub">Home & Lifestyle</div>
-                </div>
-              </div>
-              <div class="badge">New</div>
-            </div>
-
-            <div class="card-body">
-              <div class="big">Minimal. Premium. Practical.</div>
-              <div class="small">
-                Browse curated items and go straight to checkout via our Shopify store.
-              </div>
-            </div>
-
-            <div class="card-actions">
-              <a class="btn btn-solid" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Open store</a>
-              <a class="btn btn-ghost" href="#featured">Learn more</a>
-            </div>
-          </div>
-        </div>
+    <div class="card hero-right">
+      <div class="mini">
+        <h3>🔥 Trending now</h3>
+        <p>Products getting the most clicks today.</p>
+        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">View trending</a>
       </div>
-    </section>
-
-    <section id="featured" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Featured</h2>
-          <p>Quick highlights — then go straight to the shop.</p>
-        </div>
-
-        <div class="grid">
-          <article class="tile">
-            <h3>Home essentials</h3>
-            <p>Clean picks that fit modern spaces.</p>
-            <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop →</a>
-          </article>
-
-          <article class="tile">
-            <h3>Lifestyle upgrades</h3>
-            <p>Practical items with a premium feel.</p>
-            <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop →</a>
-          </article>
-
-          <article class="tile">
-            <h3>Minimal aesthetic</h3>
-            <p>Simple design. Easy choices.</p>
-            <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop →</a>
-          </article>
-        </div>
+      <div class="mini">
+        <h3>⭐ Bestsellers</h3>
+        <p>Skip the clutter. Go straight to what sells.</p>
+        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop bestsellers</a>
       </div>
-    </section>
+    </div>
+  </div>
+</header>
 
-    <section class="section soft">
-      <div class="container cta">
-        <div>
-          <h2>Ready to shop?</h2>
-          <p>Go straight to the full collection in our Shopify store.</p>
-        </div>
-        <a class="btn btn-solid btn-lg" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">
-          View collection
-        </a>
-      </div>
-    </section>
-  </main>
+<main class="wrap">
 
-  <footer class="footer">
-    <div class="container foot">
-      <div class="foot-left">
-        <img src="logo.svg" alt="AP Living logo" class="logo small" />
-        <div class="foot-text">
-          <div class="foot-title">AP Living</div>
-          <div class="foot-sub">Modern living, curated.</div>
-        </div>
+  <!-- CATEGORIES -->
+  <div class="section">
+    <h2>Browse by category</h2>
+    <div class="grid3">
+      <div class="tile">
+        <h3>🏠 Home essentials</h3>
+        <p>Everyday products that just work.</p>
+        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
       </div>
+      <div class="tile">
+        <h3>✨ Lifestyle upgrades</h3>
+        <p>Small upgrades people love.</p>
+        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
+      </div>
+      <div class="tile">
+        <h3>🤍 Minimal aesthetic</h3>
+        <p>Clean design. Easy choices.</p>
+        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
+      </div>
+    </div>
+  </div>
 
-      <div class="foot-right">
-        <a class="link" href="https://srd8ja-i0.myshopify.com/collections/all" target="_blank" rel="noopener">Shop</a>
-      </div>
+  <!-- FINAL CTA -->
+  <div class="final">
+    <div>
+      <h3>Don’t overthink it.</h3>
+      <p>If it’s here, it’s worth checking.</p>
+    </div>
+    <a class="btn" href="#" onclick="go(ALL_PRODUCTS)">Go to shop</a>
+  </div>
+
+  <footer>
+    <div>© <span id="year"></span> AP Living</div>
+    <div>
+      <a href="#" onclick="go(SHOP_URL)">Store</a>
     </div>
   </footer>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function go(url){ window.location.href = url; }
+</script>
+
 </body>
-</html>
+  </html>
