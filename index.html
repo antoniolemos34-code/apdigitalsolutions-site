@@ -3,264 +3,537 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AP Living – Home & Lifestyle Deals</title>
 
-  <meta name="description" content="Top home & lifestyle deals. Best-selling products, fast checkout, secure shopping." />
-  <meta name="theme-color" content="#0f172a" />
+  <title>AP Online Solution – Websites, Shopify Stores & Automations for Jersey</title>
+  <meta name="description"
+        content="AP Online Solution helps small businesses in Jersey (Channel Islands) launch modern websites, Shopify stores, WhatsApp automations and ready-to-use designs — clear, fast and done-for-you.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0f172a;
-      --card:#111827;
-      --soft:#1f2933;
-      --text:#f9fafb;
-      --muted:#9ca3af;
-      --accent:#f59e0b;   /* Amazon-style */
-      --accent-dark:#d97706;
-      --good:#22c55e;
-      --radius:18px;
-      --shadow:0 20px 60px rgba(0,0,0,.45);
-      --max:1150px;
+      --bg:#050814;
+      --bg-soft:#0b1020;
+      --accent:#22d3ee;
+      --accent-strong:#0ea5e9;
+      --text-main:#e5e7eb;
+      --text-muted:#9ca3af;
+      --border-soft:rgba(148,163,184,.35);
+      --radius-lg:26px;
+      --radius-md:18px;
+      --radius-pill:999px;
+      --shadow-soft:0 22px 60px rgba(15,23,42,.55);
     }
 
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;margin:0;padding:0}
     body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      background:linear-gradient(180deg,#0f172a,#020617);
-      color:var(--text);
+      font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;
+      background:radial-gradient(circle at top left,#1e293b 0,#020617 48%,#000 100%);
+      color:var(--text-main);
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .page{min-height:100vh;display:flex;flex-direction:column}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:30;
+      backdrop-filter:blur(18px);
+      background:linear-gradient(to bottom,rgba(15,23,42,.95),rgba(15,23,42,.7),transparent);
+      border-bottom:1px solid rgba(30,64,175,.35);
+    }
+    .nav-inner{
+      max-width:1120px;margin:0 auto;padding:10px 18px;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+    }
+    .logo-wrap{display:flex;align-items:center;gap:10px}
+    .logo-img{
+      width:44px;height:44px;border-radius:12px;object-fit:contain;background:#000;
+    }
+    .logo{display:inline-flex;flex-direction:column;gap:3px;line-height:1.1}
+    .logo-main{
+      font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;
+      background:linear-gradient(to right,#facc15,#eab308,#f97316);
+      -webkit-background-clip:text;color:transparent;
+    }
+    .logo-sub{font-size:11px;color:var(--text-muted)}
+    .nav-center{
+      display:flex;align-items:center;gap:18px;font-size:13px;color:var(--text-muted);
+    }
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .nav-links a{
+      padding:4px 6px;border-radius:999px;
+      transition:color .15s ease, background .15s ease;
+    }
+    .nav-links a:hover{color:var(--text-main);background:rgba(15,23,42,.6)}
+    .nav-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+    .nav-cta{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 14px;border-radius:999px;
+      background:linear-gradient(135deg,#22c55e,#16a34a);
+      font-size:13px;font-weight:600;color:#f9fafb;
+      box-shadow:0 14px 30px rgba(22,163,74,.5);
+      border:none;cursor:pointer;white-space:nowrap;
+      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+    }
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 18px 40px rgba(21,128,61,.6);filter:brightness(1.03)}
+
+    .nav-pet{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 14px;border-radius:999px;
+      background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+      font-size:13px;font-weight:700;color:#06101d;
+      box-shadow:0 18px 45px rgba(14,165,233,.5);
+      border:1px solid rgba(34,211,238,.35);
+      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      white-space:nowrap;
+    }
+    .nav-pet:hover{transform:translateY(-1px);box-shadow:0 22px 55px rgba(14,165,233,.65);filter:brightness(1.04)}
+
+    @media (max-width: 920px){
+      .nav-inner{flex-wrap:wrap;justify-content:center;text-align:center}
+      .nav-links{display:none}
+      .nav-actions{justify-content:center}
     }
 
-    a{text-decoration:none;color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
-
-    /* TOP BAR */
-    .topbar{
-      position:sticky;top:0;z-index:50;
-      background:rgba(2,6,23,.85);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .topbar-inner{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:12px 0;gap:12px;
-    }
-    .brand{
-      display:flex;align-items:center;gap:10px;
-      font-weight:800;letter-spacing:.4px;
-    }
-    .logo{
-      width:38px;height:38px;border-radius:12px;
-      display:grid;place-items:center;
-      background:var(--accent);
-      color:#111;
-      font-weight:900;
-    }
-    .nav{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{
-      padding:11px 16px;border-radius:14px;
-      font-weight:700;font-size:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background:#111827;color:var(--text);
-      cursor:pointer;
-    }
-    .btn-primary{
-      background:linear-gradient(180deg,var(--accent),var(--accent-dark));
-      color:#111;border:none;
-    }
+    /* MAIN */
+    main{flex:1}
+    .shell{max-width:1120px;margin:0 auto;padding:26px 18px 80px}
 
     /* HERO */
-    header{padding:36px 0}
     .hero{
-      display:grid;grid-template-columns:1.2fr .8fr;gap:18px;
+      display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
+      gap:40px;align-items:center;margin-top:28px;margin-bottom:70px;
     }
-    .card{
-      background:var(--card);
-      border-radius:24px;
-      padding:26px;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(255,255,255,.08);
+    @media (max-width: 880px){.hero{grid-template-columns:1fr;text-align:center}}
+    .hero-kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:4px 10px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.4);
+      background:radial-gradient(circle at 0% 0%, rgba(34,211,238,.18), transparent 60%);
+      font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);
+      margin-bottom:14px;
     }
-    h1{
-      font-size:clamp(30px,4.5vw,48px);
-      line-height:1.05;margin:0;
+    .hero-kicker-dot{
+      width:7px;height:7px;border-radius:999px;background:#22c55e;
+      box-shadow:0 0 0 5px rgba(34,197,94,.28);
     }
-    .hero p{
-      margin:14px 0 20px;
-      color:var(--muted);max-width:55ch;
+    .hero-title{
+      font-size:clamp(32px,4vw,44px);
+      line-height:1.05;font-weight:700;letter-spacing:-.03em;margin-bottom:14px;
     }
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-    .badge{
-      font-size:12px;padding:6px 10px;border-radius:999px;
-      background:#020617;border:1px solid rgba(255,255,255,.08);
-      color:var(--muted);
+    .hero-title span{
+      background:linear-gradient(to right,#22d3ee,#a855f7);
+      -webkit-background-clip:text;color:transparent;
     }
-    .trust{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;font-size:13px;color:var(--muted)}
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
+    .hero-text{
+      font-size:15px;color:var(--text-muted);
+      max-width:520px;margin-bottom:20px;
+    }
+    @media (max-width: 880px){.hero-text{margin-left:auto;margin-right:auto}}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px}
+    @media (max-width: 880px){.hero-actions{justify-content:center}}
 
-    .hero-right .mini{
-      background:#020617;border-radius:18px;padding:18px;
-      border:1px solid rgba(255,255,255,.08);
-      margin-bottom:12px;
+    .btn-primary{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:14px 22px;border-radius:999px;border:none;cursor:pointer;
+      background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+      color:#0b1020;font-size:14px;font-weight:700;
+      box-shadow:0 22px 55px rgba(8,145,178,.65);
+      transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
     }
-    .mini h3{margin:0 0 6px;font-size:15px}
-    .mini p{margin:0 0 12px;color:var(--muted);font-size:13px}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 24px 60px rgba(14,165,233,.75);filter:brightness(1.05)}
+
+    .btn-ghost{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 18px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.6);
+      background:rgba(15,23,42,.45);
+      color:var(--text-muted);font-size:13px;font-weight:600;cursor:pointer;
+      transition:background .16s ease, border-color .16s ease, color .16s ease;
+    }
+    .btn-ghost:hover{background:rgba(15,23,42,.8);border-color:rgba(148,163,184,.9);color:var(--text-main)}
+
+    .btn-pet{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:14px 22px;border-radius:999px;
+      background:linear-gradient(135deg,#22c55e,#4ade80);
+      color:#022c22;font-size:14px;font-weight:800;
+      box-shadow:0 18px 45px rgba(34,197,94,.55);
+      border:1px solid rgba(74,222,128,.25);
+      transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+    }
+    .btn-pet:hover{transform:translateY(-1px);box-shadow:0 22px 55px rgba(34,197,94,.75);filter:brightness(1.04)}
+
+    .hero-footnote{font-size:12px;color:var(--text-muted)}
+
+    .hero-right{position:relative}
+    .hero-card{
+      border-radius:var(--radius-lg);padding:20px;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(34,211,238,.18), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(94,234,212,.14), transparent 60%),
+        #020617;
+      border:1px solid rgba(30,64,175,.4);
+      box-shadow:var(--shadow-soft);
+      min-height:260px;
+      display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;
+    }
+    .hero-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+    .hero-chip{
+      font-size:11px;padding:5px 9px;border-radius:999px;
+      background:rgba(15,23,42,.7);border:1px solid rgba(148,163,184,.6);
+      color:var(--text-muted);display:inline-flex;align-items:center;gap:6px;
+    }
+    .hero-chip-dot{width:6px;height:6px;border-radius:999px;background:#22c55e}
+    .hero-card-title{font-size:14px;font-weight:700;margin-bottom:10px}
+    .hero-card-copy{font-size:13px;color:var(--text-muted);margin-bottom:16px}
+    .hero-pill-row{display:flex;flex-wrap:wrap;gap:6px;font-size:11px}
+    .hero-pill{
+      padding:4px 9px;border-radius:999px;border:1px solid rgba(148,163,184,.4);
+      background:rgba(15,23,42,.7);color:#9ca3af;
+    }
+    .hero-card-footer{
+      border-top:1px dashed rgba(148,163,184,.4);
+      margin-top:12px;padding-top:10px;
+      display:flex;align-items:center;justify-content:space-between;
+      font-size:11px;color:var(--text-muted);
+    }
 
     /* SECTIONS */
-    main{padding-bottom:60px}
-    .section{margin-top:28px}
-    .section h2{margin:0 0 12px;font-size:20px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .section{margin-bottom:70px}
+    .section-heading{display:flex;flex-direction:column;gap:4px;margin-bottom:26px}
+    .section-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--text-muted)}
+    .section-title{font-size:24px;font-weight:700}
+    .section-subtitle{font-size:14px;color:var(--text-muted);max-width:520px}
 
-    .tile{
-      background:#020617;border-radius:18px;padding:18px;
-      border:1px solid rgba(255,255,255,.08);
-      transition:.15s;
+    .services-grid{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;
     }
-    .tile:hover{transform:translateY(-2px)}
-    .tile h3{margin:0 0 6px}
-    .tile p{margin:0 0 14px;color:var(--muted);font-size:14px}
-    .tile .btn{width:100%;text-align:center}
+    @media (max-width:1024px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:640px){.services-grid{grid-template-columns:1fr}}
+    .service-card{
+      background:rgba(15,23,42,.9);
+      border-radius:var(--radius-md);
+      padding:14px;
+      border:1px solid rgba(30,64,175,.5);
+      display:flex;flex-direction:column;gap:8px;
+    }
+    .service-image{
+      border-radius:12px;overflow:hidden;border:1px solid rgba(148,163,184,.4);height:96px;
+    }
+    .service-image img{width:100%;height:100%;object-fit:cover}
+    .service-title{font-size:14px;font-weight:800}
+    .service-text{font-size:13px;color:var(--text-muted)}
+    .service-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+    .service-tag{
+      font-size:11px;padding:3px 8px;border-radius:999px;
+      background:rgba(15,23,42,.9);
+      border:1px solid rgba(148,163,184,.4);
+      color:#9ca3af;
+    }
 
-    /* FINAL CTA */
-    .final{
-      margin-top:30px;
-      background:linear-gradient(180deg,#f59e0b,#d97706);
-      color:#111;border-radius:26px;
-      padding:26px;
-      display:flex;align-items:center;justify-content:space-between;
-      flex-wrap:wrap;gap:14px;
+    /* Jersey CTA band */
+    .jersey-band{
+      padding:18px;
+      border-radius:var(--radius-lg);
+      border:1px dashed rgba(148,163,184,.55);
+      background:
+        radial-gradient(circle at 0 0, rgba(34,211,238,.12), transparent 55%),
+        rgba(15,23,42,.9);
+      display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+      margin:-10px 0 70px;
     }
-    .final h3{margin:0;font-size:22px}
-    .final p{margin:4px 0 0;font-size:14px}
-    .final .btn{background:#111;color:#fff;border:none}
+    .jersey-band h3{font-size:14px;font-weight:800}
+    .jersey-band p{font-size:13px;color:var(--text-muted);max-width:640px}
+
+    /* CONTACT */
+    .contact-section{
+      border-radius:var(--radius-lg);
+      padding:22px 18px;
+      border:1px dashed rgba(148,163,184,.5);
+      background:
+        radial-gradient(circle at 0 0, rgba(34,211,238,.12), transparent 55%),
+        rgba(15,23,42,.9);
+      margin-bottom:30px;
+      display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+    }
+    .contact-text-main{font-size:15px;font-weight:800;margin-bottom:4px}
+    .contact-text-sub{font-size:13px;color:var(--text-muted)}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:10px}
+    .btn-wa{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 18px;border-radius:999px;
+      background:linear-gradient(135deg,#22c55e,#16a34a);
+      color:#ecfdf5;font-size:13px;font-weight:800;border:none;cursor:pointer;
+      box-shadow:0 18px 45px rgba(22,163,74,.6);
+      transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+    }
+    .btn-wa:hover{transform:translateY(-1px);box-shadow:0 22px 55px rgba(22,163,74,.8);filter:brightness(1.05)}
+    .btn-email{
+      font-size:13px;padding:10px 16px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.7);
+      background:rgba(15,23,42,.9);
+      color:var(--text-muted);
+    }
 
     footer{
-      margin-top:40px;padding-top:18px;
-      border-top:1px solid rgba(255,255,255,.08);
-      font-size:12px;color:var(--muted);
-      display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
-    }
-
-    @media(max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .grid3{grid-template-columns:1fr}
+      border-top:1px solid rgba(15,23,42,.9);
+      padding:18px;font-size:11px;color:var(--text-muted);
+      text-align:center;background:#020617;
     }
   </style>
 </head>
-
 <body>
+<div class="page">
 
-<script>
-  const SHOP_URL = "https://srd8ja-i0.myshopify.com/";
-  const ALL_PRODUCTS = "https://srd8ja-i0.myshopify.com/collections/all";
-</script>
-
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="wrap topbar-inner">
-    <div class="brand">
-      <div class="logo">AP</div>
-      AP Living
-    </div>
-    <div class="nav">
-      <a class="btn" href="#" onclick="go(ALL_PRODUCTS)">Browse</a>
-      <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
-    </div>
-  </div>
-</div>
-
-<!-- HERO -->
-<header>
-  <div class="wrap hero">
-    <div class="card">
-      <div class="badges">
-        <span class="badge">🔥 Hot deals</span>
-        <span class="badge">✅ Secure checkout</span>
-        <span class="badge">📱 Mobile-first</span>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo-wrap">
+        <img src="ap-logo-gold.png" alt="AP Online Solution logo" class="logo-img">
+        <div class="logo">
+          <span class="logo-main">AP ONLINE SOLUTION</span>
+          <span class="logo-sub">Websites • Shopify • WhatsApp Automation</span>
+        </div>
       </div>
 
-      <h1>Top home & lifestyle deals — ready to shop</h1>
-      <p>
-        Best-selling practical products people buy every day.
-        Fast checkout. Clean selection. No nonsense.
-      </p>
+      <div class="nav-center">
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#jersey">Jersey</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
 
-      <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">
-        Shop deals now
-      </a>
+      <div class="nav-actions">
+        <!-- PET BUTTON (advertising) -->
+        <a class="nav-pet"
+           href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=nav_button&utm_campaign=pet_launch"
+           target="_blank" rel="noopener">
+          🐾 Shop Pet Haven Jersey ↗
+        </a>
 
-      <div class="trust">
-        <span><span class="dot"></span> Popular picks</span>
-        <span><span class="dot"></span> Secure payment</span>
-        <span><span class="dot"></span> Fast browsing</span>
+        <!-- WhatsApp CTA -->
+        <a class="nav-cta"
+           href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20AP%20Online%20Solution%20and%20I%27d%20like%20help%20with%20a%20website%20or%20Shopify%20store."
+           target="_blank" rel="noopener">
+          WhatsApp ↗
+        </a>
       </div>
     </div>
+  </header>
 
-    <div class="card hero-right">
-      <div class="mini">
-        <h3>🔥 Trending now</h3>
-        <p>Products getting the most clicks today.</p>
-        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">View trending</a>
-      </div>
-      <div class="mini">
-        <h3>⭐ Bestsellers</h3>
-        <p>Skip the clutter. Go straight to what sells.</p>
-        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop bestsellers</a>
-      </div>
+  <main>
+    <div class="shell">
+
+      <!-- HERO -->
+      <section class="hero" id="about">
+        <div>
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <span>Built for Jersey small businesses 🇯🇪</span>
+          </div>
+
+          <h1 class="hero-title">
+            Modern websites, Shopify stores & automations
+            for <span>people who just want it done.</span>
+          </h1>
+
+          <p class="hero-text">
+            We help local businesses in Jersey launch a clean online presence, sell online with Shopify,
+            and automate enquiries on WhatsApp — with simple explanations and fast delivery.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#services" class="btn-primary">See services ↗</a>
+
+            <a class="btn-pet"
+               href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=hero_button&utm_campaign=pet_launch"
+               target="_blank" rel="noopener">
+              🐾 Shop Pet Haven Jersey ↗
+            </a>
+
+            <a href="#contact" class="btn-ghost">Get a quick quote</a>
+          </div>
+
+          <p class="hero-footnote">
+            Jersey-first • 100% online delivery • Clear pricing • Quick support on WhatsApp.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div>
+              <div class="hero-card-header">
+                <span class="hero-chip">
+                  <span class="hero-chip-dot"></span>
+                  Plan made to fit you
+                </span>
+                <span style="font-size:11px;color:var(--text-muted);">
+                  Websites • Stores • Automation
+                </span>
+              </div>
+
+              <div class="hero-card-title">“Tell me what you need — I’ll handle the rest.”</div>
+              <div class="hero-card-copy">
+                Send a quick message about your business and what you want online.
+                We build it, test it, and deliver it ready to use (with a short video or notes).
+              </div>
+
+              <div class="hero-pill-row">
+                <span class="hero-pill">1-page sites</span>
+                <span class="hero-pill">Shopify setup</span>
+                <span class="hero-pill">WhatsApp replies</span>
+                <span class="hero-pill">Modern design</span>
+              </div>
+            </div>
+
+            <div class="hero-card-footer">
+              <span>Simple, fast, professional</span>
+              <span>From idea → live</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jersey band -->
+      <section class="jersey-band" id="jersey">
+        <div>
+          <h3>Jersey 🇯🇪 focus</h3>
+          <p>
+            If you're in Jersey and need a clean website, a Shopify store, or WhatsApp automation
+            to capture leads and answer customers — we can set it up quickly and properly.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn-wa"
+             href="https://wa.me/447700704591?text=Hi%2C%20I%27m%20in%20Jersey%20and%20I%20want%20help%20with%20my%20website%2Fstore."
+             target="_blank" rel="noopener">
+            💬 Message on WhatsApp
+          </a>
+          <a class="btn-email" href="#services">See packages</a>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section" id="services">
+        <div class="section-heading">
+          <span class="section-kicker">Services</span>
+          <h2 class="section-title">What we can do for your business</h2>
+          <p class="section-subtitle">
+            Built for Jersey trades, cafés, salons, cleaners, freelancers and side hustles —
+            professional without agency-level pricing.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Website on a screen">
+            </div>
+            <h3 class="service-title">Modern websites & landing pages</h3>
+            <p class="service-text">
+              Apple-style design, fast loading, mobile-ready — focused on clarity and conversions.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">Mobile-first</span>
+              <span class="service-tag">Fast</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Online shopping">
+            </div>
+            <h3 class="service-title">Shopify stores & setup</h3>
+            <p class="service-text">
+              Store setup, payments, collections, product layout and a clean, sales-focused homepage.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">E-commerce</span>
+              <span class="service-tag">Organised</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/4049992/pexels-photo-4049992.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Chat on a phone">
+            </div>
+            <h3 class="service-title">WhatsApp chatbots & automation</h3>
+            <p class="service-text">
+              Auto replies, lead capture and routing — so you don't miss customers when you're busy.
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">24/7 replies</span>
+              <span class="service-tag">Lead capture</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image">
+              <img src="https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Printed products">
+            </div>
+            <h3 class="service-title">Design for products & merch</h3>
+            <p class="service-text">
+              Print-ready PNG designs for hoodies, t-shirts, mugs and more (Printful compatible).
+            </p>
+            <div class="service-tag-row">
+              <span class="service-tag">Print-ready</span>
+              <span class="service-tag">Modern</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact-section">
+        <div>
+          <div class="contact-text-main">Want help with a website, store or automation?</div>
+          <div class="contact-text-sub">
+            Send a quick message about what you do and what you need. We reply with simple options and clear pricing.
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn-wa"
+             href="https://wa.me/447700704591?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20website%2FShopify%20store%20in%20Jersey."
+             target="_blank" rel="noopener">
+            💬 WhatsApp
+          </a>
+
+          <a class="btn-email" href="mailto:apdigitalsolutions.je@outlook.com">
+            Email: apdigitalsolutions.je@outlook.com
+          </a>
+
+          <a class="btn-email" href="https://www.facebook.com/share/1a8fiKUzAn/" target="_blank" rel="noopener">
+            Facebook
+          </a>
+
+          <a class="btn-email" href="https://www.instagram.com/ap_the_solution_to_be_online?igsh=MXA1dXMzaTh5bG1ncg==" target="_blank" rel="noopener">
+            Instagram
+          </a>
+        </div>
+      </section>
     </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <!-- CATEGORIES -->
-  <div class="section">
-    <h2>Browse by category</h2>
-    <div class="grid3">
-      <div class="tile">
-        <h3>🏠 Home essentials</h3>
-        <p>Everyday products that just work.</p>
-        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
-      </div>
-      <div class="tile">
-        <h3>✨ Lifestyle upgrades</h3>
-        <p>Small upgrades people love.</p>
-        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
-      </div>
-      <div class="tile">
-        <h3>🤍 Minimal aesthetic</h3>
-        <p>Clean design. Easy choices.</p>
-        <a class="btn btn-primary" href="#" onclick="go(ALL_PRODUCTS)">Shop now</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FINAL CTA -->
-  <div class="final">
-    <div>
-      <h3>Don’t overthink it.</h3>
-      <p>If it’s here, it’s worth checking.</p>
-    </div>
-    <a class="btn" href="#" onclick="go(ALL_PRODUCTS)">Go to shop</a>
-  </div>
+  </main>
 
   <footer>
-    <div>© <span id="year"></span> AP Living</div>
-    <div>
-      <a href="#" onclick="go(SHOP_URL)">Store</a>
-    </div>
+    © <span id="year"></span> AP Online Solution · Jersey 🇯🇪 · English
   </footer>
-</main>
+</div>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-  function go(url){ window.location.href = url; }
 </script>
-
 </body>
-  </html>
+</html>
