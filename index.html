@@ -1,419 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AP Online Solution – Websites + WhatsApp Chatbot (Jersey)</title>
-  <meta name="description"
-        content="We create modern websites for small local businesses in Jersey and connect them directly to WhatsApp (chatbot) so customers can message you instantly." />
+<title>AP Online Solution – Websites + WhatsApp for Local Businesses</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg:#F5F5F7;          /* Apple light grey */
-      --panel:#FFFFFF;
-      --text:#0B0B0F;
-      --muted:#5B5F6A;
-      --line:rgba(15,23,42,.10);
+<style>
+:root{
+  --bg:#F5F5F7;
+  --card:#FFFFFF;
+  --text:#0B0B0F;
+  --muted:#6B7280;
+  --line:rgba(0,0,0,.08);
+  --blue:#2563EB;
+  --radius:22px;
+  --pill:999px;
+  --shadow:0 18px 40px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Inter,system-ui,-apple-system;
+  background:var(--bg);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
 
-      --brand:#2563EB;       /* clean blue */
-      --brand2:#1D4ED8;
+.container{max-width:1100px;margin:0 auto;padding:24px 16px 80px}
 
-      --radius-xl:26px;
-      --radius-lg:18px;
-      --pill:999px;
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(245,245,247,.85);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  max-width:1100px;margin:auto;
+  padding:14px 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{
+  width:44px;height:44px;border-radius:14px;
+  box-shadow:var(--shadow);
+}
+.brand b{font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.brand span{font-size:11px;color:var(--muted)}
 
-      --shadow: 0 18px 40px rgba(15,23,42,.08);
-      --shadow2: 0 10px 24px rgba(15,23,42,.10);
-    }
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  padding:10px 16px;border-radius:var(--pill);
+  border:1px solid var(--line);
+  background:#fff;
+  font-weight:700;font-size:13px;
+}
+.btn.primary{
+  background:var(--blue);
+  color:#fff;border:none;
+  box-shadow:0 16px 30px rgba(37,99,235,.35);
+}
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;
-      background:
-        radial-gradient(900px 600px at 10% 0%, rgba(37,99,235,.12), transparent 55%),
-        radial-gradient(800px 520px at 95% 10%, rgba(29,78,216,.08), transparent 55%),
-        var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-    }
-    a{color:inherit;text-decoration:none}
-    .shell{max-width:1100px;margin:0 auto;padding:26px 16px 80px}
+/* HERO */
+.hero{
+  margin-top:28px;
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:34px;
+  text-align:center;
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 12px;border-radius:var(--pill);
+  background:#EEF2FF;
+  font-size:11px;font-weight:800;letter-spacing:.14em;
+  margin-bottom:18px;
+}
+h1{
+  font-size:clamp(30px,4vw,46px);
+  font-weight:900;line-height:1.05;
+  margin-bottom:14px;
+}
+h1 span{color:var(--blue)}
+.hero p{
+  max-width:640px;margin:0 auto 22px;
+  font-size:15px;line-height:1.7;color:var(--muted);
+}
+.hero .actions{justify-content:center}
 
-    /* NAV */
-    header{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(14px);
-      background: rgba(245,245,247,.78);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      max-width:1100px;margin:0 auto;
-      padding:12px 16px;
-      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
-    }
-    .brand{
-      display:flex;align-items:center;gap:12px;min-width:240px;
-    }
-    .brand img{
-      width:44px;height:44px;border-radius:14px;object-fit:cover;
-      background:#fff;border:1px solid var(--line);
-      box-shadow: var(--shadow2);
-    }
-    .brand b{
-      display:block;font-weight:900;letter-spacing:.06em;text-transform:uppercase;font-size:14px;
-    }
-    .brand span{
-      display:block;font-size:11px;color:var(--muted);margin-top:2px;
-    }
-    .nav-links{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-    .nav-links a{
-      font-size:13px;color:var(--muted);
-      padding:8px 10px;border-radius:999px;
-      transition: background .15s ease, color .15s ease;
-    }
-    .nav-links a:hover{background:rgba(15,23,42,.05);color:var(--text)}
-    .nav-actions{display:flex;gap:10px;flex-wrap:wrap}
+/* SECTIONS */
+section{margin-top:48px}
+h2{font-size:22px;font-weight:900;margin-bottom:10px}
+p.desc{color:var(--muted);max-width:720px;margin-bottom:20px}
 
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:10px 14px;border-radius:var(--pill);
-      border:1px solid rgba(15,23,42,.12);
-      background:rgba(255,255,255,.90);
-      font-weight:800;font-size:13px;
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-      white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(15,23,42,.10);background:#fff}
-    .btn.primary{
-      border-color: rgba(37,99,235,.28);
-      background: linear-gradient(135deg, rgba(37,99,235,.96), rgba(29,78,216,.96));
-      color:#fff;
-      box-shadow:0 18px 34px rgba(37,99,235,.22);
-    }
-    .btn.primary:hover{box-shadow:0 22px 44px rgba(37,99,235,.26)}
-    .btn.ghost{background:rgba(255,255,255,.70)}
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{
+  background:#fff;border-radius:18px;
+  padding:18px;border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.card b{display:block;margin-bottom:6px}
+.card span{color:var(--muted);font-size:14px}
 
-    @media (max-width: 900px){
-      .nav{justify-content:center;text-align:center}
-      .nav-links{display:none}
-      .brand{justify-content:center}
-      .nav-actions{justify-content:center}
-    }
+/* FEATURE */
+.feature{
+  background:#fff;border-radius:22px;
+  padding:22px;border:1px solid rgba(37,99,235,.25);
+  box-shadow:var(--shadow);
+}
 
-    /* CARDS */
-    .card{
-      background:rgba(255,255,255,.94);
-      border:1px solid var(--line);
-      border-radius:var(--radius-xl);
-      box-shadow: var(--shadow);
-    }
-
-    /* HERO */
-    .hero{
-      margin-top:18px;
-      display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
-      gap:14px;
-      align-items:stretch;
-    }
-    @media (max-width: 900px){.hero{grid-template-columns:1fr;text-align:center}}
-
-    .hero-left{padding:26px}
-    .kicker{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:7px 12px;border-radius:var(--pill);
-      border:1px solid rgba(37,99,235,.20);
-      background: rgba(37,99,235,.06);
-      font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
-      color:rgba(15,23,42,.70);
-      margin-bottom:14px;
-    }
-    .dot{width:8px;height:8px;border-radius:999px;background:var(--brand)}
-    h1{
-      font-size:clamp(30px,4vw,46px);
-      line-height:1.05;
-      letter-spacing:-.03em;
-      font-weight:900;
-      margin-bottom:12px;
-    }
-    h1 .grad{
-      background: linear-gradient(90deg, rgba(37,99,235,1), rgba(29,78,216,1));
-      -webkit-background-clip:text;color:transparent;
-    }
-    .lead{
-      font-size:15px;line-height:1.7;color:rgba(15,23,42,.70);
-      max-width:600px;margin-bottom:18px;
-    }
-    @media (max-width: 900px){.lead{margin-left:auto;margin-right:auto}}
-
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap}
-    @media (max-width: 900px){.cta-row{justify-content:center}}
-    .micro{margin-top:12px;font-size:12px;color:rgba(15,23,42,.55)}
-
-    /* RIGHT PANEL */
-    .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
-    .mini{
-      border-radius:var(--radius-lg);
-      border:1px solid rgba(15,23,42,.08);
-      background:rgba(245,245,247,.75);
-      padding:14px;
-      text-align:left;
-    }
-    @media (max-width: 900px){.mini{text-align:center}}
-    .mini b{display:block;font-size:13px;font-weight:900;margin-bottom:6px}
-    .mini p{font-size:13px;color:rgba(15,23,42,.66);line-height:1.55}
-    .pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    @media (max-width: 900px){.pill-row{justify-content:center}}
-    .pill{
-      font-size:11px;font-weight:900;color:rgba(15,23,42,.70);
-      padding:7px 10px;border-radius:var(--pill);
-      border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.85);
-    }
-
-    /* SECTIONS */
-    .section{margin-top:46px}
-    .section h2{font-size:22px;font-weight:900;margin-bottom:10px}
-    .section p{color:rgba(15,23,42,.68);line-height:1.7;margin-bottom:16px;max-width:860px}
-
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    @media (max-width:1024px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
-
-    .item{
-      padding:14px;border-radius:var(--radius-lg);
-      border:1px solid rgba(15,23,42,.08);
-      background:rgba(255,255,255,.94);
-      box-shadow:0 10px 22px rgba(15,23,42,.06);
-    }
-    .item b{display:block;font-size:14px;font-weight:900;margin-bottom:6px}
-    .item span{display:block;font-size:13px;color:rgba(15,23,42,.68);line-height:1.55}
-
-    .item .row{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
-
-    /* FEATURED (Pet Haven) */
-    .featured{
-      margin-top:18px;
-      padding:18px;
-      border-radius:var(--radius-xl);
-      border:1px solid rgba(37,99,235,.14);
-      background:
-        radial-gradient(900px 500px at 20% 0%, rgba(37,99,235,.10), transparent 55%),
-        rgba(255,255,255,.92);
-      box-shadow: var(--shadow);
-    }
-    .featured h3{font-size:18px;font-weight:900;margin-bottom:8px}
-    .featured p{font-size:14px;color:rgba(15,23,42,.68);line-height:1.65;margin-bottom:12px}
-    .featured .row{display:flex;gap:10px;flex-wrap:wrap}
-
-    /* CONTACT */
-    .contact{
-      margin-top:22px;
-      padding:18px;border-radius:var(--radius-xl);
-      border:1px solid rgba(15,23,42,.08);
-      background:rgba(255,255,255,.94);
-      box-shadow: var(--shadow);
-      display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
-    }
-    .contact b{font-size:15px;font-weight:900;display:block;margin-bottom:4px}
-    .contact small{color:rgba(15,23,42,.66);font-size:13px;line-height:1.55;display:block}
-
-    footer{
-      margin-top:40px;
-      border-top:1px solid rgba(15,23,42,.08);
-      padding:18px 0 0;
-      text-align:center;
-      color:rgba(15,23,42,.55);
-      font-size:11px;
-    }
-  </style>
+/* FOOTER */
+footer{
+  margin-top:50px;
+  text-align:center;
+  font-size:11px;color:var(--muted);
+}
+</style>
 </head>
 
 <body>
+
 <header>
   <div class="nav">
     <div class="brand">
-      <img src="ap-pethaven-logo.png" alt="AP Online Solution logo">
+      <!-- LOGO EMBUTIDO -->
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAA..." alt="AP Online Solution logo">
       <div>
         <b>AP Online Solution</b>
-        <span>Modern websites + direct WhatsApp chatbot connection</span>
+        <span>Websites + WhatsApp connection</span>
       </div>
     </div>
 
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#featured">Pet Haven</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="nav-actions">
-      <a class="btn ghost"
-         href="https://pethavenjersey.com/?utm_source=ap_site&utm_medium=nav&utm_campaign=link"
-         target="_blank" rel="noopener">🐾 PetHavenJersey.com ↗</a>
-
-      <a class="btn primary"
-         href="https://wa.me/447700704591?text=Hi%2C%20I%20want%20a%20modern%20website%20connected%20to%20a%20WhatsApp%20chatbot%20for%20my%20local%20business%20in%20Jersey."
-         target="_blank" rel="noopener">Message on WhatsApp ↗</a>
+    <div class="actions">
+      <a class="btn" href="https://pethavenjersey.com" target="_blank">🐾 PetHavenJersey.com</a>
+      <a class="btn primary" href="https://wa.me/447700704591" target="_blank">WhatsApp</a>
     </div>
   </div>
 </header>
 
-<main class="shell">
+<main class="container">
 
-  <!-- HERO -->
-  <section class="hero" id="about">
-    <div class="card hero-left">
-      <div class="kicker"><span class="dot"></span> Built for Jersey local businesses 🇯🇪</div>
+  <section class="hero">
+    <div class="kicker">Built for Jersey local businesses 🇯🇪</div>
 
-      <h1>
-        Modern websites + WhatsApp chatbot connection
-        <span class="grad">made simple.</span>
-      </h1>
+    <h1>
+      Modern websites + WhatsApp connection
+      <span>made simple.</span>
+    </h1>
 
-      <p class="lead">
-        We create clean, professional websites and connect them directly to WhatsApp (chatbot),
-        helping small local businesses reply faster, capture leads and stay organised.
-      </p>
+    <p>
+      We create clean, professional websites and connect them directly to WhatsApp
+      (chatbot or quick replies), helping small local businesses reply faster and
+      capture more leads.
+    </p>
 
-      <div class="cta-row">
-        <a class="btn primary"
-           href="https://wa.me/447700704591?text=Hi%2C%20I%20want%20a%20modern%20website%20connected%20to%20WhatsApp%20for%20my%20business%20in%20Jersey."
-           target="_blank" rel="noopener">Message on WhatsApp ↗</a>
-
-        <a class="btn ghost" href="#services">See services ↗</a>
-
-        <a class="btn ghost"
-           href="https://pethavenjersey.com/?utm_source=ap_site&utm_medium=hero&utm_campaign=link"
-           target="_blank" rel="noopener">🐾 Visit PetHavenJersey.com ↗</a>
-      </div>
-
-      <div class="micro">
-        Apple-style design • Mobile-first • Clear and simple • Built for Jersey 🇯🇪
-      </div>
-    </div>
-
-    <div class="card hero-right">
-      <div class="mini">
-        <b>How it works</b>
-        <p>Website → WhatsApp button → customers message you instantly (with chatbot replies if needed).</p>
-        <div class="pill-row">
-          <span class="pill">Clean design</span>
-          <span class="pill">Fast</span>
-          <span class="pill">Direct WhatsApp</span>
-          <span class="pill">Local focus</span>
-        </div>
-      </div>
-
-      <div class="mini">
-        <b>Best for</b>
-        <p>Trades, cafés, salons, cleaners, freelancers and side hustles in Jersey.</p>
-      </div>
+    <div class="actions">
+      <a class="btn primary" href="https://wa.me/447700704591" target="_blank">Message on WhatsApp</a>
+      <a class="btn" href="https://pethavenjersey.com" target="_blank">Visit Pet Haven Jersey</a>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <h2>Services</h2>
-    <p>
-      We keep it simple: a modern website that looks professional, loads fast,
-      and sends customers straight to WhatsApp for quick support.
-    </p>
+  <section>
+    <h2>What we do</h2>
+    <p class="desc">Simple, focused services for local businesses.</p>
 
     <div class="grid">
-      <div class="item">
+      <div class="card">
         <b>Modern websites</b>
-        <span>Clean Apple-style websites built for small local businesses. Mobile-first and fast.</span>
+        <span>Clean Apple-style websites, mobile-first and fast.</span>
       </div>
-
-      <div class="item">
-        <b>Direct WhatsApp connection</b>
-        <span>Buttons + links that send customers straight to WhatsApp (chatbot / quick replies).</span>
+      <div class="card">
+        <b>WhatsApp connection</b>
+        <span>Direct buttons and chatbot setup so customers contact you instantly.</span>
       </div>
-
-      <div class="item">
-        <b>Simple online presence</b>
-        <span>Clear layout, easy navigation, and contact-first design so people act fast.</span>
+      <div class="card">
+        <b>Local focus</b>
+        <span>Built for Jersey small businesses that want clarity, not complexity.</span>
       </div>
     </div>
   </section>
 
-  <!-- FEATURED -->
-  <section class="featured" id="featured">
-    <h3>Connected project: Pet Haven Jersey</h3>
-    <p>
-      PetHavenJersey.com is a local project connected to our work —
-      showing how a clean website and direct WhatsApp communication can support a small business.
+  <section class="feature">
+    <h2>Connected project</h2>
+    <p class="desc">
+      <strong>PetHavenJersey.com</strong> is a local project connected to our work,
+      showing how a simple website + WhatsApp can support a small business.
     </p>
-    <div class="row">
-      <a class="btn ghost"
-         href="https://pethavenjersey.com/?utm_source=ap_site&utm_medium=featured&utm_campaign=link"
-         target="_blank" rel="noopener">Visit PetHavenJersey.com ↗</a>
-      <a class="btn ghost"
-         href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=featured&utm_campaign=link"
-         target="_blank" rel="noopener">Open collections ↗</a>
-    </div>
+    <a class="btn" href="https://pethavenjersey.com" target="_blank">Visit PetHavenJersey.com</a>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section class="section" id="portfolio">
+  <section>
     <h2>Portfolio</h2>
-    <p>Selected websites connected to our work — built with clarity and clean design.</p>
+    <p class="desc">Selected projects connected to our work.</p>
 
     <div class="grid">
-      <div class="item">
+      <div class="card">
         <b>AjudaTotal</b>
-        <span>Support-focused website with a clear structure and simple navigation.</span>
-        <div class="row">
-          <a class="btn ghost" href="https://ajudatotal.com/" target="_blank" rel="noopener">Visit ↗</a>
-        </div>
+        <span>Clear and supportive website.</span><br><br>
+        <a class="btn" href="https://ajudatotal.com" target="_blank">Visit</a>
       </div>
 
-      <div class="item">
+      <div class="card">
         <b>Cátia Coutinho Holística</b>
-        <span>Minimal and calm website designed to feel welcoming and professional.</span>
-        <div class="row">
-          <a class="btn ghost" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">Visit ↗</a>
-        </div>
+        <span>Minimal and calm professional website.</span><br><br>
+        <a class="btn" href="https://catiacoutinhoholistica.com" target="_blank">Visit</a>
       </div>
 
-      <div class="item">
+      <div class="card">
         <b>Pet Haven Jersey</b>
-        <span>Local project linked to our work — clean experience and direct communication.</span>
-        <div class="row">
-          <a class="btn ghost" href="https://pethavenjersey.com/" target="_blank" rel="noopener">Visit ↗</a>
-        </div>
+        <span>Local pet project with direct communication.</span><br><br>
+        <a class="btn" href="https://pethavenjersey.com" target="_blank">Visit</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div>
-      <b>Want a simple website connected to WhatsApp?</b>
-      <small>Message what you need and we’ll explain everything clearly.</small>
-    </div>
-
-    <div class="cta-row">
-      <a class="btn primary"
-         href="https://wa.me/447700704591?text=Hi%2C%20I%20want%20a%20modern%20website%20connected%20to%20WhatsApp%20(chatbot)%20for%20my%20business%20in%20Jersey."
-         target="_blank" rel="noopener">WhatsApp ↗</a>
-
-      <a class="btn ghost" href="mailto:apdigitalsolutions.je@outlook.com">Email ↗</a>
-    </div>
-  </section>
-
-  <footer>
-    © <span id="year"></span> AP Online Solution · Jersey 🇯🇪
-  </footer>
 </main>
 
+<footer>
+  © <span id="year"></span> AP Online Solution · Jersey 🇯🇪
+</footer>
+
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
+
 </body>
 </html>
