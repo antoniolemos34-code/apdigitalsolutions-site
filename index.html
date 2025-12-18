@@ -6,435 +6,388 @@
 
   <title>AP Online Solution – Websites, Shopify Stores & Automations for Jersey</title>
   <meta name="description"
-        content="AP Online Solution helps small businesses in Jersey (Channel Islands) launch modern websites, Shopify stores, WhatsApp automations and ready-to-use designs — clear, fast and done-for-you.">
+        content="Modern websites, Shopify stores and WhatsApp automations for Jersey. Clean, fast and done-for-you — plus our featured store: Pet Haven Jersey.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#050814;
-      --bg-soft:#0b1020;
-      --accent:#22d3ee;
-      --accent-strong:#0ea5e9;
-      --pet:#22c55e;
-      --pet-strong:#16a34a;
-      --text-main:#e5e7eb;
-      --text-muted:#9ca3af;
-      --border-soft:rgba(148,163,184,.35);
-      --radius-lg:26px;
-      --radius-md:18px;
+      --bg:#070A10;
+      --panel:#0C111B;
+      --panel2:#0F172A;
+      --text:#E5E7EB;
+      --muted:#A3AAB7;
+      --line:rgba(148,163,184,.16);
+
+      /* professional accent */
+      --brand:#4F46E5;       /* indigo */
+      --brand2:#7C3AED;      /* violet */
+      --brand-soft:rgba(79,70,229,.18);
+
+      /* Pet accent (matches dog/orange, but subtle) */
+      --pet:#F59E0B;
+      --pet-soft:rgba(245,158,11,.14);
+
+      --radius-xl:26px;
+      --radius-lg:18px;
       --radius-pill:999px;
-      --shadow-soft:0 22px 60px rgba(15,23,42,.55);
+
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --shadow2: 0 10px 28px rgba(0,0,0,.38);
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
     body{
       font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;
-      background:radial-gradient(circle at top left,#1e293b 0,#020617 48%,#000 100%);
-      color:var(--text-main);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(79,70,229,.22), transparent 55%),
+        radial-gradient(900px 600px at 90% 15%, rgba(124,58,237,.16), transparent 55%),
+        radial-gradient(900px 700px at 60% 110%, rgba(245,158,11,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
       -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
     }
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-    .page{min-height:100vh;display:flex;flex-direction:column}
+    .wrap{min-height:100vh;display:flex;flex-direction:column}
 
-    /* TOP PET BANNER */
-    .top-banner{
-      position:sticky;top:0;z-index:40;
-      padding:10px 14px;
-      border-bottom:1px solid rgba(34,197,94,.25);
-      background:
-        radial-gradient(circle at 10% 50%, rgba(34,197,94,.18), transparent 55%),
-        linear-gradient(to right, rgba(2,6,23,.95), rgba(2,6,23,.78));
-      backdrop-filter:blur(16px);
+    /* TOP PROMO (clean) */
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(7,10,16,.65);
+      border-bottom:1px solid var(--line);
     }
-    .top-banner-inner{
+    .topbar-inner{
       max-width:1120px;margin:0 auto;
-      display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;
-      font-size:12px;color:var(--text-muted);
+      padding:10px 18px;
+      display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
     }
-    .top-banner strong{
-      color:#ecfdf5;
-      font-weight:800;
-      letter-spacing:.02em;
+    .topbar-left{
+      display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+      font-size:12px;color:rgba(229,231,235,.92);
     }
-    .top-banner-cta{
+    .badge{
+      font-size:11px;font-weight:800;
+      padding:5px 10px;border-radius:999px;
+      background: var(--pet-soft);
+      border:1px solid rgba(245,158,11,.25);
+      color:#FFD59A;
+    }
+    .topbar-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-top{
       display:inline-flex;align-items:center;gap:8px;
       padding:8px 12px;border-radius:999px;
-      background:linear-gradient(135deg,#22c55e,#4ade80);
-      color:#022c22;font-weight:900;font-size:12px;
-      border:1px solid rgba(74,222,128,.25);
-      box-shadow:0 14px 35px rgba(34,197,94,.55);
-      transition:transform .15s ease, filter .15s ease;
+      background: rgba(15,23,42,.65);
+      border:1px solid rgba(148,163,184,.22);
+      color:rgba(229,231,235,.92);
+      font-size:12px;font-weight:700;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
       white-space:nowrap;
     }
-    .top-banner-cta:hover{transform:translateY(-1px);filter:brightness(1.05)}
+    .btn-top:hover{transform:translateY(-1px);background:rgba(15,23,42,.9);border-color:rgba(148,163,184,.35)}
+    .btn-top.pet{
+      background: linear-gradient(135deg, rgba(245,158,11,.22), rgba(245,158,11,.10));
+      border-color: rgba(245,158,11,.28);
+    }
 
     /* NAV */
-    .nav{
-      position:sticky;top:54px;z-index:30;
-      backdrop-filter:blur(18px);
-      background:linear-gradient(to bottom,rgba(15,23,42,.95),rgba(15,23,42,.7),transparent);
-      border-bottom:1px solid rgba(30,64,175,.35);
+    header.nav{
+      position:sticky;top:52px;z-index:40;
+      backdrop-filter: blur(16px);
+      background: rgba(7,10,16,.55);
+      border-bottom:1px solid var(--line);
     }
     .nav-inner{
-      max-width:1120px;margin:0 auto;padding:10px 18px;
-      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      max-width:1120px;margin:0 auto;
+      padding:12px 18px;
+      display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
     }
-    .logo-wrap{display:flex;align-items:center;gap:10px}
-    .logo-img{
-      width:44px;height:44px;border-radius:12px;object-fit:cover;background:#000;
-      border:1px solid rgba(148,163,184,.35);
+    .brand{
+      display:flex;align-items:center;gap:12px;min-width:240px;
     }
-    .logo{display:inline-flex;flex-direction:column;gap:3px;line-height:1.1}
-    .logo-main{
-      font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;
-      background:linear-gradient(to right,#facc15,#eab308,#f97316);
-      -webkit-background-clip:text;color:transparent;
+    .brand img{
+      width:46px;height:46px;border-radius:14px;object-fit:cover;
+      background: #0B1220;
+      border:1px solid rgba(148,163,184,.18);
+      box-shadow: var(--shadow2);
     }
-    .logo-sub{font-size:11px;color:var(--text-muted)}
-    .nav-center{
-      display:flex;align-items:center;gap:18px;font-size:13px;color:var(--text-muted);
+    .brand-title{display:flex;flex-direction:column;gap:2px;line-height:1.1}
+    .brand-title b{
+      font-size:14px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;
+      color:rgba(229,231,235,.95);
     }
-    .nav-links{display:flex;align-items:center;gap:18px}
-    .nav-links a{
-      padding:4px 6px;border-radius:999px;
-      transition:color .15s ease, background .15s ease;
-    }
-    .nav-links a:hover{color:var(--text-main);background:rgba(15,23,42,.6)}
-    .nav-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .brand-title span{font-size:11px;color:var(--muted)}
 
-    .nav-cta{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:7px 14px;border-radius:999px;
-      background:linear-gradient(135deg,#22c55e,#16a34a);
-      font-size:13px;font-weight:600;color:#f9fafb;
-      box-shadow:0 14px 30px rgba(22,163,74,.5);
-      border:none;cursor:pointer;white-space:nowrap;
-      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+    nav.links{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    nav.links a{
+      font-size:13px;color:rgba(163,170,183,.95);
+      padding:6px 8px;border-radius:999px;
+      transition: background .15s ease,color .15s ease;
     }
-    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 18px 40px rgba(21,128,61,.6);filter:brightness(1.03)}
+    nav.links a:hover{background:rgba(15,23,42,.75);color:var(--text)}
 
-    .nav-pet{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:7px 14px;border-radius:999px;
-      background:linear-gradient(135deg,#22d3ee,#0ea5e9);
-      font-size:13px;font-weight:800;color:#06101d;
-      box-shadow:0 18px 45px rgba(14,165,233,.5);
-      border:1px solid rgba(34,211,238,.35);
-      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+    .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:10px 14px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.22);
+      background: rgba(15,23,42,.55);
+      color:rgba(229,231,235,.94);
+      font-size:13px;font-weight:800;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
       white-space:nowrap;
     }
-    .nav-pet:hover{transform:translateY(-1px);box-shadow:0 22px 55px rgba(14,165,233,.65);filter:brightness(1.04)}
-
-    @media (max-width: 920px){
-      .nav{top:62px}
-      .nav-inner{flex-wrap:wrap;justify-content:center;text-align:center}
-      .nav-links{display:none}
-      .nav-actions{justify-content:center}
+    .btn:hover{transform:translateY(-1px);background:rgba(15,23,42,.9);border-color:rgba(148,163,184,.35)}
+    .btn.primary{
+      border-color: rgba(79,70,229,.35);
+      background: linear-gradient(135deg, rgba(79,70,229,.35), rgba(124,58,237,.20));
+      box-shadow: 0 16px 45px rgba(79,70,229,.25);
+    }
+    .btn.pet{
+      border-color: rgba(245,158,11,.32);
+      background: linear-gradient(135deg, rgba(245,158,11,.28), rgba(245,158,11,.12));
     }
 
-    /* MAIN */
+    @media (max-width: 900px){
+      header.nav{top:74px}
+      .nav-inner{justify-content:center;text-align:center}
+      .nav-actions{justify-content:center}
+      nav.links{display:none}
+      .brand{justify-content:center}
+    }
+
+    /* LAYOUT */
     main{flex:1}
-    .shell{max-width:1120px;margin:0 auto;padding:26px 18px 80px}
+    .shell{max-width:1120px;margin:0 auto;padding:28px 18px 90px}
 
     /* HERO */
     .hero{
       display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);
-      gap:40px;align-items:center;margin-top:22px;margin-bottom:50px;
+      gap:26px;align-items:stretch;margin-top:14px;
     }
     @media (max-width: 880px){.hero{grid-template-columns:1fr;text-align:center}}
-    .hero-kicker{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:4px 10px;border-radius:999px;
-      border:1px solid rgba(148,163,184,.4);
-      background:radial-gradient(circle at 0% 0%, rgba(34,211,238,.18), transparent 60%);
-      font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted);
+
+    .card{
+      background: linear-gradient(180deg, rgba(15,23,42,.62), rgba(12,17,27,.85));
+      border:1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-left{padding:26px}
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:6px 12px;border-radius:999px;
+      border:1px solid rgba(79,70,229,.25);
+      background: rgba(79,70,229,.10);
+      color:rgba(229,231,235,.9);
+      font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;
       margin-bottom:14px;
     }
-    .hero-kicker-dot{
-      width:7px;height:7px;border-radius:999px;background:#22c55e;
-      box-shadow:0 0 0 5px rgba(34,197,94,.28);
-    }
-    .hero-title{
-      font-size:clamp(32px,4vw,44px);
-      line-height:1.05;font-weight:700;letter-spacing:-.03em;margin-bottom:14px;
-    }
-    .hero-title span{
-      background:linear-gradient(to right,#22d3ee,#a855f7);
-      -webkit-background-clip:text;color:transparent;
-    }
-    .hero-text{
-      font-size:15px;color:var(--text-muted);
-      max-width:560px;margin-bottom:18px;
-    }
-    @media (max-width: 880px){.hero-text{margin-left:auto;margin-right:auto}}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px}
-    @media (max-width: 880px){.hero-actions{justify-content:center}}
-
-    .btn-primary{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:14px 22px;border-radius:999px;border:none;cursor:pointer;
-      background:linear-gradient(135deg,#22d3ee,#0ea5e9);
-      color:#0b1020;font-size:14px;font-weight:800;
-      box-shadow:0 22px 55px rgba(8,145,178,.65);
-      transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
-    }
-    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 24px 60px rgba(14,165,233,.75);filter:brightness(1.05)}
-
-    .btn-ghost{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:12px 18px;border-radius:999px;
-      border:1px solid rgba(148,163,184,.6);
-      background:rgba(15,23,42,.45);
-      color:var(--text-muted);font-size:13px;font-weight:700;cursor:pointer;
-      transition:background .16s ease, border-color .16s ease, color .16s ease;
-    }
-    .btn-ghost:hover{background:rgba(15,23,42,.8);border-color:rgba(148,163,184,.9);color:var(--text-main)}
-
-    .btn-pet{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:14px 22px;border-radius:999px;
-      background:linear-gradient(135deg,#22c55e,#4ade80);
-      color:#022c22;font-size:14px;font-weight:900;
-      box-shadow:0 18px 45px rgba(34,197,94,.55);
-      border:1px solid rgba(74,222,128,.25);
-      transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
-      white-space:nowrap;
-    }
-    .btn-pet:hover{transform:translateY(-1px);box-shadow:0 22px 55px rgba(34,197,94,.75);filter:brightness(1.04)}
-
-    .hero-footnote{font-size:12px;color:var(--text-muted)}
-
-    .hero-right{position:relative}
-    .hero-card{
-      border-radius:var(--radius-lg);padding:20px;
-      background:
-        radial-gradient(circle at 0% 0%, rgba(34,211,238,.18), transparent 55%),
-        radial-gradient(circle at 100% 100%, rgba(34,197,94,.14), transparent 60%),
-        #020617;
-      border:1px solid rgba(30,64,175,.4);
-      box-shadow:var(--shadow-soft);
-      min-height:260px;
-      display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;
-    }
-    .hero-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-    .hero-chip{
-      font-size:11px;padding:5px 9px;border-radius:999px;
-      background:rgba(15,23,42,.7);border:1px solid rgba(148,163,184,.6);
-      color:var(--text-muted);display:inline-flex;align-items:center;gap:6px;
-    }
-    .hero-chip-dot{width:6px;height:6px;border-radius:999px;background:#22c55e}
-    .hero-card-title{font-size:14px;font-weight:900;margin-bottom:8px}
-    .hero-card-copy{font-size:13px;color:var(--text-muted);margin-bottom:14px}
-    .hero-pill-row{display:flex;flex-wrap:wrap;gap:6px;font-size:11px}
-    .hero-pill{
-      padding:4px 9px;border-radius:999px;border:1px solid rgba(148,163,184,.4);
-      background:rgba(15,23,42,.7);color:#9ca3af;
-    }
-    .hero-card-footer{
-      border-top:1px dashed rgba(148,163,184,.4);
-      margin-top:12px;padding-top:10px;
-      display:flex;align-items:center;justify-content:space-between;
-      font-size:11px;color:var(--text-muted);
-    }
-
-    /* PET FEATURE SECTION */
-    .pet-feature{
-      margin:10px 0 70px;
-      border-radius:var(--radius-lg);
-      border:1px solid rgba(34,197,94,.28);
-      background:
-        radial-gradient(circle at 0 0, rgba(34,197,94,.16), transparent 55%),
-        radial-gradient(circle at 100% 0, rgba(34,211,238,.12), transparent 55%),
-        rgba(15,23,42,.9);
-      box-shadow:var(--shadow-soft);
-      overflow:hidden;
-    }
-    .pet-feature-inner{
-      display:grid;grid-template-columns:1.3fr 1fr;gap:0;align-items:stretch;
-    }
-    @media (max-width: 900px){.pet-feature-inner{grid-template-columns:1fr}}
-    .pet-left{padding:22px}
-    .pet-kicker{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:4px 10px;border-radius:999px;
-      border:1px solid rgba(34,197,94,.35);
-      background:rgba(2,6,23,.6);
-      font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#bbf7d0;
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--brand)}
+    h1{
+      font-size:clamp(30px,4vw,44px);
+      line-height:1.05;letter-spacing:-.03em;font-weight:900;
       margin-bottom:12px;
     }
-    .pet-title{font-size:22px;font-weight:900;margin-bottom:10px;letter-spacing:-.02em}
-    .pet-title span{
-      background:linear-gradient(to right,#22c55e,#86efac);
+    h1 .grad{
+      background: linear-gradient(90deg, #E5E7EB, #C7D2FE, #A78BFA);
       -webkit-background-clip:text;color:transparent;
     }
-    .pet-text{font-size:14px;color:var(--text-muted);max-width:720px;margin-bottom:14px}
-    .pet-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-    .pet-mini{
-      padding:10px 12px;border-radius:14px;
-      border:1px solid rgba(148,163,184,.35);
-      background:rgba(2,6,23,.55);
-      color:var(--text-muted);font-size:12px;
-      display:flex;gap:10px;flex-wrap:wrap;margin-top:14px
+    .lead{
+      color:rgba(163,170,183,.98);
+      font-size:15px;line-height:1.6;
+      max-width:560px;margin-bottom:18px;
     }
-    .pet-right{
-      border-left:1px solid rgba(34,197,94,.18);
-      background:
-        linear-gradient(to bottom, rgba(2,6,23,.15), rgba(2,6,23,.65)),
-        url("https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover no-repeat;
-      min-height:240px;
-      position:relative;
+    @media (max-width: 880px){.lead{margin-left:auto;margin-right:auto}}
+
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+    @media (max-width: 880px){.cta-row{justify-content:center}}
+
+    .btn-big{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:13px 18px;border-radius:999px;
+      font-size:14px;font-weight:900;
+      border:1px solid rgba(148,163,184,.22);
+      background: rgba(15,23,42,.55);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
-    @media (max-width: 900px){.pet-right{border-left:none;border-top:1px solid rgba(34,197,94,.18)}}
-    .pet-right-badge{
-      position:absolute;left:16px;bottom:16px;
-      padding:10px 12px;border-radius:18px;
-      background:rgba(2,6,23,.72);
-      border:1px solid rgba(34,197,94,.25);
-      color:#ecfdf5;font-size:12px;font-weight:900;
-      backdrop-filter:blur(10px);
+    .btn-big:hover{transform:translateY(-1px);background:rgba(15,23,42,.9);border-color:rgba(148,163,184,.35)}
+    .btn-big.primary{
+      border-color: rgba(79,70,229,.45);
+      background: linear-gradient(135deg, rgba(79,70,229,.55), rgba(124,58,237,.28));
+      box-shadow: 0 18px 55px rgba(79,70,229,.24);
     }
+    .btn-big.pet{
+      border-color: rgba(245,158,11,.35);
+      background: linear-gradient(135deg, rgba(245,158,11,.30), rgba(245,158,11,.14));
+    }
+
+    .micro{
+      color:rgba(163,170,183,.9);
+      font-size:12px;
+    }
+
+    /* HERO RIGHT (proof + Pet highlight) */
+    .hero-right{padding:18px;display:flex;flex-direction:column;gap:12px}
+    .mini{
+      border-radius: var(--radius-lg);
+      border:1px solid rgba(148,163,184,.18);
+      background: rgba(2,6,23,.35);
+      padding:14px;
+    }
+    .mini h3{font-size:13px;font-weight:900;margin-bottom:6px}
+    .mini p{font-size:13px;color:rgba(163,170,183,.95);line-height:1.5}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .pill{
+      font-size:11px;font-weight:800;color:rgba(229,231,235,.88);
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.18);
+      background: rgba(15,23,42,.55);
+    }
+
+    .pet-box{
+      border-radius: var(--radius-lg);
+      border:1px solid rgba(245,158,11,.22);
+      background: linear-gradient(135deg, rgba(245,158,11,.14), rgba(2,6,23,.35));
+      padding:14px;
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .pet-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .pet-top b{font-size:13px;font-weight:900}
+    .pet-top span{font-size:11px;color:rgba(163,170,183,.95)}
+    .pet-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .pet-actions a{flex:1;min-width:180px}
 
     /* SECTIONS */
-    .section{margin-bottom:70px}
-    .section-heading{display:flex;flex-direction:column;gap:4px;margin-bottom:26px}
-    .section-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--text-muted)}
-    .section-title{font-size:24px;font-weight:900}
-    .section-subtitle{font-size:14px;color:var(--text-muted);max-width:520px}
+    .section{margin-top:18px;margin-bottom:64px}
+    .section-head{margin:26px 0 16px}
+    .section-head .k{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(163,170,183,.9);font-weight:900}
+    .section-head h2{font-size:22px;font-weight:900;margin-top:6px}
+    .section-head p{font-size:14px;color:rgba(163,170,183,.95);max-width:640px;margin-top:8px;line-height:1.6}
 
-    .services-grid{
-      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;
+    .grid{
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;
     }
-    @media (max-width:1024px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:640px){.services-grid{grid-template-columns:1fr}}
-    .service-card{
-      background:rgba(15,23,42,.9);
-      border-radius:var(--radius-md);
-      padding:14px;
-      border:1px solid rgba(30,64,175,.5);
-      display:flex;flex-direction:column;gap:8px;
+    @media (max-width: 1024px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width: 640px){.grid{grid-template-columns:1fr}}
+
+    .service{
+      padding:14px;border-radius:var(--radius-lg);
+      border:1px solid rgba(148,163,184,.16);
+      background: rgba(12,17,27,.72);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
     }
-    .service-image{
-      border-radius:12px;overflow:hidden;border:1px solid rgba(148,163,184,.4);height:96px;
+    .service:hover{transform:translateY(-2px);border-color:rgba(148,163,184,.25);background:rgba(12,17,27,.86)}
+    .thumb{
+      height:90px;border-radius:14px;overflow:hidden;
+      border:1px solid rgba(148,163,184,.14);
+      margin-bottom:10px;
     }
-    .service-image img{width:100%;height:100%;object-fit:cover}
-    .service-title{font-size:14px;font-weight:900}
-    .service-text{font-size:13px;color:var(--text-muted)}
-    .service-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-    .service-tag{
-      font-size:11px;padding:3px 8px;border-radius:999px;
-      background:rgba(15,23,42,.9);
-      border:1px solid rgba(148,163,184,.4);
-      color:#9ca3af;
+    .thumb img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) contrast(1.05)}
+    .service b{display:block;font-size:14px;font-weight:900;margin-bottom:6px}
+    .service p{font-size:13px;color:rgba(163,170,183,.95);line-height:1.5}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{font-size:11px;font-weight:800;color:rgba(229,231,235,.85);
+      padding:6px 10px;border-radius:999px;border:1px solid rgba(148,163,184,.14);
+      background:rgba(15,23,42,.45);
     }
 
-    /* Jersey CTA band */
-    .jersey-band{
-      padding:18px;
-      border-radius:var(--radius-lg);
-      border:1px dashed rgba(148,163,184,.55);
-      background:
-        radial-gradient(circle at 0 0, rgba(34,211,238,.12), transparent 55%),
-        rgba(15,23,42,.9);
+    /* CTA BAND */
+    .band{
+      margin-top:18px;
+      padding:18px;border-radius:var(--radius-xl);
+      border:1px solid rgba(79,70,229,.18);
+      background: linear-gradient(135deg, rgba(79,70,229,.14), rgba(15,23,42,.55));
       display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
-      margin:0 0 60px;
     }
-    .jersey-band h3{font-size:14px;font-weight:900}
-    .jersey-band p{font-size:13px;color:var(--text-muted);max-width:640px}
+    .band h3{font-size:14px;font-weight:900}
+    .band p{font-size:13px;color:rgba(163,170,183,.95);max-width:720px;line-height:1.5}
 
     /* CONTACT */
-    .contact-section{
-      border-radius:var(--radius-lg);
-      padding:22px 18px;
-      border:1px dashed rgba(148,163,184,.5);
-      background:
-        radial-gradient(circle at 0 0, rgba(34,211,238,.12), transparent 55%),
-        rgba(15,23,42,.9);
-      margin-bottom:30px;
-      display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+    .contact{
+      padding:18px;border-radius:var(--radius-xl);
+      border:1px solid rgba(148,163,184,.16);
+      background: rgba(12,17,27,.78);
+      display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
     }
-    .contact-text-main{font-size:15px;font-weight:900;margin-bottom:4px}
-    .contact-text-sub{font-size:13px;color:var(--text-muted)}
-    .contact-actions{display:flex;flex-wrap:wrap;gap:10px}
-    .btn-wa{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:12px 18px;border-radius:999px;
-      background:linear-gradient(135deg,#22c55e,#16a34a);
-      color:#ecfdf5;font-size:13px;font-weight:900;border:none;cursor:pointer;
-      box-shadow:0 18px 45px rgba(22,163,74,.6);
-      transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
-    }
-    .btn-wa:hover{transform:translateY(-1px);box-shadow:0 22px 55px rgba(22,163,74,.8);filter:brightness(1.05)}
-    .btn-email{
-      font-size:13px;padding:10px 16px;border-radius:999px;
-      border:1px solid rgba(148,163,184,.7);
-      background:rgba(15,23,42,.9);
-      color:var(--text-muted);
-    }
+    .contact b{font-size:15px;font-weight:900;display:block;margin-bottom:4px}
+    .contact span{font-size:13px;color:rgba(163,170,183,.95);line-height:1.5}
+    .contact-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .contact-actions a{white-space:nowrap}
 
     footer{
-      border-top:1px solid rgba(15,23,42,.9);
-      padding:18px;font-size:11px;color:var(--text-muted);
-      text-align:center;background:#020617;
+      border-top:1px solid rgba(148,163,184,.10);
+      padding:18px;
+      text-align:center;
+      font-size:11px;color:rgba(163,170,183,.9);
+      background: rgba(7,10,16,.65);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Floating CTA (subtle) */
+    .float{
+      position:fixed;right:14px;bottom:14px;z-index:80;
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .float a{
+      box-shadow: var(--shadow2);
     }
   </style>
 </head>
-<body>
-<div class="page">
 
-  <!-- TOP PET AD BANNER -->
-  <div class="top-banner">
-    <div class="top-banner-inner">
-      <div>
-        🐾 <strong>Pet Haven Jersey</strong> is live — shop pet essentials & cute finds in Jersey.
+<body>
+<div class="wrap">
+
+  <!-- Clean promo bar -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span class="badge">Pet Haven</span>
+        <span>PetHavenJersey.com is live — clean Shopify store built by AP Online Solution.</span>
       </div>
-      <a class="top-banner-cta"
-         href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=top_banner&utm_campaign=pet_launch"
-         target="_blank" rel="noopener">
-        Visit PetHavenJersey.com ↗
-      </a>
+      <div class="topbar-actions">
+        <a class="btn-top pet"
+          href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=topbar&utm_campaign=pet_launch"
+          target="_blank" rel="noopener">Visit PetHavenJersey.com ↗</a>
+        <a class="btn-top"
+          href="https://wa.me/447700704591?text=Hi%2C%20I%20want%20a%20clean%20website%20or%20Shopify%20store%20in%20Jersey."
+          target="_blank" rel="noopener">WhatsApp ↗</a>
+      </div>
     </div>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <header class="nav">
     <div class="nav-inner">
-      <div class="logo-wrap">
-        <!-- ✅ NEW LOGO: put this PNG in your repo -->
-        <img src="ap-pethaven-logo.png" alt="AP Online Solution x Pet Haven Jersey logo" class="logo-img">
-        <div class="logo">
-          <span class="logo-main">AP ONLINE SOLUTION</span>
-          <span class="logo-sub">Websites • Shopify • WhatsApp Automation</span>
+      <div class="brand">
+        <!-- ✅ logo com o cão -->
+        <img src="ap-pethaven-logo.png" alt="AP Online Solution + Pet Haven Jersey logo">
+        <div class="brand-title">
+          <b>AP Online Solution</b>
+          <span>Websites • Shopify • WhatsApp Automation</span>
         </div>
       </div>
 
-      <div class="nav-center">
-        <nav class="nav-links">
-          <a href="#about">About</a>
-          <a href="#pet">Pet Haven</a>
-          <a href="#services">Services</a>
-          <a href="#jersey">Jersey</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#pethaven">Pet Haven</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
       <div class="nav-actions">
-        <!-- PET BUTTON (advertising) -->
-        <a class="nav-pet"
-           href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=nav_button&utm_campaign=pet_launch"
-           target="_blank" rel="noopener">
-          🐾 Shop Pet Haven Jersey ↗
-        </a>
+        <a class="btn pet"
+           href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=nav&utm_campaign=pet_launch"
+           target="_blank" rel="noopener">🐾 Pet Haven ↗</a>
 
-        <!-- WhatsApp CTA -->
-        <a class="nav-cta"
-           href="https://wa.me/447700704591?text=Hi%2C%20I%20found%20AP%20Online%20Solution%20and%20I%27d%20like%20help%20with%20a%20website%20or%20Shopify%20store."
-           target="_blank" rel="noopener">
-          WhatsApp ↗
-        </a>
+        <a class="btn primary"
+           href="https://wa.me/447700704591?text=Hi%2C%20I%27d%20like%20help%20with%20a%20website%20or%20Shopify%20store."
+           target="_blank" rel="noopener">Quick Quote ↗</a>
       </div>
     </div>
   </header>
@@ -444,267 +397,188 @@
 
       <!-- HERO -->
       <section class="hero" id="about">
-        <div>
-          <div class="hero-kicker">
-            <span class="hero-kicker-dot"></span>
-            <span>Built for Jersey small businesses 🇯🇪</span>
-          </div>
+        <div class="card hero-left">
+          <div class="kicker"><span class="dot"></span> Built for Jersey small businesses 🇯🇪</div>
 
-          <h1 class="hero-title">
+          <h1>
             Modern websites, Shopify stores & automations
-            for <span>people who just want it done.</span>
+            <span class="grad">done-for-you.</span>
           </h1>
 
-          <p class="hero-text">
-            We help local businesses in Jersey launch a clean online presence, sell online with Shopify,
-            and automate enquiries on WhatsApp — with simple explanations and fast delivery.
-            <br><br>
-            Also: we run <strong style="color:#ecfdf5">PetHavenJersey.com</strong> — a clean pet shop experience built on Shopify.
+          <p class="lead">
+            Clean, fast, professional delivery for local businesses in Jersey:
+            launch a modern site, sell with Shopify, and automate enquiries on WhatsApp.
           </p>
 
-          <div class="hero-actions">
-            <a href="#services" class="btn-primary">See services ↗</a>
-
-            <a class="btn-pet"
-               href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=hero_button&utm_campaign=pet_launch"
-               target="_blank" rel="noopener">
-              🐾 Shop Pet Haven Jersey ↗
-            </a>
-
-            <a href="#contact" class="btn-ghost">Get a quick quote</a>
+          <div class="cta-row">
+            <a class="btn-big primary" href="#services">See services ↗</a>
+            <a class="btn-big pet"
+               href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=hero&utm_campaign=pet_launch"
+               target="_blank" rel="noopener">🐾 Shop Pet Haven ↗</a>
+            <a class="btn-big"
+               href="#contact">Contact</a>
           </div>
 
-          <p class="hero-footnote">
-            Jersey-first • 100% online delivery • Clear pricing • Quick support on WhatsApp.
-          </p>
+          <div class="micro">Jersey-first • Mobile-ready • Clear pricing • Quick WhatsApp support.</div>
         </div>
 
-        <div class="hero-right">
-          <div class="hero-card">
-            <div>
-              <div class="hero-card-header">
-                <span class="hero-chip">
-                  <span class="hero-chip-dot"></span>
-                  Fast setup, clean design
-                </span>
-                <span style="font-size:11px;color:var(--text-muted);">
-                  Websites • Stores • Automation
-                </span>
-              </div>
-
-              <div class="hero-card-title">Real example: PetHavenJersey.com ✅</div>
-              <div class="hero-card-copy">
-                A Shopify store built with clean collections, strong CTAs, and easy navigation.
-                Want something like that for your business? Message us — we can build it quickly.
-              </div>
-
-              <div class="hero-pill-row">
-                <span class="hero-pill">Shopify setup</span>
-                <span class="hero-pill">Collections</span>
-                <span class="hero-pill">Mobile-first</span>
-                <span class="hero-pill">Fast</span>
-              </div>
-            </div>
-
-            <div class="hero-card-footer">
-              <span>Simple, fast, professional</span>
-              <a href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=hero_card&utm_campaign=pet_launch"
-                 target="_blank" rel="noopener"
-                 style="font-weight:900;color:#bbf7d0">
-                Visit Pet Haven ↗
-              </a>
+        <div class="card hero-right">
+          <div class="mini">
+            <h3>Simple process</h3>
+            <p>
+              You tell us what you need. We build, test, and deliver it ready to use
+              (with a short video or notes).
+            </p>
+            <div class="pill-row">
+              <span class="pill">1-page sites</span>
+              <span class="pill">Shopify setup</span>
+              <span class="pill">WhatsApp automation</span>
+              <span class="pill">Modern UI</span>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ✅ PET FEATURED AD SECTION -->
-      <section class="pet-feature" id="pet">
-        <div class="pet-feature-inner">
-          <div class="pet-left">
-            <div class="pet-kicker">🐾 Featured store</div>
-            <h2 class="pet-title">Pet Haven Jersey — <span>clean, fast & easy shopping</span></h2>
-            <p class="pet-text">
-              Built on Shopify with a simple structure: collections that make sense, clear product pages,
-              and a smooth checkout. Perfect example of the style we build.
+          <div class="pet-box" id="pethaven">
+            <div class="pet-top">
+              <div>
+                <b>Featured: Pet Haven Jersey</b><br>
+                <span>Our live Shopify store example</span>
+              </div>
+              <span style="color:#FFD59A;font-weight:800;font-size:11px;">PetHavenJersey.com</span>
+            </div>
+
+            <p style="font-size:13px;color:rgba(163,170,183,.95);line-height:1.5;">
+              A clean, easy-to-shop pet store experience — built to show what we can create for your business.
             </p>
 
             <div class="pet-actions">
-              <a class="btn-pet"
-                 href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=pet_section_main&utm_campaign=pet_launch"
-                 target="_blank" rel="noopener">
-                🐾 Shop PetHavenJersey.com ↗
-              </a>
+              <a class="btn-big pet"
+                 href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=feature_primary&utm_campaign=pet_launch"
+                 target="_blank" rel="noopener">Open Collections ↗</a>
 
-              <a class="btn-ghost"
-                 href="https://pethavenjersey.com/?utm_source=ap_site&utm_medium=pet_section_secondary&utm_campaign=pet_launch"
-                 target="_blank" rel="noopener">
-                View homepage ↗
-              </a>
-            </div>
-
-            <div class="pet-mini">
-              <span>✅ Shopify-ready</span>
-              <span>✅ Clean design</span>
-              <span>✅ Mobile-friendly</span>
-              <span>✅ Built for Jersey</span>
+              <a class="btn-big"
+                 href="https://pethavenjersey.com/?utm_source=ap_site&utm_medium=feature_secondary&utm_campaign=pet_launch"
+                 target="_blank" rel="noopener">Visit Homepage ↗</a>
             </div>
           </div>
-
-          <div class="pet-right" aria-hidden="true">
-            <div class="pet-right-badge">Try it now → PetHavenJersey.com</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Jersey band -->
-      <section class="jersey-band" id="jersey">
-        <div>
-          <h3>Jersey 🇯🇪 focus</h3>
-          <p>
-            If you're in Jersey and need a clean website, a Shopify store, or WhatsApp automation
-            to capture leads and answer customers — we can set it up quickly and properly.
-          </p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn-wa"
-             href="https://wa.me/447700704591?text=Hi%2C%20I%27m%20in%20Jersey%20and%20I%20want%20help%20with%20my%20website%2Fstore."
-             target="_blank" rel="noopener">
-            💬 Message on WhatsApp
-          </a>
-          <a class="btn-email"
-             href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=jersey_band&utm_campaign=pet_launch"
-             target="_blank" rel="noopener">
-            🐾 Shop Pet Haven ↗
-          </a>
         </div>
       </section>
 
       <!-- SERVICES -->
       <section class="section" id="services">
-        <div class="section-heading">
-          <span class="section-kicker">Services</span>
-          <h2 class="section-title">What we can do for your business</h2>
-          <p class="section-subtitle">
+        <div class="section-head">
+          <div class="k">Services</div>
+          <h2>What we can do for your business</h2>
+          <p>
             Built for Jersey trades, cafés, salons, cleaners, freelancers and side hustles —
-            professional without agency-level pricing.
+            modern and professional without agency-level pricing.
           </p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Website on a screen">
+        <div class="grid">
+          <article class="service">
+            <div class="thumb">
+              <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Website on a screen">
             </div>
-            <h3 class="service-title">Modern websites & landing pages</h3>
-            <p class="service-text">
-              Apple-style design, fast loading, mobile-ready — focused on clarity and conversions.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">Mobile-first</span>
-              <span class="service-tag">Fast</span>
+            <b>Modern websites & landing pages</b>
+            <p>Minimal, premium design. Fast loading. Mobile-first. Clear copy that converts.</p>
+            <div class="tags">
+              <span class="tag">Mobile-first</span><span class="tag">Fast</span><span class="tag">Clean</span>
             </div>
           </article>
 
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Online shopping">
+          <article class="service">
+            <div class="thumb">
+              <img src="https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Online shopping">
             </div>
-            <h3 class="service-title">Shopify stores & setup</h3>
-            <p class="service-text">
-              Store setup, payments, collections, product layout and a clean, sales-focused homepage.
-              <br><br>
-              <strong style="color:#ecfdf5">Example:</strong>
-              <a href="https://pethavenjersey.com/?utm_source=ap_site&utm_medium=services_card&utm_campaign=pet_launch"
-                 target="_blank" rel="noopener" style="color:#bbf7d0;font-weight:900">PetHavenJersey.com ↗</a>
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">E-commerce</span>
-              <span class="service-tag">Organised</span>
+            <b>Shopify stores & setup</b>
+            <p>Store setup, collections, product layout, payments and a sales-focused homepage.</p>
+            <div class="tags">
+              <span class="tag">Shopify</span><span class="tag">Structure</span><span class="tag">Conversion</span>
             </div>
           </article>
 
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/4049992/pexels-photo-4049992.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Chat on a phone">
+          <article class="service">
+            <div class="thumb">
+              <img src="https://images.pexels.com/photos/4049992/pexels-photo-4049992.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Chat on a phone">
             </div>
-            <h3 class="service-title">WhatsApp chatbots & automation</h3>
-            <p class="service-text">
-              Auto replies, lead capture and routing — so you don't miss customers when you're busy.
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">24/7 replies</span>
-              <span class="service-tag">Lead capture</span>
+            <b>WhatsApp automation</b>
+            <p>Auto-replies, lead capture and routing — so you don’t miss customers when busy.</p>
+            <div class="tags">
+              <span class="tag">24/7 replies</span><span class="tag">Leads</span><span class="tag">Simple</span>
             </div>
           </article>
 
-          <article class="service-card">
-            <div class="service-image">
-              <img src="https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=800"
-                   alt="Printed products">
+          <article class="service">
+            <div class="thumb">
+              <img src="https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Printed products">
             </div>
-            <h3 class="service-title">Design for products & merch</h3>
-            <p class="service-text">
-              Print-ready PNG designs for hoodies, t-shirts, mugs and more (Printful compatible).
-            </p>
-            <div class="service-tag-row">
-              <span class="service-tag">Print-ready</span>
-              <span class="service-tag">Modern</span>
+            <b>Design for products & merch</b>
+            <p>Print-ready PNG designs for hoodies, tees, mugs and more (Printful compatible).</p>
+            <div class="tags">
+              <span class="tag">Print-ready</span><span class="tag">Modern</span><span class="tag">Branding</span>
             </div>
           </article>
+        </div>
+
+        <div class="band" style="margin-top:18px;">
+          <div>
+            <h3>Want a store like Pet Haven Jersey?</h3>
+            <p>We can build a clean Shopify store (like Pet Haven) with a professional landing page and WhatsApp automation — ready to sell.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary"
+               href="https://wa.me/447700704591?text=Hi%2C%20I%20want%20a%20Shopify%20store%20like%20Pet%20Haven%20Jersey."
+               target="_blank" rel="noopener">WhatsApp ↗</a>
+            <a class="btn pet"
+               href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=band&utm_campaign=pet_launch"
+               target="_blank" rel="noopener">🐾 View Pet Haven ↗</a>
+          </div>
         </div>
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="contact-section">
-        <div>
-          <div class="contact-text-main">Want help with a website, store or automation?</div>
-          <div class="contact-text-sub">
-            Send a quick message about what you do and what you need. We reply with simple options and clear pricing.
-            <br>
-            Or check our Shopify example: <strong style="color:#ecfdf5">PetHavenJersey.com</strong>.
+      <section class="section" id="contact">
+        <div class="contact">
+          <div>
+            <b>Want help with a website, store or automation?</b>
+            <span>Send a quick message about your business and what you need. We reply with clear options and pricing.</span>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn primary"
+               href="https://wa.me/447700704591?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20website%2FShopify%20store%20in%20Jersey."
+               target="_blank" rel="noopener">WhatsApp ↗</a>
+
+            <a class="btn" href="mailto:apdigitalsolutions.je@outlook.com">Email ↗</a>
+
+            <a class="btn pet"
+               href="https://pethavenjersey.com/?utm_source=ap_site&utm_medium=contact&utm_campaign=pet_launch"
+               target="_blank" rel="noopener">🐾 PetHavenJersey.com ↗</a>
           </div>
         </div>
-
-        <div class="contact-actions">
-          <a class="btn-wa"
-             href="https://wa.me/447700704591?text=Hi%2C%20I%27d%20like%20a%20quote%20for%20a%20website%2FShopify%20store%20in%20Jersey."
-             target="_blank" rel="noopener">
-            💬 WhatsApp
-          </a>
-
-          <a class="btn-email" href="mailto:apdigitalsolutions.je@outlook.com">
-            Email: apdigitalsolutions.je@outlook.com
-          </a>
-
-          <a class="btn-email"
-             href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=contact_buttons&utm_campaign=pet_launch"
-             target="_blank" rel="noopener">
-            🐾 Pet Haven ↗
-          </a>
-
-          <a class="btn-email" href="https://www.facebook.com/share/1a8fiKUzAn/" target="_blank" rel="noopener">
-            Facebook
-          </a>
-
-          <a class="btn-email" href="https://www.instagram.com/ap_the_solution_to_be_online?igsh=MXA1dXMzaTh5bG1ncg==" target="_blank" rel="noopener">
-            Instagram
-          </a>
-        </div>
       </section>
+
     </div>
   </main>
 
   <footer>
     © <span id="year"></span> AP Online Solution · Jersey 🇯🇪 · English
   </footer>
-</div>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <!-- Floating actions (subtle) -->
+  <div class="float" aria-label="Quick actions">
+    <a class="btn pet"
+      href="https://pethavenjersey.com/collections?utm_source=ap_site&utm_medium=floating&utm_campaign=pet_launch"
+      target="_blank" rel="noopener">🐾 Pet Haven ↗</a>
+    <a class="btn primary"
+      href="https://wa.me/447700704591?text=Hi%2C%20I%20want%20a%20modern%20website%20or%20Shopify%20store."
+      target="_blank" rel="noopener">Quick Quote ↗</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</div>
 </body>
-              </html>
+</html>
