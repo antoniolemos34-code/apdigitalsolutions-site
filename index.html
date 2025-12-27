@@ -11,7 +11,7 @@
   <meta property="og:title" content="AP Digital Solutions Jersey" />
   <meta property="og:description" content="Premium websites, Shopify and WhatsApp automation — built to convert." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="./assets/logo.jpg" />
+  <meta property="og:image" content="./assets/logo-premium.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +59,7 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    /* Header (cleaner, more Apple) */
+    /* Header */
     header{
       position:sticky;top:0;z-index:90;
       background:rgba(6,9,19,.72);
@@ -75,10 +75,10 @@
       min-width:220px;
     }
     .brand img{
-      height:34px;width:auto;display:block;
-      border-radius:10px;
+      height:36px;width:auto;display:block;
+      border-radius:12px;
       background:rgba(255,255,255,.08);
-      padding:6px;
+      padding:8px;
       border:1px solid rgba(255,255,255,.10);
     }
     .brand .t{display:flex;flex-direction:column;line-height:1.1}
@@ -115,7 +115,7 @@
       align-content:start;
     }
 
-    /* Big top logo card (no checkerboard look) */
+    /* Premium top logo block */
     .logoHero{
       border-radius:var(--r2);
       border:1px solid rgba(255,255,255,.10);
@@ -142,22 +142,22 @@
       display:flex;align-items:center;justify-content:center;
     }
 
-    /* White clean plate behind logo (removes checkerboard feeling) */
+    /* Since logo is transparent, keep a clean premium plate */
     .logoPlate{
       width:100%;
       max-width:820px;
       border-radius:18px;
-      background:rgba(255,255,255,.94);
+      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.92));
       border:1px solid rgba(0,0,0,.08);
-      box-shadow:0 18px 60px rgba(0,0,0,.25);
-      padding:18px 16px;
+      box-shadow:0 18px 60px rgba(0,0,0,.22);
+      padding:22px 16px;
       display:flex;align-items:center;justify-content:center;
     }
     .logoPlate img{
-      width:min(720px, 92%);
+      width:min(740px, 92%);
       height:auto;
       display:block;
-      filter:contrast(1.02) saturate(1.05);
+      filter:contrast(1.02) saturate(1.08);
     }
 
     .pills{
@@ -176,7 +176,7 @@
 
     .copy{
       margin-top:10px;
-      max-width:880px;
+      max-width:920px;
     }
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
@@ -190,7 +190,7 @@
     .dot{width:8px;height:8px;border-radius:50%;background:var(--b);box-shadow:0 0 0 6px rgba(34,211,238,.10)}
     h1{
       margin:14px 0 10px;
-      font-size:clamp(34px,6vw,70px);
+      font-size:clamp(34px,6vw,72px);
       line-height:1.02;
       letter-spacing:-1.2px;
       text-shadow:0 24px 85px rgba(0,0,0,.55);
@@ -200,7 +200,7 @@
       color:rgba(238,242,255,.80);
       font-size:16.5px;
       line-height:1.7;
-      max-width:72ch;
+      max-width:74ch;
     }
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
 
@@ -341,9 +341,6 @@
       border-top:1px solid rgba(255,255,255,.08);
       background:rgba(0,0,0,.10);
     }
-    .foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
-    .foot small{color:var(--muted)}
-    .social{display:flex;gap:10px;flex-wrap:wrap}
     .iconBtn{
       padding:10px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
@@ -370,7 +367,7 @@
       .work,.pricing{grid-template-columns:1fr}
       .contactRow{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
-      .logoPlate{padding:16px}
+      .logoPlate{padding:18px 14px}
     }
   </style>
 </head>
@@ -380,7 +377,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
-      <img src="./assets/logo.jpg?v=101" alt="AP Digital Solutions Jersey logo">
+      <img src="./assets/logo-premium.png?v=203" alt="AP Digital Solutions Jersey logo">
       <div class="t">
         <strong>AP Digital Solutions</strong>
         <span>Jersey · Websites · AI · Automation</span>
@@ -400,7 +397,7 @@
     <div class="logoHero">
       <div class="logoCard">
         <div class="logoPlate">
-          <img src="./assets/logo.jpg?v=101" alt="AP Digital Solutions Jersey">
+          <img src="./assets/logo-premium.png?v=203" alt="AP Digital Solutions Jersey">
         </div>
       </div>
       <div class="pills">
@@ -445,7 +442,7 @@
     <div class="work">
       <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="./assets/pethaven.jpg?v=101" alt="Pet Haven Jersey screenshot"
+          <img src="./assets/pethaven.jpg?v=203" alt="Pet Haven Jersey screenshot"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
         </div>
         <h4>Pet Haven Jersey</h4>
@@ -455,7 +452,7 @@
 
       <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="./assets/ajudatotal.jpg?v=101" alt="AjudaTotal screenshot"
+          <img src="./assets/ajudatotal.jpg?v=203" alt="AjudaTotal screenshot"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
         </div>
         <h4>AjudaTotal</h4>
@@ -465,7 +462,7 @@
 
       <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="./assets/catia.jpg?v=101" alt="Catia Coutinho Holistica screenshot"
+          <img src="./assets/catia.jpg?v=203" alt="Catia Coutinho Holistica screenshot"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
         </div>
         <h4>Catia Coutinho Holistica</h4>
@@ -489,7 +486,7 @@
       <div class="price">
         <h3>Starter</h3>
         <p class="lead">High-impact landing page for quick enquiries.</p>
-        <div class="money">From £249</div>
+        <div class="money">From £199</div>
         <div class="small">Perfect for: local services, one offer, fast leads.</div>
 
         <ul class="list">
@@ -509,7 +506,7 @@
         <div class="badge">Most popular</div>
         <h3>Pro Website</h3>
         <p class="lead">Full website built to convert.</p>
-        <div class="money">From £599</div>
+        <div class="money">From £449</div>
         <div class="small">Perfect for: credibility, enquiries, growth.</div>
 
         <ul class="list">
@@ -528,7 +525,7 @@
       <div class="price">
         <h3>Shopify Growth</h3>
         <p class="lead">Store setup + structure + conversion fixes.</p>
-        <div class="money">From £799</div>
+        <div class="money">From £649</div>
         <div class="small">Perfect for: e-commerce and better sales.</div>
 
         <ul class="list">
@@ -627,7 +624,7 @@
 <footer>
   <div class="wrap" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="./assets/logo.jpg?v=101" alt="AP Digital Solutions Jersey" style="height:28px;width:auto;display:block;border-radius:10px;background:rgba(255,255,255,.08);padding:6px;border:1px solid rgba(255,255,255,.10)">
+      <img src="./assets/logo-premium.png?v=203" alt="AP Digital Solutions Jersey" style="height:30px;width:auto;display:block;border-radius:12px;background:rgba(255,255,255,.08);padding:8px;border:1px solid rgba(255,255,255,.10)">
       <small style="color:rgba(238,242,255,.72)">© <span id="year"></span> AP Digital Solutions Jersey</small>
     </div>
 
@@ -677,4 +674,4 @@ ${msg}
 </script>
 
 </body>
-        </html>
+  </html>
