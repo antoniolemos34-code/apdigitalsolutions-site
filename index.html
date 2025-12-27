@@ -19,11 +19,9 @@
   <style>
     :root{
       --bg:#0b0f1a;
-      --panel:#0f1626;
-      --card:#111b2f;
-      --stroke:rgba(255,255,255,.10);
       --text:#eef2ff;
       --muted:rgba(238,242,255,.72);
+      --stroke:rgba(255,255,255,.10);
       --accent:#3b82f6;
       --accent2:#22d3ee;
       --radius:18px;
@@ -62,6 +60,7 @@
     .brand .t{display:flex;flex-direction:column;line-height:1.1}
     .brand .t strong{font-size:14px;font-weight:800}
     .brand .t span{font-size:12px;color:var(--muted)}
+
     nav.links{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
     nav.links a{
       font-size:13px;color:var(--muted);
@@ -138,6 +137,25 @@
       box-shadow:0 12px 30px rgba(34,211,238,.10);
     }
 
+    /* HERO LOGO (big) */
+    .heroLogo{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .heroLogo img{
+      height:52px;
+      width:auto;
+      display:block;
+      filter: drop-shadow(0 18px 38px rgba(0,0,0,.45));
+    }
+    .heroLogo .mini{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.35;
+    }
+
     /* RIGHT CARD */
     .panel{
       background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
@@ -196,15 +214,6 @@
     .card h3{margin:12px 0 8px;font-size:16px}
     .card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
 
-    /* PROCESS */
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .stepNum{
-      font-weight:900;
-      font-size:12px;
-      letter-spacing:.6px;
-      color:rgba(238,242,255,.72);
-    }
-
     /* WORK */
     .work{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .workItem{
@@ -217,12 +226,21 @@
     }
     .workItem:hover{transform:translateY(-2px);background:rgba(255,255,255,.07)}
     .thumb{
-      height:150px;border-radius:14px;
-      border:1px solid rgba(255,255,255,.08);
-      background:
-        radial-gradient(520px 240px at 25% 20%, rgba(59,130,246,.20), transparent 55%),
-        radial-gradient(520px 240px at 75% 55%, rgba(34,211,238,.16), transparent 55%),
-        rgba(0,0,0,.18);
+      height:160px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      overflow:hidden;
+      position:relative;
+    }
+    /* IMPORTANT: this makes screenshots show */
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.02);
+      filter: saturate(1.05) contrast(1.02);
     }
     .workItem h4{margin:12px 0 6px;font-size:14px}
     .workItem p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
@@ -272,18 +290,21 @@
     @media(max-width:980px){
       nav.links{display:none}
       .heroGrid{grid-template-columns:1fr}
-      .cards,.steps,.work{grid-template-columns:1fr}
+      .cards,.work{grid-template-columns:1fr}
       .faq{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
+      .brand{min-width:auto}
+      .heroLogo img{height:46px}
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
-      <img src="assets/logo.jpg" alt="AP Digital Solutions Jersey logo">
+      <img src="./assets/logo.jpg?v=3" alt="AP Digital Solutions Jersey logo">
       <div class="t">
         <strong>AP Digital Solutions</strong>
         <span>Jersey · Websites · AI · Automation</span>
@@ -293,7 +314,6 @@
     <nav class="links" aria-label="Navigation">
       <a href="#services">Services</a>
       <a href="#work">Work</a>
-      <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -308,12 +328,18 @@
 <main id="top" class="hero">
   <div class="wrap heroGrid">
     <div>
-      <div class="kicker"><span class="dot"></span> Local-first digital builds for Jersey businesses</div>
+      <div class="kicker"><span class="dot"></span> Premium digital builds for Jersey businesses</div>
       <h1>Websites & Shopify stores that look premium — and bring customers.</h1>
       <p class="sub">
         Clean design. Clear messaging. Fast loading. Direct WhatsApp contact.
-        We build websites and stores that are simple, professional, and focused on results.
+        Built to help local businesses get more enquiries and sales.
       </p>
+
+      <!-- BIG HERO LOGO -->
+      <div class="heroLogo">
+        <img src="./assets/logo.jpg?v=3" alt="AP Digital Solutions Jersey">
+        <div class="mini">Websites · Shopify · WhatsApp Automation<br>Based in Jersey</div>
+      </div>
 
       <div class="heroActions">
         <a class="btn primary" href="#contact">Request a quote</a>
@@ -348,7 +374,8 @@
             <select id="service">
               <option>Website</option>
               <option>Shopify store</option>
-              <option>WhatsApp AI chatbot</option>
+              <option>WhatsApp automation</option>
+              <option>AI chatbot</option>
               <option>Automation / integrations</option>
               <option>Branding / design</option>
             </select>
@@ -387,7 +414,7 @@
     <div class="head">
       <div>
         <h2>Services</h2>
-        <p>Simple, premium and built to convert — like the best local agencies, but focused on speed and delivery.</p>
+        <p>Simple, premium and conversion-focused delivery for local businesses in Jersey.</p>
       </div>
     </div>
 
@@ -400,7 +427,7 @@
       <div class="card">
         <span class="tag">Shopify</span>
         <h3>Shopify stores</h3>
-        <p>Store setup, collections, product pages and on-site conversion improvements.</p>
+        <p>Store setup, collections, product pages and conversion improvements.</p>
       </div>
       <div class="card">
         <span class="tag">WhatsApp</span>
@@ -437,54 +464,34 @@
 
     <div class="work">
       <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener">
-        <div class="thumb"></div>
+        <div class="thumb">
+          <img src="./assets/pethaven.jpg?v=3" alt="Pet Haven Jersey screenshot"
+               onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.06)';">
+        </div>
         <h4>Pet Haven Jersey</h4>
         <p>Shopify e-commerce store with a clear structure and mobile-first layout.</p>
         <div class="meta"><span>Shopify</span><span>E-commerce</span><span>Mobile-first</span></div>
       </a>
 
       <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener">
-        <div class="thumb"></div>
+        <div class="thumb">
+          <img src="./assets/ajudatotal.jpg?v=3" alt="AjudaTotal screenshot"
+               onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.06)';">
+        </div>
         <h4>AjudaTotal</h4>
         <p>Service website with strong messaging and bilingual experience.</p>
         <div class="meta"><span>Website</span><span>Messaging</span><span>PT/EN</span></div>
       </a>
 
       <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">
-        <div class="thumb"></div>
+        <div class="thumb">
+          <img src="./assets/catia.jpg?v=3" alt="Catia Coutinho Holistica screenshot"
+               onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.06)';">
+        </div>
         <h4>Catia Coutinho Holistica</h4>
         <p>Premium personal brand website with direct WhatsApp conversion.</p>
         <div class="meta"><span>Website</span><span>Branding</span><span>WhatsApp CTA</span></div>
       </a>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Process</h2>
-        <p>A clear process like the top local studios: simple, transparent, and fast.</p>
-      </div>
-    </div>
-
-    <div class="steps">
-      <div class="card">
-        <div class="stepNum">STEP 01</div>
-        <h3>Plan & message</h3>
-        <p>We define your offer, pages, and the exact call-to-action that gets inquiries.</p>
-      </div>
-      <div class="card">
-        <div class="stepNum">STEP 02</div>
-        <h3>Design & build</h3>
-        <p>Clean layout, premium feel, mobile-first, and fast loading.</p>
-      </div>
-      <div class="card">
-        <div class="stepNum">STEP 03</div>
-        <h3>Launch & improve</h3>
-        <p>Go live, connect WhatsApp, and iterate based on real customer actions.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -522,7 +529,7 @@
 <footer>
   <div class="wrap foot">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/logo.jpg" alt="AP Digital Solutions Jersey" style="height:28px;width:auto;display:block">
+      <img src="./assets/logo.jpg?v=3" alt="AP Digital Solutions Jersey" style="height:28px;width:auto;display:block">
       <small>© <span id="year"></span> AP Digital Solutions Jersey</small>
     </div>
 
@@ -571,4 +578,4 @@ ${msg}
 </script>
 
 </body>
-</html>
+        </html>
