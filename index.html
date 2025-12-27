@@ -2,16 +2,14 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AP Digital Solutions Jersey — Websites · AI · Automation</title>
-
-  <meta name="description" content="Premium websites, Shopify stores, WhatsApp AI chatbots and automation in Jersey. Built to convert and save time." />
-  <meta name="theme-color" content="#050814" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AP Digital Solutions Jersey — Websites, Shopify & WhatsApp Automation</title>
+  <meta name="description" content="Websites, Shopify stores and WhatsApp automation in Jersey. Clean design, clear messaging, and faster customer response with smart automation." />
+  <meta name="theme-color" content="#0b0f1a" />
   <meta name="robots" content="index,follow" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="AP Digital Solutions Jersey" />
-  <meta property="og:description" content="Websites, Shopify, WhatsApp AI & automation — built to convert." />
+  <meta property="og:description" content="Websites, Shopify & WhatsApp automation — built for local businesses in Jersey." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,623 +18,557 @@
 
   <style>
     :root{
-      --bg:#050814;
-      --bg2:#070a12;
-      --card: rgba(255,255,255,.06);
-      --stroke: rgba(255,255,255,.10);
-      --text:#eaf0ff;
-      --muted: rgba(234,240,255,.72);
-      --accent:#22d3ee;
-      --accent2:#0ea5e9;
-      --shadow: 0 18px 70px rgba(0,0,0,.55);
-      --radius: 18px;
-      --max: 1180px;
+      --bg:#0b0f1a;
+      --panel:#0f1626;
+      --card:#111b2f;
+      --stroke:rgba(255,255,255,.10);
+      --text:#eef2ff;
+      --muted:rgba(238,242,255,.72);
+      --accent:#3b82f6;
+      --accent2:#22d3ee;
+      --radius:18px;
+      --shadow:0 24px 70px rgba(0,0,0,.55);
+      --max:1120px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       background:
-        radial-gradient(1050px 560px at 16% 8%, rgba(34,211,238,.22), transparent 60%),
-        radial-gradient(950px 560px at 92% 16%, rgba(14,165,233,.18), transparent 62%),
-        radial-gradient(900px 560px at 55% 95%, rgba(34,211,238,.10), transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
+        radial-gradient(900px 500px at 20% 0%, rgba(59,130,246,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(34,211,238,.14), transparent 60%),
+        linear-gradient(180deg, var(--bg), #070a12);
+      color:var(--text);
       overflow-x:hidden;
     }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
-    .muted{color:var(--muted)}
-
-    /* Topbar */
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
-      background: rgba(5,8,20,.62);
-      border-bottom: 1px solid rgba(255,255,255,.08);
+    /* NAV */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(11,15,26,.72);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0; gap:14px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 260px;
-    }
-    .brand img{
-      height:34px; width:auto; display:block;
-      filter: drop-shadow(0 12px 26px rgba(34,211,238,.18));
-    }
-    .brand .name{
-      display:flex; flex-direction:column; line-height:1.1;
-    }
-    .brand .name strong{font-weight:800; letter-spacing:.2px; font-size:14px}
-    .brand .name span{font-size:12px; color:var(--muted)}
-    .links{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
-    .links a{
-      font-size:13px; color:var(--muted);
-      padding:10px 10px; border-radius:999px;
+    .brand{display:flex;align-items:center;gap:12px;min-width:240px}
+    .brand img{height:34px;width:auto;display:block}
+    .brand .t{display:flex;flex-direction:column;line-height:1.1}
+    .brand .t strong{font-size:14px;font-weight:800}
+    .brand .t span{font-size:12px;color:var(--muted)}
+    nav.links{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    nav.links a{
+      font-size:13px;color:var(--muted);
+      padding:10px 10px;border-radius:999px;
       transition:.2s ease;
     }
-    .links a:hover{color:var(--text); background: rgba(255,255,255,.06)}
+    nav.links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+    .navCtas{display:flex;gap:10px;align-items:center}
 
-    /* Buttons */
-    .ctaRow{display:flex; gap:10px; align-items:center}
+    /* BUTTONS */
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:12px 15px;
-      border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:700;
-      font-size:13px;
+      background:rgba(255,255,255,.06);
+      font-size:13px;font-weight:800;
       transition:.2s ease;
-      cursor:pointer;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
     .btn.primary{
-      border:1px solid rgba(34,211,238,.35);
-      background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(14,165,233,.12));
-      box-shadow: 0 14px 34px rgba(34,211,238,.12);
+      border-color:rgba(34,211,238,.35);
+      background:linear-gradient(135deg, rgba(59,130,246,.22), rgba(34,211,238,.14));
+      box-shadow:0 16px 40px rgba(34,211,238,.12);
     }
-    .btn.primary:hover{box-shadow: 0 18px 44px rgba(34,211,238,.18)}
-    .btn.ghost{background: transparent}
 
-    /* Hero */
-    .hero{padding: 74px 0 26px}
-    .heroGrid{display:grid; grid-template-columns: 1.12fr .88fr; gap: 22px; align-items:stretch}
-    .pill{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:8px 12px;
-      border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-      color: var(--muted);
-      font-size: 13px;
-      width: fit-content;
+    /* HERO */
+    .hero{padding:54px 0 22px}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
     }
-    .dot{
-      width:8px; height:8px; border-radius:50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(34,211,238,.12);
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:13px;
+      width:fit-content;
     }
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(34,211,238,.10)}
     h1{
-      margin: 14px 0 10px;
-      font-size: clamp(32px, 4.4vw, 54px);
-      line-height: 1.05;
-      letter-spacing: -0.8px;
+      margin:14px 0 10px;
+      font-size:clamp(30px,4.2vw,52px);
+      line-height:1.06;
+      letter-spacing:-.8px;
     }
     .sub{
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.65;
-      margin: 0 0 18px;
-      max-width: 68ch;
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.65;
+      max-width:68ch;
     }
-    .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
-    .proofRow{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;
-      color: rgba(234,240,255,.70);
-      font-size: 13px;
+    .heroActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .trust{
+      margin-top:16px;
+      display:flex;gap:10px;flex-wrap:wrap;
+      color:rgba(238,242,255,.70);
+      font-size:13px;
     }
-    .proofRow .chip{
-      display:flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius: 12px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.08);
+    .pill{
+      display:flex;align-items:center;gap:10px;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
     }
-    .spark{
-      width:10px; height:10px;
-      border-radius: 3px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 10px 24px rgba(34,211,238,.18);
+    .sq{
+      width:10px;height:10px;border-radius:3px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 12px 30px rgba(34,211,238,.10);
     }
 
-    /* Card */
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+    /* RIGHT CARD */
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
     }
-    .heroCard{
-      padding: 18px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      gap: 14px;
-      position:relative;
-      overflow:hidden;
-    }
-    .heroCard:before{
-      content:"";
-      position:absolute; inset:-45%;
-      background: radial-gradient(circle at 30% 20%, rgba(34,211,238,.18), transparent 52%),
-                  radial-gradient(circle at 70% 40%, rgba(14,165,233,.16), transparent 55%);
-      filter: blur(6px);
-      transform: rotate(12deg);
-      pointer-events:none;
-    }
-    .heroCard > *{position:relative}
-    .kpis{display:grid; grid-template-columns: 1fr 1fr; gap: 12px}
-    .kpi{
-      padding: 14px;
-      border-radius: 14px;
-      background: rgba(0,0,0,.22);
-      border: 1px solid rgba(255,255,255,.10);
-    }
-    .kpi strong{display:block; font-size:18px; letter-spacing:-.2px}
-    .kpi span{display:block; margin-top:6px; color:var(--muted); font-size:12.5px; line-height:1.35}
-
-    /* Form */
-    .formBox{
-      padding: 14px;
-      border-radius: 14px;
-      background: rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.10);
-    }
-    .formBox h3{margin:0 0 10px; font-size:14px; color:rgba(234,240,255,.92)}
-    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
-    label{font-size:12px; color:var(--muted)}
+    .panel h3{margin:0 0 10px;font-size:14px;color:rgba(238,242,255,.92)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    label{font-size:12px;color:var(--muted)}
     input, select, textarea{
       width:100%;
       margin-top:6px;
-      padding: 11px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
+      padding:11px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.20);
+      color:var(--text);
       outline:none;
-      font: inherit;
+      font:inherit;
     }
-    textarea{min-height: 92px; resize: vertical}
-    input::placeholder, textarea::placeholder{color: rgba(234,240,255,.45)}
-    .formActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    textarea{min-height:92px;resize:vertical}
+    input::placeholder, textarea::placeholder{color:rgba(238,242,255,.45)}
+    .formActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 
-    /* Sections */
-    section{padding: 58px 0}
-    .sectionHead{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap: 14px;
-      margin-bottom: 18px;
+    /* SECTIONS */
+    section{padding:52px 0}
+    .head{
+      display:flex;align-items:flex-end;justify-content:space-between;
+      gap:14px;margin-bottom:16px;
     }
-    .sectionHead h2{margin:0; font-size: 22px; letter-spacing: -0.2px}
-    .sectionHead p{margin:0; color: var(--muted); max-width: 72ch; line-height: 1.65; font-size: 14px}
+    .head h2{margin:0;font-size:22px;letter-spacing:-.2px}
+    .head p{margin:0;color:var(--muted);max-width:70ch;line-height:1.65;font-size:14px}
 
-    .cards{display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px}
-    .service{
-      padding: 18px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
+    /* SERVICES */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius);
+      padding:18px;
       transition:.2s ease;
-      min-height: 168px;
+      min-height:160px;
     }
-    .service:hover{transform: translateY(-2px); background: rgba(255,255,255,.07)}
+    .card:hover{transform:translateY(-2px);background:rgba(255,255,255,.07)}
     .tag{
       display:inline-flex;
       padding:7px 10px;
       border-radius:999px;
       font-size:12px;
-      color: rgba(234,240,255,.82);
-      background: rgba(34,211,238,.10);
-      border: 1px solid rgba(34,211,238,.22);
+      background:rgba(59,130,246,.12);
+      border:1px solid rgba(59,130,246,.22);
+      color:rgba(238,242,255,.85);
     }
-    .service h3{margin:12px 0 8px; font-size:16px}
-    .service p{margin:0; color:var(--muted); font-size:13.5px; line-height:1.65}
+    .card h3{margin:12px 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
 
-    /* Work / Portfolio */
-    .portfolio{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
-    .work{
-      padding: 16px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      overflow:hidden;
+    /* PROCESS */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .stepNum{
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.6px;
+      color:rgba(238,242,255,.72);
+    }
+
+    /* WORK */
+    .work{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .workItem{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:var(--radius);
+      padding:16px;
       transition:.2s ease;
+      overflow:hidden;
     }
-    .work:hover{transform: translateY(-2px); background: rgba(255,255,255,.07)}
+    .workItem:hover{transform:translateY(-2px);background:rgba(255,255,255,.07)}
     .thumb{
-      height: 150px;
-      border-radius: 14px;
+      height:150px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.08);
       background:
-        radial-gradient(520px 240px at 30% 20%, rgba(34,211,238,.22), transparent 55%),
-        radial-gradient(520px 240px at 70% 50%, rgba(14,165,233,.18), transparent 55%),
-        rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.08);
+        radial-gradient(520px 240px at 25% 20%, rgba(59,130,246,.20), transparent 55%),
+        radial-gradient(520px 240px at 75% 55%, rgba(34,211,238,.16), transparent 55%),
+        rgba(0,0,0,.18);
     }
-    .work h4{margin:12px 0 6px; font-size:14px}
-    .work p{margin:0; color:var(--muted); font-size:13px; line-height:1.6}
-    .work .meta{margin-top:10px; display:flex; gap:10px; flex-wrap:wrap}
+    .workItem h4{margin:12px 0 6px;font-size:14px}
+    .workItem p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .meta{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
     .meta span{
-      font-size:12px; color:rgba(234,240,255,.78);
-      padding:6px 10px; border-radius:999px;
-      background: rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.10);
+      font-size:12px;
+      color:rgba(238,242,255,.78);
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.10);
     }
 
     /* FAQ */
-    .faq{display:grid; grid-template-columns: 1fr 1fr; gap: 14px}
-    .qa{
-      padding: 18px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-    }
-    .qa h3{margin:0 0 8px; font-size:15px}
-    .qa p{margin:0; color:var(--muted); font-size:13.5px; line-height:1.65}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .qa{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:var(--radius);padding:18px}
+    .qa h3{margin:0 0 8px;font-size:15px}
+    .qa p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
 
-    /* Footer */
+    /* FOOTER */
     footer{
-      padding: 26px 0 50px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      background: rgba(0,0,0,.10);
+      padding:26px 0 50px;
+      border-top:1px solid rgba(255,255,255,.08);
+      background:rgba(0,0,0,.10);
     }
-    .foot{
-      display:flex;
-      justify-content:space-between;
-      gap: 14px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-    .foot small{color: var(--muted)}
-    .social{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .iconBtn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      transition:.2s ease;
-      font-weight:700;
-      font-size:13px;
-      color:var(--text);
-    }
-    .iconBtn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+    .foot small{color:var(--muted)}
+    .social{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .iconBtn{padding:10px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);font-size:13px;font-weight:800;transition:.2s ease}
+    .iconBtn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
 
-    /* WhatsApp Floating */
+    /* WhatsApp floating */
     .wa{
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 60;
-      border-radius: 999px;
-      padding: 12px 14px;
-      background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(14,165,233,.14));
-      border: 1px solid rgba(34,211,238,.32);
-      box-shadow: 0 18px 50px rgba(0,0,0,.55);
-      backdrop-filter: blur(10px);
-      display:flex;
-      gap:10px;
-      align-items:center;
-      font-weight:800;
-      font-size: 13px;
+      position:fixed;right:16px;bottom:16px;z-index:60;
+      border-radius:999px;
+      padding:12px 14px;
+      background:linear-gradient(135deg, rgba(59,130,246,.22), rgba(34,211,238,.14));
+      border:1px solid rgba(34,211,238,.32);
+      box-shadow:0 18px 50px rgba(0,0,0,.55);
+      display:flex;gap:10px;align-items:center;
+      font-weight:900;font-size:13px;
     }
-    .wa:hover{transform: translateY(-2px)}
-    .wa i{
-      width:10px; height:10px; border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 6px rgba(34,211,238,.12);
-    }
+    .wa i{width:10px;height:10px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(34,211,238,.10)}
+    .wa:hover{transform:translateY(-2px)}
 
     /* Responsive */
-    @media (max-width: 980px){
+    @media(max-width:980px){
+      nav.links{display:none}
       .heroGrid{grid-template-columns:1fr}
-      .cards,.portfolio{grid-template-columns: 1fr}
-      .faq{grid-template-columns: 1fr}
-      .kpis{grid-template-columns:1fr}
-      .links{display:none}
-      .brand{min-width:auto}
-    }
-    @media (max-width: 520px){
+      .cards,.steps,.work{grid-template-columns:1fr}
+      .faq{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
-      .hero{padding-top:56px}
     }
   </style>
 </head>
-
 <body>
-  <!-- NAV -->
-  <div class="topbar">
-    <div class="wrap">
-      <div class="nav">
-        <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
-          <!-- Logo: /assets/logo.png -->
-          <img src="assets/logo.png" alt="AP Digital Solutions Jersey logo" />
-          <div class="name">
-            <strong>AP Digital Solutions</strong>
-            <span>Jersey · Websites · AI · Automation</span>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
+      <img src="assets/logo.jpg" alt="AP Digital Solutions Jersey logo">
+      <div class="t">
+        <strong>AP Digital Solutions</strong>
+        <span>Jersey · Websites · AI · Automation</span>
+      </div>
+    </a>
+
+    <nav class="links" aria-label="Navigation">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="navCtas">
+      <a class="btn" href="#work">View work</a>
+      <a class="btn primary" href="#contact">Get a quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="hero">
+  <div class="wrap heroGrid">
+    <div>
+      <div class="kicker"><span class="dot"></span> Local-first digital builds for Jersey businesses</div>
+      <h1>Websites & Shopify stores that look premium — and bring customers.</h1>
+      <p class="sub">
+        Clean design. Clear messaging. Fast loading. Direct WhatsApp contact.
+        We build websites and stores that are simple, professional, and focused on results.
+      </p>
+
+      <div class="heroActions">
+        <a class="btn primary" href="#contact">Request a quote</a>
+        <a class="btn" href="#services">See services</a>
+      </div>
+
+      <div class="trust">
+        <div class="pill"><span class="sq"></span> Mobile-first</div>
+        <div class="pill"><span class="sq"></span> Performance & SEO basics</div>
+        <div class="pill"><span class="sq"></span> WhatsApp + automation</div>
+      </div>
+    </div>
+
+    <aside class="panel" id="contact">
+      <h3>Get a quote (1 minute)</h3>
+
+      <form id="quoteForm">
+        <div class="grid2">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" required placeholder="Your name">
           </div>
-        </a>
-
-        <nav class="links" aria-label="Navigation">
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="ctaRow">
-          <a class="btn ghost" href="#work">View work</a>
-          <a class="btn primary" href="#contact">Get a quote</a>
+          <div>
+            <label for="phone">WhatsApp (optional)</label>
+            <input id="phone" placeholder="+44...">
+          </div>
         </div>
+
+        <div class="grid2" style="margin-top:10px">
+          <div>
+            <label for="service">Service</label>
+            <select id="service">
+              <option>Website</option>
+              <option>Shopify store</option>
+              <option>WhatsApp AI chatbot</option>
+              <option>Automation / integrations</option>
+              <option>Branding / design</option>
+            </select>
+          </div>
+          <div>
+            <label for="timeline">Timeline</label>
+            <select id="timeline">
+              <option>ASAP</option>
+              <option>1–2 weeks</option>
+              <option>2–4 weeks</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:10px">
+          <label for="msg">Message</label>
+          <textarea id="msg" placeholder="Tell us what you need (pages, products, booking, automation, etc.)"></textarea>
+        </div>
+
+        <div class="formActions">
+          <button class="btn primary" type="submit">Send by email</button>
+          <a class="btn" id="waInline" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+
+        <p style="margin:10px 0 0;color:rgba(238,242,255,.60);font-size:12px;line-height:1.5">
+          No account needed — email opens with a ready message.
+        </p>
+      </form>
+    </aside>
+  </div>
+</main>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Services</h2>
+        <p>Simple, premium and built to convert — like the best local agencies, but focused on speed and delivery.</p>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Websites</span>
+        <h3>Premium websites</h3>
+        <p>Landing pages and full websites with clean design, clear CTA, and fast load.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Shopify</span>
+        <h3>Shopify stores</h3>
+        <p>Store setup, collections, product pages and on-site conversion improvements.</p>
+      </div>
+      <div class="card">
+        <span class="tag">WhatsApp</span>
+        <h3>WhatsApp automation</h3>
+        <p>Direct chat buttons and automation flows to capture leads and reply faster.</p>
+      </div>
+      <div class="card">
+        <span class="tag">AI</span>
+        <h3>AI chatbot flows</h3>
+        <p>Smart Q&A, lead capture, and routing — built for your business.</p>
+      </div>
+      <div class="card">
+        <span class="tag">SEO</span>
+        <h3>Technical SEO basics</h3>
+        <p>Metadata, structure, performance checks — the foundation to be found online.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Design</span>
+        <h3>Branding & creatives</h3>
+        <p>Logo, banners, social assets — consistent look across platforms.</p>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- HERO -->
-  <main id="top" class="hero">
-    <div class="wrap">
-      <div class="heroGrid">
-        <div>
-          <div class="pill"><span class="dot"></span> Premium digital solutions — Jersey</div>
-          <h1>Websites, Shopify & WhatsApp automation — built to convert.</h1>
-          <p class="sub">
-            Clean, fast and modern design with clear calls-to-action.
-            We connect your website to WhatsApp and automation so you reply faster and close more customers.
-          </p>
-
-          <div class="heroActions">
-            <a class="btn primary" href="#contact">Start now</a>
-            <a class="btn" href="#services">See services</a>
-          </div>
-
-          <div class="proofRow">
-            <div class="chip"><span class="spark"></span> Modern premium design</div>
-            <div class="chip"><span class="spark"></span> Performance & SEO</div>
-            <div class="chip"><span class="spark"></span> WhatsApp + AI automation</div>
-          </div>
-        </div>
-
-        <div class="card heroCard">
-          <div class="kpis">
-            <div class="kpi"><strong>More leads</strong><span>Clear CTA + quick quote form.</span></div>
-            <div class="kpi"><strong>More trust</strong><span>Premium layout + real portfolio.</span></div>
-            <div class="kpi"><strong>Mobile-first</strong><span>Perfect on phones (where people buy).</span></div>
-            <div class="kpi"><strong>Automation</strong><span>Less manual work, faster replies.</span></div>
-          </div>
-
-          <div class="formBox" id="contact">
-            <h3>Get a quote (1 minute)</h3>
-
-            <form id="quoteForm">
-              <div class="grid2">
-                <div>
-                  <label for="name">Name</label>
-                  <input id="name" required placeholder="Your name" />
-                </div>
-                <div>
-                  <label for="phone">WhatsApp (optional)</label>
-                  <input id="phone" placeholder="+44..." />
-                </div>
-              </div>
-
-              <div class="grid2" style="margin-top:10px">
-                <div>
-                  <label for="service">Service</label>
-                  <select id="service">
-                    <option>Website</option>
-                    <option>Shopify store</option>
-                    <option>WhatsApp AI chatbot</option>
-                    <option>Automation / integrations</option>
-                    <option>Branding / design</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="budget">Budget</label>
-                  <select id="budget">
-                    <option>£500–£1,000</option>
-                    <option>£1,000–£2,500</option>
-                    <option>£2,500–£5,000</option>
-                    <option>£5,000+</option>
-                  </select>
-                </div>
-              </div>
-
-              <div style="margin-top:10px">
-                <label for="msg">Message</label>
-                <textarea id="msg" placeholder="Tell us what you need (pages, products, chatbot, etc.)"></textarea>
-              </div>
-
-              <div class="formActions">
-                <button class="btn primary" type="submit">Send by email</button>
-                <a class="btn" id="waInline" href="#" target="_blank" rel="noopener">WhatsApp</a>
-              </div>
-
-              <p style="margin:10px 0 0; color:rgba(234,240,255,.60); font-size:12px; line-height:1.5">
-                *No account needed — opens your email with a ready message.
-              </p>
-            </form>
-          </div>
-        </div>
+<section id="work">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Work</h2>
+        <p>Real projects already live. Click to view.</p>
       </div>
     </div>
-  </main>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="wrap">
-      <div class="sectionHead">
-        <div>
-          <h2>Services</h2>
-          <p>Everything you need to get online and start converting in Jersey.</p>
-        </div>
-      </div>
+    <div class="work">
+      <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener">
+        <div class="thumb"></div>
+        <h4>Pet Haven Jersey</h4>
+        <p>Shopify e-commerce store with a clear structure and mobile-first layout.</p>
+        <div class="meta"><span>Shopify</span><span>E-commerce</span><span>Mobile-first</span></div>
+      </a>
 
-      <div class="cards">
-        <div class="service">
-          <span class="tag">Websites</span>
-          <h3>Premium websites</h3>
-          <p>Fast landing pages and full websites with modern design and clear CTAs.</p>
-        </div>
-        <div class="service">
-          <span class="tag">Shopify</span>
-          <h3>Shopify stores</h3>
-          <p>Setup, collections and product pages designed to sell.</p>
-        </div>
-        <div class="service">
-          <span class="tag">WhatsApp + AI</span>
-          <h3>AI chatbots</h3>
-          <p>Capture leads and answer customers automatically on WhatsApp.</p>
-        </div>
-        <div class="service">
-          <span class="tag">Automation</span>
-          <h3>Automation & integrations</h3>
-          <p>Forms, email, CRM, sheets — reduce manual work and speed up replies.</p>
-        </div>
-        <div class="service">
-          <span class="tag">SEO</span>
-          <h3>Technical SEO</h3>
-          <p>Solid structure, metadata and performance best practices.</p>
-        </div>
-        <div class="service">
-          <span class="tag">Design</span>
-          <h3>Branding & creatives</h3>
-          <p>Logos and visuals consistent across website and social media.</p>
-        </div>
+      <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener">
+        <div class="thumb"></div>
+        <h4>AjudaTotal</h4>
+        <p>Service website with strong messaging and bilingual experience.</p>
+        <div class="meta"><span>Website</span><span>Messaging</span><span>PT/EN</span></div>
+      </a>
+
+      <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">
+        <div class="thumb"></div>
+        <h4>Catia Coutinho Holistica</h4>
+        <p>Premium personal brand website with direct WhatsApp conversion.</p>
+        <div class="meta"><span>Website</span><span>Branding</span><span>WhatsApp CTA</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>Process</h2>
+        <p>A clear process like the top local studios: simple, transparent, and fast.</p>
       </div>
     </div>
-  </section>
 
-  <!-- WORK -->
-  <section id="work">
-    <div class="wrap">
-      <div class="sectionHead">
-        <div>
-          <h2>Real work</h2>
-          <p>Projects already live — proof of delivery (not theory).</p>
-        </div>
+    <div class="steps">
+      <div class="card">
+        <div class="stepNum">STEP 01</div>
+        <h3>Plan & message</h3>
+        <p>We define your offer, pages, and the exact call-to-action that gets inquiries.</p>
       </div>
-
-      <div class="portfolio">
-        <a class="work" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener">
-          <div class="thumb"></div>
-          <h4>Pet Haven Jersey</h4>
-          <p>Shopify e-commerce store with conversion-focused structure.</p>
-          <div class="meta"><span>Shopify</span><span>E-commerce</span><span>Mobile-first</span></div>
-        </a>
-
-        <a class="work" href="https://ajudatotal.com/" target="_blank" rel="noopener">
-          <div class="thumb"></div>
-          <h4>AjudaTotal</h4>
-          <p>Service website with clear messaging and bilingual experience.</p>
-          <div class="meta"><span>Website</span><span>Copywriting</span><span>PT/EN</span></div>
-        </a>
-
-        <a class="work" href="https://catiacoutinhholistica.com/" target="_blank" rel="noopener">
-          <div class="thumb"></div>
-          <h4>Catia Coutinho Holistica</h4>
-          <p>Premium personal brand website with WhatsApp conversion.</p>
-          <div class="meta"><span>Website</span><span>Branding</span><span>WhatsApp CTA</span></div>
-        </a>
+      <div class="card">
+        <div class="stepNum">STEP 02</div>
+        <h3>Design & build</h3>
+        <p>Clean layout, premium feel, mobile-first, and fast loading.</p>
+      </div>
+      <div class="card">
+        <div class="stepNum">STEP 03</div>
+        <h3>Launch & improve</h3>
+        <p>Go live, connect WhatsApp, and iterate based on real customer actions.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="sectionHead">
-        <div>
-          <h2>FAQ</h2>
-          <p>Common questions before someone hires you.</p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <div class="qa">
-          <h3>How long does it take?</h3>
-          <p>Landing page: a few days. Full website: 1–3 weeks depending on content and revisions.</p>
-        </div>
-        <div class="qa">
-          <h3>Do you build Shopify stores?</h3>
-          <p>Yes — setup, design, collections, product pages and conversion improvements.</p>
-        </div>
-        <div class="qa">
-          <h3>Can you add WhatsApp automation?</h3>
-          <p>Yes — AI chatbot flows and automation to capture leads and reply faster.</p>
-        </div>
-        <div class="qa">
-          <h3>Will my number show on the website?</h3>
-          <p>The site shows a WhatsApp button only. The chat opens directly in WhatsApp.</p>
-        </div>
+<section id="faq">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2>FAQ</h2>
+        <p>Quick answers before someone hires you.</p>
       </div>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div class="foot">
-        <div style="display:flex; gap:12px; align-items:center">
-          <img src="assets/logo.png" alt="AP Digital Solutions Jersey" style="height:28px; width:auto" />
-          <small>© <span id="year"></span> AP Digital Solutions Jersey — Websites · AI · Automation</small>
-        </div>
-
-        <div class="social">
-          <a class="iconBtn" href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank" rel="noopener">Instagram</a>
-          <a class="iconBtn" href="https://www.facebook.com/share/16aBSDLMQk/" target="_blank" rel="noopener">Facebook</a>
-          <a class="iconBtn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
-        </div>
+    <div class="faq">
+      <div class="qa">
+        <h3>How long does it take?</h3>
+        <p>Landing page: a few days. Full website: 1–3 weeks depending on content and revisions.</p>
+      </div>
+      <div class="qa">
+        <h3>Do you build Shopify stores?</h3>
+        <p>Yes — setup, design, collections, product pages and conversion improvements.</p>
+      </div>
+      <div class="qa">
+        <h3>Can you add WhatsApp automation?</h3>
+        <p>Yes — direct buttons + automation flows and AI chat support if needed.</p>
+      </div>
+      <div class="qa">
+        <h3>Will my number be visible on the website?</h3>
+        <p>No. The website only shows a WhatsApp button that opens the chat directly.</p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- WhatsApp floating -->
-  <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener"><i></i> WhatsApp</a>
+<footer>
+  <div class="wrap foot">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="assets/logo.jpg" alt="AP Digital Solutions Jersey" style="height:28px;width:auto;display:block">
+      <small>© <span id="year"></span> AP Digital Solutions Jersey</small>
+    </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    <div class="social">
+      <a class="iconBtn" href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank" rel="noopener">Instagram</a>
+      <a class="iconBtn" href="https://www.facebook.com/share/16aBSDLMQk/" target="_blank" rel="noopener">Facebook</a>
+      <a class="iconBtn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
+    </div>
+  </div>
+</footer>
 
-    const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
-    const WA_LINK = "https://wa.me/447700704591?text=Hello%20AP%20Digital%20Solutions!%20I%20would%20like%20a%20quote.";
+<a class="wa" id="waBtn" href="#" target="_blank" rel="noopener"><i></i> WhatsApp</a>
 
-    document.getElementById("waBtn").setAttribute("href", WA_LINK);
-    document.getElementById("waInline").setAttribute("href", WA_LINK);
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.getElementById("quoteForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const service = document.getElementById("service").value;
-      const budget = document.getElementById("budget").value;
-      const msg = document.getElementById("msg").value.trim();
+  const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
+  const WA_LINK = "https://wa.me/447700704591?text=Hello%20AP%20Digital%20Solutions!%20I%20would%20like%20a%20quote.";
 
-      const subject = encodeURIComponent("Quote request — AP Digital Solutions Jersey");
-      const body = encodeURIComponent(
-        `Name: ${name}\nWhatsApp: ${phone}\nService: ${service}\nBudget: ${budget}\n\nMessage:\n${msg}\n`
-      );
+  document.getElementById("waBtn").setAttribute("href", WA_LINK);
+  document.getElementById("waInline").setAttribute("href", WA_LINK);
 
-      window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
-    });
-  </script>
+  document.getElementById("quoteForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const timeline = document.getElementById("timeline").value;
+    const msg = document.getElementById("msg").value.trim();
+
+    const subject = encodeURIComponent("Quote request — AP Digital Solutions Jersey");
+    const body = encodeURIComponent(
+`Name: ${name}
+WhatsApp: ${phone}
+Service: ${service}
+Timeline: ${timeline}
+
+Message:
+${msg}
+`
+    );
+
+    window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+  });
+</script>
+
 </body>
 </html>
