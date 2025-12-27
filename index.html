@@ -37,7 +37,6 @@
 
       --max:1120px;
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -50,16 +49,13 @@
         linear-gradient(180deg, var(--bg2), var(--bg));
       overflow-x:hidden;
     }
-
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
-    .grid{display:grid;gap:16px}
-    .sr{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
 
     /* Header */
     header{
       position:sticky;top:0;z-index:80;
-      background:rgba(7,10,18,.68);
+      background:rgba(7,10,18,.70);
       backdrop-filter: blur(14px);
       border-bottom:1px solid rgba(255,255,255,.08);
     }
@@ -72,7 +68,6 @@
     .brand .t{display:flex;flex-direction:column;line-height:1.1}
     .brand .t strong{font-size:14px;font-weight:900;letter-spacing:-.2px}
     .brand .t span{font-size:12px;color:var(--muted)}
-
     nav.links{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     nav.links a{
       font-size:13px;color:var(--muted);
@@ -89,7 +84,6 @@
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.06);
       font-size:13px;font-weight:900;
-      letter-spacing:.1px;
       transition:.2s ease;
       white-space:nowrap;
     }
@@ -99,25 +93,15 @@
       background:linear-gradient(135deg, rgba(59,130,246,.26), rgba(34,211,238,.16));
       box-shadow:0 16px 44px rgba(34,211,238,.14);
     }
-    .btn.ghost{
-      background:transparent;
-      border-color:rgba(255,255,255,.14);
-    }
+    .btn.ghost{background:transparent}
 
-    /* Sections */
     section{padding:64px 0}
-    .head{
-      display:flex;align-items:flex-end;justify-content:space-between;
-      gap:14px;margin-bottom:18px;
-    }
-    .head h2{margin:0;font-size:22px;letter-spacing:-.4px}
-    .head p{margin:0;color:var(--muted);max-width:72ch;line-height:1.65;font-size:14px}
 
-    /* Hero (Agency-grade) */
+    /* Hero */
     .hero{
       position:relative;
-      padding:76px 0 40px;
-      min-height:92vh;
+      padding:74px 0 36px;
+      min-height:88vh;
       display:flex;
       align-items:center;
       overflow:hidden;
@@ -129,7 +113,6 @@
         radial-gradient(1000px 680px at 80% 18%, rgba(34,211,238,.22), transparent 60%),
         radial-gradient(1200px 700px at 50% 85%, rgba(59,130,246,.12), transparent 55%);
       filter: blur(12px);
-      opacity:.98;
       z-index:0;
     }
     .heroBrand{
@@ -139,24 +122,21 @@
       z-index:1;
     }
     .heroBrand img{
-      width:min(1350px, 190vw);
+      width:min(1400px, 200vw);
       max-height:74vh;
       object-fit:contain;
-      opacity:0.055;             /* <<< clean watermark, not distracting */
-      filter:saturate(1.05) contrast(1.05) blur(.4px);
-      transform:translateY(18px);
+      opacity:0.05;  /* subtle watermark */
+      filter:saturate(1.05) contrast(1.05) blur(.45px);
+      transform:translateY(20px);
       mix-blend-mode: luminosity;
     }
-    .heroInner{
-      position:relative; z-index:2;
-      max-width: 920px;
-    }
+    .heroInner{position:relative; z-index:2; max-width:920px}
+
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
       padding:8px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(255,255,255,.06);
-      backdrop-filter:blur(10px);
       color:var(--muted);
       font-size:13px;
       width:fit-content;
@@ -164,21 +144,21 @@
     .dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(34,211,238,.10)}
     h1{
       margin:14px 0 10px;
-      font-size:clamp(32px,4.8vw,60px);
-      line-height:1.03;
-      letter-spacing:-1.3px;
+      font-size:clamp(34px,5vw,62px);
+      line-height:1.02;
+      letter-spacing:-1.2px;
       text-shadow:0 24px 85px rgba(0,0,0,.55);
     }
     .sub{
       margin:0 0 18px;
-      color:rgba(238,242,255,.78);
+      color:rgba(238,242,255,.80);
       font-size:16.5px;
       line-height:1.7;
       max-width:66ch;
     }
     .heroActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
-    .heroMiniGrid{
+    .miniGrid{
       margin-top:18px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -201,72 +181,20 @@
       box-shadow:0 12px 30px rgba(34,211,238,.10);
       flex:0 0 auto;
     }
-    .mini b{display:block;font-size:13px;letter-spacing:-.2px}
+    .mini b{display:block;font-size:13px}
     .mini span{display:block;color:var(--muted2);font-size:12.5px;line-height:1.55;margin-top:2px}
 
-    /* Cards */
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .card{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:var(--radius2);
-      padding:18px;
-      transition:.2s ease;
-      min-height:168px;
-      box-shadow: 0 0 0 rgba(0,0,0,0);
-    }
-    .card:hover{transform:translateY(-2px);background:rgba(255,255,255,.07)}
-    .tag{
-      display:inline-flex;
-      padding:7px 10px;
-      border-radius:999px;
-      font-size:12px;
-      background:rgba(59,130,246,.12);
-      border:1px solid rgba(59,130,246,.22);
-      color:rgba(238,242,255,.90);
-      font-weight:800;
-    }
-    .card h3{margin:12px 0 8px;font-size:16px;letter-spacing:-.2px}
-    .card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
-
-    /* Proof strip */
-    .proof{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    .proofBox{
-      border-radius:var(--radius2);
-      border:1px solid rgba(255,255,255,.10);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
-      box-shadow:var(--shadow2);
-      padding:18px;
-    }
-    .proofBox h3{margin:0 0 8px;font-size:16px;letter-spacing:-.2px}
-    .proofBox p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:10px;
-      margin-top:14px;
-    }
-    .stat{
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.18);
-      padding:12px;
-    }
-    .stat b{display:block;font-size:16px;letter-spacing:-.3px}
-    .stat span{display:block;color:var(--muted2);font-size:12.5px;margin-top:4px;line-height:1.45}
+    /* Headings */
+    .head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px}
+    .head h2{margin:0;font-size:22px;letter-spacing:-.4px}
+    .head p{margin:0;color:var(--muted);max-width:72ch;line-height:1.65;font-size:14px}
 
     /* Work */
     .work{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .workItem{
       background:rgba(255,255,255,.05);
       border:1px solid rgba(255,255,255,.10);
-      border-radius:var(--radius2);
+      border-radius:24px;
       padding:16px;
       transition:.2s ease;
       overflow:hidden;
@@ -278,17 +206,9 @@
       border:1px solid rgba(255,255,255,.10);
       background:rgba(0,0,0,.18);
       overflow:hidden;
-      position:relative;
     }
-    .thumb img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform:scale(1.02);
-      filter:saturate(1.05) contrast(1.02);
-    }
-    .workItem h4{margin:12px 0 6px;font-size:14px;letter-spacing:-.1px}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .workItem h4{margin:12px 0 6px;font-size:14px}
     .workItem p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
     .meta{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
     .meta span{
@@ -301,39 +221,19 @@
       font-weight:700;
     }
 
-    /* Process */
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .step{
-      border-radius:var(--radius2);
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.05);
-      padding:16px;
-    }
-    .step .n{
-      width:34px;height:34px;border-radius:12px;
-      display:flex;align-items:center;justify-content:center;
-      border:1px solid rgba(34,211,238,.28);
-      background:linear-gradient(135deg, rgba(59,130,246,.18), rgba(34,211,238,.10));
-      font-weight:900;
-      margin-bottom:10px;
-    }
-    .step h3{margin:0 0 6px;font-size:14px;letter-spacing:-.2px}
-    .step p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-
     /* Pricing */
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .price{
-      border-radius:var(--radius2);
+      border-radius:24px;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(255,255,255,.05);
       padding:18px;
       position:relative;
-      overflow:hidden;
     }
     .price.featured{
-      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
       border-color:rgba(34,211,238,.22);
-      box-shadow: 0 18px 70px rgba(34,211,238,.10);
+      box-shadow:0 18px 70px rgba(34,211,238,.10);
     }
     .badge{
       position:absolute; top:14px; right:14px;
@@ -341,25 +241,19 @@
       border:1px solid rgba(34,211,238,.26);
       background:rgba(34,211,238,.10);
       font-size:12px; font-weight:900;
-      color:rgba(238,242,255,.90);
     }
-    .price h3{margin:0;font-size:16px;letter-spacing:-.2px}
+    .price h3{margin:0;font-size:16px}
     .price .lead{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
-    .money{margin:14px 0 4px;font-size:26px;font-weight:900;letter-spacing:-.6px}
+    .money{margin:14px 0 4px;font-size:26px;font-weight:900}
     .small{color:var(--muted2);font-size:12.5px;line-height:1.5}
     ul.list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
-    ul.list li{
-      display:flex;gap:10px;align-items:flex-start;
-      color:rgba(238,242,255,.78);
-      font-size:13px;line-height:1.55;
-    }
+    ul.list li{display:flex;gap:10px;align-items:flex-start;color:rgba(238,242,255,.80);font-size:13px;line-height:1.55}
     .tick{
       width:18px;height:18px;border-radius:6px;
       background:rgba(34,211,238,.12);
       border:1px solid rgba(34,211,238,.22);
       display:flex;align-items:center;justify-content:center;
-      flex:0 0 auto;
-      margin-top:1px;
+      flex:0 0 auto;margin-top:1px;
     }
     .tick:before{
       content:"";
@@ -369,24 +263,17 @@
       transform:rotate(45deg);
       margin-top:-1px;
     }
-    .price .ctaRow{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+    .ctaRow{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
 
     /* Contact */
-    .contactRow{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    .panel{
+    .contactRow{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+    .card{
       background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
       border:1px solid rgba(255,255,255,.10);
-      border-radius:var(--radius2);
-      box-shadow:var(--shadow2);
+      border-radius:24px;
       padding:18px;
+      box-shadow:0 18px 60px rgba(0,0,0,.40);
     }
-    .panel h3{margin:0 0 10px;font-size:14px;color:rgba(238,242,255,.92);letter-spacing:-.1px}
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     label{font-size:12px;color:var(--muted)}
     input, select, textarea{
       width:100%;
@@ -401,15 +288,9 @@
     }
     textarea{min-height:92px;resize:vertical}
     input::placeholder, textarea::placeholder{color:rgba(238,242,255,.45)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     .formActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 
-    /* FAQ */
-    .faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .qa{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:var(--radius2);padding:18px}
-    .qa h3{margin:0 0 8px;font-size:15px;letter-spacing:-.2px}
-    .qa p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
-
-    /* Footer */
     footer{
       padding:28px 0 56px;
       border-top:1px solid rgba(255,255,255,.08);
@@ -417,7 +298,7 @@
     }
     .foot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
     .foot small{color:var(--muted)}
-    .social{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .social{display:flex;gap:10px;flex-wrap:wrap}
     .iconBtn{
       padding:10px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
@@ -427,7 +308,6 @@
     }
     .iconBtn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
 
-    /* WhatsApp Floating */
     .wa{
       position:fixed;right:16px;bottom:16px;z-index:90;
       border-radius:999px;
@@ -441,19 +321,13 @@
     .wa i{width:10px;height:10px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(34,211,238,.10)}
     .wa:hover{transform:translateY(-2px)}
 
-    /* Responsive */
     @media(max-width:980px){
       nav.links{display:none}
-      .brand{min-width:auto}
-      .cards,.work,.pricing,.faq{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr}
-      .proof{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr}
+      .work,.pricing{grid-template-columns:1fr}
       .contactRow{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
-      .hero{padding:70px 0 28px; min-height: 88vh;}
-      .heroBrand img{width:210vw; opacity:.05; transform:translateY(20px);}
-      .heroMiniGrid{grid-template-columns:1fr}
+      .miniGrid{grid-template-columns:1fr}
+      .heroBrand img{width:220vw;opacity:.045}
     }
   </style>
 </head>
@@ -463,7 +337,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
-      <img src="./assets/logo.jpg?v=21" alt="AP Digital Solutions Jersey logo">
+      <img src="./assets/logo.jpg?v=22" alt="AP Digital Solutions Jersey logo">
       <div class="t">
         <strong>AP Digital Solutions</strong>
         <span>Jersey · Websites · AI · Automation</span>
@@ -471,9 +345,7 @@
     </a>
 
     <nav class="links" aria-label="Navigation">
-      <a href="#services">Services</a>
       <a href="#work">Work</a>
-      <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -485,11 +357,10 @@
   </div>
 </header>
 
-<!-- HERO -->
 <main id="top" class="hero">
   <div class="heroBackdrop" aria-hidden="true"></div>
   <div class="heroBrand" aria-hidden="true">
-    <img src="./assets/logo.jpg?v=21" alt="">
+    <img src="./assets/logo.jpg?v=22" alt="">
   </div>
 
   <div class="wrap heroInner">
@@ -498,7 +369,7 @@
     <h1>Websites & Shopify<br>that convert.</h1>
 
     <p class="sub">
-      Premium design, clear messaging and WhatsApp automation — built to turn visitors into enquiries and sales.
+      Clean design, clear messaging and WhatsApp automation — built to turn visitors into enquiries and sales.
     </p>
 
     <div class="heroActions">
@@ -506,89 +377,14 @@
       <a class="btn ghost" href="#work">View work</a>
     </div>
 
-    <div class="heroMiniGrid" aria-label="Key benefits">
+    <div class="miniGrid" aria-label="Key benefits">
       <div class="mini"><span class="sq"></span><div><b>Premium design</b><span>Clean, modern, mobile-first layouts.</span></div></div>
       <div class="mini"><span class="sq"></span><div><b>Conversion-first</b><span>Better structure, copy and CTAs.</span></div></div>
       <div class="mini"><span class="sq"></span><div><b>WhatsApp + automation</b><span>Direct chat + faster replies.</span></div></div>
     </div>
-
-    <div class="proof">
-      <div class="proofBox">
-        <h3>Built like an agency — delivered like a specialist.</h3>
-        <p>
-          We focus on the essentials that drive results: premium visual quality, fast loading, clear messaging and
-          a frictionless contact flow with WhatsApp.
-        </p>
-
-        <div class="stats" aria-label="Delivery standards">
-          <div class="stat"><b>Mobile-first</b><span>Designed for how people browse today.</span></div>
-          <div class="stat"><b>Fast + clean</b><span>Lightweight, modern and smooth.</span></div>
-          <div class="stat"><b>Direct contact</b><span>WhatsApp button — number not shown.</span></div>
-        </div>
-      </div>
-
-      <div class="proofBox">
-        <h3>Quick start</h3>
-        <p>
-          Want a premium website or Shopify store? Message us on WhatsApp and we’ll respond with next steps and
-          a clear quote.
-        </p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-          <a class="btn primary" id="waHero" href="#" target="_blank" rel="noopener">WhatsApp now</a>
-          <a class="btn" href="#pricing">See pricing</a>
-        </div>
-        <p class="small" style="margin-top:10px">No phone number displayed on the website — direct chat only.</p>
-      </div>
-    </div>
   </div>
 </main>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Services</h2>
-        <p>Premium, clean and conversion-focused delivery for Jersey businesses.</p>
-      </div>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <span class="tag">Websites</span>
-        <h3>Premium websites</h3>
-        <p>Landing pages and full sites with crisp layout, clear CTA and strong messaging.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Shopify</span>
-        <h3>Shopify builds</h3>
-        <p>Store setup, collections, product pages and conversion improvements — mobile-first.</p>
-      </div>
-      <div class="card">
-        <span class="tag">WhatsApp</span>
-        <h3>WhatsApp automation</h3>
-        <p>Direct WhatsApp buttons and automation flows to capture leads and reply faster.</p>
-      </div>
-      <div class="card">
-        <span class="tag">AI</span>
-        <h3>AI chat flows</h3>
-        <p>Smart Q&A, lead capture and routing — designed for real customer questions.</p>
-      </div>
-      <div class="card">
-        <span class="tag">SEO</span>
-        <h3>Technical SEO basics</h3>
-        <p>Metadata, structure and performance checks — the foundation to be found online.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Design</span>
-        <h3>Brand & assets</h3>
-        <p>Logo, banners and social assets — consistent look across platforms.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK -->
 <section id="work">
   <div class="wrap">
     <div class="head">
@@ -601,7 +397,7 @@
     <div class="work">
       <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="./assets/pethaven.jpg?v=21" alt="Pet Haven Jersey screenshot"
+          <img src="./assets/pethaven.jpg?v=22" alt="Pet Haven Jersey screenshot"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.06)';">
         </div>
         <h4>Pet Haven Jersey</h4>
@@ -611,7 +407,7 @@
 
       <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="./assets/ajudatotal.jpg?v=21" alt="AjudaTotal screenshot"
+          <img src="./assets/ajudatotal.jpg?v=22" alt="AjudaTotal screenshot"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.06)';">
         </div>
         <h4>AjudaTotal</h4>
@@ -621,7 +417,7 @@
 
       <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="./assets/catia.jpg?v=21" alt="Catia Coutinho Holistica screenshot"
+          <img src="./assets/catia.jpg?v=22" alt="Catia Coutinho Holistica screenshot"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.06)';">
         </div>
         <h4>Catia Coutinho Holistica</h4>
@@ -632,48 +428,12 @@
   </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Process</h2>
-        <p>A simple agency-grade workflow: fast, clear and focused on conversion.</p>
-      </div>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="n">1</div>
-        <h3>Discovery</h3>
-        <p>We clarify your offer, audience, goals and what success looks like.</p>
-      </div>
-      <div class="step">
-        <div class="n">2</div>
-        <h3>Design</h3>
-        <p>Premium layout, typography and section structure — mobile-first.</p>
-      </div>
-      <div class="step">
-        <div class="n">3</div>
-        <h3>Build</h3>
-        <p>Fast, clean implementation with strong CTAs and WhatsApp contact.</p>
-      </div>
-      <div class="step">
-        <div class="n">4</div>
-        <h3>Launch</h3>
-        <p>Final checks, performance basics, and go live with confidence.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
 <section id="pricing">
   <div class="wrap">
     <div class="head">
       <div>
         <h2>Pricing</h2>
-        <p>Clear packages. Premium delivery. We can also tailor a custom scope.</p>
+        <p>Lower entry pricing to help you start fast — with premium delivery.</p>
       </div>
     </div>
 
@@ -681,8 +441,8 @@
       <div class="price">
         <h3>Starter</h3>
         <p class="lead">High-impact landing page for quick enquiries.</p>
-        <div class="money">From £499</div>
-        <div class="small">Ideal for: local services, quick offer, lead capture.</div>
+        <div class="money">From £249</div>
+        <div class="small">Perfect for: local services, one offer, fast leads.</div>
 
         <ul class="list">
           <li><span class="tick"></span> Premium hero + sections</li>
@@ -699,14 +459,14 @@
 
       <div class="price featured">
         <div class="badge">Most popular</div>
-        <h3>Pro</h3>
+        <h3>Pro Website</h3>
         <p class="lead">Full website built to convert.</p>
-        <div class="money">From £999</div>
-        <div class="small">Ideal for: businesses that need credibility + conversion.</div>
+        <div class="money">From £599</div>
+        <div class="small">Perfect for: credibility, enquiries, growth.</div>
 
         <ul class="list">
           <li><span class="tick"></span> Multi-section premium website</li>
-          <li><span class="tick"></span> Portfolio / work section</li>
+          <li><span class="tick"></span> Work / portfolio section</li>
           <li><span class="tick"></span> Quote form + WhatsApp CTA</li>
           <li><span class="tick"></span> Performance & structure checks</li>
         </ul>
@@ -718,32 +478,31 @@
       </div>
 
       <div class="price">
-        <h3>Studio</h3>
-        <p class="lead">Shopify + automation + premium UX.</p>
-        <div class="money">From £1499</div>
-        <div class="small">Ideal for: stores, e-commerce, lead automation.</div>
+        <h3>Shopify Growth</h3>
+        <p class="lead">Store setup + structure + conversion fixes.</p>
+        <div class="money">From £799</div>
+        <div class="small">Perfect for: e-commerce and better sales.</div>
 
         <ul class="list">
           <li><span class="tick"></span> Shopify setup & structure</li>
-          <li><span class="tick"></span> Conversion-first product pages</li>
-          <li><span class="tick"></span> WhatsApp automation flows</li>
-          <li><span class="tick"></span> Custom integrations (scope-based)</li>
+          <li><span class="tick"></span> Product/collection improvements</li>
+          <li><span class="tick"></span> WhatsApp contact integration</li>
+          <li><span class="tick"></span> Conversion-first review</li>
         </ul>
 
         <div class="ctaRow">
           <a class="btn primary" href="#contact">Get a quote</a>
-          <a class="btn" id="waStudio" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" id="waShopify" href="#" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
 
     <p class="small" style="margin-top:14px;color:rgba(238,242,255,.62)">
-      Final pricing depends on scope (pages, content, features and integrations). We confirm everything before starting.
+      Final pricing depends on pages, content and features. We confirm everything before starting.
     </p>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
     <div class="head">
@@ -754,25 +513,20 @@
     </div>
 
     <div class="contactRow">
-      <div class="card" style="min-height:auto">
-        <span class="tag">Fast start</span>
-        <h3 style="margin:12px 0 8px">Ready to upgrade your online presence?</h3>
-        <p>
-          Send a message on WhatsApp with what you need (website, Shopify, automation). We reply with next steps
-          and a clear quote.
+      <div class="card">
+        <h3 style="margin:0 0 8px">Get a quote fast</h3>
+        <p style="margin:0;color:var(--muted);line-height:1.65">
+          Send a WhatsApp message with what you need (website, Shopify, automation). We reply with next steps and a clear quote.
         </p>
-
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
           <a class="btn primary" id="waCta" href="#" target="_blank" rel="noopener">WhatsApp now</a>
           <a class="btn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
-          <a class="btn" href="#work">View work</a>
         </div>
-
-        <p class="small" style="margin-top:12px">Instagram & Facebook links are in the footer.</p>
+        <p class="small" style="margin-top:12px">Instagram & Facebook links in the footer.</p>
       </div>
 
-      <aside class="panel">
-        <h3>Get a quote (1 minute)</h3>
+      <div class="card">
+        <h3 style="margin:0 0 10px">Quick form (1 minute)</h3>
 
         <form id="quoteForm">
           <div class="grid2">
@@ -795,7 +549,6 @@
                 <option>WhatsApp automation</option>
                 <option>AI chatbot</option>
                 <option>Automation / integrations</option>
-                <option>Branding / design</option>
               </select>
             </div>
             <div>
@@ -818,42 +571,7 @@
             <button class="btn primary" type="submit">Send by email</button>
             <a class="btn" id="waInline" href="#" target="_blank" rel="noopener">WhatsApp</a>
           </div>
-
-          <p class="small" style="margin-top:10px;color:rgba(238,242,255,.60)">
-            No login needed — email opens with a ready message.
-          </p>
         </form>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>FAQ</h2>
-        <p>Quick answers before someone hires you.</p>
-      </div>
-    </div>
-
-    <div class="faq">
-      <div class="qa">
-        <h3>How long does it take?</h3>
-        <p>Landing page: a few days. Full website: 1–3 weeks depending on scope and revisions.</p>
-      </div>
-      <div class="qa">
-        <h3>Do you build Shopify stores?</h3>
-        <p>Yes — setup, design, collections, product pages and conversion improvements.</p>
-      </div>
-      <div class="qa">
-        <h3>Can you add WhatsApp automation?</h3>
-        <p>Yes — direct buttons + automation flows and AI chat support if needed.</p>
-      </div>
-      <div class="qa">
-        <h3>Will my number be visible on the website?</h3>
-        <p>No. We only show a WhatsApp button that opens a direct chat.</p>
       </div>
     </div>
   </div>
@@ -862,7 +580,7 @@
 <footer>
   <div class="wrap foot">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="./assets/logo.jpg?v=21" alt="AP Digital Solutions Jersey" style="height:28px;width:auto;display:block">
+      <img src="./assets/logo.jpg?v=22" alt="AP Digital Solutions Jersey" style="height:28px;width:auto;display:block">
       <small>© <span id="year"></span> AP Digital Solutions Jersey</small>
     </div>
 
@@ -879,20 +597,16 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Contact links (number is NOT displayed; only used in the WA link)
   const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
   const WA_LINK = "https://wa.me/447700704591?text=Hello%20AP%20Digital%20Solutions!%20I%20would%20like%20a%20quote.";
 
-  // Wire up WhatsApp CTAs
-  ["waBtn","waInline","waCta","waHero","waStarter","waPro","waStudio"].forEach(id=>{
+  ["waBtn","waInline","waCta","waStarter","waPro","waShopify"].forEach(id=>{
     const el = document.getElementById(id);
     if(el) el.setAttribute("href", WA_LINK);
   });
 
-  // Email quote form
   document.getElementById("quoteForm").addEventListener("submit", (e) => {
     e.preventDefault();
-
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const service = document.getElementById("service").value;
