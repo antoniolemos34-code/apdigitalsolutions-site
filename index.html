@@ -2,20 +2,57 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>AP Digital Solutions Jersey — Websites, Shopify & WhatsApp Automation</title>
   <meta name="description" content="Premium websites, Shopify builds and WhatsApp automation for Jersey businesses. Clean design, clear messaging and conversion-first delivery." />
   <meta name="theme-color" content="#070A12" />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <meta property="og:title" content="AP Digital Solutions Jersey" />
-  <meta property="og:description" content="Premium websites, Shopify and WhatsApp automation — built to convert." />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apdigitalsolutions.digital/" />
+
+  <!-- Favicons (ROOT) -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon-48x48.png">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="AP Digital Solutions Jersey" />
+  <meta property="og:title" content="AP Digital Solutions Jersey — Websites, Shopify & WhatsApp Automation" />
+  <meta property="og:description" content="Premium websites, Shopify builds and WhatsApp automation — built to convert." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="./assets/logo-premium.png" />
+  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
+  <meta property="og:image" content="https://apdigitalsolutions.digital/assets/logo-premium.png" />
+  <meta property="og:image:alt" content="AP Digital Solutions Jersey logo" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AP Digital Solutions Jersey" />
+  <meta name="twitter:description" content="Premium websites, Shopify builds and WhatsApp automation — built to convert." />
+  <meta name="twitter:image" content="https://apdigitalsolutions.digital/assets/logo-premium.png" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"AP Digital Solutions Jersey",
+    "url":"https://apdigitalsolutions.digital/",
+    "logo":"https://apdigitalsolutions.digital/assets/logo-premium.png",
+    "sameAs":[
+      "https://www.instagram.com/apdigitalsolutions.digital",
+      "https://www.facebook.com/share/16aBSDLMQk/"
+    ]
+  }
+  </script>
 
   <style>
     :root{
@@ -55,6 +92,8 @@
         radial-gradient(900px 650px at 50% 112%, rgba(59,130,246,.12), transparent 55%),
         linear-gradient(180deg, var(--bg2), var(--bg1));
       overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
@@ -106,6 +145,7 @@
       transition:.2s ease;
       white-space:nowrap;
       cursor:pointer;
+      user-select:none;
     }
     .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
     .btn.primary{
@@ -563,7 +603,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
-      <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey logo">
+      <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey logo" width="180" height="60" loading="eager" decoding="async">
       <div class="t">
         <strong>AP Digital Solutions</strong>
         <span>Jersey · Websites · Shopify · WhatsApp Automation</span>
@@ -586,14 +626,14 @@
       <a class="btn ghost" href="#work">View work</a>
       <a class="btn primary" href="#contact">Get a quote</a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <span class="menuIcon"><i></i></span>
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menuIcon" aria-hidden="true"><i></i></span>
       </button>
     </div>
   </div>
 </header>
 
-<div class="mobileMenu" id="mobileMenu" aria-label="Mobile menu">
+<div class="mobileMenu" id="mobileMenu" aria-label="Mobile menu" role="dialog" aria-modal="true">
   <a href="#outcomes">Outcomes</a>
   <a href="#services">Services</a>
   <a href="#whatyouget">What you get</a>
@@ -614,7 +654,7 @@
   <div class="wrap heroGrid">
 
     <div>
-      <div class="kicker"><span class="dot"></span> Premium digital builds for Jersey businesses</div>
+      <div class="kicker"><span class="dot" aria-hidden="true"></span> Premium digital builds for Jersey businesses</div>
       <h1>Look premium.<br>Convert more.</h1>
       <p class="sub">
         Premium websites, Shopify builds and WhatsApp automation — designed to turn visitors into enquiries and sales.
@@ -636,7 +676,7 @@
     <div class="logoHero" aria-label="Brand">
       <div class="logoCard">
         <div class="logoPlate">
-          <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey">
+          <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="pills">
@@ -688,9 +728,9 @@
         <b>Premium Websites</b>
         <span>Fast, modern, mobile-first websites with strong messaging and clear calls-to-action.</span>
         <ul class="listMini">
-          <li><span class="dotMini"></span> Apple/Stripe-style layout</li>
-          <li><span class="dotMini"></span> Copy + section structure that sells</li>
-          <li><span class="dotMini"></span> WhatsApp conversion buttons</li>
+          <li><span class="dotMini" aria-hidden="true"></span> Apple/Stripe-style layout</li>
+          <li><span class="dotMini" aria-hidden="true"></span> Copy + section structure that sells</li>
+          <li><span class="dotMini" aria-hidden="true"></span> WhatsApp conversion buttons</li>
         </ul>
       </div>
 
@@ -698,9 +738,9 @@
         <b>Shopify Builds</b>
         <span>Store setup, collections, product structure and improvements that drive more sales.</span>
         <ul class="listMini">
-          <li><span class="dotMini"></span> Homepage & collections setup</li>
-          <li><span class="dotMini"></span> Product pages improved</li>
-          <li><span class="dotMini"></span> Conversion-first review</li>
+          <li><span class="dotMini" aria-hidden="true"></span> Homepage & collections setup</li>
+          <li><span class="dotMini" aria-hidden="true"></span> Product pages improved</li>
+          <li><span class="dotMini" aria-hidden="true"></span> Conversion-first review</li>
         </ul>
       </div>
 
@@ -708,9 +748,9 @@
         <b>WhatsApp Automation</b>
         <span>Quick replies, lead capture and automation — so customers get answers faster.</span>
         <ul class="listMini">
-          <li><span class="dotMini"></span> Click-to-chat + templates</li>
-          <li><span class="dotMini"></span> Lead capture flows</li>
-          <li><span class="dotMini"></span> AI chatbot options</li>
+          <li><span class="dotMini" aria-hidden="true"></span> Click-to-chat + templates</li>
+          <li><span class="dotMini" aria-hidden="true"></span> Lead capture flows</li>
+          <li><span class="dotMini" aria-hidden="true"></span> AI chatbot options</li>
         </ul>
       </div>
     </div>
@@ -732,11 +772,11 @@
         <p>You get a clean, structured build with strong conversion points. We focus on clarity, trust and speed.</p>
 
         <ul>
-          <li><span class="tick"></span> Clean “Apple-style” UI + spacing</li>
-          <li><span class="tick"></span> Mobile-first layout (premium on phones)</li>
-          <li><span class="tick"></span> Clear call-to-actions (WhatsApp + quote flow)</li>
-          <li><span class="tick"></span> Basic SEO & social preview setup</li>
-          <li><span class="tick"></span> Guidance on next steps (content + improvements)</li>
+          <li><span class="tick" aria-hidden="true"></span> Clean “Apple-style” UI + spacing</li>
+          <li><span class="tick" aria-hidden="true"></span> Mobile-first layout (premium on phones)</li>
+          <li><span class="tick" aria-hidden="true"></span> Clear call-to-actions (WhatsApp + quote flow)</li>
+          <li><span class="tick" aria-hidden="true"></span> Basic SEO & social preview setup</li>
+          <li><span class="tick" aria-hidden="true"></span> Guidance on next steps (content + improvements)</li>
         </ul>
       </div>
 
@@ -810,9 +850,9 @@
     </div>
 
     <div class="work">
-      <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener">
+      <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener noreferrer">
         <div class="thumb">
-          <img src="./assets/pethaven.jpg?v=210" alt="Pet Haven Jersey screenshot"
+          <img src="./assets/pethaven.jpg?v=210" alt="Pet Haven Jersey screenshot" loading="lazy" decoding="async"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
         </div>
         <h4>Pet Haven Jersey</h4>
@@ -820,9 +860,9 @@
         <div class="meta"><span>Shopify</span><span>E-commerce</span><span>Mobile-first</span></div>
       </a>
 
-      <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener">
+      <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener noreferrer">
         <div class="thumb">
-          <img src="./assets/ajudatotal.jpg?v=210" alt="AjudaTotal screenshot"
+          <img src="./assets/ajudatotal.jpg?v=210" alt="AjudaTotal screenshot" loading="lazy" decoding="async"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
         </div>
         <h4>AjudaTotal</h4>
@@ -830,9 +870,9 @@
         <div class="meta"><span>Website</span><span>Messaging</span><span>PT/EN</span></div>
       </a>
 
-      <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">
+      <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener noreferrer">
         <div class="thumb">
-          <img src="./assets/catia.jpg?v=210" alt="Catia Coutinho Holistica screenshot"
+          <img src="./assets/catia.jpg?v=210" alt="Catia Coutinho Holistica screenshot" loading="lazy" decoding="async"
                onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
         </div>
         <h4>Catia Coutinho Holistica</h4>
@@ -899,15 +939,15 @@
         <div class="small">Perfect for: local services, one offer, fast leads.</div>
 
         <ul class="list">
-          <li><span class="tick"></span> Premium hero + key sections</li>
-          <li><span class="tick"></span> Mobile-first layout</li>
-          <li><span class="tick"></span> WhatsApp conversion points</li>
-          <li><span class="tick"></span> Basic SEO metadata</li>
+          <li><span class="tick" aria-hidden="true"></span> Premium hero + key sections</li>
+          <li><span class="tick" aria-hidden="true"></span> Mobile-first layout</li>
+          <li><span class="tick" aria-hidden="true"></span> WhatsApp conversion points</li>
+          <li><span class="tick" aria-hidden="true"></span> Basic SEO metadata</li>
         </ul>
 
         <div class="ctaRow">
           <a class="btn primary" href="#contact">Get a quote</a>
-          <a class="btn" id="waStarter" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" id="waStarter" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
 
@@ -919,15 +959,15 @@
         <div class="small">Perfect for: credibility, enquiries, growth.</div>
 
         <ul class="list">
-          <li><span class="tick"></span> Outcomes + Services + Process</li>
-          <li><span class="tick"></span> Work/portfolio section</li>
-          <li><span class="tick"></span> Quote form + WhatsApp CTAs</li>
-          <li><span class="tick"></span> Structure & performance checks</li>
+          <li><span class="tick" aria-hidden="true"></span> Outcomes + Services + Process</li>
+          <li><span class="tick" aria-hidden="true"></span> Work/portfolio section</li>
+          <li><span class="tick" aria-hidden="true"></span> Quote form + WhatsApp CTAs</li>
+          <li><span class="tick" aria-hidden="true"></span> Structure & performance checks</li>
         </ul>
 
         <div class="ctaRow">
           <a class="btn primary" href="#contact">Get a quote</a>
-          <a class="btn" id="waPro" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" id="waPro" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
 
@@ -938,15 +978,15 @@
         <div class="small">Perfect for: e-commerce and better sales.</div>
 
         <ul class="list">
-          <li><span class="tick"></span> Homepage + collections improved</li>
-          <li><span class="tick"></span> Product layout & structure review</li>
-          <li><span class="tick"></span> WhatsApp integration</li>
-          <li><span class="tick"></span> Conversion-first improvement plan</li>
+          <li><span class="tick" aria-hidden="true"></span> Homepage + collections improved</li>
+          <li><span class="tick" aria-hidden="true"></span> Product layout & structure review</li>
+          <li><span class="tick" aria-hidden="true"></span> WhatsApp integration</li>
+          <li><span class="tick" aria-hidden="true"></span> Conversion-first improvement plan</li>
         </ul>
 
         <div class="ctaRow">
           <a class="btn primary" href="#contact">Get a quote</a>
-          <a class="btn" id="waShopify" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" id="waShopify" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
       </div>
     </div>
@@ -1008,7 +1048,7 @@
           We reply with next steps and a clear quote.
         </p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-          <a class="btn primary" id="waCta" href="#" target="_blank" rel="noopener">WhatsApp now</a>
+          <a class="btn primary" id="waCta" href="#" target="_blank" rel="noopener noreferrer">WhatsApp now</a>
           <a class="btn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
         </div>
         <div style="margin-top:14px;color:rgba(238,242,255,.70);font-size:13px;line-height:1.6">
@@ -1019,22 +1059,22 @@
       <div class="card">
         <h3 style="margin:0 0 10px">Quick form (1 minute)</h3>
 
-        <form id="quoteForm">
+        <form id="quoteForm" novalidate>
           <div class="grid2">
             <div>
               <label for="name">Name</label>
-              <input id="name" required placeholder="Your name">
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name">
             </div>
             <div>
               <label for="phone">WhatsApp (optional)</label>
-              <input id="phone" placeholder="+44...">
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+44...">
             </div>
           </div>
 
           <div class="grid2" style="margin-top:10px">
             <div>
               <label for="service">Service</label>
-              <select id="service">
+              <select id="service" name="service">
                 <option>Website</option>
                 <option>Shopify store</option>
                 <option>WhatsApp automation</option>
@@ -1044,7 +1084,7 @@
             </div>
             <div>
               <label for="timeline">Timeline</label>
-              <select id="timeline">
+              <select id="timeline" name="timeline">
                 <option>ASAP</option>
                 <option>1–2 weeks</option>
                 <option>2–4 weeks</option>
@@ -1055,7 +1095,7 @@
 
           <div style="margin-top:10px">
             <label for="budget">Budget range (optional)</label>
-            <select id="budget">
+            <select id="budget" name="budget">
               <option value="">Not sure</option>
               <option>£199–£399</option>
               <option>£400–£700</option>
@@ -1066,12 +1106,12 @@
 
           <div style="margin-top:10px">
             <label for="msg">Message</label>
-            <textarea id="msg" placeholder="Tell us what you need (pages, products, booking, automation, etc.)"></textarea>
+            <textarea id="msg" name="message" placeholder="Tell us what you need (pages, products, booking, automation, etc.)"></textarea>
           </div>
 
           <div class="formActions">
             <button class="btn primary" type="submit">Send by email</button>
-            <a class="btn" id="waInline" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn" id="waInline" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
 
           <p class="small" style="margin:10px 0 0;color:rgba(238,242,255,.62)">
@@ -1086,53 +1126,86 @@
 <footer>
   <div class="wrap" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" style="height:30px;width:auto;display:block;border-radius:12px;background:rgba(255,255,255,.08);padding:8px;border:1px solid rgba(255,255,255,.10)">
+      <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" style="height:30px;width:auto;display:block;border-radius:12px;background:rgba(255,255,255,.08);padding:8px;border:1px solid rgba(255,255,255,.10)" loading="lazy" decoding="async">
       <small style="color:rgba(238,242,255,.72)">© <span id="year"></span> AP Digital Solutions Jersey</small>
     </div>
 
     <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <a class="iconBtn" href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank" rel="noopener">Instagram</a>
-      <a class="iconBtn" href="https://www.facebook.com/share/16aBSDLMQk/" target="_blank" rel="noopener">Facebook</a>
+      <a class="iconBtn" href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="iconBtn" href="https://www.facebook.com/share/16aBSDLMQk/" target="_blank" rel="noopener noreferrer">Facebook</a>
       <a class="iconBtn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
     </div>
   </div>
 </footer>
 
-<a class="wa" id="waBtn" href="#" target="_blank" rel="noopener"><i></i> WhatsApp</a>
+<a class="wa" id="waBtn" href="#" target="_blank" rel="noopener noreferrer"><i aria-hidden="true"></i> WhatsApp</a>
+
+<noscript>
+  <div style="padding:14px 18px;background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.10);color:rgba(238,242,255,.86)">
+    JavaScript is disabled — WhatsApp auto-message and the mobile menu won’t work. You can still email us at
+    <a href="mailto:apdigitalsolutions.je@outlook.com" style="text-decoration:underline">apdigitalsolutions.je@outlook.com</a>.
+  </div>
+</noscript>
 
 <script>
-  // Year
+  // ====== Basics ======
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Mobile menu
+  // ====== Mobile menu (better UX) ======
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
+
   function closeMenu(){
     mobileMenu.style.display = "none";
-    menuBtn?.setAttribute("aria-expanded","false");
+    menuBtn.setAttribute("aria-expanded","false");
   }
   function openMenu(){
     mobileMenu.style.display = "block";
-    menuBtn?.setAttribute("aria-expanded","true");
+    menuBtn.setAttribute("aria-expanded","true");
   }
-  menuBtn?.addEventListener("click", () => {
+
+  menuBtn.addEventListener("click", () => {
     const isOpen = mobileMenu.style.display === "block";
     isOpen ? closeMenu() : openMenu();
   });
-  mobileMenu?.querySelectorAll("a").forEach(a=>a.addEventListener("click", closeMenu));
-  window.addEventListener("resize", () => { if (window.innerWidth > 980) closeMenu(); });
 
-  // WhatsApp + Email
+  // close on link click
+  mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+  // close on outside click
+  document.addEventListener("click", (e) => {
+    const isOpen = mobileMenu.style.display === "block";
+    if(!isOpen) return;
+    if(mobileMenu.contains(e.target) || menuBtn.contains(e.target)) return;
+    closeMenu();
+  });
+
+  // close on ESC
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape") closeMenu();
+  });
+
+  // close if resized to desktop
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980) closeMenu();
+  });
+
+  // ====== WhatsApp + Email ======
   const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
   const WA_NUMBER = "447700704591";
 
+  function safeVal(id){
+    const el = document.getElementById(id);
+    return (el?.value || "").trim();
+  }
+
   function buildWhatsAppText(){
-    const name = (document.getElementById("name")?.value || "").trim();
-    const phone = (document.getElementById("phone")?.value || "").trim();
-    const service = (document.getElementById("service")?.value || "Website").trim();
-    const timeline = (document.getElementById("timeline")?.value || "ASAP").trim();
-    const budget = (document.getElementById("budget")?.value || "").trim();
-    const msg = (document.getElementById("msg")?.value || "").trim();
+    const name = safeVal("name");
+    const phone = safeVal("phone");
+    const service = safeVal("service") || "Website";
+    const timeline = safeVal("timeline") || "ASAP";
+    const budget = safeVal("budget");
+    const msg = safeVal("msg");
 
     const lines = [
       "Hello AP Digital Solutions!",
@@ -1148,6 +1221,7 @@
       "",
       "Please send me next steps + a quote. Thank you!"
     ];
+
     return encodeURIComponent(lines.join("\n"));
   }
 
@@ -1167,25 +1241,32 @@
 
   setAllWaLinks();
 
-  document.getElementById("quoteForm")?.addEventListener("submit", (e) => {
+  document.getElementById("quoteForm").addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("service").value;
-    const timeline = document.getElementById("timeline").value;
-    const budget = document.getElementById("budget").value;
-    const msg = document.getElementById("msg").value.trim();
+
+    const name = safeVal("name");
+    if(!name){
+      alert("Please enter your name.");
+      document.getElementById("name").focus();
+      return;
+    }
+
+    const phone = safeVal("phone");
+    const service = safeVal("service");
+    const timeline = safeVal("timeline");
+    const budget = safeVal("budget");
+    const msg = safeVal("msg");
 
     const subject = encodeURIComponent("Quote request — AP Digital Solutions Jersey");
     const body = encodeURIComponent(
 `Name: ${name}
-WhatsApp: ${phone}
+WhatsApp: ${phone || "—"}
 Service: ${service}
 Timeline: ${timeline}
-Budget: ${budget}
+Budget: ${budget || "—"}
 
 Message:
-${msg}
+${msg || "—"}
 `
     );
 
