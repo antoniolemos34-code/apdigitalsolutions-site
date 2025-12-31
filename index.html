@@ -78,6 +78,9 @@
       --shadow2:0 14px 44px rgba(0,0,0,.50);
 
       --max:1120px;
+
+      --safe-b: env(safe-area-inset-bottom, 0px);
+      --safe-t: env(safe-area-inset-top, 0px);
     }
 
     *{box-sizing:border-box}
@@ -94,14 +97,30 @@
       overflow-x:hidden;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
+      padding-bottom: calc(86px + var(--safe-b)); /* avoids WA floating button covering content */
     }
+
     a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
     .sep{height:1px;background:rgba(255,255,255,.08);border:0;margin:0}
 
+    /* Accessibility */
+    .skip{
+      position:absolute;left:-999px;top:8px;
+      background:rgba(6,9,19,.92);
+      border:1px solid rgba(255,255,255,.14);
+      color:rgba(238,242,255,.92);
+      padding:10px 12px;border-radius:12px;
+      z-index:9999;
+    }
+    .skip:focus{left:12px;outline:2px solid rgba(34,211,238,.55);outline-offset:2px}
+
     /* Header */
     header{
-      position:sticky;top:0;z-index:90;
+      position:sticky;
+      top:0;
+      z-index:90;
       background:rgba(6,9,19,.74);
       backdrop-filter: blur(18px);
       border-bottom:1px solid rgba(255,255,255,.08);
@@ -114,16 +133,16 @@
       display:flex;align-items:center;gap:12px;
       min-width:240px;
     }
-    .brand img{
-      height:36px;width:auto;display:block;
+    .brandLogo{
+      height:38px;width:auto;display:block;
       border-radius:12px;
       background:rgba(255,255,255,.08);
       padding:8px;
       border:1px solid rgba(255,255,255,.10);
     }
-    .brand .t{display:flex;flex-direction:column;line-height:1.1}
-    .brand .t strong{font-size:14px;font-weight:900;letter-spacing:-.2px}
-    .brand .t span{font-size:12px;color:var(--muted)}
+    .brandText{display:flex;flex-direction:column;line-height:1.1}
+    .brandText strong{font-size:14px;font-weight:900;letter-spacing:-.2px}
+    .brandText span{font-size:12px;color:var(--muted)}
 
     nav.links{display:flex;gap:10px;align-items:center}
     nav.links a{
@@ -180,13 +199,13 @@
     .mobileMenu{
       display:none;
       position:fixed;
-      inset:66px 12px auto 12px;
+      inset: calc(66px + var(--safe-t)) 12px auto 12px;
       z-index:200;
       border-radius:22px;
       border:1px solid rgba(255,255,255,.12);
-      background:rgba(6,9,19,.90);
+      background:rgba(6,9,19,.92);
       backdrop-filter: blur(18px);
-      box-shadow:0 24px 90px rgba(0,0,0,.55);
+      box-shadow:var(--shadow);
       padding:12px;
     }
     .mobileMenu a{
@@ -204,13 +223,49 @@
     section{padding:88px 0}
 
     /* HERO */
-    main.hero{padding:26px 0 22px}
+    main.hero{padding:22px 0 22px}
     .heroGrid{
       display:grid;
       grid-template-columns: 1.05fr .95fr;
-      gap:20px;
+      gap:22px;
       min-height:78vh;
       align-items:center;
+    }
+
+    /* Bigger logo at the very start */
+    .heroLogoTop{
+      width:min(520px, 92%);
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.10);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      padding:16px;
+      box-shadow:var(--shadow2);
+      position:relative;
+      overflow:hidden;
+      margin:0 0 14px;
+    }
+    .heroLogoTop:before{
+      content:"";
+      position:absolute;inset:-140px -160px auto -160px;
+      height:320px;
+      background:radial-gradient(closest-side, rgba(34,211,238,.18), transparent 70%);
+      filter:blur(14px);
+      pointer-events:none;
+    }
+    .heroLogoTopInner{
+      position:relative;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.92));
+      border:1px solid rgba(0,0,0,.08);
+      padding:18px 16px;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 18px 60px rgba(0,0,0,.18);
+    }
+    .heroLogoTopInner img{
+      width:min(560px, 96%);
+      height:auto;
+      display:block;
+      filter:contrast(1.02) saturate(1.10);
     }
 
     .kicker{
@@ -223,6 +278,7 @@
       width:fit-content;
     }
     .dot{width:8px;height:8px;border-radius:50%;background:var(--b);box-shadow:0 0 0 6px rgba(34,211,238,.10)}
+
     h1{
       margin:14px 0 10px;
       font-size:clamp(38px,5.8vw,74px);
@@ -256,7 +312,7 @@
     .proof b{display:block;font-size:13px;letter-spacing:-.2px}
     .proof span{display:block;color:var(--muted2);font-size:12.8px;line-height:1.55;margin-top:3px}
 
-    /* Brand plate */
+    /* Brand plate (right) */
     .logoHero{
       border-radius:var(--r2);
       border:1px solid rgba(255,255,255,.10);
@@ -313,7 +369,7 @@
     .head h2{margin:0;font-size:22px;letter-spacing:-.4px}
     .head p{margin:0;color:var(--muted);max-width:82ch;line-height:1.7;font-size:14px}
 
-    /* Grids */
+    /* Grids / Cards */
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .cardX{
       border-radius:24px;
@@ -328,12 +384,14 @@
     .cardX b{display:block;font-size:14px;letter-spacing:-.2px}
     .cardX span{display:block;color:var(--muted);font-size:13px;line-height:1.6;margin-top:6px}
 
+    .stackRow{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+
     /* Services list inside cards */
     .listMini{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:8px}
     .listMini li{display:flex;gap:10px;align-items:flex-start;color:rgba(238,242,255,.84);font-size:13px;line-height:1.55}
     .dotMini{width:8px;height:8px;border-radius:2px;margin-top:6px;background:linear-gradient(135deg,var(--a),var(--b));flex:0 0 auto}
 
-    /* What you get / Guarantee */
+    /* Deliverables */
     .deliver{
       border-radius:24px;
       border:1px solid rgba(255,255,255,.10);
@@ -363,14 +421,15 @@
       transform:rotate(45deg);
       margin-top:-1px;
     }
-    .deliver .right{
+    .deliverRight{
       border-radius:20px;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(0,0,0,.18);
       padding:16px;
     }
-    .deliver .right b{display:block;font-size:13px}
-    .deliver .right span{display:block;margin-top:6px;color:var(--muted);font-size:13px;line-height:1.6}
+    .deliverRight b{display:block;font-size:13px}
+    .deliverRight span{display:block;margin-top:6px;color:var(--muted);font-size:13px;line-height:1.6}
+    .divider{margin-top:12px;height:1px;background:rgba(255,255,255,.08)}
 
     .guarantee{
       border-radius:24px;
@@ -385,12 +444,16 @@
     .guarantee span{display:block;color:rgba(238,242,255,.78);font-size:13px;line-height:1.6;margin-top:4px}
     .guarantee .gleft{max-width:72ch}
 
-    /* Process timeline */
+    /* Process */
     .timeline{
       border-radius:24px;
       border:1px solid rgba(255,255,255,.10);
       background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
       padding:18px;
+    }
+    .timelineLead{
+      display:block;margin-top:6px;color:rgba(238,242,255,.68);
+      font-size:13px;line-height:1.6
     }
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
     .step{
@@ -440,9 +503,9 @@
       font-weight:850;
     }
 
-    /* Testimonials */
-    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .quote{
+    /* Reviews (NO “placeholders” text) */
+    .reviewsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .reviewCard{
       border-radius:24px;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(255,255,255,.05);
@@ -450,7 +513,7 @@
       position:relative;
       overflow:hidden;
     }
-    .quote p{margin:0;color:rgba(238,242,255,.86);font-size:13.3px;line-height:1.75}
+    .reviewCard p{margin:0;color:rgba(238,242,255,.86);font-size:13.3px;line-height:1.75}
     .stars{margin-top:2px;color:rgba(238,242,255,.70);font-size:12px;font-weight:900}
     .who{margin-top:12px;display:flex;gap:10px;align-items:center}
     .avatar{
@@ -463,6 +526,18 @@
     }
     .who b{display:block;font-size:13px}
     .who span{display:block;color:var(--muted);font-size:12.6px;margin-top:2px}
+
+    .comingSoon{
+      margin-top:14px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      padding:14px;
+      color:rgba(238,242,255,.78);
+      font-size:13px;
+      line-height:1.6;
+    }
+    .comingSoon b{color:rgba(238,242,255,.92)}
 
     /* Pricing */
     .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -530,6 +605,12 @@
       padding:18px;
       box-shadow:0 18px 60px rgba(0,0,0,.40);
     }
+    .card h3{margin:0 0 10px}
+    .card p{margin:0;color:var(--muted);line-height:1.65}
+    .infoRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .tip{margin-top:14px;color:rgba(238,242,255,.70);font-size:13px;line-height:1.6}
+    .tip b{color:rgba(238,242,255,.92)}
+
     label{font-size:12px;color:var(--muted)}
     input, select, textarea{
       width:100%;
@@ -552,6 +633,13 @@
       border-top:1px solid rgba(255,255,255,.08);
       background:rgba(0,0,0,.10);
     }
+    .footerRow{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+    .footerBrand{display:flex;align-items:center;gap:12px}
+    .footerBrand img{
+      height:30px;width:auto;display:block;
+      border-radius:12px;background:rgba(255,255,255,.08);
+      padding:8px;border:1px solid rgba(255,255,255,.10)
+    }
     .iconBtn{
       padding:10px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
@@ -561,8 +649,12 @@
     }
     .iconBtn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
 
+    /* Floating WhatsApp */
     .wa{
-      position:fixed;right:16px;bottom:16px;z-index:95;
+      position:fixed;
+      right:16px;
+      bottom: calc(16px + var(--safe-b));
+      z-index:95;
       border-radius:999px;
       padding:12px 14px;
       background:linear-gradient(135deg, rgba(59,130,246,.34), rgba(34,211,238,.16));
@@ -570,24 +662,27 @@
       box-shadow:0 18px 50px rgba(0,0,0,.55);
       display:flex;gap:10px;align-items:center;
       font-weight:900;font-size:13px;
+      transition:.2s ease;
     }
     .wa i{width:10px;height:10px;border-radius:50%;background:var(--b);box-shadow:0 0 0 6px rgba(34,211,238,.10)}
     .wa:hover{transform:translateY(-2px)}
 
+    /* Responsive */
     @media(max-width:980px){
       nav.links{display:none}
       .menuBtn{display:inline-flex}
       .heroGrid{grid-template-columns:1fr;min-height:auto}
       .proofBar{grid-template-columns:1fr}
-      .grid3,.work,.pricing,.steps,.faq,.testimonials{grid-template-columns:1fr}
+      .grid3,.work,.pricing,.steps,.faq,.reviewsGrid{grid-template-columns:1fr}
       .deliver{grid-template-columns:1fr}
       .contactRow{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
       section{padding:72px 0}
       .nav{padding:10px 0}
       .brand{min-width:auto}
-      .brand .t span{display:none}
+      .brandText span{display:none}
       h1{font-size:clamp(34px,10vw,54px)}
+      .heroLogoTop{width:100%}
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -599,666 +694,672 @@
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
-      <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey logo" width="180" height="60" loading="eager" decoding="async">
-      <div class="t">
-        <strong>AP Digital Solutions</strong>
-        <span>Jersey · Websites · Shopify · WhatsApp Automation</span>
-      </div>
-    </a>
-
-    <nav class="links" aria-label="Primary">
-      <a href="#outcomes">Outcomes</a>
-      <a href="#services">Services</a>
-      <a href="#whatyouget">What you get</a>
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="ctas">
-      <a class="btn ghost" href="#work">View work</a>
-      <a class="btn primary" href="#contact">Get a quote</a>
-
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span class="menuIcon" aria-hidden="true"><i></i></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div class="mobileMenu" id="mobileMenu" aria-label="Mobile menu" role="dialog" aria-modal="true">
-  <a href="#outcomes">Outcomes</a>
-  <a href="#services">Services</a>
-  <a href="#whatyouget">What you get</a>
-  <a href="#process">Process</a>
-  <a href="#work">Work</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Contact</a>
-
-  <div class="row">
-    <a class="btn primary" href="#contact" style="flex:1;justify-content:center">Get a quote</a>
-    <a class="btn" href="#work" style="flex:1;justify-content:center">View work</a>
-  </div>
-</div>
-
-<main id="top" class="hero">
-  <div class="wrap heroGrid">
-
-    <div>
-      <div class="kicker"><span class="dot" aria-hidden="true"></span> Premium digital builds for Jersey businesses</div>
-      <h1>Look premium.<br>Convert more.</h1>
-      <p class="sub">
-        Premium websites, Shopify builds and WhatsApp automation — designed to turn visitors into enquiries and sales.
-        Clean structure, high-end feel, conversion-first delivery.
-      </p>
-
-      <div class="actions">
-        <a class="btn primary" href="#contact">Request a quote</a>
-        <a class="btn" href="#work">See live work</a>
-      </div>
-
-      <div class="proofBar" aria-label="Proof points">
-        <div class="proof"><b>Mobile-first</b><span>Fast, clean layouts that look premium on phones.</span></div>
-        <div class="proof"><b>Conversion-first</b><span>Better structure, copy and CTAs that drive action.</span></div>
-        <div class="proof"><b>WhatsApp-ready</b><span>Direct chat + automation to capture leads faster.</span></div>
-      </div>
-    </div>
-
-    <div class="logoHero" aria-label="Brand">
-      <div class="logoCard">
-        <div class="logoPlate">
-          <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="lazy" decoding="async">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
+        <img class="brandLogo" src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey logo" width="180" height="60" loading="eager" decoding="async">
+        <div class="brandText">
+          <strong>AP Digital Solutions</strong>
+          <span>Jersey · Websites · Shopify · WhatsApp Automation</span>
         </div>
-      </div>
-      <div class="pills">
-        <span class="pill">Websites</span>
-        <span class="pill">Shopify Stores</span>
-        <span class="pill">AI & Automation</span>
-        <span class="pill">Jersey</span>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<hr class="sep">
-
-<section id="outcomes">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Outcomes that matter</h2>
-        <p>Not just a nice website — we focus on clarity, trust and conversion.</p>
-      </div>
-    </div>
-
-    <div class="grid3">
-      <div class="cardX"><b>Higher trust instantly</b><span>Premium design + clean structure makes customers confident to message or buy.</span></div>
-      <div class="cardX"><b>More enquiries</b><span>Clear CTAs + WhatsApp conversion points across the whole page.</span></div>
-      <div class="cardX"><b>Faster responses</b><span>Automation options so customers get answers quickly — even when you’re busy.</span></div>
-    </div>
-
-    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
-      <a class="btn primary" href="#contact">Get pricing</a>
-      <a class="btn" href="#services">What we build</a>
-    </div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Services</h2>
-        <p>Everything you need to look premium online — and convert visitors into enquiries or sales.</p>
-      </div>
-    </div>
-
-    <div class="grid3">
-      <div class="cardX">
-        <b>Premium Websites</b>
-        <span>Fast, modern, mobile-first websites with strong messaging and clear calls-to-action.</span>
-        <ul class="listMini">
-          <li><span class="dotMini" aria-hidden="true"></span> Apple/Stripe-style layout</li>
-          <li><span class="dotMini" aria-hidden="true"></span> Copy + section structure that sells</li>
-          <li><span class="dotMini" aria-hidden="true"></span> WhatsApp conversion buttons</li>
-        </ul>
-      </div>
-
-      <div class="cardX">
-        <b>Shopify Builds</b>
-        <span>Store setup, collections, product structure and improvements that drive more sales.</span>
-        <ul class="listMini">
-          <li><span class="dotMini" aria-hidden="true"></span> Homepage & collections setup</li>
-          <li><span class="dotMini" aria-hidden="true"></span> Product pages improved</li>
-          <li><span class="dotMini" aria-hidden="true"></span> Conversion-first review</li>
-        </ul>
-      </div>
-
-      <div class="cardX">
-        <b>WhatsApp Automation</b>
-        <span>Quick replies, lead capture and automation — so customers get answers faster.</span>
-        <ul class="listMini">
-          <li><span class="dotMini" aria-hidden="true"></span> Click-to-chat + templates</li>
-          <li><span class="dotMini" aria-hidden="true"></span> Lead capture flows</li>
-          <li><span class="dotMini" aria-hidden="true"></span> AI chatbot options</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="whatyouget">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>What you get</h2>
-        <p>Clear deliverables that make your business look premium and drive action.</p>
-      </div>
-    </div>
-
-    <div class="deliver">
-      <div>
-        <h3>Premium delivery — not templates</h3>
-        <p>You get a clean, structured build with strong conversion points. We focus on clarity, trust and speed.</p>
-
-        <ul>
-          <li><span class="tick" aria-hidden="true"></span> Clean “Apple-style” UI + spacing</li>
-          <li><span class="tick" aria-hidden="true"></span> Mobile-first layout (premium on phones)</li>
-          <li><span class="tick" aria-hidden="true"></span> Clear call-to-actions (WhatsApp + quote flow)</li>
-          <li><span class="tick" aria-hidden="true"></span> Basic SEO & social preview setup</li>
-          <li><span class="tick" aria-hidden="true"></span> Guidance on next steps (content + improvements)</li>
-        </ul>
-      </div>
-
-      <div class="right">
-        <b>Ideal for:</b>
-        <span>Local services · shops · trades · personal brands · small businesses in Jersey.</span>
-        <div style="margin-top:12px;height:1px;background:rgba(255,255,255,.08)"></div>
-        <b style="margin-top:12px">Goal:</b>
-        <span>More trust + more messages + more sales.</span>
-      </div>
-    </div>
-
-    <div class="guarantee">
-      <div class="gleft">
-        <b>Clarity guarantee</b>
-        <span>If your offer isn’t clear, we refine structure and copy until it’s simple and conversion-ready (within scope).</span>
-      </div>
-      <a class="btn primary" href="#contact">Get started</a>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Simple process</h2>
-        <p>Clear steps, fast delivery, premium outcome. No confusion.</p>
-      </div>
-    </div>
-
-    <div class="timeline">
-      <b style="display:block;font-size:14px;color:rgba(238,242,255,.92)">3 steps to launch</b>
-      <span style="display:block;margin-top:6px;color:rgba(238,242,255,.68);font-size:13px;line-height:1.6">
-        We keep it structured so you get a clean result quickly — with clear next steps.
-      </span>
-
-      <div class="steps">
-        <div class="step">
-          <div class="n">1</div>
-          <b>Quick brief</b>
-          <span>You tell us what you need + examples you like. We confirm scope & price.</span>
-        </div>
-        <div class="step">
-          <div class="n">2</div>
-          <b>Build & refine</b>
-          <span>We build the premium version, then refine layout, copy and conversion points.</span>
-        </div>
-        <div class="step">
-          <div class="n">3</div>
-          <b>Launch</b>
-          <span>We publish, check basics (structure + performance), and hand over clearly.</span>
-        </div>
-      </div>
-
-      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-        <a class="btn primary" href="#contact">Start now</a>
-        <a class="btn" href="#pricing">See pricing</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="work">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Selected work</h2>
-        <p>Real projects already live. Click to view.</p>
-      </div>
-    </div>
-
-    <div class="work">
-      <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener noreferrer">
-        <div class="thumb">
-          <img src="./assets/pethaven.jpg?v=210" alt="Pet Haven Jersey screenshot" loading="lazy" decoding="async"
-               onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
-        </div>
-        <h4>Pet Haven Jersey</h4>
-        <p>Shopify store with clear structure and mobile-first layout.</p>
-        <div class="meta"><span>Shopify</span><span>E-commerce</span><span>Mobile-first</span></div>
       </a>
 
-      <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener noreferrer">
-        <div class="thumb">
-          <img src="./assets/ajudatotal.jpg?v=210" alt="AjudaTotal screenshot" loading="lazy" decoding="async"
-               onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
-        </div>
-        <h4>AjudaTotal</h4>
-        <p>Service website with strong messaging and bilingual experience.</p>
-        <div class="meta"><span>Website</span><span>Messaging</span><span>PT/EN</span></div>
-      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#outcomes">Outcomes</a>
+        <a href="#services">Services</a>
+        <a href="#whatyouget">What you get</a>
+        <a href="#process">Process</a>
+        <a href="#work">Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener noreferrer">
-        <div class="thumb">
-          <img src="./assets/catia.jpg?v=210" alt="Catia Coutinho Holistica screenshot" loading="lazy" decoding="async"
-               onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
-        </div>
-        <h4>Catia Coutinho Holistica</h4>
-        <p>Premium personal brand website with direct WhatsApp conversion.</p>
-        <div class="meta"><span>Website</span><span>Branding</span><span>WhatsApp CTA</span></div>
-      </a>
+      <div class="ctas">
+        <a class="btn ghost" href="#work">View work</a>
+        <a class="btn primary" href="#contact">Get a quote</a>
+
+        <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="menuIcon" aria-hidden="true"><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobileMenu" id="mobileMenu" aria-label="Mobile menu" role="dialog" aria-modal="true">
+    <a href="#outcomes">Outcomes</a>
+    <a href="#services">Services</a>
+    <a href="#whatyouget">What you get</a>
+    <a href="#process">Process</a>
+    <a href="#work">Work</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+
+    <div class="row">
+      <a class="btn primary" href="#contact" style="flex:1;justify-content:center">Get a quote</a>
+      <a class="btn" href="#work" style="flex:1;justify-content:center">View work</a>
     </div>
   </div>
-</section>
 
-<section id="reviews">
-  <div class="wrap">
-    <div class="head">
+  <main id="main" class="hero">
+    <div id="top" class="wrap heroGrid">
+
       <div>
-        <h2>Reviews</h2>
-        <p>Placeholders for now — replace with real testimonials when you have them.</p>
-      </div>
-    </div>
-
-    <div class="testimonials">
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“The site looks premium and the messaging is much clearer. We started getting enquiries quickly — WhatsApp makes it so easy.”</p>
-        <div class="who"><div class="avatar">G</div><div><b>Local business owner</b><span>Jersey</span></div></div>
-      </div>
-
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“Fast delivery and very professional. The structure is clean and customers understand the offer immediately.”</p>
-        <div class="who"><div class="avatar">A</div><div><b>Service provider</b><span>Jersey</span></div></div>
-      </div>
-
-      <div class="quote">
-        <div class="stars">★★★★★</div>
-        <p>“Great attention to detail. The website feels high-end and the conversion buttons are placed perfectly.”</p>
-        <div class="who"><div class="avatar">P</div><div><b>Shop owner</b><span>Jersey</span></div></div>
-      </div>
-    </div>
-
-    <div class="guarantee">
-      <div class="gleft">
-        <b>Want real reviews faster?</b>
-        <span>We can add a simple review-request link + message template to help you collect testimonials.</span>
-      </div>
-      <a class="btn primary" href="#contact">Ask how</a>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Pricing</h2>
-        <p>Lower entry pricing to help you start fast — with premium delivery.</p>
-      </div>
-    </div>
-
-    <div class="pricing">
-      <div class="price">
-        <h3>Starter</h3>
-        <p class="lead">High-impact landing page for quick enquiries.</p>
-        <div class="money">From £199</div>
-        <div class="small">Perfect for: local services, one offer, fast leads.</div>
-
-        <ul class="list">
-          <li><span class="tick" aria-hidden="true"></span> Premium hero + key sections</li>
-          <li><span class="tick" aria-hidden="true"></span> Mobile-first layout</li>
-          <li><span class="tick" aria-hidden="true"></span> WhatsApp conversion points</li>
-          <li><span class="tick" aria-hidden="true"></span> Basic SEO metadata</li>
-        </ul>
-
-        <div class="ctaRow">
-          <a class="btn primary" href="#contact">Get a quote</a>
-          <a class="btn" id="waStarter" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <!-- BIG logo at top (as you asked) -->
+        <div class="heroLogoTop" aria-label="AP Digital Solutions logo">
+          <div class="heroLogoTopInner">
+            <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="eager" decoding="async">
+          </div>
         </div>
-      </div>
 
-      <div class="price featured">
-        <div class="badge">Most popular</div>
-        <h3>Pro Website</h3>
-        <p class="lead">Full premium website built to convert.</p>
-        <div class="money">From £449</div>
-        <div class="small">Perfect for: credibility, enquiries, growth.</div>
-
-        <ul class="list">
-          <li><span class="tick" aria-hidden="true"></span> Outcomes + Services + Process</li>
-          <li><span class="tick" aria-hidden="true"></span> Work/portfolio section</li>
-          <li><span class="tick" aria-hidden="true"></span> Quote form + WhatsApp CTAs</li>
-          <li><span class="tick" aria-hidden="true"></span> Structure & performance checks</li>
-        </ul>
-
-        <div class="ctaRow">
-          <a class="btn primary" href="#contact">Get a quote</a>
-          <a class="btn" id="waPro" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="price">
-        <h3>Shopify Growth</h3>
-        <p class="lead">Store setup + structure + conversion fixes.</p>
-        <div class="money">From £649</div>
-        <div class="small">Perfect for: e-commerce and better sales.</div>
-
-        <ul class="list">
-          <li><span class="tick" aria-hidden="true"></span> Homepage + collections improved</li>
-          <li><span class="tick" aria-hidden="true"></span> Product layout & structure review</li>
-          <li><span class="tick" aria-hidden="true"></span> WhatsApp integration</li>
-          <li><span class="tick" aria-hidden="true"></span> Conversion-first improvement plan</li>
-        </ul>
-
-        <div class="ctaRow">
-          <a class="btn primary" href="#contact">Get a quote</a>
-          <a class="btn" id="waShopify" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="addons">
-      <b>Optional add-ons:</b> extra pages · booking/inquiry flows · AI chatbot · automation/integrations · content writing · logo + brand refresh.
-      <br><span style="color:rgba(238,242,255,.62)">We confirm scope and final price before starting.</span>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>FAQ</h2>
-        <p>Quick answers to reduce friction and help customers say “yes”.</p>
-      </div>
-    </div>
-
-    <div class="faq">
-      <details>
-        <summary>How fast can you deliver?</summary>
-        <p>It depends on scope, but most landing pages can be delivered quickly. Full websites and Shopify builds take longer. We confirm a clear timeline before starting.</p>
-      </details>
-
-      <details>
-        <summary>Do you handle hosting / domain?</summary>
-        <p>Yes — we can help you connect domain + hosting and publish your website. If you prefer GitHub Pages/Netlify, we can work with that too.</p>
-      </details>
-
-      <details>
-        <summary>Can you integrate WhatsApp without showing my number?</summary>
-        <p>Your site can use click-to-chat links and buttons. Visitors see WhatsApp as the contact method — your number is not displayed as text on the page.</p>
-      </details>
-
-      <details>
-        <summary>Do you support Shopify improvements?</summary>
-        <p>Yes. We can improve homepage, collections, product layout, trust, and conversion points — plus add WhatsApp contact and automation options.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="head">
-      <div>
-        <h2>Contact</h2>
-        <p>Fast replies. Use the form or WhatsApp. Your phone number is not displayed on the website.</p>
-      </div>
-    </div>
-
-    <div class="contactRow">
-      <div class="card">
-        <h3 style="margin:0 0 8px">Get a quote fast</h3>
-        <p style="margin:0;color:var(--muted);line-height:1.65">
-          The fastest way is WhatsApp. Send your business name + what you want (website, Shopify, automation).
-          We reply with next steps and a clear quote.
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> Premium digital builds for Jersey businesses</div>
+        <h1>Look premium.<br>Convert more.</h1>
+        <p class="sub">
+          Premium websites, Shopify builds and WhatsApp automation — designed to turn visitors into enquiries and sales.
+          Clean structure, high-end feel, conversion-first delivery.
         </p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-          <a class="btn primary" id="waCta" href="#" target="_blank" rel="noopener noreferrer">WhatsApp now</a>
-          <a class="btn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
+
+        <div class="actions">
+          <a class="btn primary" href="#contact">Request a quote</a>
+          <a class="btn" href="#work">See live work</a>
         </div>
-        <div style="margin-top:14px;color:rgba(238,242,255,.70);font-size:13px;line-height:1.6">
-          <b style="color:rgba(238,242,255,.92)">Pro tip:</b> Add your timeline + budget range for faster quoting.
+
+        <div class="proofBar" aria-label="Proof points">
+          <div class="proof"><b>Mobile-first</b><span>Fast, clean layouts that look premium on phones.</span></div>
+          <div class="proof"><b>Conversion-first</b><span>Better structure, copy and CTAs that drive action.</span></div>
+          <div class="proof"><b>WhatsApp-ready</b><span>Direct chat + automation to capture leads faster.</span></div>
         </div>
       </div>
 
-      <div class="card">
-        <h3 style="margin:0 0 10px">Quick form (1 minute)</h3>
-
-        <form id="quoteForm" novalidate>
-          <div class="grid2">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name">
-            </div>
-            <div>
-              <label for="phone">WhatsApp (optional)</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+44...">
-            </div>
+      <div class="logoHero" aria-label="Brand">
+        <div class="logoCard">
+          <div class="logoPlate">
+            <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="lazy" decoding="async">
           </div>
+        </div>
+        <div class="pills">
+          <span class="pill">Websites</span>
+          <span class="pill">Shopify Stores</span>
+          <span class="pill">AI & Automation</span>
+          <span class="pill">Jersey</span>
+        </div>
+      </div>
 
-          <div class="grid2" style="margin-top:10px">
-            <div>
-              <label for="service">Service</label>
-              <select id="service" name="service">
-                <option>Website</option>
-                <option>Shopify store</option>
-                <option>WhatsApp automation</option>
-                <option>AI chatbot</option>
-                <option>Automation / integrations</option>
-              </select>
-            </div>
-            <div>
-              <label for="timeline">Timeline</label>
-              <select id="timeline" name="timeline">
-                <option>ASAP</option>
-                <option>1–2 weeks</option>
-                <option>2–4 weeks</option>
-                <option>Not sure</option>
-              </select>
-            </div>
+    </div>
+  </main>
+
+  <hr class="sep">
+
+  <section id="outcomes">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Outcomes that matter</h2>
+          <p>Not just a nice website — we focus on clarity, trust and conversion.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="cardX"><b>Higher trust instantly</b><span>Premium design + clean structure makes customers confident to message or buy.</span></div>
+        <div class="cardX"><b>More enquiries</b><span>Clear CTAs + WhatsApp conversion points across the whole page.</span></div>
+        <div class="cardX"><b>Faster responses</b><span>Automation options so customers get answers quickly — even when you’re busy.</span></div>
+      </div>
+
+      <div class="stackRow">
+        <a class="btn primary" href="#contact">Get pricing</a>
+        <a class="btn" href="#services">What we build</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Services</h2>
+          <p>Everything you need to look premium online — and convert visitors into enquiries or sales.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="cardX">
+          <b>Premium Websites</b>
+          <span>Fast, modern, mobile-first websites with strong messaging and clear calls-to-action.</span>
+          <ul class="listMini">
+            <li><span class="dotMini" aria-hidden="true"></span> Apple/Stripe-style layout</li>
+            <li><span class="dotMini" aria-hidden="true"></span> Copy + section structure that sells</li>
+            <li><span class="dotMini" aria-hidden="true"></span> WhatsApp conversion buttons</li>
+          </ul>
+        </div>
+
+        <div class="cardX">
+          <b>Shopify Builds</b>
+          <span>Store setup, collections, product structure and improvements that drive more sales.</span>
+          <ul class="listMini">
+            <li><span class="dotMini" aria-hidden="true"></span> Homepage & collections setup</li>
+            <li><span class="dotMini" aria-hidden="true"></span> Product pages improved</li>
+            <li><span class="dotMini" aria-hidden="true"></span> Conversion-first review</li>
+          </ul>
+        </div>
+
+        <div class="cardX">
+          <b>WhatsApp Automation</b>
+          <span>Quick replies, lead capture and automation — so customers get answers faster.</span>
+          <ul class="listMini">
+            <li><span class="dotMini" aria-hidden="true"></span> Click-to-chat + templates</li>
+            <li><span class="dotMini" aria-hidden="true"></span> Lead capture flows</li>
+            <li><span class="dotMini" aria-hidden="true"></span> AI chatbot options</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="whatyouget">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>What you get</h2>
+          <p>Clear deliverables that make your business look premium and drive action.</p>
+        </div>
+      </div>
+
+      <div class="deliver">
+        <div>
+          <h3>Premium delivery — not templates</h3>
+          <p>You get a clean, structured build with strong conversion points. We focus on clarity, trust and speed.</p>
+
+          <ul>
+            <li><span class="tick" aria-hidden="true"></span> Clean “Apple-style” UI + spacing</li>
+            <li><span class="tick" aria-hidden="true"></span> Mobile-first layout (premium on phones)</li>
+            <li><span class="tick" aria-hidden="true"></span> Clear call-to-actions (WhatsApp + quote flow)</li>
+            <li><span class="tick" aria-hidden="true"></span> Basic SEO & social preview setup</li>
+            <li><span class="tick" aria-hidden="true"></span> Guidance on next steps (content + improvements)</li>
+          </ul>
+        </div>
+
+        <div class="deliverRight">
+          <b>Ideal for:</b>
+          <span>Local services · shops · trades · personal brands · small businesses in Jersey.</span>
+          <div class="divider"></div>
+          <b style="margin-top:12px">Goal:</b>
+          <span>More trust + more messages + more sales.</span>
+        </div>
+      </div>
+
+      <div class="guarantee">
+        <div class="gleft">
+          <b>Clarity guarantee</b>
+          <span>If your offer isn’t clear, we refine structure and copy until it’s simple and conversion-ready (within scope).</span>
+        </div>
+        <a class="btn primary" href="#contact">Get started</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Simple process</h2>
+          <p>Clear steps, fast delivery, premium outcome. No confusion.</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <b style="display:block;font-size:14px;color:rgba(238,242,255,.92)">3 steps to launch</b>
+        <span class="timelineLead">
+          We keep it structured so you get a clean result quickly — with clear next steps.
+        </span>
+
+        <div class="steps">
+          <div class="step">
+            <div class="n">1</div>
+            <b>Quick brief</b>
+            <span>You tell us what you need + examples you like. We confirm scope & price.</span>
           </div>
-
-          <div style="margin-top:10px">
-            <label for="budget">Budget range (optional)</label>
-            <select id="budget" name="budget">
-              <option value="">Not sure</option>
-              <option>£199–£399</option>
-              <option>£400–£700</option>
-              <option>£700–£1,200</option>
-              <option>£1,200+</option>
-            </select>
+          <div class="step">
+            <div class="n">2</div>
+            <b>Build & refine</b>
+            <span>We build the premium version, then refine layout, copy and conversion points.</span>
           </div>
-
-          <div style="margin-top:10px">
-            <label for="msg">Message</label>
-            <textarea id="msg" name="message" placeholder="Tell us what you need (pages, products, booking, automation, etc.)"></textarea>
+          <div class="step">
+            <div class="n">3</div>
+            <b>Launch</b>
+            <span>We publish, check basics (structure + performance), and hand over clearly.</span>
           </div>
+        </div>
 
-          <div class="formActions">
-            <button class="btn primary" type="submit">Send by email</button>
-            <a class="btn" id="waInline" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <div class="stackRow">
+          <a class="btn primary" href="#contact">Start now</a>
+          <a class="btn" href="#pricing">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Selected work</h2>
+          <p>Real projects already live. Click to view.</p>
+        </div>
+      </div>
+
+      <div class="work">
+        <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener noreferrer">
+          <div class="thumb">
+            <img src="./assets/pethaven.jpg?v=210" alt="Pet Haven Jersey screenshot" loading="lazy" decoding="async"
+                 onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
           </div>
+          <h4>Pet Haven Jersey</h4>
+          <p>Shopify store with clear structure and mobile-first layout.</p>
+          <div class="meta"><span>Shopify</span><span>E-commerce</span><span>Mobile-first</span></div>
+        </a>
 
-          <p class="small" style="margin:10px 0 0;color:rgba(238,242,255,.62)">
-            After filling this form, tap WhatsApp — it creates a ready-to-send message automatically.
+        <a class="workItem" href="https://ajudatotal.com/" target="_blank" rel="noopener noreferrer">
+          <div class="thumb">
+            <img src="./assets/ajudatotal.jpg?v=210" alt="AjudaTotal screenshot" loading="lazy" decoding="async"
+                 onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
+          </div>
+          <h4>AjudaTotal</h4>
+          <p>Service website with strong messaging and bilingual experience.</p>
+          <div class="meta"><span>Website</span><span>Messaging</span><span>PT/EN</span></div>
+        </a>
+
+        <a class="workItem" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener noreferrer">
+          <div class="thumb">
+            <img src="./assets/catia.jpg?v=210" alt="Catia Coutinho Holistica screenshot" loading="lazy" decoding="async"
+                 onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
+          </div>
+          <h4>Catia Coutinho Holistica</h4>
+          <p>Premium personal brand website with direct WhatsApp conversion.</p>
+          <div class="meta"><span>Website</span><span>Branding</span><span>WhatsApp CTA</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Client feedback</h2>
+          <p>Short, direct social proof that reduces friction and increases trust.</p>
+        </div>
+      </div>
+
+      <div class="reviewsGrid">
+        <div class="reviewCard">
+          <div class="stars">★★★★★</div>
+          <p>“The site looks premium and the messaging is much clearer. We started getting enquiries quickly — WhatsApp makes it so easy.”</p>
+          <div class="who"><div class="avatar">G</div><div><b>Local business owner</b><span>Jersey</span></div></div>
+        </div>
+
+        <div class="reviewCard">
+          <div class="stars">★★★★★</div>
+          <p>“Fast delivery and very professional. The structure is clean and customers understand the offer immediately.”</p>
+          <div class="who"><div class="avatar">A</div><div><b>Service provider</b><span>Jersey</span></div></div>
+        </div>
+
+        <div class="reviewCard">
+          <div class="stars">★★★★★</div>
+          <p>“Great attention to detail. The website feels high-end and the conversion buttons are placed perfectly.”</p>
+          <div class="who"><div class="avatar">P</div><div><b>Shop owner</b><span>Jersey</span></div></div>
+        </div>
+      </div>
+
+      <div class="comingSoon">
+        <b>Want real reviews faster?</b><br>
+        We can add a one-click review link + WhatsApp message template so clients can leave feedback in seconds.
+        <div class="stackRow" style="margin-top:12px">
+          <a class="btn primary" href="#contact">Ask how</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Pricing</h2>
+          <p>Lower entry pricing to help you start fast — with premium delivery.</p>
+        </div>
+      </div>
+
+      <div class="pricing">
+        <div class="price">
+          <h3>Starter</h3>
+          <p class="lead">High-impact landing page for quick enquiries.</p>
+          <div class="money">From £199</div>
+          <div class="small">Perfect for: local services, one offer, fast leads.</div>
+
+          <ul class="list">
+            <li><span class="tick" aria-hidden="true"></span> Premium hero + key sections</li>
+            <li><span class="tick" aria-hidden="true"></span> Mobile-first layout</li>
+            <li><span class="tick" aria-hidden="true"></span> WhatsApp conversion points</li>
+            <li><span class="tick" aria-hidden="true"></span> Basic SEO metadata</li>
+          </ul>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="#contact">Get a quote</a>
+            <a class="btn" id="waStarter" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="price featured">
+          <div class="badge">Most popular</div>
+          <h3>Pro Website</h3>
+          <p class="lead">Full premium website built to convert.</p>
+          <div class="money">From £449</div>
+          <div class="small">Perfect for: credibility, enquiries, growth.</div>
+
+          <ul class="list">
+            <li><span class="tick" aria-hidden="true"></span> Outcomes + Services + Process</li>
+            <li><span class="tick" aria-hidden="true"></span> Work/portfolio section</li>
+            <li><span class="tick" aria-hidden="true"></span> Quote form + WhatsApp CTAs</li>
+            <li><span class="tick" aria-hidden="true"></span> Structure & performance checks</li>
+          </ul>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="#contact">Get a quote</a>
+            <a class="btn" id="waPro" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="price">
+          <h3>Shopify Growth</h3>
+          <p class="lead">Store setup + structure + conversion fixes.</p>
+          <div class="money">From £649</div>
+          <div class="small">Perfect for: e-commerce and better sales.</div>
+
+          <ul class="list">
+            <li><span class="tick" aria-hidden="true"></span> Homepage + collections improved</li>
+            <li><span class="tick" aria-hidden="true"></span> Product layout & structure review</li>
+            <li><span class="tick" aria-hidden="true"></span> WhatsApp integration</li>
+            <li><span class="tick" aria-hidden="true"></span> Conversion-first improvement plan</li>
+          </ul>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="#contact">Get a quote</a>
+            <a class="btn" id="waShopify" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="addons">
+        <b>Optional add-ons:</b> extra pages · booking/inquiry flows · AI chatbot · automation/integrations · content writing · logo + brand refresh.
+        <br><span style="color:rgba(238,242,255,.62)">We confirm scope and final price before starting.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>FAQ</h2>
+          <p>Quick answers to reduce friction and help customers say “yes”.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>How fast can you deliver?</summary>
+          <p>It depends on scope, but most landing pages can be delivered quickly. Full websites and Shopify builds take longer. We confirm a clear timeline before starting.</p>
+        </details>
+
+        <details>
+          <summary>Do you handle hosting / domain?</summary>
+          <p>Yes — we can help you connect domain + hosting and publish your website. If you prefer GitHub Pages/Netlify, we can work with that too.</p>
+        </details>
+
+        <details>
+          <summary>Can you integrate WhatsApp without showing my number?</summary>
+          <p>Your site can use click-to-chat links and buttons. Visitors see WhatsApp as the contact method — your number is not displayed as text on the page.</p>
+        </details>
+
+        <details>
+          <summary>Do you support Shopify improvements?</summary>
+          <p>Yes. We can improve homepage, collections, product layout, trust, and conversion points — plus add WhatsApp contact and automation options.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Contact</h2>
+          <p>Fast replies. Use the form or WhatsApp. Your phone number is not displayed on the website.</p>
+        </div>
+      </div>
+
+      <div class="contactRow">
+        <div class="card">
+          <h3>Get a quote fast</h3>
+          <p>
+            The fastest way is WhatsApp. Send your business name + what you want (website, Shopify, automation).
+            We reply with next steps and a clear quote.
           </p>
-        </form>
+
+          <div class="infoRow">
+            <a class="btn primary" id="waCta" href="#" target="_blank" rel="noopener noreferrer">WhatsApp now</a>
+            <a class="btn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
+          </div>
+
+          <div class="tip">
+            <b>Pro tip:</b> Add your timeline + budget range for faster quoting.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Quick form (1 minute)</h3>
+
+          <form id="quoteForm" novalidate>
+            <div class="grid2">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+              </div>
+              <div>
+                <label for="phone">WhatsApp (optional)</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+44...">
+              </div>
+            </div>
+
+            <div class="grid2" style="margin-top:10px">
+              <div>
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                  <option>Website</option>
+                  <option>Shopify store</option>
+                  <option>WhatsApp automation</option>
+                  <option>AI chatbot</option>
+                  <option>Automation / integrations</option>
+                </select>
+              </div>
+              <div>
+                <label for="timeline">Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option>ASAP</option>
+                  <option>1–2 weeks</option>
+                  <option>2–4 weeks</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-top:10px">
+              <label for="budget">Budget range (optional)</label>
+              <select id="budget" name="budget">
+                <option value="">Not sure</option>
+                <option>£199–£399</option>
+                <option>£400–£700</option>
+                <option>£700–£1,200</option>
+                <option>£1,200+</option>
+              </select>
+            </div>
+
+            <div style="margin-top:10px">
+              <label for="msg">Message</label>
+              <textarea id="msg" name="message" placeholder="Tell us what you need (pages, products, booking, automation, etc.)"></textarea>
+            </div>
+
+            <div class="formActions">
+              <button class="btn primary" type="submit">Send by email</button>
+              <a class="btn" id="waInline" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+
+            <p class="small" style="margin:10px 0 0;color:rgba(238,242,255,.62)">
+              After filling this form, tap WhatsApp — it creates a ready-to-send message automatically.
+            </p>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="wrap" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center">
-    <div style="display:flex;align-items:center;gap:12px">
-      <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" style="height:30px;width:auto;display:block;border-radius:12px;background:rgba(255,255,255,.08);padding:8px;border:1px solid rgba(255,255,255,.10)" loading="lazy" decoding="async">
-      <small style="color:rgba(238,242,255,.72)">© <span id="year"></span> AP Digital Solutions Jersey</small>
+  <footer>
+    <div class="wrap footerRow">
+      <div class="footerBrand">
+        <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="lazy" decoding="async">
+        <small style="color:rgba(238,242,255,.72)">© <span id="year"></span> AP Digital Solutions Jersey</small>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="iconBtn" href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="iconBtn" href="https://www.facebook.com/share/16aBSDLMQk/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="iconBtn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
+      </div>
     </div>
+  </footer>
 
-    <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <a class="iconBtn" href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a class="iconBtn" href="https://www.facebook.com/share/16aBSDLMQk/" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a class="iconBtn" href="mailto:apdigitalsolutions.je@outlook.com">Email</a>
+  <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener noreferrer"><i aria-hidden="true"></i> WhatsApp</a>
+
+  <noscript>
+    <div style="padding:14px 18px;background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.10);color:rgba(238,242,255,.86)">
+      JavaScript is disabled — WhatsApp auto-message and the mobile menu won’t work. You can still email us at
+      <a href="mailto:apdigitalsolutions.je@outlook.com" style="text-decoration:underline">apdigitalsolutions.je@outlook.com</a>.
     </div>
-  </div>
-</footer>
+  </noscript>
 
-<a class="wa" id="waBtn" href="#" target="_blank" rel="noopener noreferrer"><i aria-hidden="true"></i> WhatsApp</a>
+  <script>
+    // ====== Basics ======
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<noscript>
-  <div style="padding:14px 18px;background:rgba(255,255,255,.06);border-top:1px solid rgba(255,255,255,.10);color:rgba(238,242,255,.86)">
-    JavaScript is disabled — WhatsApp auto-message and the mobile menu won’t work. You can still email us at
-    <a href="mailto:apdigitalsolutions.je@outlook.com" style="text-decoration:underline">apdigitalsolutions.je@outlook.com</a>.
-  </div>
-</noscript>
+    // ====== Mobile menu ======
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-<script>
-  // ====== Basics ======
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // ====== Mobile menu (better UX) ======
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  function closeMenu(){
-    mobileMenu.style.display = "none";
-    menuBtn.setAttribute("aria-expanded","false");
-  }
-  function openMenu(){
-    mobileMenu.style.display = "block";
-    menuBtn.setAttribute("aria-expanded","true");
-  }
-
-  menuBtn.addEventListener("click", () => {
-    const isOpen = mobileMenu.style.display === "block";
-    isOpen ? closeMenu() : openMenu();
-  });
-
-  // close on link click
-  mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
-
-  // close on outside click
-  document.addEventListener("click", (e) => {
-    const isOpen = mobileMenu.style.display === "block";
-    if(!isOpen) return;
-    if(mobileMenu.contains(e.target) || menuBtn.contains(e.target)) return;
-    closeMenu();
-  });
-
-  // close on ESC
-  document.addEventListener("keydown", (e) => {
-    if(e.key === "Escape") closeMenu();
-  });
-
-  // close if resized to desktop
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 980) closeMenu();
-  });
-
-  // ====== WhatsApp + Email ======
-  const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
-  const WA_NUMBER = "447700704591";
-
-  function safeVal(id){
-    const el = document.getElementById(id);
-    return (el?.value || "").trim();
-  }
-
-  function buildWhatsAppText(){
-    const name = safeVal("name");
-    const phone = safeVal("phone");
-    const service = safeVal("service") || "Website";
-    const timeline = safeVal("timeline") || "ASAP";
-    const budget = safeVal("budget");
-    const msg = safeVal("msg");
-
-    const lines = [
-      "Hello AP Digital Solutions!",
-      "",
-      `Name: ${name || "—"}`,
-      `WhatsApp: ${phone || "—"}`,
-      `Service: ${service}`,
-      `Timeline: ${timeline}`,
-      `Budget: ${budget || "—"}`,
-      "",
-      "Message:",
-      msg || "—",
-      "",
-      "Please send me next steps + a quote. Thank you!"
-    ];
-
-    return encodeURIComponent(lines.join("\n"));
-  }
-
-  function setAllWaLinks(){
-    const base = `https://wa.me/${WA_NUMBER}?text=`;
-    const text = buildWhatsAppText();
-    ["waBtn","waInline","waCta","waStarter","waPro","waShopify"].forEach(id=>{
-      const el = document.getElementById(id);
-      if(el) el.setAttribute("href", base + text);
-    });
-  }
-
-  ["name","phone","service","timeline","budget","msg"].forEach(id=>{
-    const el = document.getElementById(id);
-    if(el) el.addEventListener("input", setAllWaLinks);
-  });
-
-  setAllWaLinks();
-
-  document.getElementById("quoteForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const name = safeVal("name");
-    if(!name){
-      alert("Please enter your name.");
-      document.getElementById("name").focus();
-      return;
+    function closeMenu(){
+      mobileMenu.style.display = "none";
+      menuBtn.setAttribute("aria-expanded","false");
+    }
+    function openMenu(){
+      mobileMenu.style.display = "block";
+      menuBtn.setAttribute("aria-expanded","true");
     }
 
-    const phone = safeVal("phone");
-    const service = safeVal("service");
-    const timeline = safeVal("timeline");
-    const budget = safeVal("budget");
-    const msg = safeVal("msg");
+    menuBtn.addEventListener("click", () => {
+      const isOpen = mobileMenu.style.display === "block";
+      isOpen ? closeMenu() : openMenu();
+    });
 
-    const subject = encodeURIComponent("Quote request — AP Digital Solutions Jersey");
-    const body = encodeURIComponent(
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    document.addEventListener("click", (e) => {
+      const isOpen = mobileMenu.style.display === "block";
+      if(!isOpen) return;
+      if(mobileMenu.contains(e.target) || menuBtn.contains(e.target)) return;
+      closeMenu();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") closeMenu();
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 980) closeMenu();
+    });
+
+    // ====== WhatsApp + Email ======
+    const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
+    const WA_NUMBER = "447700704591";
+
+    function safeVal(id){
+      const el = document.getElementById(id);
+      return (el?.value || "").trim();
+    }
+
+    function buildWhatsAppText(){
+      const name = safeVal("name");
+      const phone = safeVal("phone");
+      const service = safeVal("service") || "Website";
+      const timeline = safeVal("timeline") || "ASAP";
+      const budget = safeVal("budget");
+      const msg = safeVal("msg");
+
+      const lines = [
+        "Hello AP Digital Solutions!",
+        "",
+        `Name: ${name || "—"}`,
+        `WhatsApp: ${phone || "—"}`,
+        `Service: ${service}`,
+        `Timeline: ${timeline}`,
+        `Budget: ${budget || "—"}`,
+        "",
+        "Message:",
+        msg || "—",
+        "",
+        "Please send me next steps + a quote. Thank you!"
+      ];
+
+      return encodeURIComponent(lines.join("\n"));
+    }
+
+    function setAllWaLinks(){
+      const base = `https://wa.me/${WA_NUMBER}?text=`;
+      const text = buildWhatsAppText();
+      ["waBtn","waInline","waCta","waStarter","waPro","waShopify"].forEach(id=>{
+        const el = document.getElementById(id);
+        if(el) el.setAttribute("href", base + text);
+      });
+    }
+
+    ["name","phone","service","timeline","budget","msg"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(el) el.addEventListener("input", setAllWaLinks);
+    });
+
+    setAllWaLinks();
+
+    document.getElementById("quoteForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = safeVal("name");
+      if(!name){
+        alert("Please enter your name.");
+        document.getElementById("name").focus();
+        return;
+      }
+
+      const phone = safeVal("phone");
+      const service = safeVal("service");
+      const timeline = safeVal("timeline");
+      const budget = safeVal("budget");
+      const msg = safeVal("msg");
+
+      const subject = encodeURIComponent("Quote request — AP Digital Solutions Jersey");
+      const body = encodeURIComponent(
 `Name: ${name}
 WhatsApp: ${phone || "—"}
 Service: ${service}
@@ -1268,11 +1369,10 @@ Budget: ${budget || "—"}
 Message:
 ${msg || "—"}
 `
-    );
+      );
 
-    window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
-  });
-</script>
-
+      window.location.href = `mailto:${EMAIL_TO}?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
-  </html>
+              </html>
