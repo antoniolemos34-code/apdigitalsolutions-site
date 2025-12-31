@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <title>AP Digital Solutions Jersey — Websites, Shopify & WhatsApp Automation</title>
-  <meta name="description" content="Premium websites, Shopify builds and WhatsApp automation for Jersey businesses. Clean design, clear messaging and conversion-first delivery." />
+  <title>AP Digital Solutions — Websites, Shopify & WhatsApp Automation</title>
+  <meta name="description" content="Premium websites, Shopify builds and WhatsApp automation for small businesses worldwide. Clean design, clear messaging and conversion-first delivery." />
   <meta name="theme-color" content="#070A12" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
@@ -20,18 +20,18 @@
   <link rel="apple-touch-icon" href="/favicon-48x48.png">
 
   <!-- Open Graph -->
-  <meta property="og:site_name" content="AP Digital Solutions Jersey" />
-  <meta property="og:title" content="AP Digital Solutions Jersey — Websites, Shopify & WhatsApp Automation" />
-  <meta property="og:description" content="Premium websites, Shopify builds and WhatsApp automation — built to convert." />
+  <meta property="og:site_name" content="AP Digital Solutions" />
+  <meta property="og:title" content="AP Digital Solutions — Websites, Shopify & WhatsApp Automation" />
+  <meta property="og:description" content="Premium digital builds for small businesses worldwide — built to convert." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://apdigitalsolutions.digital/" />
   <meta property="og:image" content="https://apdigitalsolutions.digital/assets/logo-premium.png" />
-  <meta property="og:image:alt" content="AP Digital Solutions Jersey logo" />
+  <meta property="og:image:alt" content="AP Digital Solutions logo" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AP Digital Solutions Jersey" />
-  <meta name="twitter:description" content="Premium websites, Shopify builds and WhatsApp automation — built to convert." />
+  <meta name="twitter:title" content="AP Digital Solutions" />
+  <meta name="twitter:description" content="Premium digital builds for small businesses worldwide — built to convert." />
   <meta name="twitter:image" content="https://apdigitalsolutions.digital/assets/logo-premium.png" />
 
   <!-- Fonts -->
@@ -44,12 +44,20 @@
   {
     "@context":"https://schema.org",
     "@type":"Organization",
-    "name":"AP Digital Solutions Jersey",
+    "name":"AP Digital Solutions",
     "url":"https://apdigitalsolutions.digital/",
     "logo":"https://apdigitalsolutions.digital/assets/logo-premium.png",
+    "areaServed":"Worldwide",
     "sameAs":[
       "https://www.instagram.com/apdigitalsolutions.digital",
       "https://www.facebook.com/share/16aBSDLMQk/"
+    ],
+    "contactPoint":[
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"apdigitalsolutions.je@outlook.com"
+      }
     ]
   }
   </script>
@@ -61,7 +69,6 @@
       --bg2:#0A1022;
 
       --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.04);
       --stroke:rgba(255,255,255,.10);
 
       --text:#EEF2FF;
@@ -232,7 +239,6 @@
       align-items:center;
     }
 
-    /* Bigger logo at the very start */
     .heroLogoTop{
       width:min(520px, 92%);
       border-radius:24px;
@@ -503,7 +509,7 @@
       font-weight:850;
     }
 
-    /* Reviews (NO “placeholders” text) */
+    /* Reviews */
     .reviewsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .reviewCard{
       border-radius:24px;
@@ -538,46 +544,6 @@
       line-height:1.6;
     }
     .comingSoon b{color:rgba(238,242,255,.92)}
-
-    /* Pricing */
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .price{
-      border-radius:24px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.05);
-      padding:18px;
-      position:relative;
-    }
-    .price.featured{
-      background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
-      border-color:rgba(34,211,238,.24);
-      box-shadow:0 18px 70px rgba(34,211,238,.10);
-    }
-    .badge{
-      position:absolute; top:14px; right:14px;
-      padding:6px 10px; border-radius:999px;
-      border:1px solid rgba(34,211,238,.26);
-      background:rgba(34,211,238,.10);
-      font-size:12px; font-weight:900;
-    }
-    .price h3{margin:0;font-size:16px}
-    .price .lead{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
-    .money{margin:14px 0 4px;font-size:26px;font-weight:900}
-    .small{color:var(--muted2);font-size:12.6px;line-height:1.55}
-    ul.list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
-    ul.list li{display:flex;gap:10px;align-items:flex-start;color:rgba(238,242,255,.84);font-size:13px;line-height:1.55}
-    .ctaRow{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
-    .addons{
-      margin-top:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.18);
-      padding:14px;
-      color:rgba(238,242,255,.78);
-      font-size:13px;
-      line-height:1.6;
-    }
-    .addons b{color:rgba(238,242,255,.92)}
 
     /* FAQ */
     .faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -673,7 +639,7 @@
       .menuBtn{display:inline-flex}
       .heroGrid{grid-template-columns:1fr;min-height:auto}
       .proofBar{grid-template-columns:1fr}
-      .grid3,.work,.pricing,.steps,.faq,.reviewsGrid{grid-template-columns:1fr}
+      .grid3,.work,.steps,.faq,.reviewsGrid{grid-template-columns:1fr}
       .deliver{grid-template-columns:1fr}
       .contactRow{grid-template-columns:1fr}
       .grid2{grid-template-columns:1fr}
@@ -698,11 +664,11 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="AP Digital Solutions Jersey">
-        <img class="brandLogo" src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey logo" width="180" height="60" loading="eager" decoding="async">
+      <a class="brand" href="#top" aria-label="AP Digital Solutions">
+        <img class="brandLogo" src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions logo" width="180" height="60" loading="eager" decoding="async">
         <div class="brandText">
           <strong>AP Digital Solutions</strong>
-          <span>Jersey · Websites · Shopify · WhatsApp Automation</span>
+          <span>Websites · Shopify · WhatsApp Automation</span>
         </div>
       </a>
 
@@ -713,7 +679,6 @@
         <a href="#process">Process</a>
         <a href="#work">Work</a>
         <a href="#reviews">Reviews</a>
-        <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -736,7 +701,6 @@
     <a href="#process">Process</a>
     <a href="#work">Work</a>
     <a href="#reviews">Reviews</a>
-    <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
 
@@ -750,14 +714,14 @@
     <div id="top" class="wrap heroGrid">
 
       <div>
-        <!-- BIG logo at top (as you asked) -->
+        <!-- BIG logo at top -->
         <div class="heroLogoTop" aria-label="AP Digital Solutions logo">
           <div class="heroLogoTopInner">
-            <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="eager" decoding="async">
+            <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions" loading="eager" decoding="async">
           </div>
         </div>
 
-        <div class="kicker"><span class="dot" aria-hidden="true"></span> Premium digital builds for Jersey businesses</div>
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> Premium digital builds for small businesses worldwide</div>
         <h1>Look premium.<br>Convert more.</h1>
         <p class="sub">
           Premium websites, Shopify builds and WhatsApp automation — designed to turn visitors into enquiries and sales.
@@ -779,14 +743,14 @@
       <div class="logoHero" aria-label="Brand">
         <div class="logoCard">
           <div class="logoPlate">
-            <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="lazy" decoding="async">
+            <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions" loading="lazy" decoding="async">
           </div>
         </div>
         <div class="pills">
           <span class="pill">Websites</span>
           <span class="pill">Shopify Stores</span>
           <span class="pill">AI & Automation</span>
-          <span class="pill">Jersey</span>
+          <span class="pill">Global</span>
         </div>
       </div>
 
@@ -811,7 +775,7 @@
       </div>
 
       <div class="stackRow">
-        <a class="btn primary" href="#contact">Get pricing</a>
+        <a class="btn primary" href="#contact">Get started</a>
         <a class="btn" href="#services">What we build</a>
       </div>
     </div>
@@ -885,7 +849,7 @@
 
         <div class="deliverRight">
           <b>Ideal for:</b>
-          <span>Local services · shops · trades · personal brands · small businesses in Jersey.</span>
+          <span>Local services · shops · trades · personal brands · small businesses worldwide.</span>
           <div class="divider"></div>
           <b style="margin-top:12px">Goal:</b>
           <span>More trust + more messages + more sales.</span>
@@ -921,7 +885,7 @@
           <div class="step">
             <div class="n">1</div>
             <b>Quick brief</b>
-            <span>You tell us what you need + examples you like. We confirm scope & price.</span>
+            <span>You tell us what you need + examples you like. We confirm scope & next steps.</span>
           </div>
           <div class="step">
             <div class="n">2</div>
@@ -937,7 +901,7 @@
 
         <div class="stackRow">
           <a class="btn primary" href="#contact">Start now</a>
-          <a class="btn" href="#pricing">See pricing</a>
+          <a class="btn" href="#work">See work</a>
         </div>
       </div>
     </div>
@@ -955,10 +919,10 @@
       <div class="work">
         <a class="workItem" href="https://pethavenjersey.com/collections/all?page=1" target="_blank" rel="noopener noreferrer">
           <div class="thumb">
-            <img src="./assets/pethaven.jpg?v=210" alt="Pet Haven Jersey screenshot" loading="lazy" decoding="async"
+            <img src="./assets/pethaven.jpg?v=210" alt="Pet Haven screenshot" loading="lazy" decoding="async"
                  onerror="this.style.display='none'; this.parentElement.style.background='rgba(255,255,255,.07)';">
           </div>
-          <h4>Pet Haven Jersey</h4>
+          <h4>Pet Haven</h4>
           <p>Shopify store with clear structure and mobile-first layout.</p>
           <div class="meta"><span>Shopify</span><span>E-commerce</span><span>Mobile-first</span></div>
         </a>
@@ -999,104 +963,28 @@
         <div class="reviewCard">
           <div class="stars">★★★★★</div>
           <p>“The site looks premium and the messaging is much clearer. We started getting enquiries quickly — WhatsApp makes it so easy.”</p>
-          <div class="who"><div class="avatar">G</div><div><b>Local business owner</b><span>Jersey</span></div></div>
+          <div class="who"><div class="avatar">G</div><div><b>Business owner</b><span>Service industry</span></div></div>
         </div>
 
         <div class="reviewCard">
           <div class="stars">★★★★★</div>
           <p>“Fast delivery and very professional. The structure is clean and customers understand the offer immediately.”</p>
-          <div class="who"><div class="avatar">A</div><div><b>Service provider</b><span>Jersey</span></div></div>
+          <div class="who"><div class="avatar">A</div><div><b>Service provider</b><span>Small business</span></div></div>
         </div>
 
         <div class="reviewCard">
           <div class="stars">★★★★★</div>
           <p>“Great attention to detail. The website feels high-end and the conversion buttons are placed perfectly.”</p>
-          <div class="who"><div class="avatar">P</div><div><b>Shop owner</b><span>Jersey</span></div></div>
+          <div class="who"><div class="avatar">P</div><div><b>Shop owner</b><span>Retail</span></div></div>
         </div>
       </div>
 
       <div class="comingSoon">
         <b>Want real reviews faster?</b><br>
-        We can add a one-click review link + WhatsApp message template so clients can leave feedback in seconds.
+        We can add a one-click review link + WhatsApp template so clients can leave feedback in seconds.
         <div class="stackRow" style="margin-top:12px">
           <a class="btn primary" href="#contact">Ask how</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <div class="wrap">
-      <div class="head">
-        <div>
-          <h2>Pricing</h2>
-          <p>Lower entry pricing to help you start fast — with premium delivery.</p>
-        </div>
-      </div>
-
-      <div class="pricing">
-        <div class="price">
-          <h3>Starter</h3>
-          <p class="lead">High-impact landing page for quick enquiries.</p>
-          <div class="money">From £199</div>
-          <div class="small">Perfect for: local services, one offer, fast leads.</div>
-
-          <ul class="list">
-            <li><span class="tick" aria-hidden="true"></span> Premium hero + key sections</li>
-            <li><span class="tick" aria-hidden="true"></span> Mobile-first layout</li>
-            <li><span class="tick" aria-hidden="true"></span> WhatsApp conversion points</li>
-            <li><span class="tick" aria-hidden="true"></span> Basic SEO metadata</li>
-          </ul>
-
-          <div class="ctaRow">
-            <a class="btn primary" href="#contact">Get a quote</a>
-            <a class="btn" id="waStarter" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
-        </div>
-
-        <div class="price featured">
-          <div class="badge">Most popular</div>
-          <h3>Pro Website</h3>
-          <p class="lead">Full premium website built to convert.</p>
-          <div class="money">From £449</div>
-          <div class="small">Perfect for: credibility, enquiries, growth.</div>
-
-          <ul class="list">
-            <li><span class="tick" aria-hidden="true"></span> Outcomes + Services + Process</li>
-            <li><span class="tick" aria-hidden="true"></span> Work/portfolio section</li>
-            <li><span class="tick" aria-hidden="true"></span> Quote form + WhatsApp CTAs</li>
-            <li><span class="tick" aria-hidden="true"></span> Structure & performance checks</li>
-          </ul>
-
-          <div class="ctaRow">
-            <a class="btn primary" href="#contact">Get a quote</a>
-            <a class="btn" id="waPro" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
-        </div>
-
-        <div class="price">
-          <h3>Shopify Growth</h3>
-          <p class="lead">Store setup + structure + conversion fixes.</p>
-          <div class="money">From £649</div>
-          <div class="small">Perfect for: e-commerce and better sales.</div>
-
-          <ul class="list">
-            <li><span class="tick" aria-hidden="true"></span> Homepage + collections improved</li>
-            <li><span class="tick" aria-hidden="true"></span> Product layout & structure review</li>
-            <li><span class="tick" aria-hidden="true"></span> WhatsApp integration</li>
-            <li><span class="tick" aria-hidden="true"></span> Conversion-first improvement plan</li>
-          </ul>
-
-          <div class="ctaRow">
-            <a class="btn primary" href="#contact">Get a quote</a>
-            <a class="btn" id="waShopify" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="addons">
-        <b>Optional add-ons:</b> extra pages · booking/inquiry flows · AI chatbot · automation/integrations · content writing · logo + brand refresh.
-        <br><span style="color:rgba(238,242,255,.62)">We confirm scope and final price before starting.</span>
       </div>
     </div>
   </section>
@@ -1113,7 +1001,7 @@
       <div class="faq">
         <details>
           <summary>How fast can you deliver?</summary>
-          <p>It depends on scope, but most landing pages can be delivered quickly. Full websites and Shopify builds take longer. We confirm a clear timeline before starting.</p>
+          <p>It depends on scope, but landing pages can be delivered quickly. Full websites and Shopify builds take longer. We confirm a clear timeline before starting.</p>
         </details>
 
         <details>
@@ -1157,7 +1045,7 @@
           </div>
 
           <div class="tip">
-            <b>Pro tip:</b> Add your timeline + budget range for faster quoting.
+            <b>Pro tip:</b> Add your timeline + what success looks like (more leads, more sales, better trust).
           </div>
         </div>
 
@@ -1199,13 +1087,12 @@
             </div>
 
             <div style="margin-top:10px">
-              <label for="budget">Budget range (optional)</label>
+              <label for="budget">Budget (optional)</label>
               <select id="budget" name="budget">
                 <option value="">Not sure</option>
-                <option>£199–£399</option>
-                <option>£400–£700</option>
-                <option>£700–£1,200</option>
-                <option>£1,200+</option>
+                <option>Starter</option>
+                <option>Standard</option>
+                <option>Premium</option>
               </select>
             </div>
 
@@ -1231,8 +1118,8 @@
   <footer>
     <div class="wrap footerRow">
       <div class="footerBrand">
-        <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions Jersey" loading="lazy" decoding="async">
-        <small style="color:rgba(238,242,255,.72)">© <span id="year"></span> AP Digital Solutions Jersey</small>
+        <img src="./assets/logo-premium.png?v=210" alt="AP Digital Solutions" loading="lazy" decoding="async">
+        <small style="color:rgba(238,242,255,.72)">© <span id="year"></span> AP Digital Solutions</small>
       </div>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -1329,7 +1216,7 @@
     function setAllWaLinks(){
       const base = `https://wa.me/${WA_NUMBER}?text=`;
       const text = buildWhatsAppText();
-      ["waBtn","waInline","waCta","waStarter","waPro","waShopify"].forEach(id=>{
+      ["waBtn","waInline","waCta"].forEach(id=>{
         const el = document.getElementById(id);
         if(el) el.setAttribute("href", base + text);
       });
@@ -1358,7 +1245,7 @@
       const budget = safeVal("budget");
       const msg = safeVal("msg");
 
-      const subject = encodeURIComponent("Quote request — AP Digital Solutions Jersey");
+      const subject = encodeURIComponent("Quote request — AP Digital Solutions");
       const body = encodeURIComponent(
 `Name: ${name}
 WhatsApp: ${phone || "—"}
@@ -1375,4 +1262,4 @@ ${msg || "—"}
     });
   </script>
 </body>
-              </html>
+  </html>
