@@ -1,13 +1,26 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0B1020" />
 
-  <title>AP Digital Solutions | Premium Websites & Digital Growth</title>
-  <meta name="description" content="AP Digital Solutions builds premium, fast, conversion-focused websites that fit your brand — plus SEO, automations and WhatsApp-ready lead capture." />
+  <title>AP Digital Solutions | Premium Websites, SEO & WhatsApp Automations</title>
+  <meta name="description" content="Premium, fast, conversion-focused websites — plus SEO setup and WhatsApp-ready lead capture. Built for small & growing businesses." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://apdigitalsolutions.digital/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AP Digital Solutions | Premium Websites & Digital Growth" />
+  <meta property="og:description" content="Modern, fast websites built to convert — plus SEO setup and WhatsApp-ready lead capture." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
+
+  <!-- Favicons (you already have these at root) -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +32,7 @@
       --bg0:#070A12;
       --bg1:#0B1020;
       --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.03);
       --border: rgba(255,255,255,.12);
 
       --text:#EAF0FF;
@@ -27,10 +41,11 @@
       --accent:#2F7BFF;
       --accent2:#7C3AED;
       --good:#22C55E;
+      --warn:#F59E0B;
 
       --shadow: 0 18px 50px rgba(0,0,0,.45);
-      --radius: 20px;
-      --container: 1140px;
+      --radius: 22px;
+      --container: 1160px;
       --ease: cubic-bezier(.2,.8,.2,1);
     }
 
@@ -38,6 +53,7 @@
       --bg0:#F6F7FB;
       --bg1:#FFFFFF;
       --card: rgba(2,6,23,.05);
+      --card2: rgba(2,6,23,.03);
       --border: rgba(2,6,23,.10);
 
       --text:#0B1020;
@@ -64,7 +80,6 @@
 
     .container{width:min(var(--container), calc(100% - 40px));margin:0 auto}
 
-    /* Accessibility */
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{
       left:18px;top:14px;width:auto;height:auto;
@@ -74,7 +89,6 @@
     }
     :focus-visible{ outline: 3px solid rgba(47,123,255,.35); outline-offset: 3px; border-radius: 12px; }
 
-    /* Header */
     header{
       position:sticky;top:0;z-index:50;
       backdrop-filter: blur(14px);
@@ -88,7 +102,7 @@
       padding:14px 0;position:relative;
     }
     .brand{display:flex;align-items:center;gap:12px;min-width:190px}
-    .brand img{width:170px;height:auto}
+    .brand img{width:175px;height:auto}
 
     nav{
       display:flex;align-items:center;gap:8px;
@@ -98,7 +112,7 @@
     }
     nav a{
       padding:10px 14px;border-radius:999px;
-      font-weight:800;color:var(--muted);
+      font-weight:900;color:var(--muted);
       transition: transform .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
       white-space:nowrap;
     }
@@ -109,7 +123,6 @@
     }
 
     .actions{display:flex;align-items:center;gap:10px}
-
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 16px;border-radius:14px;
@@ -129,7 +142,6 @@
       border-color: var(--border);
       color: var(--text);
     }
-
     .iconbtn{
       width:44px;height:44px;border-radius:14px;
       border:1px solid var(--border);
@@ -140,13 +152,14 @@
     }
     .iconbtn:hover{transform:translateY(-1px);background: rgba(255,255,255,.06)}
 
-    /* Mobile menu */
     .m-toggle{display:none}
     .m-btn{display:none}
 
-    /* Hero */
-    .hero{padding:72px 0 40px}
-    .hero-grid{display:grid;grid-template-columns: 1.2fr .8fr;gap:26px;align-items:center}
+    section{padding:76px 0}
+
+    /* HERO */
+    .hero{padding:74px 0 44px}
+    .hero-grid{display:grid;grid-template-columns: 1.12fr .88fr;gap:18px;align-items:stretch}
 
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
@@ -154,23 +167,23 @@
       border:1px solid var(--border);
       background: rgba(255,255,255,.04);
       color:var(--muted);
-      font-weight:800;width:fit-content;margin-bottom:14px;
+      font-weight:900;width:fit-content;margin-bottom:14px;
     }
-
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--good);box-shadow:0 0 0 6px rgba(34,197,94,.14)}
     h1{
       margin:0 0 14px;
-      font-size: clamp(2.15rem, 4.0vw, 3.35rem);
-      letter-spacing:-0.04em;line-height:1.05;font-weight:900;
+      font-size: clamp(2.2rem, 4.2vw, 3.45rem);
+      letter-spacing:-0.045em;line-height:1.04;font-weight:900;
     }
-    .lead{margin:0 0 20px;color:var(--muted);font-size:1.08rem;max-width:60ch}
-    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-    .stats{display:flex;gap:10px;flex-wrap:wrap}
+    .lead{margin:0 0 18px;color:var(--muted);font-size:1.08rem;max-width:62ch}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 14px}
+    .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .pill{
       padding:10px 12px;border-radius:999px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.04);
       color:var(--muted);
-      font-weight:800;font-size:.95rem;
+      font-weight:900;font-size:.95rem;
     }
 
     .hero-card{
@@ -178,23 +191,32 @@
       background: linear-gradient(180deg, var(--card), rgba(255,255,255,.02));
       border-radius: var(--radius);
       padding:18px;box-shadow: var(--shadow);
+      display:flex;flex-direction:column;gap:12px;
     }
-    .hero-card h3{margin:0 0 10px;font-size:1.05rem}
+    .hero-card h3{margin:0;font-size:1.05rem}
     .list{margin:0;padding-left:18px;color:var(--muted)}
     .list li{margin:8px 0}
     .mini{
-      margin-top:12px;padding:12px;border-radius:16px;
+      padding:12px;border-radius:16px;
       border:1px solid var(--border);
       background: rgba(255,255,255,.03);
-      color:var(--muted);font-weight:800;font-size:.95rem;
+      color:var(--muted);font-weight:900;font-size:.95rem;
     }
 
-    /* Sections */
-    section{padding:70px 0}
-    .title{margin:0 0 10px;font-size: clamp(1.75rem, 2.6vw, 2.35rem);letter-spacing:-0.03em;text-align:center;font-weight:900}
-    .subtitle{margin:0 auto 42px;text-align:center;color:var(--muted);max-width:85ch}
+    .title{margin:0 0 10px;font-size: clamp(1.8rem, 2.8vw, 2.45rem);letter-spacing:-0.03em;text-align:center;font-weight:900}
+    .subtitle{margin:0 auto 42px;text-align:center;color:var(--muted);max-width:92ch}
 
-    /* Work */
+    /* TRUST BAR */
+    .trust{
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+      padding:14px 14px;border-radius: var(--radius);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+    .trust b{font-weight:900}
+    .trust span{color:var(--muted);font-weight:800}
+
+    /* WORK */
     .work-grid{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
     .work-card{
       border:1px solid var(--border);
@@ -209,18 +231,15 @@
       gap:14px;
       align-items:center;
     }
-    .work-top h3{margin:0 0 8px;font-size:1.35rem;letter-spacing:-0.02em}
-    .work-top p{margin:0 0 12px;color:var(--muted)}
+    .tag{display:inline-flex;align-items:center;gap:8px;font-weight:900;font-size:.92rem;margin-bottom:10px;color:var(--muted)}
+    .tag i{width:10px;height:10px;border-radius:999px;display:inline-block}
+    .tag .b{background:var(--accent);box-shadow:0 0 0 6px rgba(47,123,255,.12)}
+    .tag .g{background:var(--warn);box-shadow:0 0 0 6px rgba(245,158,11,.12)}
+    .tag .p{background:var(--accent2);box-shadow:0 0 0 6px rgba(124,58,237,.12)}
+    .tag .ok{background:var(--good);box-shadow:0 0 0 6px rgba(34,197,94,.12)}
 
-    .work-tag{display:inline-flex;align-items:center;gap:8px;font-weight:900;font-size:.92rem;margin-bottom:10px}
-    .work-tag span{
-      width:10px;height:10px;border-radius:999px;background: var(--accent);
-      display:inline-block;box-shadow:0 0 0 6px rgba(47,123,255,.12);
-    }
-    .work-tag.gold span{
-      background:#F59E0B;
-      box-shadow:0 0 0 6px rgba(245,158,11,.12);
-    }
+    .work-card h3{margin:0 0 8px;font-size:1.34rem;letter-spacing:-0.02em}
+    .work-card p{margin:0 0 12px;color:var(--muted)}
     .work-actions{display:flex;gap:10px;flex-wrap:wrap}
 
     .link{
@@ -261,8 +280,9 @@
       pointer-events:none;
     }
     .glow.purple{background: radial-gradient(closest-side, rgba(124,58,237,.22), transparent 70%)}
+    .glow.green{background: radial-gradient(closest-side, rgba(34,197,94,.18), transparent 70%)}
 
-    /* Services */
+    /* SERVICES / PROCESS */
     .grid3{display:grid;grid-template-columns: repeat(3, 1fr);gap:14px}
     .card{
       border:1px solid var(--border);
@@ -281,8 +301,57 @@
     }
     .card h3{margin:0 0 8px;font-size:1.12rem}
     .card p{margin:0;color:var(--muted)}
+    .steps{counter-reset: step}
+    .step .ico{background: rgba(124,58,237,.14);border-color: rgba(124,58,237,.25)}
+    .step .ico:before{counter-increment: step;content: counter(step);}
 
-    /* Social */
+    /* PACKAGES */
+    .pricing{display:grid;grid-template-columns: repeat(3, 1fr);gap:14px;align-items:stretch}
+    .plan{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .plan h3{margin:0 0 6px;font-size:1.22rem}
+    .plan p{margin:0 0 14px;color:var(--muted)}
+    .badge{
+      position:absolute;top:14px;right:14px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      font-weight:900;font-size:.85rem;color:var(--muted);
+    }
+    .features{margin:0;padding-left:18px;color:var(--muted);font-weight:800}
+    .features li{margin:8px 0}
+    .plan .btn{width:100%;margin-top:14px}
+    .plan.highlight{
+      border-color: rgba(47,123,255,.35);
+      background: linear-gradient(180deg, rgba(47,123,255,.14), rgba(255,255,255,.02));
+    }
+    .plan.highlight .badge{
+      color:white;border-color: rgba(255,255,255,.18);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+
+    /* FAQ */
+    .faq{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
+    details{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:14px 16px;
+    }
+    summary{
+      cursor:pointer;font-weight:900;list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0;color:var(--muted)}
+
+    /* SOCIAL */
     .social-grid{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
     .social-card{
       display:flex;align-items:center;gap:12px;
@@ -300,7 +369,7 @@
       background: rgba(47,123,255,.14);
     }
 
-    /* Contact */
+    /* CONTACT */
     .contact{
       border:1px solid var(--border);
       background: linear-gradient(180deg, rgba(47,123,255,.10), rgba(255,255,255,.02));
@@ -327,7 +396,6 @@
     textarea{min-height:120px;resize:vertical}
     .small{color:var(--muted);font-size:.92rem;margin:0}
 
-    /* Footer */
     footer{padding:34px 0;color:var(--muted)}
     .foot{
       display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
@@ -335,7 +403,7 @@
       padding-top:18px;
     }
 
-    /* WhatsApp button (no number visible on homepage) */
+    /* WhatsApp */
     .wa{
       position:fixed;
       right:18px;bottom:18px;
@@ -361,6 +429,8 @@
       .work-card{grid-template-columns: 1fr}
       .phone img{height:360px}
       .grid3{grid-template-columns: 1fr}
+      .pricing{grid-template-columns: 1fr}
+      .faq{grid-template-columns: 1fr}
       .social-grid{grid-template-columns: 1fr}
       .contact-grid{grid-template-columns: 1fr}
     }
@@ -383,6 +453,20 @@
       html[data-theme="light"] .m-toggle:checked ~ .nav nav{background: rgba(255,255,255,.96)}
     }
   </style>
+
+  <!-- Basic JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AP Digital Solutions",
+    "url": "https://apdigitalsolutions.digital/",
+    "sameAs": [
+      "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==",
+      "https://www.facebook.com/share/1Qt8EJayXB/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -399,7 +483,8 @@
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#services">Services</a>
-          <a href="#social">Social</a>
+          <a href="#packages">Packages</a>
+          <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -421,16 +506,17 @@
       <div class="container">
         <div class="hero-grid">
           <div class="reveal">
-            <div class="kicker">Premium websites • SEO-ready • Built to convert</div>
-            <h1>Web design that looks premium — and works like a sales machine.</h1>
+            <div class="kicker"><span class="dot"></span> Premium websites • SEO-ready • Built to convert</div>
+
+            <h1>Look premium online — and turn visitors into customers.</h1>
             <p class="lead">
-              AP Digital Solutions builds modern, fast and conversion-focused websites that fit your brand.
-              Perfect for small & growing businesses that want a professional online presence.
+              We design modern, fast websites that fit your brand, with clear calls-to-action and WhatsApp-ready lead capture.
+              Ideal for small & growing businesses that want more enquiries and better trust.
             </p>
 
             <div class="hero-cta">
               <a class="btn btn-primary" href="#work">View Work</a>
-              <a class="btn btn-ghost" href="#services">See Services</a>
+              <a class="btn btn-ghost" href="wa/">WhatsApp Us</a>
             </div>
 
             <div class="stats">
@@ -439,17 +525,26 @@
               <span class="pill">Apple-style UI</span>
               <span class="pill">Lead capture ready</span>
             </div>
+
+            <div class="trust" style="margin-top:16px">
+              <div><b>Built for</b> <span>service businesses, shops, professionals</span></div>
+              <div><b>Focus</b> <span>conversion + credibility</span></div>
+              <div><b>Delivery</b> <span>clean, fast, modern</span></div>
+            </div>
           </div>
 
           <aside class="hero-card reveal">
             <h3>What you get</h3>
             <ul class="list">
               <li>Custom design that matches your brand</li>
-              <li>Clear structure + strong calls-to-action</li>
+              <li>Clear structure + strong CTAs</li>
               <li>Performance + basic SEO setup</li>
               <li>WhatsApp-ready lead capture</li>
             </ul>
-            <div class="mini">Want automations (WhatsApp replies, forms → email/CRM)? We can add it.</div>
+            <div class="mini">
+              Want automations? We can add WhatsApp auto-replies, form routing, and lead tracking.
+            </div>
+            <a class="btn btn-primary" href="#packages">See Packages</a>
           </aside>
         </div>
       </div>
@@ -459,14 +554,14 @@
     <section id="work">
       <div class="container">
         <h2 class="title reveal">Selected work</h2>
-        <p class="subtitle reveal">Real projects, presented like a premium agency portfolio.</p>
+        <p class="subtitle reveal">A clean, premium portfolio that helps clients trust you instantly.</p>
 
         <div class="work-grid">
           <article class="work-card reveal">
-            <div class="work-top">
-              <div class="work-tag"><span></span> E-commerce</div>
+            <div>
+              <div class="tag"><i class="b"></i> E-commerce</div>
               <h3>Pet Haven</h3>
-              <p>Mobile-first shop layout, clean branding and product discovery built for conversions.</p>
+              <p>Mobile-first storefront design, product discovery, and a clean brand feel built for conversions.</p>
               <div class="work-actions">
                 <a class="link" href="https://pethavenjersey.com/" target="_blank" rel="noopener">View Live</a>
                 <a class="link ghost" href="#contact">Request similar</a>
@@ -475,17 +570,17 @@
             <div class="mockup">
               <div class="phone">
                 <div class="notch"></div>
-                <img src="assets/work-pethaven.jpg" alt="Pet Haven mobile preview" loading="lazy">
+                <img src="assets/work-pethaven.jpg" alt="Pet Haven mobile preview" loading="lazy" />
               </div>
               <div class="glow"></div>
             </div>
           </article>
 
           <article class="work-card reveal">
-            <div class="work-top">
-              <div class="work-tag gold"><span></span> Services</div>
+            <div>
+              <div class="tag"><i class="g"></i> Services</div>
               <h3>Harbour &amp; Home</h3>
-              <p>Trust-first layout with premium design — made to generate enquiries fast.</p>
+              <p>Trust-first layout with premium visuals, built to generate enquiries fast from mobile visitors.</p>
               <div class="work-actions">
                 <a class="link" href="https://harbourandhome.co/" target="_blank" rel="noopener">View Live</a>
                 <a class="link ghost" href="#contact">Request similar</a>
@@ -494,9 +589,45 @@
             <div class="mockup">
               <div class="phone">
                 <div class="notch"></div>
-                <img src="assets/work-harbourandhome.jpg" alt="Harbour & Home mobile preview" loading="lazy">
+                <img src="assets/work-harbourandhome.jpg" alt="Harbour & Home mobile preview" loading="lazy" />
               </div>
               <div class="glow purple"></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div>
+              <div class="tag"><i class="p"></i> Community</div>
+              <h3>AjudaTotal</h3>
+              <p>Clean, accessible layout designed to feel friendly, modern and easy to navigate across devices.</p>
+              <div class="work-actions">
+                <a class="link ghost" href="#contact">Request similar</a>
+              </div>
+            </div>
+            <div class="mockup">
+              <div class="phone">
+                <div class="notch"></div>
+                <img src="assets/ajudatotal.jpg" alt="AjudaTotal preview" loading="lazy" />
+              </div>
+              <div class="glow"></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div>
+              <div class="tag"><i class="ok"></i> Premium brand</div>
+              <h3>Catia Holistic</h3>
+              <p>Premium look & feel with calm spacing and strong trust signals — designed for bookings and enquiries.</p>
+              <div class="work-actions">
+                <a class="link ghost" href="#contact">Request similar</a>
+              </div>
+            </div>
+            <div class="mockup">
+              <div class="phone">
+                <div class="notch"></div>
+                <img src="assets/catia.jpg" alt="Catia Holistic preview" loading="lazy" />
+              </div>
+              <div class="glow green"></div>
             </div>
           </article>
         </div>
@@ -507,26 +638,128 @@
     <section id="services">
       <div class="container">
         <h2 class="title reveal">Services</h2>
-        <p class="subtitle reveal">Everything you need to look professional online — and turn visitors into customers.</p>
+        <p class="subtitle reveal">Everything you need to look professional online — and turn visitors into leads.</p>
 
         <div class="grid3">
           <div class="card reveal">
             <div class="ico">WD</div>
             <h3>Web Design & Build</h3>
-            <p>Premium websites built to match your brand — mobile-first and fast.</p>
+            <p>Premium websites that match your brand — mobile-first, fast, and structured for enquiries.</p>
           </div>
 
           <div class="card reveal">
             <div class="ico">UX</div>
             <h3>UX & Conversion</h3>
-            <p>Clear structure, CTAs, and layout that drives enquiries and bookings.</p>
+            <p>Clear sections, strong CTAs, and a layout that guides users to message or book.</p>
           </div>
 
           <div class="card reveal">
             <div class="ico">SEO</div>
             <h3>SEO & Performance</h3>
-            <p>Speed + metadata + best practices to help your site get found.</p>
+            <p>Fast load, metadata, indexing basics, and technical best practices that help you get found.</p>
           </div>
+        </div>
+
+        <div style="height:14px"></div>
+
+        <h2 class="title reveal" style="margin-top:0">How we work</h2>
+        <p class="subtitle reveal">A simple process clients understand — and it makes you look like a real agency.</p>
+
+        <div class="grid3 steps">
+          <div class="card reveal step">
+            <div class="ico"></div>
+            <h3>Discovery</h3>
+            <p>We define goals, pages, brand style and what success looks like (calls, messages, bookings).</p>
+          </div>
+          <div class="card reveal step">
+            <div class="ico"></div>
+            <h3>Build</h3>
+            <p>We design and build a premium site, focusing on speed, clarity and conversion.</p>
+          </div>
+          <div class="card reveal step">
+            <div class="ico"></div>
+            <h3>Launch</h3>
+            <p>We connect domain, add SEO basics, test everything on mobile, and go live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages">
+      <div class="container">
+        <h2 class="title reveal">Packages</h2>
+        <p class="subtitle reveal">Clear options make it easier for clients to say “yes”. (Prices by quote — no pressure.)</p>
+
+        <div class="pricing">
+          <div class="plan reveal">
+            <div class="badge">Best for starters</div>
+            <h3>Starter</h3>
+            <p>Clean one-page presence that looks professional and captures leads.</p>
+            <ul class="features">
+              <li>1-page premium layout</li>
+              <li>WhatsApp lead button</li>
+              <li>Basic SEO setup</li>
+              <li>Mobile-first design</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Get a quote</a>
+          </div>
+
+          <div class="plan highlight reveal">
+            <div class="badge">Most popular</div>
+            <h3>Business</h3>
+            <p>Multi-section site with strong structure, trust signals and conversion focus.</p>
+            <ul class="features">
+              <li>Multi-section / multi-page structure</li>
+              <li>Portfolio + testimonials area</li>
+              <li>SEO-ready + performance polish</li>
+              <li>Contact form setup (Formspree/Zoho)</li>
+            </ul>
+            <a class="btn btn-primary" href="#contact">Get a quote</a>
+          </div>
+
+          <div class="plan reveal">
+            <div class="badge">For growth</div>
+            <h3>Pro</h3>
+            <p>For brands that want scale: automations, tracking, and advanced lead capture.</p>
+            <ul class="features">
+              <li>Lead routing + automations</li>
+              <li>Tracking setup (basic)</li>
+              <li>Landing pages for campaigns</li>
+              <li>WhatsApp flows (optional)</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <h2 class="title reveal">FAQ</h2>
+        <p class="subtitle reveal">Answer objections before the client even asks.</p>
+
+        <div class="faq">
+          <details class="reveal">
+            <summary>Do you help with domain and email?</summary>
+            <p>Yes — we can connect your domain, set up business email, and help you log in on Gmail/Outlook.</p>
+          </details>
+
+          <details class="reveal">
+            <summary>Can I edit the website later?</summary>
+            <p>Yes. We can deliver a simple setup or manage updates for you — whichever you prefer.</p>
+          </details>
+
+          <details class="reveal">
+            <summary>Do you build for mobile?</summary>
+            <p>Always. Most visitors come from phones — everything is designed mobile-first.</p>
+          </details>
+
+          <details class="reveal">
+            <summary>Can you add WhatsApp automation?</summary>
+            <p>Yes. We can add WhatsApp-ready lead capture and optional automated replies / lead capture flows.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -566,23 +799,30 @@
 
           <div class="contact-grid">
             <div class="box">
-              <h3 style="margin:0 0 10px">Quick details</h3>
+              <h3 style="margin:0 0 10px">Fast reply</h3>
               <p class="small" style="margin:0 0 14px">
-                Share your business type, what you need, and any examples you like.
-              </p>
-              <p class="small">
-                Email: <strong>hello@apdigitalsolutions.digital</strong><br />
-                Instagram & Facebook available below.
+                Send the business type + what you want (new site / redesign / landing page). We’ll reply with a clear plan.
               </p>
 
-              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+              <p class="small" style="margin:0 0 14px">
+                Email: <strong>hello@apdigitalsolutions.digital</strong>
+              </p>
+
+              <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <a class="link" href="wa/">WhatsApp</a>
                 <a class="link" href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener">Instagram</a>
                 <a class="link" href="https://www.facebook.com/share/1Qt8EJayXB/" target="_blank" rel="noopener">Facebook</a>
+              </div>
+
+              <div class="mini" style="margin-top:14px">
+                Tip: If you want, we can also build a dedicated landing page for ads.
               </div>
             </div>
 
             <div class="box">
               <h3 style="margin:0 0 10px">Send a message</h3>
+
+              <!-- Replace action with Formspree/Zoho/Netlify when ready -->
               <form action="#" method="post">
                 <div>
                   <label for="name">Name</label>
@@ -594,10 +834,10 @@
                 </div>
                 <div>
                   <label for="msg">Message</label>
-                  <textarea id="msg" name="message" placeholder="New website / redesign / landing page / WhatsApp automation..." required></textarea>
+                  <textarea id="msg" name="message" placeholder="What do you need? New site, redesign, landing page, WhatsApp automation..." required></textarea>
                 </div>
                 <button class="btn btn-primary" type="submit">Send</button>
-                <p class="small">Tip: connect this form to Formspree / Netlify Forms / Zoho Forms.</p>
+                <p class="small">Connect this form to Formspree / Netlify Forms / Zoho Forms (I can set it up).</p>
               </form>
             </div>
           </div>
@@ -605,7 +845,7 @@
           <footer>
             <div class="foot">
               <p class="small" style="margin:0">© <span id="year"></span> AP Digital Solutions</p>
-              <p class="small" style="margin:0">Premium websites • Fast • SEO-ready</p>
+              <p class="small" style="margin:0">Premium websites • SEO-ready • WhatsApp lead capture</p>
             </div>
           </footer>
         </div>
@@ -623,7 +863,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Theme toggle
+    // Theme
     const html = document.documentElement;
     const btn = document.getElementById("themeBtn");
     const icon = document.getElementById("themeIcon");
@@ -641,7 +881,7 @@
       setTheme(current === "dark" ? "light" : "dark");
     });
 
-    // Reveal on scroll
+    // Reveal
     const els = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
@@ -654,4 +894,4 @@
     els.forEach(el=>io.observe(el));
   </script>
 </body>
-</html>
+  </html>
