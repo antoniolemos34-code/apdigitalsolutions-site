@@ -2,11 +2,25 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="0; url=https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%20%E2%80%94%20I%E2%80%99d%20like%20a%20free%20demo.%20Can%20you%20help%20me%3F" />
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Redirecting to WhatsApp…</title>
+  <meta http-equiv="refresh" content="0;url=/" />
+  <script>
+    (function () {
+      // Your WhatsApp number (UK) without spaces
+      var phone = "447700704591";
+
+      // Optional message from URL: /wa/?text=Hello...
+      var params = new URLSearchParams(window.location.search);
+      var text = params.get("text") || "Hi AP Digital Solutions, I’d like a free demo.";
+
+      // Use wa.me (opens app / web WhatsApp)
+      var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
+
+      window.location.replace(url);
+    })();
+  </script>
 </head>
-<body>
-  <p>Redirecting to WhatsApp…</p>
-</body>
+<body></body>
 </html>
