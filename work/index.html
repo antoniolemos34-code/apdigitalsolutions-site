@@ -2,183 +2,165 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#070b14" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#070A12" />
   <title>Work — AP Digital Solutions</title>
-  <meta name="description" content="Portfolio of AP Digital Solutions: premium websites, landing pages and automation." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://apdigitalsolutions.digital/work/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
   <style>
     :root{
-      --bg:#070b14; --text:rgba(255,255,255,.92); --muted:rgba(255,255,255,.70);
-      --panel:rgba(255,255,255,.07); --line:rgba(255,255,255,.12);
-      --brand:#39a9ff; --brand2:#7c4dff; --radius:22px; --max:1120px;
-      --shadow: 0 16px 54px rgba(0,0,0,.45);
+      --bg:#070A12; --text:#EAF0FF; --muted:rgba(234,240,255,.72);
+      --line:rgba(255,255,255,.10);
+      --card:rgba(255,255,255,.06);
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+      --radius:22px; --max:1120px;
+      --a1:#59C2FF; --a2:#7C5CFF; --a3:#00E3A9;
     }
     *{box-sizing:border-box}
     body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 500px at 20% -10%, rgba(57,169,255,.20), transparent 60%),
-        radial-gradient(900px 520px at 80% -5%, rgba(124,77,255,.18), transparent 60%),
-        linear-gradient(180deg, #050714, #070b14 55%, #050814);
+      margin:0; color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1100px 700px at 15% -10%, rgba(89,194,255,.20), transparent 60%),
+                  radial-gradient(900px 650px at 90% 10%, rgba(124,92,255,.18), transparent 55%),
+                  radial-gradient(900px 600px at 50% 120%, rgba(0,227,169,.14), transparent 55%),
+                  var(--bg);
     }
+    a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
     header{
       position:sticky; top:0; z-index:10;
       backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(5,7,20,.72), rgba(5,7,20,.35));
-      border-bottom:1px solid rgba(255,255,255,.08);
+      background: rgba(7,10,18,.55);
+      border-bottom:1px solid var(--line);
     }
-    .nav{display:flex; justify-content:space-between; align-items:center; padding:12px 0; gap:12px}
-    a{color:inherit}
-    .brand{display:flex; gap:12px; align-items:center; text-decoration:none}
+    .bar{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:12px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand img{height:34px; width:auto; display:block; filter: drop-shadow(0 10px 18px rgba(0,0,0,.55));}
     .badge{
-      width:44px; height:44px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.18);
-      background: radial-gradient(120% 120% at 30% 20%, rgba(57,169,255,.45), rgba(124,77,255,.25) 55%, rgba(255,255,255,.06));
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      display:grid; place-items:center;
+      padding:10px 12px; border-radius:999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      display:flex; align-items:center; gap:12px;
     }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      gap:10px; padding:11px 14px; border-radius:14px;
+      padding:11px 14px; border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.06);
-      text-decoration:none; font-weight:800;
+      font-weight:800; font-size:14px;
     }
-    .btn.primary{border:1px solid rgba(57,169,255,.35); background: linear-gradient(135deg, rgba(57,169,255,.32), rgba(124,77,255,.22));}
-    .hero{padding:28px 0 10px}
-    h1{margin:12px 0 8px; font-size: clamp(28px, 3.8vw, 44px); letter-spacing:-.6px}
-    .lead{margin:0; color:var(--muted); line-height:1.6; max-width:70ch}
-    .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; padding:18px 0 34px}
+    .btnPrimary{
+      border:none; color:#07101B;
+      background: linear-gradient(135deg, var(--a1), var(--a2));
+    }
+    main{padding:28px 0 36px}
+    h1{margin:0 0 8px; font-size:34px; letter-spacing:-.5px}
+    p{margin:0 0 16px; color:var(--muted); line-height:1.6}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+    }
     .card{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
       border-radius: var(--radius);
-      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: var(--card);
       box-shadow: var(--shadow);
-      display:flex; flex-direction:column;
-      min-height: 340px;
+      overflow:hidden;
     }
-    .shot{
-      height: 170px;
-      background: rgba(255,255,255,.04);
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      display:flex; align-items:center; justify-content:center;
-      color: rgba(255,255,255,.55);
-      font-weight:800;
+    .thumb{
+      aspect-ratio: 16/10;
+      width:100%;
+      object-fit: cover;
+      display:block;
+      background: rgba(255,255,255,.03);
     }
-    .shot img{width:100%; height:100%; object-fit:cover; display:block}
-    .body{padding:14px}
-    .body h3{margin:0 0 6px; font-size:16px}
-    .body p{margin:0; color:var(--muted); line-height:1.6; font-size:13px}
-    .meta{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
-    .tag{padding:7px 9px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.05); font-weight:800; font-size:12px; color:rgba(255,255,255,.78)}
-    .actions{padding:0 14px 14px; display:flex; gap:10px; margin-top:auto}
-    .actions a{flex:1}
-    footer{border-top:1px solid rgba(255,255,255,.08); padding:18px 0 26px; color:rgba(255,255,255,.60); font-weight:700; font-size:13px}
-    @media (max-width: 980px){ .grid{grid-template-columns:1fr} .card{min-height:auto} }
+    .content{padding:16px}
+    .title{font-size:16px; font-weight:900; margin:0 0 6px}
+    .desc{margin:0 0 12px; color:rgba(234,240,255,.72); font-size:14px; line-height:1.55}
+    .row{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      font-weight:800; font-size:12px; color:rgba(234,240,255,.72);
+    }
+    @media (max-width: 920px){ .grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <div class="nav">
-        <a class="brand" href="/" aria-label="AP Digital Solutions Home">
-          <span class="badge" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M6 16.5c1.7-2.8 4.2-4.2 7.8-4.2 1.6 0 3.2.3 4.6.9" stroke="rgba(255,255,255,.92)" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M6.4 8.2c1.9-1.7 3.9-2.6 6.2-2.6 2.1 0 4.1.7 6 2.1" stroke="rgba(255,255,255,.80)" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M12 19.2h.01" stroke="rgba(57,169,255,.95)" stroke-width="5" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <div style="line-height:1.05">
-            <div style="font-weight:900; font-size:14px;">AP Digital Solutions</div>
-            <div style="font-weight:700; font-size:12px; color:rgba(255,255,255,.55)">Portfolio</div>
+      <div class="bar">
+        <a class="badge brand" href="/" aria-label="Back to home">
+          <img src="/assets/logo-premium.png" alt="AP Digital Solutions logo">
+          <div style="line-height:1.1">
+            <div style="font-weight:900; font-size:14px">AP Digital Solutions</div>
+            <div style="font-size:12px; color:rgba(234,240,255,.70)">Work / Portfolio</div>
           </div>
         </a>
-        <a class="btn primary" href="/#contact">Get a free demo →</a>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="/">Home</a>
+          <a class="btn btnPrimary" href="/#contact">Get a free demo →</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="hero">
-      <h1>Work</h1>
-      <p class="lead">Highlighted projects and examples. If you like the style, we can build the same premium look for your business — fast.</p>
+  <main>
+    <div class="wrap">
+      <h1>Selected work</h1>
+      <p>Examples of clean, premium, mobile-first sites. (If an image doesn’t show, it’s 99% a filename/path issue — rename as suggested.)</p>
+
+      <div class="grid">
+        <article class="card">
+          <img class="thumb" src="/assets/work-harbourandhome.jpg" alt="Harbour & Home project preview">
+          <div class="content">
+            <div class="title">Harbour & Home Cleaning</div>
+            <p class="desc">Premium landing page with strong branding, mobile-first layout, and clear contact CTAs.</p>
+            <div class="row">
+              <span class="pill">Landing page</span><span class="pill">Branding</span><span class="pill">Lead capture</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="/assets/work-pethaven.jpg" alt="Pet Haven project preview">
+          <div class="content">
+            <div class="title">Pet Haven Store</div>
+            <p class="desc">Clean e-commerce style layout + product focus + simple structure for conversions.</p>
+            <div class="row">
+              <span class="pill">E-commerce</span><span class="pill">UI polish</span><span class="pill">Mobile-first</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="/assets/ajudatotal.jpg" alt="AjudaTotal project preview">
+          <div class="content">
+            <div class="title">AjudaTotal</div>
+            <p class="desc">Community-focused informational site with clear navigation and strong readability.</p>
+            <div class="row">
+              <span class="pill">Website</span><span class="pill">Content</span><span class="pill">UX</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="thumb" src="/assets/catia-coutinho.jpg" alt="Catia Coutinho Holistic project preview">
+          <div class="content">
+            <div class="title">Catia Coutinho Holistic</div>
+            <p class="desc">Elegant layout for a personal brand, focusing on trust and premium visual identity.</p>
+            <div class="row">
+              <span class="pill">Personal brand</span><span class="pill">Premium design</span><span class="pill">Trust</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-
-    <div class="grid">
-      <!-- 1 -->
-      <article class="card">
-        <div class="shot">
-          <!-- Se tiveres imagem: mete aqui -->
-          <img src="/assets/work-harbourandhome.jpg" alt="Harbour & Home Cleaning Services website preview" onerror="this.remove(); this.parentElement.textContent='Preview image missing (optional)';" />
-        </div>
-        <div class="body">
-          <h3>Harbour & Home Cleaning Services</h3>
-          <p>Clean, premium layout with strong hero, trust elements, and fast mobile experience.</p>
-          <div class="meta">
-            <span class="tag">Website</span><span class="tag">Mobile-first</span><span class="tag">Lead-focused</span>
-          </div>
-        </div>
-        <div class="actions">
-          <a class="btn" href="https://harbourandhome.co" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="/#contact">Build similar</a>
-        </div>
-      </article>
-
-      <!-- 2 -->
-      <article class="card">
-        <div class="shot">
-          <img src="/assets/work-pethaven.jpg" alt="Pet Haven website preview" onerror="this.remove(); this.parentElement.textContent='Preview image missing (optional)';" />
-        </div>
-        <div class="body">
-          <h3>Pet Haven (store concept)</h3>
-          <p>E-commerce ready style, product-first layout, and clear sections for collections.</p>
-          <div class="meta">
-            <span class="tag">E-commerce</span><span class="tag">Branding</span><span class="tag">UX</span>
-          </div>
-        </div>
-        <div class="actions">
-          <a class="btn" href="https://pethavenjersey.com/" target="_blank" rel="noopener">Open site</a>
-          <a class="btn" href="/#contact">Build similar</a>
-        </div>
-      </article>
-
-      <!-- 3 -->
-      <article class="card">
-        <div class="shot">
-          <img src="/assets/ajudatotal.jpg" alt="AjudaTotal preview" onerror="this.remove(); this.parentElement.textContent='Preview image missing (optional)';" />
-        </div>
-        <div class="body">
-          <h3>AjudaTotal</h3>
-          <p>Bilingual-friendly structure and clean content hierarchy with a modern UI.</p>
-          <div class="meta">
-            <span class="tag">Website</span><span class="tag">Content</span><span class="tag">Modern UI</span>
-          </div>
-        </div>
-        <div class="actions">
-          <a class="btn" href="#" onclick="alert('Add your live link here when ready.'); return false;">Open site</a>
-          <a class="btn" href="/#contact">Build similar</a>
-        </div>
-      </article>
-    </div>
-
-    <footer>
-      © <span id="y"></span> AP Digital Solutions • <a href="/" style="color:rgba(255,255,255,.78); text-decoration:none;">Home</a>
-    </footer>
   </main>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
