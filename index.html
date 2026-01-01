@@ -3,100 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Digital Solutions - Web Design & Digital Marketing</title>
-    <!-- Futuramente, aqui irás adicionar o link para o teu ficheiro CSS -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>AP Digital Solutions | Custom Web Design That Fits Your Brand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Estilos básicos para visualização. Serão movidos para um ficheiro CSS. */
-        body { font-family: sans-serif; margin: 0; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        header, footer { background-color: #f4f4f4; padding: 20px 0; text-align: center; }
-        .hero { text-align: center; padding: 80px 20px; }
-        .hero h1 { font-size: 2.5em; }
-        .hero p { font-size: 1.2em; }
-        .cta-button { background-color: #007bff; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        section { padding: 60px 0; }
-        h2 { text-align: center; margin-bottom: 40px; }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .portfolio-item img { width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px; }
-        .portfolio-item p { text-align: center; font-weight: bold; }
+        /* Reset e Estilos Base */
+        :root {
+            --primary-color: #007bff;
+            --dark-color: #1a1a1a;
+            --light-color: #f4f4f4;
+            --text-color: #333;
+            --white-color: #fff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            color: var(--text-color);
+            background-color: var(--white-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 80px 0;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+            font-weight: 700;
+        }
+        h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: var(--dark-color); }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 60px; color: var(--dark-color); }
+        a { text-decoration: none; color: var(--primary-color); }
+
+        /* Header */
+        .main-header {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main-header img { max-width: 180px; }
+        .main-nav a { margin-left: 20px; font-weight: 700; }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto 30px; }
+        .cta-primary {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            padding: 15px 35px;
+            border-radius: 5px;
+            font-weight: 700;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .cta-primary:hover { transform: translateY(-3px); }
+
+        /* Portfolio Section */
+        #portfolio { background-color: var(--light-color); }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .portfolio-item:nth-child(odd) .portfolio-image { order: 2; }
+        .portfolio-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .portfolio-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .portfolio-image img:hover { transform: scale(1.05); }
+        .portfolio-description h3 { font-size: 1.8rem; }
+        .portfolio-description .category { font-weight: bold; color: var(--primary-color); display: block; margin-bottom: 10px; }
+        .portfolio-description .testimonial { font-style: italic; margin-top: 20px; border-left: 3px solid var(--primary-color); padding-left: 15px; }
+
+        /* Footer */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: 40px 0;
+        }
     </style>
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container">
             <a href="/" title="AP Digital Solutions">
-                <!-- Usando o logo que já tens no repositório -->
-                <img src="assets/logo-premium.png" alt="AP Digital Solutions Logo" style="max-width: 200px;">
+                <img src="assets/logo-premium.png" alt="AP Digital Solutions Logo">
             </a>
+            <nav class="main-nav">
+                <a href="#portfolio">Work</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Professional Websites & Online Stores That Drive Growth.</h1>
-            <p>We build custom digital experiences for small and medium-sized businesses. From web design to SEO, we turn your vision into reality.</p>
-            <a href="#contact" class="cta-button">Get a Free Quote</a>
+            <div class="container">
+                <h1>We Build Digital Presences That Perfectly Fit Your Brand.</h1>
+                <p>From sleek corporate sites to warm, community-focused platforms, we adapt our design to tell your unique story.</p>
+                <a href="#portfolio" class="cta-primary">View Our Work</a>
+            </div>
         </section>
 
-        <!-- Secção de Portfólio - A mais importante! -->
         <section id="portfolio">
             <div class="container">
-                <h2>Our Recent Work</h2>
-                <p style="text-align: center; margin-bottom: 40px;">We are proud of the results we deliver. Here are some of the businesses we've helped to succeed online.</p>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <a href="https://harbourandhome.co/" target="_blank">
-                            <!-- Assumindo que terás uma imagem chamada "harbour.jpg" -->
-                            <img src="assets/ajudatotal.jpg" alt="Screenshot of the Harbour & Home website">
-                        </a>
-                        <p>Harbour & Home</p>
+                <h2>Our Work, Your Success Story</h2>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a href="https://harbourandhome.co/" target="_blank"><img src="assets/ajudatotal.jpg" alt="Harbour & Home Project"></a>
                     </div>
-                    <div class="portfolio-item">
-                        <a href="https://ajudatotal.com/" target="_blank">
-                            <img src="assets/ajudatotal.jpg" alt="Screenshot of the Ajuda Total website">
-                        </a>
-                        <p>Ajuda Total</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <a href="https://catiacoutinhoholistica.com/" target="_blank">
-                            <img src="assets/catia.jpg" alt="Screenshot of the Cátia Coutinho Holística website">
-                        </a>
-                        <p>Cátia Coutinho Holística</p>
-                    </div>
-                    <div class="portfolio-item">
-                        <a href="https://pethavenjersey.com/" target="_blank">
-                            <img src="assets/pethaven.jpg" alt="Screenshot of the Pet Haven Jersey website">
-                        </a>
-                        <p>Pet Haven Jersey</p>
+                    <div class="portfolio-description">
+                        <span class="category">Real Estate & Design</span>
+                        <h3>Harbour & Home</h3>
+                        <p>This client needed a sophisticated and elegant platform to showcase high-end properties. We delivered a clean, image-focused design that exudes luxury.</p>
+                        <p class="testimonial">"The new website perfectly captures our brand's essence. The feedback has been amazing!" - [Client Name]</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Secção de Serviços (simplificada por agora) -->
-        <section id="services" style="background-color: #f9f9f9;">
-            <div class="container">
-                <h2>Our Services</h2>
-                <!-- Aqui podemos detalhar mais os serviços no futuro -->
-                <p style="text-align: center;">Web Design & Development | SEO & Performance | Social Media Management</p>
-            </div>
-        </section>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                         <a href="https://pethavenjersey.com/" target="_blank"><img src="assets/pethaven.jpg" alt="Pet Haven Jersey Project"></a>
+                    </div>
+                    <div class="portfolio-description">
+                        <span class="category">Pet Services & Community</span>
+                        <h3>Pet Haven Jersey</h3>
+                        <p>The goal was to create a warm, trustworthy, and professional site for pet owners. We focused on easy navigation and a friendly design to build community trust.</p>
+                        <p class="testimonial">"Our bookings increased, and clients constantly praise how easy to use the new website is." - [Client Name]</p>
+                    </div>
+                </div>
 
-        <!-- Secção de Contacto (simplificada por agora) -->
-        <section id="contact">
-            <div class="container">
-                <h2>Ready to Start Your Project?</h2>
-                <p style="text-align: center;">Contact us today for a free, no-obligation quote.</p>
-                <!-- Formulário de contacto será adicionado aqui -->
+                 <!-- Adicionar aqui os outros 2 projetos seguindo a mesma estrutura -->
+
             </div>
         </section>
+        
+        <!-- As secções de Serviços, Sobre e Contacto virão aqui -->
+
     </main>
 
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2026 AP Digital Solutions. All rights reserved.</p>
+            <p>&copy; 2026 AP Digital Solutions. Let's build something great together.</p>
         </div>
     </footer>
 
