@@ -3,163 +3,249 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#070A12" />
-  <title>Work — AP Digital Solutions</title>
+  <meta name="theme-color" content="#0b0f18" />
+  <title>Work / Portfolio — AP Digital Solutions</title>
+
+  <meta name="description" content="Selected work by AP Digital Solutions — premium websites, clean layouts, strong UX and lead-focused design." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://apdigitalsolutions.digital/work/" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
   <style>
     :root{
-      --bg:#070A12; --text:#EAF0FF; --muted:rgba(234,240,255,.72);
-      --line:rgba(255,255,255,.10);
-      --card:rgba(255,255,255,.06);
-      --shadow:0 18px 60px rgba(0,0,0,.45);
-      --radius:22px; --max:1120px;
-      --a1:#59C2FF; --a2:#7C5CFF; --a3:#00E3A9;
+      --bg:#070a12;
+      --panel:rgba(255,255,255,.06);
+      --stroke:rgba(255,255,255,.10);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --muted2:rgba(255,255,255,.55);
+      --blue:#63a5ff;
+      --blue2:#7c4dff;
+      --shadow: 0 20px 60px rgba(0,0,0,.55);
+      --radius: 22px;
+      --max: 1120px;
     }
     *{box-sizing:border-box}
     body{
-      margin:0; color:var(--text);
+      margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: radial-gradient(1100px 700px at 15% -10%, rgba(89,194,255,.20), transparent 60%),
-                  radial-gradient(900px 650px at 90% 10%, rgba(124,92,255,.18), transparent 55%),
-                  radial-gradient(900px 600px at 50% 120%, rgba(0,227,169,.14), transparent 55%),
-                  var(--bg);
+      color:var(--text);
+      background:
+        radial-gradient(1000px 500px at 20% 10%, rgba(99,165,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 75% 20%, rgba(124,77,255,.16), transparent 55%),
+        linear-gradient(180deg, #050611 0%, #070a12 35%, #050611 100%);
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
-    header{
-      position:sticky; top:0; z-index:10;
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+    .glass{
+      background:var(--panel);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
       backdrop-filter: blur(14px);
-      background: rgba(7,10,18,.55);
-      border-bottom:1px solid var(--line);
+      -webkit-backdrop-filter: blur(14px);
     }
-    .bar{display:flex; align-items:center; justify-content:space-between; padding:14px 0; gap:12px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .brand img{height:34px; width:auto; display:block; filter: drop-shadow(0 10px 18px rgba(0,0,0,.55));}
-    .badge{
-      padding:10px 12px; border-radius:999px;
-      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+
+    .top{
+      position:sticky; top:0; z-index:999;
+      padding:14px 0;
+      background: linear-gradient(180deg, rgba(7,10,18,.92) 0%, rgba(7,10,18,.60) 60%, rgba(7,10,18,0) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .brand{
       display:flex; align-items:center; gap:12px;
+      padding:10px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
     }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:11px 14px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      font-weight:800; font-size:14px;
+    .logo{width:34px;height:34px;border-radius:10px; overflow:hidden; background:rgba(255,255,255,.06)}
+    .logo img{width:100%;height:100%;object-fit:contain;display:block}
+    .brandText strong{display:block;font-size:14px}
+    .brandText span{display:block;font-size:12px;color:var(--muted2);margin-top:2px}
+    .navlinks{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      color:rgba(255,255,255,.78);
+      font-size:14px;
     }
-    .btnPrimary{
-      border:none; color:#07101B;
-      background: linear-gradient(135deg, var(--a1), var(--a2));
+    .pill:hover{background:rgba(255,255,255,.08)}
+    .cta{
+      background: linear-gradient(90deg, rgba(99,165,255,.95), rgba(124,77,255,.88));
+      color:#071018;
+      font-weight:700;
+      border-color: rgba(255,255,255,.12);
     }
-    main{padding:28px 0 36px}
-    h1{margin:0 0 8px; font-size:34px; letter-spacing:-.5px}
-    p{margin:0 0 16px; color:var(--muted); line-height:1.6}
+
+    header{padding:34px 0 16px}
+    h1{margin:0;font-size:44px;letter-spacing:-.6px}
+    p{margin:10px 0 0;color:var(--muted);line-height:1.6;max-width:70ch}
+
     .grid{
       display:grid;
       grid-template-columns: repeat(2, 1fr);
       gap:14px;
+      padding:16px 0 44px;
     }
-    .card{
-      border-radius: var(--radius);
-      border:1px solid rgba(255,255,255,.12);
-      background: var(--card);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
+    @media (max-width: 900px){ .grid{grid-template-columns:1fr} }
+
+    .card{padding:16px}
     .thumb{
-      aspect-ratio: 16/10;
       width:100%;
-      object-fit: cover;
-      display:block;
-      background: rgba(255,255,255,.03);
-    }
-    .content{padding:16px}
-    .title{font-size:16px; font-weight:900; margin:0 0 6px}
-    .desc{margin:0 0 12px; color:rgba(234,240,255,.72); font-size:14px; line-height:1.55}
-    .row{display:flex; gap:10px; flex-wrap:wrap}
-    .pill{
-      padding:8px 10px; border-radius:999px;
+      border-radius:16px;
       border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      font-weight:800; font-size:12px; color:rgba(234,240,255,.72);
+      background:rgba(255,255,255,.04);
+      overflow:hidden;
+      aspect-ratio: 16/9;
     }
-    @media (max-width: 920px){ .grid{grid-template-columns:1fr} }
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.96}
+    .meta{margin-top:12px}
+    .meta strong{display:block;font-size:16px}
+    .meta span{display:block;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.5}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{
+      padding:8px 10px;border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      font-size:12px;color:rgba(255,255,255,.70);
+    }
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
+    .btn{
+      padding:10px 14px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      font-weight:650;
+    }
+    .btn:hover{background:rgba(255,255,255,.09)}
+    .btnPrimary{
+      background: linear-gradient(90deg, rgba(99,165,255,.95), rgba(124,77,255,.88));
+      color:#08111c;
+    }
   </style>
 </head>
+
 <body>
-  <header>
+  <div class="top">
     <div class="wrap">
-      <div class="bar">
-        <a class="badge brand" href="/" aria-label="Back to home">
-          <img src="/assets/logo-premium.png" alt="AP Digital Solutions logo">
-          <div style="line-height:1.1">
-            <div style="font-weight:900; font-size:14px">AP Digital Solutions</div>
-            <div style="font-size:12px; color:rgba(234,240,255,.70)">Work / Portfolio</div>
-          </div>
+      <div class="nav">
+        <a class="brand" href="/" aria-label="Back to home">
+          <span class="logo" aria-hidden="true">
+            <img src="/assets/logo-premium.png" alt="AP Digital Solutions logo" onerror="this.style.display='none'">
+          </span>
+          <span class="brandText">
+            <strong>AP Digital Solutions</strong>
+            <span>Work / Portfolio</span>
+          </span>
         </a>
-        <div style="display:flex; gap:10px; flex-wrap:wrap">
-          <a class="btn" href="/">Home</a>
-          <a class="btn btnPrimary" href="/#contact">Get a free demo →</a>
+
+        <div class="navlinks">
+          <a class="pill" href="/">Home</a>
+          <a class="pill" href="/#services">Services</a>
+          <a class="pill" href="/#contact">Contact</a>
+          <a class="pill cta" href="/#contact">Get a free demo →</a>
         </div>
       </div>
     </div>
-  </header>
+  </div>
 
-  <main>
+  <header>
     <div class="wrap">
       <h1>Selected work</h1>
-      <p>Examples of clean, premium, mobile-first sites. (If an image doesn’t show, it’s 99% a filename/path issue — rename as suggested.)</p>
+      <p>Examples of premium layouts, strong readability, clear CTAs and mobile-first design. Want something similar? Message me and I’ll propose a clean plan.</p>
+    </div>
+  </header>
 
-      <div class="grid">
-        <article class="card">
-          <img class="thumb" src="/assets/work-harbourandhome.jpg" alt="Harbour & Home project preview">
-          <div class="content">
-            <div class="title">Harbour & Home Cleaning</div>
-            <p class="desc">Premium landing page with strong branding, mobile-first layout, and clear contact CTAs.</p>
-            <div class="row">
-              <span class="pill">Landing page</span><span class="pill">Branding</span><span class="pill">Lead capture</span>
-            </div>
+  <main class="wrap">
+    <div class="grid">
+      <!-- Harbour -->
+      <article id="harbour" class="card glass">
+        <div class="thumb">
+          <img src="/work-harbourandhome.jpg" alt="Harbour & Home preview"
+               onerror="this.onerror=null;this.src='/assets/work-harbourandhome.jpg';">
+        </div>
+        <div class="meta">
+          <strong>Harbour & Home</strong>
+          <span>Service website with premium hero, clear sections and strong contact CTAs.</span>
+          <div class="tags">
+            <span class="tag">Service website</span>
+            <span class="tag">Lead-focused</span>
+            <span class="tag">Premium layout</span>
           </div>
-        </article>
+          <div class="actions">
+            <a class="btn btnPrimary" target="_blank" rel="noopener" href="https://harbourandhome.co/">Visit site</a>
+            <a class="btn" href="/#contact">Request similar</a>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <img class="thumb" src="/assets/work-pethaven.jpg" alt="Pet Haven project preview">
-          <div class="content">
-            <div class="title">Pet Haven Store</div>
-            <p class="desc">Clean e-commerce style layout + product focus + simple structure for conversions.</p>
-            <div class="row">
-              <span class="pill">E-commerce</span><span class="pill">UI polish</span><span class="pill">Mobile-first</span>
-            </div>
+      <!-- Pet Haven -->
+      <article id="pethaven" class="card glass">
+        <div class="thumb">
+          <img src="/work-pethaven.jpg" alt="Pet Haven preview"
+               onerror="this.onerror=null;this.src='/assets/work-pethaven.jpg';">
+        </div>
+        <div class="meta">
+          <strong>Pet Haven</strong>
+          <span>Storefront concept with clean hierarchy, product focus and clear navigation.</span>
+          <div class="tags">
+            <span class="tag">E-commerce</span>
+            <span class="tag">UX</span>
+            <span class="tag">Conversion</span>
           </div>
-        </article>
+          <div class="actions">
+            <a class="btn btnPrimary" target="_blank" rel="noopener" href="https://pethavenjersey.com/">Visit site</a>
+            <a class="btn" href="/#contact">Request similar</a>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <img class="thumb" src="/assets/ajudatotal.jpg" alt="AjudaTotal project preview">
-          <div class="content">
-            <div class="title">AjudaTotal</div>
-            <p class="desc">Community-focused informational site with clear navigation and strong readability.</p>
-            <div class="row">
-              <span class="pill">Website</span><span class="pill">Content</span><span class="pill">UX</span>
-            </div>
+      <!-- AjudaTotal -->
+      <article id="ajudatotal" class="card glass">
+        <div class="thumb">
+          <img src="/ajudatotal.jpg" alt="AjudaTotal preview"
+               onerror="this.onerror=null;this.src='/assets/ajudatotal.jpg';">
+        </div>
+        <div class="meta">
+          <strong>AjudaTotal</strong>
+          <span>Community-focused informational site with clear navigation and strong readability.</span>
+          <div class="tags">
+            <span class="tag">Website</span>
+            <span class="tag">Content</span>
+            <span class="tag">UX</span>
           </div>
-        </article>
+          <div class="actions">
+            <a class="btn btnPrimary" href="/#contact">Build something like this</a>
+          </div>
+        </div>
+      </article>
 
-        <article class="card">
-          <img class="thumb" src="/assets/catia-coutinho.jpg" alt="Catia Coutinho Holistic project preview">
-          <div class="content">
-            <div class="title">Catia Coutinho Holistic</div>
-            <p class="desc">Elegant layout for a personal brand, focusing on trust and premium visual identity.</p>
-            <div class="row">
-              <span class="pill">Personal brand</span><span class="pill">Premium design</span><span class="pill">Trust</span>
-            </div>
+      <!-- Catia -->
+      <article id="catia" class="card glass">
+        <div class="thumb">
+          <img src="/catia-coutinho.jpg" alt="Catia Coutinho preview"
+               onerror="this.onerror=null;this.src='/assets/catia.jpg';">
+        </div>
+        <div class="meta">
+          <strong>Catia Coutinho Holistic</strong>
+          <span>Elegant layout for a personal brand, focusing on trust and premium visual identity.</span>
+          <div class="tags">
+            <span class="tag">Personal brand</span>
+            <span class="tag">Premium design</span>
+            <span class="tag">Trust</span>
           </div>
-        </article>
-      </div>
+          <div class="actions">
+            <a class="btn btnPrimary" href="/#contact">Build something like this</a>
+          </div>
+        </div>
+      </article>
     </div>
   </main>
 </body>
