@@ -1,176 +1,802 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP Digital Solutions | Custom Web Design That Fits Your Brand</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* Reset e Estilos Base */
-        :root {
-            --primary-color: #007bff;
-            --dark-color: #1a1a1a;
-            --light-color: #f4f4f4;
-            --text-color: #333;
-            --white-color: #fff;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            color: var(--text-color);
-            background-color: var(--white-color);
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        section {
-            padding: 80px 0;
-        }
-        h1, h2, h3 {
-            margin-top: 0;
-            font-weight: 700;
-        }
-        h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: var(--dark-color); }
-        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 60px; color: var(--dark-color); }
-        a { text-decoration: none; color: var(--primary-color); }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0B1020" />
 
-        /* Header */
-        .main-header {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .main-header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .main-header img { max-width: 180px; }
-        .main-nav a { margin-left: 20px; font-weight: 700; }
+  <title>AP Digital Solutions | Premium Websites & Digital Growth</title>
+  <meta name="description" content="AP Digital Solutions builds premium, fast, conversion-focused websites that fit your brand — plus SEO, automations, and WhatsApp-ready lead capture." />
+  <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 100px 0;
-        }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 20px auto 30px; }
-        .cta-primary {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            padding: 15px 35px;
-            border-radius: 5px;
-            font-weight: 700;
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-        .cta-primary:hover { transform: translateY(-3px); }
+  <!-- Open Graph -->
+  <meta property="og:title" content="AP Digital Solutions" />
+  <meta property="og:description" content="Premium websites that fit your brand. Fast, modern and built to convert." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
 
-        /* Portfolio Section */
-        #portfolio { background-color: var(--light-color); }
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .portfolio-item:nth-child(odd) .portfolio-image { order: 2; }
-        .portfolio-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 80px;
-        }
-        .portfolio-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .portfolio-image img:hover { transform: scale(1.05); }
-        .portfolio-description h3 { font-size: 1.8rem; }
-        .portfolio-description .category { font-weight: bold; color: var(--primary-color); display: block; margin-bottom: 10px; }
-        .portfolio-description .testimonial { font-style: italic; margin-top: 20px; border-left: 3px solid var(--primary-color); padding-left: 15px; }
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AP Digital Solutions" />
+  <meta name="twitter:description" content="Premium websites that fit your brand. Fast, modern and built to convert." />
+  <meta name="twitter:image" content="assets/og-cover.jpg" />
 
-        /* Footer */
-        .main-footer {
-            background-color: var(--dark-color);
-            color: var(--white-color);
-            text-align: center;
-            padding: 40px 0;
-        }
-    </style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Favicons (keep these in repo root like you already do) -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"AP Digital Solutions",
+    "url":"https://apdigitalsolutions.digital/",
+    "logo":"https://apdigitalsolutions.digital/assets/logo-premium.png",
+    "sameAs":[],
+    "description":"Premium websites and digital solutions: web design, SEO, automations and WhatsApp-ready lead capture."
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg0:#070A12;
+      --bg1:#0B1020;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --border: rgba(255,255,255,.12);
+
+      --text:#EAF0FF;
+      --muted: rgba(234,240,255,.72);
+
+      --accent:#2F7BFF;
+      --accent2:#7C3AED;
+      --good:#22C55E;
+
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --radius: 20px;
+      --container: 1140px;
+
+      --ease: cubic-bezier(.2,.8,.2,1);
+    }
+
+    /* Light mode variables (activated by [data-theme="light"]) */
+    html[data-theme="light"]{
+      --bg0:#F6F7FB;
+      --bg1:#FFFFFF;
+      --card: rgba(2,6,23,.05);
+      --card2: rgba(2,6,23,.07);
+      --border: rgba(2,6,23,.10);
+
+      --text:#0B1020;
+      --muted: rgba(11,16,32,.70);
+
+      --shadow: 0 16px 44px rgba(2,6,23,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background: radial-gradient(1200px 700px at 10% -10%, rgba(47,123,255,.35), transparent 60%),
+                  radial-gradient(900px 600px at 90% 0%, rgba(124,58,237,.28), transparent 60%),
+                  linear-gradient(180deg, var(--bg0), var(--bg1));
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--container), calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    /* Accessibility */
+    .skip{
+      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+    }
+    .skip:focus{
+      left:18px;top:14px;width:auto;height:auto;
+      padding:10px 14px;border-radius:12px;
+      background:var(--bg1);border:1px solid var(--border);
+      box-shadow:var(--shadow);z-index:9999;
+    }
+    :focus-visible{ outline: 3px solid rgba(47,123,255,.35); outline-offset: 3px; border-radius: 12px; }
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(10,14,26,.72), rgba(10,14,26,.42));
+      border-bottom:1px solid var(--border);
+    }
+    html[data-theme="light"] header{
+      background: rgba(255,255,255,.72);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;min-width:190px;
+    }
+    .brand img{width:170px;height:auto}
+    nav{
+      display:flex;align-items:center;gap:8px;
+      padding:6px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: 999px;
+    }
+    nav a{
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:700;
+      color:var(--muted);
+      transition: transform .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
+      white-space:nowrap;
+    }
+    nav a:hover{
+      background: rgba(47,123,255,.18);
+      color:var(--text);
+      transform: translateY(-1px);
+    }
+    .actions{display:flex;align-items:center;gap:10px}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:14px;
+      font-weight:800;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition: transform .2s var(--ease), filter .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+      user-select:none;
+    }
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.03)}
+    .btn-primary{
+      color:white;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 18px 40px rgba(47,123,255,.20);
+    }
+    .btn-ghost{
+      background: rgba(255,255,255,.04);
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .iconbtn{
+      width:44px;height:44px;border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      display:inline-flex;align-items:center;justify-content:center;
+      cursor:pointer;
+      transition: transform .2s var(--ease), background .2s var(--ease);
+    }
+    .iconbtn:hover{transform:translateY(-1px);background: rgba(255,255,255,.06)}
+
+    /* Mobile menu */
+    .m-toggle{display:none}
+    .m-btn{display:none}
+
+    /* Hero */
+    .hero{padding:72px 0 40px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:26px;
+      align-items:center;
+    }
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-weight:700;
+      width:fit-content;
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0 0 14px;
+      font-size: clamp(2.15rem, 4.0vw, 3.35rem);
+      letter-spacing:-0.04em;
+      line-height:1.05;
+      font-weight:900;
+    }
+    .lead{
+      margin:0 0 20px;
+      color:var(--muted);
+      font-size:1.08rem;
+      max-width:60ch;
+    }
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+    .stats{
+      display:flex;gap:10px;flex-wrap:wrap;
+    }
+    .pill{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-weight:700;
+      font-size:.95rem;
+    }
+
+    .hero-card{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .hero-card h3{margin:0 0 10px;font-size:1.05rem}
+    .list{margin:0;padding-left:18px;color:var(--muted)}
+    .list li{margin:8px 0}
+    .mini{
+      margin-top:12px;
+      padding:12px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:700;
+      font-size:.95rem;
+    }
+
+    /* Sections */
+    section{padding:70px 0}
+    .title{
+      margin:0 0 10px;
+      font-size: clamp(1.75rem, 2.6vw, 2.35rem);
+      letter-spacing:-0.03em;
+      text-align:center;
+      font-weight:900;
+    }
+    .subtitle{
+      margin:0 auto 42px;
+      text-align:center;
+      color:var(--muted);
+      max-width:80ch;
+    }
+
+    /* Work */
+    .work-wrap{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .projects{display:grid;gap:16px}
+    .project{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      align-items:center;
+      padding:16px;
+      border-radius: calc(var(--radius) - 6px);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      transition: transform .25s var(--ease), background .25s var(--ease);
+    }
+    .project:hover{transform: translateY(-2px);background: rgba(255,255,255,.045)}
+    .project:nth-child(even) .media{order:2}
+    .media{
+      border-radius: 16px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.15);
+    }
+    .media img{
+      width:100%;
+      height: 320px;
+      object-fit: cover;
+      transition: transform .35s var(--ease);
+    }
+    .project:hover .media img{transform: scale(1.04)}
+    .tag{
+      display:inline-flex;align-items:center;gap:8px;
+      color: rgba(234,240,255,.85);
+      font-weight:900;
+      font-size:.9rem;
+      margin-bottom:8px;
+    }
+    html[data-theme="light"] .tag{color: rgba(11,16,32,.86)}
+    .tag b{
+      width:8px;height:8px;border-radius:999px;background: var(--accent);
+      display:inline-block;
+    }
+    .project h3{margin:0 0 8px;font-size:1.28rem;letter-spacing:-0.02em}
+    .project p{margin:0 0 12px;color:var(--muted)}
+    .links{display:flex;gap:10px;flex-wrap:wrap}
+    .link{
+      padding:10px 12px;border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:800;
+      transition: transform .2s var(--ease), background .2s var(--ease);
+    }
+    .link:hover{transform: translateY(-1px);background: rgba(47,123,255,.16)}
+
+    /* Services */
+    .grid3{display:grid;grid-template-columns: repeat(3, 1fr);gap:14px}
+    .card{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.20);
+    }
+    html[data-theme="light"] .card{box-shadow: 0 12px 26px rgba(2,6,23,.10)}
+    .ico{
+      width:46px;height:46px;border-radius:16px;
+      display:flex;align-items:center;justify-content:center;
+      background: rgba(47,123,255,.14);
+      border:1px solid rgba(47,123,255,.25);
+      font-weight:900;
+      color: var(--text);
+      margin-bottom:10px;
+      user-select:none;
+    }
+    .card h3{margin:0 0 8px;font-size:1.12rem}
+    .card p{margin:0;color:var(--muted)}
+
+    /* Process */
+    .steps{display:grid;grid-template-columns: repeat(4, 1fr);gap:14px}
+    .step{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .num{
+      width:36px;height:36px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      font-weight:900;
+      margin-bottom:10px;
+    }
+    .step h4{margin:0 0 6px}
+    .step p{margin:0;color:var(--muted);font-size:.98rem}
+
+    /* Testimonials */
+    .quotes{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
+    .quote{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    .quote p{margin:0 0 10px;color:var(--muted);font-style:italic}
+    .who{display:flex;align-items:center;gap:10px;font-weight:900}
+    .dot{width:10px;height:10px;border-radius:999px;background: var(--good);display:inline-block}
+
+    /* Contact */
+    .contact{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(47,123,255,.10), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .contact-grid{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
+    .box{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding:16px;
+    }
+    form{display:grid;gap:12px}
+    label{font-weight:800;font-size:.95rem}
+    input,textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font: inherit;
+    }
+    html[data-theme="light"] input, html[data-theme="light"] textarea{
+      background: rgba(255,255,255,.70);
+    }
+    textarea{min-height:120px;resize:vertical}
+    .small{color:var(--muted);font-size:.92rem;margin:0}
+
+    /* Footer */
+    footer{padding:34px 0;color:var(--muted)}
+    .foot{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      border-top:1px solid var(--border);
+      padding-top:18px;
+    }
+
+    /* WhatsApp floating button */
+    .wa{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:54px;height:54px;
+      border-radius:18px;
+      display:flex;align-items:center;justify-content:center;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      box-shadow: 0 18px 38px rgba(0,0,0,.35);
+      z-index:60;
+      border:1px solid rgba(255,255,255,.18);
+      transition: transform .2s var(--ease), filter .2s var(--ease);
+    }
+    .wa:hover{transform: translateY(-2px);filter: brightness(1.03)}
+    .wa svg{width:26px;height:26px;fill:white}
+
+    /* Reveal animation */
+    .reveal{opacity:0;transform: translateY(16px);transition: opacity .7s var(--ease), transform .7s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr}
+      .grid3{grid-template-columns: 1fr}
+      .steps{grid-template-columns: 1fr 1fr}
+      .quotes{grid-template-columns: 1fr}
+      .contact-grid{grid-template-columns: 1fr}
+      .project{grid-template-columns: 1fr}
+      .project:nth-child(even) .media{order:0}
+      .media img{height:260px}
+    }
+    @media (max-width: 780px){
+      nav{display:none}
+      .m-btn{display:inline-flex}
+      .m-toggle:checked ~ .nav nav{
+        display:flex;
+        position:absolute;
+        left:20px; right:20px;
+        top:72px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:6px;
+        border-radius: 18px;
+        padding: 10px;
+        background: rgba(10,14,26,.92);
+      }
+      html[data-theme="light"] .m-toggle:checked ~ .nav nav{
+        background: rgba(255,255,255,.96);
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <header class="main-header">
-        <div class="container">
-            <a href="/" title="AP Digital Solutions">
-                <img src="assets/logo-premium.png" alt="AP Digital Solutions Logo">
-            </a>
-            <nav class="main-nav">
-                <a href="#portfolio">Work</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
+  <header>
+    <div class="container">
+      <input class="m-toggle" type="checkbox" id="menu" aria-label="Open menu" />
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="AP Digital Solutions home">
+          <img src="assets/logo-premium.png" alt="AP Digital Solutions Logo" />
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <button class="iconbtn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
+            <span id="themeIcon">☾</span>
+          </button>
+
+          <label class="btn btn-ghost m-btn" for="menu" aria-hidden="true">Menu</label>
+          <a class="btn btn-primary" href="#contact">Get a Quote</a>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>We Build Digital Presences That Perfectly Fit Your Brand.</h1>
-                <p>From sleek corporate sites to warm, community-focused platforms, we adapt our design to tell your unique story.</p>
-                <a href="#portfolio" class="cta-primary">View Our Work</a>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="kicker">Premium websites • SEO-ready • Built to convert</div>
+            <h1>Web design that looks premium — and works like a sales machine.</h1>
+            <p class="lead">
+              AP Digital Solutions builds modern, fast and conversion-focused websites that fit your brand.
+              Perfect for small & growing businesses that want a professional online presence.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#work">View Work</a>
+              <a class="btn btn-ghost" href="#services">See Services</a>
             </div>
-        </section>
 
-        <section id="portfolio">
-            <div class="container">
-                <h2>Our Work, Your Success Story</h2>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <a href="https://harbourandhome.co/" target="_blank"><img src="assets/ajudatotal.jpg" alt="Harbour & Home Project"></a>
-                    </div>
-                    <div class="portfolio-description">
-                        <span class="category">Real Estate & Design</span>
-                        <h3>Harbour & Home</h3>
-                        <p>This client needed a sophisticated and elegant platform to showcase high-end properties. We delivered a clean, image-focused design that exudes luxury.</p>
-                        <p class="testimonial">"The new website perfectly captures our brand's essence. The feedback has been amazing!" - [Client Name]</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                         <a href="https://pethavenjersey.com/" target="_blank"><img src="assets/pethaven.jpg" alt="Pet Haven Jersey Project"></a>
-                    </div>
-                    <div class="portfolio-description">
-                        <span class="category">Pet Services & Community</span>
-                        <h3>Pet Haven Jersey</h3>
-                        <p>The goal was to create a warm, trustworthy, and professional site for pet owners. We focused on easy navigation and a friendly design to build community trust.</p>
-                        <p class="testimonial">"Our bookings increased, and clients constantly praise how easy to use the new website is." - [Client Name]</p>
-                    </div>
-                </div>
-
-                 <!-- Adicionar aqui os outros 2 projetos seguindo a mesma estrutura -->
-
+            <div class="stats">
+              <span class="pill">Mobile-first</span>
+              <span class="pill">Fast loading</span>
+              <span class="pill">Clean Apple-style UI</span>
+              <span class="pill">Lead capture ready</span>
             </div>
-        </section>
-        
-        <!-- As secções de Serviços, Sobre e Contacto virão aqui -->
+          </div>
 
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2026 AP Digital Solutions. Let's build something great together.</p>
+          <aside class="hero-card reveal">
+            <h3>What you get</h3>
+            <ul class="list">
+              <li>Custom design that matches your brand</li>
+              <li>Clear structure + strong calls-to-action</li>
+              <li>Performance + basic SEO setup</li>
+              <li>Easy contact + WhatsApp-ready</li>
+            </ul>
+            <div class="mini">
+              Want automation (WhatsApp replies, forms → email/CRM)? We can add it.
+            </div>
+          </aside>
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <!-- WORK -->
+    <section id="work">
+      <div class="container">
+        <h2 class="title reveal">Selected work</h2>
+        <p class="subtitle reveal">A few examples of how we adapt design and tone to each business — while keeping everything modern, clean and effective.</p>
+
+        <div class="work-wrap">
+          <div class="projects">
+            <article class="project reveal">
+              <div class="media">
+                <a href="https://harbourandhome.co/" target="_blank" rel="noopener">
+                  <img src="assets/harbourandhome.jpg" alt="Harbour & Home website preview" loading="lazy" />
+                </a>
+              </div>
+              <div>
+                <div class="tag"><b></b> Premium Services</div>
+                <h3>Harbour &amp; Home</h3>
+                <p>Clean, elegant, premium feel — designed to build trust and generate enquiries fast.</p>
+                <div class="links">
+                  <a class="link" href="https://harbourandhome.co/" target="_blank" rel="noopener">View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <div class="media">
+                <a href="https://pethavenjersey.com/" target="_blank" rel="noopener">
+                  <img src="assets/pethaven.jpg" alt="Pet Haven website preview" loading="lazy" />
+                </a>
+              </div>
+              <div>
+                <div class="tag"><b></b> Community &amp; Trust</div>
+                <h3>Pet Haven</h3>
+                <p>Friendly UX with clear actions — made for customers to book/contact quickly.</p>
+                <div class="links">
+                  <a class="link" href="https://pethavenjersey.com/" target="_blank" rel="noopener">View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <div class="media">
+                <a href="https://ajudatotal.com/" target="_blank" rel="noopener">
+                  <img src="assets/ajudatotal.jpg" alt="AjudaTotal website preview" loading="lazy" />
+                </a>
+              </div>
+              <div>
+                <div class="tag"><b></b> Content Platform</div>
+                <h3>AjudaTotal</h3>
+                <p>Clear structure and readability — built for discoverability and trust.</p>
+                <div class="links">
+                  <a class="link" href="https://ajudatotal.com/" target="_blank" rel="noopener">View Live</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <div class="media">
+                <a href="#" target="_blank" rel="noopener">
+                  <img src="assets/catia.jpg" alt="Holistic website preview" loading="lazy" />
+                </a>
+              </div>
+              <div>
+                <div class="tag"><b></b> Wellness &amp; Brand</div>
+                <h3>Holistic Therapy</h3>
+                <p>Calm premium design — simple UX with strong calls-to-action.</p>
+                <div class="links">
+                  <a class="link" href="#contact">Request similar</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 class="title reveal">Services</h2>
+        <p class="subtitle reveal">Everything you need to look professional online — and turn visitors into customers.</p>
+
+        <div class="grid3">
+          <div class="card reveal">
+            <div class="ico">WD</div>
+            <h3>Web Design & Build</h3>
+            <p>Premium websites built to match your brand perfectly — mobile-first and fast.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="ico">UX</div>
+            <h3>UX & Conversion</h3>
+            <p>Clear structure, CTAs, and layout that drives enquiries and bookings.</p>
+          </div>
+
+          <div class="card reveal">
+            <div class="ico">SEO</div>
+            <h3>SEO & Performance</h3>
+            <p>Metadata, structure, speed and best practices to help your site get found.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <h2 class="title reveal">How we work</h2>
+        <p class="subtitle reveal">Simple, fast, and professional — so you can launch without stress.</p>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="num">1</div>
+            <h4>Discovery</h4>
+            <p>We align on goals, style, pages, and what you want customers to do.</p>
+          </div>
+          <div class="step reveal">
+            <div class="num">2</div>
+            <h4>Design</h4>
+            <p>Premium layout + brand styling. You approve before we build.</p>
+          </div>
+          <div class="step reveal">
+            <div class="num">3</div>
+            <h4>Build</h4>
+            <p>Clean, fast code with mobile-first experience and SEO basics.</p>
+          </div>
+          <div class="step reveal">
+            <div class="num">4</div>
+            <h4>Launch</h4>
+            <p>Go live + final checks. Optional support and upgrades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section aria-label="Testimonials">
+      <div class="container">
+        <h2 class="title reveal">Client feedback</h2>
+        <p class="subtitle reveal">Short, real comments that make the page feel trustworthy.</p>
+
+        <div class="quotes">
+          <div class="quote reveal">
+            <p>“The new website looks premium and professional — customers immediately trust the brand.”</p>
+            <div class="who"><span class="dot"></span> Client • Services</div>
+          </div>
+          <div class="quote reveal">
+            <p>“Clean, fast and easy to use. The layout makes it simple for people to contact us.”</p>
+            <div class="who"><span class="dot"></span> Client • Local business</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <h2 class="title" style="margin-top:0">Contact</h2>
+          <p class="subtitle" style="margin-bottom:18px">Tell us what you need — we reply with the best next step.</p>
+
+          <div class="contact-grid">
+            <div class="box">
+              <h3 style="margin:0 0 10px">Quick details</h3>
+              <p class="small" style="margin:0 0 14px">
+                Share your business type, what you need, and any examples you like.
+                We can also add WhatsApp buttons, forms, booking, and automations.
+              </p>
+              <p class="small">
+                Email: <strong>hello@apdigitalsolutions.digital</strong><br />
+                Website: <strong>apdigitalsolutions.digital</strong>
+              </p>
+              <p class="small" style="margin-top:12px">
+                Prefer WhatsApp? Use the button in the bottom-right.
+              </p>
+            </div>
+
+            <div class="box">
+              <h3 style="margin:0 0 10px">Send a message</h3>
+              <!-- Front-end form template: replace action with Formspree / Netlify Forms / Zoho Forms -->
+              <form action="#" method="post">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@email.com" required />
+                </div>
+                <div>
+                  <label for="msg">Message</label>
+                  <textarea id="msg" name="message" placeholder="New website / redesign / landing page / WhatsApp automation..." required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send</button>
+                <p class="small">Tip: connect this form to Formspree / Netlify Forms / Zoho Forms.</p>
+              </form>
+            </div>
+          </div>
+
+          <div class="foot">
+            <p class="small" style="margin:0">© <span id="year"></span> AP Digital Solutions</p>
+            <p class="small" style="margin:0">Premium websites • Fast • SEO-ready</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Floating Button (replace the link below) -->
+  <a class="wa" href="https://wa.me/447000000000?text=Hi%20AP%20Digital%20Solutions%20%E2%80%94%20I%27d%20like%20a%20quote%20for%20a%20website." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.53c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.79-1.69-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.49s1.08 2.88 1.23 3.08c.15.2 2.13 3.25 5.17 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.17-1.4-.08-.12-.27-.2-.57-.35zM16 3C8.83 3 3 8.83 3 16c0 2.28.6 4.51 1.74 6.48L3 29l6.71-1.76A12.9 12.9 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.65c-2.05 0-4.06-.56-5.8-1.63l-.42-.25-3.98 1.04 1.06-3.88-.27-.4A10.6 10.6 0 0 1 5.35 16C5.35 10.13 10.13 5.35 16 5.35S26.65 10.13 26.65 16 21.87 26.65 16 26.65z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme (dark/light) with localStorage
+    const html = document.documentElement;
+    const btn = document.getElementById("themeBtn");
+    const icon = document.getElementById("themeIcon");
+
+    function setTheme(t){
+      html.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+      icon.textContent = (t === "light") ? "☀" : "☾";
+    }
+    const saved = localStorage.getItem("theme");
+    if(saved){ setTheme(saved); }
+
+    btn.addEventListener("click", () => {
+      const current = html.getAttribute("data-theme") || "dark";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    // Scroll reveal
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: .12});
+    els.forEach(el=>io.observe(el));
+  </script>
 </body>
-</html>
+                                                   </html>
