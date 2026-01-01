@@ -3,266 +3,822 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0B1020" />
-
-  <title>AP Digital Solutions | Websites That Get You Clients</title>
-  <meta name="description" content="We build modern, fast and professional websites designed to convert visitors into customers. Ideal for small and growing businesses." />
-  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0B0F17" />
+  <title>AP Digital Solutions — Premium Websites & AI Automation</title>
+  <meta name="description" content="Premium, modern websites and AI automation for small & growing businesses. Fast, mobile-first, SEO-ready, and built to convert." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
-  <!-- Favicons -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="AP Digital Solutions — Premium Websites & AI Automation" />
+  <meta property="og:description" content="Premium websites, landing pages and AI automation built to convert." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
+
+  <!-- Favicons (keep these at repo ROOT) -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b1020;
-      --card:#151a33;
-      --border:rgba(255,255,255,.1);
-      --text:#eaf0ff;
-      --muted:rgba(234,240,255,.7);
-      --accent:#2f7bff;
-      --accent2:#7c3aed;
-      --radius:18px;
-      --shadow:0 18px 40px rgba(0,0,0,.45);
+      --bg:#0B0F17;
+      --bg2:#0D1324;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.12);
+      --text:#EAF0FF;
+      --muted: rgba(234,240,255,.72);
+      --muted2: rgba(234,240,255,.55);
+      --brand:#7C5CFF;
+      --brand2:#20D3FF;
+      --ok:#27D17F;
+
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1120px;
+
+      --ease: cubic-bezier(.2,.8,.2,1);
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:Inter,system-ui;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
-      background:linear-gradient(180deg,#070a12,#0b1020);
-      line-height:1.6;
+      background:
+        radial-gradient(1100px 700px at 18% -10%, rgba(124,92,255,.40), transparent 55%),
+        radial-gradient(1000px 650px at 92% 0%, rgba(32,211,255,.28), transparent 55%),
+        radial-gradient(900px 700px at 35% 105%, rgba(124,92,255,.22), transparent 55%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      line-height:1.5;
+      overflow-x:hidden;
     }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(1120px,calc(100% - 40px));margin:auto}
 
-    header{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter:blur(12px);
-      background:rgba(11,16,32,.8);
-      border-bottom:1px solid var(--border);
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .muted{color:var(--muted)}
+    .muted2{color:var(--muted2)}
+    .chip{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border:1px solid var(--stroke); border-radius:999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      font-weight:600;
     }
+    .dot{width:8px;height:8px;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:14px 18px;
+      border-radius:14px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      transition: transform .22s var(--ease), background .22s var(--ease), border-color .22s var(--ease);
+      font-weight:700;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-2px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18)}
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(90deg, var(--brand), var(--brand2));
+      color:#081018;
+      box-shadow: 0 18px 45px rgba(124,92,255,.22), 0 18px 45px rgba(32,211,255,.16);
+    }
+    .btn.primary:hover{transform: translateY(-2px) scale(1.01)}
+    .btn.small{padding:10px 12px; border-radius:12px; font-weight:700}
+
+    /* Nav */
     .nav{
-      display:flex;align-items:center;justify-content:space-between;
+      position:sticky; top:0; z-index:50;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: rgba(10,14,25,.55);
+      backdrop-filter: blur(14px);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
       padding:14px 0;
     }
-    .brand img{height:44px}
-    nav a{
-      margin:0 10px;
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 200px;
+    }
+    .brand img{height:34px; width:auto; display:block}
+    .nav-links{
+      display:flex; gap:18px; align-items:center;
+    }
+    .nav-links a{
+      color: var(--muted);
       font-weight:700;
-      color:var(--muted);
+      padding:10px 10px;
+      border-radius:12px;
+      transition: background .18s var(--ease), color .18s var(--ease);
     }
-    nav a:hover{color:white}
+    .nav-links a:hover{background: rgba(255,255,255,.08); color: var(--text)}
+    .nav-cta{display:flex; gap:10px; align-items:center}
 
-    .btn{
-      padding:12px 18px;
+    .burger{
+      display:none;
+      width:44px; height:44px;
       border-radius:14px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      align-items:center; justify-content:center;
+      cursor:pointer;
+    }
+    .burger svg{opacity:.9}
+
+    .mobile{
+      display:none;
+      padding:10px 0 18px 0;
+    }
+    .mobile a{
+      display:block;
+      padding:12px 12px;
+      border-radius:14px;
+      color: var(--muted);
       font-weight:800;
-      display:inline-block;
+      border:1px solid transparent;
     }
-    .btn-primary{
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:var(--shadow);
-    }
-    .btn-outline{
-      border:1px solid var(--border);
-      color:white;
-    }
+    .mobile a:hover{background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.10); color: var(--text)}
+    .mobile .row{display:flex; gap:10px; margin-top:10px}
 
-    section{padding:80px 0}
-
-    /* HERO */
-    .hero{
-      text-align:center;
-      padding-top:100px;
-    }
-    h1{
-      font-size:clamp(2.3rem,4vw,3.4rem);
-      line-height:1.05;
-      margin:0 0 16px;
-    }
-    .lead{
-      max-width:700px;
-      margin:0 auto 28px;
-      color:var(--muted);
-      font-size:1.1rem;
-    }
-
-    /* WORK */
-    .grid{
+    /* Hero */
+    .hero{padding:62px 0 34px}
+    .hero-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:24px;
+      grid-template-columns: 1.15fr .85fr;
+      gap:26px;
+      align-items:stretch;
     }
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
+    .hero h1{
+      margin:16px 0 12px;
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      line-height:1.05;
+      letter-spacing:-.04em;
+      font-weight:900;
+    }
+    .hero p{font-size:1.06rem; color: var(--muted); margin:0 0 18px}
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top: 18px}
+    .hero-card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
       padding:18px;
-      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+      min-height: 280px;
     }
-    .card img{
-      border-radius:14px;
-      margin-bottom:14px;
+    .hero-card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(380px 240px at 25% 20%, rgba(32,211,255,.20), transparent 60%),
+        radial-gradient(380px 240px at 80% 45%, rgba(124,92,255,.22), transparent 60%);
+      opacity:.9;
+      pointer-events:none;
     }
-    .card h3{margin:0 0 6px}
-    .card p{margin:0 0 12px;color:var(--muted)}
+    .hero-card > *{position:relative}
+    .stat-grid{
+      display:grid; gap:12px; margin-top: 10px;
+    }
+    .stat{
+      padding:14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+    }
+    .stat b{display:block; font-size:1.05rem}
+    .stat span{color: var(--muted2); font-weight:600; font-size:.92rem}
 
-    /* SERVICES */
-    .service h3{margin-bottom:6px}
+    /* Sections */
+    section{padding:56px 0}
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:14px; margin-bottom: 18px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      letter-spacing:-.03em;
+    }
+    .section-head p{margin:0; color: var(--muted); max-width: 620px}
 
-    /* CONTACT */
-    .contact{
-      background:linear-gradient(135deg,rgba(47,123,255,.15),rgba(124,58,237,.1));
-      border-radius:var(--radius);
-      padding:40px;
-      border:1px solid var(--border);
-      text-align:center;
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
     }
 
+    .card{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      padding:18px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.32);
+    }
+    .card h3{margin:10px 0 6px; letter-spacing:-.02em}
+    .card p{margin:0; color: var(--muted)}
+    .icon{
+      width:44px;height:44px;border-radius:16px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    /* Work */
+    .work{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    .work-item{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:16px;
+      align-items:stretch;
+      overflow:hidden;
+    }
+    .work-media{
+      border-radius: 18px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      min-height: 240px;
+    }
+    .work-media img{
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.01);
+      transition: transform .35s var(--ease);
+    }
+    .work-item:hover .work-media img{transform: scale(1.05)}
+    .tag{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      font-weight:800;
+      font-size:.85rem;
+    }
+    .work-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px}
+
+    /* Process */
+    .step{display:flex; gap:12px; align-items:flex-start}
+    .num{
+      width:34px; height:34px; border-radius:12px;
+      display:grid; place-items:center;
+      background: linear-gradient(90deg, rgba(124,92,255,.9), rgba(32,211,255,.85));
+      color:#071019; font-weight:900;
+      flex: 0 0 auto;
+    }
+
+    /* Contact */
+    form{display:grid; gap:12px}
+    .field{
+      display:grid; gap:6px;
+    }
+    label{font-weight:800; color: rgba(234,240,255,.88); font-size:.92rem}
+    input, textarea{
+      width:100%;
+      padding:14px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      outline:none;
+      font: inherit;
+      transition: border-color .2s var(--ease), background .2s var(--ease);
+    }
+    input:focus, textarea:focus{
+      border-color: rgba(32,211,255,.42);
+      background: rgba(0,0,0,.24);
+    }
+    textarea{min-height: 130px; resize: vertical}
+
+    .notice{
+      display:none;
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(39,209,127,.10);
+      color: rgba(234,240,255,.92);
+      font-weight:700;
+    }
+    .notice.show{display:block}
+    .notice.error{background: rgba(255,90,90,.10)}
+
+    /* Footer */
     footer{
-      padding:40px 0;
-      text-align:center;
-      color:var(--muted);
-      border-top:1px solid var(--border);
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: var(--muted2);
+    }
+    .footer-grid{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .social{display:flex; gap:10px; align-items:center}
+    .social a{opacity:.85}
+    .social a:hover{opacity:1}
+
+    /* Floating WhatsApp */
+    .wa-float{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 80;
+      display:flex; align-items:center; gap:10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,25,.55);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 16px 44px rgba(0,0,0,.45);
+      transition: transform .2s var(--ease);
+    }
+    .wa-float:hover{transform: translateY(-2px)}
+    .wa-icon{
+      width:38px;height:38px;border-radius:999px;
+      display:grid; place-items:center;
+      background: linear-gradient(180deg, rgba(39,209,127,.95), rgba(39,209,127,.65));
+      color:#071019;
+      flex: 0 0 auto;
+    }
+    .wa-text{display:flex; flex-direction:column; line-height:1.1}
+    .wa-text b{font-size:.92rem}
+    .wa-text span{font-size:.78rem; color: rgba(234,240,255,.70)}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr; }
+      .work-item{grid-template-columns: 1fr}
+    }
+    @media (max-width: 860px){
+      .nav-links, .nav-cta .hide-mobile{display:none}
+      .burger{display:flex}
+      .mobile{display:none}
+      .grid-3{grid-template-columns: 1fr}
+      .grid-2{grid-template-columns: 1fr}
     }
 
-    /* WhatsApp */
-    .wa{
-      position:fixed;
-      right:18px;bottom:18px;
-      width:56px;height:56px;
-      border-radius:18px;
-      background:#25d366;
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:var(--shadow);
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .btn, .work-media img, .wa-float{transition:none}
     }
-    .wa svg{width:26px;height:26px;fill:white}
   </style>
 </head>
 
 <body>
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="AP Digital Solutions">
+          <!-- Adjust path if your logo is in /assets -->
+          <img src="assets/logo-premium.png" alt="AP Digital Solutions logo" />
+        </a>
 
-<header>
-  <div class="container nav">
-    <a class="brand" href="#">
-      <img src="assets/logo-premium.png" alt="AP Digital Solutions">
-    </a>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn-primary" href="#contact">Get a Quote</a>
-  </div>
-</header>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-<main>
-
-<section class="hero">
-  <div class="container">
-    <h1>Websites That Make Your Business Look Professional — and Get You Clients</h1>
-    <p class="lead">
-      We design fast, modern and conversion-focused websites for small and growing businesses.
-      Built to work perfectly on mobile and ready to generate enquiries.
-    </p>
-    <a class="btn btn-primary" href="#work">View Our Work</a>
-  </div>
-</section>
-
-<section id="work">
-  <div class="container">
-    <h2 style="text-align:center;margin-bottom:40px">Selected Work</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="assets/work-pethaven.jpg" alt="Pet Haven">
-        <h3>Pet Haven</h3>
-        <p>E-commerce website with a clean design focused on trust and conversions.</p>
-        <a class="btn btn-outline" href="https://pethavenjersey.com/" target="_blank">View live</a>
+        <div class="nav-cta">
+          <a class="btn small hide-mobile" href="#contact">Get a quote</a>
+          <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div class="card">
-        <img src="assets/work-harbourandhome.jpg" alt="Harbour & Home">
-        <h3>Harbour & Home</h3>
-        <p>Premium service website designed to generate enquiries on mobile.</p>
-        <a class="btn btn-outline" href="https://harbourandhome.co/" target="_blank">View live</a>
-      </div>
-
-      <div class="card">
-        <img src="assets/ajudatotal.jpg" alt="AjudaTotal">
-        <h3>AjudaTotal</h3>
-        <p>Community-focused platform with a clean and accessible layout.</p>
-      </div>
-
-      <div class="card">
-        <img src="assets/catia.jpg" alt="Catia Holistic">
-        <h3>Catia Holistic</h3>
-        <p>Calm, premium design focused on trust and bookings.</p>
+      <div class="mobile" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+        <div class="row">
+          <a class="btn small primary" href="#contact" style="flex:1">Get a quote</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="services">
-  <div class="container">
-    <h2 style="text-align:center;margin-bottom:40px">What We Do</h2>
-    <div class="grid">
-      <div class="card service">
-        <h3>Website Design</h3>
-        <p>Custom design that matches your brand and looks professional on all devices.</p>
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="chip"><span class="dot"></span> Premium websites + AI automation</span>
+            <h1>Websites that look premium — and convert like crazy.</h1>
+            <p>
+              AP Digital Solutions builds modern, mobile-first websites and automation that help small & growing businesses
+              capture leads, build trust, and turn visitors into customers.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#contact">
+                Get a free demo
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="btn" href="#work">View work</a>
+              <a class="btn" href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+
+            <p class="muted2" style="margin-top:14px">
+              Clean design • Fast loading • SEO-ready • Lead-focused
+            </p>
+          </div>
+
+          <aside class="hero-card" aria-label="Highlights">
+            <h3 style="margin:0 0 6px; letter-spacing:-.02em">What you get</h3>
+            <p class="muted" style="margin:0 0 12px">A professional online presence that works 24/7.</p>
+
+            <div class="stat-grid">
+              <div class="stat">
+                <b>Premium UI / Apple-style feel</b>
+                <span>Modern, minimal, high trust</span>
+              </div>
+              <div class="stat">
+                <b>Built to convert</b>
+                <span>Clear CTAs + contact flow</span>
+              </div>
+              <div class="stat">
+                <b>Automation ready</b>
+                <span>WhatsApp + AI + lead capture</span>
+              </div>
+            </div>
+          </aside>
+        </div>
       </div>
-      <div class="card service">
-        <h3>Conversion Focus</h3>
-        <p>Clear structure and calls-to-action that turn visitors into enquiries.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Services</h2>
+            <p class="muted">Everything you need to look professional online — and get more enquiries.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M8 10h8M8 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Premium Websites</h3>
+            <p>Fast, mobile-first websites with a premium look that builds trust and wins customers.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M5 7h14M7 12h10M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Landing Pages</h3>
+            <p>High-converting pages for ads, services, and product launches — built for leads.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M7 12a5 5 0 0 1 5-5h5a5 5 0 0 1 0 10h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 12a5 5 0 0 1-5 5H7a5 5 0 0 1 0-10h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>AI + Automation</h3>
+            <p>WhatsApp lead capture, instant replies, and smart workflows that save time.</p>
+          </div>
+        </div>
       </div>
-      <div class="card service">
-        <h3>SEO & Performance</h3>
-        <p>Fast loading, SEO-ready websites that Google understands.</p>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Selected work</h2>
+            <p class="muted">A few examples of how we adapt the design to each brand.</p>
+          </div>
+          <a class="btn small" href="#contact">Want one like this?</a>
+        </div>
+
+        <div class="work">
+          <article class="card work-item">
+            <div class="work-media">
+              <!-- update the filename if needed -->
+              <a href="https://harbourandhome.co/" target="_blank" rel="noopener noreferrer" aria-label="Open Harbour & Home">
+                <img src="assets/work-harbourandhome.jpg" alt="Harbour & Home website preview" />
+              </a>
+            </div>
+            <div>
+              <span class="tag">Service business</span>
+              <h3 style="margin:10px 0 6px">Harbour & Home</h3>
+              <p class="muted">
+                Premium, trustworthy layout with clear CTAs, strong imagery and simple navigation — built to generate enquiries.
+              </p>
+              <div class="work-actions">
+                <a class="btn small primary" href="https://harbourandhome.co/" target="_blank" rel="noopener noreferrer">View site</a>
+                <a class="btn small" href="#contact">Build something similar</a>
+              </div>
+              <p class="muted2" style="margin:12px 0 0">
+                Focus: brand trust • conversion • mobile-first
+              </p>
+            </div>
+          </article>
+
+          <article class="card work-item">
+            <div class="work-media">
+              <a href="https://pethavenjersey.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Pet Haven">
+                <img src="assets/work-pethaven.jpg" alt="Pet Haven website preview" />
+              </a>
+            </div>
+            <div>
+              <span class="tag">E-commerce</span>
+              <h3 style="margin:10px 0 6px">Pet Haven</h3>
+              <p class="muted">
+                Friendly, clean design built for shopping. Clear product discovery and strong brand identity.
+              </p>
+              <div class="work-actions">
+                <a class="btn small primary" href="https://pethavenjersey.com/" target="_blank" rel="noopener noreferrer">View site</a>
+                <a class="btn small" href="#contact">Get a quote</a>
+              </div>
+              <p class="muted2" style="margin:12px 0 0">
+                Focus: product clarity • usability • speed
+              </p>
+            </div>
+          </article>
+
+          <div class="grid-2">
+            <article class="card">
+              <span class="tag">Community</span>
+              <h3 style="margin:10px 0 6px">AjudaTotal</h3>
+              <p class="muted">Warm, accessible design for community-first information and resources.</p>
+              <div style="margin-top:12px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.12)">
+                <img src="assets/ajudatotal.jpg" alt="AjudaTotal preview" style="width:100%; height:240px; object-fit:cover; display:block">
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="tag">Well-being</span>
+              <h3 style="margin:10px 0 6px">Holistic / Personal Brand</h3>
+              <p class="muted">A calm, premium aesthetic that feels human and trustworthy.</p>
+              <div style="margin-top:12px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.12)">
+                <img src="assets/catia.jpg" alt="Holistic brand preview" style="width:100%; height:240px; object-fit:cover; display:block">
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="contact">
-  <div class="container">
-    <div class="contact">
-      <h2>Let’s Talk About Your Website</h2>
-      <p class="lead">
-        Tell us what you need and we’ll get back to you with the best solution.
-      </p>
-      <a class="btn btn-primary" href="wa/">Message us on WhatsApp</a>
-      <div style="margin-top:16px">
-        <a href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank">Instagram</a> ·
-        <a href="https://www.facebook.com/share/1Qt8EJayXB/" target="_blank">Facebook</a>
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Simple process, premium result</h2>
+            <p class="muted">Fast to launch, easy to manage, built to perform.</p>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="step">
+              <div class="num">1</div>
+              <div>
+                <h3 style="margin:2px 0 6px">Quick call</h3>
+                <p class="muted">We understand your business, goals and style — then we propose the best layout.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="step">
+              <div class="num">2</div>
+              <div>
+                <h3 style="margin:2px 0 6px">Build & refine</h3>
+                <p class="muted">We design, write and polish — so your site looks premium and reads clearly.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="step">
+              <div class="num">3</div>
+              <div>
+                <h3 style="margin:2px 0 6px">Launch</h3>
+                <p class="muted">We publish, test and optimise for mobile + speed + enquiries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-</main>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">Tell us what you need — we reply quickly.</p>
+          </div>
+        </div>
 
-<footer>
-  © <span id="y"></span> AP Digital Solutions
-</footer>
+        <div class="grid-2">
+          <div class="card">
+            <h3 style="margin-top:0">Send a message</h3>
+            <p class="muted">This form uses Formspree. You’ll receive enquiries directly to your email.</p>
 
-<a class="wa" href="wa/" aria-label="WhatsApp">
-  <svg viewBox="0 0 32 32">
-    <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.5L3 29l6.7-1.8c1.9 1 4 1.6 6.3 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3z"/>
-  </svg>
-</a>
+            <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
 
-<script>
-  document.getElementById("y").textContent=new Date().getFullYear();
-</script>
+            <!-- Formspree endpoint from your screenshot -->
+            <form id="contactForm" action="https://formspree.io/f/xvzgzljv" method="POST">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+              </div>
 
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" required>
+              </div>
+
+              <div class="field">
+                <label for="service">What do you need?</label>
+                <input id="service" name="service" type="text" placeholder="Website / landing page / AI automation" required>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you want to achieve." required></textarea>
+              </div>
+
+              <!-- Optional: helps reduce spam -->
+              <input type="text" name="_gotcha" style="display:none">
+
+              <button class="btn primary" type="submit">Send message</button>
+              <p class="muted2" style="margin:0">Or message us on WhatsApp using the button in the corner.</p>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0">Connect</h3>
+            <p class="muted">Follow and message us on social. We can also review your current website for quick improvements.</p>
+
+            <div style="display:grid; gap:10px; margin-top:14px">
+              <a class="btn" target="_blank" rel="noopener noreferrer"
+                 href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==">
+                Instagram
+                <span class="muted2">→</span>
+              </a>
+
+              <a class="btn" target="_blank" rel="noopener noreferrer"
+                 href="https://www.facebook.com/share/1Qt8EJayXB/">
+                Facebook
+                <span class="muted2">→</span>
+              </a>
+
+              <a class="btn" href="#work">
+                See more work
+                <span class="muted2">→</span>
+              </a>
+            </div>
+
+            <div class="card" style="margin-top:14px; background: rgba(0,0,0,.16)">
+              <b style="display:block; margin-bottom:6px">Tip</b>
+              <span class="muted2">
+                If you enabled “Restrict to Domain” on Formspree, make sure it’s set to:
+                <b>apdigitalsolutions.digital</b> (no https://)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <b>AP Digital Solutions</b>
+            <div class="muted2">© <span id="year"></span> • Premium websites & automation</div>
+          </div>
+
+          <div class="social" aria-label="Social links">
+            <a class="btn small" href="#services">Services</a>
+            <a class="btn small" href="#work">Work</a>
+            <a class="btn small" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating WhatsApp (does not display number on the page) -->
+  <a class="wa-float"
+     href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%20%E2%80%94%20I%27d%20like%20a%20website%20quote."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <span class="wa-icon" aria-hidden="true">
+      <!-- WhatsApp icon -->
+      <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+        <path d="M16 3C9.4 3 4 8.1 4 14.5c0 2.5.9 4.8 2.4 6.7L5 29l8.1-1.3c1.8.9 3.9 1.5 6.1 1.5 6.6 0 12-5.1 12-11.5S22.6 3 16 3z" fill="currentColor" opacity=".15"/>
+        <path d="M16 5.2c-5.3 0-9.6 4-9.6 9.3 0 2.1.7 4 2 5.6l-1 6.1 6.2-1c1.5.8 3.2 1.2 4.9 1.2 5.3 0 9.6-4 9.6-9.3S21.3 5.2 16 5.2z" fill="currentColor"/>
+        <path d="M12.9 11.3c.2-.5.4-.6.8-.6h.6c.2 0 .5 0 .7.5.3.6 1 2.2 1 2.4 0 .2 0 .4-.2.6l-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.9-1.1c.2-.2.4-.2.6-.1.2.1 1.6.7 1.9.9.2.1.4.2.5.4.1.2.1 1.1-.3 1.7-.4.6-1.3 1.2-2.8.9-1.5-.3-3.4-1.2-5.2-2.7-2.2-1.9-3.6-4.2-3.9-5.7-.3-1.5.6-2.5.9-2.8z" fill="#071019"/>
+      </svg>
+    </span>
+    <span class="wa-text">
+      <b>WhatsApp</b>
+      <span>Fast reply</span>
+    </span>
+  </a>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      const open = menu.style.display === 'block';
+      menu.style.display = open ? 'none' : 'block';
+      burger.setAttribute('aria-expanded', String(!open));
+    });
+    // close menu after click
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.style.display = 'none';
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Formspree AJAX submit (nice success message, no redirect)
+    const form = document.getElementById('contactForm');
+    const notice = document.getElementById('formNotice');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      notice.className = 'notice show';
+      notice.textContent = 'Sending…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          notice.className = 'notice show';
+          notice.textContent = "✅ Message sent. We'll reply shortly!";
+          form.reset();
+        } else {
+          notice.className = 'notice show error';
+          notice.textContent = '⚠️ Something went wrong. Please try again, or use WhatsApp.';
+        }
+      } catch (err) {
+        notice.className = 'notice show error';
+        notice.textContent = '⚠️ Network error. Please try again, or use WhatsApp.';
+      }
+    });
+  </script>
 </body>
 </html>
