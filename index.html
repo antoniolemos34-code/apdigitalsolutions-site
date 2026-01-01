@@ -4,22 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0B0F17" />
-  <title>AP Digital Solutions — Premium Websites & AI Automation</title>
-  <meta name="description" content="Premium, modern websites and AI automation for small & growing businesses. Fast, mobile-first, SEO-ready, and built to convert." />
+  <title>AP Digital Solutions — Premium Websites + AI Automation</title>
+
+  <meta name="description" content="Premium, mobile-first websites and AI automation that help small & growing businesses capture leads, build trust, and convert visitors into customers." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="AP Digital Solutions — Premium Websites & AI Automation" />
-  <meta property="og:description" content="Premium websites, landing pages and AI automation built to convert." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
-
-  <!-- Favicons (keep these at repo ROOT) -->
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="AP Digital Solutions — Premium Websites + AI Automation" />
+  <meta property="og:description" content="Premium, mobile-first websites and AI automation that help small & growing businesses capture leads, build trust, and convert." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,24 +31,18 @@
     :root{
       --bg:#0B0F17;
       --bg2:#0D1324;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.08);
       --stroke: rgba(255,255,255,.12);
       --text:#EAF0FF;
       --muted: rgba(234,240,255,.72);
       --muted2: rgba(234,240,255,.55);
       --brand:#7C5CFF;
       --brand2:#20D3FF;
-      --ok:#27D17F;
-
       --shadow: 0 18px 60px rgba(0,0,0,.45);
       --radius: 18px;
       --radius2: 26px;
       --max: 1120px;
-
       --ease: cubic-bezier(.2,.8,.2,1);
     }
-
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -59,764 +54,600 @@
         radial-gradient(1000px 650px at 92% 0%, rgba(32,211,255,.28), transparent 55%),
         radial-gradient(900px 700px at 35% 105%, rgba(124,92,255,.22), transparent 55%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
-      line-height:1.5;
       overflow-x:hidden;
     }
-
-    a{color:inherit;text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
-    .muted{color:var(--muted)}
-    .muted2{color:var(--muted2)}
-    .chip{
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .pill{
       display:inline-flex; align-items:center; gap:10px;
-      padding:10px 14px; border:1px solid var(--stroke); border-radius:999px;
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
-      font-weight:600;
-    }
-    .dot{width:8px;height:8px;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--brand2))}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:14px 18px;
-      border-radius:14px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.06);
-      transition: transform .22s var(--ease), background .22s var(--ease), border-color .22s var(--ease);
-      font-weight:700;
-      cursor:pointer;
-      user-select:none;
-    }
-    .btn:hover{transform: translateY(-2px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.18)}
-    .btn.primary{
-      border-color: transparent;
-      background: linear-gradient(90deg, var(--brand), var(--brand2));
-      color:#081018;
-      box-shadow: 0 18px 45px rgba(124,92,255,.22), 0 18px 45px rgba(32,211,255,.16);
-    }
-    .btn.primary:hover{transform: translateY(-2px) scale(1.01)}
-    .btn.small{padding:10px 12px; border-radius:12px; font-weight:700}
-
-    /* Nav */
-    .nav{
-      position:sticky; top:0; z-index:50;
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      background: rgba(10,14,25,.55);
+      padding:10px 14px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,25,.48);
       backdrop-filter: blur(14px);
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+      color:var(--muted);
+      font-weight:600;
+      letter-spacing:.2px;
     }
-    .nav-inner{
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: var(--brand2);
+      box-shadow: 0 0 0 6px rgba(32,211,255,.12);
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(18px);
+      background: rgba(10,14,25,.55);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .nav{
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0;
+      gap:14px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      min-width: 200px;
+
+    /* LOGO: bigger + badge so it never disappears */
+    .brand{display:flex; align-items:center; gap:10px; min-width:auto}
+    .brand-badge{
+      display:flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,25,.55);
+      backdrop-filter: blur(14px);
+      box-shadow:
+        0 14px 40px rgba(0,0,0,.38),
+        0 0 0 1px rgba(32,211,255,.06) inset;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
     }
-    .brand img{height:34px; width:auto; display:block}
-    .nav-links{
-      display:flex; gap:18px; align-items:center;
+    .brand img{
+      height:46px;
+      width:auto;
+      display:block;
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,.55));
     }
-    .nav-links a{
-      color: var(--muted);
+    .brand-badge:hover{
+      transform: translateY(-1px);
+      border-color: rgba(32,211,255,.25);
+      box-shadow:
+        0 18px 50px rgba(0,0,0,.45),
+        0 0 0 1px rgba(32,211,255,.10) inset,
+        0 0 46px rgba(32,211,255,.10);
+    }
+
+    .menu{display:flex; align-items:center; gap:18px}
+    .menu a{
+      color:var(--muted);
       font-weight:700;
       padding:10px 10px;
       border-radius:12px;
-      transition: background .18s var(--ease), color .18s var(--ease);
+      transition: background .2s var(--ease), color .2s var(--ease);
     }
-    .nav-links a:hover{background: rgba(255,255,255,.08); color: var(--text)}
-    .nav-cta{display:flex; gap:10px; align-items:center}
-
-    .burger{
-      display:none;
-      width:44px; height:44px;
-      border-radius:14px;
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.06);
-      align-items:center; justify-content:center;
-      cursor:pointer;
+    .menu a:hover{background: rgba(255,255,255,.06); color:var(--text)}
+    .menu .cta{
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(32,211,255,.92));
+      color:#07101e;
+      padding:10px 14px;
     }
-    .burger svg{opacity:.9}
+    .menu .cta:hover{background: linear-gradient(135deg, rgba(124,92,255,1), rgba(32,211,255,1)); color:#07101e}
 
+    /* Mobile nav */
+    .burger{display:none; border:1px solid rgba(255,255,255,.14); background: rgba(10,14,25,.55); color:var(--text); border-radius:14px; padding:10px 12px}
     .mobile{
       display:none;
-      padding:10px 0 18px 0;
+      padding: 10px 0 16px;
+      border-top: 1px solid rgba(255,255,255,.10);
     }
     .mobile a{
       display:block;
-      padding:12px 12px;
+      padding:12px 10px;
+      color:var(--muted);
+      font-weight:700;
       border-radius:14px;
-      color: var(--muted);
-      font-weight:800;
-      border:1px solid transparent;
     }
-    .mobile a:hover{background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.10); color: var(--text)}
-    .mobile .row{display:flex; gap:10px; margin-top:10px}
+    .mobile a:hover{background: rgba(255,255,255,.06); color:var(--text)}
 
     /* Hero */
-    .hero{padding:62px 0 34px}
-    .hero-grid{
+    .hero{padding:56px 0 30px}
+    .heroGrid{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:26px;
-      align-items:stretch;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
+      align-items:start;
     }
-    .hero h1{
-      margin:16px 0 12px;
-      font-size: clamp(2.25rem, 4vw, 3.25rem);
-      line-height:1.05;
-      letter-spacing:-.04em;
-      font-weight:900;
-    }
-    .hero p{font-size:1.06rem; color: var(--muted); margin:0 0 18px}
-    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top: 18px}
-    .hero-card{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-      min-height: 280px;
-    }
-    .hero-card:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        radial-gradient(380px 240px at 25% 20%, rgba(32,211,255,.20), transparent 60%),
-        radial-gradient(380px 240px at 80% 45%, rgba(124,92,255,.22), transparent 60%);
-      opacity:.9;
-      pointer-events:none;
-    }
-    .hero-card > *{position:relative}
-    .stat-grid{
-      display:grid; gap:12px; margin-top: 10px;
-    }
-    .stat{
-      padding:14px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.18);
-    }
-    .stat b{display:block; font-size:1.05rem}
-    .stat span{color: var(--muted2); font-weight:600; font-size:.92rem}
-
-    /* Sections */
-    section{padding:56px 0}
-    .section-head{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:14px; margin-bottom: 18px;
-    }
-    .section-head h2{
-      margin:0;
-      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    h1{
+      margin:18px 0 12px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height:1.02;
       letter-spacing:-.03em;
     }
-    .section-head p{margin:0; color: var(--muted); max-width: 620px}
+    .sub{
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.6;
+      max-width: 52ch;
+    }
+    .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:800;
+      transition: transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
+    }
+    .btn:hover{transform: translateY(-2px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.20)}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, rgba(124,92,255,.96), rgba(32,211,255,.92));
+      color:#06101e;
+      box-shadow: 0 18px 60px rgba(32,211,255,.16);
+    }
+    .kpis{
+      margin-top:14px;
+      color: var(--muted2);
+      font-weight:600;
+      display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .kpis span{opacity:.9}
 
-    .grid-3{
+    .sideCard{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(14px);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .sideCard .pad{padding:16px}
+    .sideTitle{font-weight:900; letter-spacing:-.02em; font-size:1.05rem}
+    .sideList{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+    .sideList li{
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(10,14,25,.35);
+      color:var(--muted);
+      font-weight:700;
+    }
+    .sideList strong{color:var(--text)}
+    .glow{
+      position:relative;
+    }
+    .glow:before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      border-radius:inherit;
+      background: linear-gradient(135deg, rgba(124,92,255,.28), rgba(32,211,255,.18));
+      filter: blur(18px);
+      z-index:-1;
+      opacity:.8;
+    }
+
+    /* Sections */
+    section{padding:34px 0}
+    .sectionHead{display:flex; align-items:flex-end; justify-content:space-between; gap:14px; margin-bottom:14px}
+    .sectionHead h2{margin:0; font-size:1.4rem; letter-spacing:-.02em}
+    .sectionHead p{margin:0; color:var(--muted); max-width:60ch}
+
+    .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
     }
-    .grid-2{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:14px;
-    }
-
     .card{
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      padding:18px;
-      box-shadow: 0 18px 50px rgba(0,0,0,.32);
-    }
-    .card h3{margin:10px 0 6px; letter-spacing:-.02em}
-    .card p{margin:0; color: var(--muted)}
-    .icon{
-      width:44px;height:44px;border-radius:16px;
-      display:grid; place-items:center;
-      background: rgba(255,255,255,.08);
       border:1px solid rgba(255,255,255,.12);
-    }
-
-    /* Work */
-    .work{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:14px;
-    }
-    .work-item{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:16px;
-      align-items:stretch;
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(14px);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
       overflow:hidden;
+      transition: transform .22s var(--ease), border-color .22s var(--ease), background .22s var(--ease);
     }
-    .work-media{
-      border-radius: 18px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.18);
-      min-height: 240px;
+    .card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(32,211,255,.20);
+      background: rgba(255,255,255,.06);
     }
-    .work-media img{
-      width:100%; height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.01);
-      transition: transform .35s var(--ease);
-    }
-    .work-item:hover .work-media img{transform: scale(1.05)}
+    .card .pad{padding:16px}
+    .card h3{margin:0 0 8px; font-size:1.05rem}
+    .card p{margin:0; color:var(--muted); line-height:1.55}
+    .tagRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
     .tag{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px;
+      font-size:.82rem;
+      color: rgba(234,240,255,.85);
+      padding:8px 10px;
       border-radius:999px;
       border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      color: var(--muted);
-      font-weight:800;
-      font-size:.85rem;
-    }
-    .work-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px}
-
-    /* Process */
-    .step{display:flex; gap:12px; align-items:flex-start}
-    .num{
-      width:34px; height:34px; border-radius:12px;
-      display:grid; place-items:center;
-      background: linear-gradient(90deg, rgba(124,92,255,.9), rgba(32,211,255,.85));
-      color:#071019; font-weight:900;
-      flex: 0 0 auto;
-    }
-
-    /* Contact */
-    form{display:grid; gap:12px}
-    .field{
-      display:grid; gap:6px;
-    }
-    label{font-weight:800; color: rgba(234,240,255,.88); font-size:.92rem}
-    input, textarea{
-      width:100%;
-      padding:14px 14px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.18);
-      color: var(--text);
-      outline:none;
-      font: inherit;
-      transition: border-color .2s var(--ease), background .2s var(--ease);
-    }
-    input:focus, textarea:focus{
-      border-color: rgba(32,211,255,.42);
-      background: rgba(0,0,0,.24);
-    }
-    textarea{min-height: 130px; resize: vertical}
-
-    .notice{
-      display:none;
-      padding:12px 14px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(39,209,127,.10);
-      color: rgba(234,240,255,.92);
+      background: rgba(10,14,25,.35);
       font-weight:700;
     }
-    .notice.show{display:block}
-    .notice.error{background: rgba(255,90,90,.10)}
+
+    /* Contact form */
+    .formWrap{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+    }
+    form{
+      display:grid;
+      gap:12px;
+    }
+    label{font-weight:800; font-size:.92rem}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,25,.40);
+      color:var(--text);
+      outline:none;
+      font-family:inherit;
+    }
+    input:focus, textarea:focus{
+      border-color: rgba(32,211,255,.32);
+      box-shadow: 0 0 0 4px rgba(32,211,255,.10);
+    }
+    textarea{min-height:120px; resize:vertical}
+    .formRow{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    .small{color:var(--muted2); font-size:.9rem; line-height:1.55}
+
+    .status{
+      margin-top:10px;
+      font-weight:800;
+      color: var(--muted);
+    }
 
     /* Footer */
     footer{
-      padding: 28px 0 40px;
+      padding:26px 0 70px;
       border-top: 1px solid rgba(255,255,255,.10);
       color: var(--muted2);
     }
-    .footer-grid{
-      display:flex; gap:14px; align-items:center; justify-content:space-between;
-      flex-wrap:wrap;
+    .footRow{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+    .social{display:flex; gap:10px; flex-wrap:wrap}
+    .social a{
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(10,14,25,.35);
+      font-weight:800;
+      color: var(--muted);
     }
-    .social{display:flex; gap:10px; align-items:center}
-    .social a{opacity:.85}
-    .social a:hover{opacity:1}
+    .social a:hover{color:var(--text); border-color: rgba(255,255,255,.20); background: rgba(255,255,255,.06)}
 
     /* Floating WhatsApp */
-    .wa-float{
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 80;
-      display:flex; align-items:center; gap:10px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      border:1px solid rgba(255,255,255,.14);
+    .waFloat{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:80;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
       background: rgba(10,14,25,.55);
+      border: 1px solid rgba(255,255,255,.14);
       backdrop-filter: blur(14px);
-      box-shadow: 0 16px 44px rgba(0,0,0,.45);
-      transition: transform .2s var(--ease);
+      box-shadow: 0 18px 60px rgba(0,0,0,.40);
+      color: var(--text);
+      font-weight:900;
     }
-    .wa-float:hover{transform: translateY(-2px)}
-    .wa-icon{
-      width:38px;height:38px;border-radius:999px;
+    .waIcon{
+      width:34px; height:34px; border-radius:999px;
       display:grid; place-items:center;
-      background: linear-gradient(180deg, rgba(39,209,127,.95), rgba(39,209,127,.65));
-      color:#071019;
-      flex: 0 0 auto;
+      background: rgba(37,211,102,.16);
+      border: 1px solid rgba(37,211,102,.28);
+      box-shadow: 0 0 0 6px rgba(37,211,102,.08);
+      flex:0 0 auto;
     }
-    .wa-text{display:flex; flex-direction:column; line-height:1.1}
-    .wa-text b{font-size:.92rem}
-    .wa-text span{font-size:.78rem; color: rgba(234,240,255,.70)}
+    .waFloat:hover{border-color: rgba(37,211,102,.35); transform: translateY(-2px)}
+    .waFloat span{color: var(--muted)}
 
     /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr; }
-      .work-item{grid-template-columns: 1fr}
-    }
-    @media (max-width: 860px){
-      .nav-links, .nav-cta .hide-mobile{display:none}
-      .burger{display:flex}
-      .mobile{display:none}
-      .grid-3{grid-template-columns: 1fr}
-      .grid-2{grid-template-columns: 1fr}
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      html{scroll-behavior:auto}
-      .btn, .work-media img, .wa-float{transition:none}
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns: 1fr}
+      .formWrap{grid-template-columns: 1fr}
+      .grid{grid-template-columns: 1fr}
+      .menu{display:none}
+      .burger{display:inline-flex}
+      .mobile.open{display:block}
+      .brand img{height:44px}
     }
   </style>
 </head>
 
-<body>
-  <!-- NAV -->
-  <header class="nav" role="banner">
-    <div class="container">
-      <div class="nav-inner">
-        <a class="brand" href="#top" aria-label="AP Digital Solutions">
-          <!-- Adjust path if your logo is in /assets -->
-          <img src="assets/logo-premium.png" alt="AP Digital Solutions logo" />
+<body id="top">
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="index.html" aria-label="AP Digital Solutions">
+          <span class="brand-badge">
+            <img src="assets/logo-premium.png" alt="AP Digital Solutions logo">
+          </span>
         </a>
 
-        <nav class="nav-links" aria-label="Primary navigation">
+        <nav class="menu" aria-label="Primary">
           <a href="#services">Services</a>
-          <a href="#work">Work</a>
+          <a href="portfolio.html">Portfolio</a>
           <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact" class="cta">Get a free demo</a>
         </nav>
 
-        <div class="nav-cta">
-          <a class="btn small hide-mobile" href="#contact">Get a quote</a>
-          <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          ☰
+        </button>
       </div>
 
-      <div class="mobile" id="mobileMenu" aria-label="Mobile navigation">
+      <nav class="mobile" id="mobile" aria-label="Mobile">
         <a href="#services">Services</a>
-        <a href="#work">Work</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-        <div class="row">
-          <a class="btn small primary" href="#contact" style="flex:1">Get a quote</a>
-        </div>
-      </div>
+        <a href="#contact">Get a free demo</a>
+      </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <main id="top">
+  <main>
     <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
+      <div class="wrap">
+        <div class="heroGrid">
           <div>
-            <span class="chip"><span class="dot"></span> Premium websites + AI automation</span>
-            <h1>Websites that look premium — and convert like crazy.</h1>
-            <p>
+            <div class="pill"><span class="dot"></span> Premium websites + AI automation</div>
+            <h1>Websites that look premium — and convert.</h1>
+            <p class="sub">
               AP Digital Solutions builds modern, mobile-first websites and automation that help small & growing businesses
               capture leads, build trust, and turn visitors into customers.
             </p>
 
-            <div class="hero-actions">
-              <a class="btn primary" href="#contact">
-                Get a free demo
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M5 12h12M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-              <a class="btn" href="#work">View work</a>
-              <a class="btn" href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <div class="actions">
+              <a class="btn primary" href="#contact">Get a free demo →</a>
+              <a class="btn" href="portfolio.html">View portfolio</a>
+              <a class="btn" href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener">Instagram</a>
             </div>
 
-            <p class="muted2" style="margin-top:14px">
-              Clean design • Fast loading • SEO-ready • Lead-focused
-            </p>
+            <div class="kpis">
+              <span>Clean design</span> • <span>Fast loading</span> • <span>SEO-ready</span> • <span>Lead-focused</span>
+            </div>
           </div>
 
-          <aside class="hero-card" aria-label="Highlights">
-            <h3 style="margin:0 0 6px; letter-spacing:-.02em">What you get</h3>
-            <p class="muted" style="margin:0 0 12px">A professional online presence that works 24/7.</p>
-
-            <div class="stat-grid">
-              <div class="stat">
-                <b>Premium UI / Apple-style feel</b>
-                <span>Modern, minimal, high trust</span>
-              </div>
-              <div class="stat">
-                <b>Built to convert</b>
-                <span>Clear CTAs + contact flow</span>
-              </div>
-              <div class="stat">
-                <b>Automation ready</b>
-                <span>WhatsApp + AI + lead capture</span>
-              </div>
+          <aside class="sideCard glow" aria-label="Highlights">
+            <div class="pad">
+              <div class="sideTitle">What you get</div>
+              <ul class="sideList">
+                <li><strong>Premium look</strong> that matches your brand</li>
+                <li><strong>Mobile-first</strong> design & fast performance</li>
+                <li><strong>Lead capture</strong> (forms + WhatsApp)</li>
+                <li><strong>SEO-ready</strong> foundation</li>
+              </ul>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services">
-      <div class="container">
-        <div class="section-head">
+      <div class="wrap">
+        <div class="sectionHead">
           <div>
             <h2>Services</h2>
-            <p class="muted">Everything you need to look professional online — and get more enquiries.</p>
+            <p>Everything you need to look professional online — and get more enquiries.</p>
           </div>
         </div>
 
-        <div class="grid-3">
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M8 10h8M8 14h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+        <div class="grid">
+          <article class="card">
+            <div class="pad">
+              <h3>Premium Web Design</h3>
+              <p>Modern, clean, mobile-first websites that build trust and convert visitors into leads.</p>
+              <div class="tagRow">
+                <span class="tag">Landing pages</span>
+                <span class="tag">Business websites</span>
+                <span class="tag">SEO-ready</span>
+              </div>
             </div>
-            <h3>Premium Websites</h3>
-            <p>Fast, mobile-first websites with a premium look that builds trust and wins customers.</p>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M12 3v18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M5 7h14M7 12h10M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+          <article class="card">
+            <div class="pad">
+              <h3>AI & Automation</h3>
+              <p>Automations that reply faster, capture enquiries, and keep your business moving — even when you're offline.</p>
+              <div class="tagRow">
+                <span class="tag">WhatsApp flows</span>
+                <span class="tag">Lead capture</span>
+                <span class="tag">Workflows</span>
+              </div>
             </div>
-            <h3>Landing Pages</h3>
-            <p>High-converting pages for ads, services, and product launches — built for leads.</p>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M7 12a5 5 0 0 1 5-5h5a5 5 0 0 1 0 10h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M17 12a5 5 0 0 1-5 5H7a5 5 0 0 1 0-10h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+          <article class="card">
+            <div class="pad">
+              <h3>Brand & Content</h3>
+              <p>Brand polish, visuals, and clear messaging that makes your offer easy to understand and trust.</p>
+              <div class="tagRow">
+                <span class="tag">Logos</span>
+                <span class="tag">Social assets</span>
+                <span class="tag">Copywriting</span>
+              </div>
             </div>
-            <h3>AI + Automation</h3>
-            <p>WhatsApp lead capture, instant replies, and smart workflows that save time.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- WORK -->
-    <section id="work">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Selected work</h2>
-            <p class="muted">A few examples of how we adapt the design to each brand.</p>
-          </div>
-          <a class="btn small" href="#contact">Want one like this?</a>
-        </div>
-
-        <div class="work">
-          <article class="card work-item">
-            <div class="work-media">
-              <!-- update the filename if needed -->
-              <a href="https://harbourandhome.co/" target="_blank" rel="noopener noreferrer" aria-label="Open Harbour & Home">
-                <img src="assets/work-harbourandhome.jpg" alt="Harbour & Home website preview" />
-              </a>
-            </div>
-            <div>
-              <span class="tag">Service business</span>
-              <h3 style="margin:10px 0 6px">Harbour & Home</h3>
-              <p class="muted">
-                Premium, trustworthy layout with clear CTAs, strong imagery and simple navigation — built to generate enquiries.
-              </p>
-              <div class="work-actions">
-                <a class="btn small primary" href="https://harbourandhome.co/" target="_blank" rel="noopener noreferrer">View site</a>
-                <a class="btn small" href="#contact">Build something similar</a>
-              </div>
-              <p class="muted2" style="margin:12px 0 0">
-                Focus: brand trust • conversion • mobile-first
-              </p>
-            </div>
-          </article>
-
-          <article class="card work-item">
-            <div class="work-media">
-              <a href="https://pethavenjersey.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Pet Haven">
-                <img src="assets/work-pethaven.jpg" alt="Pet Haven website preview" />
-              </a>
-            </div>
-            <div>
-              <span class="tag">E-commerce</span>
-              <h3 style="margin:10px 0 6px">Pet Haven</h3>
-              <p class="muted">
-                Friendly, clean design built for shopping. Clear product discovery and strong brand identity.
-              </p>
-              <div class="work-actions">
-                <a class="btn small primary" href="https://pethavenjersey.com/" target="_blank" rel="noopener noreferrer">View site</a>
-                <a class="btn small" href="#contact">Get a quote</a>
-              </div>
-              <p class="muted2" style="margin:12px 0 0">
-                Focus: product clarity • usability • speed
-              </p>
-            </div>
-          </article>
-
-          <div class="grid-2">
-            <article class="card">
-              <span class="tag">Community</span>
-              <h3 style="margin:10px 0 6px">AjudaTotal</h3>
-              <p class="muted">Warm, accessible design for community-first information and resources.</p>
-              <div style="margin-top:12px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.12)">
-                <img src="assets/ajudatotal.jpg" alt="AjudaTotal preview" style="width:100%; height:240px; object-fit:cover; display:block">
-              </div>
-            </article>
-
-            <article class="card">
-              <span class="tag">Well-being</span>
-              <h3 style="margin:10px 0 6px">Holistic / Personal Brand</h3>
-              <p class="muted">A calm, premium aesthetic that feels human and trustworthy.</p>
-              <div style="margin-top:12px; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.12)">
-                <img src="assets/catia.jpg" alt="Holistic brand preview" style="width:100%; height:240px; object-fit:cover; display:block">
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
     <section id="process">
-      <div class="container">
-        <div class="section-head">
+      <div class="wrap">
+        <div class="sectionHead">
           <div>
-            <h2>Simple process, premium result</h2>
-            <p class="muted">Fast to launch, easy to manage, built to perform.</p>
+            <h2>Process</h2>
+            <p>Simple, fast, and clear — from first message to a site that’s ready to sell.</p>
           </div>
         </div>
 
-        <div class="grid-3">
-          <div class="card">
-            <div class="step">
-              <div class="num">1</div>
-              <div>
-                <h3 style="margin:2px 0 6px">Quick call</h3>
-                <p class="muted">We understand your business, goals and style — then we propose the best layout.</p>
-              </div>
+        <div class="grid">
+          <article class="card">
+            <div class="pad">
+              <h3>1) Quick call / WhatsApp</h3>
+              <p>We understand your business, goals, style and what the website must achieve.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="step">
-              <div class="num">2</div>
-              <div>
-                <h3 style="margin:2px 0 6px">Build & refine</h3>
-                <p class="muted">We design, write and polish — so your site looks premium and reads clearly.</p>
-              </div>
+          <article class="card">
+            <div class="pad">
+              <h3>2) Build + feedback</h3>
+              <p>We design a premium look, then refine it fast with your feedback.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="step">
-              <div class="num">3</div>
-              <div>
-                <h3 style="margin:2px 0 6px">Launch</h3>
-                <p class="muted">We publish, test and optimise for mobile + speed + enquiries.</p>
-              </div>
+          <article class="card">
+            <div class="pad">
+              <h3>3) Launch + support</h3>
+              <p>We publish it, connect forms, and make sure everything works perfectly.</p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
-      <div class="container">
-        <div class="section-head">
+      <div class="wrap">
+        <div class="sectionHead">
           <div>
             <h2>Contact</h2>
-            <p class="muted">Tell us what you need — we reply quickly.</p>
+            <p>Tell us what you need — we’ll reply fast with the best next step.</p>
           </div>
         </div>
 
-        <div class="grid-2">
+        <div class="formWrap">
           <div class="card">
-            <h3 style="margin-top:0">Send a message</h3>
-            <p class="muted">This form uses Formspree. You’ll receive enquiries directly to your email.</p>
+            <div class="pad">
+              <form id="contactForm" action="https://formspree.io/f/xvzgz1jv" method="POST">
+                <div class="formRow">
+                  <div>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@email.com" required>
+                  </div>
+                </div>
 
-            <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
+                <div>
+                  <label for="subject">Subject</label>
+                  <input id="subject" name="subject" type="text" placeholder="Website / automation / branding">
+                </div>
 
-            <!-- Formspree endpoint from your screenshot -->
-            <form id="contactForm" action="https://formspree.io/f/xvzgzljv" method="POST">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required>
-              </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea>
+                </div>
 
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@email.com" required>
-              </div>
+                <!-- Helps Formspree route replies -->
+                <input type="hidden" name="_subject" value="New enquiry — AP Digital Solutions">
+                <button class="btn primary" type="submit">Send message →</button>
 
-              <div class="field">
-                <label for="service">What do you need?</label>
-                <input id="service" name="service" type="text" placeholder="Website / landing page / AI automation" required>
-              </div>
-
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you want to achieve." required></textarea>
-              </div>
-
-              <!-- Optional: helps reduce spam -->
-              <input type="text" name="_gotcha" style="display:none">
-
-              <button class="btn primary" type="submit">Send message</button>
-              <p class="muted2" style="margin:0">Or message us on WhatsApp using the button in the corner.</p>
-            </form>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-top:0">Connect</h3>
-            <p class="muted">Follow and message us on social. We can also review your current website for quick improvements.</p>
-
-            <div style="display:grid; gap:10px; margin-top:14px">
-              <a class="btn" target="_blank" rel="noopener noreferrer"
-                 href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==">
-                Instagram
-                <span class="muted2">→</span>
-              </a>
-
-              <a class="btn" target="_blank" rel="noopener noreferrer"
-                 href="https://www.facebook.com/share/1Qt8EJayXB/">
-                Facebook
-                <span class="muted2">→</span>
-              </a>
-
-              <a class="btn" href="#work">
-                See more work
-                <span class="muted2">→</span>
-              </a>
-            </div>
-
-            <div class="card" style="margin-top:14px; background: rgba(0,0,0,.16)">
-              <b style="display:block; margin-bottom:6px">Tip</b>
-              <span class="muted2">
-                If you enabled “Restrict to Domain” on Formspree, make sure it’s set to:
-                <b>apdigitalsolutions.digital</b> (no https://)
-              </span>
+                <div class="status" id="formStatus" aria-live="polite"></div>
+              </form>
             </div>
           </div>
+
+          <aside class="card">
+            <div class="pad">
+              <h3 style="margin:0 0 10px">Prefer WhatsApp?</h3>
+              <p class="small" style="margin:0 0 14px">
+                Message us and we’ll reply quickly. Your website can also include a WhatsApp button like this.
+              </p>
+
+              <div class="social" style="margin-bottom:10px">
+                <a href="https://www.facebook.com/share/1Qt8EJayXB/" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener">Instagram</a>
+              </div>
+
+              <p class="small" style="margin:10px 0 0">
+                Or email via the form — it’s connected to Formspree and goes straight to your inbox.
+              </p>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <b>AP Digital Solutions</b>
-            <div class="muted2">© <span id="year"></span> • Premium websites & automation</div>
-          </div>
-
-          <div class="social" aria-label="Social links">
-            <a class="btn small" href="#services">Services</a>
-            <a class="btn small" href="#work">Work</a>
-            <a class="btn small" href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <!-- Floating WhatsApp (does not display number on the page) -->
-  <a class="wa-float"
-     href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%20%E2%80%94%20I%27d%20like%20a%20website%20quote."
-     target="_blank" rel="noopener noreferrer"
-     aria-label="Chat on WhatsApp">
-    <span class="wa-icon" aria-hidden="true">
-      <!-- WhatsApp icon -->
-      <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
-        <path d="M16 3C9.4 3 4 8.1 4 14.5c0 2.5.9 4.8 2.4 6.7L5 29l8.1-1.3c1.8.9 3.9 1.5 6.1 1.5 6.6 0 12-5.1 12-11.5S22.6 3 16 3z" fill="currentColor" opacity=".15"/>
-        <path d="M16 5.2c-5.3 0-9.6 4-9.6 9.3 0 2.1.7 4 2 5.6l-1 6.1 6.2-1c1.5.8 3.2 1.2 4.9 1.2 5.3 0 9.6-4 9.6-9.3S21.3 5.2 16 5.2z" fill="currentColor"/>
-        <path d="M12.9 11.3c.2-.5.4-.6.8-.6h.6c.2 0 .5 0 .7.5.3.6 1 2.2 1 2.4 0 .2 0 .4-.2.6l-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.9-1.1c.2-.2.4-.2.6-.1.2.1 1.6.7 1.9.9.2.1.4.2.5.4.1.2.1 1.1-.3 1.7-.4.6-1.3 1.2-2.8.9-1.5-.3-3.4-1.2-5.2-2.7-2.2-1.9-3.6-4.2-3.9-5.7-.3-1.5.6-2.5.9-2.8z" fill="#071019"/>
+  <footer>
+    <div class="wrap">
+      <div class="footRow">
+        <div>© <span id="year"></span> AP Digital Solutions. All rights reserved.</div>
+        <div class="social">
+          <a href="portfolio.html">Portfolio</a>
+          <a href="https://www.facebook.com/share/1Qt8EJayXB/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp (number not shown on site; it opens chat) -->
+  <a class="waFloat" href="https://wa.me/447700704591?text=Hi%20AP%20Digital%20Solutions%20%E2%80%94%20I%27d%20like%20a%20website%20demo.%20Can%20you%20help%3F" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="waIcon" aria-hidden="true">
+      <!-- simple WA icon -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2a9.5 9.5 0 0 0-8.2 14.3L3 22l5.9-1.6A9.5 9.5 0 1 0 12 2Z" stroke="rgba(37,211,102,.95)" stroke-width="1.8" />
+        <path d="M9.2 8.7c.2-.4.4-.4.6-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4 0 .6l-.4.6c-.1.2-.1.4 0 .6.4.8 1.4 1.7 2.2 2.1.2.1.4.1.6 0l.6-.4c.2-.1.4-.1.6 0l1.6.8c.3.1.4.3.4.5v.5c0 .2 0 .4-.3.6-.4.4-1 .7-1.6.8-1.2.2-3.6-.4-5.8-2.6C7.2 11.6 7 9.9 7.2 9c.1-.5.4-1 .8-1.4.2-.2.4-.3.6-.3Z" fill="rgba(37,211,102,.95)"/>
       </svg>
     </span>
-    <span class="wa-text">
-      <b>WhatsApp</b>
-      <span>Fast reply</span>
-    </span>
+    WhatsApp <span>— quick reply</span>
   </a>
 
   <script>
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     // Mobile menu
-    const burger = document.getElementById('burger');
-    const menu = document.getElementById('mobileMenu');
-    burger.addEventListener('click', () => {
-      const open = menu.style.display === 'block';
-      menu.style.display = open ? 'none' : 'block';
-      burger.setAttribute('aria-expanded', String(!open));
+    const burger = document.getElementById("burger");
+    const mobile = document.getElementById("mobile");
+    burger.addEventListener("click", () => {
+      const open = mobile.classList.toggle("open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
     });
-    // close menu after click
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        menu.style.display = 'none';
-        burger.setAttribute('aria-expanded', 'false');
+    mobile.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        mobile.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
       });
     });
 
-    // Formspree AJAX submit (nice success message, no redirect)
-    const form = document.getElementById('contactForm');
-    const notice = document.getElementById('formNotice');
+    // Formspree AJAX (nice success message)
+    const form = document.getElementById("contactForm");
+    const statusEl = document.getElementById("formStatus");
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      notice.className = 'notice show';
-      notice.textContent = 'Sending…';
+      statusEl.textContent = "Sending…";
 
-      try {
+      try{
+        const data = new FormData(form);
         const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
         });
 
-        if (res.ok) {
-          notice.className = 'notice show';
-          notice.textContent = "✅ Message sent. We'll reply shortly!";
+        if(res.ok){
           form.reset();
+          statusEl.textContent = "✅ Sent! We’ll reply shortly.";
         } else {
-          notice.className = 'notice show error';
-          notice.textContent = '⚠️ Something went wrong. Please try again, or use WhatsApp.';
+          statusEl.textContent = "⚠️ Something went wrong. Try WhatsApp or refresh.";
         }
-      } catch (err) {
-        notice.className = 'notice show error';
-        notice.textContent = '⚠️ Network error. Please try again, or use WhatsApp.';
+      }catch(err){
+        statusEl.textContent = "⚠️ Network error. Try again or message on WhatsApp.";
       }
     });
   </script>
