@@ -1,22 +1,16 @@
 <!doctype html>
-<html lang="en-GB" data-theme="dark">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0B1020" />
 
-  <title>AP Digital Solutions | Premium Websites, SEO & WhatsApp Automations</title>
-  <meta name="description" content="Premium, fast, conversion-focused websites — plus SEO setup and WhatsApp-ready lead capture. Built for small & growing businesses." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <title>AP Digital Solutions | Websites That Get You Clients</title>
+  <meta name="description" content="We build modern, fast and professional websites designed to convert visitors into customers. Ideal for small and growing businesses." />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="AP Digital Solutions | Premium Websites & Digital Growth" />
-  <meta property="og:description" content="Modern, fast websites built to convert — plus SEO setup and WhatsApp-ready lead capture." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
-
-  <!-- Favicons (you already have these at root) -->
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
@@ -29,869 +23,246 @@
 
   <style>
     :root{
-      --bg0:#070A12;
-      --bg1:#0B1020;
-      --card: rgba(255,255,255,.06);
-      --card2: rgba(255,255,255,.03);
-      --border: rgba(255,255,255,.12);
-
-      --text:#EAF0FF;
-      --muted: rgba(234,240,255,.72);
-
-      --accent:#2F7BFF;
-      --accent2:#7C3AED;
-      --good:#22C55E;
-      --warn:#F59E0B;
-
-      --shadow: 0 18px 50px rgba(0,0,0,.45);
-      --radius: 22px;
-      --container: 1160px;
-      --ease: cubic-bezier(.2,.8,.2,1);
+      --bg:#0b1020;
+      --card:#151a33;
+      --border:rgba(255,255,255,.1);
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.7);
+      --accent:#2f7bff;
+      --accent2:#7c3aed;
+      --radius:18px;
+      --shadow:0 18px 40px rgba(0,0,0,.45);
     }
-
-    html[data-theme="light"]{
-      --bg0:#F6F7FB;
-      --bg1:#FFFFFF;
-      --card: rgba(2,6,23,.05);
-      --card2: rgba(2,6,23,.03);
-      --border: rgba(2,6,23,.10);
-
-      --text:#0B1020;
-      --muted: rgba(11,16,32,.70);
-
-      --shadow: 0 16px 44px rgba(2,6,23,.10);
-    }
-
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
     body{
       margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      font-family:Inter,system-ui;
       color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 10% -10%, rgba(47,123,255,.35), transparent 60%),
-        radial-gradient(900px 600px at 90% 0%, rgba(124,58,237,.28), transparent 60%),
-        linear-gradient(180deg, var(--bg0), var(--bg1));
+      background:linear-gradient(180deg,#070a12,#0b1020);
       line-height:1.6;
-      overflow-x:hidden;
     }
-    a{color:inherit;text-decoration:none}
+    a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
-
-    .container{width:min(var(--container), calc(100% - 40px));margin:0 auto}
-
-    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip:focus{
-      left:18px;top:14px;width:auto;height:auto;
-      padding:10px 14px;border-radius:12px;
-      background:var(--bg1);border:1px solid var(--border);
-      box-shadow:var(--shadow);z-index:9999;
-    }
-    :focus-visible{ outline: 3px solid rgba(47,123,255,.35); outline-offset: 3px; border-radius: 12px; }
+    .container{width:min(1120px,calc(100% - 40px));margin:auto}
 
     header{
       position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(180deg, rgba(10,14,26,.72), rgba(10,14,26,.42));
+      backdrop-filter:blur(12px);
+      background:rgba(11,16,32,.8);
       border-bottom:1px solid var(--border);
     }
-    html[data-theme="light"] header{background: rgba(255,255,255,.72)}
-
     .nav{
-      display:flex;align-items:center;justify-content:space-between;gap:14px;
-      padding:14px 0;position:relative;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
     }
-    .brand{display:flex;align-items:center;gap:12px;min-width:190px}
-    .brand img{width:175px;height:auto}
-
-    nav{
-      display:flex;align-items:center;gap:8px;
-      padding:6px;border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      border-radius: 999px;
-    }
+    .brand img{height:44px}
     nav a{
-      padding:10px 14px;border-radius:999px;
-      font-weight:900;color:var(--muted);
-      transition: transform .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
-      white-space:nowrap;
+      margin:0 10px;
+      font-weight:700;
+      color:var(--muted);
     }
-    nav a:hover{
-      background: rgba(47,123,255,.18);
-      color:var(--text);
-      transform: translateY(-1px);
-    }
+    nav a:hover{color:white}
 
-    .actions{display:flex;align-items:center;gap:10px}
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 16px;border-radius:14px;
-      font-weight:900;border:1px solid transparent;
-      cursor:pointer;
-      transition: transform .2s var(--ease), filter .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease);
-      user-select:none;
+      padding:12px 18px;
+      border-radius:14px;
+      font-weight:800;
+      display:inline-block;
     }
-    .btn:hover{transform:translateY(-1px);filter:brightness(1.03)}
     .btn-primary{
-      color:white;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 18px 40px rgba(47,123,255,.20);
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:var(--shadow);
     }
-    .btn-ghost{
-      background: rgba(255,255,255,.04);
-      border-color: var(--border);
-      color: var(--text);
-    }
-    .iconbtn{
-      width:44px;height:44px;border-radius:14px;
+    .btn-outline{
       border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      display:inline-flex;align-items:center;justify-content:center;
-      cursor:pointer;
-      transition: transform .2s var(--ease), background .2s var(--ease);
+      color:white;
     }
-    .iconbtn:hover{transform:translateY(-1px);background: rgba(255,255,255,.06)}
 
-    .m-toggle{display:none}
-    .m-btn{display:none}
-
-    section{padding:76px 0}
+    section{padding:80px 0}
 
     /* HERO */
-    .hero{padding:74px 0 44px}
-    .hero-grid{display:grid;grid-template-columns: 1.12fr .88fr;gap:18px;align-items:stretch}
-
-    .kicker{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:8px 12px;border-radius:999px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      color:var(--muted);
-      font-weight:900;width:fit-content;margin-bottom:14px;
+    .hero{
+      text-align:center;
+      padding-top:100px;
     }
-    .dot{width:10px;height:10px;border-radius:999px;background:var(--good);box-shadow:0 0 0 6px rgba(34,197,94,.14)}
     h1{
-      margin:0 0 14px;
-      font-size: clamp(2.2rem, 4.2vw, 3.45rem);
-      letter-spacing:-0.045em;line-height:1.04;font-weight:900;
+      font-size:clamp(2.3rem,4vw,3.4rem);
+      line-height:1.05;
+      margin:0 0 16px;
     }
-    .lead{margin:0 0 18px;color:var(--muted);font-size:1.08rem;max-width:62ch}
-    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 14px}
-    .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .pill{
-      padding:10px 12px;border-radius:999px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
+    .lead{
+      max-width:700px;
+      margin:0 auto 28px;
       color:var(--muted);
-      font-weight:900;font-size:.95rem;
+      font-size:1.1rem;
     }
-
-    .hero-card{
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.02));
-      border-radius: var(--radius);
-      padding:18px;box-shadow: var(--shadow);
-      display:flex;flex-direction:column;gap:12px;
-    }
-    .hero-card h3{margin:0;font-size:1.05rem}
-    .list{margin:0;padding-left:18px;color:var(--muted)}
-    .list li{margin:8px 0}
-    .mini{
-      padding:12px;border-radius:16px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      color:var(--muted);font-weight:900;font-size:.95rem;
-    }
-
-    .title{margin:0 0 10px;font-size: clamp(1.8rem, 2.8vw, 2.45rem);letter-spacing:-0.03em;text-align:center;font-weight:900}
-    .subtitle{margin:0 auto 42px;text-align:center;color:var(--muted);max-width:92ch}
-
-    /* TRUST BAR */
-    .trust{
-      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
-      padding:14px 14px;border-radius: var(--radius);
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-    }
-    .trust b{font-weight:900}
-    .trust span{color:var(--muted);font-weight:800}
 
     /* WORK */
-    .work-grid{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
-    .work-card{
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border-radius: var(--radius);
-      padding:16px;
-      overflow:hidden;
-      position:relative;
-      box-shadow: var(--shadow);
+    .grid{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap:14px;
-      align-items:center;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:24px;
     }
-    .tag{display:inline-flex;align-items:center;gap:8px;font-weight:900;font-size:.92rem;margin-bottom:10px;color:var(--muted)}
-    .tag i{width:10px;height:10px;border-radius:999px;display:inline-block}
-    .tag .b{background:var(--accent);box-shadow:0 0 0 6px rgba(47,123,255,.12)}
-    .tag .g{background:var(--warn);box-shadow:0 0 0 6px rgba(245,158,11,.12)}
-    .tag .p{background:var(--accent2);box-shadow:0 0 0 6px rgba(124,58,237,.12)}
-    .tag .ok{background:var(--good);box-shadow:0 0 0 6px rgba(34,197,94,.12)}
-
-    .work-card h3{margin:0 0 8px;font-size:1.34rem;letter-spacing:-0.02em}
-    .work-card p{margin:0 0 12px;color:var(--muted)}
-    .work-actions{display:flex;gap:10px;flex-wrap:wrap}
-
-    .link{
-      padding:10px 12px;border-radius:14px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      font-weight:900;
-      transition: transform .2s var(--ease), background .2s var(--ease);
-    }
-    .link:hover{transform:translateY(-1px);background: rgba(47,123,255,.16)}
-    .link.ghost:hover{background: rgba(255,255,255,.06)}
-
-    .mockup{position:relative;display:flex;justify-content:center}
-    .phone{
-      width:min(320px, 100%);
-      border-radius:26px;
-      border:1px solid var(--border);
-      background: rgba(0,0,0,.20);
-      overflow:hidden;
-      transform: translateY(10px);
-      box-shadow: 0 16px 50px rgba(0,0,0,.35);
-      position:relative;
-    }
-    .notch{
-      position:absolute;width:40%;height:22px;top:10px;left:50%;
-      transform:translateX(-50%);
-      border-radius:0 0 14px 14px;
-      background: rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.10);
-      z-index:2;
-    }
-    .phone img{width:100%;height:420px;object-fit:cover;filter:contrast(1.03) saturate(1.05)}
-    .glow{
-      position:absolute; inset:auto -40px -60px -40px;
-      height:220px;
-      background: radial-gradient(closest-side, rgba(47,123,255,.22), transparent 70%);
-      filter: blur(10px);
-      pointer-events:none;
-    }
-    .glow.purple{background: radial-gradient(closest-side, rgba(124,58,237,.22), transparent 70%)}
-    .glow.green{background: radial-gradient(closest-side, rgba(34,197,94,.18), transparent 70%)}
-
-    /* SERVICES / PROCESS */
-    .grid3{display:grid;grid-template-columns: repeat(3, 1fr);gap:14px}
     .card{
+      background:var(--card);
       border:1px solid var(--border);
-      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.02));
-      border-radius: var(--radius);
+      border-radius:var(--radius);
       padding:18px;
-      box-shadow: 0 10px 26px rgba(0,0,0,.20);
+      box-shadow:var(--shadow);
     }
-    html[data-theme="light"] .card{box-shadow: 0 12px 26px rgba(2,6,23,.10)}
-    .ico{
-      width:46px;height:46px;border-radius:16px;
-      display:flex;align-items:center;justify-content:center;
-      background: rgba(47,123,255,.14);
-      border:1px solid rgba(47,123,255,.25);
-      font-weight:900;margin-bottom:10px;user-select:none;
+    .card img{
+      border-radius:14px;
+      margin-bottom:14px;
     }
-    .card h3{margin:0 0 8px;font-size:1.12rem}
-    .card p{margin:0;color:var(--muted)}
-    .steps{counter-reset: step}
-    .step .ico{background: rgba(124,58,237,.14);border-color: rgba(124,58,237,.25)}
-    .step .ico:before{counter-increment: step;content: counter(step);}
+    .card h3{margin:0 0 6px}
+    .card p{margin:0 0 12px;color:var(--muted)}
 
-    /* PACKAGES */
-    .pricing{display:grid;grid-template-columns: repeat(3, 1fr);gap:14px;align-items:stretch}
-    .plan{
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.02));
-      border-radius: var(--radius);
-      padding:18px;
-      box-shadow: var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-    .plan h3{margin:0 0 6px;font-size:1.22rem}
-    .plan p{margin:0 0 14px;color:var(--muted)}
-    .badge{
-      position:absolute;top:14px;right:14px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      font-weight:900;font-size:.85rem;color:var(--muted);
-    }
-    .features{margin:0;padding-left:18px;color:var(--muted);font-weight:800}
-    .features li{margin:8px 0}
-    .plan .btn{width:100%;margin-top:14px}
-    .plan.highlight{
-      border-color: rgba(47,123,255,.35);
-      background: linear-gradient(180deg, rgba(47,123,255,.14), rgba(255,255,255,.02));
-    }
-    .plan.highlight .badge{
-      color:white;border-color: rgba(255,255,255,.18);
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-    }
-
-    /* FAQ */
-    .faq{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
-    details{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding:14px 16px;
-    }
-    summary{
-      cursor:pointer;font-weight:900;list-style:none;
-    }
-    summary::-webkit-details-marker{display:none}
-    details p{margin:10px 0 0;color:var(--muted)}
-
-    /* SOCIAL */
-    .social-grid{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
-    .social-card{
-      display:flex;align-items:center;gap:12px;
-      padding:16px;border-radius: var(--radius);
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-      transition: transform .2s var(--ease), background .2s var(--ease);
-    }
-    .social-card:hover{transform: translateY(-2px);background: rgba(255,255,255,.05)}
-    .social-ico{
-      width:46px;height:46px;border-radius:16px;
-      display:flex;align-items:center;justify-content:center;
-      font-weight:900;border:1px solid var(--border);
-      background: rgba(47,123,255,.14);
-    }
+    /* SERVICES */
+    .service h3{margin-bottom:6px}
 
     /* CONTACT */
     .contact{
+      background:linear-gradient(135deg,rgba(47,123,255,.15),rgba(124,58,237,.1));
+      border-radius:var(--radius);
+      padding:40px;
       border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(47,123,255,.10), rgba(255,255,255,.02));
-      border-radius: var(--radius);
-      padding:18px;
+      text-align:center;
     }
-    .contact-grid{display:grid;grid-template-columns: 1fr 1fr;gap:14px}
-    .box{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      border-radius: var(--radius);
-      padding:16px;
-    }
-    form{display:grid;gap:12px}
-    label{font-weight:900;font-size:.95rem}
-    input,textarea{
-      width:100%;
-      padding:12px;border-radius:14px;border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      font: inherit;
-    }
-    html[data-theme="light"] input, html[data-theme="light"] textarea{background: rgba(255,255,255,.70)}
-    textarea{min-height:120px;resize:vertical}
-    .small{color:var(--muted);font-size:.92rem;margin:0}
 
-    footer{padding:34px 0;color:var(--muted)}
-    .foot{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    footer{
+      padding:40px 0;
+      text-align:center;
+      color:var(--muted);
       border-top:1px solid var(--border);
-      padding-top:18px;
     }
 
     /* WhatsApp */
     .wa{
       position:fixed;
       right:18px;bottom:18px;
-      width:54px;height:54px;border-radius:18px;
+      width:56px;height:56px;
+      border-radius:18px;
+      background:#25d366;
       display:flex;align-items:center;justify-content:center;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      box-shadow: 0 18px 38px rgba(0,0,0,.35);
-      z-index:60;
-      border:1px solid rgba(255,255,255,.18);
-      transition: transform .2s var(--ease), filter .2s var(--ease);
+      box-shadow:var(--shadow);
     }
-    .wa:hover{transform: translateY(-2px);filter: brightness(1.03)}
     .wa svg{width:26px;height:26px;fill:white}
-
-    /* Reveal */
-    .reveal{opacity:0;transform: translateY(16px);transition: opacity .7s var(--ease), transform .7s var(--ease)}
-    .reveal.in{opacity:1;transform:none}
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns: 1fr}
-      .work-grid{grid-template-columns: 1fr}
-      .work-card{grid-template-columns: 1fr}
-      .phone img{height:360px}
-      .grid3{grid-template-columns: 1fr}
-      .pricing{grid-template-columns: 1fr}
-      .faq{grid-template-columns: 1fr}
-      .social-grid{grid-template-columns: 1fr}
-      .contact-grid{grid-template-columns: 1fr}
-    }
-    @media (max-width: 780px){
-      nav{display:none}
-      .m-btn{display:inline-flex}
-      .m-toggle:checked ~ .nav nav{
-        display:flex;
-        position:absolute;
-        left:0; right:0;
-        top:70px;
-        flex-direction:column;
-        align-items:stretch;
-        gap:6px;
-        border-radius: 18px;
-        padding: 10px;
-        background: rgba(10,14,26,.92);
-        margin: 0 20px;
-      }
-      html[data-theme="light"] .m-toggle:checked ~ .nav nav{background: rgba(255,255,255,.96)}
-    }
   </style>
-
-  <!-- Basic JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "AP Digital Solutions",
-    "url": "https://apdigitalsolutions.digital/",
-    "sameAs": [
-      "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==",
-      "https://www.facebook.com/share/1Qt8EJayXB/"
-    ]
-  }
-  </script>
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <header>
-    <div class="container">
-      <input class="m-toggle" type="checkbox" id="menu" aria-label="Open menu" />
-      <div class="nav">
-        <a class="brand" href="#top" aria-label="AP Digital Solutions home">
-          <img src="assets/logo-premium.png" alt="AP Digital Solutions Logo" />
-        </a>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img src="assets/logo-premium.png" alt="AP Digital Solutions">
+    </a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Get a Quote</a>
+  </div>
+</header>
 
-        <nav aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#services">Services</a>
-          <a href="#packages">Packages</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<main>
 
-        <div class="actions">
-          <button class="iconbtn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
-            <span id="themeIcon">☾</span>
-          </button>
+<section class="hero">
+  <div class="container">
+    <h1>Websites That Make Your Business Look Professional — and Get You Clients</h1>
+    <p class="lead">
+      We design fast, modern and conversion-focused websites for small and growing businesses.
+      Built to work perfectly on mobile and ready to generate enquiries.
+    </p>
+    <a class="btn btn-primary" href="#work">View Our Work</a>
+  </div>
+</section>
 
-          <label class="btn btn-ghost m-btn" for="menu" aria-hidden="true">Menu</label>
-          <a class="btn btn-primary" href="#contact">Get a Quote</a>
-        </div>
+<section id="work">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:40px">Selected Work</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/work-pethaven.jpg" alt="Pet Haven">
+        <h3>Pet Haven</h3>
+        <p>E-commerce website with a clean design focused on trust and conversions.</p>
+        <a class="btn btn-outline" href="https://pethavenjersey.com/" target="_blank">View live</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/work-harbourandhome.jpg" alt="Harbour & Home">
+        <h3>Harbour & Home</h3>
+        <p>Premium service website designed to generate enquiries on mobile.</p>
+        <a class="btn btn-outline" href="https://harbourandhome.co/" target="_blank">View live</a>
+      </div>
+
+      <div class="card">
+        <img src="assets/ajudatotal.jpg" alt="AjudaTotal">
+        <h3>AjudaTotal</h3>
+        <p>Community-focused platform with a clean and accessible layout.</p>
+      </div>
+
+      <div class="card">
+        <img src="assets/catia.jpg" alt="Catia Holistic">
+        <h3>Catia Holistic</h3>
+        <p>Calm, premium design focused on trust and bookings.</p>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="reveal">
-            <div class="kicker"><span class="dot"></span> Premium websites • SEO-ready • Built to convert</div>
-
-            <h1>Look premium online — and turn visitors into customers.</h1>
-            <p class="lead">
-              We design modern, fast websites that fit your brand, with clear calls-to-action and WhatsApp-ready lead capture.
-              Ideal for small & growing businesses that want more enquiries and better trust.
-            </p>
-
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="#work">View Work</a>
-              <a class="btn btn-ghost" href="wa/">WhatsApp Us</a>
-            </div>
-
-            <div class="stats">
-              <span class="pill">Mobile-first</span>
-              <span class="pill">Fast loading</span>
-              <span class="pill">Apple-style UI</span>
-              <span class="pill">Lead capture ready</span>
-            </div>
-
-            <div class="trust" style="margin-top:16px">
-              <div><b>Built for</b> <span>service businesses, shops, professionals</span></div>
-              <div><b>Focus</b> <span>conversion + credibility</span></div>
-              <div><b>Delivery</b> <span>clean, fast, modern</span></div>
-            </div>
-          </div>
-
-          <aside class="hero-card reveal">
-            <h3>What you get</h3>
-            <ul class="list">
-              <li>Custom design that matches your brand</li>
-              <li>Clear structure + strong CTAs</li>
-              <li>Performance + basic SEO setup</li>
-              <li>WhatsApp-ready lead capture</li>
-            </ul>
-            <div class="mini">
-              Want automations? We can add WhatsApp auto-replies, form routing, and lead tracking.
-            </div>
-            <a class="btn btn-primary" href="#packages">See Packages</a>
-          </aside>
-        </div>
+<section id="services">
+  <div class="container">
+    <h2 style="text-align:center;margin-bottom:40px">What We Do</h2>
+    <div class="grid">
+      <div class="card service">
+        <h3>Website Design</h3>
+        <p>Custom design that matches your brand and looks professional on all devices.</p>
       </div>
-    </section>
-
-    <!-- WORK -->
-    <section id="work">
-      <div class="container">
-        <h2 class="title reveal">Selected work</h2>
-        <p class="subtitle reveal">A clean, premium portfolio that helps clients trust you instantly.</p>
-
-        <div class="work-grid">
-          <article class="work-card reveal">
-            <div>
-              <div class="tag"><i class="b"></i> E-commerce</div>
-              <h3>Pet Haven</h3>
-              <p>Mobile-first storefront design, product discovery, and a clean brand feel built for conversions.</p>
-              <div class="work-actions">
-                <a class="link" href="https://pethavenjersey.com/" target="_blank" rel="noopener">View Live</a>
-                <a class="link ghost" href="#contact">Request similar</a>
-              </div>
-            </div>
-            <div class="mockup">
-              <div class="phone">
-                <div class="notch"></div>
-                <img src="assets/work-pethaven.jpg" alt="Pet Haven mobile preview" loading="lazy" />
-              </div>
-              <div class="glow"></div>
-            </div>
-          </article>
-
-          <article class="work-card reveal">
-            <div>
-              <div class="tag"><i class="g"></i> Services</div>
-              <h3>Harbour &amp; Home</h3>
-              <p>Trust-first layout with premium visuals, built to generate enquiries fast from mobile visitors.</p>
-              <div class="work-actions">
-                <a class="link" href="https://harbourandhome.co/" target="_blank" rel="noopener">View Live</a>
-                <a class="link ghost" href="#contact">Request similar</a>
-              </div>
-            </div>
-            <div class="mockup">
-              <div class="phone">
-                <div class="notch"></div>
-                <img src="assets/work-harbourandhome.jpg" alt="Harbour & Home mobile preview" loading="lazy" />
-              </div>
-              <div class="glow purple"></div>
-            </div>
-          </article>
-
-          <article class="work-card reveal">
-            <div>
-              <div class="tag"><i class="p"></i> Community</div>
-              <h3>AjudaTotal</h3>
-              <p>Clean, accessible layout designed to feel friendly, modern and easy to navigate across devices.</p>
-              <div class="work-actions">
-                <a class="link ghost" href="#contact">Request similar</a>
-              </div>
-            </div>
-            <div class="mockup">
-              <div class="phone">
-                <div class="notch"></div>
-                <img src="assets/ajudatotal.jpg" alt="AjudaTotal preview" loading="lazy" />
-              </div>
-              <div class="glow"></div>
-            </div>
-          </article>
-
-          <article class="work-card reveal">
-            <div>
-              <div class="tag"><i class="ok"></i> Premium brand</div>
-              <h3>Catia Holistic</h3>
-              <p>Premium look & feel with calm spacing and strong trust signals — designed for bookings and enquiries.</p>
-              <div class="work-actions">
-                <a class="link ghost" href="#contact">Request similar</a>
-              </div>
-            </div>
-            <div class="mockup">
-              <div class="phone">
-                <div class="notch"></div>
-                <img src="assets/catia.jpg" alt="Catia Holistic preview" loading="lazy" />
-              </div>
-              <div class="glow green"></div>
-            </div>
-          </article>
-        </div>
+      <div class="card service">
+        <h3>Conversion Focus</h3>
+        <p>Clear structure and calls-to-action that turn visitors into enquiries.</p>
       </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <div class="container">
-        <h2 class="title reveal">Services</h2>
-        <p class="subtitle reveal">Everything you need to look professional online — and turn visitors into leads.</p>
-
-        <div class="grid3">
-          <div class="card reveal">
-            <div class="ico">WD</div>
-            <h3>Web Design & Build</h3>
-            <p>Premium websites that match your brand — mobile-first, fast, and structured for enquiries.</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="ico">UX</div>
-            <h3>UX & Conversion</h3>
-            <p>Clear sections, strong CTAs, and a layout that guides users to message or book.</p>
-          </div>
-
-          <div class="card reveal">
-            <div class="ico">SEO</div>
-            <h3>SEO & Performance</h3>
-            <p>Fast load, metadata, indexing basics, and technical best practices that help you get found.</p>
-          </div>
-        </div>
-
-        <div style="height:14px"></div>
-
-        <h2 class="title reveal" style="margin-top:0">How we work</h2>
-        <p class="subtitle reveal">A simple process clients understand — and it makes you look like a real agency.</p>
-
-        <div class="grid3 steps">
-          <div class="card reveal step">
-            <div class="ico"></div>
-            <h3>Discovery</h3>
-            <p>We define goals, pages, brand style and what success looks like (calls, messages, bookings).</p>
-          </div>
-          <div class="card reveal step">
-            <div class="ico"></div>
-            <h3>Build</h3>
-            <p>We design and build a premium site, focusing on speed, clarity and conversion.</p>
-          </div>
-          <div class="card reveal step">
-            <div class="ico"></div>
-            <h3>Launch</h3>
-            <p>We connect domain, add SEO basics, test everything on mobile, and go live.</p>
-          </div>
-        </div>
+      <div class="card service">
+        <h3>SEO & Performance</h3>
+        <p>Fast loading, SEO-ready websites that Google understands.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- PACKAGES -->
-    <section id="packages">
-      <div class="container">
-        <h2 class="title reveal">Packages</h2>
-        <p class="subtitle reveal">Clear options make it easier for clients to say “yes”. (Prices by quote — no pressure.)</p>
-
-        <div class="pricing">
-          <div class="plan reveal">
-            <div class="badge">Best for starters</div>
-            <h3>Starter</h3>
-            <p>Clean one-page presence that looks professional and captures leads.</p>
-            <ul class="features">
-              <li>1-page premium layout</li>
-              <li>WhatsApp lead button</li>
-              <li>Basic SEO setup</li>
-              <li>Mobile-first design</li>
-            </ul>
-            <a class="btn btn-ghost" href="#contact">Get a quote</a>
-          </div>
-
-          <div class="plan highlight reveal">
-            <div class="badge">Most popular</div>
-            <h3>Business</h3>
-            <p>Multi-section site with strong structure, trust signals and conversion focus.</p>
-            <ul class="features">
-              <li>Multi-section / multi-page structure</li>
-              <li>Portfolio + testimonials area</li>
-              <li>SEO-ready + performance polish</li>
-              <li>Contact form setup (Formspree/Zoho)</li>
-            </ul>
-            <a class="btn btn-primary" href="#contact">Get a quote</a>
-          </div>
-
-          <div class="plan reveal">
-            <div class="badge">For growth</div>
-            <h3>Pro</h3>
-            <p>For brands that want scale: automations, tracking, and advanced lead capture.</p>
-            <ul class="features">
-              <li>Lead routing + automations</li>
-              <li>Tracking setup (basic)</li>
-              <li>Landing pages for campaigns</li>
-              <li>WhatsApp flows (optional)</li>
-            </ul>
-            <a class="btn btn-ghost" href="#contact">Get a quote</a>
-          </div>
-        </div>
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <h2>Let’s Talk About Your Website</h2>
+      <p class="lead">
+        Tell us what you need and we’ll get back to you with the best solution.
+      </p>
+      <a class="btn btn-primary" href="wa/">Message us on WhatsApp</a>
+      <div style="margin-top:16px">
+        <a href="https://www.instagram.com/apdigitalsolutions.digital" target="_blank">Instagram</a> ·
+        <a href="https://www.facebook.com/share/1Qt8EJayXB/" target="_blank">Facebook</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <h2 class="title reveal">FAQ</h2>
-        <p class="subtitle reveal">Answer objections before the client even asks.</p>
+</main>
 
-        <div class="faq">
-          <details class="reveal">
-            <summary>Do you help with domain and email?</summary>
-            <p>Yes — we can connect your domain, set up business email, and help you log in on Gmail/Outlook.</p>
-          </details>
+<footer>
+  © <span id="y"></span> AP Digital Solutions
+</footer>
 
-          <details class="reveal">
-            <summary>Can I edit the website later?</summary>
-            <p>Yes. We can deliver a simple setup or manage updates for you — whichever you prefer.</p>
-          </details>
+<a class="wa" href="wa/" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32">
+    <path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.5L3 29l6.7-1.8c1.9 1 4 1.6 6.3 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3z"/>
+  </svg>
+</a>
 
-          <details class="reveal">
-            <summary>Do you build for mobile?</summary>
-            <p>Always. Most visitors come from phones — everything is designed mobile-first.</p>
-          </details>
+<script>
+  document.getElementById("y").textContent=new Date().getFullYear();
+</script>
 
-          <details class="reveal">
-            <summary>Can you add WhatsApp automation?</summary>
-            <p>Yes. We can add WhatsApp-ready lead capture and optional automated replies / lead capture flows.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIAL -->
-    <section id="social">
-      <div class="container">
-        <h2 class="title reveal">Social</h2>
-        <p class="subtitle reveal">Follow AP Digital Solutions for updates, new work and offers.</p>
-
-        <div class="social-grid reveal">
-          <a class="social-card" href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener">
-            <div class="social-ico">IG</div>
-            <div>
-              <b>Instagram</b>
-              <div class="small">apdigitalsolutions.digital</div>
-            </div>
-          </a>
-
-          <a class="social-card" href="https://www.facebook.com/share/1Qt8EJayXB/" target="_blank" rel="noopener">
-            <div class="social-ico">FB</div>
-            <div>
-              <b>Facebook</b>
-              <div class="small">AP Digital Solutions</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact reveal">
-          <h2 class="title" style="margin-top:0">Contact</h2>
-          <p class="subtitle" style="margin-bottom:18px">Tell us what you need — we reply with the best next step.</p>
-
-          <div class="contact-grid">
-            <div class="box">
-              <h3 style="margin:0 0 10px">Fast reply</h3>
-              <p class="small" style="margin:0 0 14px">
-                Send the business type + what you want (new site / redesign / landing page). We’ll reply with a clear plan.
-              </p>
-
-              <p class="small" style="margin:0 0 14px">
-                Email: <strong>hello@apdigitalsolutions.digital</strong>
-              </p>
-
-              <div style="display:flex;gap:10px;flex-wrap:wrap">
-                <a class="link" href="wa/">WhatsApp</a>
-                <a class="link" href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener">Instagram</a>
-                <a class="link" href="https://www.facebook.com/share/1Qt8EJayXB/" target="_blank" rel="noopener">Facebook</a>
-              </div>
-
-              <div class="mini" style="margin-top:14px">
-                Tip: If you want, we can also build a dedicated landing page for ads.
-              </div>
-            </div>
-
-            <div class="box">
-              <h3 style="margin:0 0 10px">Send a message</h3>
-
-              <!-- Replace action with Formspree/Zoho/Netlify when ready -->
-              <form action="#" method="post">
-                <div>
-                  <label for="name">Name</label>
-                  <input id="name" name="name" type="text" placeholder="Your name" required />
-                </div>
-                <div>
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" placeholder="you@email.com" required />
-                </div>
-                <div>
-                  <label for="msg">Message</label>
-                  <textarea id="msg" name="message" placeholder="What do you need? New site, redesign, landing page, WhatsApp automation..." required></textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Send</button>
-                <p class="small">Connect this form to Formspree / Netlify Forms / Zoho Forms (I can set it up).</p>
-              </form>
-            </div>
-          </div>
-
-          <footer>
-            <div class="foot">
-              <p class="small" style="margin:0">© <span id="year"></span> AP Digital Solutions</p>
-              <p class="small" style="margin:0">Premium websites • SEO-ready • WhatsApp lead capture</p>
-            </div>
-          </footer>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- WhatsApp (homepage doesn't show number) -->
-  <a class="wa" href="wa/" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M19.11 17.53c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.79-1.69-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.49s1.08 2.88 1.23 3.08c.15.2 2.13 3.25 5.17 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.17-1.4-.08-.12-.27-.2-.57-.35zM16 3C8.83 3 3 8.83 3 16c0 2.28.6 4.51 1.74 6.48L3 29l6.71-1.76A12.9 12.9 0 0 0 16 29c7.17 0 13-5.83 13-13S23.17 3 16 3zm0 23.65c-2.05 0-4.06-.56-5.8-1.63l-.42-.25-3.98 1.04 1.06-3.88-.27-.4A10.6 10.6 0 0 1 5.35 16C5.35 10.13 10.13 5.35 16 5.35S26.65 10.13 26.65 16 21.87 26.65 16 26.65z"/>
-    </svg>
-  </a>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Theme
-    const html = document.documentElement;
-    const btn = document.getElementById("themeBtn");
-    const icon = document.getElementById("themeIcon");
-
-    function setTheme(t){
-      html.setAttribute("data-theme", t);
-      localStorage.setItem("theme", t);
-      icon.textContent = (t === "light") ? "☀" : "☾";
-    }
-    const saved = localStorage.getItem("theme");
-    if(saved){ setTheme(saved); }
-
-    btn.addEventListener("click", () => {
-      const current = html.getAttribute("data-theme") || "dark";
-      setTheme(current === "dark" ? "light" : "dark");
-    });
-
-    // Reveal
-    const els = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add("in");
-          io.unobserve(e.target);
-        }
-      });
-    }, {threshold: .12});
-    els.forEach(el=>io.observe(el));
-  </script>
 </body>
-  </html>
+</html>
