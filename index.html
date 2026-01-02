@@ -338,7 +338,15 @@
               <h3>Request a free website review</h3>
               <p>Tell us what you do and what you want to achieve—we’ll reply with clear next steps.</p>
 
-              <form class="form" id="leadForm">
+              <!-- ✅ FORMSPREE CONNECTED -->
+              <form class="form" id="leadForm" action="https://formspree.io/f/mbdldbrq" method="POST">
+                <!-- Optional but useful -->
+                <input type="hidden" name="_subject" value="AP Digital Solutions — Free website review request">
+                <!-- If you create a /thanks page later, change this -->
+                <input type="hidden" name="_redirect" value="#contact">
+                <!-- Honeypot anti-spam -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
                 <div class="field">
                   <label for="name">Name</label>
                   <input id="name" name="name" autocomplete="name" placeholder="e.g. John Smith" required>
@@ -362,8 +370,8 @@
                 <button class="btn primary" type="submit">Send request</button>
 
                 <div class="tiny">
-                  This opens your email app with a ready-to-send message.
-                  Prefer WhatsApp? <a id="waInline" href="#" style="text-decoration:underline;">Click here</a>.
+                  We’ll reply as soon as possible. Prefer WhatsApp?
+                  <a id="waInline" href="#" style="text-decoration:underline;">Click here</a>.
                 </div>
               </form>
 
@@ -517,8 +525,6 @@
 
   <script>
     const WHATSAPP_NUMBER_E164 = "447700704591";
-    const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
-    const BRAND_NAME = "AP Digital Solutions";
     const enc = encodeURIComponent;
     const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${enc(msg)}`;
 
@@ -537,32 +543,6 @@ Preferred deadline:
     ["waFloat","waInline","ctaWAHero","ctaWATop"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = waUrl;
-    });
-
-    document.getElementById("leadForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const business = document.getElementById("business").value.trim();
-      const contact = document.getElementById("contactInput").value.trim();
-      const goal = document.getElementById("goal").value.trim();
-
-      const subject = `${BRAND_NAME} — Free website review request (${name})`;
-      const body =
-`Hi ${BRAND_NAME},
-
-I’d like a free website review.
-
-Name: ${name}
-Business/Industry: ${business}
-Contact: ${contact}
-
-What I need:
-${goal || "(not specified)"}
-
-Thanks!`;
-
-      window.location.href = `mailto:${EMAIL_TO}?subject=${enc(subject)}&body=${enc(body)}`;
     });
 
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
