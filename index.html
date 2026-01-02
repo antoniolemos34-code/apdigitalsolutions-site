@@ -15,10 +15,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
 
-  <!-- Favicons (safe even if some files are missing) -->
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
@@ -39,7 +40,6 @@
       --max:1120px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
@@ -54,38 +54,22 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:24px}
 
-    /* NAV */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter:blur(12px);
       background:rgba(7,10,18,.66);
       border-bottom:1px solid var(--line);
     }
-    .nav .wrap{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
 
-    /* LOGO (logo only) */
     .brand-logo{
-      width:94px;height:94px;
-      border-radius:24px;
-      overflow:hidden;
+      width:94px;height:94px;border-radius:24px;overflow:hidden;
       background:rgba(255,255,255,.05);
       border:1px solid rgba(255,255,255,.22);
-      box-shadow:
-        0 22px 55px rgba(124,92,255,.28),
-        inset 0 0 0 1px rgba(255,255,255,.06);
+      box-shadow:0 22px 55px rgba(124,92,255,.28), inset 0 0 0 1px rgba(255,255,255,.06);
       display:grid;place-items:center;
     }
-    .brand-logo img{
-      width:100%;height:100%;
-      object-fit:contain;
-      display:block;
-      transform:scale(1.02);
-    }
+    .brand-logo img{width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.02)}
 
     .nav-actions{display:flex;gap:10px;align-items:center}
     .icon-btn{
@@ -99,49 +83,26 @@
     .icon-btn svg{width:20px;height:20px;opacity:.95}
 
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      gap:10px;
-      padding:12px 18px;
-      border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 18px;border-radius:999px;
       border:1px solid rgba(255,255,255,.16);
       background:rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:700;
-      font-size:14px;
-      cursor:pointer;
-      transition:.2s ease;
-      white-space:nowrap;
+      color:var(--text);font-weight:700;font-size:14px;
+      cursor:pointer;transition:.2s ease;white-space:nowrap;
     }
     .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.26)}
-    .btn.primary{
-      background:linear-gradient(135deg,var(--brand1),var(--brand2));
-      border-color:transparent;
-      color:#071018;
-    }
+    .btn.primary{background:linear-gradient(135deg,var(--brand1),var(--brand2));border-color:transparent;color:#071018}
     .btn.primary:hover{filter:brightness(1.03)}
-    .btn.ghost{background:transparent}
 
-    /* HERO (readability) */
-    .hero{
-      position:relative;
-      padding:54px 0 10px;
-    }
+    .hero{position:relative;padding:54px 0 10px}
     .hero::before{
-      content:"";
-      position:absolute;
-      inset:-22px -18px -22px -18px;
+      content:"";position:absolute;inset:-22px -18px -22px -18px;
       background:radial-gradient(900px 520px at 25% 15%, rgba(0,0,0,.48), rgba(0,0,0,.70));
-      border-radius:28px;
-      pointer-events:none;
+      border-radius:28px;pointer-events:none;
     }
     .hero > *{position:relative;z-index:1}
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:16px;
-      align-items:stretch;
-    }
+    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch}
     .panel{
       background:linear-gradient(180deg,var(--panel),var(--panel2));
       border:1px solid var(--line);
@@ -151,44 +112,28 @@
     .hero-left{padding:26px}
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
-      padding:8px 12px;
-      border-radius:999px;
+      padding:8px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.06);
-      color:var(--muted);
-      font-size:12px;
+      color:var(--muted);font-size:12px;
     }
     .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2)}
     .dot.ok{background:var(--ok)}
     h1{
       margin:14px 0 10px;
       font-size:clamp(32px,4.8vw,54px);
-      line-height:1.06;
-      letter-spacing:-.6px;
+      line-height:1.06;letter-spacing:-.6px;
       text-shadow:0 10px 40px rgba(0,0,0,.55);
     }
-    .lead{
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.65;
-      max-width:62ch;
-    }
+    .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:62ch}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .bullets{
-      display:flex;flex-wrap:wrap;gap:14px;
-      margin-top:18px;
-      color:var(--muted2);
-      font-size:12px;
-    }
+    .bullets{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;color:var(--muted2);font-size:12px}
     .bullets span{display:inline-flex;align-items:center;gap:8px}
     .check{
-      width:18px;height:18px;border-radius:999px;
-      display:grid;place-items:center;
+      width:18px;height:18px;border-radius:999px;display:grid;place-items:center;
       background:rgba(52,211,153,.15);
       border:1px solid rgba(52,211,153,.24);
-      color:#bff7e4;
-      font-weight:900;
-      font-size:12px;
+      color:#bff7e4;font-weight:900;font-size:12px;
     }
 
     .hero-right{padding:18px}
@@ -196,16 +141,14 @@
       background:rgba(11,15,25,.55);
       border:1px solid var(--line);
       border-radius:18px;
-      padding:16px;
-      height:100%;
+      padding:16px;height:100%;
     }
     .badge{
       display:inline-flex;align-items:center;gap:8px;
       padding:6px 10px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.05);
-      color:var(--muted);
-      font-size:12px;
+      color:var(--muted);font-size:12px;
     }
     .formbox h3{margin:10px 0 6px;font-size:15px}
     .formbox p{margin:0 0 12px;color:var(--muted);font-size:13px}
@@ -215,12 +158,10 @@
     .field{display:grid;gap:6px}
     input,textarea{
       width:100%;
-      padding:12px 12px;
-      border-radius:14px;
+      padding:12px 12px;border-radius:14px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.05);
-      color:var(--text);
-      outline:none;
+      color:var(--text);outline:none;
     }
     textarea{min-height:92px;resize:vertical}
     input:focus,textarea:focus{
@@ -264,12 +205,7 @@
       position:relative;
     }
     .shot img{width:100%;height:100%;object-fit:cover;display:block;opacity:.98}
-    .shot .ph{
-      position:absolute;inset:0;
-      display:none;align-items:center;justify-content:center;
-      color:rgba(234,240,255,.6);
-      font-size:12px;
-    }
+    .shot .ph{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:rgba(234,240,255,.6);font-size:12px}
     .p-body{padding:16px}
     .p-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
     .tag{
@@ -277,15 +213,12 @@
       padding:7px 10px;border-radius:999px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:12px;
+      color:var(--muted);font-size:12px;
     }
     .p-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
-    /* Steps */
     .steps .card{grid-column:span 3}
 
-    /* FAQ */
     .faq details{
       border:1px solid var(--line);
       background:rgba(255,255,255,.03);
@@ -297,19 +230,14 @@
     summary::-webkit-details-marker{display:none}
     .faq p{margin:8px 0 0;color:var(--muted);font-size:13px}
 
-    /* Footer */
     footer{
-      margin-top:24px;
-      padding:22px 0 34px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:12px;
+      margin-top:24px;padding:22px 0 34px;border-top:1px solid var(--line);
+      color:var(--muted);font-size:12px;
     }
     .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:center}
     .foot a{color:var(--muted)}
     .foot a:hover{color:var(--text)}
 
-    /* Floating WhatsApp */
     .wa{
       position:fixed;right:18px;bottom:18px;z-index:120;
       display:flex;align-items:center;gap:10px;
@@ -349,7 +277,6 @@
 </head>
 
 <body>
-  <!-- NAV -->
   <header class="nav">
     <div class="wrap">
       <a href="#top" aria-label="AP Digital Solutions">
@@ -379,17 +306,14 @@
   </header>
 
   <main id="top" class="wrap">
-    <!-- HERO -->
     <section class="hero">
       <div class="grid">
         <div class="panel">
           <div class="hero-left">
             <span class="kicker"><span class="dot ok"></span>Premium online presence for small & growing businesses</span>
-
             <h1>A modern website that builds trust and turns visits into enquiries.</h1>
-
             <p class="lead">
-              We design fast, mobile-first websites with clear structure, SEO basics, and strong call-to-actions—so your customers know exactly what to do next.
+              We build fast, mobile-first websites with clear structure, SEO basics and strong call-to-actions—so customers know exactly what to do next.
             </p>
 
             <div class="actions">
@@ -407,7 +331,6 @@
           </div>
         </div>
 
-        <!-- Contact -->
         <div class="panel">
           <div class="hero-right" id="contact">
             <div class="formbox">
@@ -451,7 +374,6 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services">
       <div class="section-title">
         <div>
@@ -461,45 +383,15 @@
       </div>
 
       <div class="cards">
-        <div class="card">
-          <div class="ic">🌐</div>
-          <h3>Premium websites</h3>
-          <p>Landing pages or full websites with clean structure and modern design.</p>
-        </div>
-
-        <div class="card">
-          <div class="ic">📱</div>
-          <h3>Mobile-first</h3>
-          <p>Fast, readable and easy to use on phones—where most customers browse.</p>
-        </div>
-
-        <div class="card">
-          <div class="ic">📈</div>
-          <h3>SEO basics</h3>
-          <p>Solid foundations to help your site get indexed and look credible in Google.</p>
-        </div>
-
-        <div class="card">
-          <div class="ic">💬</div>
-          <h3>WhatsApp & leads</h3>
-          <p>Clear call-to-actions that make it easy for customers to message you.</p>
-        </div>
-
-        <div class="card">
-          <div class="ic">🧩</div>
-          <h3>Structure & copy</h3>
-          <p>We organise content so people understand your offer quickly and take action.</p>
-        </div>
-
-        <div class="card">
-          <div class="ic">⚙️</div>
-          <h3>AI & automation</h3>
-          <p>Optional automation to capture leads and speed up replies (when it fits).</p>
-        </div>
+        <div class="card"><div class="ic">🌐</div><h3>Premium websites</h3><p>Landing pages or full websites with clean structure and modern design.</p></div>
+        <div class="card"><div class="ic">📱</div><h3>Mobile-first</h3><p>Fast, readable and easy to use on phones—where most customers browse.</p></div>
+        <div class="card"><div class="ic">📈</div><h3>SEO basics</h3><p>Solid foundations to help your site get indexed and look credible in Google.</p></div>
+        <div class="card"><div class="ic">💬</div><h3>WhatsApp & leads</h3><p>Clear call-to-actions that make it easy for customers to message you.</p></div>
+        <div class="card"><div class="ic">🧩</div><h3>Structure & copy</h3><p>We organise content so people understand your offer quickly and take action.</p></div>
+        <div class="card"><div class="ic">⚙️</div><h3>AI & automation</h3><p>Optional automation to capture leads and speed up replies (when it fits).</p></div>
       </div>
     </section>
 
-    <!-- PORTFOLIO (NO apdigitalsolutions.digital) -->
     <section id="portfolio" class="portfolio">
       <div class="section-title">
         <div>
@@ -511,91 +403,58 @@
       <div class="cards">
         <article class="card">
           <div class="shot">
-            <img src="assets/portfolio/pethaven.jpg" alt="Pet Haven - screenshot"
+            <img src="pethaven.jpg" alt="Pet Haven screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Image: assets/portfolio/pethaven.jpg</div>
+            <div class="ph">Upload: pethaven.jpg (root)</div>
           </div>
           <div class="p-body">
-            <div class="p-top">
-              <div>
-                <h3>Pet Haven</h3>
-                <p class="muted">Website / online presence</p>
-              </div>
-              <span class="tag">🔗 Live</span>
-            </div>
-            <div class="p-actions">
-              <a class="btn primary" href="https://pethavenjersey.com/" target="_blank" rel="noopener">View site</a>
-            </div>
+            <div class="p-top"><div><h3>Pet Haven</h3><p class="muted">Website / online presence</p></div><span class="tag">🔗 Live</span></div>
+            <div class="p-actions"><a class="btn primary" href="https://pethavenjersey.com/" target="_blank" rel="noopener">View site</a></div>
           </div>
         </article>
 
         <article class="card">
           <div class="shot">
-            <img src="assets/portfolio/ajudatotal.jpg" alt="AjudaTotal - screenshot"
+            <img src="ajudatotal.jpg" alt="AjudaTotal screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Image: assets/portfolio/ajudatotal.jpg</div>
+            <div class="ph">Upload: ajudatotal.jpg (root)</div>
           </div>
           <div class="p-body">
-            <div class="p-top">
-              <div>
-                <h3>AjudaTotal</h3>
-                <p class="muted">Website / community</p>
-              </div>
-              <span class="tag">🔗 Live</span>
-            </div>
-            <div class="p-actions">
-              <a class="btn primary" href="https://ajudatotal.com/" target="_blank" rel="noopener">View site</a>
-            </div>
+            <div class="p-top"><div><h3>AjudaTotal</h3><p class="muted">Website / community</p></div><span class="tag">🔗 Live</span></div>
+            <div class="p-actions"><a class="btn primary" href="https://ajudatotal.com/" target="_blank" rel="noopener">View site</a></div>
           </div>
         </article>
 
         <article class="card">
           <div class="shot">
-            <img src="assets/portfolio/harbourandhome.jpg" alt="Harbour & Home - screenshot"
+            <img src="harbourandhome.jpg" alt="Harbour & Home screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Image: assets/portfolio/harbourandhome.jpg</div>
+            <div class="ph">Upload: harbourandhome.jpg (root)</div>
           </div>
           <div class="p-body">
-            <div class="p-top">
-              <div>
-                <h3>Harbour &amp; Home</h3>
-                <p class="muted">Website / services</p>
-              </div>
-              <span class="tag">🔗 Live</span>
-            </div>
-            <div class="p-actions">
-              <a class="btn primary" href="https://harbourandhome.co/" target="_blank" rel="noopener">View site</a>
-            </div>
+            <div class="p-top"><div><h3>Harbour &amp; Home</h3><p class="muted">Website / services</p></div><span class="tag">🔗 Live</span></div>
+            <div class="p-actions"><a class="btn primary" href="https://harbourandhome.co/" target="_blank" rel="noopener">View site</a></div>
           </div>
         </article>
 
         <article class="card">
           <div class="shot">
-            <img src="assets/portfolio/catia.jpg" alt="Catia Coutinho Holistic - screenshot"
+            <img src="catia.jpg" alt="Catia Coutinho Holistic screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Image: assets/portfolio/catia.jpg</div>
+            <div class="ph">Upload: catia.jpg (root)</div>
           </div>
           <div class="p-body">
-            <div class="p-top">
-              <div>
-                <h3>Catia Coutinho Holistic</h3>
-                <p class="muted">Website / wellness</p>
-              </div>
-              <span class="tag">🔗 Live</span>
-            </div>
-            <div class="p-actions">
-              <a class="btn primary" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">View site</a>
-            </div>
+            <div class="p-top"><div><h3>Catia Coutinho Holistic</h3><p class="muted">Website / wellness</p></div><span class="tag">🔗 Live</span></div>
+            <div class="p-actions"><a class="btn primary" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">View site</a></div>
           </div>
         </article>
       </div>
 
       <div class="tiny" style="margin-top:10px;">
-        Tip: 1600×900 JPG/WebP screenshots look best in this layout.
+        Upload 1600×900 screenshots for the sharpest look.
       </div>
     </section>
 
-    <!-- PROCESS -->
     <section id="process" class="steps">
       <div class="section-title">
         <div>
@@ -605,61 +464,35 @@
       </div>
 
       <div class="cards">
-        <div class="card">
-          <div class="badge">1) Discovery</div>
-          <h3>We define the goal</h3>
-          <p>Your services, audience and what you want the website to achieve.</p>
-        </div>
-        <div class="card">
-          <div class="badge">2) Structure</div>
-          <h3>We plan the layout</h3>
-          <p>Clear sections and messaging to help visitors take action.</p>
-        </div>
-        <div class="card">
-          <div class="badge">3) Design</div>
-          <h3>Premium visuals</h3>
-          <p>Clean, modern and fast—optimised for mobile.</p>
-        </div>
-        <div class="card">
-          <div class="badge">4) Launch</div>
-          <h3>Go live</h3>
-          <p>Publish the site and help you start promoting immediately.</p>
-        </div>
+        <div class="card"><div class="badge">1) Discovery</div><h3>We define the goal</h3><p>Your services, audience and what the website needs to achieve.</p></div>
+        <div class="card"><div class="badge">2) Structure</div><h3>We plan the layout</h3><p>Clear sections and messaging to help visitors take action.</p></div>
+        <div class="card"><div class="badge">3) Design</div><h3>Premium visuals</h3><p>Clean, modern and fast—optimised for mobile.</p></div>
+        <div class="card"><div class="badge">4) Launch</div><h3>Go live</h3><p>Publish the site and help you promote it immediately.</p></div>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section id="faq" class="faq">
       <div class="section-title">
-        <div>
-          <h2>FAQ</h2>
-          <p>Quick answers to move forward.</p>
-        </div>
+        <div><h2>FAQ</h2><p>Quick answers to move forward.</p></div>
       </div>
 
       <details>
         <summary>Will my phone number be displayed on the website?</summary>
         <p>No. The website only uses WhatsApp buttons that open a chat directly. Your number is not shown as visible text.</p>
       </details>
-
       <details>
         <summary>What do you need from me to start?</summary>
         <p>Your business name, services, contact details, and any photos or a logo you already have. If you don’t, we can help.</p>
       </details>
-
       <details>
         <summary>Is this SEO-ready?</summary>
         <p>Yes—this includes clean structure and basic meta tags so your site can be indexed and look credible.</p>
       </details>
     </section>
 
-    <!-- FOOTER -->
     <footer>
       <div class="foot">
-        <div>
-          <b style="color:var(--text)">AP Digital Solutions</b><br/>
-          <span>Websites • AI • Automation</span>
-        </div>
+        <div><b style="color:var(--text)">AP Digital Solutions</b><br/><span>Websites • AI • Automation</span></div>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
@@ -667,13 +500,10 @@
           <a href="#contact">Contact</a>
         </div>
       </div>
-      <div class="tiny" style="margin-top:10px;">
-        © <span id="y"></span> AP Digital Solutions. All rights reserved.
-      </div>
+      <div class="tiny" style="margin-top:10px;">© <span id="y"></span> AP Digital Solutions. All rights reserved.</div>
     </footer>
   </main>
 
-  <!-- Floating WhatsApp -->
   <a class="wa" id="waFloat" href="#" aria-label="Message on WhatsApp">
     <div class="wicon" aria-hidden="true">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -682,18 +512,13 @@
         <path d="M17.3 14.12c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.13 3.25 5.16 4.56.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z" fill="rgba(52,211,153,.95)"/>
       </svg>
     </div>
-    <div>
-      <b>WhatsApp</b>
-      <small>Tap to message</small>
-    </div>
+    <div><b>WhatsApp</b><small>Tap to message</small></div>
   </a>
 
   <script>
-    // Config (number not displayed anywhere as text)
-    const WHATSAPP_NUMBER_E164 = "447700704591"; // +44 7700 704591
+    const WHATSAPP_NUMBER_E164 = "447700704591";
     const EMAIL_TO = "apdigitalsolutions.je@outlook.com";
     const BRAND_NAME = "AP Digital Solutions";
-
     const enc = encodeURIComponent;
     const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${enc(msg)}`;
 
@@ -707,16 +532,13 @@ Goal:
 I have (logo/photos/text):
 Preferred deadline:
 `;
-
     const waUrl = waLink(waMsg);
 
-    // Bind WhatsApp buttons
     ["waFloat","waInline","ctaWAHero","ctaWATop"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = waUrl;
     });
 
-    // Email form -> opens mail client
     document.getElementById("leadForm").addEventListener("submit", (e) => {
       e.preventDefault();
 
@@ -743,7 +565,6 @@ Thanks!`;
       window.location.href = `mailto:${EMAIL_TO}?subject=${enc(subject)}&body=${enc(body)}`;
     });
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
