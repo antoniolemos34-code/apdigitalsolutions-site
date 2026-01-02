@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0B0F19" />
 
-  <title>AP Digital Solutions — Websites & AI Automation</title>
-  <meta name="description" content="Premium websites and AI automation for small and growing businesses. Mobile-first, SEO-ready, and built to convert visitors into enquiries." />
+  <title>AP Digital Solutions — Websites, Business Email & AI Automation</title>
+  <meta name="description" content="Premium websites, business email setup and AI automation for small and growing businesses. Mobile-first, SEO-ready, and built to convert visitors into enquiries." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="AP Digital Solutions — Websites & AI Automation" />
-  <meta property="og:description" content="Premium websites, mobile-first design, SEO basics, and automation to help you get more enquiries." />
+  <meta property="og:title" content="AP Digital Solutions — Websites, Business Email & AI Automation" />
+  <meta property="og:description" content="Premium websites, business email setup (powered by Zoho Mail), and automation to help you get more enquiries." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
 
@@ -156,15 +156,16 @@
     .form{display:grid;gap:10px;margin-top:8px}
     label{font-size:12px;color:var(--muted)}
     .field{display:grid;gap:6px}
-    input,textarea{
+    input,textarea,select{
       width:100%;
       padding:12px 12px;border-radius:14px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.05);
       color:var(--text);outline:none;
     }
+    select{appearance:none}
     textarea{min-height:92px;resize:vertical}
-    input:focus,textarea:focus{
+    input:focus,textarea:focus,select:focus{
       border-color:rgba(34,211,238,.45);
       box-shadow:0 0 0 3px rgba(34,211,238,.12);
     }
@@ -190,6 +191,35 @@
       display:grid;place-items:center;
       background:rgba(124,92,255,.14);
       border:1px solid rgba(124,92,255,.22);
+    }
+
+    /* Highlight (email service) */
+    .highlight{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .highlight .panel{padding:18px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.05);
+      color:var(--muted);font-size:12px;
+      margin-bottom:10px;
+    }
+    .list{display:grid;gap:10px;margin-top:10px}
+    .li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px}
+    .li .check{flex:0 0 auto;margin-top:1px}
+    .note{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:12px;
     }
 
     /* Portfolio */
@@ -261,6 +291,7 @@
       .card{grid-column:span 6}
       .steps .card{grid-column:span 6}
       .portfolio .card{grid-column:span 12}
+      .highlight{grid-template-columns:1fr}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
@@ -311,9 +342,10 @@
         <div class="panel">
           <div class="hero-left">
             <span class="kicker"><span class="dot ok"></span>Premium online presence for small & growing businesses</span>
-            <h1>A modern website that builds trust and turns visits into enquiries.</h1>
+            <h1>A modern website—and professional business email—that builds trust and turns visits into enquiries.</h1>
             <p class="lead">
-              We build fast, mobile-first websites with clear structure, SEO basics and strong call-to-actions—so customers know exactly what to do next.
+              We build fast, mobile-first websites with clear structure, SEO basics and strong call-to-actions.
+              We also set up professional business email with your own domain so you look credible from day one.
             </p>
 
             <div class="actions">
@@ -326,7 +358,7 @@
               <span role="listitem"><span class="check">✓</span>Premium design</span>
               <span role="listitem"><span class="check">✓</span>Mobile-first</span>
               <span role="listitem"><span class="check">✓</span>Conversion-focused</span>
-              <span role="listitem"><span class="check">✓</span>Clear process</span>
+              <span role="listitem"><span class="check">✓</span>Business email setup</span>
             </div>
           </div>
         </div>
@@ -335,16 +367,13 @@
           <div class="hero-right" id="contact">
             <div class="formbox">
               <span class="badge">📩 Quick reply (no obligation)</span>
-              <h3>Request a free website review</h3>
+              <h3>Request a free review</h3>
               <p>Tell us what you do and what you want to achieve—we’ll reply with clear next steps.</p>
 
               <!-- ✅ FORMSPREE CONNECTED -->
               <form class="form" id="leadForm" action="https://formspree.io/f/mbdldbrq" method="POST">
-                <!-- Optional but useful -->
-                <input type="hidden" name="_subject" value="AP Digital Solutions — Free website review request">
-                <!-- If you create a /thanks page later, change this -->
+                <input type="hidden" name="_subject" value="AP Digital Solutions — New enquiry">
                 <input type="hidden" name="_redirect" value="#contact">
-                <!-- Honeypot anti-spam -->
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
                 <div class="field">
@@ -363,8 +392,18 @@
                 </div>
 
                 <div class="field">
+                  <label for="interest">I’m interested in</label>
+                  <select id="interest" name="interest" required>
+                    <option value="" selected disabled>Select one</option>
+                    <option value="Website">Website</option>
+                    <option value="Business Email">Business Email (domain email)</option>
+                    <option value="Website + Business Email">Website + Business Email</option>
+                  </select>
+                </div>
+
+                <div class="field">
                   <label for="goal">What do you need?</label>
-                  <textarea id="goal" name="goal" placeholder="e.g. One-page site with services, gallery, WhatsApp button and a contact form."></textarea>
+                  <textarea id="goal" name="goal" placeholder="e.g. One-page website + WhatsApp button, or business email setup for my domain."></textarea>
                 </div>
 
                 <button class="btn primary" type="submit">Send request</button>
@@ -395,8 +434,62 @@
         <div class="card"><div class="ic">📱</div><h3>Mobile-first</h3><p>Fast, readable and easy to use on phones—where most customers browse.</p></div>
         <div class="card"><div class="ic">📈</div><h3>SEO basics</h3><p>Solid foundations to help your site get indexed and look credible in Google.</p></div>
         <div class="card"><div class="ic">💬</div><h3>WhatsApp & leads</h3><p>Clear call-to-actions that make it easy for customers to message you.</p></div>
-        <div class="card"><div class="ic">🧩</div><h3>Structure & copy</h3><p>We organise content so people understand your offer quickly and take action.</p></div>
+        <div class="card"><div class="ic">✉️</div><h3>Business email setup</h3><p>Professional domain email (e.g. you@yourbusiness.com) configured securely. Powered by Zoho Mail.</p></div>
         <div class="card"><div class="ic">⚙️</div><h3>AI & automation</h3><p>Optional automation to capture leads and speed up replies (when it fits).</p></div>
+      </div>
+    </section>
+
+    <section id="email" class="email">
+      <div class="section-title">
+        <div>
+          <h2>Business Email Setup</h2>
+          <p>Look credible instantly with your own domain email—secure, reliable, and ready on desktop & mobile.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="panel">
+          <span class="pill">✉️ Professional email • Domain-based</span>
+          <h3 style="margin:0 0 8px;font-size:16px;">Stop using generic addresses. Use your business name.</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px;max-width:75ch;">
+            A domain email helps customers trust you. We set it up properly—DNS records, security, and the apps you want to use—so it works smoothly.
+          </p>
+
+          <div class="list" aria-label="Email setup features">
+            <div class="li"><span class="check">✓</span><span>Domain verification + DNS setup (MX, SPF, DKIM)</span></div>
+            <div class="li"><span class="check">✓</span><span>Mailbox creation and deliverability checks</span></div>
+            <div class="li"><span class="check">✓</span><span>Secure login setup (2FA recommended)</span></div>
+            <div class="li"><span class="check">✓</span><span>Works with Zoho Mail web + mobile apps</span></div>
+            <div class="li"><span class="check">✓</span><span>Optional setup for Outlook / Gmail (IMAP/SMTP)</span></div>
+          </div>
+
+          <div class="note">
+            <b style="color:var(--text)">Note:</b> We provide setup and support. Email service powered by Zoho Mail.
+          </div>
+        </div>
+
+        <div class="panel">
+          <span class="pill">✅ Best for small businesses</span>
+          <h3 style="margin:0 0 8px;font-size:16px;">What we need from you</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px;">
+            To start the setup quickly, send:
+          </p>
+          <div class="list">
+            <div class="li"><span class="check">✓</span><span>Your domain name (e.g. yourbusiness.com)</span></div>
+            <div class="li"><span class="check">✓</span><span>Where your domain is managed (Namecheap, GoDaddy, etc.)</span></div>
+            <div class="li"><span class="check">✓</span><span>Which email names you want (e.g. info@, bookings@)</span></div>
+            <div class="li"><span class="check">✓</span><span>Where you want to use email (Zoho web / Outlook / Gmail)</span></div>
+          </div>
+
+          <div class="actions" style="margin-top:14px;">
+            <a class="btn primary" href="#contact">Request setup</a>
+            <a class="btn" id="ctaWAEmail" href="#">Ask on WhatsApp</a>
+          </div>
+
+          <div class="tiny" style="margin-top:12px;">
+            If you already have email somewhere else, we can help you migrate smoothly.
+          </div>
+        </div>
       </div>
     </section>
 
@@ -467,15 +560,15 @@
       <div class="section-title">
         <div>
           <h2>A simple, clear process</h2>
-          <p>Fast delivery with professional quality.</p>
+          <p>Fast delivery with professional quality (websites and business email).</p>
         </div>
       </div>
 
       <div class="cards">
-        <div class="card"><div class="badge">1) Discovery</div><h3>We define the goal</h3><p>Your services, audience and what the website needs to achieve.</p></div>
-        <div class="card"><div class="badge">2) Structure</div><h3>We plan the layout</h3><p>Clear sections and messaging to help visitors take action.</p></div>
-        <div class="card"><div class="badge">3) Design</div><h3>Premium visuals</h3><p>Clean, modern and fast—optimised for mobile.</p></div>
-        <div class="card"><div class="badge">4) Launch</div><h3>Go live</h3><p>Publish the site and help you promote it immediately.</p></div>
+        <div class="card"><div class="badge">1) Discovery</div><h3>We define the goal</h3><p>Your services, audience and what you need (website, email, or both).</p></div>
+        <div class="card"><div class="badge">2) Setup</div><h3>We build the foundations</h3><p>Website structure + domain email configuration (DNS, security, apps).</p></div>
+        <div class="card"><div class="badge">3) Polish</div><h3>Premium finish</h3><p>Clean design, strong copy, and reliable email deliverability checks.</p></div>
+        <div class="card"><div class="badge">4) Launch</div><h3>Go live</h3><p>Publish the site and ensure your email works on the devices you use.</p></div>
       </div>
     </section>
 
@@ -488,10 +581,22 @@
         <summary>Will my phone number be displayed on the website?</summary>
         <p>No. The website only uses WhatsApp buttons that open a chat directly. Your number is not shown as visible text.</p>
       </details>
+
+      <details>
+        <summary>Can you set up professional business email for my domain?</summary>
+        <p>Yes. We configure domain email properly (DNS records like MX/SPF/DKIM) and help you use it on Zoho Mail, mobile, and optionally Outlook/Gmail.</p>
+      </details>
+
+      <details>
+        <summary>Will email work instantly in Outlook/Gmail?</summary>
+        <p>Sometimes email sync and DNS propagation can take a little time. We set everything correctly and guide you through the best method for your devices.</p>
+      </details>
+
       <details>
         <summary>What do you need from me to start?</summary>
-        <p>Your business name, services, contact details, and any photos or a logo you already have. If you don’t, we can help.</p>
+        <p>Your business name, services, contact details, and any photos or a logo you already have. For email setup: your domain and where it’s managed.</p>
       </details>
+
       <details>
         <summary>Is this SEO-ready?</summary>
         <p>Yes—this includes clean structure and basic meta tags so your site can be indexed and look credible.</p>
@@ -500,9 +605,10 @@
 
     <footer>
       <div class="foot">
-        <div><b style="color:var(--text)">AP Digital Solutions</b><br/><span>Websites • AI • Automation</span></div>
+        <div><b style="color:var(--text)">AP Digital Solutions</b><br/><span>Websites • Business Email • AI • Automation</span></div>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
+          <a href="#email">Business Email</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#process">Process</a>
           <a href="#contact">Contact</a>
@@ -531,16 +637,20 @@
     document.getElementById("y").textContent = new Date().getFullYear();
 
     const waMsg =
-`Hi! I’m interested in a professional website.
+`Hi! I’m interested in your services.
+
+I need:
+- Website / Business Email / Both
 
 Business:
+Domain (if email setup):
 Goal:
 I have (logo/photos/text):
 Preferred deadline:
 `;
     const waUrl = waLink(waMsg);
 
-    ["waFloat","waInline","ctaWAHero","ctaWATop"].forEach(id=>{
+    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = waUrl;
     });
@@ -557,4 +667,4 @@ Preferred deadline:
     });
   </script>
 </body>
-</html>
+                              </html>
