@@ -23,6 +23,22 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
+  <!-- ✅ Google Ads / Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17861952603"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17861952603');
+
+    // ✅ OPTIONAL (when you have the conversion LABEL)
+    // Example:
+    // const GOOGLE_ADS_SEND_TO = 'AW-17861952603/XXXXXXXXXXXXXXX';
+    // function trackConversion(){
+    //   gtag('event', 'conversion', { 'send_to': GOOGLE_ADS_SEND_TO });
+    // }
+  </script>
+
   <style>
     :root{
       --bg:#070A12;
@@ -655,6 +671,36 @@ Preferred deadline:
       if(el) el.href = waUrl;
     });
 
+    // ✅ OPTIONAL: basic click tracking (won't create conversions without a label)
+    // You can still see traffic + audience signals on Google Ads
+    function safeGtagEvent(name, params){
+      try{
+        if(typeof gtag === 'function') gtag('event', name, params || {});
+      }catch(e){}
+    }
+
+    // Track WhatsApp clicks as an event (optional)
+    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(el){
+        el.addEventListener('click', () => {
+          safeGtagEvent('click_whatsapp', { 'event_category': 'engagement', 'event_label': id });
+          // If you add a conversion label later:
+          // trackConversion();
+        });
+      }
+    });
+
+    // Track form submit as an event (optional)
+    const leadForm = document.getElementById('leadForm');
+    if(leadForm){
+      leadForm.addEventListener('submit', () => {
+        safeGtagEvent('submit_lead_form', { 'event_category': 'lead', 'event_label': 'formspree_leadForm' });
+        // If you add a conversion label later:
+        // trackConversion();
+      });
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
@@ -667,4 +713,4 @@ Preferred deadline:
     });
   </script>
 </body>
-                              </html>
+</html>
