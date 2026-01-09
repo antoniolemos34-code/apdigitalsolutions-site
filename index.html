@@ -2,8 +2,9 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#0B0F19" />
+  <meta name="color-scheme" content="dark" />
 
   <title>AP Digital Solutions — Websites, Business Email & AI Automation</title>
   <meta name="description" content="Premium websites, business email setup and AI automation for small and growing businesses. Mobile-first, SEO-ready, and built to convert visitors into enquiries." />
@@ -15,13 +16,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
 
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <!-- ✅ Favicons (relative paths for GitHub Pages) -->
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
 
   <!-- ✅ Google Ads / Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17861952603"></script>
@@ -30,13 +31,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17861952603');
-
-    // ✅ OPTIONAL (when you have the conversion LABEL)
-    // Example:
-    // const GOOGLE_ADS_SEND_TO = 'AW-17861952603/XXXXXXXXXXXXXXX';
-    // function trackConversion(){
-    //   gtag('event', 'conversion', { 'send_to': GOOGLE_ADS_SEND_TO });
-    // }
   </script>
 
   <style>
@@ -56,6 +50,7 @@
       --max:1120px;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
       margin:0;
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
@@ -78,14 +73,27 @@
     }
     .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
 
-    .brand-logo{
-      width:94px;height:94px;border-radius:24px;overflow:hidden;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.22);
-      box-shadow:0 22px 55px rgba(124,92,255,.28), inset 0 0 0 1px rgba(255,255,255,.06);
-      display:grid;place-items:center;
+    /* ✅ NEW LOGO STYLING (sharp, centered, no cut) */
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      padding:6px 10px;border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      box-shadow:0 22px 55px rgba(124,92,255,.22), inset 0 0 0 1px rgba(255,255,255,.06);
     }
-    .brand-logo img{width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.02)}
+    .brand img{
+      height:58px;
+      width:auto;
+      display:block;
+      object-fit:contain;
+      image-rendering:auto;
+      filter:drop-shadow(0 10px 24px rgba(0,0,0,.45));
+    }
+    .brand .name{
+      display:flex;flex-direction:column;line-height:1.05;
+    }
+    .brand .name b{font-size:14px;letter-spacing:.2px}
+    .brand .name span{font-size:12px;color:var(--muted);margin-top:4px}
 
     .nav-actions{display:flex;gap:10px;align-items:center}
     .icon-btn{
@@ -313,12 +321,13 @@
       .wrap{padding:18px}
       .hero{padding:42px 0 6px}
       .hero-left{padding:20px}
-      .brand-logo{width:74px;height:74px;border-radius:20px}
+      .brand img{height:48px}
       .icon-btn{width:44px;height:44px}
       .btn{padding:12px 14px}
       .wa{right:14px;left:14px;justify-content:center}
       .card{grid-column:span 12}
       .steps .card{grid-column:span 12}
+      .brand .name{display:none;} /* mobile: only logo */
     }
   </style>
 </head>
@@ -327,8 +336,13 @@
   <header class="nav">
     <div class="wrap">
       <a href="#top" aria-label="AP Digital Solutions">
-        <div class="brand-logo">
-          <img src="logo-premium.png" alt="AP Digital Solutions logo">
+        <div class="brand">
+          <!-- ✅ YOUR NEW LOGO (root file) -->
+          <img src="./logo-premium.jpg" alt="AP Digital Solutions logo" loading="eager" decoding="async">
+          <div class="name">
+            <b>AP Digital Solutions</b>
+            <span>Websites • Business Email • AI</span>
+          </div>
         </div>
       </a>
 
@@ -386,7 +400,6 @@
               <h3>Request a free review</h3>
               <p>Tell us what you do and what you want to achieve—we’ll reply with clear next steps.</p>
 
-              <!-- ✅ FORMSPREE CONNECTED -->
               <form class="form" id="leadForm" action="https://formspree.io/f/mbdldbrq" method="POST">
                 <input type="hidden" name="_subject" value="AP Digital Solutions — New enquiry">
                 <input type="hidden" name="_redirect" value="#contact">
@@ -520,7 +533,7 @@
       <div class="cards">
         <article class="card">
           <div class="shot">
-            <img src="pethaven.jpg" alt="Pet Haven screenshot"
+            <img src="./pethaven.jpg" alt="Pet Haven screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
             <div class="ph">Upload: pethaven.jpg (root)</div>
           </div>
@@ -532,7 +545,7 @@
 
         <article class="card">
           <div class="shot">
-            <img src="ajudatotal.jpg" alt="AjudaTotal screenshot"
+            <img src="./ajudatotal.jpg" alt="AjudaTotal screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
             <div class="ph">Upload: ajudatotal.jpg (root)</div>
           </div>
@@ -544,7 +557,7 @@
 
         <article class="card">
           <div class="shot">
-            <img src="harbourandhome.jpg" alt="Harbour & Home screenshot"
+            <img src="./harbourandhome.jpg" alt="Harbour & Home screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
             <div class="ph">Upload: harbourandhome.jpg (root)</div>
           </div>
@@ -556,7 +569,7 @@
 
         <article class="card">
           <div class="shot">
-            <img src="catia.jpg" alt="Catia Coutinho Holistic screenshot"
+            <img src="./catia.jpg" alt="Catia Coutinho Holistic screenshot"
                  onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
             <div class="ph">Upload: catia.jpg (root)</div>
           </div>
@@ -671,33 +684,23 @@ Preferred deadline:
       if(el) el.href = waUrl;
     });
 
-    // ✅ OPTIONAL: basic click tracking (won't create conversions without a label)
-    // You can still see traffic + audience signals on Google Ads
     function safeGtagEvent(name, params){
-      try{
-        if(typeof gtag === 'function') gtag('event', name, params || {});
-      }catch(e){}
+      try{ if(typeof gtag === 'function') gtag('event', name, params || {}); }catch(e){}
     }
 
-    // Track WhatsApp clicks as an event (optional)
     ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail"].forEach(id=>{
       const el = document.getElementById(id);
       if(el){
         el.addEventListener('click', () => {
           safeGtagEvent('click_whatsapp', { 'event_category': 'engagement', 'event_label': id });
-          // If you add a conversion label later:
-          // trackConversion();
         });
       }
     });
 
-    // Track form submit as an event (optional)
     const leadForm = document.getElementById('leadForm');
     if(leadForm){
       leadForm.addEventListener('submit', () => {
         safeGtagEvent('submit_lead_form', { 'event_category': 'lead', 'event_label': 'formspree_leadForm' });
-        // If you add a conversion label later:
-        // trackConversion();
       });
     }
 
@@ -713,4 +716,4 @@ Preferred deadline:
     });
   </script>
 </body>
-</html>
+                                                       </html>
