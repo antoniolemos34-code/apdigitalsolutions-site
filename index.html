@@ -6,17 +6,17 @@
   <meta name="theme-color" content="#0B0F19" />
   <meta name="color-scheme" content="dark" />
 
-  <title>AP Digital Solutions — Websites, Business Email & AI Automation</title>
-  <meta name="description" content="Premium websites, business email setup and AI automation for small and growing businesses. Mobile-first, SEO-ready, and built to convert visitors into enquiries." />
+  <title>AP Digital Solutions — Web Design, Business Email & AI Automation (Jersey)</title>
+  <meta name="description" content="Web design, SEO-ready websites, WhatsApp lead setup, and professional business email (domain email) for small businesses in Jersey. Fast, mobile-first, built to convert." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="AP Digital Solutions — Websites, Business Email & AI Automation" />
-  <meta property="og:description" content="Premium websites, business email setup (powered by Zoho Mail), and automation to help you get more enquiries." />
+  <meta property="og:title" content="AP Digital Solutions — Web Design, Business Email & AI Automation" />
+  <meta property="og:description" content="Premium websites, domain email setup and automation to help small businesses look professional and generate enquiries." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
 
-  <!-- ✅ Favicons (relative paths for GitHub Pages) -->
+  <!-- Favicons -->
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -24,13 +24,30 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
-  <!-- ✅ Google Ads / Google tag (gtag.js) -->
+  <!-- Google Ads / Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17861952603"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17861952603');
+  </script>
+
+  <!-- Local business structured data (helps trust/SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"AP Digital Solutions",
+    "areaServed":[{"@type":"AdministrativeArea","name":"Jersey"},{"@type":"Country","name":"United Kingdom"}],
+    "url":"https://apdigitalsol.com/",
+    "sameAs":[
+      "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==",
+      "https://www.facebook.com/share/1GjxysAQ36/"
+    ],
+    "serviceType":["Web Design","Website Development","Business Email Setup","Automation"],
+    "description":"Web design, SEO-ready websites, WhatsApp lead setup, and professional business email (domain email) for small businesses in Jersey."
+  }
   </script>
 
   <style>
@@ -45,6 +62,7 @@
       --brand1:#7C5CFF;
       --brand2:#22D3EE;
       --ok:#34D399;
+      --warn:#FBBF24;
       --shadow:0 18px 60px rgba(0,0,0,.45);
       --radius:22px;
       --max:1120px;
@@ -65,6 +83,7 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:24px}
 
+    /* Nav */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter:blur(12px);
@@ -73,7 +92,6 @@
     }
     .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
 
-    /* ✅ NEW LOGO STYLING (sharp, centered, no cut) */
     .brand{
       display:flex;align-items:center;gap:12px;
       padding:6px 10px;border-radius:18px;
@@ -82,16 +100,10 @@
       box-shadow:0 22px 55px rgba(124,92,255,.22), inset 0 0 0 1px rgba(255,255,255,.06);
     }
     .brand img{
-      height:58px;
-      width:auto;
-      display:block;
-      object-fit:contain;
-      image-rendering:auto;
+      height:58px;width:auto;display:block;object-fit:contain;
       filter:drop-shadow(0 10px 24px rgba(0,0,0,.45));
     }
-    .brand .name{
-      display:flex;flex-direction:column;line-height:1.05;
-    }
+    .brand .name{display:flex;flex-direction:column;line-height:1.05}
     .brand .name b{font-size:14px;letter-spacing:.2px}
     .brand .name span{font-size:12px;color:var(--muted);margin-top:4px}
 
@@ -117,7 +129,9 @@
     .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.26)}
     .btn.primary{background:linear-gradient(135deg,var(--brand1),var(--brand2));border-color:transparent;color:#071018}
     .btn.primary:hover{filter:brightness(1.03)}
+    .btn.ok{background:linear-gradient(135deg,var(--ok),rgba(34,211,238,.95));border-color:transparent;color:#061016}
 
+    /* Hero */
     .hero{position:relative;padding:54px 0 10px}
     .hero::before{
       content:"";position:absolute;inset:-22px -18px -22px -18px;
@@ -126,7 +140,7 @@
     }
     .hero > *{position:relative;z-index:1}
 
-    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch}
+    .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:16px;align-items:stretch}
     .panel{
       background:linear-gradient(180deg,var(--panel),var(--panel2));
       border:1px solid var(--line);
@@ -139,17 +153,18 @@
       padding:8px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.06);
-      color:var(--muted);font-size:12px;
+      color:var(--muted);font-size:12px;flex-wrap:wrap;
     }
     .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2)}
     .dot.ok{background:var(--ok)}
+    .dot.warn{background:var(--warn)}
     h1{
       margin:14px 0 10px;
       font-size:clamp(32px,4.8vw,54px);
       line-height:1.06;letter-spacing:-.6px;
       text-shadow:0 10px 40px rgba(0,0,0,.55);
     }
-    .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:62ch}
+    .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:68ch}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     .bullets{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;color:var(--muted2);font-size:12px}
     .bullets span{display:inline-flex;align-items:center;gap:8px}
@@ -160,6 +175,7 @@
       color:#bff7e4;font-weight:900;font-size:12px;
     }
 
+    /* Right form */
     .hero-right{padding:18px}
     .formbox{
       background:rgba(11,15,25,.55);
@@ -194,7 +210,9 @@
       box-shadow:0 0 0 3px rgba(34,211,238,.12);
     }
     .tiny{font-size:11px;color:var(--muted);margin-top:10px}
+    .tiny a{text-decoration:underline}
 
+    /* Sections */
     section{padding:18px 0}
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
     .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
@@ -215,6 +233,27 @@
       display:grid;place-items:center;
       background:rgba(124,92,255,.14);
       border:1px solid rgba(124,92,255,.22);
+    }
+
+    /* Trust strip */
+    .trust{
+      display:flex;flex-wrap:wrap;gap:10px;
+      margin-top:14px;
+      color:var(--muted2);
+      font-size:12px;
+    }
+    .trust .t{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+    }
+    .pin{
+      width:18px;height:18px;border-radius:999px;
+      display:grid;place-items:center;
+      background:rgba(251,191,36,.12);
+      border:1px solid rgba(251,191,36,.24);
+      color:#ffe8b0;font-weight:900;font-size:12px;
     }
 
     /* Highlight (email service) */
@@ -284,6 +323,26 @@
     summary::-webkit-details-marker{display:none}
     .faq p{margin:8px 0 0;color:var(--muted);font-size:13px}
 
+    /* Contact strip */
+    .contact-strip{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .contact-strip .panel{padding:18px}
+    .contact-grid{
+      display:grid;gap:10px;margin-top:10px
+    }
+    .contact-item{
+      display:flex;align-items:flex-start;gap:10px;
+      padding:12px 14px;border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+    }
+    .contact-item b{display:block;font-size:13px}
+    .contact-item span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+
     footer{
       margin-top:24px;padding:22px 0 34px;border-top:1px solid var(--line);
       color:var(--muted);font-size:12px;
@@ -292,6 +351,7 @@
     .foot a{color:var(--muted)}
     .foot a:hover{color:var(--text)}
 
+    /* WhatsApp floating */
     .wa{
       position:fixed;right:18px;bottom:18px;z-index:120;
       display:flex;align-items:center;gap:10px;
@@ -316,6 +376,7 @@
       .steps .card{grid-column:span 6}
       .portfolio .card{grid-column:span 12}
       .highlight{grid-template-columns:1fr}
+      .contact-strip{grid-template-columns:1fr}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
@@ -327,7 +388,7 @@
       .wa{right:14px;left:14px;justify-content:center}
       .card{grid-column:span 12}
       .steps .card{grid-column:span 12}
-      .brand .name{display:none;} /* mobile: only logo */
+      .brand .name{display:none}
     }
   </style>
 </head>
@@ -337,11 +398,10 @@
     <div class="wrap">
       <a href="#top" aria-label="AP Digital Solutions">
         <div class="brand">
-          <!-- ✅ YOUR NEW LOGO (root file) -->
           <img src="./logo-premium.jpg" alt="AP Digital Solutions logo" loading="eager" decoding="async">
           <div class="name">
             <b>AP Digital Solutions</b>
-            <span>Websites • Business Email • AI</span>
+            <span>Web Design • Business Email • AI</span>
           </div>
         </div>
       </a>
@@ -361,38 +421,48 @@
           </svg>
         </a>
 
-        <a class="btn primary" id="ctaWATop" href="#">WhatsApp</a>
+        <a class="btn primary" href="#contact">Free review</a>
+        <a class="btn ok" id="ctaWATop" href="#">WhatsApp</a>
       </div>
     </div>
   </header>
 
   <main id="top" class="wrap">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="grid">
         <div class="panel">
           <div class="hero-left">
-            <span class="kicker"><span class="dot ok"></span>Premium online presence for small & growing businesses</span>
-            <h1>A modern website—and professional business email—that builds trust and turns visits into enquiries.</h1>
+            <span class="kicker">
+              <span class="dot ok"></span>Jersey-focused digital support for small businesses
+              <span class="dot warn"></span>Fast replies • Clear steps • No obligation
+            </span>
+
+            <h1>Websites that look premium—and turn visitors into enquiries.</h1>
+
             <p class="lead">
               We build fast, mobile-first websites with clear structure, SEO basics and strong call-to-actions.
-              We also set up professional business email with your own domain so you look credible from day one.
+              We also set up professional domain email (e.g. you@yourbusiness.com) so you look credible from day one.
             </p>
 
             <div class="actions">
               <a class="btn primary" href="#contact">Get a free review</a>
-              <a class="btn" href="#portfolio">View portfolio</a>
-              <a class="btn" id="ctaWAHero" href="#">Message on WhatsApp</a>
+              <a class="btn" href="#services">See services</a>
+              <a class="btn ok" id="ctaWAHero" href="#">Message on WhatsApp</a>
             </div>
 
-            <div class="bullets" role="list">
-              <span role="listitem"><span class="check">✓</span>Premium design</span>
-              <span role="listitem"><span class="check">✓</span>Mobile-first</span>
-              <span role="listitem"><span class="check">✓</span>Conversion-focused</span>
-              <span role="listitem"><span class="check">✓</span>Business email setup</span>
+            <div class="trust" aria-label="Trust signals">
+              <span class="t"><span class="pin">📍</span>Serving Jersey & UK</span>
+              <span class="t"><span class="check">✓</span>Mobile-first</span>
+              <span class="t"><span class="check">✓</span>SEO-ready foundations</span>
+              <span class="t"><span class="check">✓</span>WhatsApp lead setup</span>
+              <span class="t"><span class="check">✓</span>Domain email setup</span>
             </div>
           </div>
         </div>
 
+        <!-- FORM -->
         <div class="panel">
           <div class="hero-right" id="contact">
             <div class="formbox">
@@ -427,19 +497,20 @@
                     <option value="Website">Website</option>
                     <option value="Business Email">Business Email (domain email)</option>
                     <option value="Website + Business Email">Website + Business Email</option>
+                    <option value="Google visibility">Google visibility / indexing</option>
                   </select>
                 </div>
 
                 <div class="field">
                   <label for="goal">What do you need?</label>
-                  <textarea id="goal" name="goal" placeholder="e.g. One-page website + WhatsApp button, or business email setup for my domain."></textarea>
+                  <textarea id="goal" name="goal" placeholder="e.g. One-page website + WhatsApp button, or domain email setup for my business."></textarea>
                 </div>
 
                 <button class="btn primary" type="submit">Send request</button>
 
                 <div class="tiny">
-                  We’ll reply as soon as possible. Prefer WhatsApp?
-                  <a id="waInline" href="#" style="text-decoration:underline;">Click here</a>.
+                  Prefer WhatsApp? <a id="waInline" href="#">Click here</a>.
+                  Or email us: <a id="emailInline" href="#">apdigitalsolutions.je@gmail.com</a>
                 </div>
               </form>
 
@@ -450,6 +521,7 @@
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services">
       <div class="section-title">
         <div>
@@ -459,15 +531,16 @@
       </div>
 
       <div class="cards">
-        <div class="card"><div class="ic">🌐</div><h3>Premium websites</h3><p>Landing pages or full websites with clean structure and modern design.</p></div>
+        <div class="card"><div class="ic">🌐</div><h3>Web design</h3><p>One-page landing pages or full websites with clean structure and premium design.</p></div>
         <div class="card"><div class="ic">📱</div><h3>Mobile-first</h3><p>Fast, readable and easy to use on phones—where most customers browse.</p></div>
-        <div class="card"><div class="ic">📈</div><h3>SEO basics</h3><p>Solid foundations to help your site get indexed and look credible in Google.</p></div>
-        <div class="card"><div class="ic">💬</div><h3>WhatsApp & leads</h3><p>Clear call-to-actions that make it easy for customers to message you.</p></div>
-        <div class="card"><div class="ic">✉️</div><h3>Business email setup</h3><p>Professional domain email (e.g. you@yourbusiness.com) configured securely. Powered by Zoho Mail.</p></div>
-        <div class="card"><div class="ic">⚙️</div><h3>AI & automation</h3><p>Optional automation to capture leads and speed up replies (when it fits).</p></div>
+        <div class="card"><div class="ic">📈</div><h3>SEO-ready foundations</h3><p>Meta tags, structure and indexing basics so you look credible in Google.</p></div>
+        <div class="card"><div class="ic">💬</div><h3>WhatsApp leads</h3><p>Clear call-to-actions that make it easy for customers to message you.</p></div>
+        <div class="card"><div class="ic">✉️</div><h3>Business email setup</h3><p>Professional domain email (e.g. you@yourbusiness.com). Powered by Zoho Mail.</p></div>
+        <div class="card"><div class="ic">⚙️</div><h3>AI & automation</h3><p>Optional automations to capture leads and speed up replies (when it fits).</p></div>
       </div>
     </section>
 
+    <!-- BUSINESS EMAIL -->
     <section id="email" class="email">
       <div class="section-title">
         <div>
@@ -512,7 +585,7 @@
 
           <div class="actions" style="margin-top:14px;">
             <a class="btn primary" href="#contact">Request setup</a>
-            <a class="btn" id="ctaWAEmail" href="#">Ask on WhatsApp</a>
+            <a class="btn ok" id="ctaWAEmail" href="#">Ask on WhatsApp</a>
           </div>
 
           <div class="tiny" style="margin-top:12px;">
@@ -522,6 +595,7 @@
       </div>
     </section>
 
+    <!-- PORTFOLIO -->
     <section id="portfolio" class="portfolio">
       <div class="section-title">
         <div>
@@ -585,6 +659,7 @@
       </div>
     </section>
 
+    <!-- PROCESS -->
     <section id="process" class="steps">
       <div class="section-title">
         <div>
@@ -595,12 +670,13 @@
 
       <div class="cards">
         <div class="card"><div class="badge">1) Discovery</div><h3>We define the goal</h3><p>Your services, audience and what you need (website, email, or both).</p></div>
-        <div class="card"><div class="badge">2) Setup</div><h3>We build the foundations</h3><p>Website structure + domain email configuration (DNS, security, apps).</p></div>
-        <div class="card"><div class="badge">3) Polish</div><h3>Premium finish</h3><p>Clean design, strong copy, and reliable email deliverability checks.</p></div>
-        <div class="card"><div class="badge">4) Launch</div><h3>Go live</h3><p>Publish the site and ensure your email works on the devices you use.</p></div>
+        <div class="card"><div class="badge">2) Build</div><h3>We create your page</h3><p>Clean structure, premium design, and strong call-to-actions.</p></div>
+        <div class="card"><div class="badge">3) Email</div><h3>We set up domain email</h3><p>DNS setup + security + apps so it works smoothly.</p></div>
+        <div class="card"><div class="badge">4) Launch</div><h3>Go live</h3><p>Publish and test: mobile, contact forms, WhatsApp, indexing basics.</p></div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section id="faq" class="faq">
       <div class="section-title">
         <div><h2>FAQ</h2><p>Quick answers to move forward.</p></div>
@@ -608,45 +684,105 @@
 
       <details>
         <summary>Will my phone number be displayed on the website?</summary>
-        <p>No. The website only uses WhatsApp buttons that open a chat directly. Your number is not shown as visible text.</p>
+        <p>No. The website uses WhatsApp buttons that open a chat directly. Your number is not shown as visible text.</p>
+      </details>
+
+      <details>
+        <summary>Can you help my business appear on Google?</summary>
+        <p>Yes. We set up SEO-ready foundations and can guide you with indexing and a Google Business Profile if needed.</p>
       </details>
 
       <details>
         <summary>Can you set up professional business email for my domain?</summary>
-        <p>Yes. We configure domain email properly (DNS records like MX/SPF/DKIM) and help you use it on Zoho Mail, mobile, and optionally Outlook/Gmail.</p>
-      </details>
-
-      <details>
-        <summary>Will email work instantly in Outlook/Gmail?</summary>
-        <p>Sometimes email sync and DNS propagation can take a little time. We set everything correctly and guide you through the best method for your devices.</p>
+        <p>Yes. We configure domain email properly (MX/SPF/DKIM) and help you use it on Zoho Mail, mobile, and optionally Outlook/Gmail.</p>
       </details>
 
       <details>
         <summary>What do you need from me to start?</summary>
-        <p>Your business name, services, contact details, and any photos or a logo you already have. For email setup: your domain and where it’s managed.</p>
+        <p>Your business name, services, contact details, and any photos or a logo. For email setup: your domain and where it’s managed.</p>
       </details>
+    </section>
 
-      <details>
-        <summary>Is this SEO-ready?</summary>
-        <p>Yes—this includes clean structure and basic meta tags so your site can be indexed and look credible.</p>
-      </details>
+    <!-- CONTACT (extra trust + google ads friendly) -->
+    <section id="contactinfo">
+      <div class="section-title">
+        <div>
+          <h2>Contact</h2>
+          <p>Fast reply. No pressure. We’ll tell you the best next step for your website or email setup.</p>
+        </div>
+      </div>
+
+      <div class="contact-strip">
+        <div class="panel">
+          <span class="pill">✅ Quick contact</span>
+          <h3 style="margin:0 0 6px;font-size:16px;">Message us in 10 seconds</h3>
+          <p style="margin:0;color:var(--muted);font-size:13px;">
+            Use WhatsApp for the fastest response, or send a quick email.
+          </p>
+
+          <div class="actions" style="margin-top:14px;">
+            <a class="btn ok" id="ctaWAContact" href="#">WhatsApp</a>
+            <a class="btn" id="ctaEmail" href="#">Email</a>
+            <a class="btn primary" href="#contact">Free review form</a>
+          </div>
+
+          <div class="trust" style="margin-top:14px;">
+            <span class="t"><span class="pin">📍</span>Jersey / UK</span>
+            <span class="t"><span class="check">✓</span>Clear steps</span>
+            <span class="t"><span class="check">✓</span>Professional setup</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <span class="pill">📌 Business details</span>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <div class="pin">📧</div>
+              <div>
+                <b>Email</b>
+                <span><a id="emailBlock" href="#">apdigitalsolutions.je@gmail.com</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="pin">💬</div>
+              <div>
+                <b>WhatsApp</b>
+                <span>Tap the WhatsApp button to chat instantly</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="pin">🧭</div>
+              <div>
+                <b>Service area</b>
+                <span>Jersey (Channel Islands) & UK small businesses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="note" style="margin-top:12px;">
+            <b style="color:var(--text)">Tip:</b> If you’re running Google Ads, we can build a dedicated landing page to improve conversions.
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
       <div class="foot">
-        <div><b style="color:var(--text)">AP Digital Solutions</b><br/><span>Websites • Business Email • AI • Automation</span></div>
+        <div><b style="color:var(--text)">AP Digital Solutions</b><br/><span>Web Design • Business Email • AI • Automation</span></div>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
           <a href="#email">Business Email</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact">Free review</a>
+          <a href="#contactinfo">Contact</a>
         </div>
       </div>
       <div class="tiny" style="margin-top:10px;">© <span id="y"></span> AP Digital Solutions. All rights reserved.</div>
     </footer>
   </main>
 
+  <!-- WhatsApp floating button -->
   <a class="wa" id="waFloat" href="#" aria-label="Message on WhatsApp">
     <div class="wicon" aria-hidden="true">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -659,51 +795,51 @@
   </a>
 
   <script>
-    const WHATSAPP_NUMBER_E164 = "447700704591";
+    // ✅ EDIT ONLY THESE IF YOU EVER NEED TO
+    const WHATSAPP_NUMBER_E164 = "447700704591"; // no + sign
+    const BUSINESS_EMAIL = "apdigitalsolutions.je@gmail.com";
+
+    // Year
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // WhatsApp link builder
     const enc = encodeURIComponent;
     const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${enc(msg)}`;
 
-    document.getElementById("y").textContent = new Date().getFullYear();
-
     const waMsg =
-`Hi! I’m interested in your services.
+`Hi! I’m interested in AP Digital Solutions.
 
 I need:
 - Website / Business Email / Both
 
 Business:
+Website (if any):
 Domain (if email setup):
 Goal:
 I have (logo/photos/text):
 Preferred deadline:
+Location (Jersey/UK):
 `;
+
     const waUrl = waLink(waMsg);
 
-    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail"].forEach(id=>{
+    // Apply WhatsApp links
+    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail","ctaWAContact"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = waUrl;
     });
 
-    function safeGtagEvent(name, params){
-      try{ if(typeof gtag === 'function') gtag('event', name, params || {}); }catch(e){}
-    }
-
-    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail"].forEach(id=>{
+    // Email links
+    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("AP Digital Solutions — Enquiry")}&body=${enc("Hi! I’m interested in your services.\n\nBusiness:\nWhat I need:\nWebsite (if any):\nDomain (if email setup):\nGoal:\n\nThanks!")}`;
+    ["emailInline","emailBlock","ctaEmail"].forEach(id=>{
       const el = document.getElementById(id);
-      if(el){
-        el.addEventListener('click', () => {
-          safeGtagEvent('click_whatsapp', { 'event_category': 'engagement', 'event_label': id });
-        });
+      if(el) {
+        el.href = mailto;
+        if(el.textContent.includes("@")) el.textContent = BUSINESS_EMAIL;
       }
     });
 
-    const leadForm = document.getElementById('leadForm');
-    if(leadForm){
-      leadForm.addEventListener('submit', () => {
-        safeGtagEvent('submit_lead_form', { 'event_category': 'lead', 'event_label': 'formspree_leadForm' });
-      });
-    }
-
+    // Smooth scrolling for internal anchors
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
@@ -714,6 +850,29 @@ Preferred deadline:
         el.scrollIntoView({behavior:"smooth", block:"start"});
       });
     });
+
+    // Analytics events (safe)
+    function safeGtagEvent(name, params){
+      try{ if(typeof gtag === 'function') gtag('event', name, params || {}); }catch(e){}
+    }
+
+    // WhatsApp click tracking
+    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail","ctaWAContact"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(el){
+        el.addEventListener('click', () => {
+          safeGtagEvent('click_whatsapp', { event_category: 'engagement', event_label: id });
+        });
+      }
+    });
+
+    // Form submit tracking
+    const leadForm = document.getElementById('leadForm');
+    if(leadForm){
+      leadForm.addEventListener('submit', () => {
+        safeGtagEvent('submit_lead_form', { event_category: 'lead', event_label: 'formspree_leadForm' });
+      });
+    }
   </script>
 </body>
-                                                       </html>
+</html>
