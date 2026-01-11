@@ -7,45 +7,47 @@
   <meta name="color-scheme" content="dark" />
 
   <title>AP Digital Solutions — Web Design, Business Email & AI Automation (Jersey)</title>
-  <meta name="description" content="Web design, SEO-ready websites, WhatsApp lead setup, and professional business email (domain email) for small businesses in Jersey. Fast, mobile-first, built to convert." />
+  <meta name="description" content="Web design, SEO-ready websites, WhatsApp lead setup, and professional business email (domain email) for small businesses in Jersey. Mobile-first, clear structure, built for enquiries." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="AP Digital Solutions — Web Design, Business Email & AI Automation" />
   <meta property="og:description" content="Premium websites, domain email setup and automation to help small businesses look professional and generate enquiries." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
+  <meta property="og:url" content="https://apdigitalsolutions.digital/" />
 
   <!-- Favicons -->
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
-  <!-- Google Ads / Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17861952603"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17861952603');
-  </script>
-
-  <!-- Local business structured data (helps trust/SEO) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"ProfessionalService",
     "name":"AP Digital Solutions",
-    "areaServed":[{"@type":"AdministrativeArea","name":"Jersey"},{"@type":"Country","name":"United Kingdom"}],
-    "url":"https://apdigitalsol.com/",
+    "url":"https://apdigitalsolutions.digital/",
+    "areaServed":[
+      {"@type":"AdministrativeArea","name":"Jersey"},
+      {"@type":"Country","name":"United Kingdom"}
+    ],
     "sameAs":[
       "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==",
       "https://www.facebook.com/share/1GjxysAQ36/"
     ],
-    "serviceType":["Web Design","Website Development","Business Email Setup","Automation"],
+    "serviceType":[
+      "Web Design",
+      "Website Development",
+      "Business Email Setup",
+      "Automation"
+    ],
     "description":"Web design, SEO-ready websites, WhatsApp lead setup, and professional business email (domain email) for small businesses in Jersey."
   }
   </script>
@@ -331,9 +333,7 @@
       align-items:stretch;
     }
     .contact-strip .panel{padding:18px}
-    .contact-grid{
-      display:grid;gap:10px;margin-top:10px
-    }
+    .contact-grid{display:grid;gap:10px;margin-top:10px}
     .contact-item{
       display:flex;align-items:flex-start;gap:10px;
       padding:12px 14px;border-radius:18px;
@@ -369,6 +369,22 @@
       border:1px solid rgba(52,211,153,.28);
       display:grid;place-items:center;
     }
+
+    /* Cookie banner */
+    .cookie{
+      position:fixed;left:14px;right:14px;bottom:14px;z-index:200;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(7,10,18,.86);
+      backdrop-filter:blur(10px);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      padding:14px;
+      display:none;
+    }
+    .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
+    .cookie .btns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn.small{padding:10px 12px;font-size:13px}
 
     @media (max-width: 980px){
       .grid{grid-template-columns:1fr}
@@ -439,11 +455,14 @@
               <span class="dot warn"></span>Fast replies • Clear steps • No obligation
             </span>
 
-            <h1>Websites that look premium—and turn visitors into enquiries.</h1>
+            <h1>Websites that look premium—and make it easy to contact you.</h1>
 
             <p class="lead">
               We build fast, mobile-first websites with clear structure, SEO basics and strong call-to-actions.
               We also set up professional domain email (e.g. you@yourbusiness.com) so you look credible from day one.
+              <span style="display:block;margin-top:10px;color:rgba(234,240,255,.65);font-size:13px;">
+                Note: results can vary. We focus on best-practice setup and clear user experience.
+              </span>
             </p>
 
             <div class="actions">
@@ -506,6 +525,16 @@
                   <textarea id="goal" name="goal" placeholder="e.g. One-page website + WhatsApp button, or domain email setup for my business."></textarea>
                 </div>
 
+                <!-- Privacy consent -->
+                <div class="field" style="gap:8px;">
+                  <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;">
+                    <input id="privacyConsent" type="checkbox" required style="width:18px;height:18px;margin-top:2px;">
+                    <span style="color:var(--muted);font-size:12px;line-height:1.4;">
+                      I agree to the <a href="#privacy" style="text-decoration:underline;">Privacy Notice</a> and understand you’ll use my details to reply to my enquiry.
+                    </span>
+                  </label>
+                </div>
+
                 <button class="btn primary" type="submit">Send request</button>
 
                 <div class="tiny">
@@ -514,7 +543,9 @@
                 </div>
               </form>
 
-              <div class="tiny" style="margin-top:12px;">✅ Clear steps. ✅ Professional result. ✅ Built to convert.</div>
+              <div class="tiny" style="margin-top:12px;">
+                ✅ Clear steps. ✅ Professional setup. ✅ No obligation quote.
+              </div>
             </div>
           </div>
         </div>
@@ -525,18 +556,18 @@
     <section id="services">
       <div class="section-title">
         <div>
-          <h2>Services that drive results</h2>
-          <p>Everything you need to look professional online and generate more enquiries.</p>
+          <h2>Services that support your business</h2>
+          <p>Everything you need to look professional online and make it easy for customers to contact you.</p>
         </div>
       </div>
 
       <div class="cards">
         <div class="card"><div class="ic">🌐</div><h3>Web design</h3><p>One-page landing pages or full websites with clean structure and premium design.</p></div>
         <div class="card"><div class="ic">📱</div><h3>Mobile-first</h3><p>Fast, readable and easy to use on phones—where most customers browse.</p></div>
-        <div class="card"><div class="ic">📈</div><h3>SEO-ready foundations</h3><p>Meta tags, structure and indexing basics so you look credible in Google.</p></div>
+        <div class="card"><div class="ic">📈</div><h3>SEO-ready foundations</h3><p>Meta tags, structure and indexing basics to support visibility. Results can vary.</p></div>
         <div class="card"><div class="ic">💬</div><h3>WhatsApp leads</h3><p>Clear call-to-actions that make it easy for customers to message you.</p></div>
         <div class="card"><div class="ic">✉️</div><h3>Business email setup</h3><p>Professional domain email (e.g. you@yourbusiness.com). Powered by Zoho Mail.</p></div>
-        <div class="card"><div class="ic">⚙️</div><h3>AI & automation</h3><p>Optional automations to capture leads and speed up replies (when it fits).</p></div>
+        <div class="card"><div class="ic">⚙️</div><h3>AI & automation</h3><p>Optional automations to speed up replies and organise enquiries (when it fits).</p></div>
       </div>
     </section>
 
@@ -545,7 +576,7 @@
       <div class="section-title">
         <div>
           <h2>Business Email Setup</h2>
-          <p>Look credible instantly with your own domain email—secure, reliable, and ready on desktop & mobile.</p>
+          <p>Look credible with your own domain email—secure, reliable, and ready on desktop & mobile.</p>
         </div>
       </div>
 
@@ -566,7 +597,7 @@
           </div>
 
           <div class="note">
-            <b style="color:var(--text)">Note:</b> We provide setup and support. Email service powered by Zoho Mail.
+            <b style="color:var(--text)">Note:</b> We provide setup and guidance. Email service is provided by Zoho Mail (third-party).
           </div>
         </div>
 
@@ -670,7 +701,7 @@
 
       <div class="cards">
         <div class="card"><div class="badge">1) Discovery</div><h3>We define the goal</h3><p>Your services, audience and what you need (website, email, or both).</p></div>
-        <div class="card"><div class="badge">2) Build</div><h3>We create your page</h3><p>Clean structure, premium design, and strong call-to-actions.</p></div>
+        <div class="card"><div class="badge">2) Build</div><h3>We create your page</h3><p>Clean structure, premium design, and clear calls-to-action.</p></div>
         <div class="card"><div class="badge">3) Email</div><h3>We set up domain email</h3><p>DNS setup + security + apps so it works smoothly.</p></div>
         <div class="card"><div class="badge">4) Launch</div><h3>Go live</h3><p>Publish and test: mobile, contact forms, WhatsApp, indexing basics.</p></div>
       </div>
@@ -689,7 +720,7 @@
 
       <details>
         <summary>Can you help my business appear on Google?</summary>
-        <p>Yes. We set up SEO-ready foundations and can guide you with indexing and a Google Business Profile if needed.</p>
+        <p>We set up SEO-ready foundations and can guide you with indexing and a Google Business Profile. Search performance depends on many factors and can vary.</p>
       </details>
 
       <details>
@@ -703,7 +734,65 @@
       </details>
     </section>
 
-    <!-- CONTACT (extra trust + google ads friendly) -->
+    <!-- PRIVACY -->
+    <section id="privacy">
+      <div class="section-title">
+        <div>
+          <h2>Privacy & Cookies</h2>
+          <p>We keep it simple: we only use your details to reply to your enquiry and provide support.</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card" style="grid-column:span 6;">
+          <div class="ic">🔒</div>
+          <h3>What we collect</h3>
+          <p>
+            When you contact us, we may collect your name, business/industry, and contact details (email or WhatsApp),
+            plus any message you send. This information is used to respond to your enquiry and provide the requested help.
+          </p>
+        </div>
+
+        <div class="card" style="grid-column:span 6;">
+          <div class="ic">📩</div>
+          <h3>How we use it</h3>
+          <p>
+            We use your information to reply, provide quotes, deliver services, and support you.
+            We do not sell your data. We only share data with service providers needed to operate the site (see below).
+          </p>
+        </div>
+
+        <div class="card" style="grid-column:span 6;">
+          <div class="ic">🧩</div>
+          <h3>Third-party services</h3>
+          <p>
+            This site uses Formspree to process contact form submissions. If you accept marketing cookies,
+            we may load Google tags to measure ad performance. WhatsApp links open on WhatsApp’s platform.
+          </p>
+        </div>
+
+        <div class="card" style="grid-column:span 6;">
+          <div class="ic">🗑️</div>
+          <h3>Retention & your rights</h3>
+          <p>
+            We keep enquiry messages only as long as needed for support and record-keeping. You can request access,
+            correction or deletion of your data by contacting us via email.
+          </p>
+        </div>
+
+        <div class="card" style="grid-column:span 12;">
+          <div class="ic">🍪</div>
+          <h3>Cookies</h3>
+          <p>
+            We use essential browser storage to remember your cookie preferences.
+            Marketing/measurement scripts (Google tag) are only loaded if you accept.
+            You can change your choice at any time using the “Cookie settings” link in the footer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contactinfo">
       <div class="section-title">
         <div>
@@ -760,7 +849,7 @@
           </div>
 
           <div class="note" style="margin-top:12px;">
-            <b style="color:var(--text)">Tip:</b> If you’re running Google Ads, we can build a dedicated landing page to improve conversions.
+            <b style="color:var(--text)">Tip:</b> If you run Google Ads, a dedicated landing page can improve enquiry quality.
           </div>
         </div>
       </div>
@@ -768,14 +857,22 @@
 
     <footer>
       <div class="foot">
-        <div><b style="color:var(--text)">AP Digital Solutions</b><br/><span>Web Design • Business Email • AI • Automation</span></div>
+        <div>
+          <b style="color:var(--text)">AP Digital Solutions</b><br/>
+          <span>Web Design • Business Email • AI • Automation</span><br/>
+          <span style="display:block;margin-top:6px;color:rgba(234,240,255,.55);font-size:11px;">
+            Sole trader services. No guarantees of specific business outcomes.
+          </span>
+        </div>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
           <a href="#email">Business Email</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#process">Process</a>
+          <a href="#privacy">Privacy</a>
           <a href="#contact">Free review</a>
           <a href="#contactinfo">Contact</a>
+          <a href="#" id="cookieSettingsLink">Cookie settings</a>
         </div>
       </div>
       <div class="tiny" style="margin-top:10px;">© <span id="y"></span> AP Digital Solutions. All rights reserved.</div>
@@ -794,10 +891,27 @@
     <div><b>WhatsApp</b><small>Tap to message</small></div>
   </a>
 
+  <!-- Cookie banner -->
+  <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
+    <div class="row">
+      <p>
+        We use essential storage to remember your preferences. Marketing/measurement (Google tag) loads only if you accept.
+        <a href="#privacy" style="text-decoration:underline;">Privacy & Cookies</a>
+      </p>
+      <div class="btns">
+        <button class="btn small" id="cookieReject" type="button">Reject</button>
+        <button class="btn small primary" id="cookieAccept" type="button">Accept</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     // ✅ EDIT ONLY THESE IF YOU EVER NEED TO
     const WHATSAPP_NUMBER_E164 = "447700704591"; // no + sign
     const BUSINESS_EMAIL = "apdigitalsolutions.je@gmail.com";
+
+    // Google Ads / Google tag ID (loaded only after consent)
+    const GOOGLE_TAG_ID = "AW-17861952603";
 
     // Year
     document.getElementById("y").textContent = new Date().getFullYear();
@@ -835,7 +949,7 @@ Location (Jersey/UK):
       const el = document.getElementById(id);
       if(el) {
         el.href = mailto;
-        if(el.textContent.includes("@")) el.textContent = BUSINESS_EMAIL;
+        if(el.textContent && el.textContent.includes("@")) el.textContent = BUSINESS_EMAIL;
       }
     });
 
@@ -851,12 +965,71 @@ Location (Jersey/UK):
       });
     });
 
-    // Analytics events (safe)
+    // -------- Cookie consent + conditional Google tag loading --------
+    const CONSENT_KEY = "apds_cookie_consent_v1"; // "accept" | "reject"
+    const banner = document.getElementById("cookieBanner");
+    const acceptBtn = document.getElementById("cookieAccept");
+    const rejectBtn = document.getElementById("cookieReject");
+    const settingsLink = document.getElementById("cookieSettingsLink");
+
+    function getConsent(){ try{ return localStorage.getItem(CONSENT_KEY); }catch(e){ return null; } }
+    function setConsent(v){ try{ localStorage.setItem(CONSENT_KEY, v); }catch(e){} }
+
+    function showBanner(){ if(banner) banner.style.display = "block"; }
+    function hideBanner(){ if(banner) banner.style.display = "none"; }
+
+    function loadGoogleTag(){
+      if(window.__gtag_loaded) return;
+      window.__gtag_loaded = true;
+
+      // Inject gtag.js
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GOOGLE_TAG_ID)}`;
+      document.head.appendChild(s);
+
+      // Init gtag
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", GOOGLE_TAG_ID);
+    }
+
+    const consent = getConsent();
+    if(!consent){
+      showBanner();
+    } else if(consent === "accept"){
+      loadGoogleTag();
+    }
+
+    if(acceptBtn){
+      acceptBtn.addEventListener("click", ()=>{
+        setConsent("accept");
+        hideBanner();
+        loadGoogleTag();
+      });
+    }
+    if(rejectBtn){
+      rejectBtn.addEventListener("click", ()=>{
+        setConsent("reject");
+        hideBanner();
+      });
+    }
+    if(settingsLink){
+      settingsLink.addEventListener("click", (e)=>{
+        e.preventDefault();
+        // reopen banner so user can change choice
+        showBanner();
+        document.getElementById("cookieBanner").scrollIntoView({behavior:"smooth", block:"end"});
+      });
+    }
+
+    // Analytics events (safe, only if gtag loaded)
     function safeGtagEvent(name, params){
       try{ if(typeof gtag === 'function') gtag('event', name, params || {}); }catch(e){}
     }
 
-    // WhatsApp click tracking
+    // WhatsApp click tracking (only sends if gtag loaded & consented)
     ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail","ctaWAContact"].forEach(id=>{
       const el = document.getElementById(id);
       if(el){
@@ -866,7 +1039,7 @@ Location (Jersey/UK):
       }
     });
 
-    // Form submit tracking
+    // Form submit tracking (only sends if gtag loaded & consented)
     const leadForm = document.getElementById('leadForm');
     if(leadForm){
       leadForm.addEventListener('submit', () => {
