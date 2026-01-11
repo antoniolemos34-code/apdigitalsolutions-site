@@ -6,16 +6,16 @@
   <meta name="theme-color" content="#0B0F19" />
   <meta name="color-scheme" content="dark" />
 
-  <title>Antonio Pereira — Sole trader (AP Digital Solutions)</title>
-  <meta name="description" content="Sole trader digital support: premium, mobile-first websites, WhatsApp contact setup, and domain email (business email) for small businesses in Jersey & the UK." />
+  <title>Antonio Pereira — Web Design & Business Email Setup (Sole Trader, Jersey)</title>
+  <meta name="description" content="Premium, mobile-first websites, WhatsApp contact setup, and domain email (business email). Operated by Antonio Pereira (sole trader). Jersey & UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Antonio Pereira — Sole trader (AP Digital Solutions)" />
-  <meta property="og:description" content="Websites, domain email setup and optional automation. Clear steps. No obligation." />
+  <meta property="og:title" content="Antonio Pereira — Web Design & Business Email Setup" />
+  <meta property="og:description" content="Websites, domain email setup and optional automation guidance. Clear steps. No obligation." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://apdigitalsolutions.digital/" />
@@ -28,30 +28,28 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
-  <!-- Structured data (sole trader / person) -->
+  <!-- Structured data (sole trader identity) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Person",
+    "@type":"ProfessionalService",
     "name":"Antonio Pereira",
-    "alternateName":"AP Digital Solutions",
     "url":"https://apdigitalsolutions.digital/",
-    "sameAs":[
-      "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==",
-      "https://www.facebook.com/share/1GjxysAQ36/"
-    ],
+    "description":"Operated by Antonio Pereira (sole trader). Digital support: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
     ],
-    "knowsAbout":[
-      "Web design",
-      "Website development",
-      "Business email setup",
-      "Domain email",
-      "Basic automation"
+    "sameAs":[
+      "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==",
+      "https://www.facebook.com/share/1GjxysAQ36/"
     ],
-    "description":"Sole trader digital support: websites, domain email setup and optional automations for small businesses in Jersey & the UK."
+    "serviceType":[
+      "Web Design",
+      "Website Development",
+      "Business Email Setup",
+      "Automation"
+    ]
   }
   </script>
 
@@ -88,6 +86,18 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:24px}
 
+    /* Skip link */
+    .skip{
+      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+    }
+    .skip:focus{
+      position:fixed;left:14px;top:14px;width:auto;height:auto;
+      padding:10px 12px;border-radius:12px;z-index:9999;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.18);
+      backdrop-filter:blur(10px);
+    }
+
     /* Nav */
     .nav{
       position:sticky;top:0;z-index:100;
@@ -99,20 +109,28 @@
 
     .brand{
       display:flex;align-items:center;gap:12px;
-      padding:6px 10px;border-radius:18px;
+      padding:8px 12px;border-radius:18px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.04);
       box-shadow:0 22px 55px rgba(124,92,255,.22), inset 0 0 0 1px rgba(255,255,255,.06);
     }
-    .brand img{
-      height:58px;width:auto;display:block;object-fit:contain;
-      filter:drop-shadow(0 10px 24px rgba(0,0,0,.45));
+
+    /* Text logo badge (no image) */
+    .mark{
+      width:44px;height:44px;border-radius:16px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg, rgba(124,92,255,.35), rgba(34,211,238,.25));
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 18px 45px rgba(0,0,0,.45);
+      font-weight:900;
+      letter-spacing:.2px;
+      color:rgba(234,240,255,.96);
     }
     .brand .name{display:flex;flex-direction:column;line-height:1.05}
     .brand .name b{font-size:14px;letter-spacing:.2px}
     .brand .name span{font-size:12px;color:var(--muted);margin-top:4px}
 
-    .nav-actions{display:flex;gap:10px;align-items:center}
+    .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     .icon-btn{
       width:46px;height:46px;border-radius:999px;
       display:grid;place-items:center;
@@ -169,8 +187,42 @@
       line-height:1.06;letter-spacing:-.6px;
       text-shadow:0 10px 40px rgba(0,0,0,.55);
     }
-    .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:68ch}
+    .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:72ch}
+
+    .sublegal{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:rgba(234,240,255,.72);
+      font-size:12px;
+      line-height:1.5;
+    }
+    .sublegal b{color:var(--text)}
+    .sublegal a{text-decoration:underline}
+
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
+    .trust{
+      display:flex;flex-wrap:wrap;gap:10px;
+      margin-top:14px;
+      color:var(--muted2);
+      font-size:12px;
+    }
+    .trust .t{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+    }
+    .pin{
+      width:18px;height:18px;border-radius:999px;
+      display:grid;place-items:center;
+      background:rgba(251,191,36,.12);
+      border:1px solid rgba(251,191,36,.24);
+      color:#ffe8b0;font-weight:900;font-size:12px;
+    }
     .check{
       width:18px;height:18px;border-radius:999px;display:grid;place-items:center;
       background:rgba(52,211,153,.15);
@@ -206,7 +258,6 @@
       background:rgba(255,255,255,.05);
       color:var(--text);outline:none;
     }
-    select{appearance:none}
     textarea{min-height:92px;resize:vertical}
     input:focus,textarea:focus,select:focus{
       border-color:rgba(34,211,238,.45);
@@ -219,7 +270,7 @@
     section{padding:18px 0}
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
     .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
-    .section-title p{margin:0;color:var(--muted);font-size:13px;max-width:70ch}
+    .section-title p{margin:0;color:var(--muted);font-size:13px;max-width:80ch}
 
     .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .card{
@@ -238,117 +289,24 @@
       border:1px solid rgba(124,92,255,.22);
     }
 
-    /* Trust strip */
-    .trust{
-      display:flex;flex-wrap:wrap;gap:10px;
-      margin-top:14px;
-      color:var(--muted2);
-      font-size:12px;
-    }
-    .trust .t{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
+    .textpanel{
+      grid-column:span 12;
       background:rgba(255,255,255,.03);
-    }
-    .pin{
-      width:18px;height:18px;border-radius:999px;
-      display:grid;place-items:center;
-      background:rgba(251,191,36,.12);
-      border:1px solid rgba(251,191,36,.24);
-      color:#ffe8b0;font-weight:900;font-size:12px;
-    }
-
-    /* Highlight (email service) */
-    .highlight{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    .highlight .panel{padding:18px}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:7px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.05);
-      color:var(--muted);font-size:12px;
-      margin-bottom:10px;
-    }
-    .list{display:grid;gap:10px;margin-top:10px}
-    .li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px}
-    .li .check{flex:0 0 auto;margin-top:1px}
-    .note{
-      margin-top:12px;
-      padding:12px 14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
       color:var(--muted);
-      font-size:12px;
+      font-size:13px;
+      line-height:1.65;
     }
-
-    /* Portfolio */
-    .portfolio .card{grid-column:span 6;padding:0;overflow:hidden}
-    .shot{
-      width:100%;
-      aspect-ratio:16/9;
-      border-bottom:1px solid var(--line);
-      background:
-        radial-gradient(140px 100px at 20% 35%, rgba(34,211,238,.18), transparent 60%),
-        radial-gradient(160px 120px at 75% 40%, rgba(124,92,255,.20), transparent 60%),
-        rgba(255,255,255,.03);
-      position:relative;
-    }
-    .shot img{width:100%;height:100%;object-fit:cover;display:block;opacity:.98}
-    .shot .ph{position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:rgba(234,240,255,.6);font-size:12px}
-    .p-body{padding:16px}
-    .p-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
-    .tag{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:7px 10px;border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--muted);font-size:12px;
-    }
-    .p-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-
-    .steps .card{grid-column:span 3}
-
-    .faq details{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      border-radius:18px;
-      padding:12px 14px;
-    }
-    .faq details + details{margin-top:10px}
-    summary{cursor:pointer;font-weight:800;font-size:13px}
-    summary::-webkit-details-marker{display:none}
-    .faq p{margin:8px 0 0;color:var(--muted);font-size:13px}
-
-    /* Contact strip */
-    .contact-strip{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    .contact-strip .panel{padding:18px}
-    .contact-grid{display:grid;gap:10px;margin-top:10px}
-    .contact-item{
-      display:flex;align-items:flex-start;gap:10px;
-      padding:12px 14px;border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-    }
-    .contact-item b{display:block;font-size:13px}
-    .contact-item span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .textpanel b{color:var(--text)}
+    .textpanel a{text-decoration:underline}
 
     footer{
       margin-top:24px;padding:22px 0 34px;border-top:1px solid var(--line);
       color:var(--muted);font-size:12px;
     }
-    .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:center}
+    .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
     .foot a{color:var(--muted)}
     .foot a:hover{color:var(--text)}
 
@@ -390,41 +348,37 @@
     @media (max-width: 980px){
       .grid{grid-template-columns:1fr}
       .card{grid-column:span 6}
-      .steps .card{grid-column:span 6}
-      .portfolio .card{grid-column:span 12}
-      .highlight{grid-template-columns:1fr}
-      .contact-strip{grid-template-columns:1fr}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
       .hero{padding:42px 0 6px}
       .hero-left{padding:20px}
-      .brand img{height:48px}
       .icon-btn{width:44px;height:44px}
       .btn{padding:12px 14px}
       .wa{right:14px;left:14px;justify-content:center}
       .card{grid-column:span 12}
-      .steps .card{grid-column:span 12}
       .brand .name{display:none}
     }
   </style>
 </head>
 
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="nav">
     <div class="wrap">
-      <a href="#top" aria-label="Antonio Pereira — Sole trader trading as AP Digital Solutions">
+      <a href="#top" aria-label="Antonio Pereira">
         <div class="brand">
-          <img src="./logo-premium.jpg" alt="AP Digital Solutions logo" loading="eager" decoding="async">
+          <div class="mark" aria-hidden="true">A</div>
           <div class="name">
             <b>Antonio Pereira</b>
-            <span>Sole trader • trading as AP Digital Solutions</span>
+            <span>Sole trader • Jersey</span>
           </div>
         </div>
       </a>
 
       <div class="nav-actions">
-        <a class="icon-btn" href="https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener" aria-label="Instagram">
+        <a class="icon-btn" id="igLink" href="#" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M8 2h8a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V8a6 6 0 0 1 6-6Z" stroke="rgba(234,240,255,.95)" stroke-width="1.6"/>
             <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="rgba(234,240,255,.95)" stroke-width="1.6"/>
@@ -432,27 +386,29 @@
           </svg>
         </a>
 
-        <a class="icon-btn" href="https://www.facebook.com/share/1GjxysAQ36/" target="_blank" rel="noopener" aria-label="Facebook">
+        <a class="icon-btn" id="fbLink" href="#" target="_blank" rel="noopener" aria-label="Facebook">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M14 8.5V7.3c0-.9.6-1.3 1.4-1.3H17V3h-2.2C12.7 3 11 4.4 11 7.1V8.5H9v3h2V21h3v-9.5h2.4L17 8.5H14Z" fill="rgba(234,240,255,.95)"/>
           </svg>
         </a>
 
+        <a class="btn" href="#privacy">Privacy</a>
+        <a class="btn" href="#terms">Terms</a>
         <a class="btn primary" href="#contact">Free review</a>
         <a class="btn ok" id="ctaWATop" href="#">WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <main id="top" class="wrap">
+  <main id="main" class="wrap">
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="grid">
         <div class="panel">
           <div class="hero-left">
             <span class="kicker">
-              <span class="dot ok"></span>Sole trader digital support for small businesses
+              <span class="dot ok"></span>Jersey-focused digital support
               <span class="dot warn"></span>Fast replies • Clear steps • No obligation
             </span>
 
@@ -460,23 +416,28 @@
 
             <p class="lead">
               I build fast, mobile-first websites with clear structure, SEO basics and strong call-to-actions.
-              I can also set up professional domain email (e.g. you@yourbusiness.com) so you look credible from day one.
+              I also set up professional domain email (e.g. you@yourbusiness.com) so you look credible from day one.
               <span style="display:block;margin-top:10px;color:rgba(234,240,255,.65);font-size:13px;">
                 Note: results can vary. I focus on best-practice setup and clear user experience.
               </span>
             </p>
 
+            <div class="sublegal">
+              <b>Business details</b><br>
+              Operated by <b>Antonio Pereira</b> (sole trader).<br>
+              <b>Location:</b> Jersey, Channel Islands.<br>
+              <b>Enquiries:</b> <a id="emailLegalTop" href="#">apdigitalsolutions.je@gmail.com</a>
+            </div>
+
             <div class="actions">
               <a class="btn primary" href="#contact">Get a free review</a>
-              <a class="btn" href="#services">See services</a>
               <a class="btn ok" id="ctaWAHero" href="#">Message on WhatsApp</a>
             </div>
 
             <div class="trust" aria-label="Trust signals">
-              <span class="t"><span class="pin">📍</span>Serving Jersey & UK</span>
+              <span class="t"><span class="pin">📍</span>Jersey & UK</span>
               <span class="t"><span class="check">✓</span>Mobile-first</span>
-              <span class="t"><span class="check">✓</span>SEO-ready foundations</span>
-              <span class="t"><span class="check">✓</span>WhatsApp contact setup</span>
+              <span class="t"><span class="check">✓</span>Clear CTA</span>
               <span class="t"><span class="check">✓</span>Domain email setup</span>
             </div>
           </div>
@@ -491,7 +452,7 @@
               <p>Tell me what you do and what you want to achieve—I’ll reply with clear next steps.</p>
 
               <form class="form" id="leadForm" action="https://formspree.io/f/mbdldbrq" method="POST">
-                <input type="hidden" name="_subject" value="AP Digital Solutions — New enquiry">
+                <input type="hidden" name="_subject" value="Website enquiry — Antonio Pereira">
                 <input type="hidden" name="_redirect" value="#contact">
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
@@ -511,22 +472,10 @@
                 </div>
 
                 <div class="field">
-                  <label for="interest">I’m interested in</label>
-                  <select id="interest" name="interest" required>
-                    <option value="" selected disabled>Select one</option>
-                    <option value="Website">Website</option>
-                    <option value="Business Email">Business Email (domain email)</option>
-                    <option value="Website + Business Email">Website + Business Email</option>
-                    <option value="Google visibility">Google visibility / indexing</option>
-                  </select>
-                </div>
-
-                <div class="field">
                   <label for="goal">What do you need?</label>
-                  <textarea id="goal" name="goal" placeholder="e.g. One-page website + WhatsApp button, or domain email setup for my business."></textarea>
+                  <textarea id="goal" name="goal" placeholder="e.g. One-page website + WhatsApp button, or domain email setup."></textarea>
                 </div>
 
-                <!-- Privacy consent -->
                 <div class="field" style="gap:8px;">
                   <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;">
                     <input id="privacyConsent" type="checkbox" required style="width:18px;height:18px;margin-top:2px;">
@@ -558,7 +507,7 @@
       <div class="section-title">
         <div>
           <h2>Services</h2>
-          <p>Sole trader digital support to help you look professional online and make it easy for customers to contact you.</p>
+          <p>Everything you need to look professional online and make it easy for customers to contact you.</p>
         </div>
       </div>
 
@@ -566,173 +515,10 @@
         <div class="card"><div class="ic">🌐</div><h3>Web design</h3><p>One-page landing pages or full websites with clean structure and premium design.</p></div>
         <div class="card"><div class="ic">📱</div><h3>Mobile-first</h3><p>Fast, readable and easy to use on phones—where most customers browse.</p></div>
         <div class="card"><div class="ic">📈</div><h3>SEO-ready foundations</h3><p>Meta tags, structure and indexing basics to support visibility. Results can vary.</p></div>
-        <div class="card"><div class="ic">💬</div><h3>WhatsApp contact setup</h3><p>Clear call-to-actions that make it easy for customers to message you.</p></div>
-        <div class="card"><div class="ic">✉️</div><h3>Business email setup</h3><p>Professional domain email (e.g. you@yourbusiness.com). Email service provided by Zoho Mail.</p></div>
-        <div class="card"><div class="ic">⚙️</div><h3>Optional automation</h3><p>Simple automations to organise enquiries and speed up replies (when it fits).</p></div>
+        <div class="card"><div class="ic">✉️</div><h3>Business email setup</h3><p>Domain email setup (MX/SPF/DKIM) and guidance for apps (Zoho, Outlook, Gmail).</p></div>
+        <div class="card"><div class="ic">💬</div><h3>WhatsApp contact setup</h3><p>Clear buttons & templates so customers can message you in one tap.</p></div>
+        <div class="card"><div class="ic">⚙️</div><h3>Optional automation</h3><p>If it fits: lead capture and quicker replies. No guaranteed outcomes.</p></div>
       </div>
-    </section>
-
-    <!-- BUSINESS EMAIL -->
-    <section id="email" class="email">
-      <div class="section-title">
-        <div>
-          <h2>Business Email Setup</h2>
-          <p>Look credible with your own domain email—secure, reliable, and ready on desktop & mobile.</p>
-        </div>
-      </div>
-
-      <div class="highlight">
-        <div class="panel">
-          <span class="pill">✉️ Professional email • Domain-based</span>
-          <h3 style="margin:0 0 8px;font-size:16px;">Stop using generic addresses. Use your domain.</h3>
-          <p style="margin:0;color:var(--muted);font-size:13px;max-width:75ch;">
-            A domain email can help customers trust you. I set it up properly—DNS records, security, and the apps you want to use—so it works smoothly.
-          </p>
-
-          <div class="list" aria-label="Email setup features">
-            <div class="li"><span class="check">✓</span><span>Domain verification + DNS setup (MX, SPF, DKIM)</span></div>
-            <div class="li"><span class="check">✓</span><span>Mailbox creation and deliverability checks</span></div>
-            <div class="li"><span class="check">✓</span><span>Secure login setup (2FA recommended)</span></div>
-            <div class="li"><span class="check">✓</span><span>Works with Zoho Mail web + mobile apps</span></div>
-            <div class="li"><span class="check">✓</span><span>Optional setup for Outlook / Gmail (IMAP/SMTP)</span></div>
-          </div>
-
-          <div class="note">
-            <b style="color:var(--text)">Note:</b> I provide setup and guidance. Email service is provided by Zoho Mail (third-party).
-          </div>
-        </div>
-
-        <div class="panel">
-          <span class="pill">✅ Best for small businesses</span>
-          <h3 style="margin:0 0 8px;font-size:16px;">What I need from you</h3>
-          <p style="margin:0;color:var(--muted);font-size:13px;">
-            To start quickly, send:
-          </p>
-          <div class="list">
-            <div class="li"><span class="check">✓</span><span>Your domain name (e.g. yourbusiness.com)</span></div>
-            <div class="li"><span class="check">✓</span><span>Where your domain is managed (Namecheap, GoDaddy, etc.)</span></div>
-            <div class="li"><span class="check">✓</span><span>Which email names you want (e.g. info@, bookings@)</span></div>
-            <div class="li"><span class="check">✓</span><span>Where you want to use email (Zoho web / Outlook / Gmail)</span></div>
-          </div>
-
-          <div class="actions" style="margin-top:14px;">
-            <a class="btn primary" href="#contact">Request setup</a>
-            <a class="btn ok" id="ctaWAEmail" href="#">Ask on WhatsApp</a>
-          </div>
-
-          <div class="tiny" style="margin-top:12px;">
-            If you already have email somewhere else, I can help you migrate smoothly.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-      <div class="section-title">
-        <div>
-          <h2>Portfolio</h2>
-          <p>Published sites—click to view live.</p>
-        </div>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <div class="shot">
-            <img src="./pethaven.jpg" alt="Pet Haven screenshot"
-                 onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Upload: pethaven.jpg (root)</div>
-          </div>
-          <div class="p-body">
-            <div class="p-top"><div><h3>Pet Haven</h3><p class="muted">Website / online presence</p></div><span class="tag">🔗 Live</span></div>
-            <div class="p-actions"><a class="btn primary" href="https://pethavenjersey.com/" target="_blank" rel="noopener">View site</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="shot">
-            <img src="./ajudatotal.jpg" alt="AjudaTotal screenshot"
-                 onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Upload: ajudatotal.jpg (root)</div>
-          </div>
-          <div class="p-body">
-            <div class="p-top"><div><h3>AjudaTotal</h3><p class="muted">Website / community</p></div><span class="tag">🔗 Live</span></div>
-            <div class="p-actions"><a class="btn primary" href="https://ajudatotal.com/" target="_blank" rel="noopener">View site</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="shot">
-            <img src="./harbourandhome.jpg" alt="Harbour & Home screenshot"
-                 onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Upload: harbourandhome.jpg (root)</div>
-          </div>
-          <div class="p-body">
-            <div class="p-top"><div><h3>Harbour &amp; Home</h3><p class="muted">Website / services</p></div><span class="tag">🔗 Live</span></div>
-            <div class="p-actions"><a class="btn primary" href="https://harbourandhome.co/" target="_blank" rel="noopener">View site</a></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="shot">
-            <img src="./catia.jpg" alt="Catia Coutinho Holistic screenshot"
-                 onerror="this.remove(); this.parentElement.querySelector('.ph').style.display='flex';">
-            <div class="ph">Upload: catia.jpg (root)</div>
-          </div>
-          <div class="p-body">
-            <div class="p-top"><div><h3>Catia Coutinho Holistic</h3><p class="muted">Website / wellness</p></div><span class="tag">🔗 Live</span></div>
-            <div class="p-actions"><a class="btn primary" href="https://catiacoutinhoholistica.com/" target="_blank" rel="noopener">View site</a></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="tiny" style="margin-top:10px;">
-        Upload 1600×900 screenshots for the sharpest look.
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="steps">
-      <div class="section-title">
-        <div>
-          <h2>A simple process</h2>
-          <p>Fast delivery with professional quality (websites and business email).</p>
-        </div>
-      </div>
-
-      <div class="cards">
-        <div class="card"><div class="badge">1) Discovery</div><h3>Define the goal</h3><p>Services, audience and what you need (website, email, or both).</p></div>
-        <div class="card"><div class="badge">2) Build</div><h3>Create the page</h3><p>Clean structure, premium design, and clear calls-to-action.</p></div>
-        <div class="card"><div class="badge">3) Email</div><h3>Set up domain email</h3><p>DNS setup + security + apps so it works smoothly.</p></div>
-        <div class="card"><div class="badge">4) Launch</div><h3>Go live</h3><p>Publish and test: mobile, contact forms, WhatsApp, indexing basics.</p></div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="faq">
-      <div class="section-title">
-        <div><h2>FAQ</h2><p>Quick answers to move forward.</p></div>
-      </div>
-
-      <details>
-        <summary>Will my phone number be displayed on the website?</summary>
-        <p>No. The website uses WhatsApp buttons that open a chat directly. Your number is not shown as visible text.</p>
-      </details>
-
-      <details>
-        <summary>Can you help my business appear on Google?</summary>
-        <p>I set up SEO-ready foundations and can guide you with indexing and a Google Business Profile. Search performance depends on many factors and can vary.</p>
-      </details>
-
-      <details>
-        <summary>Can you set up professional business email for my domain?</summary>
-        <p>Yes. I configure domain email properly (MX/SPF/DKIM) and help you use it on Zoho Mail, mobile, and optionally Outlook/Gmail.</p>
-      </details>
-
-      <details>
-        <summary>What do you need from me to start?</summary>
-        <p>Your services, contact details, and any photos or a logo. For email setup: your domain and where it’s managed.</p>
-      </details>
     </section>
 
     <!-- PRIVACY -->
@@ -740,27 +526,27 @@
       <div class="section-title">
         <div>
           <h2>Privacy & Cookies</h2>
-          <p>Plain English: I only use your details to reply to your enquiry and provide support.</p>
+          <p>Plain English: I only use your details to reply to your enquiry and provide the service you asked for.</p>
         </div>
       </div>
 
       <div class="cards">
         <div class="card" style="grid-column:span 6;">
           <div class="ic">👤</div>
-          <h3>Who I am</h3>
+          <h3>Who is responsible</h3>
           <p>
-            This website is operated by <b>Antonio Pereira</b> (sole trader), trading as <b>AP Digital Solutions</b>.
-            If you need to contact me about privacy, email
-            <a id="emailPrivacy" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a>.
+            This website is operated by <b>Antonio Pereira</b> (sole trader).<br><br>
+            <b>Location:</b> Jersey, Channel Islands.<br>
+            <b>Contact:</b> <a id="emailPrivacy" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a>
           </p>
         </div>
 
         <div class="card" style="grid-column:span 6;">
-          <div class="ic">🔒</div>
+          <div class="ic">📩</div>
           <h3>What I collect</h3>
           <p>
-            When you contact me, I may collect your name, business/industry, and contact details (email or WhatsApp),
-            plus any message you send. I use this information to respond and provide the requested help.
+            When you contact me I may collect your name, business/industry, and contact details (email or WhatsApp),
+            plus any message you send. I use this to reply and provide quotes/support.
           </p>
         </div>
 
@@ -768,17 +554,17 @@
           <div class="ic">🧩</div>
           <h3>Third-party services</h3>
           <p>
-            This site uses Formspree to process contact form submissions. WhatsApp links open on WhatsApp’s platform.
-            Google tags load only if you accept marketing/measurement cookies.
+            Contact forms are processed by <b>Formspree</b>. WhatsApp links open on <b>WhatsApp</b>’s platform.
+            If you accept marketing cookies, <b>Google tag</b> may load to measure ad performance.
           </p>
         </div>
 
         <div class="card" style="grid-column:span 6;">
           <div class="ic">🗑️</div>
-          <h3>Retention & your rights</h3>
+          <h3>Retention & requests</h3>
           <p>
             I keep enquiry messages only as long as needed for support and basic record-keeping.
-            You can request access, correction or deletion of your data by emailing me.
+            You can request access, correction or deletion by emailing me.
           </p>
         </div>
 
@@ -786,10 +572,14 @@
           <div class="ic">🍪</div>
           <h3>Cookies</h3>
           <p>
-            I use essential browser storage to remember your cookie preferences.
-            Marketing/measurement scripts (Google tag) are only loaded if you accept.
-            You can change your choice at any time using the “Cookie settings” link in the footer.
+            I use essential browser storage to remember your cookie preference.
+            Marketing/measurement scripts (Google tag) load only if you accept.
+            You can change your choice any time via “Cookie settings” in the footer.
           </p>
+        </div>
+
+        <div class="textpanel">
+          <b>Legal note:</b> This notice explains how your personal data is handled. If you have concerns, contact me first via the email above.
         </div>
       </div>
     </section>
@@ -799,87 +589,52 @@
       <div class="section-title">
         <div>
           <h2>Terms of Service</h2>
-          <p>Simple terms for enquiries and small digital services.</p>
+          <p>Clear, simple terms so clients know what to expect.</p>
         </div>
       </div>
 
       <div class="cards">
-        <div class="card" style="grid-column:span 12;">
-          <div class="ic">📄</div>
-          <h3>Key points</h3>
-          <p style="margin-bottom:10px;">
-            1) Quotes are provided after reviewing your requirements.<br>
-            2) Work starts after written confirmation (email/WhatsApp) and any agreed deposit.<br>
-            3) You provide content you own (logos, images, text). You are responsible for rights to use it.<br>
-            4) Delivery times depend on your responsiveness and approvals.<br>
-            5) No guarantee of specific business outcomes (traffic, rankings, sales). I focus on best-practice setup and clear UX.
-          </p>
-          <p style="margin:0;color:var(--muted);font-size:12px;">
-            If you need a formal contract for a larger project, I can provide one.
-          </p>
-        </div>
-      </div>
-    </section>
+        <div class="textpanel">
+          <b>1) Who I am</b><br>
+          This website and services are operated by <b>Antonio Pereira</b> (sole trader), based in <b>Jersey, Channel Islands</b>.
+          Contact: <a id="emailTerms" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a>.
+          <br><br>
 
-    <!-- CONTACT -->
-    <section id="contactinfo">
-      <div class="section-title">
-        <div>
-          <h2>Contact</h2>
-          <p>Fast reply. No pressure. I’ll tell you the best next step for your website or email setup.</p>
-        </div>
-      </div>
+          <b>2) What I provide</b><br>
+          Digital services such as website design/build, basic SEO setup (meta tags/structure), domain email setup guidance, and optional automation guidance.
+          Any timelines and deliverables are agreed in writing (email/WhatsApp) per project.
+          <br><br>
 
-      <div class="contact-strip">
-        <div class="panel">
-          <span class="pill">✅ Quick contact</span>
-          <h3 style="margin:0 0 6px;font-size:16px;">Message in 10 seconds</h3>
-          <p style="margin:0;color:var(--muted);font-size:13px;">
-            Use WhatsApp for the fastest response, or send a quick email.
-          </p>
+          <b>3) Quotes, payments & invoices</b><br>
+          Quotes are provided in writing. Payment terms (deposit/milestones/final payment) are agreed per project.
+          You are responsible for any third-party subscriptions you choose (domains, hosting, email providers, etc.) unless agreed otherwise.
+          <br><br>
 
-          <div class="actions" style="margin-top:14px;">
-            <a class="btn ok" id="ctaWAContact" href="#">WhatsApp</a>
-            <a class="btn" id="ctaEmail" href="#">Email</a>
-            <a class="btn primary" href="#contact">Free review form</a>
-          </div>
+          <b>4) Results / no guarantees</b><br>
+          I follow best-practice and deliver the agreed work. However, I do not guarantee specific business results (e.g., rankings, leads, revenue),
+          as outcomes depend on many factors outside my control.
+          <br><br>
 
-          <div class="trust" style="margin-top:14px;">
-            <span class="t"><span class="pin">📍</span>Jersey / UK</span>
-            <span class="t"><span class="check">✓</span>Clear steps</span>
-            <span class="t"><span class="check">✓</span>Professional setup</span>
-          </div>
-        </div>
+          <b>5) Client responsibilities</b><br>
+          You confirm you have the right to use any text/images/logos you provide. You are responsible for reviewing and approving final content before launch.
+          <br><br>
 
-        <div class="panel">
-          <span class="pill">📌 Details</span>
-          <div class="contact-grid">
-            <div class="contact-item">
-              <div class="pin">📧</div>
-              <div>
-                <b>Email</b>
-                <span><a id="emailBlock" href="#">apdigitalsolutions.je@gmail.com</a></span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="pin">💬</div>
-              <div>
-                <b>WhatsApp</b>
-                <span>Tap the WhatsApp button to chat instantly</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="pin">🧭</div>
-              <div>
-                <b>Service area</b>
-                <span>Jersey (Channel Islands) & UK</span>
-              </div>
-            </div>
-          </div>
+          <b>6) Changes & cancellations</b><br>
+          Reasonable revisions are included as agreed in your quote. Significant new requests may require an updated quote.
+          If a project is cancelled after work has started, you may still be charged for work already completed.
+          <br><br>
 
-          <div class="note" style="margin-top:12px;">
-            <b style="color:var(--text)">Tip:</b> If you run Google Ads, a dedicated landing page can improve enquiry quality.
-          </div>
+          <b>7) Limitation of liability</b><br>
+          To the maximum extent permitted by law, I’m not liable for indirect or consequential loss (e.g. lost profits).
+          I’m not responsible for outages or issues caused by third-party platforms (hosting, email providers, WhatsApp, Formspree, Google, etc.).
+          <br><br>
+
+          <b>8) Governing law</b><br>
+          These terms are intended to be governed by the laws applicable in <b>Jersey</b> (Channel Islands), unless otherwise agreed.
+          <br><br>
+
+          <b>9) Updates</b><br>
+          I may update these terms from time to time. The version on this page is the current version.
         </div>
       </div>
     </section>
@@ -887,25 +642,29 @@
     <footer>
       <div class="foot">
         <div>
-          <b style="color:var(--text)">AP Digital Solutions</b><br/>
-          <span>Websites • Business Email • Optional automation</span><br/>
+          <b style="color:var(--text)">Antonio Pereira</b><br/>
+          <span>Operated by <b>Antonio Pereira</b> (sole trader).</span><br/>
+          <span>Jersey, Channel Islands • <a id="emailFooter" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a></span><br/>
+
+          <span style="display:block;margin-top:6px;color:rgba(234,240,255,.62);font-size:11px;">
+            Enquiries: <a id="emailEnquiries" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a> (Jersey, Channel Islands)
+          </span>
+
           <span style="display:block;margin-top:6px;color:rgba(234,240,255,.55);font-size:11px;">
-            Operated by <b>Antonio Pereira</b> (sole trader), trading as <b>AP Digital Solutions</b>. No guarantees of specific business outcomes.
+            No guarantees of specific business outcomes.
           </span>
         </div>
+
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
-          <a href="#email">Business Email</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#process">Process</a>
           <a href="#privacy">Privacy</a>
           <a href="#terms">Terms</a>
           <a href="#contact">Free review</a>
-          <a href="#contactinfo">Contact</a>
           <a href="#" id="cookieSettingsLink">Cookie settings</a>
         </div>
       </div>
-      <div class="tiny" style="margin-top:10px;">© <span id="y"></span> AP Digital Solutions. All rights reserved.</div>
+
+      <div class="tiny" style="margin-top:10px;">© <span id="y"></span> Antonio Pereira. All rights reserved.</div>
     </footer>
   </main>
 
@@ -925,7 +684,7 @@
   <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
     <div class="row">
       <p>
-        I use essential storage to remember your preferences. Marketing/measurement (Google tag) loads only if you accept.
+        We use essential storage to remember your preferences. Marketing/measurement (Google tag) loads only if you accept.
         <a href="#privacy" style="text-decoration:underline;">Privacy & Cookies</a>
       </p>
       <div class="btns">
@@ -940,8 +699,18 @@
     const WHATSAPP_NUMBER_E164 = "447700704591"; // no + sign
     const BUSINESS_EMAIL = "apdigitalsolutions.je@gmail.com";
 
+    // Social links (edit here when you rename accounts)
+    const INSTAGRAM_URL = "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==";
+    const FACEBOOK_URL  = "https://www.facebook.com/share/1GjxysAQ36/";
+
     // Google Ads / Google tag ID (loaded only after consent)
     const GOOGLE_TAG_ID = "AW-17861952603";
+
+    // Set social links
+    const ig = document.getElementById("igLink");
+    const fb = document.getElementById("fbLink");
+    if(ig) ig.href = INSTAGRAM_URL;
+    if(fb) fb.href = FACEBOOK_URL;
 
     // Year
     document.getElementById("y").textContent = new Date().getFullYear();
@@ -951,7 +720,7 @@
     const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${enc(msg)}`;
 
     const waMsg =
-`Hi! I’m interested in AP Digital Solutions.
+`Hi! I’m interested in your services.
 
 I need:
 - Website / Business Email / Both
@@ -968,14 +737,14 @@ Location (Jersey/UK):
     const waUrl = waLink(waMsg);
 
     // Apply WhatsApp links
-    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail","ctaWAContact"].forEach(id=>{
+    ["waFloat","waInline","ctaWAHero","ctaWATop"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = waUrl;
     });
 
-    // Email links
-    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("AP Digital Solutions — Enquiry")}&body=${enc("Hi! I’m interested in your services.\n\nBusiness:\nWhat I need:\nWebsite (if any):\nDomain (if email setup):\nGoal:\n\nThanks!")}`;
-    ["emailInline","emailBlock","ctaEmail","emailPrivacy"].forEach(id=>{
+    // Email links everywhere
+    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("Website enquiry — Antonio Pereira")}&body=${enc("Hi!\n\nI’m interested in your services.\n\nBusiness:\nWhat I need:\nWebsite (if any):\nDomain (if email setup):\nGoal:\n\nThanks!")}`;
+    ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailEnquiries"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) {
         el.href = mailto;
@@ -996,7 +765,7 @@ Location (Jersey/UK):
     });
 
     // -------- Cookie consent + conditional Google tag loading --------
-    const CONSENT_KEY = "apds_cookie_consent_v1"; // "accept" | "reject"
+    const CONSENT_KEY = "ap_cookie_consent_v1"; // "accept" | "reject"
     const banner = document.getElementById("cookieBanner");
     const acceptBtn = document.getElementById("cookieAccept");
     const rejectBtn = document.getElementById("cookieReject");
@@ -1050,30 +819,6 @@ Location (Jersey/UK):
         banner.scrollIntoView({behavior:"smooth", block:"end"});
       });
     }
-
-    // Analytics events (only if gtag loaded & consented)
-    function safeGtagEvent(name, params){
-      try{ if(typeof gtag === 'function') gtag('event', name, params || {}); }catch(e){}
-    }
-
-    // WhatsApp click tracking (only sends if gtag loaded & consented)
-    ["waFloat","waInline","ctaWAHero","ctaWATop","ctaWAEmail","ctaWAContact"].forEach(id=>{
-      const el = document.getElementById(id);
-      if(el){
-        el.addEventListener('click', () => {
-          safeGtagEvent('click_whatsapp', { event_category: 'engagement', event_label: id });
-        });
-      }
-    });
-
-    // Form submit tracking (only sends if gtag loaded & consented)
-    const leadForm = document.getElementById('leadForm');
-    if(leadForm){
-      leadForm.addEventListener('submit', () => {
-        safeGtagEvent('submit_lead_form', { event_category: 'lead', event_label: 'formspree_leadForm' });
-      });
-    }
   </script>
 </body>
 </html>
-```0
