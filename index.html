@@ -7,10 +7,10 @@
   <meta name="color-scheme" content="dark" />
 
   <title>Antonio Pereira — Web Design & Business Email Setup (Sole Trader, Jersey)</title>
-  <meta name="description" content="Premium, mobile-first websites, WhatsApp contact setup, and domain email (business email). Operated by Antonio Pereira (sole trader). Jersey & UK." />
+  <meta name="description" content="Premium mobile-first websites, WhatsApp contact setup, and domain business email (e.g. you@yourbusiness.com). Operated by Antonio Pereira (sole trader), Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <!-- Canonical -->
+  <!-- Canonical (keep your live domain) -->
   <link rel="canonical" href="https://apdigitalsolutions.digital/" />
 
   <!-- Open Graph -->
@@ -19,12 +19,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://apdigitalsolutions.digital/" />
+  <meta property="og:image" content="https://apdigitalsolutions.digital/antonio-pereira-logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicons -->
+  <!-- Favicons (only reference files you actually have) -->
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
@@ -35,7 +36,8 @@
     "@type":"ProfessionalService",
     "name":"Antonio Pereira",
     "url":"https://apdigitalsolutions.digital/",
-    "description":"Operated by Antonio Pereira (sole trader). Digital support: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
+    "image":"https://apdigitalsolutions.digital/antonio-pereira-logo.jpg",
+    "description":"Operated by Antonio Pereira (sole trader). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
@@ -48,8 +50,9 @@
       "Web Design",
       "Website Development",
       "Business Email Setup",
-      "Automation"
-    ]
+      "Automation Guidance"
+    ],
+    "email":"apdigitalsolutions.je@gmail.com"
   }
   </script>
 
@@ -115,17 +118,24 @@
       box-shadow:0 22px 55px rgba(124,92,255,.22), inset 0 0 0 1px rgba(255,255,255,.06);
     }
 
-    /* Text logo badge (no image) */
-    .mark{
+    /* LOGO (image) */
+    .logoWrap{
       width:44px;height:44px;border-radius:16px;
       display:grid;place-items:center;
-      background:linear-gradient(135deg, rgba(124,92,255,.35), rgba(34,211,238,.25));
+      overflow:hidden;
+      background:linear-gradient(135deg, rgba(124,92,255,.22), rgba(34,211,238,.14));
       border:1px solid rgba(255,255,255,.16);
       box-shadow:0 18px 45px rgba(0,0,0,.45);
-      font-weight:900;
-      letter-spacing:.2px;
-      color:rgba(234,240,255,.96);
+      flex:0 0 44px;
     }
+    .logoWrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.02);
+    }
+
     .brand .name{display:flex;flex-direction:column;line-height:1.05}
     .brand .name b{font-size:14px;letter-spacing:.2px}
     .brand .name span{font-size:12px;color:var(--muted);margin-top:4px}
@@ -369,10 +379,12 @@
     <div class="wrap">
       <a href="#top" aria-label="Antonio Pereira">
         <div class="brand">
-          <div class="mark" aria-hidden="true">A</div>
+          <div class="logoWrap">
+            <img src="./antonio-pereira-logo.jpg" alt="Antonio Pereira logo">
+          </div>
           <div class="name">
             <b>Antonio Pereira</b>
-            <span>Sole trader • Jersey</span>
+            <span>Sole trader • Jersey, Channel Islands</span>
           </div>
         </div>
       </a>
@@ -422,11 +434,15 @@
               </span>
             </p>
 
-            <div class="sublegal">
+            <div class="sublegal" aria-label="Business details">
               <b>Business details</b><br>
-              Operated by <b>Antonio Pereira</b> (sole trader).<br>
-              <b>Location:</b> Jersey, Channel Islands.<br>
+              Operated by <b>Antonio Pereira</b> (<b>sole trader</b>).<br>
+              <b>Base:</b> Jersey, Channel Islands.<br>
+              <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
               <b>Enquiries:</b> <a id="emailLegalTop" href="#">apdigitalsolutions.je@gmail.com</a>
+              <div style="margin-top:10px;color:rgba(234,240,255,.60);font-size:11px;">
+                This website provides general information and does not constitute legal or tax advice.
+              </div>
             </div>
 
             <div class="actions">
@@ -453,7 +469,8 @@
 
               <form class="form" id="leadForm" action="https://formspree.io/f/mbdldbrq" method="POST">
                 <input type="hidden" name="_subject" value="Website enquiry — Antonio Pereira">
-                <input type="hidden" name="_redirect" value="#contact">
+                <!-- Better redirect (Formspree supports full URL) -->
+                <input type="hidden" name="_redirect" value="https://apdigitalsolutions.digital/#contact">
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
                 <div class="field">
@@ -478,7 +495,7 @@
 
                 <div class="field" style="gap:8px;">
                   <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;">
-                    <input id="privacyConsent" type="checkbox" required style="width:18px;height:18px;margin-top:2px;">
+                    <input id="privacyConsent" name="privacyConsent" type="checkbox" required style="width:18px;height:18px;margin-top:2px;">
                     <span style="color:var(--muted);font-size:12px;line-height:1.4;">
                       I agree to the <a href="#privacy" style="text-decoration:underline;">Privacy Notice</a> and understand my details are used to reply to my enquiry.
                     </span>
@@ -535,8 +552,8 @@
           <div class="ic">👤</div>
           <h3>Who is responsible</h3>
           <p>
-            This website is operated by <b>Antonio Pereira</b> (sole trader).<br><br>
-            <b>Location:</b> Jersey, Channel Islands.<br>
+            This website is operated by <b>Antonio Pereira</b> (<b>sole trader</b>).<br><br>
+            <b>Base:</b> Jersey, Channel Islands.<br>
             <b>Contact:</b> <a id="emailPrivacy" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a>
           </p>
         </div>
@@ -555,7 +572,7 @@
           <h3>Third-party services</h3>
           <p>
             Contact forms are processed by <b>Formspree</b>. WhatsApp links open on <b>WhatsApp</b>’s platform.
-            If you accept marketing cookies, <b>Google tag</b> may load to measure ad performance.
+            Marketing/measurement scripts (Google tag) load only if you accept.
           </p>
         </div>
 
@@ -579,7 +596,8 @@
         </div>
 
         <div class="textpanel">
-          <b>Legal note:</b> This notice explains how your personal data is handled. If you have concerns, contact me first via the email above.
+          <b>Legal note:</b> This notice explains how your personal data is handled in line with applicable data protection requirements.
+          If you have concerns, contact me first via the email above.
         </div>
       </div>
     </section>
@@ -596,7 +614,7 @@
       <div class="cards">
         <div class="textpanel">
           <b>1) Who I am</b><br>
-          This website and services are operated by <b>Antonio Pereira</b> (sole trader), based in <b>Jersey, Channel Islands</b>.
+          This website and services are operated by <b>Antonio Pereira</b> (<b>sole trader</b>), based in <b>Jersey, Channel Islands</b>.
           Contact: <a id="emailTerms" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a>.
           <br><br>
 
@@ -643,11 +661,11 @@
       <div class="foot">
         <div>
           <b style="color:var(--text)">Antonio Pereira</b><br/>
-          <span>Operated by <b>Antonio Pereira</b> (sole trader).</span><br/>
+          <span>Operated by <b>Antonio Pereira</b> (<b>sole trader</b>).</span><br/>
           <span>Jersey, Channel Islands • <a id="emailFooter" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a></span><br/>
 
           <span style="display:block;margin-top:6px;color:rgba(234,240,255,.62);font-size:11px;">
-            Enquiries: <a id="emailEnquiries" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a> (Jersey, Channel Islands)
+            Enquiries: <a id="emailEnquiries" href="#" style="text-decoration:underline;">apdigitalsolutions.je@gmail.com</a>
           </span>
 
           <span style="display:block;margin-top:6px;color:rgba(234,240,255,.55);font-size:11px;">
@@ -743,7 +761,7 @@ Location (Jersey/UK):
     });
 
     // Email links everywhere
-    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("Website enquiry — Antonio Pereira")}&body=${enc("Hi!\n\nI’m interested in your services.\n\nBusiness:\nWhat I need:\nWebsite (if any):\nDomain (if email setup):\nGoal:\n\nThanks!")}`;
+    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("Website enquiry — Antonio Pereira")}&body=${enc("Hi!\\n\\nI’m interested in your services.\\n\\nBusiness:\\nWhat I need:\\nWebsite (if any):\\nDomain (if email setup):\\nGoal:\\n\\nThanks!")}`;
     ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailEnquiries"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) {
@@ -752,7 +770,7 @@ Location (Jersey/UK):
       }
     });
 
-    // Smooth scrolling for internal anchors
+    // Smooth scrolling for internal anchors (ignore # in non-section links)
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
