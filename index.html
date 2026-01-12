@@ -6,26 +6,26 @@
   <meta name="theme-color" content="#F5F7FB" />
   <meta name="color-scheme" content="light" />
 
-  <title>A. Pereira — Premium Websites & Business Email Setup (Jersey & UK)</title>
-  <meta name="description" content="Premium mobile-first websites and professional business email setup. Operated by A. Pereira (freelance), Jersey, Channel Islands. Serving Jersey & the UK." />
+  <title>A. Pereira — Web Design & Business Email (Jersey & UK)</title>
+  <meta name="description" content="Premium mobile-first websites and professional domain email setup (MX/SPF/DKIM). Operated by A. Pereira (freelance), Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="A. Pereira — Premium Websites & Business Email" />
-  <meta property="og:description" content="Fast, mobile-first websites + professional business email setup. Clear process. No obligation." />
+  <meta property="og:title" content="A. Pereira — Web Design & Business Email" />
+  <meta property="og:description" content="Premium websites + professional domain email. Clear steps. No obligation." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/hero-transparent.jpg" />
+  <meta property="og:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
-  <link rel="icon" href="./favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -34,8 +34,8 @@
     "@type":"ProfessionalService",
     "name":"A. Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/hero-transparent.jpg",
-    "description":"Operated by A. Pereira (freelance). Digital services: premium websites, domain business email setup (MX/SPF/DKIM), and SEO foundations for small businesses in Jersey & the UK.",
+    "image":"https://antoniopereiraweb.co.uk/transparent-hero.jpg",
+    "description":"Operated by A. Pereira (freelance). Digital services: premium websites, professional domain email setup (MX/SPF/DKIM) and SEO foundations for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
@@ -55,14 +55,13 @@
       --bg:#F5F7FB;
       --bg2:#EEF2F7;
       --panel:rgba(255,255,255,.86);
-      --panel2:rgba(255,255,255,.72);
       --text:#0B1220;
       --muted:#475569;
       --muted2:#64748B;
       --line:rgba(11,18,32,.10);
 
-      --a1:#4F46E5; /* indigo */
-      --a2:#06B6D4; /* cyan */
+      --a1:#4F46E5;
+      --a2:#06B6D4;
 
       --shadow: 0 18px 60px rgba(2,6,23,.10);
       --shadow2: 0 28px 90px rgba(2,6,23,.14);
@@ -80,7 +79,6 @@
       background:
         radial-gradient(900px 520px at 10% 0%, rgba(79,70,229,.11), transparent 58%),
         radial-gradient(900px 520px at 92% 10%, rgba(6,182,212,.09), transparent 58%),
-        radial-gradient(900px 520px at 40% 100%, rgba(79,70,229,.06), transparent 62%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
       line-height:1.55;
       -webkit-font-smoothing:antialiased;
@@ -89,16 +87,6 @@
 
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:16px}
-
-    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip:focus{
-      position:fixed;left:14px;top:14px;width:auto;height:auto;
-      padding:10px 12px;border-radius:12px;z-index:9999;
-      background:rgba(255,255,255,.95);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      text-decoration:none;
-    }
 
     /* NAV */
     header{
@@ -122,15 +110,6 @@
       box-shadow: 0 18px 45px rgba(79,70,229,.16);
       border:1px solid rgba(11,18,32,.10);
       flex:0 0 auto;
-      position:relative;
-      overflow:hidden;
-    }
-    .mark:after{
-      content:"";
-      position:absolute;inset:-40%;
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.55), transparent 45%);
-      transform: rotate(20deg);
-      opacity:.85;
     }
     .brand b{font-size:14px;letter-spacing:.2px}
     .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
@@ -157,104 +136,31 @@
     }
 
     /* HERO */
-    .hero{padding:16px 0 10px}
+    .hero{padding:16px 0 12px}
     .shell{
-      position:relative;
       border-radius:30px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.68);
       box-shadow: var(--shadow2);
       overflow:hidden;
-      isolation:isolate;
-    }
-    .shell::before{
-      content:"";
-      position:absolute;inset:-160px;
-      background:
-        radial-gradient(900px 560px at 12% 18%, rgba(79,70,229,.12), transparent 62%),
-        radial-gradient(900px 560px at 90% 18%, rgba(6,182,212,.10), transparent 62%),
-        radial-gradient(700px 420px at 35% 95%, rgba(6,182,212,.08), transparent 60%);
-      pointer-events:none;
-      z-index:0;
     }
 
-    /* Layout: desktop 2 columns, mobile stack */
-    .hero-grid{
-      position:relative;z-index:1;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:14px;
+    /* Hero image top (no overlay boxes) */
+    .hero-image{
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: 70% 30%;
+      background: rgba(11,18,32,.03);
+    }
+
+    /* Intro under the image (clean + professional) */
+    .hero-body{
       padding:16px;
-    }
-
-    /* HERO IMAGE BOX */
-    .hero-media{
-      position:relative;
-      border-radius:24px;
-      border:1px solid rgba(11,18,32,.10);
-      background:
-        url("./hero-transparent.jpg") 78% 12% / cover no-repeat,
-        rgba(11,18,32,.03);
-      box-shadow: 0 20px 60px rgba(2,6,23,.10);
-      overflow:hidden;
-      min-height:360px;
-    }
-    /* subtle readability lift ONLY where the info sits (top-left) */
-    .hero-media::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(560px 360px at 18% 18%, rgba(255,255,255,.55), transparent 62%),
-        radial-gradient(520px 320px at 22% 24%, rgba(255,255,255,.20), transparent 70%);
-      pointer-events:none;
-      z-index:1;
-    }
-
-    /* Overlay info INSIDE the image box (this is what you want) */
-    .overlay{
-      position:absolute;
-      left:16px; top:16px;
-      width:min(380px, calc(100% - 32px));
-      z-index:2;
-      border-radius:18px;
-      border:1px solid rgba(11,18,32,.10);
-      background: rgba(255,255,255,.72);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 16px 44px rgba(2,6,23,.12);
-      padding:12px 12px;
-    }
-
-    .overlay-top{
-      display:flex;align-items:center;gap:10px;
-    }
-    .overlay-logo{
-      width:40px;height:40px;border-radius:14px;
-      background: linear-gradient(135deg, rgba(79,70,229,.18), rgba(6,182,212,.14));
-      border:1px solid rgba(11,18,32,.10);
-      flex:0 0 auto;
-    }
-    .overlay-title b{display:block;font-size:14px;letter-spacing:.2px}
-    .overlay-title small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-
-    .overlay-desc{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-size:12.8px;
-      line-height:1.6;
-    }
-    .overlay-desc b{color:rgba(11,18,32,.92)}
-    .chips{
-      display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;
-    }
-    .chip{
-      font-size:11.5px;
-      padding:6px 9px;
-      border-radius:999px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(11,18,32,.03);
-      color:rgba(11,18,32,.72);
-      white-space:nowrap;
+      display:grid;
+      gap:12px;
     }
 
     .pill{
@@ -271,20 +177,13 @@
     .dot{width:8px;height:8px;border-radius:999px;background:rgba(6,182,212,.75)}
     .sep{opacity:.55}
 
-    /* Right content */
-    .hero-right{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      padding:2px 2px;
-    }
-
     h1{
       margin:0;
       font-size:clamp(30px,5.2vw,54px);
       line-height:1.05;
       letter-spacing:-1px;
     }
+
     .lead{
       margin:0;
       color:var(--muted);
@@ -294,12 +193,12 @@
     }
     .lead strong{color:rgba(11,18,32,.92);font-weight:860}
 
-    .value{
+    .points{
       display:grid;
       gap:10px;
       margin-top:4px;
     }
-    .value .row{
+    .point{
       display:flex;gap:10px;align-items:flex-start;
       padding:12px 12px;
       border-radius:18px;
@@ -314,13 +213,12 @@
       border:1px solid rgba(11,18,32,.10);
       flex:0 0 auto;
     }
-    .value b{display:block;font-size:13px;letter-spacing:.2px}
-    .value span{display:block;color:var(--muted2);font-size:12.5px;line-height:1.6;margin-top:2px}
+    .point b{display:block;font-size:13px;letter-spacing:.2px}
+    .point span{display:block;color:var(--muted2);font-size:12.5px;line-height:1.6;margin-top:2px}
 
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 
-    .legal-card{
-      margin-top:4px;
+    .legal{
       padding:12px 14px;
       border-radius:18px;
       border:1px solid rgba(11,18,32,.10);
@@ -330,8 +228,8 @@
       line-height:1.55;
       box-shadow:0 16px 50px rgba(2,6,23,.06);
     }
-    .legal-card b{color:rgba(11,18,32,.92)}
-    .legal-card a{color:rgba(11,18,32,.92);text-decoration:underline}
+    .legal b{color:rgba(11,18,32,.92)}
+    .legal a{color:rgba(11,18,32,.92);text-decoration:underline}
 
     /* Sections */
     section{padding:16px 0}
@@ -398,40 +296,21 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:rgba(11,18,32,.78);font-size:12px;max-width:85ch}
 
-    /* Desktop */
-    @media (min-width: 980px){
-      .wrap{padding:18px}
-      .hero-grid{
-        grid-template-columns: 1.08fr .92fr;
-        align-items:start;
-        gap:18px;
-        padding:18px;
-      }
-      .hero-media{min-height:520px}
-      /* move overlay a bit more elegant on desktop */
-      .overlay{left:18px;top:18px}
-    }
-
     @media (max-width: 980px){
       .brand{display:none}
       .nav{justify-content:center}
       .card{grid-column:span 6}
-      /* keep image as the top visual on mobile */
-      .hero-media{min-height:420px}
-      .overlay{left:14px;top:14px}
+      .hero-image{object-position: 74% 30%;}
     }
     @media (max-width: 520px){
       .card{grid-column:span 12}
       .wrap{padding:16px}
-      .hero-media{min-height:440px}
-      .overlay{width: min(360px, calc(100% - 28px))}
+      .hero-image{aspect-ratio: 4 / 5; object-position: 72% 22%;}
     }
   </style>
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
   <header>
     <div class="wrap">
       <div class="nav">
@@ -457,93 +336,64 @@
   <main id="main" class="wrap">
     <section class="hero" id="top">
       <div class="shell">
-        <div class="hero-grid">
+        <!-- TOP IMAGE (your transparent-hero) -->
+        <img class="hero-image" src="./transparent-hero.jpg" alt="A. Pereira — Web design & professional domain email (Jersey & UK)" loading="eager" decoding="async" />
 
-          <!-- IMAGE BOX (with overlay info inside) -->
-          <div class="hero-media" aria-label="Hero image">
-            <div class="overlay" aria-label="Introduction">
-              <div class="overlay-top">
-                <div class="overlay-logo" aria-hidden="true"></div>
-                <div class="overlay-title">
-                  <b>A. Pereira</b>
-                  <small>Premium websites &amp; professional business email</small>
-                </div>
+        <!-- CLEAN TEXT UNDER IMAGE -->
+        <div class="hero-body">
+          <span class="pill"><span class="dot"></span> Freelance Digital Services <span class="sep">•</span> Jersey &amp; UK</span>
+
+          <h1>Web design &amp; professional email — built for trust.</h1>
+
+          <p class="lead">
+            I build <strong>premium, mobile-first websites</strong> and set up <strong>professional domain email</strong> (MX/SPF/DKIM) —
+            so customers take you seriously and contact you easily.
+            <span style="display:block;margin-top:10px;color:rgba(11,18,32,.58);font-size:12.5px;">
+              Clear steps. No pressure. Results can vary.
+            </span>
+          </p>
+
+          <div class="points" aria-label="Key benefits">
+            <div class="point">
+              <div class="badge">✨</div>
+              <div>
+                <b>Premium websites</b>
+                <span>Clean design, strong structure, and a professional look that fits your brand.</span>
               </div>
-
-              <div class="overlay-desc">
-                I help businesses and individuals build a <b>premium online presence</b>:
-                fast websites, clear structure, and <b>domain email setup</b> (MX/SPF/DKIM).
+            </div>
+            <div class="point">
+              <div class="badge">✉️</div>
+              <div>
+                <b>Business email (done properly)</b>
+                <span>Domain email setup + DNS guidance (MX/SPF/DKIM) and help connecting Zoho/Gmail/Outlook.</span>
               </div>
-
-              <div class="chips" aria-label="Core services">
-                <span class="chip">Websites</span>
-                <span class="chip">Business Email</span>
-                <span class="chip">SEO Basics</span>
-                <span class="chip">Support</span>
+            </div>
+            <div class="point">
+              <div class="badge">📈</div>
+              <div>
+                <b>SEO foundations</b>
+                <span>On-page setup to support indexing. No ranking guarantees.</span>
               </div>
             </div>
           </div>
 
-          <!-- TEXT SIDE -->
-          <div class="hero-right">
-            <span class="pill">
-              <span class="dot"></span> Freelance Digital Services
-              <span class="sep">•</span> Jersey &amp; UK
+          <div class="cta">
+            <a class="btn primary" id="emailHeroBtn" href="#">Email me</a>
+            <a class="btn" href="#services">View services</a>
+          </div>
+
+          <div class="legal" aria-label="Business details">
+            <b>Business details</b><br>
+            Operated by <b>A. Pereira</b> (<b>freelance</b>).<br>
+            <b>Base:</b> Jersey, Channel Islands.<br>
+            <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
+            <b>Enquiries:</b> <a id="emailLegalTop" href="#">info@antoniopereira.org</a><br>
+            <span style="display:block;margin-top:6px;color:rgba(11,18,32,.65);font-size:11px;">
+              Support: <a id="supportTop" href="#">support@antoniopereira.org</a>
             </span>
-
-            <h1>Websites that look premium — and work.</h1>
-
-            <p class="lead">
-              Mobile-first design, fast loading, clear navigation, and email setup done properly —
-              so your business looks credible from day one.
-              <span style="display:block;margin-top:10px;color:rgba(11,18,32,.58);font-size:12.5px;">
-                Results can vary. I focus on best-practice setup and a polished user experience.
-              </span>
-            </p>
-
-            <div class="value" aria-label="What I do">
-              <div class="row">
-                <div class="badge">⚡</div>
-                <div>
-                  <b>Fast + mobile-first</b>
-                  <span>Clean design, quick loading, clear structure for real customers on phones.</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="badge">✉️</div>
-                <div>
-                  <b>Business email setup</b>
-                  <span>DNS guidance (MX/SPF/DKIM) + help connecting to Zoho, Gmail, Outlook.</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="badge">📈</div>
-                <div>
-                  <b>SEO foundations</b>
-                  <span>On-page setup to support indexing. No ranking guarantees.</span>
-                </div>
-              </div>
+            <div style="margin-top:10px;color:rgba(11,18,32,.52);font-size:11px;">
+              This website provides general information and does not constitute legal or tax advice.
             </div>
-
-            <div class="cta">
-              <a class="btn primary" href="#contact">Request a free review</a>
-              <a class="btn" href="#services">View services</a>
-            </div>
-
-            <div class="legal-card" aria-label="Business details">
-              <b>Business details</b><br />
-              Operated by <b>A. Pereira</b> (<b>freelance</b>).<br />
-              <b>Base:</b> Jersey, Channel Islands.<br />
-              <b>Service area:</b> Jersey &amp; UK (remote support available).<br />
-              <b>Enquiries:</b> <a id="emailLegalTop" href="#">info@antoniopereira.org</a><br />
-              <span style="display:block;margin-top:6px;color:rgba(11,18,32,.65);font-size:11px;">
-                Support: <a id="supportTop" href="#">support@antoniopereira.org</a>
-              </span>
-              <div style="margin-top:10px;color:rgba(11,18,32,.52);font-size:11px;">
-                This website provides general information and does not constitute legal or tax advice.
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -559,7 +409,7 @@
 
       <div class="cards">
         <div class="textpanel">
-          <b>Email:</b> <a id="emailInline" href="#">info@antoniopereira.org</a><br />
+          <b>Email:</b> <a id="emailInline" href="#">info@antoniopereira.org</a><br>
           <span style="display:block;margin-top:8px;">
             <b>Support:</b> <a id="supportInline" href="#">support@antoniopereira.org</a>
           </span>
@@ -609,7 +459,6 @@
         <div class="card"><div class="ic">1</div><h3>Quick review</h3><p>You email what you need. I reply with options and next steps.</p></div>
         <div class="card"><div class="ic">2</div><h3>Plan &amp; content</h3><p>We agree structure. You send logo/text/photos (or I guide you).</p></div>
         <div class="card"><div class="ic">3</div><h3>Build &amp; launch</h3><p>I build, you approve, then we launch — clean and professional.</p></div>
-
         <div class="textpanel">
           <b>Note:</b> Timelines depend on content availability and scope. I confirm everything in writing (email) before work starts.
         </div>
@@ -679,44 +528,44 @@
 
       <div class="cards">
         <div class="textpanel">
-          <b>1) Who I am</b><br />
-          This website and services are operated by <b>A. Pereira</b> (<b>freelance</b>), based in <b>Jersey, Channel Islands</b>.<br />
+          <b>1) Who I am</b><br>
+          This website and services are operated by <b>A. Pereira</b> (<b>freelance</b>), based in <b>Jersey, Channel Islands</b>.<br>
           Contact: <a id="emailTerms" href="#">info@antoniopereira.org</a>.
-          <br /><br />
+          <br><br>
 
-          <b>2) What I provide</b><br />
+          <b>2) What I provide</b><br>
           Digital services: website design/build, SEO foundations, and domain business email setup guidance (MX/SPF/DKIM).
           Deliverables are agreed in writing (email) per project.
-          <br /><br />
+          <br><br>
 
-          <b>3) Quotes &amp; payments</b><br />
+          <b>3) Quotes &amp; payments</b><br>
           Quotes are provided in writing. Payment terms are agreed per project.
           Third-party subscriptions (domains/hosting/email providers) are your responsibility unless agreed otherwise.
-          <br /><br />
+          <br><br>
 
-          <b>4) Results / no guarantees</b><br />
+          <b>4) Results / no guarantees</b><br>
           I follow best-practice and deliver agreed work. I do not guarantee specific results (rankings/leads/revenue).
-          <br /><br />
+          <br><br>
 
-          <b>5) Client responsibilities</b><br />
+          <b>5) Client responsibilities</b><br>
           You confirm you have rights to use any text/images/logos provided and you approve final content before launch.
-          <br /><br />
+          <br><br>
 
-          <b>6) Changes &amp; cancellations</b><br />
+          <b>6) Changes &amp; cancellations</b><br>
           Reasonable revisions are included as agreed. Additional work may require an updated quote.
           If cancelled after work starts, you may be charged for work completed.
-          <br /><br />
+          <br><br>
 
-          <b>7) Limitation of liability</b><br />
+          <b>7) Limitation of liability</b><br>
           To the maximum extent permitted by law, I’m not liable for indirect or consequential loss.
           I’m not responsible for outages/issues caused by third-party platforms.
-          <br /><br />
+          <br><br>
 
-          <b>8) Governing law</b><br />
+          <b>8) Governing law</b><br>
           These terms are intended to be governed by the laws applicable in <b>Jersey</b> (Channel Islands), unless otherwise agreed.
-          <br /><br />
+          <br><br>
 
-          <b>9) Updates</b><br />
+          <b>9) Updates</b><br>
           I may update these terms from time to time. The version on this page is the current version.
         </div>
       </div>
@@ -725,9 +574,9 @@
     <footer>
       <div class="foot">
         <div>
-          <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br />
-          <span>Operated by <b>A. Pereira</b> (<b>freelance</b>).</span><br />
-          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereira.org</a></span><br />
+          <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
+          <span>Operated by <b>A. Pereira</b> (<b>freelance</b>).</span><br/>
+          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereira.org</a></span><br/>
           <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
             No guarantees of specific business outcomes.
           </span>
@@ -765,10 +614,6 @@
     const ENQUIRIES_EMAIL = "info@antoniopereira.org";
     const SUPPORT_EMAIL   = "support@antoniopereira.org";
 
-    // Future (when you activate Zoho for .co.uk)
-    // const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
-    // const SUPPORT_EMAIL   = "support@antoniopereiraweb.co.uk";
-
     document.getElementById("y").textContent = new Date().getFullYear();
     const enc = encodeURIComponent;
 
@@ -792,7 +637,7 @@ Thanks!`
     const enquiryMailto = mailtoFor(ENQUIRIES_EMAIL, "Website enquiry — A. Pereira");
     const supportMailto = mailtoFor(SUPPORT_EMAIL, "Support — A. Pereira");
 
-    ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailBtn"].forEach(id=>{
+    ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailBtn","emailHeroBtn"].forEach(id=>{
       const el = document.getElementById(id);
       if(el){
         el.href = enquiryMailto;
@@ -834,15 +679,9 @@ Thanks!`
     function showBanner(){ if(banner) banner.style.display = "block"; }
     function hideBanner(){ if(banner) banner.style.display = "none"; }
 
-    const consent = getConsent();
-    if(!consent){ showBanner(); }
-
-    if(acceptBtn){
-      acceptBtn.addEventListener("click", ()=>{ setConsent("accept"); hideBanner(); });
-    }
-    if(rejectBtn){
-      rejectBtn.addEventListener("click", ()=>{ setConsent("reject"); hideBanner(); });
-    }
+    if(!getConsent()){ showBanner(); }
+    if(acceptBtn){ acceptBtn.addEventListener("click", ()=>{ setConsent("accept"); hideBanner(); }); }
+    if(rejectBtn){ rejectBtn.addEventListener("click", ()=>{ setConsent("reject"); hideBanner(); }); }
     if(settingsLink){
       settingsLink.addEventListener("click", (e)=>{
         e.preventDefault();
@@ -853,4 +692,4 @@ Thanks!`
   </script>
 </body>
 </html>
-<!-- force deploy v100 -->
+<!-- force deploy v200 -->
