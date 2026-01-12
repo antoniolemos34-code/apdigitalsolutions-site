@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/logo-hero.png" />
+  <meta property="og:image" content="https://antoniopereiraweb.co.uk/logo-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
@@ -34,7 +34,7 @@
     "@type":"ProfessionalService",
     "name":"Antonio Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/logo-hero.png",
+    "image":"https://antoniopereiraweb.co.uk/logo-hero.jpg",
     "description":"Operated by Antonio Pereira (freelance). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
@@ -95,11 +95,28 @@
       backdrop-filter:blur(10px);
     }
 
+    /* TOP LOGO (full width, no box) */
+    .toplogo{
+      padding:18px 0 0;
+    }
+    .toplogo .wrap{padding-top:10px;padding-bottom:10px}
+    .toplogo img{
+      width:100%;
+      max-height:240px;
+      height:auto;
+      display:block;
+      object-fit:contain;
+      border-radius:18px;
+      /* subtle polish without a "box" feel */
+      filter:saturate(1.02) contrast(1.02);
+      box-shadow:0 18px 70px rgba(0,0,0,.35);
+    }
+
     /* NAV */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter: blur(14px);
-      background: rgba(7,10,18,.55);
+      background: rgba(7,10,18,.62);
       border-bottom:1px solid var(--line);
     }
     .nav .wrap{
@@ -137,7 +154,7 @@
     }
 
     /* HERO */
-    .hero{padding:22px 0 10px}
+    .hero{padding:16px 0 10px}
     .hero-shell{
       position:relative;
       border-radius:28px;
@@ -157,7 +174,7 @@
     .hero-grid{
       position:relative;
       display:grid;
-      grid-template-columns:1.05fr .95fr;
+      grid-template-columns:1fr;
       gap:18px;
       padding:18px;
       align-items:stretch;
@@ -213,43 +230,6 @@
     }
     .sublegal b{color:var(--text)}
     .sublegal a{text-decoration:underline}
-
-    /* Hero visual (logo-hero.png) */
-    .hero-visual{
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(7,10,18,.35);
-      overflow:hidden;
-      position:relative;
-      box-shadow:var(--shadow2);
-      min-height:320px;
-    }
-    .hero-visual::after{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(180deg, rgba(7,10,18,.20), rgba(7,10,18,.62));
-      pointer-events:none;
-    }
-    .hero-visual img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform:scale(1.03);
-      opacity:.92;
-      filter:saturate(1.05) contrast(1.02);
-    }
-    .hero-card{
-      position:absolute;
-      left:16px;right:16px;bottom:16px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(7,10,18,.55);
-      backdrop-filter: blur(10px);
-      padding:14px;
-    }
-    .hero-card b{display:block;font-size:14px}
-    .hero-card small{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.45}
 
     /* Sections */
     section{padding:18px 0}
@@ -315,24 +295,36 @@
     .btn.small{padding:10px 12px;font-size:13px;box-shadow:none}
 
     @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
       .card{grid-column:span 6}
       .brand{display:none}
       .nav .wrap{justify-content:center}
+      .toplogo img{max-height:210px}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
       .hero-grid{padding:14px;gap:14px}
       .hero-copy{padding:18px}
-      .hero-visual{min-height:260px}
       .btn{padding:11px 14px}
       .card{grid-column:span 12}
+      .toplogo img{max-height:170px;border-radius:16px}
     }
   </style>
 </head>
 
 <body>
   <a class="skip" href="#main">Skip to content</a>
+
+  <!-- FULL-WIDTH TOP LOGO (outside any box) -->
+  <div class="toplogo" aria-label="Top logo">
+    <div class="wrap">
+      <img
+        src="./logo-hero.jpg"
+        alt="Antonio Pereira — logo"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </div>
 
   <header class="nav">
     <div class="wrap">
@@ -390,16 +382,6 @@
               <div style="margin-top:10px;color:rgba(234,240,255,.58);font-size:11px;">
                 This website provides general information and does not constitute legal or tax advice.
               </div>
-            </div>
-          </div>
-
-          <div class="hero-visual" aria-label="Visual">
-            <img src="./logo-hero.png" alt="Antonio Pereira — Digital services preview">
-            <div class="hero-card">
-              <b>Email-only contact</b>
-              <small>
-                No social links. No WhatsApp buttons. Simple and professional — send one email and I’ll reply with next steps.
-              </small>
             </div>
           </div>
 
@@ -670,4 +652,4 @@
     }
   </script>
 </body>
-</html>
+                </html>
