@@ -57,8 +57,8 @@
       --muted:rgba(234,240,255,.72);
       --muted2:rgba(234,240,255,.58);
       --line:rgba(255,255,255,.12);
-      --panel:rgba(255,255,255,.06);
-      --panel2:rgba(255,255,255,.03);
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.04);
       --brand1:#7C5CFF;
       --brand2:#22D3EE;
       --shadow:0 18px 60px rgba(0,0,0,.45);
@@ -95,48 +95,11 @@
       backdrop-filter:blur(10px);
     }
 
-    /* HERO HEADER (FULL-BLEED + TEXT OVERLAY) */
-    .herohead{
-      position:relative;
-      min-height:520px;
-      overflow:hidden;
-      border-bottom:1px solid rgba(255,255,255,.10);
-    }
-    .herohead::before{
-      content:"";
-      position:absolute;inset:0;
-      background:
-        radial-gradient(900px 520px at 18% 10%, rgba(124,92,255,.18), transparent 60%),
-        radial-gradient(900px 520px at 85% 18%, rgba(34,211,238,.12), transparent 60%);
-      pointer-events:none;
-      z-index:1;
-    }
-    .herohead img{
-      position:absolute;inset:0;
-      width:100%;height:100%;
-      object-fit:cover;
-      transform:scale(1.03);
-      filter:saturate(1.05) contrast(1.05);
-      opacity:.98;
-    }
-    /* Dark fade for readability (premium look) */
-    .herohead .fade{
-      position:absolute;inset:0;
-      background:
-        linear-gradient(180deg, rgba(7,10,18,.25) 0%, rgba(7,10,18,.70) 62%, rgba(7,10,18,1) 100%),
-        radial-gradient(900px 420px at 20% 20%, rgba(0,0,0,.15), transparent 65%);
-      z-index:2;
-    }
-    .herohead .content{
-      position:relative;
-      z-index:3;
-    }
-
-    /* NAV (premium, not giant pills) */
+    /* NAV (clean + professional) */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter: blur(14px);
-      background: rgba(7,10,18,.55);
+      background: rgba(7,10,18,.58);
       border-bottom:1px solid rgba(255,255,255,.10);
     }
     .nav .wrap{
@@ -145,47 +108,104 @@
     }
     .brand{
       display:flex;align-items:center;gap:10px;
-      min-width:200px;
+      min-width:220px;
     }
     .brand-badge{
       width:34px;height:34px;border-radius:12px;
       background:linear-gradient(135deg, rgba(124,92,255,.35), rgba(34,211,238,.25));
       border:1px solid rgba(255,255,255,.14);
       box-shadow:0 10px 25px rgba(0,0,0,.25);
+      flex:0 0 auto;
     }
-    .brand small{display:block;color:var(--muted2);font-size:11px;margin-top:2px}
     .brand b{font-size:13px;letter-spacing:.2px}
+    .brand small{display:block;color:var(--muted2);font-size:11px;margin-top:2px}
 
     .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 
-    .linkbtn{
+    .link{
       display:inline-flex;align-items:center;justify-content:center;
       padding:10px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.12);
       background:rgba(255,255,255,.05);
       color:rgba(234,240,255,.86);
-      font-weight:750;font-size:13px;
+      font-weight:760;font-size:13px;
       transition:.2s ease;
       white-space:nowrap;
     }
-    .linkbtn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.20)}
-    .linkbtn.primary{
+    .link:hover{transform:translateY(-1px);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.20)}
+    .link.primary{
       background:linear-gradient(135deg,var(--brand1),var(--brand2));
       border-color:transparent;
       color:#061016;
       box-shadow:0 18px 55px rgba(124,92,255,.18);
     }
 
-    /* HERO COPY (overlay) */
-    .hero-copy{
-      padding:44px 0 24px;
+    /* HERO (professional: background image is subtle, copy is clean) */
+    .hero{
+      position:relative;
+      padding:26px 0 14px;
     }
-    .hero-copy .wrap{
+    .hero-shell{
+      position:relative;
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    /* Background image as decoration (avoid double-text look) */
+    .hero-bg{
+      position:absolute;inset:0;
+      background-image:url("./logo-hero.jpg");
+      background-size:cover;
+      background-repeat:no-repeat;
+      /* This is the KEY: move the image so we keep the face/laptop,
+         and avoid the big text area from the image as much as possible */
+      background-position: 82% 38%;
+      transform:scale(1.06);
+      filter:saturate(1.05) contrast(1.05);
+      opacity:.42;
+    }
+
+    /* Layering to make it premium + readable */
+    .hero-shell::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(900px 520px at 18% 15%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(900px 520px at 88% 22%, rgba(34,211,238,.14), transparent 60%),
+        linear-gradient(180deg, rgba(7,10,18,.45) 0%, rgba(7,10,18,.78) 62%, rgba(7,10,18,.95) 100%);
+      pointer-events:none;
+      z-index:1;
+    }
+    .hero-shell::after{
+      content:"";
+      position:absolute;inset:0;
+      backdrop-filter: blur(3px);
+      pointer-events:none;
+      z-index:2;
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:3;
       display:grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap:18px;
-      align-items:end;
+      grid-template-columns: 1.05fr .95fr;
+      gap:16px;
+      padding:18px;
+      align-items:stretch;
     }
+
+    .hero-copy{
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(7,10,18,.52);
+      backdrop-filter: blur(12px);
+      padding:22px;
+      box-shadow:var(--shadow2);
+    }
+
     .kicker{
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
       padding:8px 12px;border-radius:999px;
@@ -194,21 +214,20 @@
       color:rgba(234,240,255,.78);
       font-size:12px;
       letter-spacing:.2px;
-      backdrop-filter: blur(10px);
     }
     .kdot{width:7px;height:7px;border-radius:999px;background:rgba(234,240,255,.30)}
     .ksep{opacity:.6}
 
     h1{
       margin:14px 0 10px;
-      font-size:clamp(34px,5vw,62px);
-      line-height:1.03;
+      font-size:clamp(34px,4.8vw,62px);
+      line-height:1.02;
       letter-spacing:-1px;
-      text-shadow:0 16px 60px rgba(0,0,0,.60);
+      text-shadow:0 18px 70px rgba(0,0,0,.60);
     }
     .lead{
       margin:0;
-      color:rgba(234,240,255,.78);
+      color:rgba(234,240,255,.80);
       font-size:16px;
       line-height:1.75;
       max-width:70ch;
@@ -218,43 +237,54 @@
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
     .sublegal{
-      margin-top:16px;
+      margin-top:14px;
       padding:12px 14px;
       border-radius:18px;
       border:1px solid rgba(255,255,255,.14);
-      background:rgba(7,10,18,.45);
-      backdrop-filter: blur(10px);
+      background:rgba(255,255,255,.04);
       color:rgba(234,240,255,.74);
       font-size:12px;
       line-height:1.55;
-      box-shadow:0 18px 80px rgba(0,0,0,.35);
     }
     .sublegal b{color:var(--text)}
     .sublegal a{text-decoration:underline}
 
-    /* Small premium card on the right (optional, looks top) */
-    .hero-mini{
+    /* Right side = clean “highlights” instead of more image */
+    .hero-side{
       border-radius:22px;
       border:1px solid rgba(255,255,255,.14);
-      background:rgba(7,10,18,.42);
+      background:rgba(7,10,18,.44);
       backdrop-filter: blur(12px);
-      padding:16px;
-      box-shadow:0 26px 90px rgba(0,0,0,.45);
+      padding:18px;
+      box-shadow:var(--shadow2);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:14px;
     }
-    .hero-mini b{display:block;font-size:14px}
-    .hero-mini small{display:block;margin-top:6px;color:rgba(234,240,255,.72);font-size:12px;line-height:1.45}
-    .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .hero-side h3{margin:0;font-size:14px;letter-spacing:-.2px}
+    .hero-side p{margin:0;color:rgba(234,240,255,.72);font-size:13px;line-height:1.6}
+
+    .pillrow{display:flex;gap:8px;flex-wrap:wrap}
     .pill{
       display:inline-flex;align-items:center;gap:8px;
       padding:8px 10px;border-radius:999px;
       border:1px solid rgba(255,255,255,.12);
       background:rgba(255,255,255,.05);
-      color:rgba(234,240,255,.80);
-      font-size:12px;font-weight:750;
+      color:rgba(234,240,255,.82);
+      font-size:12px;font-weight:760;
+    }
+    .mini-note{
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      color:rgba(234,240,255,.72);
+      font-size:12px;
+      line-height:1.55;
     }
 
     /* Sections */
-    main{position:relative;z-index:3}
     section{padding:18px 0}
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
     .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
@@ -316,19 +346,24 @@
     .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
     .cookie .btns{display:flex;gap:10px;flex-wrap:wrap}
 
+    /* Responsive */
     @media (max-width: 980px){
       .brand{display:none}
       .nav .wrap{justify-content:center}
-      .herohead{min-height:520px}
-      .hero-copy .wrap{grid-template-columns:1fr}
-      .hero-mini{display:none}
+      .hero-grid{grid-template-columns:1fr}
+      .hero-side{display:none}
+      .hero-bg{background-position: 80% 42%;}
+      .card{grid-column:span 6}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
-      .hero-copy{padding:36px 0 16px}
-      .linkbtn{padding:10px 12px}
+      .hero{padding:18px 0 10px}
+      .hero-grid{padding:14px}
+      .hero-copy{padding:18px}
+      /* On mobile: push image to the right so the person stays visible, and hide the big text area */
+      .hero-bg{background-position: 88% 46%; opacity:.35;}
       .card{grid-column:span 12}
-      .herohead{min-height:500px}
+      h1{font-size:clamp(32px,9vw,44px)}
     }
   </style>
 </head>
@@ -336,86 +371,88 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- FULL-BLEED HERO IMAGE (TOP) -->
-  <header class="herohead" aria-label="Hero">
-    <img src="./logo-hero.jpg" alt="Antonio Pereira — Your Digital Assistant" loading="eager" decoding="async">
-    <div class="fade" aria-hidden="true"></div>
-
-    <!-- Sticky nav sits above and feels premium -->
-    <div class="nav">
-      <div class="wrap">
-        <div class="brand" aria-label="Brand">
-          <div class="brand-badge" aria-hidden="true"></div>
-          <div>
-            <b>Antonio Pereira</b>
-            <small>Freelance Digital Services</small>
-          </div>
-        </div>
-
-        <nav class="nav-actions" aria-label="Primary">
-          <a class="linkbtn" href="#services">Services</a>
-          <a class="linkbtn" href="#process">Process</a>
-          <a class="linkbtn" href="#privacy">Privacy</a>
-          <a class="linkbtn" href="#terms">Terms</a>
-          <a class="linkbtn primary" href="#contact">Email me</a>
-        </nav>
-      </div>
-    </div>
-
-    <!-- Overlay copy -->
-    <div class="content hero-copy">
-      <div class="wrap">
+  <header class="nav">
+    <div class="wrap">
+      <div class="brand" aria-label="Brand">
+        <div class="brand-badge" aria-hidden="true"></div>
         <div>
-          <span class="kicker">
-            <span class="kdot"></span>Freelance Digital Services
-            <span class="ksep">•</span> Jersey &amp; UK
-          </span>
-
-          <h1>Premium websites.<br>Clean setup. Clear contact.</h1>
-
-          <p class="lead">
-            I design and build <strong>fast, mobile-first websites</strong> and set up
-            <strong>professional domain email</strong> so your business looks credible from day one.
-            <span style="display:block;margin-top:10px;color:rgba(234,240,255,.64);font-size:13px;">
-              Results can vary. I focus on best-practice setup and a polished user experience.
-            </span>
-          </p>
-
-          <div class="actions">
-            <a class="linkbtn primary" href="#contact">Request a free review</a>
-            <a class="linkbtn" href="#services">View services</a>
-          </div>
-
-          <div class="sublegal" aria-label="Business details">
-            <b>Business details</b><br>
-            Operated by <b>Antonio Pereira</b> (<b>freelance</b>).<br>
-            <b>Base:</b> Jersey, Channel Islands.<br>
-            <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
-            <b>Enquiries:</b> <a id="emailLegalTop" href="#">hello@antoniopereiraweb.co.uk</a>
-            <div style="margin-top:10px;color:rgba(234,240,255,.58);font-size:11px;">
-              This website provides general information and does not constitute legal or tax advice.
-            </div>
-          </div>
+          <b>Antonio Pereira</b>
+          <small>Freelance Digital Services</small>
         </div>
-
-        <aside class="hero-mini" aria-label="Highlights">
-          <b>Professional essentials</b>
-          <small>Clear scope, clean delivery, email-only contact — simple and credible.</small>
-          <div class="pillrow">
-            <span class="pill">⚡ Fast setup</span>
-            <span class="pill">📱 Mobile-first</span>
-            <span class="pill">✉️ Domain email</span>
-            <span class="pill">🧾 Clear terms</span>
-          </div>
-          <small style="margin-top:12px;opacity:.92">
-            Email once — I reply with next steps and options.
-          </small>
-        </aside>
       </div>
+
+      <nav class="nav-actions" aria-label="Primary">
+        <a class="link" href="#services">Services</a>
+        <a class="link" href="#process">Process</a>
+        <a class="link" href="#privacy">Privacy</a>
+        <a class="link" href="#terms">Terms</a>
+        <a class="link primary" href="#contact">Email me</a>
+      </nav>
     </div>
   </header>
 
   <main id="main" class="wrap">
+
+    <section class="hero" id="top">
+      <div class="hero-shell">
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="kicker">
+              <span class="kdot"></span>Freelance Digital Services
+              <span class="ksep">•</span> Jersey &amp; UK
+            </span>
+
+            <h1>Premium websites.<br>Clean setup. Clear contact.</h1>
+
+            <p class="lead">
+              I design and build <strong>fast, mobile-first websites</strong> and set up
+              <strong>professional domain email</strong> so your business looks credible from day one.
+              <span style="display:block;margin-top:10px;color:rgba(234,240,255,.64);font-size:13px;">
+                Results can vary. I focus on best-practice setup and a polished user experience.
+              </span>
+            </p>
+
+            <div class="actions">
+              <a class="link primary" href="#contact">Request a free review</a>
+              <a class="link" href="#services">View services</a>
+            </div>
+
+            <div class="sublegal" aria-label="Business details">
+              <b>Business details</b><br>
+              Operated by <b>Antonio Pereira</b> (<b>freelance</b>).<br>
+              <b>Base:</b> Jersey, Channel Islands.<br>
+              <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
+              <b>Enquiries:</b> <a id="emailLegalTop" href="#">hello@antoniopereiraweb.co.uk</a>
+              <div style="margin-top:10px;color:rgba(234,240,255,.58);font-size:11px;">
+                This website provides general information and does not constitute legal or tax advice.
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-side" aria-label="Highlights">
+            <div>
+              <h3>Professional essentials</h3>
+              <p>Clean scope, clear delivery, and a simple enquiry flow. Email-only contact — credible and focused.</p>
+            </div>
+
+            <div class="pillrow">
+              <span class="pill">⚡ Fast setup</span>
+              <span class="pill">📱 Mobile-first</span>
+              <span class="pill">✉️ Domain email</span>
+              <span class="pill">🧾 Clear terms</span>
+              <span class="pill">🔎 SEO basics</span>
+            </div>
+
+            <div class="mini-note">
+              <b style="color:var(--text)">Tip:</b> Email what you need and your deadline. I’ll reply with options and next steps.
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
 
     <section id="contact">
       <div class="section-title">
@@ -431,7 +468,7 @@
           <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — Antonio Pereira</span>
           <span style="display:block;margin-top:10px;"><b>Include:</b> business type • website (if any) • what you need • deadline • Jersey/UK</span>
           <div style="margin-top:14px;">
-            <a class="linkbtn primary" id="emailBtn" href="#">Email me</a>
+            <a class="link primary" id="emailBtn" href="#">Email me</a>
           </div>
         </div>
       </div>
@@ -606,14 +643,14 @@
   </main>
 
   <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
-    <div class="row">
-      <p>
+    <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+      <p style="margin:0;color:var(--muted);font-size:12px;max-width:85ch">
         We use essential storage to remember your preferences. Optional measurement scripts load only if you accept.
         <a href="#privacy" style="text-decoration:underline;">Privacy & Cookies</a>
       </p>
-      <div class="btns">
-        <button class="linkbtn" id="cookieReject" type="button">Reject</button>
-        <button class="linkbtn primary" id="cookieAccept" type="button">Accept</button>
+      <div class="btns" style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="link" id="cookieReject" type="button">Reject</button>
+        <button class="link primary" id="cookieAccept" type="button">Accept</button>
       </div>
     </div>
   </div>
