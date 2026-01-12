@@ -61,8 +61,8 @@
       --muted2:#64748B;
       --line:rgba(11,18,32,.10);
 
-      --accent1:#4F46E5; /* indigo */
-      --accent2:#06B6D4; /* cyan */
+      --accent1:#4F46E5;
+      --accent2:#06B6D4;
 
       --shadow: 0 18px 60px rgba(2,6,23,.10);
       --shadow2: 0 28px 90px rgba(2,6,23,.14);
@@ -166,33 +166,115 @@
       z-index:0;
     }
 
-    /* Mobile-first stack */
     .hero-stack{
       position:relative;z-index:1;
       display:grid;
-      grid-template-columns: 1fr;
+      grid-template-columns:1fr;
       gap:14px;
       padding:16px;
     }
 
+    /* IMAGE box with TEXT INSIDE (overlay) */
     .hero-media{
       border-radius:24px;
-      background: rgba(11,18,32,.03);
       border:1px solid rgba(11,18,32,.10);
       box-shadow: 0 18px 55px rgba(2,6,23,.08);
       overflow:hidden;
-      display:grid;
-      place-items:center;
-      min-height:260px;
       position:relative;
+      min-height:320px;
+
+      /* Use your image as background */
+      background:
+        url("./hero-transparent.jpg") center/contain no-repeat,
+        rgba(11,18,32,.03);
     }
-    .hero-media img{
-      width:min(620px, 100%);
-      height:auto;
-      display:block;
-      filter: drop-shadow(0 22px 55px rgba(2,6,23,.12));
-      transform: translateY(6px);
+
+    /* Soft fade at the bottom so overlay is readable */
+    .hero-media::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg,
+          rgba(255,255,255,0.00) 0%,
+          rgba(255,255,255,0.10) 40%,
+          rgba(255,255,255,0.78) 78%,
+          rgba(255,255,255,0.92) 100%
+        );
+      pointer-events:none;
+      z-index:1;
     }
+
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:flex-end;
+      padding:14px;
+      z-index:2;
+    }
+
+    .hero-overlay-inner{
+      width:100%;
+      border-radius:20px;
+      border:1px solid rgba(11,18,32,.10);
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 16px 44px rgba(2,6,23,.10);
+      padding:14px;
+    }
+
+    .hero-overlay-top{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .hero-overlay-logo{
+      width:44px;height:44px;border-radius:18px;
+      background: linear-gradient(135deg, rgba(79,70,229,.18), rgba(6,182,212,.14));
+      border:1px solid rgba(11,18,32,.10);
+      flex:0 0 auto;
+    }
+
+    .hero-overlay-name{
+      font-weight:900;
+      letter-spacing:.2px;
+      font-size:15px;
+      color:rgba(11,18,32,.92);
+      margin:0;
+    }
+
+    .hero-overlay-sub{
+      color:rgba(11,18,32,.70);
+      font-size:12.5px;
+      margin-top:2px;
+    }
+
+    .hero-overlay-desc{
+      margin:10px 0 0;
+      color:rgba(11,18,32,.72);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .hero-overlay-tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .hero-overlay-tags span{
+      font-size:12px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(11,18,32,.10);
+      background:rgba(11,18,32,.03);
+      color:rgba(11,18,32,.72);
+      white-space:nowrap;
+    }
+
+    /* right column content */
+    .hero-right{display:flex;flex-direction:column;gap:12px}
 
     .pill{
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -207,36 +289,6 @@
     }
     .dot{width:8px;height:8px;border-radius:999px;background:rgba(6,182,212,.75)}
     .sep{opacity:.55}
-
-    /* Presentation card under the image (THIS is what you asked) */
-    .identity{
-      border-radius:22px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.86);
-      box-shadow:0 18px 55px rgba(2,6,23,.08);
-      padding:14px;
-    }
-    .id-top{display:flex;gap:12px;align-items:center}
-    .id-logo{
-      width:44px;height:44px;border-radius:18px;
-      background: linear-gradient(135deg, rgba(79,70,229,.18), rgba(6,182,212,.14));
-      border:1px solid rgba(11,18,32,.10);
-      flex:0 0 auto;
-    }
-    .id-text b{display:block;font-size:15px;letter-spacing:.2px}
-    .id-text small{display:block;color:var(--muted2);font-size:12.5px;margin-top:2px}
-    .id-desc{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
-    .id-desc b{color:rgba(11,18,32,.92)}
-    .id-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .tag{
-      font-size:12px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(11,18,32,.03);
-      color:rgba(11,18,32,.72);
-      white-space:nowrap;
-    }
 
     h1{
       margin:2px 0 0;
@@ -357,7 +409,7 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:rgba(11,18,32,.78);font-size:12px;max-width:85ch}
 
-    /* Desktop layout: image + content side by side */
+    /* Desktop layout: image left + content right */
     @media (min-width: 980px){
       .hero-stack{
         grid-template-columns: 1.05fr .95fr;
@@ -365,13 +417,10 @@
         gap:18px;
         padding:18px;
       }
-      .hero-right{
-        display:flex;
-        flex-direction:column;
-        gap:12px;
-      }
-      .hero-media{min-height:380px}
+      .hero-media{min-height:420px}
       .wrap{padding:18px}
+      /* Make overlay card not full width on desktop (more premium) */
+      .hero-overlay-inner{max-width:520px}
     }
 
     @media (max-width: 980px){
@@ -414,44 +463,41 @@
   <main id="main" class="wrap">
     <section class="hero" id="top">
       <div class="shell">
-
-        <!-- MOBILE-FIRST: IMAGE FIRST, then intro card, then headline -->
         <div class="hero-stack">
 
+          <!-- IMAGE TOP with TEXT INSIDE -->
           <div class="hero-media" aria-label="Hero image">
-            <img src="./hero-transparent.jpg" alt="A. Pereira — Digital services" loading="eager" decoding="async">
+            <div class="hero-overlay">
+              <div class="hero-overlay-inner" aria-label="Intro inside image">
+                <div class="hero-overlay-top">
+                  <div class="hero-overlay-logo" aria-hidden="true"></div>
+                  <div>
+                    <p class="hero-overlay-name">A. Pereira</p>
+                    <div class="hero-overlay-sub">Premium websites & professional business email</div>
+                  </div>
+                </div>
+
+                <p class="hero-overlay-desc">
+                  I help businesses with a <strong>premium online presence</strong>: fast websites, clear structure,
+                  and <strong>domain email setup</strong> (MX/SPF/DKIM) — so customers trust you and contact you easily.
+                </p>
+
+                <div class="hero-overlay-tags" aria-label="Core services">
+                  <span>Websites</span>
+                  <span>Business Email</span>
+                  <span>SEO Basics</span>
+                  <span>Support</span>
+                </div>
+              </div>
+            </div>
           </div>
 
+          <!-- RIGHT COLUMN -->
           <div class="hero-right">
-
             <span class="pill">
               <span class="dot"></span> Freelance Digital Services
               <span class="sep">•</span> Jersey &amp; UK
             </span>
-
-            <!-- THIS is your “logo + who I am + services” under the image -->
-            <div class="identity" aria-label="Who I am">
-              <div class="id-top">
-                <div class="id-logo" aria-hidden="true"></div>
-                <div class="id-text">
-                  <b>A. Pereira</b>
-                  <small>Premium websites &amp; professional business email</small>
-                </div>
-              </div>
-
-              <p class="id-desc">
-                I help businesses and individuals with a <b>premium online presence</b>:
-                fast websites, clear structure, and <b>domain email setup</b> (MX/SPF/DKIM) —
-                so customers trust you and contact you easily.
-              </p>
-
-              <div class="id-tags" aria-label="Core services">
-                <span class="tag">Websites</span>
-                <span class="tag">Business Email</span>
-                <span class="tag">SEO Basics</span>
-                <span class="tag">Support</span>
-              </div>
-            </div>
 
             <h1>Websites that look premium — and work.</h1>
 
@@ -777,10 +823,10 @@ Thanks!`
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
         if(!href || href === "#") return;
-        const el = document.querySelector(href);
-        if(!el) return;
+        const target = document.querySelector(href);
+        if(!target) return;
         ev.preventDefault();
-        el.scrollIntoView({behavior:"smooth", block:"start"});
+        target.scrollIntoView({behavior:"smooth", block:"start"});
       });
     });
 
@@ -796,15 +842,11 @@ Thanks!`
     function showBanner(){ if(banner) banner.style.display = "block"; }
     function hideBanner(){ if(banner) banner.style.display = "none"; }
 
-    const consent = getConsent();
-    if(!consent){ showBanner(); }
+    if(!getConsent()) showBanner();
 
-    if(acceptBtn){
-      acceptBtn.addEventListener("click", ()=>{ setConsent("accept"); hideBanner(); });
-    }
-    if(rejectBtn){
-      rejectBtn.addEventListener("click", ()=>{ setConsent("reject"); hideBanner(); });
-    }
+    if(acceptBtn) acceptBtn.addEventListener("click", ()=>{ setConsent("accept"); hideBanner(); });
+    if(rejectBtn) rejectBtn.addEventListener("click", ()=>{ setConsent("reject"); hideBanner(); });
+
     if(settingsLink){
       settingsLink.addEventListener("click", (e)=>{
         e.preventDefault();
@@ -815,5 +857,4 @@ Thanks!`
   </script>
 </body>
 </html>
-
 <!-- force deploy v100 -->
