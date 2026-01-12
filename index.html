@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/logo-hero.jpg" />
+  <meta property="og:image" content="https://antoniopereiraweb.co.uk/hero-transparent.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
@@ -34,7 +34,7 @@
     "@type":"ProfessionalService",
     "name":"A. Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/logo-hero.jpg",
+    "image":"https://antoniopereiraweb.co.uk/hero-transparent.jpg",
     "description":"Operated by A. Pereira (freelance). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
@@ -54,8 +54,8 @@
     :root{
       --bg:#F6F8FC;
       --bg2:#EEF2FF;
-      --panel:rgba(255,255,255,.72);
-      --panel2:rgba(255,255,255,.55);
+      --panel:rgba(255,255,255,.78);
+      --panel2:rgba(255,255,255,.62);
       --text:#0F172A;
       --muted:#475569;
       --muted2:#64748B;
@@ -65,8 +65,8 @@
       --brand2:#22D3EE; /* cyan */
       --brand3:#A78BFA; /* violet */
 
-      --shadow: 0 18px 55px rgba(2,6,23,.10);
-      --shadow2: 0 28px 85px rgba(2,6,23,.14);
+      --shadow: 0 16px 45px rgba(2,6,23,.10);
+      --shadow2: 0 28px 90px rgba(2,6,23,.14);
       --radius:22px;
       --max:1120px;
     }
@@ -95,17 +95,18 @@
     .skip:focus{
       position:fixed;left:14px;top:14px;width:auto;height:auto;
       padding:10px 12px;border-radius:12px;z-index:9999;
-      background:rgba(255,255,255,.9);
+      background:rgba(255,255,255,.92);
       border:1px solid var(--line);
       box-shadow:var(--shadow);
       text-decoration:none;
     }
 
-    /* NAV */
+    /* NAV (Apple-ish) */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter: blur(14px);
-      background: rgba(246,248,252,.75);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(246,248,252,.78);
       border-bottom:1px solid var(--line);
     }
     .nav .wrap{
@@ -133,7 +134,7 @@
       display:inline-flex;align-items:center;justify-content:center;
       padding:10px 12px;border-radius:999px;
       border:1px solid rgba(15,23,42,.12);
-      background:rgba(255,255,255,.70);
+      background:rgba(255,255,255,.75);
       color:rgba(15,23,42,.86);
       font-weight:760;font-size:13px;
       transition:.18s ease;
@@ -146,16 +147,16 @@
       background:linear-gradient(135deg, rgba(99,102,241,.96), rgba(34,211,238,.90));
       border-color:transparent;
       color:#07101F;
-      box-shadow:0 18px 45px rgba(99,102,241,.20);
+      box-shadow:0 18px 45px rgba(99,102,241,.22);
     }
 
-    /* HERO (outside box) */
-    .hero{padding:26px 0 8px}
+    /* HERO */
+    .hero{padding:28px 0 8px}
     .hero-shell{
       position:relative;
       border-radius:32px;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.76);
       box-shadow:var(--shadow2);
       overflow:hidden;
       isolation:isolate;
@@ -184,7 +185,7 @@
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
       padding:8px 12px;border-radius:999px;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.80);
       color:rgba(15,23,42,.70);
       font-size:12px;
       letter-spacing:.2px;
@@ -214,7 +215,7 @@
       padding:12px 14px;
       border-radius:18px;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.65);
+      background:rgba(255,255,255,.68);
       color:rgba(15,23,42,.70);
       font-size:12px;
       line-height:1.55;
@@ -222,7 +223,7 @@
     .sublegal b{color:rgba(15,23,42,.92)}
     .sublegal a{color:rgba(15,23,42,.92);text-decoration:underline}
 
-    /* Transparent hero art (NO BOX) */
+    /* HERO ART (transparent image) */
     .hero-art{
       position:relative;
       display:grid;
@@ -236,10 +237,10 @@
       border-radius:999px;
       background:
         radial-gradient(circle at 50% 40%, rgba(34,211,238,.22), transparent 55%),
-        radial-gradient(circle at 35% 65%, rgba(99,102,241,.22), transparent 55%),
-        radial-gradient(circle at 70% 75%, rgba(167,139,250,.18), transparent 60%);
+        radial-gradient(circle at 35% 65%, rgba(99,102,241,.20), transparent 55%),
+        radial-gradient(circle at 70% 75%, rgba(167,139,250,.16), transparent 60%);
       filter: blur(18px);
-      opacity:.85;
+      opacity:.82;
       z-index:0;
     }
     .hero-art img{
@@ -260,7 +261,7 @@
     .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .card{
       grid-column:span 4;
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.80);
       border:1px solid rgba(15,23,42,.10);
       border-radius:var(--radius);
       padding:16px;
@@ -280,7 +281,7 @@
 
     .textpanel{
       grid-column:span 12;
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.80);
       border:1px solid rgba(15,23,42,.10);
       border-radius:var(--radius);
       padding:16px;
@@ -301,12 +302,13 @@
     .foot a{color:var(--muted)}
     .foot a:hover{color:rgba(15,23,42,.92)}
 
-    /* Cookie banner */
+    /* Cookie */
     .cookie{
       position:fixed;left:14px;right:14px;bottom:14px;z-index:200;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.86);
+      background:rgba(255,255,255,.90);
       backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
       border-radius:22px;
       box-shadow:var(--shadow2);
       padding:14px;
@@ -314,6 +316,7 @@
     }
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
+    .cookie a{color:rgba(15,23,42,.92);text-decoration:underline}
 
     /* Responsive */
     @media (max-width: 980px){
@@ -395,7 +398,8 @@
           </div>
 
           <div class="hero-art" aria-label="Hero image">
-            <img src="./hero-transparent.png" alt="A. Pereira — Digital services" loading="eager" decoding="async">
+            <!-- ✅ FIXED: file name matches your repo -->
+            <img src="./hero-transparent.jpg" alt="A. Pereira — Digital services" loading="eager" decoding="async">
           </div>
         </div>
       </div>
@@ -500,7 +504,7 @@
           <h3>Cookies</h3>
           <p>
             Essential storage is used to remember cookie preferences.
-            Optional measurement scripts load only if you accept (if enabled).
+            Optional measurement scripts load only if you accept.
           </p>
         </div>
 
@@ -677,4 +681,4 @@ Thanks!`
     }
   </script>
 </body>
-</html>
+            </html>
