@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0B0F19" />
-  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#F6F8FC" />
+  <meta name="color-scheme" content="light" />
 
-  <title>Antonio Pereira — Freelance Web Design & Business Email (Jersey & UK)</title>
-  <meta name="description" content="Premium mobile-first websites and professional domain email setup (e.g. you@yourbusiness.com). Operated by Antonio Pereira (freelance), Jersey, Channel Islands. Serving Jersey & the UK." />
+  <title>A. Pereira — Freelance Web Design & Business Email (Jersey & UK)</title>
+  <meta name="description" content="Premium mobile-first websites and professional domain email setup (e.g. you@yourbusiness.com). Operated by A. Pereira (freelance), Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Antonio Pereira — Freelance Digital Services" />
+  <meta property="og:title" content="A. Pereira — Freelance Digital Services" />
   <meta property="og:description" content="Premium websites and professional domain email setup. Clear steps. No obligation." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
@@ -32,10 +32,10 @@
   {
     "@context":"https://schema.org",
     "@type":"ProfessionalService",
-    "name":"Antonio Pereira",
+    "name":"A. Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
     "image":"https://antoniopereiraweb.co.uk/logo-hero.jpg",
-    "description":"Operated by Antonio Pereira (freelance). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
+    "description":"Operated by A. Pereira (freelance). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
@@ -52,17 +52,21 @@
 
   <style>
     :root{
-      --bg:#070A12;
-      --text:#EAF0FF;
-      --muted:rgba(234,240,255,.72);
-      --muted2:rgba(234,240,255,.58);
-      --line:rgba(255,255,255,.12);
-      --panel:rgba(255,255,255,.06);
-      --panel2:rgba(255,255,255,.04);
-      --brand1:#7C5CFF;
-      --brand2:#22D3EE;
-      --shadow:0 18px 60px rgba(0,0,0,.45);
-      --shadow2:0 26px 90px rgba(0,0,0,.55);
+      --bg:#F6F8FC;
+      --bg2:#EEF2FF;
+      --panel:rgba(255,255,255,.72);
+      --panel2:rgba(255,255,255,.55);
+      --text:#0F172A;
+      --muted:#475569;
+      --muted2:#64748B;
+      --line:rgba(15,23,42,.10);
+
+      --brand1:#6366F1; /* indigo */
+      --brand2:#22D3EE; /* cyan */
+      --brand3:#A78BFA; /* violet */
+
+      --shadow: 0 18px 55px rgba(2,6,23,.10);
+      --shadow2: 0 28px 85px rgba(2,6,23,.14);
       --radius:22px;
       --max:1120px;
     }
@@ -71,18 +75,19 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 450px at 15% 10%, rgba(124,92,255,.18), transparent 55%),
-        radial-gradient(900px 450px at 85% 18%, rgba(34,211,238,.14), transparent 55%),
-        radial-gradient(900px 450px at 50% 100%, rgba(255,255,255,.05), transparent 60%),
-        var(--bg);
+        radial-gradient(900px 450px at 10% 0%, rgba(99,102,241,.18), transparent 55%),
+        radial-gradient(900px 450px at 92% 12%, rgba(34,211,238,.14), transparent 55%),
+        radial-gradient(900px 450px at 50% 100%, rgba(167,139,250,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
       line-height:1.55;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
     }
-    a{color:inherit;text-decoration:none}
+
+    a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:22px}
 
     /* Skip */
@@ -90,31 +95,33 @@
     .skip:focus{
       position:fixed;left:14px;top:14px;width:auto;height:auto;
       padding:10px 12px;border-radius:12px;z-index:9999;
-      background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.18);
-      backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      text-decoration:none;
     }
 
-    /* NAV (premium) */
+    /* NAV */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter: blur(14px);
-      background: rgba(7,10,18,.58);
-      border-bottom:1px solid rgba(255,255,255,.10);
+      background: rgba(246,248,252,.75);
+      border-bottom:1px solid var(--line);
     }
     .nav .wrap{
       display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding-top:14px;padding-bottom:14px;
+      padding-top:12px;padding-bottom:12px;
     }
     .brand{
       display:flex;align-items:center;gap:10px;
+      text-decoration:none;
       min-width:220px;
     }
     .brand-badge{
       width:34px;height:34px;border-radius:12px;
-      background:linear-gradient(135deg, rgba(124,92,255,.35), rgba(34,211,238,.25));
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow:0 10px 25px rgba(0,0,0,.25);
+      background:linear-gradient(135deg, rgba(99,102,241,.22), rgba(34,211,238,.20));
+      border:1px solid rgba(15,23,42,.10);
+      box-shadow:0 12px 30px rgba(2,6,23,.08);
       flex:0 0 auto;
     }
     .brand b{font-size:13px;letter-spacing:.2px}
@@ -125,169 +132,123 @@
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:10px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
-      color:rgba(234,240,255,.88);
-      font-weight:780;font-size:13px;
-      transition:.2s ease;
+      border:1px solid rgba(15,23,42,.12);
+      background:rgba(255,255,255,.70);
+      color:rgba(15,23,42,.86);
+      font-weight:760;font-size:13px;
+      transition:.18s ease;
+      text-decoration:none;
       white-space:nowrap;
+      box-shadow:0 10px 24px rgba(2,6,23,.06);
     }
-    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.20)}
+    .btn:hover{transform:translateY(-1px);background:#fff;border-color:rgba(15,23,42,.16)}
     .btn.primary{
-      background:linear-gradient(135deg,var(--brand1),var(--brand2));
+      background:linear-gradient(135deg, rgba(99,102,241,.96), rgba(34,211,238,.90));
       border-color:transparent;
-      color:#061016;
-      box-shadow:0 18px 55px rgba(124,92,255,.18);
+      color:#07101F;
+      box-shadow:0 18px 45px rgba(99,102,241,.20);
     }
 
-    /* WOW HERO */
-    .hero{padding:20px 0 10px}
+    /* HERO (outside box) */
+    .hero{padding:26px 0 8px}
     .hero-shell{
       position:relative;
-      border-radius:30px;
-      border:1px solid rgba(255,255,255,.12);
+      border-radius:32px;
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.72);
+      box-shadow:var(--shadow2);
       overflow:hidden;
-      box-shadow:var(--shadow);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
       isolation:isolate;
     }
-
-    /* Big glowing orbs (premium feel) */
     .hero-shell::before{
       content:"";
       position:absolute;inset:-80px;
       background:
-        radial-gradient(700px 420px at 18% 15%, rgba(124,92,255,.24), transparent 60%),
+        radial-gradient(700px 420px at 12% 15%, rgba(99,102,241,.20), transparent 60%),
         radial-gradient(700px 420px at 88% 20%, rgba(34,211,238,.18), transparent 60%),
-        radial-gradient(600px 360px at 65% 95%, rgba(255,255,255,.07), transparent 60%);
+        radial-gradient(600px 360px at 55% 95%, rgba(167,139,250,.14), transparent 60%);
       pointer-events:none;
-      z-index:1;
-    }
-
-    /* Background image (visible + cropped to avoid the embedded text area) */
-    .hero-bg{
-      position:absolute;inset:0;
-      background-image:url("./logo-hero.jpg");
-      background-size:cover;
-      background-repeat:no-repeat;
-      background-position: 88% 44%; /* keep the person/laptop */
-      transform:scale(1.04);
-      filter:saturate(1.06) contrast(1.06);
-      opacity:.86;
       z-index:0;
     }
 
-    /* Dark overlay + left mask so image text doesn't fight our copy */
-    .hero-overlay{
-      position:absolute;inset:0;
-      background:
-        linear-gradient(90deg,
-          rgba(7,10,18,.96) 0%,
-          rgba(7,10,18,.84) 34%,
-          rgba(7,10,18,.58) 55%,
-          rgba(7,10,18,.36) 72%,
-          rgba(7,10,18,.20) 100%
-        ),
-        linear-gradient(180deg, rgba(7,10,18,.15) 0%, rgba(7,10,18,.72) 70%, rgba(7,10,18,.92) 100%);
-      z-index:2;
-      pointer-events:none;
-    }
-
     .hero-grid{
-      position:relative;
-      z-index:3;
+      position:relative; z-index:1;
       display:grid;
       grid-template-columns: 1.05fr .95fr;
-      gap:16px;
-      padding:18px;
-      align-items:stretch;
-    }
-
-    .hero-copy{
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(7,10,18,.55);
-      backdrop-filter: blur(14px);
-      padding:22px;
-      box-shadow:var(--shadow2);
+      gap:18px;
+      padding:26px;
+      align-items:center;
     }
 
     .kicker{
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
       padding:8px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.06);
-      color:rgba(234,240,255,.78);
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.75);
+      color:rgba(15,23,42,.70);
       font-size:12px;
       letter-spacing:.2px;
+      text-decoration:none;
     }
-    .kdot{width:7px;height:7px;border-radius:999px;background:rgba(234,240,255,.30)}
-    .ksep{opacity:.6}
+    .kdot{width:7px;height:7px;border-radius:999px;background:rgba(99,102,241,.55)}
+    .ksep{opacity:.55}
 
     h1{
       margin:14px 0 10px;
-      font-size:clamp(36px,4.9vw,64px);
+      font-size:clamp(34px,4.7vw,64px);
       line-height:1.02;
       letter-spacing:-1px;
-      text-shadow:0 18px 80px rgba(0,0,0,.65);
     }
     .lead{
       margin:0;
-      color:rgba(234,240,255,.80);
+      color:rgba(15,23,42,.72);
       font-size:16px;
       line-height:1.75;
-      max-width:70ch;
+      max-width:72ch;
     }
-    .lead strong{color:var(--text);font-weight:900}
-
+    .lead strong{color:rgba(15,23,42,.92);font-weight:850}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
     .sublegal{
       margin-top:14px;
       padding:12px 14px;
       border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      color:rgba(234,240,255,.74);
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.65);
+      color:rgba(15,23,42,.70);
       font-size:12px;
       line-height:1.55;
     }
-    .sublegal b{color:var(--text)}
-    .sublegal a{text-decoration:underline}
+    .sublegal b{color:rgba(15,23,42,.92)}
+    .sublegal a{color:rgba(15,23,42,.92);text-decoration:underline}
 
-    /* Right side: “trust” card (looks premium, not busy) */
-    .hero-side{
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(7,10,18,.40);
-      backdrop-filter: blur(14px);
-      padding:18px;
-      box-shadow:var(--shadow2);
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      gap:14px;
+    /* Transparent hero art (NO BOX) */
+    .hero-art{
+      position:relative;
+      display:grid;
+      place-items:center;
+      min-height:360px;
     }
-    .hero-side h3{margin:0;font-size:14px;letter-spacing:-.2px}
-    .hero-side p{margin:0;color:rgba(234,240,255,.72);font-size:13px;line-height:1.6}
-
-    .pillrow{display:flex;gap:8px;flex-wrap:wrap}
-    .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
-      color:rgba(234,240,255,.84);
-      font-size:12px;font-weight:780;
+    .hero-art::after{
+      content:"";
+      position:absolute;
+      width:520px;height:520px;max-width:100%;
+      border-radius:999px;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(34,211,238,.22), transparent 55%),
+        radial-gradient(circle at 35% 65%, rgba(99,102,241,.22), transparent 55%),
+        radial-gradient(circle at 70% 75%, rgba(167,139,250,.18), transparent 60%);
+      filter: blur(18px);
+      opacity:.85;
+      z-index:0;
     }
-    .mini-note{
-      padding:12px 12px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.03);
-      color:rgba(234,240,255,.72);
-      font-size:12px;
-      line-height:1.55;
+    .hero-art img{
+      position:relative; z-index:1;
+      width:min(520px, 100%);
+      height:auto;
+      display:block;
+      filter: drop-shadow(0 28px 60px rgba(2,6,23,.18));
+      transform: translateY(6px);
     }
 
     /* Sections */
@@ -299,34 +260,37 @@
     .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .card{
       grid-column:span 4;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(15,23,42,.10);
       border-radius:var(--radius);
       padding:16px;
-      transition:.2s ease;
+      transition:.18s ease;
+      box-shadow:0 14px 35px rgba(2,6,23,.06);
     }
-    .card:hover{transform:translateY(-2px);background:rgba(255,255,255,.055)}
+    .card:hover{transform:translateY(-2px);background:#fff}
     .card h3{margin:10px 0 6px;font-size:14px}
     .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+
     .ic{
       width:38px;height:38px;border-radius:14px;
       display:grid;place-items:center;
-      background:rgba(124,92,255,.14);
-      border:1px solid rgba(124,92,255,.22);
+      background:linear-gradient(135deg, rgba(99,102,241,.14), rgba(34,211,238,.12));
+      border:1px solid rgba(15,23,42,.10);
     }
 
     .textpanel{
       grid-column:span 12;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(15,23,42,.10);
       border-radius:var(--radius);
       padding:16px;
       color:var(--muted);
       font-size:13px;
       line-height:1.65;
+      box-shadow:0 14px 35px rgba(2,6,23,.06);
     }
-    .textpanel b{color:var(--text)}
-    .textpanel a{text-decoration:underline}
+    .textpanel b{color:rgba(15,23,42,.92)}
+    .textpanel a{color:rgba(15,23,42,.92);text-decoration:underline}
 
     /* Footer */
     footer{
@@ -335,44 +299,36 @@
     }
     .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
     .foot a{color:var(--muted)}
-    .foot a:hover{color:var(--text)}
+    .foot a:hover{color:rgba(15,23,42,.92)}
 
     /* Cookie banner */
     .cookie{
       position:fixed;left:14px;right:14px;bottom:14px;z-index:200;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(7,10,18,.86);
-      backdrop-filter:blur(10px);
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(12px);
       border-radius:22px;
-      box-shadow:var(--shadow);
+      box-shadow:var(--shadow2);
       padding:14px;
       display:none;
     }
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
-    .cookie .btns{display:flex;gap:10px;flex-wrap:wrap}
 
     /* Responsive */
     @media (max-width: 980px){
       .brand{display:none}
       .nav .wrap{justify-content:center}
       .hero-grid{grid-template-columns:1fr}
-      .hero-side{display:none}
-      .hero-bg{background-position: 90% 46%;}
+      .hero-art{min-height:260px}
       .card{grid-column:span 6}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
-      .hero{padding:16px 0 8px}
-      .hero-grid{padding:14px}
-      .hero-copy{padding:18px}
-      h1{font-size:clamp(32px,9vw,46px)}
-      /* Mobile: show the person/laptop, avoid embedded text */
-      .hero-bg{background-position: 94% 56%; opacity:.86;}
-      .hero-overlay{
-        background:
-          linear-gradient(180deg, rgba(7,10,18,.35) 0%, rgba(7,10,18,.82) 62%, rgba(7,10,18,.95) 100%);
-      }
+      .hero{padding:18px 0 8px}
+      .hero-grid{padding:16px}
+      h1{font-size:clamp(30px,9vw,44px)}
+      .hero-art img{width:min(420px, 100%)}
       .card{grid-column:span 12}
     }
   </style>
@@ -383,13 +339,13 @@
 
   <header class="nav">
     <div class="wrap">
-      <div class="brand" aria-label="Brand">
+      <a class="brand" href="#top" aria-label="Brand">
         <div class="brand-badge" aria-hidden="true"></div>
         <div>
-          <b>Antonio Pereira</b>
+          <b>A. Pereira</b>
           <small>Freelance Digital Services</small>
         </div>
-      </div>
+      </a>
 
       <nav class="nav-actions" aria-label="Primary">
         <a class="btn" href="#services">Services</a>
@@ -402,14 +358,10 @@
   </header>
 
   <main id="main" class="wrap">
-
     <section class="hero" id="top">
       <div class="hero-shell">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-overlay" aria-hidden="true"></div>
-
         <div class="hero-grid">
-          <div class="hero-copy">
+          <div>
             <span class="kicker">
               <span class="kdot"></span>Freelance Digital Services
               <span class="ksep">•</span> Jersey &amp; UK
@@ -420,7 +372,7 @@
             <p class="lead">
               I design and build <strong>fast, mobile-first websites</strong> and set up
               <strong>professional domain email</strong> so your business looks credible from day one.
-              <span style="display:block;margin-top:10px;color:rgba(234,240,255,.64);font-size:13px;">
+              <span style="display:block;margin-top:10px;color:rgba(15,23,42,.58);font-size:13px;">
                 Results can vary. I focus on best-practice setup and a polished user experience.
               </span>
             </p>
@@ -432,34 +384,19 @@
 
             <div class="sublegal" aria-label="Business details">
               <b>Business details</b><br>
-              Operated by <b>Antonio Pereira</b> (<b>freelance</b>).<br>
+              Operated by <b>A. Pereira</b> (<b>freelance</b>).<br>
               <b>Base:</b> Jersey, Channel Islands.<br>
               <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
               <b>Enquiries:</b> <a id="emailLegalTop" href="#">hello@antoniopereiraweb.co.uk</a>
-              <div style="margin-top:10px;color:rgba(234,240,255,.58);font-size:11px;">
+              <div style="margin-top:10px;color:rgba(15,23,42,.52);font-size:11px;">
                 This website provides general information and does not constitute legal or tax advice.
               </div>
             </div>
           </div>
 
-          <aside class="hero-side" aria-label="Highlights">
-            <div>
-              <h3>Professional essentials</h3>
-              <p>Clean scope, clear delivery, and a simple enquiry flow. Email-only contact — credible and focused.</p>
-            </div>
-
-            <div class="pillrow">
-              <span class="pill">⚡ Fast setup</span>
-              <span class="pill">📱 Mobile-first</span>
-              <span class="pill">✉️ Domain email</span>
-              <span class="pill">🔎 SEO basics</span>
-              <span class="pill">🧾 Clear terms</span>
-            </div>
-
-            <div class="mini-note">
-              <b style="color:var(--text)">Tip:</b> Email what you need + your deadline. I’ll reply with options and next steps.
-            </div>
-          </aside>
+          <div class="hero-art" aria-label="Hero image">
+            <img src="./hero-transparent.png" alt="A. Pereira — Digital services" loading="eager" decoding="async">
+          </div>
         </div>
       </div>
     </section>
@@ -474,8 +411,8 @@
 
       <div class="cards">
         <div class="textpanel">
-          <b>Email:</b> <a id="emailInline" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a><br>
-          <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — Antonio Pereira</span>
+          <b>Email:</b> <a id="emailInline" href="#">hello@antoniopereiraweb.co.uk</a><br>
+          <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — A. Pereira</span>
           <span style="display:block;margin-top:10px;"><b>Include:</b> business type • website (if any) • what you need • deadline • Jersey/UK</span>
           <div style="margin-top:14px;">
             <a class="btn primary" id="emailBtn" href="#">Email me</a>
@@ -534,9 +471,9 @@
           <div class="ic">👤</div>
           <h3>Who is responsible</h3>
           <p>
-            This website is operated by <b>Antonio Pereira</b> (<b>freelance</b>).<br><br>
+            This website is operated by <b>A. Pereira</b> (<b>freelance</b>).<br><br>
             <b>Base:</b> Jersey, Channel Islands.<br>
-            <b>Contact:</b> <a id="emailPrivacy" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a>
+            <b>Contact:</b> <a id="emailPrivacy" href="#">hello@antoniopereiraweb.co.uk</a>
           </p>
         </div>
 
@@ -585,8 +522,8 @@
       <div class="cards">
         <div class="textpanel">
           <b>1) Who I am</b><br>
-          This website and services are operated by <b>Antonio Pereira</b> (<b>freelance</b>), based in <b>Jersey, Channel Islands</b>.
-          Contact: <a id="emailTerms" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a>.
+          This website and services are operated by <b>A. Pereira</b> (<b>freelance</b>), based in <b>Jersey, Channel Islands</b>.
+          Contact: <a id="emailTerms" href="#">hello@antoniopereiraweb.co.uk</a>.
           <br><br>
 
           <b>2) What I provide</b><br>
@@ -630,10 +567,10 @@
     <footer>
       <div class="foot">
         <div>
-          <b style="color:var(--text)">Antonio Pereira</b><br/>
-          <span>Operated by <b>Antonio Pereira</b> (<b>freelance</b>).</span><br/>
-          <span>Jersey, Channel Islands • <a id="emailFooter" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a></span><br/>
-          <span style="display:block;margin-top:6px;color:rgba(234,240,255,.55);font-size:11px;">
+          <b style="color:rgba(15,23,42,.92)">A. Pereira</b><br/>
+          <span>Operated by <b>A. Pereira</b> (<b>freelance</b>).</span><br/>
+          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">hello@antoniopereiraweb.co.uk</a></span><br/>
+          <span style="display:block;margin-top:6px;color:rgba(15,23,42,.55);font-size:11px;">
             No guarantees of specific business outcomes.
           </span>
         </div>
@@ -648,7 +585,7 @@
         </div>
       </div>
 
-      <div class="tiny" style="margin-top:10px;">© <span id="y"></span> Antonio Pereira. All rights reserved.</div>
+      <div class="tiny" style="margin-top:10px;">© <span id="y"></span> A. Pereira. All rights reserved.</div>
     </footer>
   </main>
 
@@ -656,9 +593,9 @@
     <div class="row">
       <p>
         We use essential storage to remember your preferences. Optional measurement scripts load only if you accept.
-        <a href="#privacy" style="text-decoration:underline;">Privacy & Cookies</a>
+        <a href="#privacy">Privacy & Cookies</a>
       </p>
-      <div class="btns">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
         <button class="btn" id="cookieReject" type="button">Reject</button>
         <button class="btn primary" id="cookieAccept" type="button">Accept</button>
       </div>
@@ -670,13 +607,27 @@
     document.getElementById("y").textContent = new Date().getFullYear();
 
     const enc = encodeURIComponent;
-    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("Website enquiry — Antonio Pereira")}&body=${enc("Hi!\\n\\nI’m interested in your services.\\n\\nBusiness type:\\nWebsite (if any):\\nWhat I need:\\nDomain (if email setup):\\nDeadline:\\nLocation (Jersey/UK):\\n\\nThanks!")}`;
+    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("Website enquiry — A. Pereira")}&body=${enc(
+`Hi!
+
+I’m interested in your services.
+
+Business type:
+Website (if any):
+What I need:
+Domain (if email setup):
+Deadline:
+Location (Jersey/UK):
+
+Thanks!`
+    )}`;
 
     ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailBtn"].forEach(id=>{
       const el = document.getElementById(id);
-      if(el) {
+      if(el){
         el.href = mailto;
         if(el.textContent && el.textContent.includes("@")) el.textContent = BUSINESS_EMAIL;
+        el.style.textDecoration = "underline";
       }
     });
 
