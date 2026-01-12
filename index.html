@@ -10,7 +10,6 @@
   <meta name="description" content="Premium mobile-first websites, WhatsApp contact setup, and domain business email (e.g. you@yourbusiness.com). Operated by Antonio Pereira (sole trader), Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Open Graph -->
@@ -19,7 +18,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/antonio-pereira-logo.jpg" />
+  <meta property="og:image" content="https://antoniopereiraweb.co.uk/hero-ad.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
@@ -74,7 +73,6 @@
       --radius:22px;
       --max:1120px;
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -128,18 +126,12 @@
       box-shadow:0 18px 45px rgba(0,0,0,.45);
       flex:0 0 72px;
     }
-    .logoWrap img{
-      width:100%;height:100%;
-      object-fit:cover;display:block;
-      transform:scale(1.06);
-    }
-
+    .logoWrap img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06)}
     .brand .name{display:flex;flex-direction:column;line-height:1.05}
     .brand .name b{font-size:15px;letter-spacing:.2px}
     .brand .name span{font-size:12px;color:var(--muted);margin-top:6px}
 
     .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-
     .icon-btn{
       width:46px;height:46px;border-radius:999px;
       display:grid;place-items:center;
@@ -180,19 +172,16 @@
       border-radius:28px;pointer-events:none;
     }
     .hero > *{position:relative;z-index:1}
-
     .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:16px;align-items:stretch}
-
     .panel{
       background:linear-gradient(180deg,var(--panel),var(--panel2));
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
-
     .hero-left{padding:26px}
 
-    /* ✅ TOP VISUAL (logo + advertising image) */
+    /* TOP VISUAL (logo + hero image) */
     .hero-visual{
       display:grid;
       grid-template-columns: 82px 1fr;
@@ -209,7 +198,8 @@
       display:grid;place-items:center;
     }
     .hero-visual .mini-logo img{
-      width:100%;height:100%;object-fit:cover;display:block;
+      width:100%;height:100%;
+      object-fit:cover;display:block;
       transform:scale(1.05);
     }
     .hero-visual .ad{
@@ -248,6 +238,7 @@
       color:rgba(234,240,255,.86);
       font-size:12px;
       display:inline-flex; gap:8px; align-items:center;
+      z-index:2;
     }
     .spark{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--brand1),var(--brand2))}
 
@@ -261,7 +252,6 @@
     .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2)}
     .dot.ok{background:var(--ok)}
     .dot.warn{background:var(--warn)}
-
     h1{
       margin:14px 0 10px;
       font-size:clamp(32px,4.8vw,54px);
@@ -284,7 +274,6 @@
     .sublegal a{text-decoration:underline}
 
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-
     .trust{
       display:flex;flex-wrap:wrap;gap:10px;
       margin-top:14px;
@@ -329,7 +318,6 @@
     }
     .formbox h3{margin:10px 0 6px;font-size:15px}
     .formbox p{margin:0 0 12px;color:var(--muted);font-size:13px}
-
     .form{display:grid;gap:10px;margin-top:8px}
     label{font-size:12px;color:var(--muted)}
     .field{display:grid;gap:6px}
@@ -352,7 +340,6 @@
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
     .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
     .section-title p{margin:0;color:var(--muted);font-size:13px;max-width:80ch}
-
     .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .card{
       grid-column:span 4;
@@ -371,7 +358,6 @@
       background:rgba(124,92,255,.14);
       border:1px solid rgba(124,92,255,.22);
     }
-
     .textpanel{
       grid-column:span 12;
       background:rgba(255,255,255,.03);
@@ -430,7 +416,6 @@
       .grid{grid-template-columns:1fr}
       .card{grid-column:span 6}
     }
-
     @media (max-width: 560px){
       .wrap{padding:18px}
       .hero{padding:42px 0 6px}
@@ -442,17 +427,9 @@
       .brand .name{display:none}
       .logoWrap{width:60px;height:60px;border-radius:18px;flex-basis:60px}
 
-      /* ✅ Mobile hero visual becomes stacked and big */
-      .hero-visual{
-        grid-template-columns: 1fr;
-        gap:12px;
-      }
-      .hero-visual .mini-logo{
-        width:74px;height:74px;border-radius:20px;
-      }
-      .hero-visual .ad img{
-        aspect-ratio: 16 / 10;
-      }
+      .hero-visual{grid-template-columns:1fr;gap:12px}
+      .hero-visual .mini-logo{width:74px;height:74px;border-radius:20px}
+      .hero-visual .ad img{aspect-ratio:16 / 10}
     }
   </style>
 </head>
@@ -504,7 +481,7 @@
         <div class="panel">
           <div class="hero-left">
 
-            <!-- ✅ NEW: logo + advertising image at top -->
+            <!-- TOP: logo + hero image -->
             <div class="hero-visual" aria-label="Brand and services preview">
               <div class="mini-logo">
                 <img src="./antonio-pereira-logo.jpg" alt="Antonio Pereira logo">
@@ -755,11 +732,6 @@
           <b style="color:var(--text)">Antonio Pereira</b><br/>
           <span>Operated by <b>Antonio Pereira</b> (<b>sole trader</b>).</span><br/>
           <span>Jersey, Channel Islands • <a id="emailFooter" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a></span><br/>
-
-          <span style="display:block;margin-top:6px;color:rgba(234,240,255,.62);font-size:11px;">
-            Enquiries: <a id="emailEnquiries" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a>
-          </span>
-
           <span style="display:block;margin-top:6px;color:rgba(234,240,255,.55);font-size:11px;">
             No guarantees of specific business outcomes.
           </span>
@@ -803,27 +775,20 @@
   </div>
 
   <script>
-    // ✅ EDIT ONLY THESE IF YOU EVER NEED TO
-    const WHATSAPP_NUMBER_E164 = "447700704591"; // no + sign
+    const WHATSAPP_NUMBER_E164 = "447700704591";
     const BUSINESS_EMAIL = "hello@antoniopereiraweb.co.uk";
 
-    // Social links
     const INSTAGRAM_URL = "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==";
     const FACEBOOK_URL  = "https://www.facebook.com/share/1GjxysAQ36/";
-
-    // Google Ads / Google tag ID (loaded only after consent)
     const GOOGLE_TAG_ID = "AW-17861952603";
 
-    // Set social links
     const ig = document.getElementById("igLink");
     const fb = document.getElementById("fbLink");
     if(ig) ig.href = INSTAGRAM_URL;
     if(fb) fb.href = FACEBOOK_URL;
 
-    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // WhatsApp link builder
     const enc = encodeURIComponent;
     const waLink = (msg) => `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${enc(msg)}`;
 
@@ -844,13 +809,11 @@ Location (Jersey/UK):
 
     const waUrl = waLink(waMsg);
 
-    // Apply WhatsApp links
     ["waFloat","waInline","ctaWAHero","ctaWATop"].forEach(id=>{
       const el = document.getElementById(id);
       if(el) el.href = waUrl;
     });
 
-    // Email links everywhere
     const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("Website enquiry — Antonio Pereira")}&body=${enc("Hi!\\n\\nI’m interested in your services.\\n\\nBusiness:\\nWhat I need:\\nWebsite (if any):\\nDomain (if email setup):\\nGoal:\\n\\nThanks!")}`;
     ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailEnquiries"].forEach(id=>{
       const el = document.getElementById(id);
@@ -860,7 +823,6 @@ Location (Jersey/UK):
       }
     });
 
-    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
@@ -872,7 +834,6 @@ Location (Jersey/UK):
       });
     });
 
-    // -------- Cookie consent + conditional Google tag loading --------
     const CONSENT_KEY = "ap_cookie_consent_v1";
     const banner = document.getElementById("cookieBanner");
     const acceptBtn = document.getElementById("cookieAccept");
@@ -881,7 +842,6 @@ Location (Jersey/UK):
 
     function getConsent(){ try{ return localStorage.getItem(CONSENT_KEY); }catch(e){ return null; } }
     function setConsent(v){ try{ localStorage.setItem(CONSENT_KEY, v); }catch(e){} }
-
     function showBanner(){ if(banner) banner.style.display = "block"; }
     function hideBanner(){ if(banner) banner.style.display = "none"; }
 
@@ -901,11 +861,8 @@ Location (Jersey/UK):
     }
 
     const consent = getConsent();
-    if(!consent){
-      showBanner();
-    } else if(consent === "accept"){
-      loadGoogleTag();
-    }
+    if(!consent){ showBanner(); }
+    else if(consent === "accept"){ loadGoogleTag(); }
 
     if(acceptBtn){
       acceptBtn.addEventListener("click", ()=>{
@@ -929,4 +886,4 @@ Location (Jersey/UK):
     }
   </script>
 </body>
-  </html>
+</html>
