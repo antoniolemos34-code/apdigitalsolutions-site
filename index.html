@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/logo-hero.jpg" />
+  <meta property="og:image" content="https://antoniopereiraweb.co.uk/hero-transparent.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
@@ -34,7 +34,7 @@
     "@type":"ProfessionalService",
     "name":"A. Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/logo-hero.jpg",
+    "image":"https://antoniopereiraweb.co.uk/hero-transparent.jpg",
     "description":"Operated by A. Pereira (freelance). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
@@ -46,7 +46,7 @@
       "Business Email Setup",
       "Automation Guidance"
     ],
-    "email":"hello@antoniopereiraweb.co.uk"
+    "email":"info@antoniopereira.org"
   }
   </script>
 
@@ -220,7 +220,7 @@
     .sublegal b{color:rgba(15,23,42,.92)}
     .sublegal a{color:rgba(15,23,42,.92);text-decoration:underline}
 
-    /* HERO ART (stays beside text on mobile) */
+    /* HERO ART */
     .hero-art{
       position:relative;
       display:grid;
@@ -310,7 +310,6 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
 
-    /* RESPONSIVE: keep hero side-by-side on mobile */
     @media (max-width: 980px){
       .brand{display:none}
       .nav .wrap{justify-content:center}
@@ -319,13 +318,11 @@
       .hero-art{min-height:260px}
     }
     @media (max-width: 720px){
-      /* Two columns even on phone: text | image */
       .hero-grid{grid-template-columns: 1.1fr .9fr; gap:12px; padding:16px;}
       .hero-art img{width:min(360px, 100%)}
     }
     @media (max-width: 520px){
-      /* If too narrow, stack but keep image immediately after text */
-      .hero-grid{grid-template-columns:1fr; }
+      .hero-grid{grid-template-columns:1fr;}
       .hero-art{min-height:220px; margin-top:6px;}
       .hero-art img{width:min(420px, 100%)}
       .card{grid-column:span 12}
@@ -386,7 +383,13 @@
               Operated by <b>A. Pereira</b> (<b>freelance</b>).<br>
               <b>Base:</b> Jersey, Channel Islands.<br>
               <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
-              <b>Enquiries:</b> <a id="emailLegalTop" href="#">hello@antoniopereiraweb.co.uk</a>
+
+              <b>Enquiries:</b>
+              <a id="emailLegalTop" href="#">info@antoniopereira.org</a>
+              <span style="display:block;margin-top:6px;color:rgba(15,23,42,.58);font-size:11px;">
+                Support: <a id="supportTop" href="#">support@antoniopereira.org</a>
+              </span>
+
               <div style="margin-top:10px;color:rgba(15,23,42,.52);font-size:11px;">
                 This website provides general information and does not constitute legal or tax advice.
               </div>
@@ -394,7 +397,7 @@
           </div>
 
           <div class="hero-art" aria-label="Hero image">
-            <img src="./hero-transparent.png" alt="A. Pereira — Digital services" loading="eager" decoding="async">
+            <img src="./hero-transparent.jpg" alt="A. Pereira — Digital services" loading="eager" decoding="async">
           </div>
         </div>
       </div>
@@ -410,11 +413,21 @@
 
       <div class="cards">
         <div class="textpanel">
-          <b>Email:</b> <a id="emailInline" href="#">hello@antoniopereiraweb.co.uk</a><br>
+          <b>Email:</b> <a id="emailInline" href="#">info@antoniopereira.org</a><br>
+          <span style="display:block;margin-top:8px;color:rgba(15,23,42,.65);font-size:12px;">
+            Support: <a id="supportInline" href="#">support@antoniopereira.org</a>
+          </span>
+
           <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — A. Pereira</span>
           <span style="display:block;margin-top:10px;"><b>Include:</b> business type • website (if any) • what you need • deadline • Jersey/UK</span>
-          <div style="margin-top:14px;">
+
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn primary" id="emailBtn" href="#">Email me</a>
+            <a class="btn" id="supportBtn" href="#">Support</a>
+          </div>
+
+          <div style="margin-top:12px;color:rgba(15,23,42,.52);font-size:11px;">
+            (Future) Domain email on <b>@antoniopereiraweb.co.uk</b> will be available once activated.
           </div>
         </div>
       </div>
@@ -472,7 +485,7 @@
           <p>
             This website is operated by <b>A. Pereira</b> (<b>freelance</b>).<br><br>
             <b>Base:</b> Jersey, Channel Islands.<br>
-            <b>Contact:</b> <a id="emailPrivacy" href="#">hello@antoniopereiraweb.co.uk</a>
+            <b>Contact:</b> <a id="emailPrivacy" href="#">info@antoniopereira.org</a>
           </p>
         </div>
 
@@ -521,8 +534,8 @@
       <div class="cards">
         <div class="textpanel">
           <b>1) Who I am</b><br>
-          This website and services are operated by <b>A. Pereira</b> (<b>freelance</b>), based in <b>Jersey, Channel Islands</b>.
-          Contact: <a id="emailTerms" href="#">hello@antoniopereiraweb.co.uk</a>.
+          This website and services are operated by <b>A. Pereira</b> (<b>freelance</b>), based in <b>Jersey, Channel Islands</b>.<br>
+          Contact: <a id="emailTerms" href="#">info@antoniopereira.org</a>.
           <br><br>
 
           <b>2) What I provide</b><br>
@@ -568,7 +581,7 @@
         <div>
           <b style="color:rgba(15,23,42,.92)">A. Pereira</b><br/>
           <span>Operated by <b>A. Pereira</b> (<b>freelance</b>).</span><br/>
-          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">hello@antoniopereiraweb.co.uk</a></span><br/>
+          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereira.org</a></span><br/>
           <span style="display:block;margin-top:6px;color:rgba(15,23,42,.55);font-size:11px;">
             No guarantees of specific business outcomes.
           </span>
@@ -602,11 +615,21 @@
   </div>
 
   <script>
-    const BUSINESS_EMAIL = "hello@antoniopereiraweb.co.uk";
+    // Active emails (use these now)
+    const ENQUIRIES_EMAIL = "info@antoniopereira.org";
+    const SUPPORT_EMAIL   = "support@antoniopereira.org";
+
+    // Future (when you activate Zoho for .co.uk)
+    // When ready: change ENQUIRIES_EMAIL / SUPPORT_EMAIL to:
+    // const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
+    // const SUPPORT_EMAIL   = "support@antoniopereiraweb.co.uk";
+
     document.getElementById("y").textContent = new Date().getFullYear();
 
     const enc = encodeURIComponent;
-    const mailto = `mailto:${BUSINESS_EMAIL}?subject=${enc("Website enquiry — A. Pereira")}&body=${enc(
+
+    function mailtoFor(to, subject){
+      return `mailto:${to}?subject=${enc(subject)}&body=${enc(
 `Hi!
 
 I’m interested in your services.
@@ -619,17 +642,33 @@ Deadline:
 Location (Jersey/UK):
 
 Thanks!`
-    )}`;
+      )}`;
+    }
 
+    const enquiryMailto = mailtoFor(ENQUIRIES_EMAIL, "Website enquiry — A. Pereira");
+    const supportMailto = mailtoFor(SUPPORT_EMAIL, "Support — A. Pereira");
+
+    // Enquiries placements
     ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailBtn"].forEach(id=>{
       const el = document.getElementById(id);
       if(el){
-        el.href = mailto;
-        if(el.textContent && el.textContent.includes("@")) el.textContent = BUSINESS_EMAIL;
+        el.href = enquiryMailto;
+        el.textContent = ENQUIRIES_EMAIL;
         el.style.textDecoration = "underline";
       }
     });
 
+    // Support placements
+    ["supportTop","supportInline","supportBtn"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(el){
+        el.href = supportMailto;
+        el.textContent = SUPPORT_EMAIL;
+        el.style.textDecoration = "underline";
+      }
+    });
+
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
@@ -641,6 +680,7 @@ Thanks!`
       });
     });
 
+    // Cookie consent (essential storage only)
     const CONSENT_KEY = "ap_cookie_consent_v1";
     const banner = document.getElementById("cookieBanner");
     const acceptBtn = document.getElementById("cookieAccept");
@@ -676,4 +716,4 @@ Thanks!`
     }
   </script>
 </body>
-</html>
+  </html>
