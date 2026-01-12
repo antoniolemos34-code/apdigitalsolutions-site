@@ -35,7 +35,7 @@
     "@type":"ProfessionalService",
     "name":"Antonio Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/antonio-pereira-logo.jpg",
+    "image":"https://antoniopereiraweb.co.uk/hero-ad.jpg",
     "description":"Operated by Antonio Pereira (sole trader). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
@@ -73,6 +73,7 @@
       --radius:22px;
       --max:1120px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -80,8 +81,8 @@
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 450px at 18% 10%, rgba(124,92,255,.22), transparent 55%),
-        radial-gradient(900px 450px at 82% 18%, rgba(34,211,238,.18), transparent 55%),
+        radial-gradient(900px 450px at 18% 10%, rgba(124,92,255,.20), transparent 55%),
+        radial-gradient(900px 450px at 82% 18%, rgba(34,211,238,.16), transparent 55%),
         radial-gradient(900px 450px at 50% 95%, rgba(52,211,153,.10), transparent 55%),
         var(--bg);
       line-height:1.45;
@@ -98,60 +99,44 @@
       backdrop-filter:blur(10px);
     }
 
-    /* NAV */
+    /* NAV (cleaner, more premium) */
     .nav{
       position:sticky;top:0;z-index:100;
-      backdrop-filter:blur(12px);
-      background:rgba(7,10,18,.66);
+      backdrop-filter:blur(14px);
+      background:rgba(7,10,18,.60);
       border-bottom:1px solid var(--line);
     }
-    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
-
-    .brand{
-      display:flex;align-items:center;gap:14px;
-      padding:10px 14px;border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      box-shadow:0 22px 55px rgba(124,92,255,.22), inset 0 0 0 1px rgba(255,255,255,.06);
-      transition:.2s ease;
+    .nav .wrap{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end; /* ✅ no left box */
+      gap:12px;
     }
-    .brand:hover{transform:translateY(-1px);background:rgba(255,255,255,.06)}
 
-    .logoWrap{
-      width:72px;height:72px;border-radius:22px;
-      display:grid;place-items:center;
-      overflow:hidden;
-      background:linear-gradient(135deg, rgba(124,92,255,.22), rgba(34,211,238,.14));
-      border:1px solid rgba(255,255,255,.18);
-      box-shadow:0 18px 45px rgba(0,0,0,.45);
-      flex:0 0 72px;
+    .nav-actions{
+      display:flex;gap:10px;align-items:center;flex-wrap:wrap;
     }
-    .logoWrap img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06)}
-    .brand .name{display:flex;flex-direction:column;line-height:1.05}
-    .brand .name b{font-size:15px;letter-spacing:.2px}
-    .brand .name span{font-size:12px;color:var(--muted);margin-top:6px}
 
-    .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     .icon-btn{
       width:46px;height:46px;border-radius:999px;
       display:grid;place-items:center;
-      background:rgba(255,255,255,.07);
-      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
       transition:.2s ease;
     }
-    .icon-btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.13)}
+    .icon-btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.11)}
     .icon-btn svg{width:20px;height:20px;opacity:.95}
 
     .btn{
       display:inline-flex;align-items:center;justify-content:center;gap:10px;
       padding:12px 18px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.06);
       color:var(--text);font-weight:800;font-size:14px;
       cursor:pointer;transition:.2s ease;white-space:nowrap;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      box-shadow:0 10px 30px rgba(0,0,0,.22);
     }
-    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.26)}
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.22)}
     .btn.primary{
       background:linear-gradient(135deg,var(--brand1),var(--brand2));
       border-color:transparent;color:#061016;
@@ -168,10 +153,11 @@
     .hero{position:relative;padding:54px 0 10px}
     .hero::before{
       content:"";position:absolute;inset:-22px -18px -22px -18px;
-      background:radial-gradient(900px 520px at 25% 15%, rgba(0,0,0,.48), rgba(0,0,0,.72));
+      background:radial-gradient(900px 520px at 25% 15%, rgba(0,0,0,.46), rgba(0,0,0,.72));
       border-radius:28px;pointer-events:none;
     }
     .hero > *{position:relative;z-index:1}
+
     .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:16px;align-items:stretch}
     .panel{
       background:linear-gradient(180deg,var(--panel),var(--panel2));
@@ -181,29 +167,10 @@
     }
     .hero-left{padding:26px}
 
-    /* TOP VISUAL (logo + hero image) */
-    .hero-visual{
-      display:grid;
-      grid-template-columns: 82px 1fr;
-      gap:14px;
-      align-items:stretch;
-      margin-bottom:16px;
-    }
-    .hero-visual .mini-logo{
-      width:82px;height:82px;border-radius:22px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.18);
-      background:linear-gradient(135deg, rgba(124,92,255,.18), rgba(34,211,238,.10));
-      box-shadow:var(--shadow2);
-      display:grid;place-items:center;
-    }
-    .hero-visual .mini-logo img{
-      width:100%;height:100%;
-      object-fit:cover;display:block;
-      transform:scale(1.05);
-    }
+    /* ✅ HERO IMAGE ONLY (no mini logo) */
+    .hero-visual{display:block;margin-bottom:18px}
     .hero-visual .ad{
-      border-radius:22px;
+      border-radius:24px;
       overflow:hidden;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.03);
@@ -214,33 +181,19 @@
       content:"";
       position:absolute;inset:0;
       background:
-        radial-gradient(600px 220px at 20% 10%, rgba(124,92,255,.14), transparent 50%),
-        radial-gradient(600px 220px at 80% 30%, rgba(34,211,238,.10), transparent 55%);
+        radial-gradient(700px 260px at 18% 12%, rgba(124,92,255,.12), transparent 55%),
+        radial-gradient(700px 260px at 82% 30%, rgba(34,211,238,.10), transparent 60%);
       pointer-events:none;
       mix-blend-mode:screen;
-      opacity:.55;
+      opacity:.50;
     }
     .hero-visual .ad img{
-      width:100%;height:100%;
+      width:100%;
       display:block;
       object-fit:cover;
-      aspect-ratio: 16 / 9;
+      aspect-ratio:16/9;
       transform:scale(1.01);
     }
-    .hero-visual .ad-badge{
-      position:absolute;
-      left:12px; top:12px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(7,10,18,.55);
-      backdrop-filter:blur(10px);
-      color:rgba(234,240,255,.86);
-      font-size:12px;
-      display:inline-flex; gap:8px; align-items:center;
-      z-index:2;
-    }
-    .spark{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--brand1),var(--brand2))}
 
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
@@ -252,6 +205,7 @@
     .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2)}
     .dot.ok{background:var(--ok)}
     .dot.warn{background:var(--warn)}
+
     h1{
       margin:14px 0 10px;
       font-size:clamp(32px,4.8vw,54px);
@@ -274,11 +228,10 @@
     .sublegal a{text-decoration:underline}
 
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
     .trust{
       display:flex;flex-wrap:wrap;gap:10px;
-      margin-top:14px;
-      color:var(--muted2);
-      font-size:12px;
+      margin-top:14px;color:var(--muted2);font-size:12px;
     }
     .trust .t{
       display:inline-flex;align-items:center;gap:8px;
@@ -340,6 +293,7 @@
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
     .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
     .section-title p{margin:0;color:var(--muted);font-size:13px;max-width:80ch}
+
     .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .card{
       grid-column:span 4;
@@ -358,6 +312,7 @@
       background:rgba(124,92,255,.14);
       border:1px solid rgba(124,92,255,.22);
     }
+
     .textpanel{
       grid-column:span 12;
       background:rgba(255,255,255,.03);
@@ -424,12 +379,15 @@
       .btn{padding:12px 14px}
       .wa{right:14px;left:14px;justify-content:center}
       .card{grid-column:span 12}
-      .brand .name{display:none}
-      .logoWrap{width:60px;height:60px;border-radius:18px;flex-basis:60px}
 
-      .hero-visual{grid-template-columns:1fr;gap:12px}
-      .hero-visual .mini-logo{width:74px;height:74px;border-radius:20px}
-      .hero-visual .ad img{aspect-ratio:16 / 10}
+      /* keep nav clean on mobile */
+      .nav .wrap{justify-content:center}
+      .nav-actions{justify-content:center}
+
+      .hero-visual .ad img{
+        aspect-ratio:16/10;
+        object-position:center;
+      }
     }
   </style>
 </head>
@@ -439,18 +397,6 @@
 
   <header class="nav">
     <div class="wrap">
-      <a href="#top" aria-label="Antonio Pereira">
-        <div class="brand">
-          <div class="logoWrap">
-            <img src="./antonio-pereira-logo.jpg" alt="Antonio Pereira logo">
-          </div>
-          <div class="name">
-            <b>Antonio Pereira</b>
-            <span>Sole trader • Jersey, Channel Islands</span>
-          </div>
-        </div>
-      </a>
-
       <div class="nav-actions">
         <a class="icon-btn" id="igLink" href="#" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -475,20 +421,15 @@
   </header>
 
   <main id="main" class="wrap">
-
     <section class="hero" id="top">
       <div class="grid">
+
         <div class="panel">
           <div class="hero-left">
 
-            <!-- TOP: logo + hero image -->
-            <div class="hero-visual" aria-label="Brand and services preview">
-              <div class="mini-logo">
-                <img src="./antonio-pereira-logo.jpg" alt="Antonio Pereira logo">
-              </div>
-
+            <!-- ✅ HERO IMAGE ONLY -->
+            <div class="hero-visual" aria-label="Services preview">
               <div class="ad">
-                <div class="ad-badge"><span class="spark"></span> AI • Websites • Automation</div>
                 <img src="./hero-ad.jpg" alt="Antonio Pereira services preview">
               </div>
             </div>
@@ -588,6 +529,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -886,4 +828,4 @@ Location (Jersey/UK):
     }
   </script>
 </body>
-</html>
+  </html>
