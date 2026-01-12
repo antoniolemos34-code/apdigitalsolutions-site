@@ -6,10 +6,9 @@
   <meta name="theme-color" content="#0B0F19" />
   <meta name="color-scheme" content="dark" />
 
-  <title>Antonio Pereira — Freelance Digital Services (Jersey & UK)</title>
+  <title>Antonio Pereira — Freelance Web Design & Business Email (Jersey & UK)</title>
   <meta name="description" content="Premium mobile-first websites and professional domain email setup (e.g. you@yourbusiness.com). Operated by Antonio Pereira (freelance), Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Open Graph -->
@@ -54,12 +53,12 @@
   <style>
     :root{
       --bg:#070A12;
-      --panel:rgba(255,255,255,.06);
-      --panel2:rgba(255,255,255,.03);
       --text:#EAF0FF;
       --muted:rgba(234,240,255,.72);
       --muted2:rgba(234,240,255,.58);
       --line:rgba(255,255,255,.12);
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.03);
       --brand1:#7C5CFF;
       --brand2:#22D3EE;
       --shadow:0 18px 60px rgba(0,0,0,.45);
@@ -67,6 +66,7 @@
       --radius:22px;
       --max:1120px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -74,15 +74,18 @@
       font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 450px at 18% 10%, rgba(124,92,255,.16), transparent 55%),
-        radial-gradient(900px 450px at 82% 18%, rgba(34,211,238,.12), transparent 55%),
-        radial-gradient(900px 450px at 50% 95%, rgba(255,255,255,.04), transparent 55%),
+        radial-gradient(900px 450px at 15% 10%, rgba(124,92,255,.18), transparent 55%),
+        radial-gradient(900px 450px at 85% 18%, rgba(34,211,238,.14), transparent 55%),
+        radial-gradient(900px 450px at 50% 100%, rgba(255,255,255,.05), transparent 60%),
         var(--bg);
-      line-height:1.5;
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px}
 
+    /* Skip */
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{
       position:fixed;left:14px;top:14px;width:auto;height:auto;
@@ -95,21 +98,34 @@
     /* NAV */
     .nav{
       position:sticky;top:0;z-index:100;
-      backdrop-filter:blur(14px);
-      background:rgba(7,10,18,.55);
+      backdrop-filter: blur(14px);
+      background: rgba(7,10,18,.55);
       border-bottom:1px solid var(--line);
     }
     .nav .wrap{
-      display:flex;align-items:center;justify-content:flex-end;gap:12px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding-top:14px;padding-bottom:14px;
     }
-    .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .brand{
+      display:flex;align-items:center;gap:10px;min-width:180px;
+    }
+    .brand-badge{
+      width:34px;height:34px;border-radius:12px;
+      background:linear-gradient(135deg, rgba(124,92,255,.35), rgba(34,211,238,.25));
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+    }
+    .brand small{display:block;color:var(--muted2);font-size:11px;margin-top:2px}
+    .brand b{font-size:13px;letter-spacing:.2px}
+    .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 18px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:11px 16px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.06);
-      color:var(--text);font-weight:800;font-size:14px;
+      color:var(--text);
+      font-weight:800;font-size:13px;
       cursor:pointer;transition:.2s ease;white-space:nowrap;
       box-shadow:0 10px 30px rgba(0,0,0,.22);
     }
@@ -121,49 +137,39 @@
     }
 
     /* HERO */
-    .hero{position:relative;padding:54px 0 10px}
-    .hero::before{
-      content:"";position:absolute;inset:-22px -18px -22px -18px;
-      background:radial-gradient(900px 520px at 25% 15%, rgba(0,0,0,.44), rgba(0,0,0,.72));
-      border-radius:28px;pointer-events:none;
-    }
-    .hero > *{position:relative;z-index:1}
-
-    .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:16px;align-items:stretch}
-    .panel{
-      background:linear-gradient(180deg,var(--panel),var(--panel2));
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-    }
-    .hero-left{padding:26px}
-
-    /* HERO LOGO */
-    .hero-visual{display:block;margin-bottom:18px}
-    .hero-visual .ad{
-      border-radius:24px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.03);
-      box-shadow:var(--shadow2);
+    .hero{padding:22px 0 10px}
+    .hero-shell{
       position:relative;
+      border-radius:28px;
+      border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      overflow:hidden;
     }
-    .hero-visual .ad::after{
+    .hero-shell::before{
       content:"";
-      position:absolute;inset:0;
-      background:
-        radial-gradient(700px 260px at 18% 12%, rgba(124,92,255,.10), transparent 55%),
-        radial-gradient(700px 260px at 82% 30%, rgba(34,211,238,.08), transparent 60%);
+      position:absolute;inset:-40px;
+      background: radial-gradient(900px 420px at 18% 18%, rgba(124,92,255,.14), transparent 60%),
+                  radial-gradient(900px 420px at 85% 30%, rgba(34,211,238,.11), transparent 60%);
       pointer-events:none;
-      mix-blend-mode:screen;
-      opacity:.55;
     }
-    .hero-visual .ad img{
-      width:100%;
-      display:block;
-      object-fit:cover;
-      aspect-ratio:16/9;
-      transform:scale(1.01);
+
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:18px;
+      padding:18px;
+      align-items:stretch;
+    }
+
+    .hero-copy{
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(7,10,18,.35);
+      backdrop-filter: blur(10px);
+      padding:22px;
+      box-shadow:var(--shadow2);
     }
 
     .kicker{
@@ -175,22 +181,25 @@
       letter-spacing:.2px;
     }
     .kdot{width:7px;height:7px;border-radius:999px;background:rgba(234,240,255,.30)}
-    .ksep{opacity:.5}
+    .ksep{opacity:.55}
 
     h1{
       margin:14px 0 10px;
-      font-size:clamp(34px,4.9vw,56px);
+      font-size:clamp(32px,5vw,56px);
       line-height:1.05;
-      letter-spacing:-.8px;
+      letter-spacing:-.9px;
       text-shadow:0 10px 40px rgba(0,0,0,.55);
     }
     .lead{
+      margin:0;
       color:rgba(234,240,255,.74);
       font-size:16px;
-      line-height:1.7;
-      max-width:72ch;
+      line-height:1.75;
+      max-width:70ch;
     }
-    .lead strong{color:var(--text);font-weight:800}
+    .lead strong{color:var(--text);font-weight:850}
+
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
     .sublegal{
       margin-top:14px;
@@ -205,39 +214,44 @@
     .sublegal b{color:var(--text)}
     .sublegal a{text-decoration:underline}
 
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-
-    /* Right panel */
-    .hero-right{padding:18px}
-    .formbox{
-      background:rgba(11,15,25,.58);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:16px;height:100%;
+    /* Hero visual (logo-hero.png) */
+    .hero-visual{
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(7,10,18,.35);
+      overflow:hidden;
+      position:relative;
       box-shadow:var(--shadow2);
+      min-height:320px;
     }
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:6px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.05);
-      color:var(--muted);font-size:12px;
+    .hero-visual::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg, rgba(7,10,18,.20), rgba(7,10,18,.62));
+      pointer-events:none;
     }
-    .formbox h3{margin:10px 0 6px;font-size:15px}
-    .formbox p{margin:0 0 12px;color:var(--muted);font-size:13px}
-
-    .textpanel{
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
+    .hero-visual img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.03);
+      opacity:.92;
+      filter:saturate(1.05) contrast(1.02);
+    }
+    .hero-card{
+      position:absolute;
+      left:16px;right:16px;bottom:16px;
       border-radius:18px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(7,10,18,.55);
+      backdrop-filter: blur(10px);
       padding:14px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.65;
     }
-    .textpanel b{color:var(--text)}
-    .textpanel a{text-decoration:underline}
+    .hero-card b{display:block;font-size:14px}
+    .hero-card small{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.45}
 
+    /* Sections */
     section{padding:18px 0}
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
     .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
@@ -247,14 +261,14 @@
     .card{
       grid-column:span 4;
       background:rgba(255,255,255,.04);
-      border:1px solid var(--line);
+      border:1px solid rgba(255,255,255,.12);
       border-radius:var(--radius);
       padding:16px;
       transition:.2s ease;
     }
     .card:hover{transform:translateY(-2px);background:rgba(255,255,255,.055)}
     .card h3{margin:10px 0 6px;font-size:14px}
-    .card p{margin:0;color:var(--muted);font-size:13px}
+    .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
     .ic{
       width:38px;height:38px;border-radius:14px;
       display:grid;place-items:center;
@@ -262,14 +276,29 @@
       border:1px solid rgba(124,92,255,.22);
     }
 
+    .textpanel{
+      grid-column:span 12;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--radius);
+      padding:16px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+    .textpanel b{color:var(--text)}
+    .textpanel a{text-decoration:underline}
+
+    /* Footer */
     footer{
-      margin-top:24px;padding:22px 0 34px;border-top:1px solid var(--line);
+      margin-top:22px;padding:22px 0 34px;border-top:1px solid var(--line);
       color:var(--muted);font-size:12px;
     }
     .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
     .foot a{color:var(--muted)}
     .foot a:hover{color:var(--text)}
 
+    /* Cookie banner */
     .cookie{
       position:fixed;left:14px;right:14px;bottom:14px;z-index:200;
       border:1px solid rgba(255,255,255,.14);
@@ -286,23 +315,18 @@
     .btn.small{padding:10px 12px;font-size:13px;box-shadow:none}
 
     @media (max-width: 980px){
-      .grid{grid-template-columns:1fr}
+      .hero-grid{grid-template-columns:1fr}
       .card{grid-column:span 6}
+      .brand{display:none}
+      .nav .wrap{justify-content:center}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
-      .hero{padding:42px 0 6px}
-      .hero-left{padding:20px}
-      .btn{padding:12px 14px}
+      .hero-grid{padding:14px;gap:14px}
+      .hero-copy{padding:18px}
+      .hero-visual{min-height:260px}
+      .btn{padding:11px 14px}
       .card{grid-column:span 12}
-
-      .nav .wrap{justify-content:center}
-      .nav-actions{justify-content:center}
-
-      .hero-visual .ad img{
-        aspect-ratio:16/10;
-        object-position:center;
-      }
     }
   </style>
 </head>
@@ -312,31 +336,34 @@
 
   <header class="nav">
     <div class="wrap">
-      <div class="nav-actions">
+      <div class="brand" aria-label="Brand">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <b>Antonio Pereira</b>
+          <small>Freelance Digital Services</small>
+        </div>
+      </div>
+
+      <nav class="nav-actions" aria-label="Primary">
         <a class="btn" href="#services">Services</a>
+        <a class="btn" href="#process">Process</a>
         <a class="btn" href="#privacy">Privacy</a>
         <a class="btn" href="#terms">Terms</a>
         <a class="btn primary" href="#contact">Email me</a>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main id="main" class="wrap">
+
     <section class="hero" id="top">
-      <div class="grid">
+      <div class="hero-shell">
+        <div class="hero-grid">
 
-        <div class="panel">
-          <div class="hero-left">
-            <div class="hero-visual" aria-label="Brand preview">
-              <div class="ad">
-                <img src="./logo-hero.png" alt="Antonio Pereira — Freelance digital services">
-              </div>
-            </div>
-
+          <div class="hero-copy">
             <span class="kicker">
               <span class="kdot"></span>Freelance Digital Services
-              <span class="ksep">•</span>
-              Jersey &amp; UK
+              <span class="ksep">•</span> Jersey &amp; UK
             </span>
 
             <h1>Premium websites.<br>Clean setup. Clear contact.</h1>
@@ -349,6 +376,11 @@
               </span>
             </p>
 
+            <div class="actions">
+              <a class="btn primary" href="#contact">Request a free review</a>
+              <a class="btn" href="#services">View services</a>
+            </div>
+
             <div class="sublegal" aria-label="Business details">
               <b>Business details</b><br>
               Operated by <b>Antonio Pereira</b> (<b>freelance</b>).<br>
@@ -359,41 +391,39 @@
                 This website provides general information and does not constitute legal or tax advice.
               </div>
             </div>
+          </div>
 
-            <div class="actions">
-              <a class="btn primary" href="#contact">Request a free review</a>
-              <a class="btn" href="#services">View services</a>
+          <div class="hero-visual" aria-label="Visual">
+            <img src="./logo-hero.png" alt="Antonio Pereira — Digital services preview">
+            <div class="hero-card">
+              <b>Email-only contact</b>
+              <small>
+                No social links. No WhatsApp buttons. Simple and professional — send one email and I’ll reply with next steps.
+              </small>
             </div>
           </div>
+
         </div>
+      </div>
+    </section>
 
-        <div class="panel">
-          <div class="hero-right" id="contact">
-            <div class="formbox">
-              <span class="badge">✉️ Email only • quick reply</span>
-              <h3>Request a free review</h3>
-              <p>Email me what you do and what you need — I’ll reply with clear next steps.</p>
+    <section id="contact">
+      <div class="section-title">
+        <div>
+          <h2>Contact</h2>
+          <p>Email me what you do and what you need — I’ll reply with clear next steps.</p>
+        </div>
+      </div>
 
-              <div class="textpanel">
-                <b>Email:</b> <a id="emailInline" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a><br>
-                <span style="display:block;margin-top:10px;">
-                  <b>Subject:</b> Website enquiry — Antonio Pereira
-                </span>
-                <span style="display:block;margin-top:10px;">
-                  <b>Include:</b> business type • website (if any) • what you need • deadline • Jersey/UK
-                </span>
-                <div style="margin-top:12px;">
-                  <a class="btn primary" id="emailBtn" href="#">Email me</a>
-                </div>
-              </div>
-
-              <div class="tiny" style="margin-top:12px;">
-                ✅ Clear steps. ✅ Professional setup. ✅ No obligation quote.
-              </div>
-            </div>
+      <div class="cards">
+        <div class="textpanel">
+          <b>Email:</b> <a id="emailInline" href="#" style="text-decoration:underline;">hello@antoniopereiraweb.co.uk</a><br>
+          <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — Antonio Pereira</span>
+          <span style="display:block;margin-top:10px;"><b>Include:</b> business type • website (if any) • what you need • deadline • Jersey/UK</span>
+          <div style="margin-top:14px;">
+            <a class="btn primary" id="emailBtn" href="#">Email me</a>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -408,10 +438,29 @@
       <div class="cards">
         <div class="card"><div class="ic">🌐</div><h3>Website design & build</h3><p>One-page sites or full websites with a premium look and clear structure.</p></div>
         <div class="card"><div class="ic">📱</div><h3>Mobile-first performance</h3><p>Fast loading, readable layouts, designed for real customers on phones.</p></div>
-        <div class="card"><div class="ic">📈</div><h3>SEO foundations</h3><p>Meta tags and structure to support indexing. Outcomes can vary.</p></div>
         <div class="card"><div class="ic">✉️</div><h3>Business email setup</h3><p>Domain email setup (MX/SPF/DKIM) + guidance for Zoho, Outlook, Gmail.</p></div>
-        <div class="card"><div class="ic">🧭</div><h3>Clean contact flow</h3><p>Simple, professional contact setup that reduces friction for enquiries.</p></div>
-        <div class="card"><div class="ic">⚙️</div><h3>Optional automation</h3><p>If it fits: faster enquiries and smoother follow-ups. No guarantees.</p></div>
+        <div class="card"><div class="ic">📈</div><h3>SEO foundations</h3><p>Meta tags and structure to support indexing. Outcomes can vary.</p></div>
+        <div class="card"><div class="ic">🧭</div><h3>Clean contact flow</h3><p>Simple, professional enquiry flow that reduces friction for customers.</p></div>
+        <div class="card"><div class="ic">⚙️</div><h3>Optional automation</h3><p>If it fits: smoother follow-ups and faster replies. No guarantees.</p></div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="section-title">
+        <div>
+          <h2>Process</h2>
+          <p>A simple, professional workflow — so you know exactly what happens next.</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card"><div class="ic">1</div><h3>Quick review</h3><p>You email what you need. I reply with clear options and next steps.</p></div>
+        <div class="card"><div class="ic">2</div><h3>Plan & content</h3><p>We agree the structure. You send logo/text/photos (or I guide you).</p></div>
+        <div class="card"><div class="ic">3</div><h3>Build & launch</h3><p>I build, you approve, then we launch — clean and professional.</p></div>
+
+        <div class="textpanel">
+          <b>Note:</b> Timelines depend on content availability and scope. I’ll confirm everything in writing (by email) before work starts.
+        </div>
       </div>
     </section>
 
@@ -534,6 +583,7 @@
 
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
+          <a href="#process">Process</a>
           <a href="#privacy">Privacy</a>
           <a href="#terms">Terms</a>
           <a href="#contact">Contact</a>
