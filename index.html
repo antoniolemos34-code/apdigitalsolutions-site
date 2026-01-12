@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#F6F8FC" />
-  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#0B1220" />
+  <meta name="color-scheme" content="dark" />
 
-  <title>A. Pereira — Freelance Web Design & Business Email (Jersey & UK)</title>
-  <meta name="description" content="Premium mobile-first websites and professional domain email setup (e.g. you@yourbusiness.com). Operated by A. Pereira (freelance), Jersey, Channel Islands. Serving Jersey & the UK." />
+  <title>A. Pereira — Premium Websites & Business Email Setup (Jersey & UK)</title>
+  <meta name="description" content="Premium mobile-first websites and professional email setup. Operated by A. Pereira (freelance), Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="A. Pereira — Freelance Digital Services" />
-  <meta property="og:description" content="Premium websites and professional domain email setup. Clear steps. No obligation." />
+  <meta property="og:title" content="A. Pereira — Premium Websites & Business Email" />
+  <meta property="og:description" content="Fast, mobile-first websites + professional email setup. Clear process. No obligation." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
@@ -52,22 +52,23 @@
 
   <style>
     :root{
-      --bg:#F6F8FC;
-      --bg2:#EEF2FF;
-      --panel:rgba(255,255,255,.78);
-      --text:#0F172A;
-      --muted:#475569;
-      --muted2:#64748B;
-      --line:rgba(15,23,42,.10);
+      --bg0:#060A14;
+      --bg1:#0B1220;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.09);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.70);
+      --muted2:rgba(255,255,255,.58);
+      --line:rgba(255,255,255,.12);
 
-      --brand1:#6366F1;
-      --brand2:#22D3EE;
-      --brand3:#A78BFA;
+      --a1:#7C3AED;   /* purple */
+      --a2:#22D3EE;   /* cyan */
+      --a3:#10B981;   /* emerald */
 
-      --shadow: 0 18px 55px rgba(2,6,23,.10);
-      --shadow2: 0 28px 85px rgba(2,6,23,.14);
-      --radius:22px;
-      --max:1120px;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --shadow2: 0 30px 110px rgba(0,0,0,.55);
+      --r:22px;
+      --max:1180px;
     }
 
     *{box-sizing:border-box}
@@ -77,255 +78,283 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 450px at 10% 0%, rgba(99,102,241,.16), transparent 55%),
-        radial-gradient(900px 450px at 92% 12%, rgba(34,211,238,.12), transparent 55%),
-        radial-gradient(900px 450px at 50% 100%, rgba(167,139,250,.10), transparent 60%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+        radial-gradient(900px 520px at 15% 10%, rgba(124,58,237,.24), transparent 60%),
+        radial-gradient(880px 520px at 85% 18%, rgba(34,211,238,.18), transparent 60%),
+        radial-gradient(900px 520px at 55% 95%, rgba(16,185,129,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 100%);
       line-height:1.55;
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
     }
 
     a{color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:22px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px}
 
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{
       position:fixed;left:14px;top:14px;width:auto;height:auto;
       padding:10px 12px;border-radius:12px;z-index:9999;
-      background:rgba(255,255,255,.92);
+      background:rgba(0,0,0,.72);
       border:1px solid var(--line);
       box-shadow:var(--shadow);
       text-decoration:none;
     }
 
     /* NAV */
-    .nav{
-      position:sticky;top:0;z-index:100;
+    header{
+      position:sticky;top:0;z-index:200;
       backdrop-filter: blur(14px);
-      background: rgba(246,248,252,.75);
-      border-bottom:1px solid var(--line);
+      background: rgba(6,10,20,.55);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
-    .nav .wrap{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding-top:12px;padding-bottom:12px;
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:12px 0;
     }
     .brand{
-      display:flex;align-items:center;gap:10px;
+      display:flex;align-items:center;gap:12px;
       text-decoration:none;
-      min-width:220px;
     }
-    .brand-badge{
-      width:34px;height:34px;border-radius:12px;
-      background:linear-gradient(135deg, rgba(99,102,241,.22), rgba(34,211,238,.20));
-      border:1px solid rgba(15,23,42,.10);
-      box-shadow:0 12px 30px rgba(2,6,23,.08);
+    .mark{
+      width:38px;height:38px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(124,58,237,.95), rgba(34,211,238,.85));
+      box-shadow: 0 18px 50px rgba(124,58,237,.22);
+      border:1px solid rgba(255,255,255,.12);
       flex:0 0 auto;
     }
-    .brand b{font-size:13px;letter-spacing:.2px}
-    .brand small{display:block;color:var(--muted2);font-size:11px;margin-top:2px}
+    .brand b{font-size:14px;letter-spacing:.2px}
+    .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
 
     .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:10px 12px;border-radius:999px;
-      border:1px solid rgba(15,23,42,.12);
-      background:rgba(255,255,255,.76);
-      color:rgba(15,23,42,.86);
-      font-weight:760;font-size:13px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:rgba(255,255,255,.92);
+      font-weight:780;font-size:13px;
       transition:.18s ease;
       text-decoration:none;
       white-space:nowrap;
-      box-shadow:0 10px 24px rgba(2,6,23,.06);
+      box-shadow:0 14px 38px rgba(0,0,0,.28);
     }
-    .btn:hover{transform:translateY(-1px);background:#fff;border-color:rgba(15,23,42,.16)}
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
     .btn.primary{
-      background:linear-gradient(135deg, rgba(99,102,241,.96), rgba(34,211,238,.90));
       border-color:transparent;
-      color:#07101F;
-      box-shadow:0 18px 45px rgba(99,102,241,.20);
+      background: linear-gradient(135deg, rgba(124,58,237,.92), rgba(34,211,238,.86));
+      color:#06101b;
+      box-shadow: 0 18px 60px rgba(124,58,237,.25);
     }
 
     /* HERO */
-    .hero{padding:22px 0 10px}
-    .hero-shell{
+    .hero{padding:22px 0 12px}
+    .shell{
       position:relative;
-      border-radius:32px;
-      border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.78);
-      box-shadow:var(--shadow2);
+      border-radius:34px;
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      box-shadow: var(--shadow2);
       overflow:hidden;
       isolation:isolate;
     }
-    .hero-shell::before{
+    .shell::before{
       content:"";
-      position:absolute;inset:-80px;
+      position:absolute;inset:-120px;
       background:
-        radial-gradient(700px 420px at 12% 15%, rgba(99,102,241,.18), transparent 60%),
-        radial-gradient(700px 420px at 88% 20%, rgba(34,211,238,.16), transparent 60%),
-        radial-gradient(600px 360px at 55% 95%, rgba(167,139,250,.12), transparent 60%);
+        radial-gradient(900px 560px at 10% 20%, rgba(124,58,237,.28), transparent 60%),
+        radial-gradient(900px 560px at 88% 18%, rgba(34,211,238,.22), transparent 60%),
+        radial-gradient(820px 520px at 55% 92%, rgba(16,185,129,.14), transparent 60%);
       pointer-events:none;
       z-index:0;
     }
 
     .hero-grid{
-      position:relative; z-index:1;
+      position:relative;z-index:1;
       display:grid;
       grid-template-columns: 1.05fr .95fr;
       gap:18px;
-      padding:26px;
-      align-items:center;
+      padding:22px;
+      align-items:stretch;
     }
 
-    .kicker{
+    /* LEFT: image */
+    .hero-media{
+      border-radius:28px;
+      background: rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 24px 70px rgba(0,0,0,.35);
+      overflow:hidden;
+      display:grid;
+      place-items:center;
+      min-height:360px;
+      position:relative;
+    }
+    .hero-media::after{
+      content:"";
+      position:absolute;inset:0;
+      background: radial-gradient(420px 240px at 70% 35%, rgba(34,211,238,.14), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-media img{
+      width:min(520px, 100%);
+      height:auto;
+      display:block;
+      filter: drop-shadow(0 26px 60px rgba(0,0,0,.35));
+      transform: translateY(8px);
+    }
+
+    /* RIGHT: info */
+    .hero-info{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .pill{
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
       padding:8px 12px;border-radius:999px;
-      border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.78);
-      color:rgba(15,23,42,.70);
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.06);
+      color:rgba(255,255,255,.78);
       font-size:12px;
       letter-spacing:.2px;
-      text-decoration:none;
+      width:max-content;
+      max-width:100%;
     }
-    .kdot{width:7px;height:7px;border-radius:999px;background:rgba(99,102,241,.55)}
-    .ksep{opacity:.55}
+    .dot{width:8px;height:8px;border-radius:999px;background:rgba(34,211,238,.75)}
+    .sep{opacity:.55}
 
     h1{
-      margin:14px 0 10px;
-      font-size:clamp(34px,4.7vw,64px);
-      line-height:1.02;
+      margin:0;
+      font-size:clamp(34px,4.2vw,58px);
+      line-height:1.03;
       letter-spacing:-1px;
     }
     .lead{
       margin:0;
-      color:rgba(15,23,42,.72);
-      font-size:16px;
-      line-height:1.75;
-      max-width:72ch;
+      color:var(--muted);
+      font-size:15.5px;
+      line-height:1.8;
+      max-width:70ch;
     }
-    .lead strong{color:rgba(15,23,42,.92);font-weight:850}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .lead strong{color:rgba(255,255,255,.95);font-weight:860}
 
-    .sublegal{
-      margin-top:14px;
+    .value{
+      display:grid;
+      gap:10px;
+      margin-top:2px;
+    }
+    .value .row{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:10px 12px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+    .badge{
+      width:30px;height:30px;border-radius:12px;
+      display:grid;place-items:center;
+      background: linear-gradient(135deg, rgba(124,58,237,.22), rgba(34,211,238,.18));
+      border:1px solid rgba(255,255,255,.12);
+      flex:0 0 auto;
+    }
+    .value b{display:block;font-size:13px;letter-spacing:.2px}
+    .value span{display:block;color:var(--muted2);font-size:12.5px;line-height:1.6;margin-top:2px}
+
+    .cta{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;
+    }
+
+    .legal-card{
+      margin-top:6px;
       padding:12px 14px;
       border-radius:18px;
-      border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.70);
-      color:rgba(15,23,42,.70);
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.20);
+      color: rgba(255,255,255,.76);
       font-size:12px;
       line-height:1.55;
     }
-    .sublegal b{color:rgba(15,23,42,.92)}
-    .sublegal a{color:rgba(15,23,42,.92);text-decoration:underline}
-
-    /* HERO ART */
-    .hero-art{
-      position:relative;
-      display:grid;
-      place-items:center;
-      min-height:320px;
-    }
-    .hero-art::after{
-      content:"";
-      position:absolute;
-      width:520px;height:520px;max-width:100%;
-      border-radius:999px;
-      background:
-        radial-gradient(circle at 50% 40%, rgba(34,211,238,.20), transparent 55%),
-        radial-gradient(circle at 35% 65%, rgba(99,102,241,.20), transparent 55%),
-        radial-gradient(circle at 70% 75%, rgba(167,139,250,.16), transparent 60%);
-      filter: blur(18px);
-      opacity:.85;
-      z-index:0;
-    }
-    .hero-art img{
-      position:relative; z-index:1;
-      width:min(520px, 100%);
-      height:auto;
-      display:block;
-      filter: drop-shadow(0 28px 60px rgba(2,6,23,.18));
-      transform: translateY(6px);
-    }
+    .legal-card b{color:rgba(255,255,255,.95)}
+    .legal-card a{color:rgba(255,255,255,.95);text-decoration:underline}
 
     /* Sections */
     section{padding:18px 0}
-    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
-    .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
-    .section-title p{margin:0;color:var(--muted);font-size:13px;max-width:80ch}
+    .section-title{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
+      margin:10px 0 12px
+    }
+    .section-title h2{margin:0;font-size:18px;letter-spacing:-.2px}
+    .section-title p{margin:0;color:var(--muted2);font-size:13px;max-width:80ch}
 
     .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .card{
       grid-column:span 4;
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(15,23,42,.10);
-      border-radius:var(--radius);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--r);
       padding:16px;
       transition:.18s ease;
-      box-shadow:0 14px 35px rgba(2,6,23,.06);
+      box-shadow:0 16px 44px rgba(0,0,0,.30);
     }
-    .card:hover{transform:translateY(-2px);background:#fff}
+    .card:hover{transform:translateY(-2px);background:rgba(255,255,255,.08)}
     .card h3{margin:10px 0 6px;font-size:14px}
-    .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .card p{margin:0;color:var(--muted2);font-size:13px;line-height:1.6}
     .ic{
-      width:38px;height:38px;border-radius:14px;
+      width:40px;height:40px;border-radius:16px;
       display:grid;place-items:center;
-      background:linear-gradient(135deg, rgba(99,102,241,.14), rgba(34,211,238,.12));
-      border:1px solid rgba(15,23,42,.10);
+      background:linear-gradient(135deg, rgba(124,58,237,.20), rgba(34,211,238,.14));
+      border:1px solid rgba(255,255,255,.12);
     }
 
     .textpanel{
       grid-column:span 12;
-      background:rgba(255,255,255,.78);
-      border:1px solid rgba(15,23,42,.10);
-      border-radius:var(--radius);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--r);
       padding:16px;
-      color:var(--muted);
+      color:var(--muted2);
       font-size:13px;
       line-height:1.65;
-      box-shadow:0 14px 35px rgba(2,6,23,.06);
+      box-shadow:0 16px 44px rgba(0,0,0,.28);
     }
-    .textpanel b{color:rgba(15,23,42,.92)}
-    .textpanel a{color:rgba(15,23,42,.92);text-decoration:underline}
+    .textpanel b{color:rgba(255,255,255,.92)}
+    .textpanel a{color:rgba(255,255,255,.92);text-decoration:underline}
 
     footer{
-      margin-top:22px;padding:22px 0 34px;border-top:1px solid var(--line);
-      color:var(--muted);font-size:12px;
+      margin-top:22px;padding:22px 0 34px;border-top:1px solid rgba(255,255,255,.10);
+      color:var(--muted2);font-size:12px;
     }
     .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
-    .foot a{color:var(--muted)}
-    .foot a:hover{color:rgba(15,23,42,.92)}
+    .foot a{color:var(--muted2)}
+    .foot a:hover{color:rgba(255,255,255,.92)}
 
+    /* Cookie banner */
     .cookie{
-      position:fixed;left:14px;right:14px;bottom:14px;z-index:200;
-      border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.88);
-      backdrop-filter:blur(12px);
+      position:fixed;left:14px;right:14px;bottom:14px;z-index:300;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(10,14,26,.78);
+      backdrop-filter:blur(14px);
       border-radius:22px;
       box-shadow:var(--shadow2);
       padding:14px;
       display:none;
     }
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
-    .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
+    .cookie p{margin:0;color:rgba(255,255,255,.76);font-size:12px;max-width:85ch}
 
+    /* Responsive */
     @media (max-width: 980px){
+      .nav{justify-content:center}
       .brand{display:none}
-      .nav .wrap{justify-content:center}
       .card{grid-column:span 6}
-      .hero-grid{grid-template-columns: 1fr 0.95fr; gap:14px; padding:18px;}
-      .hero-art{min-height:260px}
-    }
-    @media (max-width: 720px){
-      .hero-grid{grid-template-columns: 1.1fr .9fr; gap:12px; padding:16px;}
-      .hero-art img{width:min(360px, 100%)}
+      .hero-grid{grid-template-columns:1fr; }
+      .hero-media{min-height:320px}
     }
     @media (max-width: 520px){
-      .hero-grid{grid-template-columns:1fr;}
-      .hero-art{min-height:220px; margin-top:6px;}
-      .hero-art img{width:min(420px, 100%)}
       .card{grid-column:span 12}
+      .hero-media img{width:min(460px, 100%)}
     }
   </style>
 </head>
@@ -333,71 +362,99 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav">
+  <header>
     <div class="wrap">
-      <a class="brand" href="#top" aria-label="Brand">
-        <div class="brand-badge" aria-hidden="true"></div>
-        <div>
-          <b>A. Pereira</b>
-          <small>Freelance Digital Services</small>
-        </div>
-      </a>
+      <div class="nav">
+        <a class="brand" href="#top" aria-label="Brand">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <b>A. Pereira</b>
+            <small>Web design • Email setup • Jersey & UK</small>
+          </div>
+        </a>
 
-      <nav class="nav-actions" aria-label="Primary">
-        <a class="btn" href="#services">Services</a>
-        <a class="btn" href="#process">Process</a>
-        <a class="btn" href="#privacy">Privacy</a>
-        <a class="btn" href="#terms">Terms</a>
-        <a class="btn primary" href="#contact">Email me</a>
-      </nav>
+        <nav class="nav-actions" aria-label="Primary">
+          <a class="btn" href="#services">Services</a>
+          <a class="btn" href="#process">Process</a>
+          <a class="btn" href="#privacy">Privacy</a>
+          <a class="btn" href="#terms">Terms</a>
+          <a class="btn primary" href="#contact">Email me</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main id="main" class="wrap">
     <section class="hero" id="top">
-      <div class="hero-shell">
+      <div class="shell">
         <div class="hero-grid">
-          <div>
-            <span class="kicker">
-              <span class="kdot"></span>Freelance Digital Services
-              <span class="ksep">•</span> Jersey &amp; UK
+
+          <!-- IMAGE (TOP) -->
+          <div class="hero-media" aria-label="Hero image">
+            <img src="./hero-transparent.jpg" alt="A. Pereira — Digital services" loading="eager" decoding="async">
+          </div>
+
+          <!-- INFO (NEXT TO IMAGE) -->
+          <div class="hero-info">
+            <span class="pill">
+              <span class="dot"></span> Freelance Digital Services
+              <span class="sep">•</span> Jersey &amp; UK
             </span>
 
-            <h1>Premium websites.<br>Clean setup. Clear contact.</h1>
+            <h1>Websites that look premium — and work.</h1>
 
             <p class="lead">
-              I design and build <strong>fast, mobile-first websites</strong> and set up
-              <strong>professional domain email</strong> so your business looks credible from day one.
-              <span style="display:block;margin-top:10px;color:rgba(15,23,42,.58);font-size:13px;">
+              I help small businesses and independent professionals with
+              <strong>fast, mobile-first websites</strong> and <strong>professional email setup</strong>
+              so customers trust you from the first click.
+              <span style="display:block;margin-top:10px;color:rgba(255,255,255,.62);font-size:12.5px;">
                 Results can vary. I focus on best-practice setup and a polished user experience.
               </span>
             </p>
 
-            <div class="actions">
+            <div class="value" aria-label="What I do">
+              <div class="row">
+                <div class="badge">⚡</div>
+                <div>
+                  <b>Fast + mobile-first</b>
+                  <span>Clean design, quick loading, clear structure for real customers on phones.</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="badge">✉️</div>
+                <div>
+                  <b>Business email setup</b>
+                  <span>DNS guidance (MX/SPF/DKIM) + help connecting to Zoho, Gmail, Outlook.</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="badge">📈</div>
+                <div>
+                  <b>SEO foundations</b>
+                  <span>On-page setup to support indexing. No ranking guarantees.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cta">
               <a class="btn primary" href="#contact">Request a free review</a>
               <a class="btn" href="#services">View services</a>
             </div>
 
-            <div class="sublegal" aria-label="Business details">
+            <div class="legal-card" aria-label="Business details">
               <b>Business details</b><br>
               Operated by <b>A. Pereira</b> (<b>freelance</b>).<br>
               <b>Base:</b> Jersey, Channel Islands.<br>
               <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
-
-              <b>Enquiries:</b>
-              <a id="emailLegalTop" href="#">info@antoniopereira.org</a>
-              <span style="display:block;margin-top:6px;color:rgba(15,23,42,.58);font-size:11px;">
+              <b>Enquiries:</b> <a id="emailLegalTop" href="#">info@antoniopereira.org</a><br>
+              <span style="display:block;margin-top:6px;color:rgba(255,255,255,.65);font-size:11px;">
                 Support: <a id="supportTop" href="#">support@antoniopereira.org</a>
               </span>
-
-              <div style="margin-top:10px;color:rgba(15,23,42,.52);font-size:11px;">
+              <div style="margin-top:10px;color:rgba(255,255,255,.60);font-size:11px;">
                 This website provides general information and does not constitute legal or tax advice.
               </div>
             </div>
-          </div>
 
-          <div class="hero-art" aria-label="Hero image">
-            <img src="./hero-transparent.jpg" alt="A. Pereira — Digital services" loading="eager" decoding="async">
           </div>
         </div>
       </div>
@@ -414,8 +471,8 @@
       <div class="cards">
         <div class="textpanel">
           <b>Email:</b> <a id="emailInline" href="#">info@antoniopereira.org</a><br>
-          <span style="display:block;margin-top:8px;color:rgba(15,23,42,.65);font-size:12px;">
-            Support: <a id="supportInline" href="#">support@antoniopereira.org</a>
+          <span style="display:block;margin-top:8px;">
+            <b>Support:</b> <a id="supportInline" href="#">support@antoniopereira.org</a>
           </span>
 
           <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — A. Pereira</span>
@@ -426,7 +483,7 @@
             <a class="btn" id="supportBtn" href="#">Support</a>
           </div>
 
-          <div style="margin-top:12px;color:rgba(15,23,42,.52);font-size:11px;">
+          <div style="margin-top:12px;color:rgba(255,255,255,.55);font-size:11px;">
             (Future) Domain email on <b>@antoniopereiraweb.co.uk</b> will be available once activated.
           </div>
         </div>
@@ -463,7 +520,6 @@
         <div class="card"><div class="ic">1</div><h3>Quick review</h3><p>You email what you need. I reply with clear options and next steps.</p></div>
         <div class="card"><div class="ic">2</div><h3>Plan & content</h3><p>We agree the structure. You send logo/text/photos (or I guide you).</p></div>
         <div class="card"><div class="ic">3</div><h3>Build & launch</h3><p>I build, you approve, then we launch — clean and professional.</p></div>
-
         <div class="textpanel">
           <b>Note:</b> Timelines depend on content availability and scope. I’ll confirm everything in writing (by email) before work starts.
         </div>
@@ -579,10 +635,10 @@
     <footer>
       <div class="foot">
         <div>
-          <b style="color:rgba(15,23,42,.92)">A. Pereira</b><br/>
+          <b style="color:rgba(255,255,255,.92)">A. Pereira</b><br/>
           <span>Operated by <b>A. Pereira</b> (<b>freelance</b>).</span><br/>
           <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereira.org</a></span><br/>
-          <span style="display:block;margin-top:6px;color:rgba(15,23,42,.55);font-size:11px;">
+          <span style="display:block;margin-top:6px;color:rgba(255,255,255,.55);font-size:11px;">
             No guarantees of specific business outcomes.
           </span>
         </div>
@@ -620,7 +676,7 @@
     const SUPPORT_EMAIL   = "support@antoniopereira.org";
 
     // Future (when you activate Zoho for .co.uk)
-    // When ready: change ENQUIRIES_EMAIL / SUPPORT_EMAIL to:
+    // When ready: change to:
     // const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
     // const SUPPORT_EMAIL   = "support@antoniopereiraweb.co.uk";
 
@@ -716,4 +772,4 @@ Thanks!`
     }
   </script>
 </body>
-  </html>
+    </html>
