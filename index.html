@@ -54,7 +54,6 @@
     :root{
       --bg:#F5F7FB;
       --bg2:#EEF2F7;
-      --panel:rgba(255,255,255,.86);
       --text:#0B1220;
       --muted:#475569;
       --muted2:#64748B;
@@ -140,25 +139,22 @@
     .shell{
       border-radius:30px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.68);
+      background: rgba(255,255,255,.70);
       box-shadow: var(--shadow2);
       overflow:hidden;
     }
 
-    /* Hero image top (no overlay boxes) */
+    /* IMPORTANT: do NOT crop (image contains text) */
     .hero-image{
       display:block;
       width:100%;
-      height:auto;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      object-position: 70% 30%;
-      background: rgba(11,18,32,.03);
+      height:auto;           /* keep original ratio */
+      object-fit: contain;   /* no crop */
+      background: rgba(11,18,32,.02);
     }
 
-    /* Intro under the image (clean + professional) */
     .hero-body{
-      padding:16px;
+      padding:18px;
       display:grid;
       gap:12px;
     }
@@ -195,15 +191,17 @@
 
     .points{
       display:grid;
-      gap:10px;
+      grid-template-columns: repeat(12, 1fr);
+      gap:12px;
       margin-top:4px;
     }
     .point{
+      grid-column: span 4;
       display:flex;gap:10px;align-items:flex-start;
       padding:12px 12px;
       border-radius:18px;
       border:1px solid rgba(11,18,32,.10);
-      background: rgba(255,255,255,.80);
+      background: rgba(255,255,255,.82);
       box-shadow:0 14px 40px rgba(2,6,23,.06);
     }
     .badge{
@@ -300,12 +298,12 @@
       .brand{display:none}
       .nav{justify-content:center}
       .card{grid-column:span 6}
-      .hero-image{object-position: 74% 30%;}
+      .point{grid-column:span 12}
     }
     @media (max-width: 520px){
       .card{grid-column:span 12}
       .wrap{padding:16px}
-      .hero-image{aspect-ratio: 4 / 5; object-position: 72% 22%;}
+      .hero-body{padding:16px}
     }
   </style>
 </head>
@@ -336,10 +334,8 @@
   <main id="main" class="wrap">
     <section class="hero" id="top">
       <div class="shell">
-        <!-- TOP IMAGE (your transparent-hero) -->
         <img class="hero-image" src="./transparent-hero.jpg" alt="A. Pereira — Web design & professional domain email (Jersey & UK)" loading="eager" decoding="async" />
 
-        <!-- CLEAN TEXT UNDER IMAGE -->
         <div class="hero-body">
           <span class="pill"><span class="dot"></span> Freelance Digital Services <span class="sep">•</span> Jersey &amp; UK</span>
 
@@ -365,7 +361,7 @@
               <div class="badge">✉️</div>
               <div>
                 <b>Business email (done properly)</b>
-                <span>Domain email setup + DNS guidance (MX/SPF/DKIM) and help connecting Zoho/Gmail/Outlook.</span>
+                <span>Domain email + DNS guidance (MX/SPF/DKIM) and help connecting Zoho/Gmail/Outlook.</span>
               </div>
             </div>
             <div class="point">
@@ -391,9 +387,6 @@
             <span style="display:block;margin-top:6px;color:rgba(11,18,32,.65);font-size:11px;">
               Support: <a id="supportTop" href="#">support@antoniopereira.org</a>
             </span>
-            <div style="margin-top:10px;color:rgba(11,18,32,.52);font-size:11px;">
-              This website provides general information and does not constitute legal or tax advice.
-            </div>
           </div>
         </div>
       </div>
@@ -576,10 +569,7 @@
         <div>
           <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
           <span>Operated by <b>A. Pereira</b> (<b>freelance</b>).</span><br/>
-          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereira.org</a></span><br/>
-          <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
-            No guarantees of specific business outcomes.
-          </span>
+          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereira.org</a></span>
         </div>
 
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
@@ -610,7 +600,6 @@
   </div>
 
   <script>
-    // Active emails (use these now)
     const ENQUIRIES_EMAIL = "info@antoniopereira.org";
     const SUPPORT_EMAIL   = "support@antoniopereira.org";
 
@@ -655,7 +644,6 @@ Thanks!`
       }
     });
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
@@ -667,7 +655,6 @@ Thanks!`
       });
     });
 
-    // Cookie consent (essential storage only)
     const CONSENT_KEY = "ap_cookie_consent_v1";
     const banner = document.getElementById("cookieBanner");
     const acceptBtn = document.getElementById("cookieAccept");
@@ -692,4 +679,4 @@ Thanks!`
   </script>
 </body>
 </html>
-<!-- force deploy v200 -->
+<!-- force deploy v201 -->
