@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/hero-transparent.jpg" />
+  <meta property="og:image" content="https://antoniopereiraweb.co.uk/logo-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
@@ -34,7 +34,7 @@
     "@type":"ProfessionalService",
     "name":"A. Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/hero-transparent.jpg",
+    "image":"https://antoniopereiraweb.co.uk/logo-hero.jpg",
     "description":"Operated by A. Pereira (freelance). Digital services: websites, domain email setup and optional automation guidance for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
@@ -55,18 +55,17 @@
       --bg:#F6F8FC;
       --bg2:#EEF2FF;
       --panel:rgba(255,255,255,.78);
-      --panel2:rgba(255,255,255,.62);
       --text:#0F172A;
       --muted:#475569;
       --muted2:#64748B;
       --line:rgba(15,23,42,.10);
 
-      --brand1:#6366F1; /* indigo */
-      --brand2:#22D3EE; /* cyan */
-      --brand3:#A78BFA; /* violet */
+      --brand1:#6366F1;
+      --brand2:#22D3EE;
+      --brand3:#A78BFA;
 
-      --shadow: 0 16px 45px rgba(2,6,23,.10);
-      --shadow2: 0 28px 90px rgba(2,6,23,.14);
+      --shadow: 0 18px 55px rgba(2,6,23,.10);
+      --shadow2: 0 28px 85px rgba(2,6,23,.14);
       --radius:22px;
       --max:1120px;
     }
@@ -78,9 +77,9 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 450px at 10% 0%, rgba(99,102,241,.18), transparent 55%),
-        radial-gradient(900px 450px at 92% 12%, rgba(34,211,238,.14), transparent 55%),
-        radial-gradient(900px 450px at 50% 100%, rgba(167,139,250,.12), transparent 60%),
+        radial-gradient(900px 450px at 10% 0%, rgba(99,102,241,.16), transparent 55%),
+        radial-gradient(900px 450px at 92% 12%, rgba(34,211,238,.12), transparent 55%),
+        radial-gradient(900px 450px at 50% 100%, rgba(167,139,250,.10), transparent 60%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
       line-height:1.55;
       -webkit-font-smoothing:antialiased;
@@ -90,7 +89,6 @@
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:22px}
 
-    /* Skip */
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{
       position:fixed;left:14px;top:14px;width:auto;height:auto;
@@ -101,12 +99,11 @@
       text-decoration:none;
     }
 
-    /* NAV (Apple-ish) */
+    /* NAV */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background: rgba(246,248,252,.78);
+      background: rgba(246,248,252,.75);
       border-bottom:1px solid var(--line);
     }
     .nav .wrap{
@@ -134,7 +131,7 @@
       display:inline-flex;align-items:center;justify-content:center;
       padding:10px 12px;border-radius:999px;
       border:1px solid rgba(15,23,42,.12);
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.76);
       color:rgba(15,23,42,.86);
       font-weight:760;font-size:13px;
       transition:.18s ease;
@@ -147,16 +144,16 @@
       background:linear-gradient(135deg, rgba(99,102,241,.96), rgba(34,211,238,.90));
       border-color:transparent;
       color:#07101F;
-      box-shadow:0 18px 45px rgba(99,102,241,.22);
+      box-shadow:0 18px 45px rgba(99,102,241,.20);
     }
 
     /* HERO */
-    .hero{padding:28px 0 8px}
+    .hero{padding:22px 0 10px}
     .hero-shell{
       position:relative;
       border-radius:32px;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.76);
+      background:rgba(255,255,255,.78);
       box-shadow:var(--shadow2);
       overflow:hidden;
       isolation:isolate;
@@ -165,9 +162,9 @@
       content:"";
       position:absolute;inset:-80px;
       background:
-        radial-gradient(700px 420px at 12% 15%, rgba(99,102,241,.20), transparent 60%),
-        radial-gradient(700px 420px at 88% 20%, rgba(34,211,238,.18), transparent 60%),
-        radial-gradient(600px 360px at 55% 95%, rgba(167,139,250,.14), transparent 60%);
+        radial-gradient(700px 420px at 12% 15%, rgba(99,102,241,.18), transparent 60%),
+        radial-gradient(700px 420px at 88% 20%, rgba(34,211,238,.16), transparent 60%),
+        radial-gradient(600px 360px at 55% 95%, rgba(167,139,250,.12), transparent 60%);
       pointer-events:none;
       z-index:0;
     }
@@ -185,7 +182,7 @@
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
       padding:8px 12px;border-radius:999px;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.80);
+      background:rgba(255,255,255,.78);
       color:rgba(15,23,42,.70);
       font-size:12px;
       letter-spacing:.2px;
@@ -215,7 +212,7 @@
       padding:12px 14px;
       border-radius:18px;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.68);
+      background:rgba(255,255,255,.70);
       color:rgba(15,23,42,.70);
       font-size:12px;
       line-height:1.55;
@@ -223,12 +220,12 @@
     .sublegal b{color:rgba(15,23,42,.92)}
     .sublegal a{color:rgba(15,23,42,.92);text-decoration:underline}
 
-    /* HERO ART (transparent image) */
+    /* HERO ART (stays beside text on mobile) */
     .hero-art{
       position:relative;
       display:grid;
       place-items:center;
-      min-height:360px;
+      min-height:320px;
     }
     .hero-art::after{
       content:"";
@@ -236,11 +233,11 @@
       width:520px;height:520px;max-width:100%;
       border-radius:999px;
       background:
-        radial-gradient(circle at 50% 40%, rgba(34,211,238,.22), transparent 55%),
+        radial-gradient(circle at 50% 40%, rgba(34,211,238,.20), transparent 55%),
         radial-gradient(circle at 35% 65%, rgba(99,102,241,.20), transparent 55%),
         radial-gradient(circle at 70% 75%, rgba(167,139,250,.16), transparent 60%);
       filter: blur(18px);
-      opacity:.82;
+      opacity:.85;
       z-index:0;
     }
     .hero-art img{
@@ -261,7 +258,7 @@
     .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
     .card{
       grid-column:span 4;
-      background:rgba(255,255,255,.80);
+      background:rgba(255,255,255,.78);
       border:1px solid rgba(15,23,42,.10);
       border-radius:var(--radius);
       padding:16px;
@@ -271,7 +268,6 @@
     .card:hover{transform:translateY(-2px);background:#fff}
     .card h3{margin:10px 0 6px;font-size:14px}
     .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-
     .ic{
       width:38px;height:38px;border-radius:14px;
       display:grid;place-items:center;
@@ -281,7 +277,7 @@
 
     .textpanel{
       grid-column:span 12;
-      background:rgba(255,255,255,.80);
+      background:rgba(255,255,255,.78);
       border:1px solid rgba(15,23,42,.10);
       border-radius:var(--radius);
       padding:16px;
@@ -293,7 +289,6 @@
     .textpanel b{color:rgba(15,23,42,.92)}
     .textpanel a{color:rgba(15,23,42,.92);text-decoration:underline}
 
-    /* Footer */
     footer{
       margin-top:22px;padding:22px 0 34px;border-top:1px solid var(--line);
       color:var(--muted);font-size:12px;
@@ -302,13 +297,11 @@
     .foot a{color:var(--muted)}
     .foot a:hover{color:rgba(15,23,42,.92)}
 
-    /* Cookie */
     .cookie{
       position:fixed;left:14px;right:14px;bottom:14px;z-index:200;
       border:1px solid rgba(15,23,42,.10);
-      background:rgba(255,255,255,.90);
+      background:rgba(255,255,255,.88);
       backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
       border-radius:22px;
       box-shadow:var(--shadow2);
       padding:14px;
@@ -316,21 +309,24 @@
     }
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
-    .cookie a{color:rgba(15,23,42,.92);text-decoration:underline}
 
-    /* Responsive */
+    /* RESPONSIVE: keep hero side-by-side on mobile */
     @media (max-width: 980px){
       .brand{display:none}
       .nav .wrap{justify-content:center}
-      .hero-grid{grid-template-columns:1fr}
-      .hero-art{min-height:260px}
       .card{grid-column:span 6}
+      .hero-grid{grid-template-columns: 1fr 0.95fr; gap:14px; padding:18px;}
+      .hero-art{min-height:260px}
     }
-    @media (max-width: 560px){
-      .wrap{padding:18px}
-      .hero{padding:18px 0 8px}
-      .hero-grid{padding:16px}
-      h1{font-size:clamp(30px,9vw,44px)}
+    @media (max-width: 720px){
+      /* Two columns even on phone: text | image */
+      .hero-grid{grid-template-columns: 1.1fr .9fr; gap:12px; padding:16px;}
+      .hero-art img{width:min(360px, 100%)}
+    }
+    @media (max-width: 520px){
+      /* If too narrow, stack but keep image immediately after text */
+      .hero-grid{grid-template-columns:1fr; }
+      .hero-art{min-height:220px; margin-top:6px;}
       .hero-art img{width:min(420px, 100%)}
       .card{grid-column:span 12}
     }
@@ -398,8 +394,7 @@
           </div>
 
           <div class="hero-art" aria-label="Hero image">
-            <!-- ✅ FIXED: file name matches your repo -->
-            <img src="./hero-transparent.jpg" alt="A. Pereira — Digital services" loading="eager" decoding="async">
+            <img src="./hero-transparent.png" alt="A. Pereira — Digital services" loading="eager" decoding="async">
           </div>
         </div>
       </div>
@@ -504,7 +499,7 @@
           <h3>Cookies</h3>
           <p>
             Essential storage is used to remember cookie preferences.
-            Optional measurement scripts load only if you accept.
+            Optional measurement scripts load only if you accept (if enabled).
           </p>
         </div>
 
@@ -681,4 +676,4 @@ Thanks!`
     }
   </script>
 </body>
-            </html>
+</html>
