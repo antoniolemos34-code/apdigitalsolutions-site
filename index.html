@@ -95,36 +95,57 @@
       backdrop-filter:blur(10px);
     }
 
-    /* TOP LOGO (full width, no box) */
-    .toplogo{
-      padding:18px 0 0;
+    /* HERO HEADER (FULL-BLEED + TEXT OVERLAY) */
+    .herohead{
+      position:relative;
+      min-height:520px;
+      overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,.10);
     }
-    .toplogo .wrap{padding-top:10px;padding-bottom:10px}
-    .toplogo img{
-      width:100%;
-      max-height:240px;
-      height:auto;
-      display:block;
-      object-fit:contain;
-      border-radius:18px;
-      /* subtle polish without a "box" feel */
-      filter:saturate(1.02) contrast(1.02);
-      box-shadow:0 18px 70px rgba(0,0,0,.35);
+    .herohead::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(900px 520px at 18% 10%, rgba(124,92,255,.18), transparent 60%),
+        radial-gradient(900px 520px at 85% 18%, rgba(34,211,238,.12), transparent 60%);
+      pointer-events:none;
+      z-index:1;
+    }
+    .herohead img{
+      position:absolute;inset:0;
+      width:100%;height:100%;
+      object-fit:cover;
+      transform:scale(1.03);
+      filter:saturate(1.05) contrast(1.05);
+      opacity:.98;
+    }
+    /* Dark fade for readability (premium look) */
+    .herohead .fade{
+      position:absolute;inset:0;
+      background:
+        linear-gradient(180deg, rgba(7,10,18,.25) 0%, rgba(7,10,18,.70) 62%, rgba(7,10,18,1) 100%),
+        radial-gradient(900px 420px at 20% 20%, rgba(0,0,0,.15), transparent 65%);
+      z-index:2;
+    }
+    .herohead .content{
+      position:relative;
+      z-index:3;
     }
 
-    /* NAV */
+    /* NAV (premium, not giant pills) */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter: blur(14px);
-      background: rgba(7,10,18,.62);
-      border-bottom:1px solid var(--line);
+      background: rgba(7,10,18,.55);
+      border-bottom:1px solid rgba(255,255,255,.10);
     }
     .nav .wrap{
       display:flex;align-items:center;justify-content:space-between;gap:12px;
       padding-top:14px;padding-bottom:14px;
     }
     .brand{
-      display:flex;align-items:center;gap:10px;min-width:180px;
+      display:flex;align-items:center;gap:10px;
+      min-width:200px;
     }
     .brand-badge{
       width:34px;height:34px;border-radius:12px;
@@ -134,104 +155,106 @@
     }
     .brand small{display:block;color:var(--muted2);font-size:11px;margin-top:2px}
     .brand b{font-size:13px;letter-spacing:.2px}
+
     .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:11px 16px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:800;font-size:13px;
-      cursor:pointer;transition:.2s ease;white-space:nowrap;
-      box-shadow:0 10px 30px rgba(0,0,0,.22);
+    .linkbtn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color:rgba(234,240,255,.86);
+      font-weight:750;font-size:13px;
+      transition:.2s ease;
+      white-space:nowrap;
     }
-    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.22)}
-    .btn.primary{
+    .linkbtn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.20)}
+    .linkbtn.primary{
       background:linear-gradient(135deg,var(--brand1),var(--brand2));
-      border-color:transparent;color:#061016;
+      border-color:transparent;
+      color:#061016;
       box-shadow:0 18px 55px rgba(124,92,255,.18);
     }
 
-    /* HERO */
-    .hero{padding:16px 0 10px}
-    .hero-shell{
-      position:relative;
-      border-radius:28px;
-      border:1px solid rgba(255,255,255,.12);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-    .hero-shell::before{
-      content:"";
-      position:absolute;inset:-40px;
-      background: radial-gradient(900px 420px at 18% 18%, rgba(124,92,255,.14), transparent 60%),
-                  radial-gradient(900px 420px at 85% 30%, rgba(34,211,238,.11), transparent 60%);
-      pointer-events:none;
-    }
-
-    .hero-grid{
-      position:relative;
-      display:grid;
-      grid-template-columns:1fr;
-      gap:18px;
-      padding:18px;
-      align-items:stretch;
-    }
-
+    /* HERO COPY (overlay) */
     .hero-copy{
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(7,10,18,.35);
-      backdrop-filter: blur(10px);
-      padding:22px;
-      box-shadow:var(--shadow2);
+      padding:44px 0 24px;
     }
-
+    .hero-copy .wrap{
+      display:grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap:18px;
+      align-items:end;
+    }
     .kicker{
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
       padding:8px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.06);
-      color:var(--muted);font-size:12px;
+      color:rgba(234,240,255,.78);
+      font-size:12px;
       letter-spacing:.2px;
+      backdrop-filter: blur(10px);
     }
     .kdot{width:7px;height:7px;border-radius:999px;background:rgba(234,240,255,.30)}
-    .ksep{opacity:.55}
+    .ksep{opacity:.6}
 
     h1{
       margin:14px 0 10px;
-      font-size:clamp(32px,5vw,56px);
-      line-height:1.05;
-      letter-spacing:-.9px;
-      text-shadow:0 10px 40px rgba(0,0,0,.55);
+      font-size:clamp(34px,5vw,62px);
+      line-height:1.03;
+      letter-spacing:-1px;
+      text-shadow:0 16px 60px rgba(0,0,0,.60);
     }
     .lead{
       margin:0;
-      color:rgba(234,240,255,.74);
+      color:rgba(234,240,255,.78);
       font-size:16px;
       line-height:1.75;
       max-width:70ch;
     }
-    .lead strong{color:var(--text);font-weight:850}
+    .lead strong{color:var(--text);font-weight:900}
 
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
 
     .sublegal{
-      margin-top:14px;
+      margin-top:16px;
       padding:12px 14px;
       border-radius:18px;
       border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      color:rgba(234,240,255,.70);
+      background:rgba(7,10,18,.45);
+      backdrop-filter: blur(10px);
+      color:rgba(234,240,255,.74);
       font-size:12px;
       line-height:1.55;
+      box-shadow:0 18px 80px rgba(0,0,0,.35);
     }
     .sublegal b{color:var(--text)}
     .sublegal a{text-decoration:underline}
 
+    /* Small premium card on the right (optional, looks top) */
+    .hero-mini{
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(7,10,18,.42);
+      backdrop-filter: blur(12px);
+      padding:16px;
+      box-shadow:0 26px 90px rgba(0,0,0,.45);
+    }
+    .hero-mini b{display:block;font-size:14px}
+    .hero-mini small{display:block;margin-top:6px;color:rgba(234,240,255,.72);font-size:12px;line-height:1.45}
+    .pillrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color:rgba(234,240,255,.80);
+      font-size:12px;font-weight:750;
+    }
+
     /* Sections */
+    main{position:relative;z-index:3}
     section{padding:18px 0}
     .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:10px 0 12px}
     .section-title h2{margin:0;font-size:20px;letter-spacing:-.2px}
@@ -292,21 +315,20 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
     .cookie .btns{display:flex;gap:10px;flex-wrap:wrap}
-    .btn.small{padding:10px 12px;font-size:13px;box-shadow:none}
 
     @media (max-width: 980px){
-      .card{grid-column:span 6}
       .brand{display:none}
       .nav .wrap{justify-content:center}
-      .toplogo img{max-height:210px}
+      .herohead{min-height:520px}
+      .hero-copy .wrap{grid-template-columns:1fr}
+      .hero-mini{display:none}
     }
     @media (max-width: 560px){
       .wrap{padding:18px}
-      .hero-grid{padding:14px;gap:14px}
-      .hero-copy{padding:18px}
-      .btn{padding:11px 14px}
+      .hero-copy{padding:36px 0 16px}
+      .linkbtn{padding:10px 12px}
       .card{grid-column:span 12}
-      .toplogo img{max-height:170px;border-radius:16px}
+      .herohead{min-height:500px}
     }
   </style>
 </head>
@@ -314,80 +336,86 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- FULL-WIDTH TOP LOGO (outside any box) -->
-  <div class="toplogo" aria-label="Top logo">
-    <div class="wrap">
-      <img
-        src="./logo-hero.jpg"
-        alt="Antonio Pereira — logo"
-        loading="eager"
-        decoding="async"
-      />
-    </div>
-  </div>
+  <!-- FULL-BLEED HERO IMAGE (TOP) -->
+  <header class="herohead" aria-label="Hero">
+    <img src="./logo-hero.jpg" alt="Antonio Pereira — Your Digital Assistant" loading="eager" decoding="async">
+    <div class="fade" aria-hidden="true"></div>
 
-  <header class="nav">
-    <div class="wrap">
-      <div class="brand" aria-label="Brand">
-        <div class="brand-badge" aria-hidden="true"></div>
-        <div>
-          <b>Antonio Pereira</b>
-          <small>Freelance Digital Services</small>
+    <!-- Sticky nav sits above and feels premium -->
+    <div class="nav">
+      <div class="wrap">
+        <div class="brand" aria-label="Brand">
+          <div class="brand-badge" aria-hidden="true"></div>
+          <div>
+            <b>Antonio Pereira</b>
+            <small>Freelance Digital Services</small>
+          </div>
         </div>
-      </div>
 
-      <nav class="nav-actions" aria-label="Primary">
-        <a class="btn" href="#services">Services</a>
-        <a class="btn" href="#process">Process</a>
-        <a class="btn" href="#privacy">Privacy</a>
-        <a class="btn" href="#terms">Terms</a>
-        <a class="btn primary" href="#contact">Email me</a>
-      </nav>
+        <nav class="nav-actions" aria-label="Primary">
+          <a class="linkbtn" href="#services">Services</a>
+          <a class="linkbtn" href="#process">Process</a>
+          <a class="linkbtn" href="#privacy">Privacy</a>
+          <a class="linkbtn" href="#terms">Terms</a>
+          <a class="linkbtn primary" href="#contact">Email me</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Overlay copy -->
+    <div class="content hero-copy">
+      <div class="wrap">
+        <div>
+          <span class="kicker">
+            <span class="kdot"></span>Freelance Digital Services
+            <span class="ksep">•</span> Jersey &amp; UK
+          </span>
+
+          <h1>Premium websites.<br>Clean setup. Clear contact.</h1>
+
+          <p class="lead">
+            I design and build <strong>fast, mobile-first websites</strong> and set up
+            <strong>professional domain email</strong> so your business looks credible from day one.
+            <span style="display:block;margin-top:10px;color:rgba(234,240,255,.64);font-size:13px;">
+              Results can vary. I focus on best-practice setup and a polished user experience.
+            </span>
+          </p>
+
+          <div class="actions">
+            <a class="linkbtn primary" href="#contact">Request a free review</a>
+            <a class="linkbtn" href="#services">View services</a>
+          </div>
+
+          <div class="sublegal" aria-label="Business details">
+            <b>Business details</b><br>
+            Operated by <b>Antonio Pereira</b> (<b>freelance</b>).<br>
+            <b>Base:</b> Jersey, Channel Islands.<br>
+            <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
+            <b>Enquiries:</b> <a id="emailLegalTop" href="#">hello@antoniopereiraweb.co.uk</a>
+            <div style="margin-top:10px;color:rgba(234,240,255,.58);font-size:11px;">
+              This website provides general information and does not constitute legal or tax advice.
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-mini" aria-label="Highlights">
+          <b>Professional essentials</b>
+          <small>Clear scope, clean delivery, email-only contact — simple and credible.</small>
+          <div class="pillrow">
+            <span class="pill">⚡ Fast setup</span>
+            <span class="pill">📱 Mobile-first</span>
+            <span class="pill">✉️ Domain email</span>
+            <span class="pill">🧾 Clear terms</span>
+          </div>
+          <small style="margin-top:12px;opacity:.92">
+            Email once — I reply with next steps and options.
+          </small>
+        </aside>
+      </div>
     </div>
   </header>
 
   <main id="main" class="wrap">
-
-    <section class="hero" id="top">
-      <div class="hero-shell">
-        <div class="hero-grid">
-
-          <div class="hero-copy">
-            <span class="kicker">
-              <span class="kdot"></span>Freelance Digital Services
-              <span class="ksep">•</span> Jersey &amp; UK
-            </span>
-
-            <h1>Premium websites.<br>Clean setup. Clear contact.</h1>
-
-            <p class="lead">
-              I design and build <strong>fast, mobile-first websites</strong> and set up
-              <strong>professional domain email</strong> so your business looks credible from day one.
-              <span style="display:block;margin-top:10px;color:rgba(234,240,255,.62);font-size:13px;">
-                Results can vary. I focus on best-practice setup and a polished user experience.
-              </span>
-            </p>
-
-            <div class="actions">
-              <a class="btn primary" href="#contact">Request a free review</a>
-              <a class="btn" href="#services">View services</a>
-            </div>
-
-            <div class="sublegal" aria-label="Business details">
-              <b>Business details</b><br>
-              Operated by <b>Antonio Pereira</b> (<b>freelance</b>).<br>
-              <b>Base:</b> Jersey, Channel Islands.<br>
-              <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
-              <b>Enquiries:</b> <a id="emailLegalTop" href="#">hello@antoniopereiraweb.co.uk</a>
-              <div style="margin-top:10px;color:rgba(234,240,255,.58);font-size:11px;">
-                This website provides general information and does not constitute legal or tax advice.
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
 
     <section id="contact">
       <div class="section-title">
@@ -403,7 +431,7 @@
           <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — Antonio Pereira</span>
           <span style="display:block;margin-top:10px;"><b>Include:</b> business type • website (if any) • what you need • deadline • Jersey/UK</span>
           <div style="margin-top:14px;">
-            <a class="btn primary" id="emailBtn" href="#">Email me</a>
+            <a class="linkbtn primary" id="emailBtn" href="#">Email me</a>
           </div>
         </div>
       </div>
@@ -584,8 +612,8 @@
         <a href="#privacy" style="text-decoration:underline;">Privacy & Cookies</a>
       </p>
       <div class="btns">
-        <button class="btn small" id="cookieReject" type="button">Reject</button>
-        <button class="btn small primary" id="cookieAccept" type="button">Accept</button>
+        <button class="linkbtn" id="cookieReject" type="button">Reject</button>
+        <button class="linkbtn primary" id="cookieAccept" type="button">Accept</button>
       </div>
     </div>
   </div>
@@ -652,4 +680,4 @@
     }
   </script>
 </body>
-                </html>
+</html>
