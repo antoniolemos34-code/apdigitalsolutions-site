@@ -54,8 +54,6 @@
     :root{
       --bg:#F5F7FB;
       --bg2:#EEF2F7;
-      --card:rgba(255,255,255,.92);
-      --card2:rgba(255,255,255,.78);
       --text:#0B1220;
       --muted:#475569;
       --muted2:#64748B;
@@ -166,7 +164,6 @@
       z-index:0;
     }
 
-    /* Mobile-first stack */
     .hero-stack{
       position:relative;z-index:1;
       display:grid;
@@ -175,54 +172,48 @@
       padding:16px;
     }
 
-    /* ✅ IMAGE BOX (image is BACKGROUND + overlay card inside it) */
+    /* ✅ Image box with small info in the LOGO area (top-left) */
     .hero-media{
       border-radius:24px;
       border:1px solid rgba(11,18,32,.10);
       box-shadow: 0 18px 55px rgba(2,6,23,.08);
       overflow:hidden;
       position:relative;
-      min-height:420px;
-
-      /* Cover + position so the person stays visible */
+      min-height:480px;
       background:
-        url("./hero-transparent.jpg") 75% 35% / cover no-repeat,
+        url("./hero-transparent.jpg") 78% 30% / cover no-repeat,
         rgba(11,18,32,.03);
     }
 
-    /* Soft highlight behind the overlay area only (not washing whole image) */
+    /* Soft “lift” under the info area only (so text stays readable) */
     .hero-media::before{
       content:"";
       position:absolute;
       inset:0;
-      background: radial-gradient(900px 420px at 15% 90%, rgba(255,255,255,.78), transparent 60%);
+      background:
+        radial-gradient(900px 520px at 18% 28%, rgba(255,255,255,.78), transparent 62%);
       pointer-events:none;
       z-index:1;
     }
 
-    .hero-overlay{
+    /* Info panel positioned where the logo is (top-left) */
+    .hero-info-in-image{
       position:absolute;
-      inset:0;
-      display:flex;
-      align-items:flex-end;
-      justify-content:flex-start;
-      padding:14px;
       z-index:2;
-    }
-
-    .hero-overlay-inner{
-      width:min(560px, 100%);
-      border-radius:20px;
+      left: clamp(14px, 3vw, 22px);
+      top: clamp(14px, 3vw, 22px);
+      width: min(520px, calc(100% - 28px));
+      padding: 12px 12px;
+      border-radius:18px;
       border:1px solid rgba(11,18,32,.10);
-      background: rgba(255,255,255,.92);
-      box-shadow: 0 16px 44px rgba(2,6,23,.12);
-      padding:14px;
+      background: rgba(255,255,255,.86);
       backdrop-filter: blur(10px);
+      box-shadow: 0 16px 44px rgba(2,6,23,.10);
     }
 
     .id-top{display:flex;gap:12px;align-items:center}
     .id-logo{
-      width:46px;height:46px;border-radius:18px;
+      width:44px;height:44px;border-radius:18px;
       background: linear-gradient(135deg, rgba(79,70,229,.18), rgba(6,182,212,.14));
       border:1px solid rgba(11,18,32,.10);
       flex:0 0 auto;
@@ -376,7 +367,7 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:rgba(11,18,32,.78);font-size:12px;max-width:85ch}
 
-    /* Desktop layout */
+    /* Desktop */
     @media (min-width: 980px){
       .hero-stack{
         grid-template-columns: 1.05fr .95fr;
@@ -385,9 +376,9 @@
         padding:18px;
       }
       .wrap{padding:18px}
-      .hero-media{min-height:520px}
-      .hero-overlay{padding:18px}
-      .hero-overlay-inner{width:min(540px, 92%)}
+      .hero-media{min-height:560px}
+      /* keep info in the logo area on desktop */
+      .hero-info-in-image{width:min(520px, 92%)}
     }
 
     @media (max-width: 980px){
@@ -398,8 +389,7 @@
     @media (max-width: 520px){
       .card{grid-column:span 12}
       .wrap{padding:16px}
-      .hero-media{min-height:460px}
-      .hero-overlay{padding:12px}
+      .hero-media{min-height:520px}
     }
   </style>
 </head>
@@ -434,30 +424,28 @@
       <div class="shell">
         <div class="hero-stack">
 
-          <!-- ✅ LEFT: hero image with overlay info INSIDE -->
+          <!-- ✅ TOP: image inside the box + info inside the image (logo area) -->
           <div class="hero-media" aria-label="Hero image">
-            <div class="hero-overlay" aria-label="Intro card inside hero image">
-              <div class="hero-overlay-inner">
-                <div class="id-top">
-                  <div class="id-logo" aria-hidden="true"></div>
-                  <div class="id-text">
-                    <b>A. Pereira</b>
-                    <small>Premium websites &amp; professional business email</small>
-                  </div>
+            <div class="hero-info-in-image" aria-label="Intro inside hero image">
+              <div class="id-top">
+                <div class="id-logo" aria-hidden="true"></div>
+                <div class="id-text">
+                  <b>A. Pereira</b>
+                  <small>Premium websites &amp; professional business email</small>
                 </div>
+              </div>
 
-                <p class="id-desc">
-                  I help businesses and individuals with a <b>premium online presence</b>:
-                  fast websites, clear structure, and <b>domain email setup</b> (MX/SPF/DKIM) —
-                  so customers trust you and contact you easily.
-                </p>
+              <p class="id-desc">
+                I help businesses and individuals with a <b>premium online presence</b>:
+                fast websites, clear structure, and <b>domain email setup</b> (MX/SPF/DKIM) —
+                so customers trust you and contact you easily.
+              </p>
 
-                <div class="id-tags" aria-label="Core services">
-                  <span class="tag">Websites</span>
-                  <span class="tag">Business Email</span>
-                  <span class="tag">SEO Basics</span>
-                  <span class="tag">Support</span>
-                </div>
+              <div class="id-tags" aria-label="Core services">
+                <span class="tag">Websites</span>
+                <span class="tag">Business Email</span>
+                <span class="tag">SEO Basics</span>
+                <span class="tag">Support</span>
               </div>
             </div>
           </div>
@@ -521,8 +509,8 @@
                 This website provides general information and does not constitute legal or tax advice.
               </div>
             </div>
-
           </div>
+
         </div>
       </div>
     </section>
@@ -739,13 +727,8 @@
   </div>
 
   <script>
-    // Active emails (use these now)
     const ENQUIRIES_EMAIL = "info@antoniopereira.org";
     const SUPPORT_EMAIL   = "support@antoniopereira.org";
-
-    // Future (when you activate Zoho for .co.uk)
-    // const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
-    // const SUPPORT_EMAIL   = "support@antoniopereiraweb.co.uk";
 
     document.getElementById("y").textContent = new Date().getFullYear();
     const enc = encodeURIComponent;
@@ -788,7 +771,6 @@ Thanks!`
       }
     });
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
@@ -800,7 +782,6 @@ Thanks!`
       });
     });
 
-    // Cookie consent (essential storage only)
     const CONSENT_KEY = "ap_cookie_consent_v1";
     const banner = document.getElementById("cookieBanner");
     const acceptBtn = document.getElementById("cookieAccept");
@@ -815,12 +796,9 @@ Thanks!`
     const consent = getConsent();
     if(!consent){ showBanner(); }
 
-    if(acceptBtn){
-      acceptBtn.addEventListener("click", ()=>{ setConsent("accept"); hideBanner(); });
-    }
-    if(rejectBtn){
-      rejectBtn.addEventListener("click", ()=>{ setConsent("reject"); hideBanner(); });
-    }
+    if(acceptBtn) acceptBtn.addEventListener("click", ()=>{ setConsent("accept"); hideBanner(); });
+    if(rejectBtn) rejectBtn.addEventListener("click", ()=>{ setConsent("reject"); hideBanner(); });
+
     if(settingsLink){
       settingsLink.addEventListener("click", (e)=>{
         e.preventDefault();
@@ -831,4 +809,4 @@ Thanks!`
   </script>
 </body>
 </html>
-<!-- force deploy v200 -->
+<!-- force deploy v201 -->
