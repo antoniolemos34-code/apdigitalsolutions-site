@@ -60,7 +60,6 @@
 
       --line:rgba(11,18,32,.10);
       --glass:rgba(255,255,255,.86);
-      --glass2:rgba(255,255,255,.78);
 
       --a1:#4F46E5;
       --a2:#06B6D4;
@@ -142,13 +141,25 @@
       text-decoration:none;
       min-width:240px;
     }
+
+    /* LOGO MARK (uses your uploaded logo-ap.png) */
     .mark{
-      width:40px;height:40px;border-radius:16px;
-      background: linear-gradient(135deg, rgba(79,70,229,.92), rgba(6,182,212,.82));
-      box-shadow: 0 18px 45px rgba(79,70,229,.16);
+      width:44px;height:44px;border-radius:16px;
+      background: rgba(255,255,255,.86);
       border:1px solid rgba(11,18,32,.10);
+      box-shadow: 0 18px 45px rgba(79,70,229,.10);
       flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
     }
+    .mark img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
     .brand b{font-size:14px;letter-spacing:.2px}
     .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
 
@@ -176,15 +187,27 @@
       pointer-events:none;
       z-index:0;
     }
+
+    /* Picture wrapper keeps correct height on all devices */
+    .hero-media{position:relative;z-index:1}
     .hero-image{
-      position:relative;z-index:1;
       display:block;width:100%;
       height:auto;
+      background: rgba(11,18,32,.03);
+    }
+    /* Default (desktop) crop */
+    .hero-image.desktop{
       aspect-ratio: 16 / 9;
       object-fit: cover;
       object-position: 70% 30%;
-      background: rgba(11,18,32,.03);
     }
+    /* Mobile crop uses separate file + vertical ratio */
+    .hero-image.mobile{
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 72% 22%;
+    }
+
     .hero-body{
       position:relative;z-index:1;
       padding:20px 16px 18px;
@@ -541,6 +564,7 @@
     .drawer-open{display:block}
     body.lock{overflow:hidden}
 
+    /* RESPONSIVE */
     @media (max-width: 980px){
       .brand{display:none}
       .nav{justify-content:space-between}
@@ -549,13 +573,11 @@
       .card{grid-column:span 6}
       .tcard{grid-column:span 12}
       .pcard{grid-column:span 12}
-      .hero-image{object-position: 74% 30%;}
       .float-cta{display:flex}
     }
     @media (max-width: 520px){
       .card{grid-column:span 12}
       .wrap{padding:16px}
-      .hero-image{aspect-ratio: 4 / 5; object-position: 72% 22%;}
     }
   </style>
 </head>
@@ -567,7 +589,9 @@
     <div class="wrap">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Brand">
-          <div class="mark" aria-hidden="true"></div>
+          <div class="mark" aria-hidden="true">
+            <img src="./logo-ap.png" alt="A. Pereira logo" loading="eager" decoding="async">
+          </div>
           <div>
             <b>A. Pereira</b>
             <small>Premium web design • Business email • Jersey & UK</small>
@@ -586,7 +610,7 @@
             <a class="btn primary" href="#contact">Get a free review</a>
           </div>
 
-          <!-- Mobile nav (clean + compact) -->
+          <!-- Mobile nav -->
           <div class="nav-mobile">
             <button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuDrawer" aria-expanded="false">Menu</button>
             <a class="btn primary" href="#contact" id="topCta">Get a free review</a>
@@ -601,7 +625,9 @@
   <div class="drawer" id="menuDrawer" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="drawer-head">
       <div class="drawer-title">
-        <div class="mark" style="width:34px;height:34px;border-radius:14px" aria-hidden="true"></div>
+        <div class="mark" style="width:36px;height:36px;border-radius:14px" aria-hidden="true">
+          <img src="./logo-ap.png" alt="A. Pereira logo" loading="lazy" decoding="async">
+        </div>
         <div>
           <b>A. Pereira</b>
           <small>Jersey & UK</small>
@@ -632,7 +658,24 @@
     <!-- HERO -->
     <section class="hero reveal" id="top">
       <div class="shell">
-        <img class="hero-image" src="./transparent-hero.jpg" alt="A. Pereira — Premium web design & professional domain email (Jersey & UK)" loading="eager" decoding="async" />
+        <!-- ✅ Desktop vs Mobile HERO (separate files) -->
+        <div class="hero-media" aria-label="Hero banner">
+          <picture>
+            <!-- Mobile image -->
+            <source media="(max-width: 520px)" srcset="./transparent-hero-mobile.jpg">
+            <!-- Tablet uses desktop hero (still looks good) -->
+            <source media="(max-width: 980px)" srcset="./transparent-hero.jpg">
+            <!-- Default desktop -->
+            <img
+              class="hero-image desktop"
+              id="heroImg"
+              src="./transparent-hero.jpg"
+              alt="A. Pereira — Premium web design & professional domain email (Jersey & UK)"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+        </div>
 
         <div class="hero-body">
           <span class="pill"><span class="dot"></span> Freelance Digital Services <span class="sep">•</span> Jersey &amp; UK</span>
@@ -789,7 +832,7 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS (REAL, no fake quotes/ratings) -->
+    <!-- TESTIMONIALS -->
     <section id="testimonials" class="reveal">
       <div class="section-title">
         <div>
@@ -1230,8 +1273,18 @@ Thanks!`
         closeDrawer();
       });
     });
+
+    // ===== Hero class switch (ensures correct aspect ratio styles) =====
+    const heroImg = document.getElementById("heroImg");
+    function setHeroClass(){
+      if(!heroImg) return;
+      const isMobile = window.matchMedia("(max-width: 520px)").matches;
+      heroImg.classList.toggle("mobile", isMobile);
+      heroImg.classList.toggle("desktop", !isMobile);
+    }
+    setHeroClass();
+    window.addEventListener("resize", setHeroClass, { passive:true });
   </script>
 </body>
 </html>
-<!-- force deploy v300 -->
-```0
+<!-- force deploy v400 -->
