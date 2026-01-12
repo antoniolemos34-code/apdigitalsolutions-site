@@ -10,7 +10,7 @@
   <meta name="description" content="Premium mobile-first websites, WhatsApp contact setup, and domain business email (e.g. you@yourbusiness.com). Operated by Antonio Pereira (sole trader), Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <!-- Canonical (NEW DOMAIN) -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Open Graph -->
@@ -29,7 +29,7 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
-  <!-- Structured data (sole trader identity) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -59,7 +59,7 @@
   <style>
     :root{
       --bg:#070A12;
-      --panel:rgba(255,255,255,.05);
+      --panel:rgba(255,255,255,.06);
       --panel2:rgba(255,255,255,.03);
       --text:#EAF0FF;
       --muted:rgba(234,240,255,.72);
@@ -70,9 +70,11 @@
       --ok:#34D399;
       --warn:#FBBF24;
       --shadow:0 18px 60px rgba(0,0,0,.45);
+      --shadow2:0 26px 90px rgba(0,0,0,.55);
       --radius:22px;
       --max:1120px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -89,9 +91,7 @@
     a{color:inherit;text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:24px}
 
-    .skip{
-      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
-    }
+    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{
       position:fixed;left:14px;top:14px;width:auto;height:auto;
       padding:10px 12px;border-radius:12px;z-index:9999;
@@ -100,7 +100,7 @@
       backdrop-filter:blur(10px);
     }
 
-    /* Nav */
+    /* NAV */
     .nav{
       position:sticky;top:0;z-index:100;
       backdrop-filter:blur(12px);
@@ -115,9 +115,10 @@
       border:1px solid rgba(255,255,255,.14);
       background:rgba(255,255,255,.04);
       box-shadow:0 22px 55px rgba(124,92,255,.22), inset 0 0 0 1px rgba(255,255,255,.06);
+      transition:.2s ease;
     }
+    .brand:hover{transform:translateY(-1px);background:rgba(255,255,255,.06)}
 
-    /* LOGO (BIGGER) */
     .logoWrap{
       width:72px;height:72px;border-radius:22px;
       display:grid;place-items:center;
@@ -128,10 +129,8 @@
       flex:0 0 72px;
     }
     .logoWrap img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+      width:100%;height:100%;
+      object-fit:cover;display:block;
       transform:scale(1.06);
     }
 
@@ -140,6 +139,7 @@
     .brand .name span{font-size:12px;color:var(--muted);margin-top:6px}
 
     .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
     .icon-btn{
       width:46px;height:46px;border-radius:999px;
       display:grid;place-items:center;
@@ -155,31 +155,102 @@
       padding:12px 18px;border-radius:999px;
       border:1px solid rgba(255,255,255,.16);
       background:rgba(255,255,255,.06);
-      color:var(--text);font-weight:700;font-size:14px;
+      color:var(--text);font-weight:800;font-size:14px;
       cursor:pointer;transition:.2s ease;white-space:nowrap;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
     }
     .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.26)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand1),var(--brand2));border-color:transparent;color:#071018}
+    .btn.primary{
+      background:linear-gradient(135deg,var(--brand1),var(--brand2));
+      border-color:transparent;color:#061016;
+      box-shadow:0 18px 55px rgba(124,92,255,.22);
+    }
     .btn.primary:hover{filter:brightness(1.03)}
-    .btn.ok{background:linear-gradient(135deg,var(--ok),rgba(34,211,238,.95));border-color:transparent;color:#061016}
+    .btn.ok{
+      background:linear-gradient(135deg,var(--ok),rgba(34,211,238,.95));
+      border-color:transparent;color:#061016;
+      box-shadow:0 18px 55px rgba(52,211,153,.18);
+    }
 
-    /* Hero */
+    /* HERO */
     .hero{position:relative;padding:54px 0 10px}
     .hero::before{
       content:"";position:absolute;inset:-22px -18px -22px -18px;
-      background:radial-gradient(900px 520px at 25% 15%, rgba(0,0,0,.48), rgba(0,0,0,.70));
+      background:radial-gradient(900px 520px at 25% 15%, rgba(0,0,0,.48), rgba(0,0,0,.72));
       border-radius:28px;pointer-events:none;
     }
     .hero > *{position:relative;z-index:1}
 
     .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:16px;align-items:stretch}
+
     .panel{
       background:linear-gradient(180deg,var(--panel),var(--panel2));
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
+
     .hero-left{padding:26px}
+
+    /* ✅ TOP VISUAL (logo + advertising image) */
+    .hero-visual{
+      display:grid;
+      grid-template-columns: 82px 1fr;
+      gap:14px;
+      align-items:stretch;
+      margin-bottom:16px;
+    }
+    .hero-visual .mini-logo{
+      width:82px;height:82px;border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.18);
+      background:linear-gradient(135deg, rgba(124,92,255,.18), rgba(34,211,238,.10));
+      box-shadow:var(--shadow2);
+      display:grid;place-items:center;
+    }
+    .hero-visual .mini-logo img{
+      width:100%;height:100%;object-fit:cover;display:block;
+      transform:scale(1.05);
+    }
+    .hero-visual .ad{
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow2);
+      position:relative;
+    }
+    .hero-visual .ad::after{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(600px 220px at 20% 10%, rgba(124,92,255,.14), transparent 50%),
+        radial-gradient(600px 220px at 80% 30%, rgba(34,211,238,.10), transparent 55%);
+      pointer-events:none;
+      mix-blend-mode:screen;
+      opacity:.55;
+    }
+    .hero-visual .ad img{
+      width:100%;height:100%;
+      display:block;
+      object-fit:cover;
+      aspect-ratio: 16 / 9;
+      transform:scale(1.01);
+    }
+    .hero-visual .ad-badge{
+      position:absolute;
+      left:12px; top:12px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(7,10,18,.55);
+      backdrop-filter:blur(10px);
+      color:rgba(234,240,255,.86);
+      font-size:12px;
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    .spark{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--brand1),var(--brand2))}
+
     .kicker{
       display:inline-flex;align-items:center;gap:10px;
       padding:8px 12px;border-radius:999px;
@@ -190,10 +261,11 @@
     .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2)}
     .dot.ok{background:var(--ok)}
     .dot.warn{background:var(--warn)}
+
     h1{
       margin:14px 0 10px;
       font-size:clamp(32px,4.8vw,54px);
-      line-height:1.06;letter-spacing:-.6px;
+      line-height:1.06;letter-spacing:-.7px;
       text-shadow:0 10px 40px rgba(0,0,0,.55);
     }
     .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:72ch}
@@ -242,10 +314,11 @@
     /* Right form */
     .hero-right{padding:18px}
     .formbox{
-      background:rgba(11,15,25,.55);
+      background:rgba(11,15,25,.58);
       border:1px solid var(--line);
       border-radius:18px;
       padding:16px;height:100%;
+      box-shadow:var(--shadow2);
     }
     .badge{
       display:inline-flex;align-items:center;gap:8px;
@@ -287,7 +360,9 @@
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:16px;
+      transition:.2s ease;
     }
+    .card:hover{transform:translateY(-2px);background:rgba(255,255,255,.055)}
     .card h3{margin:10px 0 6px;font-size:14px}
     .card p{margin:0;color:var(--muted);font-size:13px}
     .ic{
@@ -349,12 +424,13 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:var(--muted);font-size:12px;max-width:85ch}
     .cookie .btns{display:flex;gap:10px;flex-wrap:wrap}
-    .btn.small{padding:10px 12px;font-size:13px}
+    .btn.small{padding:10px 12px;font-size:13px;box-shadow:none}
 
     @media (max-width: 980px){
       .grid{grid-template-columns:1fr}
       .card{grid-column:span 6}
     }
+
     @media (max-width: 560px){
       .wrap{padding:18px}
       .hero{padding:42px 0 6px}
@@ -365,6 +441,18 @@
       .card{grid-column:span 12}
       .brand .name{display:none}
       .logoWrap{width:60px;height:60px;border-radius:18px;flex-basis:60px}
+
+      /* ✅ Mobile hero visual becomes stacked and big */
+      .hero-visual{
+        grid-template-columns: 1fr;
+        gap:12px;
+      }
+      .hero-visual .mini-logo{
+        width:74px;height:74px;border-radius:20px;
+      }
+      .hero-visual .ad img{
+        aspect-ratio: 16 / 10;
+      }
     }
   </style>
 </head>
@@ -415,6 +503,19 @@
       <div class="grid">
         <div class="panel">
           <div class="hero-left">
+
+            <!-- ✅ NEW: logo + advertising image at top -->
+            <div class="hero-visual" aria-label="Brand and services preview">
+              <div class="mini-logo">
+                <img src="./antonio-pereira-logo.jpg" alt="Antonio Pereira logo">
+              </div>
+
+              <div class="ad">
+                <div class="ad-badge"><span class="spark"></span> AI • Websites • Automation</div>
+                <img src="./hero-ad.jpg" alt="Antonio Pereira services preview">
+              </div>
+            </div>
+
             <span class="kicker">
               <span class="dot ok"></span>Jersey-focused digital support
               <span class="dot warn"></span>Fast replies • Clear steps • No obligation
@@ -704,7 +805,7 @@
   <script>
     // ✅ EDIT ONLY THESE IF YOU EVER NEED TO
     const WHATSAPP_NUMBER_E164 = "447700704591"; // no + sign
-    const BUSINESS_EMAIL = "hello@antoniopereiraweb.co.uk"; // ✅ professional email
+    const BUSINESS_EMAIL = "hello@antoniopereiraweb.co.uk";
 
     // Social links
     const INSTAGRAM_URL = "https://www.instagram.com/apdigitalsolutions.digital?igsh=MXhucHVqNTNiMTBuOA==";
