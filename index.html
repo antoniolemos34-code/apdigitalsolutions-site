@@ -35,7 +35,7 @@
     "name":"A. Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
     "image":"https://antoniopereiraweb.co.uk/transparent-hero.jpg",
-    "description":"Operated by A. Pereira (freelance). Digital services: premium websites, professional domain email setup (MX/SPF/DKIM) and SEO foundations for small businesses in Jersey & the UK.",
+    "description":"Operated by A. Pereira (freelance/sole trader). Digital services: premium websites, professional domain email setup (MX/SPF/DKIM) and SEO foundations for small businesses in Jersey & the UK.",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
@@ -142,7 +142,7 @@
       min-width:240px;
     }
 
-    /* LOGO MARK (uses your uploaded logo-ap.png) */
+    /* LOGO MARK */
     .mark{
       width:44px;height:44px;border-radius:16px;
       background: rgba(255,255,255,.86);
@@ -188,20 +188,17 @@
       z-index:0;
     }
 
-    /* Picture wrapper keeps correct height on all devices */
     .hero-media{position:relative;z-index:1}
     .hero-image{
       display:block;width:100%;
       height:auto;
       background: rgba(11,18,32,.03);
     }
-    /* Default (desktop) crop */
     .hero-image.desktop{
       aspect-ratio: 16 / 9;
       object-fit: cover;
       object-position: 70% 30%;
     }
-    /* Mobile crop uses separate file + vertical ratio */
     .hero-image.mobile{
       aspect-ratio: 4 / 5;
       object-fit: cover;
@@ -599,18 +596,17 @@
         </a>
 
         <nav class="nav-actions" aria-label="Primary">
-          <!-- Desktop nav -->
           <div class="nav-desktop">
             <a class="btn" href="#services">Services</a>
             <a class="btn" href="#portfolio">Portfolio</a>
             <a class="btn" href="#testimonials">Testimonials</a>
             <a class="btn" href="#process">Process</a>
+            <a class="btn" href="#licensing">Licensing</a>
             <a class="btn" href="#privacy">Privacy</a>
             <a class="btn" href="#terms">Terms</a>
             <a class="btn primary" href="#contact">Get a free review</a>
           </div>
 
-          <!-- Mobile nav -->
           <div class="nav-mobile">
             <button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuDrawer" aria-expanded="false">Menu</button>
             <a class="btn primary" href="#contact" id="topCta">Get a free review</a>
@@ -620,7 +616,6 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
   <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
   <div class="drawer" id="menuDrawer" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="drawer-head">
@@ -642,6 +637,7 @@
         <a class="btn" href="#portfolio">Portfolio</a>
         <a class="btn" href="#testimonials">Testimonials</a>
         <a class="btn" href="#process">Process</a>
+        <a class="btn" href="#licensing">Licensing</a>
         <a class="btn" href="#privacy">Privacy</a>
         <a class="btn" href="#terms">Terms</a>
         <a class="btn" href="#contact">Contact</a>
@@ -649,7 +645,7 @@
 
       <div class="drawer-actions">
         <a class="btn primary" href="#contact" id="drawerCta">Get a free review</a>
-        <a class="btn" href="#" id="drawerEmailQuick">Email me</a>
+        <a class="btn" href="#contact" id="drawerEmailQuick">Email me</a>
       </div>
     </div>
   </div>
@@ -658,14 +654,10 @@
     <!-- HERO -->
     <section class="hero reveal" id="top">
       <div class="shell">
-        <!-- ✅ Desktop vs Mobile HERO (separate files) -->
         <div class="hero-media" aria-label="Hero banner">
           <picture>
-            <!-- Mobile image -->
             <source media="(max-width: 520px)" srcset="./transparent-hero-mobile.jpg">
-            <!-- Tablet uses desktop hero (still looks good) -->
             <source media="(max-width: 980px)" srcset="./transparent-hero.jpg">
-            <!-- Default desktop -->
             <img
               class="hero-image desktop"
               id="heroImg"
@@ -678,7 +670,7 @@
         </div>
 
         <div class="hero-body">
-          <span class="pill"><span class="dot"></span> Freelance Digital Services <span class="sep">•</span> Jersey &amp; UK</span>
+          <span class="pill"><span class="dot"></span> Freelance / Sole Trader Services <span class="sep">•</span> Jersey &amp; UK</span>
 
           <h1>Premium web design &amp; business email — built for trust.</h1>
 
@@ -689,27 +681,9 @@
           </p>
 
           <div class="proof" aria-label="Quick proof points">
-            <span class="chip">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <b>Mobile-first</b> by default
-            </span>
-            <span class="chip">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-              <b>Premium look</b> + clear structure
-            </span>
-            <span class="chip">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2"/>
-                <path d="M4 7h16" stroke="currentColor" stroke-width="2"/>
-                <path d="M8 4v3" stroke="currentColor" stroke-width="2"/>
-                <path d="M16 4v3" stroke="currentColor" stroke-width="2"/>
-              </svg>
-              <b>Clear steps</b> — no pressure
-            </span>
+            <span class="chip"><b>Mobile-first</b> by default</span>
+            <span class="chip"><b>Premium look</b> + clear structure</span>
+            <span class="chip"><b>Clear steps</b> — no pressure</span>
           </div>
 
           <div class="points" aria-label="Key benefits">
@@ -743,15 +717,17 @@
 
           <div class="legal reveal" aria-label="Business details">
             <b>Business details</b><br>
-            Operated by <b>A. Pereira</b> (<b>freelance</b>).<br>
+            Operated by <b>A. Pereira</b> (<b>freelance / sole trader</b>).<br>
             <b>Base:</b> Jersey, Channel Islands.<br>
             <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
             <b>Enquiries:</b> <a id="emailLegalTop" href="#">info@antoniopereira.org</a><br>
             <span style="display:block;margin-top:6px;color:rgba(11,18,32,.65);font-size:11px;">
               Support: <a id="supportTop" href="#">support@antoniopereira.org</a>
             </span>
+
             <div style="margin-top:10px;color:rgba(11,18,32,.52);font-size:11px;">
-              This website provides general information and does not constitute legal or tax advice.
+              This website provides general information and does not constitute legal, tax or immigration advice.
+              If you are unsure about business licensing requirements, please check guidance on the Government of Jersey website.
             </div>
           </div>
         </div>
@@ -832,12 +808,12 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- TESTIMONIALS (case-study style, no fake quotes) -->
     <section id="testimonials" class="reveal">
       <div class="section-title">
         <div>
-          <h2>Testimonials</h2>
-          <p>Real projects — presented as verified work delivered (no invented ratings or quotes).</p>
+          <h2>Case Studies</h2>
+          <p>Real projects — listed as delivered work (no invented ratings or quotes).</p>
         </div>
       </div>
 
@@ -848,7 +824,7 @@
               <div class="tlogo" data-initials aria-hidden="true">AT</div>
               <div class="tname">
                 <b>Ajuda Total</b>
-                <small>Project delivered: website</small>
+                <small>Delivered: website</small>
               </div>
             </div>
           </div>
@@ -877,13 +853,13 @@
               <div class="tlogo" data-initials aria-hidden="true">CC</div>
               <div class="tname">
                 <b>Catia Coutinho Holística</b>
-                <small>Project delivered: website</small>
+                <small>Delivered: website</small>
               </div>
             </div>
           </div>
 
           <ul class="tlist" aria-label="Delivered items">
-            <li><span class="k">✓</span><span><b>Premium aesthetic</b> that matches a calm, wellness brand.</span></li>
+            <li><span class="k">✓</span><span><b>Premium aesthetic</b> matched to a calm, wellness brand.</span></li>
             <li><span class="k">✓</span><span><b>Simple navigation</b> with a clear enquiry flow.</span></li>
             <li><span class="k">✓</span><span><b>Mobile-first layout</b> with readable spacing and hierarchy.</span></li>
           </ul>
@@ -926,6 +902,30 @@
       </div>
     </section>
 
+    <!-- LICENSING (Jersey-safe) -->
+    <section id="licensing" class="reveal">
+      <div class="section-title">
+        <div>
+          <h2>Licensing &amp; Compliance (Jersey)</h2>
+          <p>General guidance only — always check the latest rules on the Government of Jersey website.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="panel reveal">
+          <b>Business licence (general note)</b><br>
+          In Jersey, some sole traders may not need a business licence if certain criteria are met (for example: limited hours, only one person working, and the correct residential/employment status).
+          Requirements can change and depend on your situation.<br><br>
+
+          <b>What I do</b><br>
+          I provide digital services (websites, email setup guidance, SEO foundations) and I’ll confirm project scope and payment terms in writing before starting work.<br><br>
+
+          <b>Important</b><br>
+          This page is not legal, immigration or tax advice. If you’re unsure, check official guidance or seek professional advice.
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="reveal">
       <div class="section-title">
@@ -949,7 +949,7 @@
           </div>
 
           <div style="margin-top:12px;color:rgba(11,18,32,.52);font-size:11px;">
-            (Future) Domain email on <b>@antoniopereiraweb.co.uk</b> will be available once activated.
+            (Future) Domain email on <b>@antoniopereiraweb.co.uk</b> can be added once activated.
           </div>
         </div>
       </div>
@@ -968,7 +968,7 @@
         <div class="card reveal" style="grid-column:span 6;">
           <div class="ic">👤</div>
           <h3>Who is responsible</h3>
-          <p>This website is operated by <b>A. Pereira</b> (<b>freelance</b>).<br><br><b>Base:</b> Jersey, Channel Islands.<br><b>Contact:</b> <a id="emailPrivacy" href="#">info@antoniopereira.org</a></p>
+          <p>This website is operated by <b>A. Pereira</b> (<b>freelance / sole trader</b>).<br><br><b>Base:</b> Jersey, Channel Islands.<br><b>Contact:</b> <a id="emailPrivacy" href="#">info@antoniopereira.org</a></p>
         </div>
 
         <div class="card reveal" style="grid-column:span 6;">
@@ -1008,7 +1008,7 @@
       <div class="grid">
         <div class="panel reveal">
           <b>1) Who I am</b><br>
-          This website and services are operated by <b>A. Pereira</b> (<b>freelance</b>), based in <b>Jersey, Channel Islands</b>.<br>
+          This website and services are operated by <b>A. Pereira</b> (<b>freelance / sole trader</b>), based in <b>Jersey, Channel Islands</b>.<br>
           Contact: <a id="emailTerms" href="#">info@antoniopereira.org</a>.
           <br><br>
 
@@ -1054,18 +1054,19 @@
       <div class="foot">
         <div>
           <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
-          <span>Operated by <b>A. Pereira</b> (<b>freelance</b>).</span><br/>
+          <span>Operated by <b>A. Pereira</b> (<b>freelance / sole trader</b>).</span><br/>
           <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereira.org</a></span><br/>
           <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
-            No guarantees of specific business outcomes.
+            This website is for general information only and does not constitute legal, tax or immigration advice.
           </span>
         </div>
 
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#testimonials">Case Studies</a>
           <a href="#process">Process</a>
+          <a href="#licensing">Licensing</a>
           <a href="#privacy">Privacy</a>
           <a href="#terms">Terms</a>
           <a href="#contact">Contact</a>
@@ -1128,12 +1129,12 @@ Thanks!`
     const enquiryMailto = mailtoFor(ENQUIRIES_EMAIL, "Website enquiry — A. Pereira");
     const supportMailto = mailtoFor(SUPPORT_EMAIL, "Support — A. Pereira");
 
-    const enquiryIds = ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailBtn","emailHeroBtn","floatEmailBtn","drawerEmailQuick"];
+    const enquiryIds = ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailBtn","emailHeroBtn","floatEmailBtn"];
     enquiryIds.forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
       el.href = enquiryMailto;
-      if(!["emailBtn","emailHeroBtn","floatEmailBtn","drawerEmailQuick"].includes(id)){
+      if(!["emailBtn","emailHeroBtn","floatEmailBtn"].includes(id)){
         el.textContent = ENQUIRIES_EMAIL;
         el.style.textDecoration = "underline";
       }
@@ -1262,19 +1263,15 @@ Thanks!`
     if(closeBtn) closeBtn.addEventListener("click", closeDrawer);
     if(overlay) overlay.addEventListener("click", closeDrawer);
 
-    // Close on ESC
     window.addEventListener("keydown", (e)=>{
       if(e.key === "Escape" && drawer && drawer.style.display === "block") closeDrawer();
     });
 
-    // Close drawer when a link is clicked (mobile)
     document.querySelectorAll("#menuDrawer a[href^='#']").forEach(a=>{
-      a.addEventListener("click", ()=>{
-        closeDrawer();
-      });
+      a.addEventListener("click", ()=> closeDrawer());
     });
 
-    // ===== Hero class switch (ensures correct aspect ratio styles) =====
+    // ===== Hero class switch =====
     const heroImg = document.getElementById("heroImg");
     function setHeroClass(){
       if(!heroImg) return;
@@ -1287,4 +1284,4 @@ Thanks!`
   </script>
 </body>
 </html>
-<!-- force deploy v400 -->
+<!-- force deploy v401 -->
