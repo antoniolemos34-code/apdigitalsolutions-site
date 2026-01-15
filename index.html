@@ -66,20 +66,15 @@
       --text:#0B1220;
       --muted:#475569;
       --muted2:#64748B;
-
       --line:rgba(11,18,32,.10);
       --glass:rgba(255,255,255,.86);
-
       --a1:#4F46E5;
       --a2:#06B6D4;
-
       --shadow: 0 18px 60px rgba(2,6,23,.10);
       --shadow2: 0 28px 90px rgba(2,6,23,.14);
-
       --r:22px;
       --max:1120px;
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -94,7 +89,6 @@
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
     }
-
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:16px}
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -107,7 +101,6 @@
       text-decoration:none;
     }
 
-    /* Buttons */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:10px 12px;border-radius:999px;
@@ -133,13 +126,11 @@
       border-color:rgba(11,18,32,.10);
       box-shadow:none;
     }
-    /* WhatsApp button (subtle, premium) */
     .btn.wa{
       border-color: rgba(11,18,32,.12);
       background: rgba(255,255,255,.86);
     }
 
-    /* NAV */
     header{
       position:sticky;top:0;z-index:200;
       backdrop-filter: blur(14px);
@@ -155,8 +146,6 @@
       text-decoration:none;
       min-width:240px;
     }
-
-    /* LOGO MARK */
     .mark{
       width:44px;height:44px;border-radius:16px;
       background: rgba(255,255,255,.86);
@@ -167,13 +156,7 @@
       place-items:center;
       overflow:hidden;
     }
-    .mark img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
+    .mark img{width:100%;height:100%;object-fit:cover;display:block}
     .brand b{font-size:14px;letter-spacing:.2px}
     .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
 
@@ -181,7 +164,6 @@
     .nav-desktop{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
     .nav-mobile{display:none;gap:10px;align-items:center;justify-content:flex-end}
 
-    /* HERO */
     .hero{padding:16px 0 12px}
     .shell{
       border-radius:30px;
@@ -201,23 +183,10 @@
       pointer-events:none;
       z-index:0;
     }
-
     .hero-media{position:relative;z-index:1}
-    .hero-image{
-      display:block;width:100%;
-      height:auto;
-      background: rgba(11,18,32,.03);
-    }
-    .hero-image.desktop{
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      object-position: 70% 30%;
-    }
-    .hero-image.mobile{
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: 72% 22%;
-    }
+    .hero-image{display:block;width:100%;height:auto;background: rgba(11,18,32,.03)}
+    .hero-image.desktop{aspect-ratio: 16 / 9;object-fit: cover;object-position: 70% 30%}
+    .hero-image.mobile{aspect-ratio: 4 / 5;object-fit: cover;object-position: 72% 22%}
 
     .hero-body{
       position:relative;z-index:1;
@@ -225,7 +194,6 @@
       display:grid;
       gap:12px;
     }
-
     .pill{
       display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
       padding:8px 12px;border-radius:999px;
@@ -303,8 +271,8 @@
     .legal b{color:rgba(11,18,32,.92)}
     .legal a{color:rgba(11,18,32,.92);text-decoration:underline}
 
-    /* Sections */
     section{padding:18px 0}
+
     .section-title{
       display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
       margin:12px 0 12px
@@ -343,144 +311,22 @@
       line-height:1.8;
       box-shadow:0 16px 44px rgba(2,6,23,.07);
     }
-    .panel b{color:rgba(11,18,32,.92)}
-    .panel a{color:rgba(11,18,32,.92);text-decoration:underline}
 
-    /* Portfolio */
-    .pcard{
-      grid-column:span 6;
-      border-radius:var(--r);
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.86);
-      box-shadow:0 16px 44px rgba(2,6,23,.07);
-      overflow:hidden;
-      transition:.18s ease;
-    }
-    .pcard:hover{transform:translateY(-2px);background:#fff}
-    .pcover{
-      padding:16px;
-      border-bottom:1px solid rgba(11,18,32,.08);
-      background:
-        radial-gradient(560px 300px at 20% 30%, rgba(79,70,229,.10), transparent 60%),
-        radial-gradient(560px 300px at 80% 20%, rgba(6,182,212,.08), transparent 60%),
-        rgba(255,255,255,.70);
-    }
-    .ptop{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .pmeta b{display:block;font-size:14px;letter-spacing:.2px}
-    .pmeta small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-    .pchip{
+    /* Contact extras */
+    .email-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+    .email-tag{
+      display:inline-flex;gap:8px;align-items:center;
       padding:7px 10px;border-radius:999px;
       border:1px solid rgba(11,18,32,.10);
       background:rgba(255,255,255,.80);
       color:rgba(11,18,32,.72);
       font-size:12px;
+      box-shadow:0 10px 26px rgba(2,6,23,.05);
       white-space:nowrap;
     }
-    .pbody{padding:14px 16px}
-    .pbody p{margin:0;color:var(--muted2);font-size:13px;line-height:1.78}
-    .pactions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .plink{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:9px 12px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.12);
-      background:rgba(255,255,255,.78);
-      text-decoration:none;
-      font-weight:850;font-size:13px;
-      box-shadow:0 12px 26px rgba(2,6,23,.06);
-      transition:.18s ease;
-    }
-    .plink:hover{transform:translateY(-1px);background:#fff;border-color:rgba(11,18,32,.16)}
-    .plink.primary{
-      border-color:transparent;
-      background: linear-gradient(135deg, rgba(79,70,229,.96), rgba(6,182,212,.88));
-      color:#07101F;
-      box-shadow:0 18px 50px rgba(79,70,229,.14);
-    }
+    .email-tag b{color:rgba(11,18,32,.86)}
+    .email-tag a{text-decoration:underline}
 
-    /* Case studies */
-    .tcard{
-      grid-column:span 6;
-      border-radius:var(--r);
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.90);
-      box-shadow:0 18px 60px rgba(2,6,23,.08);
-      padding:16px;
-      position:relative;
-      overflow:hidden;
-    }
-    .tcard::before{
-      content:"";
-      position:absolute;inset:-90px;
-      background:
-        radial-gradient(500px 320px at 18% 12%, rgba(79,70,229,.10), transparent 62%),
-        radial-gradient(500px 320px at 82% 18%, rgba(6,182,212,.08), transparent 62%);
-      pointer-events:none;
-      z-index:0;
-    }
-    .tcard > *{position:relative;z-index:1}
-
-    .thead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .tbrand{display:flex;align-items:center;gap:10px;min-width:240px}
-    .tlogo{
-      width:40px;height:40px;border-radius:16px;
-      background:linear-gradient(135deg, rgba(79,70,229,.16), rgba(6,182,212,.12));
-      border:1px solid rgba(11,18,32,.10);
-      display:grid;place-items:center;
-      font-weight:950;color:rgba(11,18,32,.78);
-      letter-spacing:.5px;
-    }
-    .tname b{display:block;font-size:13.8px;letter-spacing:.2px}
-    .tname small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-
-    .tlist{
-      margin:12px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-      color:rgba(11,18,32,.82);
-      font-size:13px;
-      line-height:1.75;
-    }
-    .tlist li{
-      display:flex;gap:10px;align-items:flex-start;
-      padding:10px 10px;
-      border-radius:16px;
-      border:1px solid rgba(11,18,32,.08);
-      background:rgba(255,255,255,.78);
-      box-shadow:0 10px 26px rgba(2,6,23,.05);
-    }
-    .tlist .k{
-      width:28px;height:28px;border-radius:12px;
-      display:grid;place-items:center;
-      border:1px solid rgba(11,18,32,.10);
-      background:linear-gradient(135deg, rgba(79,70,229,.10), rgba(6,182,212,.08));
-      flex:0 0 auto;
-      font-size:14px;
-    }
-    .tfooter{
-      margin-top:14px;
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      flex-wrap:wrap;
-    }
-    .sig{
-      color:rgba(11,18,32,.60);
-      font-size:12.5px;
-      line-height:1.4;
-    }
-    .sitepill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.82);
-      text-decoration:none;
-      box-shadow:0 10px 26px rgba(2,6,23,.06);
-      transition:.18s ease;
-    }
-    .sitepill:hover{background:#fff;transform:translateY(-1px)}
-    .sitepill svg{opacity:.75}
-
-    /* Footer */
     footer{
       margin-top:18px;padding:22px 0 34px;border-top:1px solid rgba(11,18,32,.10);
       color:var(--muted2);font-size:12px;
@@ -489,7 +335,6 @@
     .foot a{color:var(--muted2)}
     .foot a:hover{color:rgba(11,18,32,.92)}
 
-    /* Cookie banner */
     .cookie{
       position:fixed;left:14px;right:14px;bottom:14px;z-index:300;
       border:1px solid rgba(11,18,32,.12);
@@ -503,14 +348,12 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:rgba(11,18,32,.78);font-size:12px;max-width:85ch}
 
-    /* Reveal */
     .reveal{opacity:0;transform: translateY(10px);transition: opacity .55s ease, transform .55s ease;will-change: opacity, transform;}
     .reveal.in{opacity:1;transform:translateY(0)}
     @media (prefers-reduced-motion: reduce){
       .reveal{opacity:1; transform:none; transition:none;}
     }
 
-    /* Mobile floating CTA */
     .float-cta{
       position:fixed;
       left:14px; right:14px;
@@ -531,7 +374,6 @@
     .float-cta .btn{box-shadow:none}
     .float-cta .btn.primary{padding:10px 14px}
 
-    /* Mobile Drawer */
     .drawer-overlay{
       position:fixed;inset:0;z-index:500;
       background:rgba(2,6,23,.30);
@@ -574,15 +416,12 @@
     .drawer-open{display:block}
     body.lock{overflow:hidden}
 
-    /* RESPONSIVE */
     @media (max-width: 980px){
       .brand{display:none}
       .nav{justify-content:space-between}
       .nav-desktop{display:none}
       .nav-mobile{display:flex}
       .card{grid-column:span 6}
-      .tcard{grid-column:span 12}
-      .pcard{grid-column:span 12}
       .float-cta{display:flex}
     }
     @media (max-width: 520px){
@@ -609,26 +448,19 @@
         </a>
 
         <nav class="nav-actions" aria-label="Primary">
-          <!-- Desktop nav -->
           <div class="nav-desktop">
             <a class="btn" href="#services">Services</a>
             <a class="btn" href="#portfolio">Portfolio</a>
-            <a class="btn" href="#case-studies">Case studies</a>
             <a class="btn" href="#process">Process</a>
-            <a class="btn" href="#licensing">Licensing</a>
             <a class="btn" href="#privacy">Privacy</a>
             <a class="btn" href="#terms">Terms</a>
-
-            <!-- WhatsApp direct (no number shown) -->
-            <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-
+            <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn primary" href="#contact">Get a free review</a>
           </div>
 
-          <!-- Mobile nav -->
           <div class="nav-mobile">
             <button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuDrawer" aria-expanded="false">Menu</button>
-            <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+            <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn primary" href="#contact" id="topCta">Get a free review</a>
           </div>
         </nav>
@@ -636,7 +468,6 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
   <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
   <div class="drawer" id="menuDrawer" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="drawer-head">
@@ -649,22 +480,18 @@
           <small>Jersey & UK</small>
         </div>
       </div>
-      <button class="btn ghost" id="closeMenuBtn" type="button" aria-label="Close menu">Close</button>
+      <button class="btn ghost" id="closeMenuBtn" type="button">Close</button>
     </div>
 
     <div class="drawer-body">
-      <div class="drawer-links" aria-label="Menu links">
+      <div class="drawer-links">
         <a class="btn" href="#services">Services</a>
         <a class="btn" href="#portfolio">Portfolio</a>
-        <a class="btn" href="#case-studies">Case studies</a>
         <a class="btn" href="#process">Process</a>
-        <a class="btn" href="#licensing">Licensing</a>
         <a class="btn" href="#privacy">Privacy</a>
         <a class="btn" href="#terms">Terms</a>
         <a class="btn" href="#contact">Contact</a>
-
-        <!-- WhatsApp inside menu -->
-        <a class="btn wa" id="waDrawerBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+        <a class="btn wa" id="waDrawerBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
       </div>
 
       <div class="drawer-actions">
@@ -675,27 +502,20 @@
   </div>
 
   <main id="main" class="wrap">
-    <!-- HERO -->
     <section class="hero reveal" id="top">
       <div class="shell">
         <div class="hero-media" aria-label="Hero banner">
           <picture>
             <source media="(max-width: 520px)" srcset="./transparent-hero-mobile.jpg">
             <source media="(max-width: 980px)" srcset="./transparent-hero.jpg">
-            <img
-              class="hero-image desktop"
-              id="heroImg"
-              src="./transparent-hero.jpg"
-              alt="A. Pereira — web design & business email (Jersey & UK)"
-              loading="eager"
-              decoding="async"
-            />
+            <img class="hero-image desktop" id="heroImg" src="./transparent-hero.jpg"
+                 alt="A. Pereira — web design & business email (Jersey & UK)"
+                 loading="eager" decoding="async" />
           </picture>
         </div>
 
         <div class="hero-body">
           <span class="pill"><span class="dot"></span> Sole trader digital services <span class="sep">•</span> Jersey &amp; UK</span>
-
           <h1>Premium web design &amp; business email — built for trust.</h1>
 
           <p class="lead">
@@ -704,51 +524,29 @@
             <span class="micro">Simple process. Clear communication. No pressure.</span>
           </p>
 
-          <div class="proof" aria-label="Quick proof points">
+          <div class="proof">
             <span class="chip"><b>Mobile-first</b> by default</span>
             <span class="chip"><b>Premium look</b> + clear structure</span>
             <span class="chip"><b>Clear steps</b> — no pressure</span>
           </div>
 
-          <div class="points" aria-label="Key benefits">
-            <div class="point reveal">
-              <div class="badge">✨</div>
-              <div>
-                <b>Premium website that feels credible</b>
-                <span>Clean UI, strong hierarchy and a customer-friendly journey (built for real phones).</span>
-              </div>
-            </div>
-            <div class="point reveal">
-              <div class="badge">✉️</div>
-              <div>
-                <b>Professional business email setup</b>
-                <span>MX/SPF/DKIM guidance + help connecting Zoho, Gmail or Outlook the right way.</span>
-              </div>
-            </div>
-            <div class="point reveal">
-              <div class="badge">📈</div>
-              <div>
-                <b>SEO foundations (best practice)</b>
-                <span>Clean structure, metadata, and indexing-ready setup. No ranking guarantees.</span>
-              </div>
-            </div>
-          </div>
-
           <div class="cta reveal">
             <a class="btn primary" id="emailHeroBtn" href="#">Get a free review</a>
-            <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+            <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn ghost" href="#portfolio">See real work</a>
           </div>
 
-          <div class="legal reveal" aria-label="Business details">
+          <div class="legal reveal">
             <b>Business details</b><br>
             Operated by <b>A. Pereira</b> (<b>sole trader</b>).<br>
             <b>Base:</b> Jersey, Channel Islands.<br>
             <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
-            <b>Enquiries:</b> <a id="emailLegalTop" href="#">info@antoniopereiraweb.co.uk</a><br>
-            <span style="display:block;margin-top:6px;color:rgba(11,18,32,.65);font-size:11px;">
-              Support: <a id="supportTop" href="#">info@antoniopereiraweb.co.uk</a>
-            </span>
+
+            <div class="email-row">
+              <span class="email-tag"><b>Primary:</b> <a id="emailPrimaryTop" href="#">info@antoniopereiraweb.co.uk</a></span>
+              <span class="email-tag"><b>Alternative:</b> <a id="emailAltTop" href="#">contact@antoniopereira.org</a></span>
+              <span class="email-tag"><b>Support:</b> <a id="supportTop" href="#">info@antoniopereiraweb.co.uk</a></span>
+            </div>
 
             <div style="margin-top:10px;color:rgba(11,18,32,.52);font-size:11px;">
               This website provides general information and does not constitute legal, tax or immigration advice.
@@ -759,7 +557,6 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services" class="reveal">
       <div class="section-title">
         <div>
@@ -778,7 +575,6 @@
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
     <section id="portfolio" class="reveal">
       <div class="section-title">
         <div>
@@ -833,82 +629,6 @@
       </div>
     </section>
 
-    <!-- CASE STUDIES -->
-    <section id="case-studies" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Case studies</h2>
-          <p>Real projects — listed as delivered work (no invented ratings or quotes).</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <article class="tcard reveal" data-domain="ajudatotal.com" aria-label="Project delivered for Ajuda Total">
-          <div class="thead">
-            <div class="tbrand">
-              <div class="tlogo" data-initials aria-hidden="true">AT</div>
-              <div class="tname">
-                <b>Ajuda Total</b>
-                <small>Delivered: website</small>
-              </div>
-            </div>
-          </div>
-
-          <ul class="tlist" aria-label="Delivered items">
-            <li><span class="k">✓</span><span><b>Clean structure</b> with a clear customer journey (service → trust → contact).</span></li>
-            <li><span class="k">✓</span><span><b>Mobile-first build</b> for real clients browsing on phones.</span></li>
-            <li><span class="k">✓</span><span><b>Professional finish</b> with modern UI + clear call-to-action.</span></li>
-          </ul>
-
-          <div class="tfooter">
-            <div class="sig">— Delivered by <b>A. Pereira</b></div>
-            <a class="sitepill" href="https://ajudatotal.com" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M10 14a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M14 10a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              ajudatotal.com
-            </a>
-          </div>
-        </article>
-
-        <article class="tcard reveal" data-domain="catiacoutinhoholistica.com" aria-label="Project delivered for Catia Coutinho Holística">
-          <div class="thead">
-            <div class="tbrand">
-              <div class="tlogo" data-initials aria-hidden="true">CC</div>
-              <div class="tname">
-                <b>Catia Coutinho Holística</b>
-                <small>Delivered: website</small>
-              </div>
-            </div>
-          </div>
-
-          <ul class="tlist" aria-label="Delivered items">
-            <li><span class="k">✓</span><span><b>Premium aesthetic</b> matched to a calm, wellness brand.</span></li>
-            <li><span class="k">✓</span><span><b>Simple navigation</b> with a clear enquiry flow.</span></li>
-            <li><span class="k">✓</span><span><b>Mobile-first layout</b> with readable spacing and hierarchy.</span></li>
-          </ul>
-
-          <div class="tfooter">
-            <div class="sig">— Delivered by <b>A. Pereira</b></div>
-            <a class="sitepill" href="https://catiacoutinhoholistica.com" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M10 14a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M14 10a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              catiacoutinhoholistica.com
-            </a>
-          </div>
-        </article>
-
-        <div class="panel reveal">
-          <b>Want something similar?</b><br>
-          Send one email with your business type, what you need, and your deadline — I’ll reply with clear next steps.
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
     <section id="process" class="reveal">
       <div class="section-title">
         <div>
@@ -927,28 +647,6 @@
       </div>
     </section>
 
-    <!-- LICENSING -->
-    <section id="licensing" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Licensing &amp; compliance (Jersey)</h2>
-          <p>General information only — always check the latest official guidance.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="panel reveal">
-          <b>Business licence (general note)</b><br>
-          In Jersey, some sole traders may not need a business licence if certain criteria are met (for example: limited hours, only one person working, and the correct residential/employment status).
-          Requirements can change and depend on your situation.<br><br>
-
-          <b>Important</b><br>
-          This page is not legal, immigration or tax advice. If you’re unsure, consult official guidance or seek professional advice.
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
     <section id="contact" class="reveal">
       <div class="section-title">
         <div>
@@ -959,16 +657,20 @@
 
       <div class="grid">
         <div class="panel reveal">
-          <b>Email:</b> <a id="emailInline" href="#">info@antoniopereiraweb.co.uk</a><br>
-          <span style="display:block;margin-top:8px;"><b>Support:</b> <a id="supportInline" href="#">info@antoniopereiraweb.co.uk</a></span>
+          <div class="email-row">
+            <span class="email-tag"><b>Primary:</b> <a id="emailPrimaryInline" href="#">info@antoniopereiraweb.co.uk</a></span>
+            <span class="email-tag"><b>Alternative:</b> <a id="emailAltInline" href="#">contact@antoniopereira.org</a></span>
+            <span class="email-tag"><b>Support:</b> <a id="supportInline" href="#">info@antoniopereiraweb.co.uk</a></span>
+          </div>
 
           <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — A. Pereira</span>
           <span style="display:block;margin-top:10px;"><b>Include:</b> business type • website (if any) • what you need • deadline • Jersey/UK</span>
 
           <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn primary" id="emailBtn" href="#">Get a free review</a>
+            <a class="btn primary" id="emailPrimaryBtn" href="#">Email (Primary)</a>
+            <a class="btn" id="emailAltBtn" href="#">Email (Alternative)</a>
             <a class="btn" id="supportBtn" href="#">Support</a>
-            <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+            <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
           </div>
 
           <div style="margin-top:12px;color:rgba(11,18,32,.52);font-size:11px;">
@@ -978,7 +680,6 @@
       </div>
     </section>
 
-    <!-- PRIVACY -->
     <section id="privacy" class="reveal">
       <div class="section-title">
         <div>
@@ -991,7 +692,7 @@
         <div class="card reveal" style="grid-column:span 6;">
           <div class="ic">👤</div>
           <h3>Who is responsible</h3>
-          <p>This website is operated by <b>A. Pereira</b> (<b>sole trader</b>).<br><br><b>Base:</b> Jersey, Channel Islands.<br><b>Contact:</b> <a id="emailPrivacy" href="#">info@antoniopereiraweb.co.uk</a></p>
+          <p>This website is operated by <b>A. Pereira</b> (<b>sole trader</b>).<br><br><b>Base:</b> Jersey, Channel Islands.<br><b>Primary:</b> <a id="emailPrimaryPrivacy" href="#">info@antoniopereiraweb.co.uk</a><br><b>Alternative:</b> <a id="emailAltPrivacy" href="#">contact@antoniopereira.org</a></p>
         </div>
 
         <div class="card reveal" style="grid-column:span 6;">
@@ -1000,26 +701,13 @@
           <p>If you contact me by email, I may collect your name, business/industry and contact details, plus your message — only to reply and provide quotes/support.</p>
         </div>
 
-        <div class="card reveal" style="grid-column:span 6;">
-          <div class="ic">🗑️</div>
-          <h3>Retention &amp; requests</h3>
-          <p>I keep enquiry messages only as long as needed for support and basic record-keeping. You can request access, correction or deletion by emailing me.</p>
-        </div>
-
-        <div class="card reveal" style="grid-column:span 6;">
-          <div class="ic">🍪</div>
-          <h3>Cookies</h3>
-          <p>Essential storage is used to remember cookie preferences. Optional measurement scripts load only if you accept (if enabled).</p>
-        </div>
-
         <div class="panel reveal">
           <b>Legal note:</b> This notice explains how your personal data is handled in line with applicable data protection requirements.
-          If you have concerns, contact me first via the email above.
+          If you have concerns, contact me first via the emails above.
         </div>
       </div>
     </section>
 
-    <!-- TERMS -->
     <section id="terms" class="reveal">
       <div class="section-title">
         <div>
@@ -1032,7 +720,7 @@
         <div class="panel reveal">
           <b>1) Who I am</b><br>
           This website and services are operated by <b>A. Pereira</b> (<b>sole trader</b>), based in <b>Jersey, Channel Islands</b>.<br>
-          Contact: <a id="emailTerms" href="#">info@antoniopereiraweb.co.uk</a>.
+          Primary: <a id="emailPrimaryTerms" href="#">info@antoniopereiraweb.co.uk</a> • Alternative: <a id="emailAltTerms" href="#">contact@antoniopereira.org</a>
           <br><br>
 
           <b>2) What I provide</b><br>
@@ -1040,35 +728,8 @@
           Deliverables are agreed in writing (email) per project.
           <br><br>
 
-          <b>3) Quotes &amp; payments</b><br>
-          Quotes are provided in writing. Payment terms are agreed per project.
-          Third-party subscriptions (domains/hosting/email providers) are your responsibility unless agreed otherwise.
-          <br><br>
-
-          <b>4) Results / no guarantees</b><br>
+          <b>3) Results / no guarantees</b><br>
           I follow best-practice and deliver agreed work. I do not guarantee specific results (rankings/leads/revenue).
-          <br><br>
-
-          <b>5) Client responsibilities</b><br>
-          You confirm you have rights to use any text/images/logos provided and you approve final content before launch.
-          <br><br>
-
-          <b>6) Changes &amp; cancellations</b><br>
-          Reasonable revisions are included as agreed. Additional work may require an updated quote.
-          If cancelled after work starts, you may be charged for work completed.
-          <br><br>
-
-          <b>7) Limitation of liability</b><br>
-          To the maximum extent permitted by law, I’m not liable for indirect or consequential loss.
-          I’m not responsible for outages/issues caused by third-party platforms.
-          <br><br>
-
-          <b>8) Governing law</b><br>
-          These terms are intended to be governed by the laws applicable in <b>Jersey</b> (Channel Islands), unless otherwise agreed.
-          <br><br>
-
-          <b>9) Updates</b><br>
-          I may update these terms from time to time. The version on this page is the current version.
         </div>
       </div>
     </section>
@@ -1077,19 +738,17 @@
       <div class="foot">
         <div>
           <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
-          <span>Operated by <b>A. Pereira</b> (<b>sole trader</b>).</span><br/>
-          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereiraweb.co.uk</a></span><br/>
-          <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
-            This website is for general information only and does not constitute legal, tax or immigration advice.
+          <span>Jersey, Channel Islands</span><br/>
+          <span>
+            <a id="emailPrimaryFooter" href="#">info@antoniopereiraweb.co.uk</a> •
+            <a id="emailAltFooter" href="#">contact@antoniopereira.org</a>
           </span>
         </div>
 
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#case-studies">Case studies</a>
           <a href="#process">Process</a>
-          <a href="#licensing">Licensing</a>
           <a href="#privacy">Privacy</a>
           <a href="#terms">Terms</a>
           <a href="#contact">Contact</a>
@@ -1101,19 +760,17 @@
     </footer>
   </main>
 
-  <!-- Floating CTA (mobile) -->
   <div class="float-cta" id="floatCta" aria-label="Quick contact">
     <div>
       <b>Want a free review?</b><br>
       <span style="font-size:11.5px;color:rgba(11,18,32,.60)">Reply within 24–48h (usually faster)</span>
     </div>
     <div style="display:flex;gap:10px;align-items:center;">
-      <a class="btn wa" id="floatWaBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-      <a class="btn primary" id="floatEmailBtn" href="#">Email me</a>
+      <a class="btn wa" id="floatWaBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn primary" id="floatEmailBtn" href="#">Email (Primary)</a>
     </div>
   </div>
 
-  <!-- Cookie banner -->
   <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
     <div class="row">
       <p>
@@ -1129,9 +786,9 @@
 
   <script>
     // ===== Contact setup =====
-    const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
-    // If you don't have a separate support inbox yet, keep support the same:
-    const SUPPORT_EMAIL   = "info@antoniopereiraweb.co.uk";
+    const EMAIL_PRIMARY = "info@antoniopereiraweb.co.uk";
+    const EMAIL_ALT     = "contact@antoniopereira.org";
+    const EMAIL_SUPPORT = "info@antoniopereiraweb.co.uk";
 
     // WhatsApp (direct link; number NOT shown on page)
     const WHATSAPP_E164 = "447700704591";
@@ -1158,27 +815,47 @@ Thanks!`
       )}`;
     }
 
-    const enquiryMailto = mailtoFor(ENQUIRIES_EMAIL, "Website enquiry — A. Pereira");
-    const supportMailto = mailtoFor(SUPPORT_EMAIL, "Support — A. Pereira");
+    const primaryMailto = mailtoFor(EMAIL_PRIMARY, "Website enquiry — A. Pereira");
+    const altMailto     = mailtoFor(EMAIL_ALT, "Website enquiry — A. Pereira (Alternative)");
+    const supportMailto = mailtoFor(EMAIL_SUPPORT, "Support — A. Pereira");
 
-    // Apply enquiry email everywhere
-    const enquiryIds = ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms","emailBtn","emailHeroBtn","floatEmailBtn"];
-    enquiryIds.forEach(id=>{
+    // Primary email (display + link)
+    [
+      "emailPrimaryTop","emailPrimaryInline","emailPrimaryPrivacy","emailPrimaryTerms","emailPrimaryFooter","floatEmailBtn"
+    ].forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
-      el.href = enquiryMailto;
-      if(!["emailBtn","emailHeroBtn","floatEmailBtn"].includes(id)){
-        el.textContent = ENQUIRIES_EMAIL;
-        el.style.textDecoration = "underline";
-      }
+      el.href = primaryMailto;
+      el.textContent = EMAIL_PRIMARY;
+      el.style.textDecoration = "underline";
     });
 
-    // Apply support email
+    // Primary button(s)
+    ["emailHeroBtn","emailPrimaryBtn"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.href = primaryMailto;
+    });
+
+    // Alt email (display + link)
+    ["emailAltTop","emailAltInline","emailAltPrivacy","emailAltTerms","emailAltFooter"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.href = altMailto;
+      el.textContent = EMAIL_ALT;
+      el.style.textDecoration = "underline";
+    });
+
+    // Alt button
+    const altBtn = document.getElementById("emailAltBtn");
+    if(altBtn) altBtn.href = altMailto;
+
+    // Support
     ["supportTop","supportInline","supportBtn"].forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
       el.href = supportMailto;
-      el.textContent = SUPPORT_EMAIL;
+      el.textContent = EMAIL_SUPPORT;
       el.style.textDecoration = "underline";
     });
 
@@ -1261,25 +938,6 @@ Thanks!`
     toggleFloat();
     window.addEventListener("scroll", toggleFloat, { passive:true });
 
-    // Initials from domain
-    function initialsFromDomain(domain){
-      try{
-        const host = (domain || "").toLowerCase().replace(/^https?:\/\//,"").replace(/^www\./,"").split("/")[0];
-        const parts = host.split(".");
-        const main = parts.length >= 2 ? parts[parts.length-2] : host;
-        const words = main.replace(/[-_]+/g," ").split(" ").filter(Boolean);
-        if(words.length === 1) return (words[0].slice(0,2)).toUpperCase();
-        return (words[0][0] + words[1][0]).toUpperCase();
-      }catch(e){
-        return "AP";
-      }
-    }
-    document.querySelectorAll("[data-domain]").forEach(card=>{
-      const domain = card.getAttribute("data-domain");
-      const el = card.querySelector("[data-initials]");
-      if(el) el.textContent = initialsFromDomain(domain);
-    });
-
     // Mobile drawer
     const menuBtn = document.getElementById("menuBtn");
     const drawer = document.getElementById("menuDrawer");
@@ -1328,4 +986,4 @@ Thanks!`
 </body>
 </html>
 
-<!-- force deploy v406 -->
+<!-- force deploy v407 -->
