@@ -8,18 +8,25 @@
 
   <!-- SEO -->
   <title>Antonio Pereira — Web Design & Business Email (Sole Trader, Jersey)</title>
-  <meta name="description" content="Freelance web design and professional business email setup (MX/SPF/DKIM). Operated by Antonio Pereira (Sole Trader), based in Jersey, Channel Islands. Serving Jersey & the UK." />
+  <meta name="description" content="Premium mobile-first websites and professional domain email setup (MX/SPF/DKIM). Operated by Antonio Pereira (sole trader), based in Jersey, Channel Islands. Serving Jersey & the UK." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Antonio Pereira — Web Design & Business Email (Sole Trader, Jersey)" />
-  <meta property="og:description" content="Freelance web design and professional business email setup. Operated by Antonio Pereira (Sole Trader), based in Jersey, Channel Islands." />
+  <meta property="og:description" content="Premium websites + professional business email setup (MX/SPF/DKIM). Jersey & UK." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
   <meta property="og:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Antonio Pereira — Web Design & Business Email" />
+  <meta name="twitter:description" content="Premium websites + professional email setup. Jersey & UK." />
+  <meta name="twitter:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
+
+  <!-- Performance hints -->
+  <link rel="preload" as="image" href="./transparent-hero.jpg" />
+  <link rel="preload" as="image" href="./transparent-hero-mobile.jpg" media="(max-width: 520px)" />
 
   <!-- Favicons -->
   <link rel="icon" href="./favicon.ico" sizes="any">
@@ -33,10 +40,12 @@
   {
     "@context":"https://schema.org",
     "@type":"ProfessionalService",
+    "@id":"https://antoniopereiraweb.co.uk/#business",
     "name":"Antonio Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
     "image":"https://antoniopereiraweb.co.uk/transparent-hero.jpg",
-    "description":"Operated by Antonio Pereira (Sole Trader), based in Jersey, Channel Islands. Digital services: premium websites, professional business email setup (MX/SPF/DKIM) and SEO foundations for small businesses in Jersey & the UK.",
+    "description":"Operated by Antonio Pereira (sole trader), based in Jersey, Channel Islands. Services: premium websites, professional business email setup (MX/SPF/DKIM) and SEO foundations for small businesses in Jersey & the UK.",
+    "email":"info@antoniopereiraweb.co.uk",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
@@ -46,8 +55,7 @@
       "Website Development",
       "Business Email Setup",
       "SEO Foundations"
-    ],
-    "email":"info@antoniopereiraweb.co.uk"
+    ]
   }
   </script>
 
@@ -58,12 +66,16 @@
       --text:#0B1220;
       --muted:#475569;
       --muted2:#64748B;
+
       --line:rgba(11,18,32,.10);
       --glass:rgba(255,255,255,.86);
+
       --a1:#4F46E5;
       --a2:#06B6D4;
+
       --shadow: 0 18px 60px rgba(2,6,23,.10);
       --shadow2: 0 28px 90px rgba(2,6,23,.14);
+
       --r:22px;
       --max:1120px;
     }
@@ -121,6 +133,7 @@
       border-color:rgba(11,18,32,.10);
       box-shadow:none;
     }
+    /* WhatsApp button (subtle, premium) */
     .btn.wa{
       border-color: rgba(11,18,32,.12);
       background: rgba(255,255,255,.86);
@@ -596,6 +609,7 @@
         </a>
 
         <nav class="nav-actions" aria-label="Primary">
+          <!-- Desktop nav -->
           <div class="nav-desktop">
             <a class="btn" href="#services">Services</a>
             <a class="btn" href="#portfolio">Portfolio</a>
@@ -605,11 +619,13 @@
             <a class="btn" href="#privacy">Privacy</a>
             <a class="btn" href="#terms">Terms</a>
 
+            <!-- WhatsApp direct (no number shown) -->
             <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
 
             <a class="btn primary" href="#contact">Get a free review</a>
           </div>
 
+          <!-- Mobile nav -->
           <div class="nav-mobile">
             <button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuDrawer" aria-expanded="false">Menu</button>
             <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
@@ -620,6 +636,7 @@
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
   <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
   <div class="drawer" id="menuDrawer" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="drawer-head">
@@ -646,6 +663,7 @@
         <a class="btn" href="#terms">Terms</a>
         <a class="btn" href="#contact">Contact</a>
 
+        <!-- WhatsApp inside menu -->
         <a class="btn wa" id="waDrawerBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
       </div>
 
@@ -951,6 +969,10 @@
             <a class="btn primary" id="emailBtn" href="#">Get a free review</a>
             <a class="btn" id="supportBtn" href="#">Support</a>
             <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+          </div>
+
+          <div style="margin-top:12px;color:rgba(11,18,32,.52);font-size:11px;">
+            Typical reply time: 24–48 hours (usually faster).
           </div>
         </div>
       </div>
@@ -1306,4 +1328,4 @@ Thanks!`
 </body>
 </html>
 
-<!-- force deploy v405 -->
+<!-- force deploy v406 -->
