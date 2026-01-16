@@ -6,22 +6,22 @@
   <meta name="theme-color" content="#F5F7FB" />
   <meta name="color-scheme" content="light" />
 
-  <!-- SEO (UPDATED for "Freelance Web Designer Jersey") -->
-  <title>Freelance Web Designer in Jersey | Antonio Pereira</title>
-  <meta name="description" content="Freelance web designer and sole trader based in Jersey. Modern, mobile-friendly websites and professional business email setup (MX/SPF/DKIM) for small businesses and local services." />
+  <!-- SEO (UPDATED: broader "Digital Services" intent) -->
+  <title>Digital Services in Jersey | Websites, CVs & Online Support — Antonio Pereira</title>
+  <meta name="description" content="Digital services for individuals, small businesses and sole traders in Jersey. Websites, CV help, Google Business setup, business email (MX/SPF/DKIM), documents and practical online support." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Open Graph / Twitter (UPDATED) -->
-  <meta property="og:title" content="Freelance Web Designer in Jersey | Antonio Pereira" />
-  <meta property="og:description" content="Freelance web designer and sole trader in Jersey — modern websites + professional business email (MX/SPF/DKIM) for small businesses." />
+  <meta property="og:title" content="Digital Services in Jersey | Antonio Pereira" />
+  <meta property="og:description" content="Websites, CV help, Google Business setup, business email (MX/SPF/DKIM), documents and online support for individuals & small businesses in Jersey." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
   <meta property="og:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Freelance Web Designer in Jersey | Antonio Pereira" />
-  <meta name="twitter:description" content="Modern websites + professional business email setup (MX/SPF/DKIM). Jersey." />
+  <meta name="twitter:title" content="Digital Services in Jersey | Antonio Pereira" />
+  <meta name="twitter:description" content="Websites, CVs, Google setup, business email and practical digital support in Jersey." />
   <meta name="twitter:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
 
   <!-- Performance hints -->
@@ -35,7 +35,7 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
-  <!-- Structured data (UPDATED: include "freelance web designer" & local intent) -->
+  <!-- Structured data (UPDATED: broader services) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -44,18 +44,23 @@
     "name":"Antonio Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
     "image":"https://antoniopereiraweb.co.uk/transparent-hero.jpg",
-    "description":"Freelance web designer and sole trader based in Jersey, Channel Islands. Services include modern mobile-friendly websites, professional business email setup (MX/SPF/DKIM) and SEO foundations for small businesses and local services.",
+    "description":"Digital services for individuals, small businesses and sole traders based in Jersey, Channel Islands. Services include websites, CV support, Google Business setup, professional business email setup (MX/SPF/DKIM) and practical digital support.",
     "email":"info@antoniopereiraweb.co.uk",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
     ],
     "serviceType":[
-      "Freelance Web Design",
+      "Digital Services",
+      "CV & Resume Support",
       "Web Design",
       "Website Development",
       "Business Email Setup",
-      "SEO Foundations"
+      "Google Business Profile Setup",
+      "SEO Foundations",
+      "Document Formatting",
+      "WhatsApp Business Setup",
+      "Digital Support"
     ]
   }
   </script>
@@ -108,7 +113,6 @@
       text-decoration:none;
     }
 
-    /* Buttons */
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:10px 12px;border-radius:999px;
@@ -134,13 +138,11 @@
       border-color:rgba(11,18,32,.10);
       box-shadow:none;
     }
-    /* WhatsApp button (subtle, premium) */
     .btn.wa{
       border-color: rgba(11,18,32,.12);
       background: rgba(255,255,255,.86);
     }
 
-    /* NAV */
     header{
       position:sticky;top:0;z-index:200;
       backdrop-filter: blur(14px);
@@ -156,8 +158,6 @@
       text-decoration:none;
       min-width:240px;
     }
-
-    /* LOGO MARK */
     .mark{
       width:44px;height:44px;border-radius:16px;
       background: rgba(255,255,255,.86);
@@ -174,7 +174,6 @@
       object-fit:cover;
       display:block;
     }
-
     .brand b{font-size:14px;letter-spacing:.2px}
     .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
 
@@ -182,7 +181,6 @@
     .nav-desktop{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
     .nav-mobile{display:none;gap:10px;align-items:center;justify-content:flex-end}
 
-    /* HERO */
     .hero{padding:16px 0 12px}
     .shell{
       border-radius:30px;
@@ -304,7 +302,6 @@
     .legal b{color:rgba(11,18,32,.92)}
     .legal a{color:rgba(11,18,32,.92);text-decoration:underline}
 
-    /* Sections */
     section{padding:18px 0}
     .section-title{
       display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
@@ -347,7 +344,6 @@
     .panel b{color:rgba(11,18,32,.92)}
     .panel a{color:rgba(11,18,32,.92);text-decoration:underline}
 
-    /* Portfolio */
     .pcard{
       grid-column:span 6;
       border-radius:var(--r);
@@ -398,7 +394,6 @@
       box-shadow:0 18px 50px rgba(79,70,229,.14);
     }
 
-    /* Case studies */
     .tcard{
       grid-column:span 6;
       border-radius:var(--r);
@@ -481,7 +476,6 @@
     .sitepill:hover{background:#fff;transform:translateY(-1px)}
     .sitepill svg{opacity:.75}
 
-    /* Footer */
     footer{
       margin-top:18px;padding:22px 0 34px;border-top:1px solid rgba(11,18,32,.10);
       color:var(--muted2);font-size:12px;
@@ -490,7 +484,6 @@
     .foot a{color:var(--muted2)}
     .foot a:hover{color:rgba(11,18,32,.92)}
 
-    /* Cookie banner */
     .cookie{
       position:fixed;left:14px;right:14px;bottom:14px;z-index:300;
       border:1px solid rgba(11,18,32,.12);
@@ -504,14 +497,12 @@
     .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .cookie p{margin:0;color:rgba(11,18,32,.78);font-size:12px;max-width:85ch}
 
-    /* Reveal */
     .reveal{opacity:0;transform: translateY(10px);transition: opacity .55s ease, transform .55s ease;will-change: opacity, transform;}
     .reveal.in{opacity:1;transform:translateY(0)}
     @media (prefers-reduced-motion: reduce){
       .reveal{opacity:1; transform:none; transition:none;}
     }
 
-    /* Mobile floating CTA */
     .float-cta{
       position:fixed;
       left:14px; right:14px;
@@ -532,7 +523,6 @@
     .float-cta .btn{box-shadow:none}
     .float-cta .btn.primary{padding:10px 14px}
 
-    /* Mobile Drawer */
     .drawer-overlay{
       position:fixed;inset:0;z-index:500;
       background:rgba(2,6,23,.30);
@@ -575,7 +565,6 @@
     .drawer-open{display:block}
     body.lock{overflow:hidden}
 
-    /* RESPONSIVE */
     @media (max-width: 980px){
       .brand{display:none}
       .nav{justify-content:space-between}
@@ -605,12 +594,11 @@
           </div>
           <div>
             <b>A. Pereira</b>
-            <small>Freelance web designer • Sole trader • Jersey</small>
+            <small>Digital services • Sole trader • Jersey</small>
           </div>
         </a>
 
         <nav class="nav-actions" aria-label="Primary">
-          <!-- Desktop nav -->
           <div class="nav-desktop">
             <a class="btn" href="#services">Services</a>
             <a class="btn" href="#portfolio">Portfolio</a>
@@ -619,14 +607,10 @@
             <a class="btn" href="#licensing">Licensing</a>
             <a class="btn" href="#privacy">Privacy</a>
             <a class="btn" href="#terms">Terms</a>
-
-            <!-- WhatsApp direct (no number shown) -->
             <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-
             <a class="btn primary" href="#contact">Get a free review</a>
           </div>
 
-          <!-- Mobile nav -->
           <div class="nav-mobile">
             <button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuDrawer" aria-expanded="false">Menu</button>
             <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
@@ -637,7 +621,6 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
   <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
   <div class="drawer" id="menuDrawer" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="drawer-head">
@@ -663,8 +646,6 @@
         <a class="btn" href="#privacy">Privacy</a>
         <a class="btn" href="#terms">Terms</a>
         <a class="btn" href="#contact">Contact</a>
-
-        <!-- WhatsApp inside menu -->
         <a class="btn wa" id="waDrawerBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
       </div>
 
@@ -676,6 +657,7 @@
   </div>
 
   <main id="main" class="wrap">
+
     <!-- HERO -->
     <section class="hero reveal" id="top">
       <div class="shell">
@@ -687,7 +669,7 @@
               class="hero-image desktop"
               id="heroImg"
               src="./transparent-hero.jpg"
-              alt="Antonio Pereira — Freelance Web Designer in Jersey"
+              alt="Antonio Pereira — Digital services in Jersey"
               loading="eager"
               decoding="async"
             />
@@ -695,45 +677,42 @@
         </div>
 
         <div class="hero-body">
-          <!-- UPDATED: keyword signal without looking spammy -->
-          <span class="pill"><span class="dot"></span> Freelance web designer <span class="sep">•</span> Sole trader <span class="sep">•</span> Jersey</span>
+          <span class="pill"><span class="dot"></span> Digital services <span class="sep">•</span> Individuals & businesses <span class="sep">•</span> Jersey</span>
 
-          <!-- UPDATED: H1 -->
-          <h1>Freelance Web Designer in Jersey</h1>
+          <h1>Digital help that gets things done</h1>
 
-          <!-- UPDATED: first paragraph to link freelance + sole trader + Jersey -->
           <p class="lead">
-            I help <strong>small businesses</strong> and <strong>sole traders</strong> in <strong>Jersey</strong> build modern, mobile-friendly websites and set up
-            <strong>professional business email</strong> (MX/SPF/DKIM) — so you look established and clients contact you with confidence.
-            <span class="micro">Simple process. Clear communication. No pressure.</span>
+            I help <strong>individuals</strong>, <strong>small businesses</strong> and <strong>sole traders</strong> in <strong>Jersey</strong> with practical digital services —
+            from <strong>websites</strong> and <strong>business email</strong> (MX/SPF/DKIM) to <strong>CV support</strong>, <strong>documents</strong> and <strong>online setup</strong>.
+            <span class="micro">Clear steps. Friendly support. No pressure.</span>
           </p>
 
           <div class="proof" aria-label="Quick proof points">
-            <span class="chip"><b>Mobile-first</b> by default</span>
-            <span class="chip"><b>Premium look</b> + clear structure</span>
-            <span class="chip"><b>Clear steps</b> — no pressure</span>
+            <span class="chip"><b>Fast</b> and reliable</span>
+            <span class="chip"><b>Professional</b> presentation</span>
+            <span class="chip"><b>Clear communication</b></span>
           </div>
 
           <div class="points" aria-label="Key benefits">
             <div class="point reveal">
-              <div class="badge">✨</div>
+              <div class="badge">✅</div>
               <div>
-                <b>Website that feels credible</b>
-                <span>Clean UI, strong hierarchy and a customer-friendly journey (built for real phones).</span>
+                <b>One person to handle your digital tasks</b>
+                <span>Save time — I’ll guide you and deliver clean, professional results.</span>
               </div>
             </div>
             <div class="point reveal">
-              <div class="badge">✉️</div>
+              <div class="badge">📄</div>
               <div>
-                <b>Professional business email setup</b>
-                <span>MX/SPF/DKIM guidance + help connecting Zoho, Gmail or Outlook the right way.</span>
+                <b>CV & documents that look professional</b>
+                <span>Formatting, structure and clarity — ready to send with confidence.</span>
               </div>
             </div>
             <div class="point reveal">
-              <div class="badge">📈</div>
+              <div class="badge">🌐</div>
               <div>
-                <b>SEO foundations (best practice)</b>
-                <span>Clean structure, metadata, and indexing-ready setup. No ranking guarantees.</span>
+                <b>Online presence for businesses</b>
+                <span>Websites, Google setup and best-practice SEO foundations (no ranking guarantees).</span>
               </div>
             </div>
           </div>
@@ -741,7 +720,7 @@
           <div class="cta reveal">
             <a class="btn primary" id="emailHeroBtn" href="#">Get a free review</a>
             <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-            <a class="btn ghost" href="#portfolio">See real work</a>
+            <a class="btn ghost" href="#services">See services</a>
           </div>
 
           <div class="legal reveal" aria-label="Business details">
@@ -756,34 +735,44 @@
             </span>
 
             <div style="margin-top:10px;color:rgba(11,18,32,.52);font-size:11px;">
-              This website provides general information and does not constitute legal, tax or immigration advice.
-              For official guidance, consult the Government of Jersey website.
+              This website provides general information and does not constitute legal, tax, immigration, HR or financial advice.
+              For official guidance, consult the Government of Jersey website or a qualified professional.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- SERVICES (UPDATED: full list) -->
     <section id="services" class="reveal">
       <div class="section-title">
         <div>
           <h2>Services</h2>
-          <p>Professional essentials for small businesses that want a premium, trustworthy online presence in Jersey.</p>
+          <p>Digital help for individuals, small businesses and sole traders — clear and practical.</p>
         </div>
       </div>
 
       <div class="grid">
-        <div class="card reveal"><div class="ic">🌐</div><h3>Website design &amp; build</h3><p>One-page sites or full websites with a premium finish and clear structure.</p></div>
-        <div class="card reveal"><div class="ic">📱</div><h3>Mobile-first performance</h3><p>Fast loading and readable layouts designed for real customers on phones.</p></div>
-        <div class="card reveal"><div class="ic">✉️</div><h3>Business email setup</h3><p>Domain email setup (MX/SPF/DKIM) + guidance for Zoho, Gmail, and Outlook.</p></div>
-        <div class="card reveal"><div class="ic">📈</div><h3>SEO foundations</h3><p>Metadata + structure that supports indexing. No ranking guarantees.</p></div>
-        <div class="card reveal"><div class="ic">🧭</div><h3>Conversion-friendly flow</h3><p>Clear calls-to-action that help visitors become enquiries.</p></div>
-        <div class="card reveal"><div class="ic">🛠️</div><h3>Ongoing support</h3><p>Post-launch edits and improvements as your business grows.</p></div>
+        <div class="card reveal"><div class="ic">📄</div><h3>CV &amp; career support</h3><p>CV improvements, formatting and job-application support. Clear, professional and easy to read.</p></div>
+        <div class="card reveal"><div class="ic">🔗</div><h3>LinkedIn optimisation</h3><p>Profile clean-up, headline, bio and keyword improvements so you look credible online.</p></div>
+        <div class="card reveal"><div class="ic">🌐</div><h3>Websites</h3><p>One-page websites or full websites — mobile-first, premium design and clear calls-to-action.</p></div>
+
+        <div class="card reveal"><div class="ic">📍</div><h3>Google Business (Maps)</h3><p>Setup and optimisation to help local customers find you (photos, categories, services).</p></div>
+        <div class="card reveal"><div class="ic">✉️</div><h3>Business email setup</h3><p>Domain email setup (MX/SPF/DKIM) + connecting Zoho/Gmail/Outlook the right way.</p></div>
+        <div class="card reveal"><div class="ic">🧾</div><h3>Emails &amp; documents</h3><p>Word/PDF formatting, professional templates, forms, letters and digital paperwork help.</p></div>
+
+        <div class="card reveal"><div class="ic">📱</div><h3>WhatsApp Business</h3><p>Business profile, auto-replies, quick replies and a clean setup for customer enquiries.</p></div>
+        <div class="card reveal"><div class="ic">📈</div><h3>SEO foundations</h3><p>Metadata, structure and best-practice setup to support indexing (no ranking guarantees).</p></div>
+        <div class="card reveal"><div class="ic">🧠</div><h3>General digital support</h3><p>One-to-one help with accounts, apps, online tasks and troubleshooting.</p></div>
+
+        <div class="panel reveal">
+          <b>Not sure what you need?</b><br>
+          Message or email me what you’re trying to achieve. I’ll reply with clear options and next steps.
+        </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
+    <!-- PORTFOLIO (kept) -->
     <section id="portfolio" class="reveal">
       <div class="section-title">
         <div>
@@ -838,7 +827,7 @@
       </div>
     </section>
 
-    <!-- CASE STUDIES -->
+    <!-- CASE STUDIES (kept) -->
     <section id="case-studies" class="reveal">
       <div class="section-title">
         <div>
@@ -908,12 +897,12 @@
 
         <div class="panel reveal">
           <b>Want something similar?</b><br>
-          Send one email with your business type, what you need, and your deadline — I’ll reply with clear next steps.
+          Send one email with what you need and your deadline — I’ll reply with clear next steps.
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
+    <!-- PROCESS (kept) -->
     <section id="process" class="reveal">
       <div class="section-title">
         <div>
@@ -924,15 +913,15 @@
 
       <div class="grid">
         <div class="card reveal"><div class="ic">1</div><h3>Quick review</h3><p>You email what you need. I reply with options, timeline and next steps.</p></div>
-        <div class="card reveal"><div class="ic">2</div><h3>Plan &amp; content</h3><p>We agree structure. You share logo/text/photos (or I guide you).</p></div>
-        <div class="card reveal"><div class="ic">3</div><h3>Build &amp; launch</h3><p>I build, you approve, then we launch — clean and professional.</p></div>
+        <div class="card reveal"><div class="ic">2</div><h3>Plan &amp; content</h3><p>We confirm scope. You share what you have (or I guide you).</p></div>
+        <div class="card reveal"><div class="ic">3</div><h3>Deliver &amp; support</h3><p>I deliver the work, you approve, and I support changes if needed.</p></div>
         <div class="panel reveal">
           <b>Note:</b> Timelines depend on content availability and scope. Everything is confirmed in writing (by email) before work starts.
         </div>
       </div>
     </section>
 
-    <!-- LICENSING -->
+    <!-- LICENSING (kept, tightened) -->
     <section id="licensing" class="reveal">
       <div class="section-title">
         <div>
@@ -943,22 +932,20 @@
 
       <div class="grid">
         <div class="panel reveal">
-          <b>Business licence (general note)</b><br>
-          In Jersey, some sole traders may not need a business licence if certain criteria are met (for example: limited hours, only one person working, and the correct residential/employment status).
-          Requirements can change and depend on your situation.<br><br>
-
           <b>Important</b><br>
-          This page is not legal, immigration or tax advice. If you’re unsure, consult official guidance or seek professional advice.
+          I provide digital services. I am not a law firm and I do not provide legal, immigration or tax advice.<br><br>
+          <b>Business licensing</b><br>
+          Requirements in Jersey can depend on your situation and may change. If you need official guidance, consult the Government of Jersey website or a qualified professional.
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (UPDATED subject) -->
     <section id="contact" class="reveal">
       <div class="section-title">
         <div>
           <h2>Contact</h2>
-          <p>Email me what you do and what you need — I’ll reply with clear next steps.</p>
+          <p>Email me what you need — I’ll reply with clear next steps.</p>
         </div>
       </div>
 
@@ -968,8 +955,8 @@
           <span style="display:block;margin-top:8px;"><b>Alternative:</b> <a id="emailAltInline" href="#">contact@antoniopereira.org</a></span>
           <span style="display:block;margin-top:8px;"><b>Support:</b> <a id="supportInline" href="#">info@antoniopereiraweb.co.uk</a></span>
 
-          <span style="display:block;margin-top:10px;"><b>Subject:</b> Website enquiry — A. Pereira</span>
-          <span style="display:block;margin-top:10px;"><b>Include:</b> business type • website (if any) • what you need • deadline • Jersey</span>
+          <span style="display:block;margin-top:10px;"><b>Subject:</b> Digital services enquiry — A. Pereira</span>
+          <span style="display:block;margin-top:10px;"><b>Include:</b> what you need • deadline • Jersey/UK • links/files (if any)</span>
 
           <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn primary" id="emailBtn" href="#">Get a free review</a>
@@ -985,7 +972,7 @@
       </div>
     </section>
 
-    <!-- PRIVACY -->
+    <!-- PRIVACY (UPDATED for broader services) -->
     <section id="privacy" class="reveal">
       <div class="section-title">
         <div>
@@ -1009,13 +996,13 @@
         <div class="card reveal" style="grid-column:span 6;">
           <div class="ic">📩</div>
           <h3>What I collect</h3>
-          <p>If you contact me by email, I may collect your name, business/industry and contact details, plus your message — only to reply and provide quotes/support.</p>
+          <p>If you contact me by email or WhatsApp, I may collect your name, contact details and message content — only to reply and provide quotes/support.</p>
         </div>
 
         <div class="card reveal" style="grid-column:span 6;">
-          <div class="ic">🗑️</div>
-          <h3>Retention &amp; requests</h3>
-          <p>I keep enquiry messages only as long as needed for support and basic record-keeping. You can request access, correction or deletion by emailing me.</p>
+          <div class="ic">🗂️</div>
+          <h3>Files you share</h3>
+          <p>If you share documents (e.g., CVs), they are used only to provide the requested service. You can request deletion at any time.</p>
         </div>
 
         <div class="card reveal" style="grid-column:span 6;">
@@ -1025,13 +1012,13 @@
         </div>
 
         <div class="panel reveal">
-          <b>Legal note:</b> This notice explains how your personal data is handled in line with applicable data protection requirements.
+          <b>Legal note:</b> This notice explains how personal data is handled in line with applicable data protection requirements.
           If you have concerns, contact me first via the emails above.
         </div>
       </div>
     </section>
 
-    <!-- TERMS -->
+    <!-- TERMS (UPDATED wording for digital services) -->
     <section id="terms" class="reveal">
       <div class="section-title">
         <div>
@@ -1048,21 +1035,21 @@
           <br><br>
 
           <b>2) What I provide</b><br>
-          Digital services: freelance web design / website build, SEO foundations, and business email setup guidance (MX/SPF/DKIM).
-          Deliverables are agreed in writing (email) per project.
+          Digital services (examples): CV & resume support, document formatting, websites, SEO foundations, business email setup guidance (MX/SPF/DKIM), Google Business setup and general digital support.
+          Deliverables are agreed in writing (email/WhatsApp) per request.
           <br><br>
 
           <b>3) Quotes &amp; payments</b><br>
-          Quotes are provided in writing. Payment terms are agreed per project.
+          Quotes are provided in writing. Payment terms are agreed per job/project.
           Third-party subscriptions (domains/hosting/email providers) are your responsibility unless agreed otherwise.
           <br><br>
 
           <b>4) Results / no guarantees</b><br>
-          I follow best-practice and deliver agreed work. I do not guarantee specific results (rankings/leads/revenue).
+          I follow best-practice and deliver agreed work. I do not guarantee specific results (rankings/leads/revenue/job outcomes).
           <br><br>
 
           <b>5) Client responsibilities</b><br>
-          You confirm you have rights to use any text/images/logos provided and you approve final content before launch.
+          You confirm you have rights to use any text/images/logos provided and you approve final content before delivery/launch.
           <br><br>
 
           <b>6) Changes &amp; cancellations</b><br>
@@ -1089,11 +1076,11 @@
       <div class="foot">
         <div>
           <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
-          <span>Freelance web designer • Operated by <b>A. Pereira</b> (<b>sole trader</b>).</span><br/>
+          <span>Digital services • Operated by <b>A. Pereira</b> (<b>sole trader</b>).</span><br/>
           <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereiraweb.co.uk</a></span><br/>
           <span>Alternative • <a id="emailAltFooter" href="#">contact@antoniopereira.org</a></span><br/>
           <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
-            This website is for general information only and does not constitute legal, tax or immigration advice.
+            This website is for general information only and does not constitute legal, tax, immigration, HR or financial advice.
           </span>
         </div>
 
@@ -1114,7 +1101,6 @@
     </footer>
   </main>
 
-  <!-- Floating CTA (mobile) -->
   <div class="float-cta" id="floatCta" aria-label="Quick contact">
     <div>
       <b>Want a free review?</b><br>
@@ -1126,7 +1112,6 @@
     </div>
   </div>
 
-  <!-- Cookie banner -->
   <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
     <div class="row">
       <p>
@@ -1144,12 +1129,11 @@
     // ===== Contact setup =====
     const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
     const ALT_EMAIL       = "contact@antoniopereira.org";
-    // If you don't have a separate support inbox yet, keep support the same:
     const SUPPORT_EMAIL   = "info@antoniopereiraweb.co.uk";
 
     // WhatsApp (direct link; number NOT shown on page)
     const WHATSAPP_E164 = "447700704591";
-    const WHATSAPP_TEXT = "Hi! I’m interested in your services. Can you help with a website or business email?";
+    const WHATSAPP_TEXT = "Hi! I’m interested in your digital services. Can you help with a CV, website, Google setup or business email?";
     const WHATSAPP_URL  = `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
 
     document.getElementById("y").textContent = new Date().getFullYear();
@@ -1161,22 +1145,21 @@
 
 I’m interested in your services.
 
-Business type:
-Website (if any):
 What I need:
-Domain (if email setup):
 Deadline:
 Location (Jersey/UK):
+Links/files (if any):
 
 Thanks!`
       )}`;
     }
 
-    const enquiryMailto = mailtoFor(ENQUIRIES_EMAIL, "Website enquiry — A. Pereira");
-    const altMailto     = mailtoFor(ALT_EMAIL, "Website enquiry — A. Pereira (Alternative)");
+    const enquiryMailto = mailtoFor(ENQUIRIES_EMAIL, "Digital services enquiry — A. Pereira");
+    const altMailto     = mailtoFor(ALT_EMAIL, "Digital services enquiry — A. Pereira (Alternative)");
     const supportMailto = mailtoFor(SUPPORT_EMAIL, "Support — A. Pereira");
 
-    // Apply enquiry email everywhere (text links + buttons)
+    document.getElementById("y").textContent = new Date().getFullYear();
+
     const enquiryTextIds = ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms"];
     enquiryTextIds.forEach(id=>{
       const el = document.getElementById(id);
@@ -1186,7 +1169,6 @@ Thanks!`
       el.style.textDecoration = "underline";
     });
 
-    // Enquiry buttons (IMPORTANT: do NOT overwrite their text)
     const enquiryButtonIds = ["emailBtn","emailHeroBtn","floatEmailBtn"];
     enquiryButtonIds.forEach(id=>{
       const el = document.getElementById(id);
@@ -1194,7 +1176,6 @@ Thanks!`
       el.href = enquiryMailto;
     });
 
-    // Apply alternative email (text links + button)
     const altTextIds = ["emailAltTop","emailAltInline","emailAltPrivacy","emailAltTerms","emailAltFooter"];
     altTextIds.forEach(id=>{
       const el = document.getElementById(id);
@@ -1204,11 +1185,9 @@ Thanks!`
       el.style.textDecoration = "underline";
     });
 
-    // Alternative button (keep button label)
     const altBtn = document.getElementById("emailAltBtn");
     if(altBtn) altBtn.href = altMailto;
 
-    // Apply support email (text links only + button href)
     const supportTextIds = ["supportTop","supportInline"];
     supportTextIds.forEach(id=>{
       const el = document.getElementById(id);
@@ -1218,11 +1197,9 @@ Thanks!`
       el.style.textDecoration = "underline";
     });
 
-    // Support button (keep button label)
     const supportBtn = document.getElementById("supportBtn");
     if(supportBtn) supportBtn.href = supportMailto;
 
-    // WhatsApp buttons
     ["waTopBtn","waTopBtnMobile","waDrawerBtn","waHeroBtn","waContactBtn","floatWaBtn"].forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
@@ -1231,11 +1208,9 @@ Thanks!`
       el.setAttribute("target","_blank");
     });
 
-    // Drawer quick email -> contact
     const drawerEmailQuick = document.getElementById("drawerEmailQuick");
     if(drawerEmailQuick) drawerEmailQuick.setAttribute("href", "#contact");
 
-    // Smooth scroll
     function smoothTo(hash){
       const el = document.querySelector(hash);
       if(!el) return false;
@@ -1252,7 +1227,6 @@ Thanks!`
       });
     });
 
-    // Cookie consent
     const CONSENT_KEY = "ap_cookie_consent_v1";
     const banner = document.getElementById("cookieBanner");
     const acceptBtn = document.getElementById("cookieAccept");
@@ -1275,7 +1249,6 @@ Thanks!`
       });
     }
 
-    // Reveal on scroll
     const reveals = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
@@ -1287,7 +1260,6 @@ Thanks!`
     }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
     reveals.forEach(el=>io.observe(el));
 
-    // Floating CTA (mobile)
     const floatCta = document.getElementById("floatCta");
     function toggleFloat(){
       if(!floatCta) return;
@@ -1301,7 +1273,6 @@ Thanks!`
     toggleFloat();
     window.addEventListener("scroll", toggleFloat, { passive:true });
 
-    // Initials from domain
     function initialsFromDomain(domain){
       try{
         const host = (domain || "").toLowerCase().replace(/^https?:\/\//,"").replace(/^www\./,"").split("/")[0];
@@ -1320,7 +1291,6 @@ Thanks!`
       if(el) el.textContent = initialsFromDomain(domain);
     });
 
-    // Mobile drawer
     const menuBtn = document.getElementById("menuBtn");
     const drawer = document.getElementById("menuDrawer");
     const overlay = document.getElementById("drawerOverlay");
@@ -1354,7 +1324,6 @@ Thanks!`
       a.addEventListener("click", ()=> closeDrawer());
     });
 
-    // Hero class switch
     const heroImg = document.getElementById("heroImg");
     function setHeroClass(){
       if(!heroImg) return;
@@ -1368,4 +1337,4 @@ Thanks!`
 </body>
 </html>
 
-<!-- force deploy v407 -->
+<!-- force deploy v501 -->
