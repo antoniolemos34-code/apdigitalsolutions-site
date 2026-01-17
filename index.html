@@ -11,55 +11,6 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Web Design & Google Business Setup in Jersey — A. Pereira" />
-  <meta property="og:description" content="Websites, Google Business (Maps) setup, and business email for small businesses in Jersey." />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Web Design & Google Business Setup in Jersey — A. Pereira" />
-  <meta name="twitter:description" content="Websites, Google setup and business email for small businesses in Jersey." />
-  <meta name="twitter:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
-
-  <!-- Performance -->
-  <link rel="preload" as="image" href="./transparent-hero.jpg" />
-  <link rel="preload" as="image" href="./transparent-hero-mobile.jpg" media="(max-width: 520px)" />
-
-  <!-- Favicons -->
-  <link rel="icon" href="./favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-  <link rel="manifest" href="./site.webmanifest">
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "@id":"https://antoniopereiraweb.co.uk/#business",
-    "name":"A. Pereira",
-    "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/transparent-hero.jpg",
-    "description":"Web design, Google Business Profile setup and business email configuration for small businesses and sole traders in Jersey.",
-    "email":"info@antoniopereiraweb.co.uk",
-    "areaServed":[
-      {"@type":"AdministrativeArea","name":"Jersey"},
-      {"@type":"Country","name":"United Kingdom"}
-    ],
-    "serviceType":[
-      "Web Design",
-      "Website Development",
-      "Google Business Profile Setup",
-      "Local SEO Foundations",
-      "Business Email Setup",
-      "WhatsApp Business Setup"
-    ]
-  }
-  </script>
-
   <style>
     :root{
       --bg:#F5F7FB;
@@ -91,46 +42,6 @@
     }
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:16px}
-    .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip:focus{
-      position:fixed;left:14px;top:14px;width:auto;height:auto;
-      padding:10px 12px;border-radius:12px;z-index:9999;
-      background:rgba(255,255,255,.95);
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      text-decoration:none;
-    }
-
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:10px 12px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.12);
-      background:rgba(255,255,255,.78);
-      color:rgba(11,18,32,.88);
-      font-weight:850;font-size:13px;
-      transition:.18s ease;
-      text-decoration:none;
-      white-space:nowrap;
-      box-shadow:0 12px 26px rgba(2,6,23,.06);
-      cursor:pointer;
-    }
-    .btn:hover{transform:translateY(-1px);background:#fff;border-color:rgba(11,18,32,.16)}
-    .btn.primary{
-      border-color:transparent;
-      background: linear-gradient(135deg, rgba(79,70,229,.96), rgba(6,182,212,.88));
-      color:#07101F;
-      box-shadow: 0 18px 50px rgba(79,70,229,.16);
-    }
-    .btn.ghost{
-      background:rgba(11,18,32,.03);
-      border-color:rgba(11,18,32,.10);
-      box-shadow:none;
-    }
-    .btn.wa{
-      border-color: rgba(11,18,32,.12);
-      background: rgba(255,255,255,.86);
-    }
-
     header{
       position:sticky;top:0;z-index:200;
       backdrop-filter: blur(14px);
@@ -141,30 +52,39 @@
       display:flex;align-items:center;justify-content:space-between;gap:12px;
       padding:10px 0;
     }
-    .brand{
-      display:flex;align-items:center;gap:12px;
-      text-decoration:none;
-      min-width:240px;
-    }
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
     .mark{
       width:44px;height:44px;border-radius:16px;
       background: rgba(255,255,255,.86);
       border:1px solid rgba(11,18,32,.10);
       box-shadow: 0 18px 45px rgba(79,70,229,.10);
-      flex:0 0 auto;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
+      display:grid;place-items:center;overflow:hidden;
     }
-    .mark img{width:100%;height:100%;object-fit:cover;display:block}
     .brand b{font-size:14px;letter-spacing:.2px}
     .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(11,18,32,.12);
+      background:rgba(255,255,255,.78);
+      color:rgba(11,18,32,.88);
+      font-weight:850;font-size:13px;
+      transition:.18s ease;
+      text-decoration:none;
+      white-space:nowrap;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px);background:#fff;border-color:rgba(11,18,32,.16)}
+    .btn.primary{
+      border-color:transparent;
+      background: linear-gradient(135deg, rgba(79,70,229,.96), rgba(6,182,212,.88));
+      color:#07101F;
+      box-shadow: 0 18px 50px rgba(79,70,229,.16);
+    }
+    .btn.ghost{background:rgba(11,18,32,.03);border-color:rgba(11,18,32,.10)}
+    .btn.wa{background:rgba(255,255,255,.86)}
     .nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-    .nav-desktop{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-    .nav-mobile{display:none;gap:10px;align-items:center;justify-content:flex-end}
 
-    .hero{padding:16px 0 12px}
     .shell{
       border-radius:30px;
       border:1px solid var(--line);
@@ -174,100 +94,19 @@
       position:relative;
       isolation:isolate;
     }
-    .shell::before{
-      content:"";
-      position:absolute;inset:-120px;
-      background:
-        radial-gradient(900px 560px at 12% 18%, rgba(79,70,229,.12), transparent 62%),
-        radial-gradient(900px 560px at 90% 18%, rgba(6,182,212,.10), transparent 62%);
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .hero-media{position:relative;z-index:1}
-    .hero-image{display:block;width:100%;height:auto;background: rgba(11,18,32,.03)}
-    .hero-image.desktop{aspect-ratio: 16 / 9; object-fit: cover; object-position: 70% 30%;}
-    .hero-image.mobile{aspect-ratio: 4 / 5; object-fit: cover; object-position: 72% 22%;}
-
-    .hero-body{
-      position:relative;z-index:1;
-      padding:20px 16px 18px;
-      display:grid;
-      gap:12px;
-    }
-
-    .pill{
-      display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
-      padding:8px 12px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.78);
-      color:rgba(11,18,32,.70);
-      font-size:12px;
-      letter-spacing:.2px;
-      width:max-content;
-      max-width:100%;
-    }
-    .dot{width:8px;height:8px;border-radius:999px;background:rgba(6,182,212,.75)}
-    .sep{opacity:.55}
-
-    h1{
-      margin:2px 0 0;
-      font-size:clamp(30px,5.2vw,58px);
-      line-height:1.03;
-      letter-spacing:-1.2px;
-    }
-    .lead{
-      margin:0;
-      color:var(--muted);
-      font-size:15.9px;
-      line-height:1.95;
-      max-width:84ch;
-    }
+    .hero{padding:16px 0 12px}
+    .hero-body{padding:20px 16px 18px;display:grid;gap:12px}
+    h1{margin:2px 0 0;font-size:clamp(30px,5.2vw,54px);line-height:1.03;letter-spacing:-1.2px}
+    .lead{margin:0;color:var(--muted);font-size:15.9px;line-height:1.95;max-width:84ch}
     .lead strong{color:rgba(11,18,32,.92);font-weight:900}
     .micro{margin-top:8px;color:rgba(11,18,32,.58);font-size:12.5px;line-height:1.6}
 
-    .proof{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px}
-    .chip{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.82);
-      color:rgba(11,18,32,.72);
-      font-size:12px;
-      box-shadow:0 12px 26px rgba(2,6,23,.05);
-      white-space:nowrap;
-    }
-    .chip b{color:rgba(11,18,32,.84)}
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-
     section{padding:18px 0}
-    .section-title{
-      display:flex;align-items:flex-end;justify-content:space-between;gap:12px;
-      margin:12px 0 12px
-    }
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:12px 0 12px}
     .section-title h2{margin:0;font-size:18px;letter-spacing:-.2px}
     .section-title p{margin:0;color:var(--muted2);font-size:13px;max-width:88ch}
 
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-    .card{
-      grid-column:span 4;
-      background:rgba(255,255,255,.86);
-      border:1px solid rgba(11,18,32,.10);
-      border-radius:var(--r);
-      padding:16px;
-      transition:.18s ease;
-      box-shadow:0 16px 44px rgba(2,6,23,.07);
-    }
-    .card:hover{transform:translateY(-2px);background:#fff}
-    .card h3{margin:10px 0 6px;font-size:14px}
-    .card p{margin:0;color:var(--muted2);font-size:13px;line-height:1.72}
-    .ic{
-      width:40px;height:40px;border-radius:16px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg, rgba(79,70,229,.12), rgba(6,182,212,.10));
-      border:1px solid rgba(11,18,32,.10);
-    }
-
     .panel{
       grid-column:span 12;
       background:rgba(255,255,255,.86);
@@ -280,69 +119,9 @@
       box-shadow:0 16px 44px rgba(2,6,23,.07);
     }
     .panel b{color:rgba(11,18,32,.92)}
-
-    .pcard{
-      grid-column:span 6;
-      border-radius:var(--r);
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.86);
-      box-shadow:0 16px 44px rgba(2,6,23,.07);
-      overflow:hidden;
-      transition:.18s ease;
-    }
-    .pcard:hover{transform:translateY(-2px);background:#fff}
-    .pcover{
-      padding:16px;
-      border-bottom:1px solid rgba(11,18,32,.08);
-      background:
-        radial-gradient(560px 300px at 20% 30%, rgba(79,70,229,.10), transparent 60%),
-        radial-gradient(560px 300px at 80% 20%, rgba(6,182,212,.08), transparent 60%),
-        rgba(255,255,255,.70);
-    }
-    .ptop{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .pmeta b{display:block;font-size:14px;letter-spacing:.2px}
-    .pmeta small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-    .pchip{
-      padding:7px 10px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.80);
-      color:rgba(11,18,32,.72);
-      font-size:12px;
-      white-space:nowrap;
-    }
-    .pbody{padding:14px 16px}
-    .pbody p{margin:0;color:var(--muted2);font-size:13px;line-height:1.78}
-    .pactions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .plink{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:9px 12px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.12);
-      background:rgba(255,255,255,.78);
-      text-decoration:none;
-      font-weight:850;font-size:13px;
-      box-shadow:0 12px 26px rgba(2,6,23,.06);
-      transition:.18s ease;
-    }
-    .plink:hover{transform:translateY(-1px);background:#fff;border-color:rgba(11,18,32,.16)}
-    .plink.primary{
-      border-color:transparent;
-      background: linear-gradient(135deg, rgba(79,70,229,.96), rgba(6,182,212,.88));
-      color:#07101F;
-      box-shadow:0 18px 50px rgba(79,70,229,.14);
-    }
-
-    .form{
-      display:grid;gap:10px;margin-top:10px;
-    }
-    .field{
-      display:grid;gap:6px;
-    }
-    label{
-      font-size:12px;
-      color:rgba(11,18,32,.70);
-      font-weight:800;
-      letter-spacing:.2px;
-    }
+    .form{display:grid;gap:10px;margin-top:10px}
+    .field{display:grid;gap:6px}
+    label{font-size:12px;color:rgba(11,18,32,.70);font-weight:800;letter-spacing:.2px}
     input, textarea, select{
       width:100%;
       padding:12px 12px;
@@ -359,170 +138,62 @@
       border-color: rgba(79,70,229,.38);
       box-shadow:0 0 0 4px rgba(79,70,229,.10), 0 12px 26px rgba(2,6,23,.05);
     }
-    .two{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
+    .two{display:grid;grid-template-columns: 1fr 1fr;gap:10px}
+    .hint{font-size:11px;color:rgba(11,18,32,.55);line-height:1.5}
+    .success,.error{
+      display:none;margin-top:10px;padding:12px 12px;border-radius:16px;font-size:13px;
     }
-    .hint{
-      font-size:11px;
-      color:rgba(11,18,32,.55);
-      line-height:1.5;
-    }
-    .success{
-      display:none;
-      margin-top:10px;
-      padding:12px 12px;
-      border-radius:16px;
-      border:1px solid rgba(6,182,212,.22);
-      background:rgba(6,182,212,.10);
-      color:rgba(11,18,32,.82);
-      font-size:13px;
-    }
-    .error{
-      display:none;
-      margin-top:10px;
-      padding:12px 12px;
-      border-radius:16px;
-      border:1px solid rgba(239,68,68,.25);
-      background:rgba(239,68,68,.10);
-      color:rgba(11,18,32,.82);
-      font-size:13px;
-    }
+    .success{border:1px solid rgba(6,182,212,.22);background:rgba(6,182,212,.10);color:rgba(11,18,32,.82)}
+    .error{border:1px solid rgba(239,68,68,.25);background:rgba(239,68,68,.10);color:rgba(11,18,32,.82)}
 
-    .reveal{opacity:0;transform: translateY(10px);transition: opacity .55s ease, transform .55s ease;will-change: opacity, transform;}
-    .reveal.in{opacity:1;transform:translateY(0)}
-    @media (prefers-reduced-motion: reduce){
-      .reveal{opacity:1; transform:none; transition:none;}
-    }
-
-    .float-cta{
-      position:fixed;
-      left:14px; right:14px;
-      bottom:14px;
-      z-index:280;
-      display:none;
-      padding:12px;
-      border-radius:18px;
-      border:1px solid rgba(11,18,32,.12);
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(14px);
-      box-shadow: var(--shadow2);
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .float-cta b{font-size:12.5px;color:rgba(11,18,32,.84)}
-    .float-cta .btn{box-shadow:none}
-    .float-cta .btn.primary{padding:10px 14px}
-
-    footer{
-      margin-top:18px;padding:22px 0 34px;border-top:1px solid rgba(11,18,32,.10);
-      color:var(--muted2);font-size:12px;
-    }
+    footer{margin-top:18px;padding:22px 0 34px;border-top:1px solid rgba(11,18,32,.10);color:var(--muted2);font-size:12px}
     .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
-    .foot a{color:var(--muted2)}
-    .foot a:hover{color:rgba(11,18,32,.92)}
 
-    @media (max-width: 980px){
-      .brand{display:none}
-      .nav{justify-content:space-between}
-      .nav-desktop{display:none}
-      .nav-mobile{display:flex}
-      .card{grid-column:span 6}
-      .pcard{grid-column:span 12}
-      .float-cta{display:flex}
-      .two{grid-template-columns:1fr}
-    }
-    @media (max-width: 520px){
-      .card{grid-column:span 12}
-      .wrap{padding:16px}
-    }
+    @media (max-width: 980px){ .two{grid-template-columns:1fr} }
   </style>
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
   <header>
     <div class="wrap">
       <div class="nav">
         <a class="brand" href="#top" aria-label="Brand">
-          <div class="mark" aria-hidden="true">
-            <img src="./logo-ap.png" alt="A. Pereira logo" loading="eager" decoding="async">
-          </div>
+          <div class="mark" aria-hidden="true"></div>
           <div>
             <b>A. Pereira</b>
             <small>Websites • Google setup • Jersey</small>
           </div>
         </a>
 
-        <nav class="nav-actions" aria-label="Primary">
-          <div class="nav-desktop">
-            <a class="btn" href="#services">Services</a>
-            <a class="btn" href="#portfolio">Portfolio</a>
-            <a class="btn" href="#process">Process</a>
-            <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-            <a class="btn primary" href="#contact">Get a free review</a>
-          </div>
-
-          <div class="nav-mobile">
-            <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-            <a class="btn primary" href="#contact" id="topCta">Free review</a>
-          </div>
-        </nav>
+        <div class="nav-actions">
+          <a class="btn ghost" href="#services">Services</a>
+          <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn primary" href="#contact">Free review</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <main id="main" class="wrap">
-
-    <!-- HERO -->
-    <section class="hero reveal" id="top">
+  <main class="wrap" id="top">
+    <section class="hero">
       <div class="shell">
-        <div class="hero-media" aria-label="Hero banner">
-          <picture>
-            <source media="(max-width: 520px)" srcset="./transparent-hero-mobile.jpg">
-            <source media="(max-width: 980px)" srcset="./transparent-hero.jpg">
-            <img
-              class="hero-image desktop"
-              id="heroImg"
-              src="./transparent-hero.jpg"
-              alt="A. Pereira — Websites & Google setup in Jersey"
-              loading="eager"
-              decoding="async"
-            />
-          </picture>
-        </div>
-
         <div class="hero-body">
-          <span class="pill"><span class="dot"></span> Small business support <span class="sep">•</span> Websites <span class="sep">•</span> Google (Maps) <span class="sep">•</span> Jersey</span>
-
           <h1>Websites & Google setup that turn visitors into enquiries</h1>
-
           <p class="lead">
             I help <strong>small businesses</strong> and <strong>sole traders</strong> in <strong>Jersey</strong> look professional online —
-            with <strong>mobile-first websites</strong>, <strong>Google Business (Maps)</strong> setup, and <strong>business email</strong> (MX/SPF/DKIM).
+            with <strong>mobile-first websites</strong>, <strong>Google Business (Maps)</strong> setup, and <strong>business email</strong>.
             <span class="micro">Clear steps. Fast communication. No hype.</span>
           </p>
 
-          <div class="proof" aria-label="Quick proof points">
-            <span class="chip"><b>Fast</b> turnaround</span>
-            <span class="chip"><b>Clean</b> premium design</span>
-            <span class="chip"><b>Conversion-first</b> structure</span>
-          </div>
-
-          <div class="cta reveal">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
             <a class="btn primary" href="#contact">Get a free website review</a>
             <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn ghost" href="#services">See services</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="reveal">
+    <section id="services">
       <div class="section-title">
         <div>
           <h2>Services</h2>
@@ -531,95 +202,14 @@
       </div>
 
       <div class="grid">
-        <div class="card reveal"><div class="ic">🌐</div><h3>Website (mobile-first)</h3><p>Clean, fast pages with strong calls-to-action so customers contact you easily.</p></div>
-        <div class="card reveal"><div class="ic">📍</div><h3>Google Business (Maps)</h3><p>Categories, services, photos and setup to improve visibility on local searches.</p></div>
-        <div class="card reveal"><div class="ic">✉️</div><h3>Business email</h3><p>Domain email setup (MX/SPF/DKIM) + connect Zoho/Gmail/Outlook properly.</p></div>
-
-        <div class="card reveal"><div class="ic">💬</div><h3>WhatsApp Business</h3><p>Auto-replies, quick replies and an enquiry flow that feels professional.</p></div>
-        <div class="card reveal"><div class="ic">📈</div><h3>SEO foundations</h3><p>Metadata, structure and indexing best practice (no ranking guarantees).</p></div>
-        <div class="card reveal"><div class="ic">🧩</div><h3>Automation (leads)</h3><p>Capture website leads into Sheets/CRM + instant notification and follow-ups.</p></div>
-
-        <div class="panel reveal">
-          <b>Best starting point:</b> a free review. I’ll tell you what’s missing and what to fix first — in order.
+        <div class="panel">
+          <b>What I do:</b><br>
+          • Website design (mobile-first) • Google Business Profile (Maps) setup • Business email setup • WhatsApp Business setup • Lead capture automation
         </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Portfolio</h2>
-          <p>Real projects — clean structure, premium feel, and a clear contact journey.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="pcard reveal">
-          <div class="pcover">
-            <div class="ptop">
-              <div class="pmeta">
-                <b>Ajuda Total</b>
-                <small>Service website • Clear journey • Mobile-first</small>
-              </div>
-              <span class="pchip">Website</span>
-            </div>
-          </div>
-          <div class="pbody">
-            <p>A clean, trustworthy layout designed to help visitors understand the service quickly and get in touch.</p>
-            <div class="pactions">
-              <a class="plink primary" href="https://ajudatotal.com" target="_blank" rel="noopener">Visit website</a>
-              <a class="plink" href="#contact">Get a similar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="pcard reveal">
-          <div class="pcover">
-            <div class="ptop">
-              <div class="pmeta">
-                <b>Catia Coutinho Holística</b>
-                <small>Premium aesthetic • Simple enquiry flow</small>
-              </div>
-              <span class="pchip">Website</span>
-            </div>
-          </div>
-          <div class="pbody">
-            <p>A calm, premium design with clear navigation and a straightforward contact journey.</p>
-            <div class="pactions">
-              <a class="plink primary" href="https://catiacoutinhoholistica.com" target="_blank" rel="noopener">Visit website</a>
-              <a class="plink" href="#contact">Request a review</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="panel reveal">
-          <b>Want more enquiries?</b> Your site needs one job: make it easy to contact you. I build around that.
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Process</h2>
-          <p>Simple workflow — fast and clear.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="card reveal"><div class="ic">1</div><h3>Free review</h3><p>You send your details. I reply with what to fix and best next steps.</p></div>
-        <div class="card reveal"><div class="ic">2</div><h3>Build & setup</h3><p>Website, Google Business, email, WhatsApp — set up the right way.</p></div>
-        <div class="card reveal"><div class="ic">3</div><h3>Launch & improve</h3><p>Launch with tracking + lead capture. Improve based on real enquiries.</p></div>
-        <div class="panel reveal">
-          <b>Note:</b> I follow best practices, but no one can guarantee rankings/leads. What I can guarantee: clean work and clear steps.
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT (FORM -> MAKE WEBHOOK) -->
-    <section id="contact" class="reveal">
+    <section id="contact">
       <div class="section-title">
         <div>
           <h2>Get a free website review</h2>
@@ -628,42 +218,82 @@
       </div>
 
       <div class="grid">
-        <div class="panel reveal" style="grid-column:span 12;">
+        <div class="panel">
           <b>Contact</b><br>
           Email: <a id="emailInline" href="#">info@antoniopereiraweb.co.uk</a> • WhatsApp: <a id="waInline" href="#" target="_blank" rel="noopener">Message me</a>
           <div class="hint" style="margin-top:8px;">
-            This form sends straight to my automation (Make) so I never miss your enquiry.
+            This form goes straight into my automation, so I never miss an enquiry.
           </div>
 
+          <!-- IMPORTANT: This is your Make webhook -->
           <form class="form" id="leadForm"
                 action="https://hook.eu1.make.com/dyxqtxh3wh2yn293mozc3ogeonlkgdjm"
                 method="POST" novalidate>
 
-            <!-- hidden context -->
-            <input type="hidden" name="source" value="antoniopereiraweb.co.uk" />
-            <input type="hidden" name="page_url" id="page_url" value="" />
-            <input type="hidden" name="page_title" id="page_title" value="" />
-            <input type="hidden" name="timestamp" id="ts" value="" />
+            <!-- Fields designed to match your Google Sheet columns -->
+            <input type="hidden" name="Timestamp" id="ts" value="" />
+            <input type="hidden" name="Notes" id="notesAuto" value="Submitted via antoniopereiraweb.co.uk" />
 
             <div class="two">
               <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+                <label for="name">Name *</label>
+                <input id="name" name="Name" type="text" autocomplete="name" required placeholder="Your name" />
               </div>
               <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@business.com" />
+                <label for="email">Email *</label>
+                <input id="email" name="Email" type="email" autocomplete="email" required placeholder="you@business.com" />
               </div>
             </div>
 
             <div class="two">
               <div class="field">
-                <label for="business">Business name</label>
-                <input id="business" name="business" type="text" placeholder="Your business" />
+                <label for="business">Business *</label>
+                <input id="business" name="Business" type="text" required placeholder="Your business name" />
               </div>
               <div class="field">
-                <label for="service">What do you need?</label>
-                <select id="service" name="service" required>
+                <label for="website">Website</label>
+                <input id="website" name="Website" type="url" placeholder="https://yourwebsite.com" />
+              </div>
+            </div>
+
+            <div class="two">
+              <div class="field">
+                <label for="mainGoal">Main Goal *</label>
+                <select id="mainGoal" name="Main Goal" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>More enquiries (calls/messages)</option>
+                  <option>More bookings/appointments</option>
+                  <option>Look more professional</option>
+                  <option>Improve Google visibility</option>
+                  <option>Fix email / domain issues</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="startTimeframe">Start Timeframe *</label>
+                <select id="startTimeframe" name="Start Timeframe" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>ASAP</option>
+                  <option>This week</option>
+                  <option>This month</option>
+                  <option>Just researching</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="two">
+              <div class="field">
+                <label for="businessStatus">Business Status *</label>
+                <select id="businessStatus" name="Business Status" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>New business</option>
+                  <option>Already trading</option>
+                  <option>Rebranding</option>
+                  <option>Not sure</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="leadType">Lead Type *</label>
+                <select id="leadType" name="Lead Type" required>
                   <option value="" selected disabled>Select one</option>
                   <option>Website (new)</option>
                   <option>Website (improve)</option>
@@ -675,77 +305,47 @@
               </div>
             </div>
 
-            <div class="two">
-              <div class="field">
-                <label for="website">Your website (if you have one)</label>
-                <input id="website" name="website" type="url" placeholder="https://yourwebsite.com" />
-              </div>
-              <div class="field">
-                <label for="location">Location</label>
-                <input id="location" name="location" type="text" placeholder="Jersey / UK" />
-              </div>
+            <div class="field">
+              <label for="message">Message *</label>
+              <textarea id="message" name="Message" required placeholder="Tell me what you do and what you want to improve..."></textarea>
+              <div class="hint">Tip: include your industry + what “more enquiries” means for you.</div>
             </div>
 
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="Tell me what you do and what you want to improve..."></textarea>
-              <div class="hint">Tip: include your industry + what “more enquiries” means for you (calls, bookings, quotes).</div>
-            </div>
+            <!-- Optional (you can compute later in Sheets/Make) -->
+            <input type="hidden" name="Lead Score" id="leadScore" value="" />
 
             <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px;">
               <button class="btn primary" id="submitBtn" type="submit">Send request</button>
               <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener">WhatsApp instead</a>
-              <span class="hint" id="formHint">No spam. Your details are used only to reply.</span>
+              <span class="hint">No spam. Your details are used only to reply.</span>
             </div>
 
             <div class="success" id="okBox">✅ Sent. Thanks — I’ll reply with clear next steps.</div>
-            <div class="error" id="errBox">⚠️ Something didn’t send. Please try again or WhatsApp me.</div>
+            <div class="error" id="errBox">⚠️ Please fill all required fields marked with *.</div>
           </form>
         </div>
       </div>
     </section>
 
-    <footer class="reveal">
+    <footer>
       <div class="foot">
         <div>
           <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
           <span>Web design • Google Business setup • Business email.</span><br/>
-          <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereiraweb.co.uk</a></span><br/>
-          <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
-            General info only. No ranking/lead guarantees.
-          </span>
+          <span>Jersey • <a id="emailFooter" href="#">info@antoniopereiraweb.co.uk</a></span>
         </div>
-
-        <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Free review</a>
+        <div>
+          © <span id="y"></span>
         </div>
       </div>
-
-      <div class="tiny" style="margin-top:10px;">© <span id="y"></span> A. Pereira. All rights reserved.</div>
     </footer>
   </main>
 
-  <div class="float-cta" id="floatCta" aria-label="Quick contact">
-    <div>
-      <b>Want a free review?</b><br>
-      <span style="font-size:11.5px;color:rgba(11,18,32,.60)">Reply within 24–48h (usually faster)</span>
-    </div>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <a class="btn wa" id="floatWaBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="btn primary" href="#contact">Send request</a>
-    </div>
-  </div>
-
   <script>
-    // ===== Contact setup =====
+    // ===== Settings =====
     const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
-
-    // WhatsApp
     const WHATSAPP_E164 = "447700704591";
-    const WHATSAPP_TEXT = "Hi! I’d like a free review. I want more enquiries from my website / Google. Can you help?";
+    const WHATSAPP_TEXT = "Hi! I’d like a free website review. Can you help me get more enquiries?";
     const WHATSAPP_URL  = `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
 
     // Year
@@ -762,7 +362,7 @@
     });
 
     // WhatsApp links
-    ["waTopBtn","waTopBtnMobile","waHeroBtn","waContactBtn","floatWaBtn","waInline"].forEach(id=>{
+    ["waTopBtn","waHeroBtn","waContactBtn","waInline"].forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
       el.href = WHATSAPP_URL;
@@ -770,81 +370,37 @@
       el.setAttribute("target","_blank");
     });
 
-    // Smooth scroll
-    function smoothTo(hash){
-      const el = document.querySelector(hash);
-      if(!el) return false;
-      el.scrollIntoView({behavior:"smooth", block:"start"});
-      return true;
-    }
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener("click",(ev)=>{
-        const href = a.getAttribute("href");
-        if(!href || href === "#") return;
-        if(smoothTo(href)) ev.preventDefault();
-      });
-    });
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
-    reveals.forEach(el=>io.observe(el));
-
-    // Floating CTA toggle
-    const floatCta = document.getElementById("floatCta");
-    function toggleFloat(){
-      if(!floatCta) return;
-      const y = window.scrollY || document.documentElement.scrollTop;
-      const on = y > 260;
-      floatCta.style.visibility = on ? "visible" : "hidden";
-      floatCta.style.opacity = on ? "1" : "0";
-      floatCta.style.transform = on ? "translateY(0)" : "translateY(8px)";
-      floatCta.style.transition = "opacity .25s ease, transform .25s ease, visibility .25s ease";
-    }
-    toggleFloat();
-    window.addEventListener("scroll", toggleFloat, { passive:true });
-
-    // Hero class toggle (mobile/desktop)
-    const heroImg = document.getElementById("heroImg");
-    function setHeroClass(){
-      if(!heroImg) return;
-      const isMobile = window.matchMedia("(max-width: 520px)").matches;
-      heroImg.classList.toggle("mobile", isMobile);
-      heroImg.classList.toggle("desktop", !isMobile);
-    }
-    setHeroClass();
-    window.addEventListener("resize", setHeroClass, { passive:true });
-
-    // ===== Form -> Make webhook (with nice UX) =====
+    // ===== Form -> Make webhook (reliable) =====
     const form = document.getElementById("leadForm");
     const okBox = document.getElementById("okBox");
     const errBox = document.getElementById("errBox");
     const submitBtn = document.getElementById("submitBtn");
 
-    // add context
-    document.getElementById("page_url").value = window.location.href;
-    document.getElementById("page_title").value = document.title;
-    document.getElementById("ts").value = new Date().toISOString();
+    function setTimestamp(){
+      document.getElementById("ts").value = new Date().toISOString();
+    }
+    setTimestamp();
+
+    // Simple lead score (optional)
+    function calcLeadScore(fd){
+      let score = 0;
+      if((fd.get("Website")||"").trim()) score += 1;
+      if((fd.get("Start Timeframe")||"") === "ASAP") score += 2;
+      if((fd.get("Main Goal")||"").toLowerCase().includes("enquiries")) score += 1;
+      return String(score);
+    }
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       okBox.style.display = "none";
       errBox.style.display = "none";
 
-      // basic required check
-      const required = ["name","email","service","message"];
-      for(const id of required){
+      // Required fields check (matches the * fields)
+      const requiredIds = ["name","email","business","mainGoal","startTimeframe","businessStatus","leadType","message"];
+      for(const id of requiredIds){
         const el = document.getElementById(id);
-        if(!el || !el.value.trim()){
-          el?.focus();
-          errBox.textContent = "⚠️ Please fill the required fields.";
+        if(!el || !el.value || !el.value.trim()){
+          el.focus();
           errBox.style.display = "block";
           return;
         }
@@ -854,8 +410,14 @@
       submitBtn.textContent = "Sending...";
 
       try{
-        // send as urlencoded (works reliably with Make webhooks)
-        const data = new URLSearchParams(new FormData(form));
+        setTimestamp();
+        const fd = new FormData(form);
+        document.getElementById("leadScore").value = calcLeadScore(fd);
+
+        // Rebuild after leadScore
+        const fd2 = new FormData(form);
+        const data = new URLSearchParams(fd2);
+
         const res = await fetch(form.action, {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
@@ -863,15 +425,13 @@
         });
 
         if(!res.ok) throw new Error("Bad response");
-        form.reset();
-        // re-set context after reset
-        document.getElementById("page_url").value = window.location.href;
-        document.getElementById("page_title").value = document.title;
-        document.getElementById("ts").value = new Date().toISOString();
 
+        form.reset();
+        setTimestamp();
         okBox.style.display = "block";
         okBox.scrollIntoView({behavior:"smooth", block:"center"});
       }catch(err){
+        errBox.textContent = "⚠️ Something didn’t send. Please try again or WhatsApp me.";
         errBox.style.display = "block";
       }finally{
         submitBtn.disabled = false;
@@ -881,5 +441,3 @@
   </script>
 </body>
 </html>
-
-<!-- force deploy v601 -->
