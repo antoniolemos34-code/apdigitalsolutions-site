@@ -6,25 +6,24 @@
   <meta name="theme-color" content="#F5F7FB" />
   <meta name="color-scheme" content="light" />
 
-  <!-- SEO (UPDATED: broader "Digital Services" intent) -->
-  <title>Digital Services in Jersey | Websites, CVs & Online Support — Antonio Pereira</title>
-  <meta name="description" content="Digital services for individuals, small businesses and sole traders in Jersey. Websites, CV help, Google Business setup, business email (MX/SPF/DKIM), documents and practical online support." />
+  <title>Web Design & Google Business Setup in Jersey — A. Pereira</title>
+  <meta name="description" content="Websites, Google Business (Maps) setup, and business email for small businesses and sole traders in Jersey. Clean, mobile-first and built to convert enquiries." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
-  <!-- Open Graph / Twitter (UPDATED) -->
-  <meta property="og:title" content="Digital Services in Jersey | Antonio Pereira" />
-  <meta property="og:description" content="Websites, CV help, Google Business setup, business email (MX/SPF/DKIM), documents and online support for individuals & small businesses in Jersey." />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Web Design & Google Business Setup in Jersey — A. Pereira" />
+  <meta property="og:description" content="Websites, Google Business (Maps) setup, and business email for small businesses in Jersey." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
   <meta property="og:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Digital Services in Jersey | Antonio Pereira" />
-  <meta name="twitter:description" content="Websites, CVs, Google setup, business email and practical digital support in Jersey." />
+  <meta name="twitter:title" content="Web Design & Google Business Setup in Jersey — A. Pereira" />
+  <meta name="twitter:description" content="Websites, Google setup and business email for small businesses in Jersey." />
   <meta name="twitter:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
 
-  <!-- Performance hints -->
+  <!-- Performance -->
   <link rel="preload" as="image" href="./transparent-hero.jpg" />
   <link rel="preload" as="image" href="./transparent-hero-mobile.jpg" media="(max-width: 520px)" />
 
@@ -35,32 +34,28 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
-  <!-- Structured data (UPDATED: broader services) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"ProfessionalService",
     "@id":"https://antoniopereiraweb.co.uk/#business",
-    "name":"Antonio Pereira",
+    "name":"A. Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
     "image":"https://antoniopereiraweb.co.uk/transparent-hero.jpg",
-    "description":"Digital services for individuals, small businesses and sole traders based in Jersey, Channel Islands. Services include websites, CV support, Google Business setup, professional business email setup (MX/SPF/DKIM) and practical digital support.",
+    "description":"Web design, Google Business Profile setup and business email configuration for small businesses and sole traders in Jersey.",
     "email":"info@antoniopereiraweb.co.uk",
     "areaServed":[
       {"@type":"AdministrativeArea","name":"Jersey"},
       {"@type":"Country","name":"United Kingdom"}
     ],
     "serviceType":[
-      "Digital Services",
-      "CV & Resume Support",
       "Web Design",
       "Website Development",
-      "Business Email Setup",
       "Google Business Profile Setup",
-      "SEO Foundations",
-      "Document Formatting",
-      "WhatsApp Business Setup",
-      "Digital Support"
+      "Local SEO Foundations",
+      "Business Email Setup",
+      "WhatsApp Business Setup"
     ]
   }
   </script>
@@ -72,20 +67,14 @@
       --text:#0B1220;
       --muted:#475569;
       --muted2:#64748B;
-
       --line:rgba(11,18,32,.10);
-      --glass:rgba(255,255,255,.86);
-
       --a1:#4F46E5;
       --a2:#06B6D4;
-
       --shadow: 0 18px 60px rgba(2,6,23,.10);
       --shadow2: 0 28px 90px rgba(2,6,23,.14);
-
       --r:22px;
       --max:1120px;
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -100,7 +89,6 @@
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
     }
-
     a{color:inherit}
     .wrap{max-width:var(--max);margin:0 auto;padding:16px}
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
@@ -168,12 +156,7 @@
       place-items:center;
       overflow:hidden;
     }
-    .mark img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
+    .mark img{width:100%;height:100%;object-fit:cover;display:block}
     .brand b{font-size:14px;letter-spacing:.2px}
     .brand small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
 
@@ -202,21 +185,9 @@
     }
 
     .hero-media{position:relative;z-index:1}
-    .hero-image{
-      display:block;width:100%;
-      height:auto;
-      background: rgba(11,18,32,.03);
-    }
-    .hero-image.desktop{
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      object-position: 70% 30%;
-    }
-    .hero-image.mobile{
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: 72% 22%;
-    }
+    .hero-image{display:block;width:100%;height:auto;background: rgba(11,18,32,.03)}
+    .hero-image.desktop{aspect-ratio: 16 / 9; object-fit: cover; object-position: 70% 30%;}
+    .hero-image.mobile{aspect-ratio: 4 / 5; object-fit: cover; object-position: 72% 22%;}
 
     .hero-body{
       position:relative;z-index:1;
@@ -267,40 +238,7 @@
       white-space:nowrap;
     }
     .chip b{color:rgba(11,18,32,.84)}
-
-    .points{display:grid;gap:10px;margin-top:6px}
-    .point{
-      display:flex;gap:10px;align-items:flex-start;
-      padding:12px 12px;
-      border-radius:18px;
-      border:1px solid rgba(11,18,32,.10);
-      background: rgba(255,255,255,.82);
-      box-shadow:0 14px 40px rgba(2,6,23,.06);
-    }
-    .badge{
-      width:32px;height:32px;border-radius:14px;
-      display:grid;place-items:center;
-      background: linear-gradient(135deg, rgba(79,70,229,.12), rgba(6,182,212,.10));
-      border:1px solid rgba(11,18,32,.10);
-      flex:0 0 auto;
-    }
-    .point b{display:block;font-size:13px;letter-spacing:.2px}
-    .point span{display:block;color:var(--muted2);font-size:12.7px;line-height:1.65;margin-top:2px}
-
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-
-    .legal{
-      padding:12px 14px;
-      border-radius:18px;
-      border:1px solid rgba(11,18,32,.10);
-      background: rgba(255,255,255,.78);
-      color: rgba(11,18,32,.78);
-      font-size:12px;
-      line-height:1.55;
-      box-shadow:0 16px 50px rgba(2,6,23,.06);
-    }
-    .legal b{color:rgba(11,18,32,.92)}
-    .legal a{color:rgba(11,18,32,.92);text-decoration:underline}
 
     section{padding:18px 0}
     .section-title{
@@ -342,7 +280,6 @@
       box-shadow:0 16px 44px rgba(2,6,23,.07);
     }
     .panel b{color:rgba(11,18,32,.92)}
-    .panel a{color:rgba(11,18,32,.92);text-decoration:underline}
 
     .pcard{
       grid-column:span 6;
@@ -394,108 +331,64 @@
       box-shadow:0 18px 50px rgba(79,70,229,.14);
     }
 
-    .tcard{
-      grid-column:span 6;
-      border-radius:var(--r);
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.90);
-      box-shadow:0 18px 60px rgba(2,6,23,.08);
-      padding:16px;
-      position:relative;
-      overflow:hidden;
+    .form{
+      display:grid;gap:10px;margin-top:10px;
     }
-    .tcard::before{
-      content:"";
-      position:absolute;inset:-90px;
-      background:
-        radial-gradient(500px 320px at 18% 12%, rgba(79,70,229,.10), transparent 62%),
-        radial-gradient(500px 320px at 82% 18%, rgba(6,182,212,.08), transparent 62%);
-      pointer-events:none;
-      z-index:0;
+    .field{
+      display:grid;gap:6px;
     }
-    .tcard > *{position:relative;z-index:1}
-
-    .thead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-    .tbrand{display:flex;align-items:center;gap:10px;min-width:240px}
-    .tlogo{
-      width:40px;height:40px;border-radius:16px;
-      background:linear-gradient(135deg, rgba(79,70,229,.16), rgba(6,182,212,.12));
-      border:1px solid rgba(11,18,32,.10);
-      display:grid;place-items:center;
-      font-weight:950;color:rgba(11,18,32,.78);
-      letter-spacing:.5px;
+    label{
+      font-size:12px;
+      color:rgba(11,18,32,.70);
+      font-weight:800;
+      letter-spacing:.2px;
     }
-    .tname b{display:block;font-size:13.8px;letter-spacing:.2px}
-    .tname small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-
-    .tlist{
-      margin:12px 0 0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-      color:rgba(11,18,32,.82);
-      font-size:13px;
-      line-height:1.75;
-    }
-    .tlist li{
-      display:flex;gap:10px;align-items:flex-start;
-      padding:10px 10px;
-      border-radius:16px;
-      border:1px solid rgba(11,18,32,.08);
-      background:rgba(255,255,255,.78);
-      box-shadow:0 10px 26px rgba(2,6,23,.05);
-    }
-    .tlist .k{
-      width:28px;height:28px;border-radius:12px;
-      display:grid;place-items:center;
-      border:1px solid rgba(11,18,32,.10);
-      background:linear-gradient(135deg, rgba(79,70,229,.10), rgba(6,182,212,.08));
-      flex:0 0 auto;
-      font-size:14px;
-    }
-    .tfooter{
-      margin-top:14px;
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      flex-wrap:wrap;
-    }
-    .sig{
-      color:rgba(11,18,32,.60);
-      font-size:12.5px;
-      line-height:1.4;
-    }
-    .sitepill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:8px 10px;border-radius:999px;
-      border:1px solid rgba(11,18,32,.10);
-      background:rgba(255,255,255,.82);
-      text-decoration:none;
-      box-shadow:0 10px 26px rgba(2,6,23,.06);
-      transition:.18s ease;
-    }
-    .sitepill:hover{background:#fff;transform:translateY(-1px)}
-    .sitepill svg{opacity:.75}
-
-    footer{
-      margin-top:18px;padding:22px 0 34px;border-top:1px solid rgba(11,18,32,.10);
-      color:var(--muted2);font-size:12px;
-    }
-    .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
-    .foot a{color:var(--muted2)}
-    .foot a:hover{color:rgba(11,18,32,.92)}
-
-    .cookie{
-      position:fixed;left:14px;right:14px;bottom:14px;z-index:300;
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
       border:1px solid rgba(11,18,32,.12);
       background:rgba(255,255,255,.92);
-      backdrop-filter:blur(14px);
-      border-radius:22px;
-      box-shadow:var(--shadow2);
-      padding:14px;
-      display:none;
+      color:rgba(11,18,32,.92);
+      outline:none;
+      font: inherit;
+      box-shadow:0 12px 26px rgba(2,6,23,.05);
     }
-    .cookie .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
-    .cookie p{margin:0;color:rgba(11,18,32,.78);font-size:12px;max-width:85ch}
+    textarea{min-height:120px;resize:vertical}
+    input:focus, textarea:focus, select:focus{
+      border-color: rgba(79,70,229,.38);
+      box-shadow:0 0 0 4px rgba(79,70,229,.10), 0 12px 26px rgba(2,6,23,.05);
+    }
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .hint{
+      font-size:11px;
+      color:rgba(11,18,32,.55);
+      line-height:1.5;
+    }
+    .success{
+      display:none;
+      margin-top:10px;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(6,182,212,.22);
+      background:rgba(6,182,212,.10);
+      color:rgba(11,18,32,.82);
+      font-size:13px;
+    }
+    .error{
+      display:none;
+      margin-top:10px;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid rgba(239,68,68,.25);
+      background:rgba(239,68,68,.10);
+      color:rgba(11,18,32,.82);
+      font-size:13px;
+    }
 
     .reveal{opacity:0;transform: translateY(10px);transition: opacity .55s ease, transform .55s ease;will-change: opacity, transform;}
     .reveal.in{opacity:1;transform:translateY(0)}
@@ -523,47 +416,13 @@
     .float-cta .btn{box-shadow:none}
     .float-cta .btn.primary{padding:10px 14px}
 
-    .drawer-overlay{
-      position:fixed;inset:0;z-index:500;
-      background:rgba(2,6,23,.30);
-      backdrop-filter: blur(6px);
-      display:none;
+    footer{
+      margin-top:18px;padding:22px 0 34px;border-top:1px solid rgba(11,18,32,.10);
+      color:var(--muted2);font-size:12px;
     }
-    .drawer{
-      position:fixed;right:12px;left:12px;top:12px;
-      z-index:510;
-      border-radius:26px;
-      border:1px solid rgba(11,18,32,.12);
-      background:rgba(255,255,255,.92);
-      box-shadow: var(--shadow2);
-      display:none;
-      overflow:hidden;
-    }
-    .drawer-head{
-      display:flex;align-items:center;justify-content:space-between;gap:10px;
-      padding:12px 14px;
-      border-bottom:1px solid rgba(11,18,32,.08);
-      background: rgba(255,255,255,.86);
-    }
-    .drawer-title{display:flex;align-items:center;gap:10px}
-    .drawer-title b{font-size:13.5px;letter-spacing:.2px}
-    .drawer-title small{display:block;color:var(--muted2);font-size:12px;margin-top:2px}
-    .drawer-body{
-      padding:12px 14px 14px;
-      display:grid;
-      gap:10px;
-    }
-    .drawer-links{display:grid;gap:10px}
-    .drawer-links a{width:100%}
-    .drawer-actions{
-      display:flex;gap:10px;flex-wrap:wrap;
-      padding-top:6px;
-      border-top:1px solid rgba(11,18,32,.08);
-      margin-top:6px;
-    }
-    .drawer-actions .btn{flex:1}
-    .drawer-open{display:block}
-    body.lock{overflow:hidden}
+    .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
+    .foot a{color:var(--muted2)}
+    .foot a:hover{color:rgba(11,18,32,.92)}
 
     @media (max-width: 980px){
       .brand{display:none}
@@ -571,9 +430,9 @@
       .nav-desktop{display:none}
       .nav-mobile{display:flex}
       .card{grid-column:span 6}
-      .tcard{grid-column:span 12}
       .pcard{grid-column:span 12}
       .float-cta{display:flex}
+      .two{grid-template-columns:1fr}
     }
     @media (max-width: 520px){
       .card{grid-column:span 12}
@@ -594,7 +453,7 @@
           </div>
           <div>
             <b>A. Pereira</b>
-            <small>Digital services • Sole trader • Jersey</small>
+            <small>Websites • Google setup • Jersey</small>
           </div>
         </a>
 
@@ -602,59 +461,19 @@
           <div class="nav-desktop">
             <a class="btn" href="#services">Services</a>
             <a class="btn" href="#portfolio">Portfolio</a>
-            <a class="btn" href="#case-studies">Case studies</a>
             <a class="btn" href="#process">Process</a>
-            <a class="btn" href="#licensing">Licensing</a>
-            <a class="btn" href="#privacy">Privacy</a>
-            <a class="btn" href="#terms">Terms</a>
             <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
             <a class="btn primary" href="#contact">Get a free review</a>
           </div>
 
           <div class="nav-mobile">
-            <button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuDrawer" aria-expanded="false">Menu</button>
             <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-            <a class="btn primary" href="#contact" id="topCta">Get a free review</a>
+            <a class="btn primary" href="#contact" id="topCta">Free review</a>
           </div>
         </nav>
       </div>
     </div>
   </header>
-
-  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-  <div class="drawer" id="menuDrawer" role="dialog" aria-modal="true" aria-label="Menu">
-    <div class="drawer-head">
-      <div class="drawer-title">
-        <div class="mark" style="width:36px;height:36px;border-radius:14px" aria-hidden="true">
-          <img src="./logo-ap.png" alt="A. Pereira logo" loading="lazy" decoding="async">
-        </div>
-        <div>
-          <b>A. Pereira</b>
-          <small>Jersey</small>
-        </div>
-      </div>
-      <button class="btn ghost" id="closeMenuBtn" type="button" aria-label="Close menu">Close</button>
-    </div>
-
-    <div class="drawer-body">
-      <div class="drawer-links" aria-label="Menu links">
-        <a class="btn" href="#services">Services</a>
-        <a class="btn" href="#portfolio">Portfolio</a>
-        <a class="btn" href="#case-studies">Case studies</a>
-        <a class="btn" href="#process">Process</a>
-        <a class="btn" href="#licensing">Licensing</a>
-        <a class="btn" href="#privacy">Privacy</a>
-        <a class="btn" href="#terms">Terms</a>
-        <a class="btn" href="#contact">Contact</a>
-        <a class="btn wa" id="waDrawerBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-      </div>
-
-      <div class="drawer-actions">
-        <a class="btn primary" href="#contact" id="drawerCta">Get a free review</a>
-        <a class="btn" href="#contact" id="drawerEmailQuick">Email me</a>
-      </div>
-    </div>
-  </div>
 
   <main id="main" class="wrap">
 
@@ -669,7 +488,7 @@
               class="hero-image desktop"
               id="heroImg"
               src="./transparent-hero.jpg"
-              alt="Antonio Pereira — Digital services in Jersey"
+              alt="A. Pereira — Websites & Google setup in Jersey"
               loading="eager"
               decoding="async"
             />
@@ -677,107 +496,61 @@
         </div>
 
         <div class="hero-body">
-          <span class="pill"><span class="dot"></span> Digital services <span class="sep">•</span> Individuals & businesses <span class="sep">•</span> Jersey</span>
+          <span class="pill"><span class="dot"></span> Small business support <span class="sep">•</span> Websites <span class="sep">•</span> Google (Maps) <span class="sep">•</span> Jersey</span>
 
-          <h1>Digital help that gets things done</h1>
+          <h1>Websites & Google setup that turn visitors into enquiries</h1>
 
           <p class="lead">
-            I help <strong>individuals</strong>, <strong>small businesses</strong> and <strong>sole traders</strong> in <strong>Jersey</strong> with practical digital services —
-            from <strong>websites</strong> and <strong>business email</strong> (MX/SPF/DKIM) to <strong>CV support</strong>, <strong>documents</strong> and <strong>online setup</strong>.
-            <span class="micro">Clear steps. Friendly support. No pressure.</span>
+            I help <strong>small businesses</strong> and <strong>sole traders</strong> in <strong>Jersey</strong> look professional online —
+            with <strong>mobile-first websites</strong>, <strong>Google Business (Maps)</strong> setup, and <strong>business email</strong> (MX/SPF/DKIM).
+            <span class="micro">Clear steps. Fast communication. No hype.</span>
           </p>
 
           <div class="proof" aria-label="Quick proof points">
-            <span class="chip"><b>Fast</b> and reliable</span>
-            <span class="chip"><b>Professional</b> presentation</span>
-            <span class="chip"><b>Clear communication</b></span>
-          </div>
-
-          <div class="points" aria-label="Key benefits">
-            <div class="point reveal">
-              <div class="badge">✅</div>
-              <div>
-                <b>One person to handle your digital tasks</b>
-                <span>Save time — I’ll guide you and deliver clean, professional results.</span>
-              </div>
-            </div>
-            <div class="point reveal">
-              <div class="badge">📄</div>
-              <div>
-                <b>CV & documents that look professional</b>
-                <span>Formatting, structure and clarity — ready to send with confidence.</span>
-              </div>
-            </div>
-            <div class="point reveal">
-              <div class="badge">🌐</div>
-              <div>
-                <b>Online presence for businesses</b>
-                <span>Websites, Google setup and best-practice SEO foundations (no ranking guarantees).</span>
-              </div>
-            </div>
+            <span class="chip"><b>Fast</b> turnaround</span>
+            <span class="chip"><b>Clean</b> premium design</span>
+            <span class="chip"><b>Conversion-first</b> structure</span>
           </div>
 
           <div class="cta reveal">
-            <a class="btn primary" id="emailHeroBtn" href="#">Get a free review</a>
-            <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+            <a class="btn primary" href="#contact">Get a free website review</a>
+            <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn ghost" href="#services">See services</a>
-          </div>
-
-          <div class="legal reveal" aria-label="Business details">
-            <b>Business details</b><br>
-            Operated by <b>A. Pereira</b> (<b>sole trader</b>).<br>
-            <b>Base:</b> Jersey, Channel Islands.<br>
-            <b>Service area:</b> Jersey &amp; UK (remote support available).<br>
-            <b>Enquiries:</b> <a id="emailLegalTop" href="#">info@antoniopereiraweb.co.uk</a><br>
-            <b>Alternative:</b> <a id="emailAltTop" href="#">contact@antoniopereira.org</a><br>
-            <span style="display:block;margin-top:6px;color:rgba(11,18,32,.65);font-size:11px;">
-              Support: <a id="supportTop" href="#">info@antoniopereiraweb.co.uk</a>
-            </span>
-
-            <div style="margin-top:10px;color:rgba(11,18,32,.52);font-size:11px;">
-              This website provides general information and does not constitute legal, tax, immigration, HR or financial advice.
-              For official guidance, consult the Government of Jersey website or a qualified professional.
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES (UPDATED: full list) -->
+    <!-- SERVICES -->
     <section id="services" class="reveal">
       <div class="section-title">
         <div>
           <h2>Services</h2>
-          <p>Digital help for individuals, small businesses and sole traders — clear and practical.</p>
+          <p>Focused on what actually drives enquiries for local businesses.</p>
         </div>
       </div>
 
       <div class="grid">
-        <div class="card reveal"><div class="ic">📄</div><h3>CV &amp; career support</h3><p>CV improvements, formatting and job-application support. Clear, professional and easy to read.</p></div>
-        <div class="card reveal"><div class="ic">🔗</div><h3>LinkedIn optimisation</h3><p>Profile clean-up, headline, bio and keyword improvements so you look credible online.</p></div>
-        <div class="card reveal"><div class="ic">🌐</div><h3>Websites</h3><p>One-page websites or full websites — mobile-first, premium design and clear calls-to-action.</p></div>
+        <div class="card reveal"><div class="ic">🌐</div><h3>Website (mobile-first)</h3><p>Clean, fast pages with strong calls-to-action so customers contact you easily.</p></div>
+        <div class="card reveal"><div class="ic">📍</div><h3>Google Business (Maps)</h3><p>Categories, services, photos and setup to improve visibility on local searches.</p></div>
+        <div class="card reveal"><div class="ic">✉️</div><h3>Business email</h3><p>Domain email setup (MX/SPF/DKIM) + connect Zoho/Gmail/Outlook properly.</p></div>
 
-        <div class="card reveal"><div class="ic">📍</div><h3>Google Business (Maps)</h3><p>Setup and optimisation to help local customers find you (photos, categories, services).</p></div>
-        <div class="card reveal"><div class="ic">✉️</div><h3>Business email setup</h3><p>Domain email setup (MX/SPF/DKIM) + connecting Zoho/Gmail/Outlook the right way.</p></div>
-        <div class="card reveal"><div class="ic">🧾</div><h3>Emails &amp; documents</h3><p>Word/PDF formatting, professional templates, forms, letters and digital paperwork help.</p></div>
-
-        <div class="card reveal"><div class="ic">📱</div><h3>WhatsApp Business</h3><p>Business profile, auto-replies, quick replies and a clean setup for customer enquiries.</p></div>
-        <div class="card reveal"><div class="ic">📈</div><h3>SEO foundations</h3><p>Metadata, structure and best-practice setup to support indexing (no ranking guarantees).</p></div>
-        <div class="card reveal"><div class="ic">🧠</div><h3>General digital support</h3><p>One-to-one help with accounts, apps, online tasks and troubleshooting.</p></div>
+        <div class="card reveal"><div class="ic">💬</div><h3>WhatsApp Business</h3><p>Auto-replies, quick replies and an enquiry flow that feels professional.</p></div>
+        <div class="card reveal"><div class="ic">📈</div><h3>SEO foundations</h3><p>Metadata, structure and indexing best practice (no ranking guarantees).</p></div>
+        <div class="card reveal"><div class="ic">🧩</div><h3>Automation (leads)</h3><p>Capture website leads into Sheets/CRM + instant notification and follow-ups.</p></div>
 
         <div class="panel reveal">
-          <b>Not sure what you need?</b><br>
-          Message or email me what you’re trying to achieve. I’ll reply with clear options and next steps.
+          <b>Best starting point:</b> a free review. I’ll tell you what’s missing and what to fix first — in order.
         </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO (kept) -->
+    <!-- PORTFOLIO -->
     <section id="portfolio" class="reveal">
       <div class="section-title">
         <div>
           <h2>Portfolio</h2>
-          <p>Two real projects — clean structure, premium feel, and a clear contact journey.</p>
+          <p>Real projects — clean structure, premium feel, and a clear contact journey.</p>
         </div>
       </div>
 
@@ -787,16 +560,16 @@
             <div class="ptop">
               <div class="pmeta">
                 <b>Ajuda Total</b>
-                <small>Service website • Clear structure • Fast &amp; mobile-first</small>
+                <small>Service website • Clear journey • Mobile-first</small>
               </div>
               <span class="pchip">Website</span>
             </div>
           </div>
           <div class="pbody">
-            <p>A clean, trustworthy layout designed to help visitors understand the service quickly and get in touch with confidence.</p>
+            <p>A clean, trustworthy layout designed to help visitors understand the service quickly and get in touch.</p>
             <div class="pactions">
               <a class="plink primary" href="https://ajudatotal.com" target="_blank" rel="noopener">Visit website</a>
-              <a class="plink" href="#contact">Request a quote</a>
+              <a class="plink" href="#contact">Get a similar site</a>
             </div>
           </div>
         </div>
@@ -806,268 +579,128 @@
             <div class="ptop">
               <div class="pmeta">
                 <b>Catia Coutinho Holística</b>
-                <small>Wellness website • Premium aesthetic • Simple enquiry flow</small>
+                <small>Premium aesthetic • Simple enquiry flow</small>
               </div>
               <span class="pchip">Website</span>
             </div>
           </div>
           <div class="pbody">
-            <p>A calm, premium design with clear navigation and a straightforward contact journey — built mobile-first.</p>
+            <p>A calm, premium design with clear navigation and a straightforward contact journey.</p>
             <div class="pactions">
               <a class="plink primary" href="https://catiacoutinhoholistica.com" target="_blank" rel="noopener">Visit website</a>
-              <a class="plink" href="#contact">Request a quote</a>
+              <a class="plink" href="#contact">Request a review</a>
             </div>
           </div>
         </div>
 
         <div class="panel reveal">
-          <b>Want a site like this?</b><br>
-          Email me what you do and what you need — I’ll reply with clear options and next steps.
+          <b>Want more enquiries?</b> Your site needs one job: make it easy to contact you. I build around that.
         </div>
       </div>
     </section>
 
-    <!-- CASE STUDIES (kept) -->
-    <section id="case-studies" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Case studies</h2>
-          <p>Real projects — listed as delivered work (no invented ratings or quotes).</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <article class="tcard reveal" data-domain="ajudatotal.com" aria-label="Project delivered for Ajuda Total">
-          <div class="thead">
-            <div class="tbrand">
-              <div class="tlogo" data-initials aria-hidden="true">AT</div>
-              <div class="tname">
-                <b>Ajuda Total</b>
-                <small>Delivered: website</small>
-              </div>
-            </div>
-          </div>
-
-          <ul class="tlist" aria-label="Delivered items">
-            <li><span class="k">✓</span><span><b>Clean structure</b> with a clear customer journey (service → trust → contact).</span></li>
-            <li><span class="k">✓</span><span><b>Mobile-first build</b> for real clients browsing on phones.</span></li>
-            <li><span class="k">✓</span><span><b>Professional finish</b> with modern UI + clear call-to-action.</span></li>
-          </ul>
-
-          <div class="tfooter">
-            <div class="sig">— Delivered by <b>A. Pereira</b></div>
-            <a class="sitepill" href="https://ajudatotal.com" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M10 14a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M14 10a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              ajudatotal.com
-            </a>
-          </div>
-        </article>
-
-        <article class="tcard reveal" data-domain="catiacoutinhoholistica.com" aria-label="Project delivered for Catia Coutinho Holística">
-          <div class="thead">
-            <div class="tbrand">
-              <div class="tlogo" data-initials aria-hidden="true">CC</div>
-              <div class="tname">
-                <b>Catia Coutinho Holística</b>
-                <small>Delivered: website</small>
-              </div>
-            </div>
-          </div>
-
-          <ul class="tlist" aria-label="Delivered items">
-            <li><span class="k">✓</span><span><b>Premium aesthetic</b> matched to a calm, wellness brand.</span></li>
-            <li><span class="k">✓</span><span><b>Simple navigation</b> with a clear enquiry flow.</span></li>
-            <li><span class="k">✓</span><span><b>Mobile-first layout</b> with readable spacing and hierarchy.</span></li>
-          </ul>
-
-          <div class="tfooter">
-            <div class="sig">— Delivered by <b>A. Pereira</b></div>
-            <a class="sitepill" href="https://catiacoutinhoholistica.com" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M10 14a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M14 10a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              catiacoutinhoholistica.com
-            </a>
-          </div>
-        </article>
-
-        <div class="panel reveal">
-          <b>Want something similar?</b><br>
-          Send one email with what you need and your deadline — I’ll reply with clear next steps.
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS (kept) -->
+    <!-- PROCESS -->
     <section id="process" class="reveal">
       <div class="section-title">
         <div>
           <h2>Process</h2>
-          <p>A simple workflow — so you always know what happens next.</p>
+          <p>Simple workflow — fast and clear.</p>
         </div>
       </div>
 
       <div class="grid">
-        <div class="card reveal"><div class="ic">1</div><h3>Quick review</h3><p>You email what you need. I reply with options, timeline and next steps.</p></div>
-        <div class="card reveal"><div class="ic">2</div><h3>Plan &amp; content</h3><p>We confirm scope. You share what you have (or I guide you).</p></div>
-        <div class="card reveal"><div class="ic">3</div><h3>Deliver &amp; support</h3><p>I deliver the work, you approve, and I support changes if needed.</p></div>
+        <div class="card reveal"><div class="ic">1</div><h3>Free review</h3><p>You send your details. I reply with what to fix and best next steps.</p></div>
+        <div class="card reveal"><div class="ic">2</div><h3>Build & setup</h3><p>Website, Google Business, email, WhatsApp — set up the right way.</p></div>
+        <div class="card reveal"><div class="ic">3</div><h3>Launch & improve</h3><p>Launch with tracking + lead capture. Improve based on real enquiries.</p></div>
         <div class="panel reveal">
-          <b>Note:</b> Timelines depend on content availability and scope. Everything is confirmed in writing (by email) before work starts.
+          <b>Note:</b> I follow best practices, but no one can guarantee rankings/leads. What I can guarantee: clean work and clear steps.
         </div>
       </div>
     </section>
 
-    <!-- LICENSING (kept, tightened) -->
-    <section id="licensing" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Licensing &amp; compliance (Jersey)</h2>
-          <p>General information only — always check the latest official guidance.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="panel reveal">
-          <b>Important</b><br>
-          I provide digital services. I am not a law firm and I do not provide legal, immigration or tax advice.<br><br>
-          <b>Business licensing</b><br>
-          Requirements in Jersey can depend on your situation and may change. If you need official guidance, consult the Government of Jersey website or a qualified professional.
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT (UPDATED subject) -->
+    <!-- CONTACT (FORM -> MAKE WEBHOOK) -->
     <section id="contact" class="reveal">
       <div class="section-title">
         <div>
-          <h2>Contact</h2>
-          <p>Email me what you need — I’ll reply with clear next steps.</p>
+          <h2>Get a free website review</h2>
+          <p>Fill this in — I’ll reply with clear next steps (usually within 24–48 hours).</p>
         </div>
       </div>
 
       <div class="grid">
-        <div class="panel reveal">
-          <b>Email:</b> <a id="emailInline" href="#">info@antoniopereiraweb.co.uk</a><br>
-          <span style="display:block;margin-top:8px;"><b>Alternative:</b> <a id="emailAltInline" href="#">contact@antoniopereira.org</a></span>
-          <span style="display:block;margin-top:8px;"><b>Support:</b> <a id="supportInline" href="#">info@antoniopereiraweb.co.uk</a></span>
-
-          <span style="display:block;margin-top:10px;"><b>Subject:</b> Digital services enquiry — A. Pereira</span>
-          <span style="display:block;margin-top:10px;"><b>Include:</b> what you need • deadline • Jersey/UK • links/files (if any)</span>
-
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a class="btn primary" id="emailBtn" href="#">Get a free review</a>
-            <a class="btn" id="emailAltBtn" href="#">Email (Alternative)</a>
-            <a class="btn" id="supportBtn" href="#">Support</a>
-            <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+        <div class="panel reveal" style="grid-column:span 12;">
+          <b>Contact</b><br>
+          Email: <a id="emailInline" href="#">info@antoniopereiraweb.co.uk</a> • WhatsApp: <a id="waInline" href="#" target="_blank" rel="noopener">Message me</a>
+          <div class="hint" style="margin-top:8px;">
+            This form sends straight to my automation (Make) so I never miss your enquiry.
           </div>
 
-          <div style="margin-top:12px;color:rgba(11,18,32,.52);font-size:11px;">
-            Typical reply time: 24–48 hours (usually faster).
-          </div>
-        </div>
-      </div>
-    </section>
+          <form class="form" id="leadForm"
+                action="https://hook.eu1.make.com/dyxqtxh3wh2yn293mozc3ogeonlkgdjm"
+                method="POST" novalidate>
 
-    <!-- PRIVACY (UPDATED for broader services) -->
-    <section id="privacy" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Privacy &amp; cookies</h2>
-          <p>I only use your details to reply to your enquiry and provide the service you requested.</p>
-        </div>
-      </div>
+            <!-- hidden context -->
+            <input type="hidden" name="source" value="antoniopereiraweb.co.uk" />
+            <input type="hidden" name="page_url" id="page_url" value="" />
+            <input type="hidden" name="page_title" id="page_title" value="" />
+            <input type="hidden" name="timestamp" id="ts" value="" />
 
-      <div class="grid">
-        <div class="card reveal" style="grid-column:span 6;">
-          <div class="ic">👤</div>
-          <h3>Who is responsible</h3>
-          <p>
-            This website is operated by <b>A. Pereira</b> (<b>sole trader</b>).<br><br>
-            <b>Base:</b> Jersey, Channel Islands.<br>
-            <b>Contact:</b> <a id="emailPrivacy" href="#">info@antoniopereiraweb.co.uk</a><br>
-            <b>Alternative:</b> <a id="emailAltPrivacy" href="#">contact@antoniopereira.org</a>
-          </p>
-        </div>
+            <div class="two">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@business.com" />
+              </div>
+            </div>
 
-        <div class="card reveal" style="grid-column:span 6;">
-          <div class="ic">📩</div>
-          <h3>What I collect</h3>
-          <p>If you contact me by email or WhatsApp, I may collect your name, contact details and message content — only to reply and provide quotes/support.</p>
-        </div>
+            <div class="two">
+              <div class="field">
+                <label for="business">Business name</label>
+                <input id="business" name="business" type="text" placeholder="Your business" />
+              </div>
+              <div class="field">
+                <label for="service">What do you need?</label>
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Select one</option>
+                  <option>Website (new)</option>
+                  <option>Website (improve)</option>
+                  <option>Google Business (Maps) setup</option>
+                  <option>Business email setup</option>
+                  <option>WhatsApp Business setup</option>
+                  <option>Automation (leads)</option>
+                </select>
+              </div>
+            </div>
 
-        <div class="card reveal" style="grid-column:span 6;">
-          <div class="ic">🗂️</div>
-          <h3>Files you share</h3>
-          <p>If you share documents (e.g., CVs), they are used only to provide the requested service. You can request deletion at any time.</p>
-        </div>
+            <div class="two">
+              <div class="field">
+                <label for="website">Your website (if you have one)</label>
+                <input id="website" name="website" type="url" placeholder="https://yourwebsite.com" />
+              </div>
+              <div class="field">
+                <label for="location">Location</label>
+                <input id="location" name="location" type="text" placeholder="Jersey / UK" />
+              </div>
+            </div>
 
-        <div class="card reveal" style="grid-column:span 6;">
-          <div class="ic">🍪</div>
-          <h3>Cookies</h3>
-          <p>Essential storage is used to remember cookie preferences. Optional measurement scripts load only if you accept (if enabled).</p>
-        </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Tell me what you do and what you want to improve..."></textarea>
+              <div class="hint">Tip: include your industry + what “more enquiries” means for you (calls, bookings, quotes).</div>
+            </div>
 
-        <div class="panel reveal">
-          <b>Legal note:</b> This notice explains how personal data is handled in line with applicable data protection requirements.
-          If you have concerns, contact me first via the emails above.
-        </div>
-      </div>
-    </section>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px;">
+              <button class="btn primary" id="submitBtn" type="submit">Send request</button>
+              <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener">WhatsApp instead</a>
+              <span class="hint" id="formHint">No spam. Your details are used only to reply.</span>
+            </div>
 
-    <!-- TERMS (UPDATED wording for digital services) -->
-    <section id="terms" class="reveal">
-      <div class="section-title">
-        <div>
-          <h2>Terms of service</h2>
-          <p>Simple terms so clients know what to expect.</p>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="panel reveal">
-          <b>1) Who I am</b><br>
-          This website and services are operated by <b>A. Pereira</b> (<b>sole trader</b>), based in <b>Jersey, Channel Islands</b>.<br>
-          Contact: <a id="emailTerms" href="#">info@antoniopereiraweb.co.uk</a> • Alternative: <a id="emailAltTerms" href="#">contact@antoniopereira.org</a>.
-          <br><br>
-
-          <b>2) What I provide</b><br>
-          Digital services (examples): CV & resume support, document formatting, websites, SEO foundations, business email setup guidance (MX/SPF/DKIM), Google Business setup and general digital support.
-          Deliverables are agreed in writing (email/WhatsApp) per request.
-          <br><br>
-
-          <b>3) Quotes &amp; payments</b><br>
-          Quotes are provided in writing. Payment terms are agreed per job/project.
-          Third-party subscriptions (domains/hosting/email providers) are your responsibility unless agreed otherwise.
-          <br><br>
-
-          <b>4) Results / no guarantees</b><br>
-          I follow best-practice and deliver agreed work. I do not guarantee specific results (rankings/leads/revenue/job outcomes).
-          <br><br>
-
-          <b>5) Client responsibilities</b><br>
-          You confirm you have rights to use any text/images/logos provided and you approve final content before delivery/launch.
-          <br><br>
-
-          <b>6) Changes &amp; cancellations</b><br>
-          Reasonable revisions are included as agreed. Additional work may require an updated quote.
-          If cancelled after work starts, you may be charged for work completed.
-          <br><br>
-
-          <b>7) Limitation of liability</b><br>
-          To the maximum extent permitted by law, I’m not liable for indirect or consequential loss.
-          I’m not responsible for outages/issues caused by third-party platforms.
-          <br><br>
-
-          <b>8) Governing law</b><br>
-          These terms are intended to be governed by the laws applicable in <b>Jersey</b> (Channel Islands), unless otherwise agreed.
-          <br><br>
-
-          <b>9) Updates</b><br>
-          I may update these terms from time to time. The version on this page is the current version.
+            <div class="success" id="okBox">✅ Sent. Thanks — I’ll reply with clear next steps.</div>
+            <div class="error" id="errBox">⚠️ Something didn’t send. Please try again or WhatsApp me.</div>
+          </form>
         </div>
       </div>
     </section>
@@ -1076,24 +709,18 @@
       <div class="foot">
         <div>
           <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
-          <span>Digital services • Operated by <b>A. Pereira</b> (<b>sole trader</b>).</span><br/>
+          <span>Web design • Google Business setup • Business email.</span><br/>
           <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereiraweb.co.uk</a></span><br/>
-          <span>Alternative • <a id="emailAltFooter" href="#">contact@antoniopereira.org</a></span><br/>
           <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
-            This website is for general information only and does not constitute legal, tax, immigration, HR or financial advice.
+            General info only. No ranking/lead guarantees.
           </span>
         </div>
 
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
-          <a href="#case-studies">Case studies</a>
           <a href="#process">Process</a>
-          <a href="#licensing">Licensing</a>
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
-          <a href="#contact">Contact</a>
-          <a href="#" id="cookieSettingsLink">Cookie settings</a>
+          <a href="#contact">Free review</a>
         </div>
       </div>
 
@@ -1107,100 +734,35 @@
       <span style="font-size:11.5px;color:rgba(11,18,32,.60)">Reply within 24–48h (usually faster)</span>
     </div>
     <div style="display:flex;gap:10px;align-items:center;">
-      <a class="btn wa" id="floatWaBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
-      <a class="btn primary" id="floatEmailBtn" href="#">Email me</a>
-    </div>
-  </div>
-
-  <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie preferences">
-    <div class="row">
-      <p>
-        We use essential storage to remember your preferences. Optional measurement scripts load only if you accept.
-        <a href="#privacy">Privacy &amp; cookies</a>
-      </p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <button class="btn" id="cookieReject" type="button">Reject</button>
-        <button class="btn primary" id="cookieAccept" type="button">Accept</button>
-      </div>
+      <a class="btn wa" id="floatWaBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn primary" href="#contact">Send request</a>
     </div>
   </div>
 
   <script>
     // ===== Contact setup =====
     const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
-    const ALT_EMAIL       = "contact@antoniopereira.org";
-    const SUPPORT_EMAIL   = "info@antoniopereiraweb.co.uk";
 
-    // WhatsApp (direct link; number NOT shown on page)
+    // WhatsApp
     const WHATSAPP_E164 = "447700704591";
-    const WHATSAPP_TEXT = "Hi! I’m interested in your digital services. Can you help with a CV, website, Google setup or business email?";
+    const WHATSAPP_TEXT = "Hi! I’d like a free review. I want more enquiries from my website / Google. Can you help?";
     const WHATSAPP_URL  = `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
 
-    document.getElementById("y").textContent = new Date().getFullYear();
-    const enc = encodeURIComponent;
-
-    function mailtoFor(to, subject){
-      return `mailto:${to}?subject=${enc(subject)}&body=${enc(
-`Hi!
-
-I’m interested in your services.
-
-What I need:
-Deadline:
-Location (Jersey/UK):
-Links/files (if any):
-
-Thanks!`
-      )}`;
-    }
-
-    const enquiryMailto = mailtoFor(ENQUIRIES_EMAIL, "Digital services enquiry — A. Pereira");
-    const altMailto     = mailtoFor(ALT_EMAIL, "Digital services enquiry — A. Pereira (Alternative)");
-    const supportMailto = mailtoFor(SUPPORT_EMAIL, "Support — A. Pereira");
-
+    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    const enquiryTextIds = ["emailInline","emailPrivacy","emailFooter","emailLegalTop","emailTerms"];
-    enquiryTextIds.forEach(id=>{
+    // Email links
+    const mail = `mailto:${ENQUIRIES_EMAIL}?subject=${encodeURIComponent("Free website review — A. Pereira")}`;
+    ["emailInline","emailFooter"].forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
-      el.href = enquiryMailto;
+      el.href = mail;
       el.textContent = ENQUIRIES_EMAIL;
       el.style.textDecoration = "underline";
     });
 
-    const enquiryButtonIds = ["emailBtn","emailHeroBtn","floatEmailBtn"];
-    enquiryButtonIds.forEach(id=>{
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.href = enquiryMailto;
-    });
-
-    const altTextIds = ["emailAltTop","emailAltInline","emailAltPrivacy","emailAltTerms","emailAltFooter"];
-    altTextIds.forEach(id=>{
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.href = altMailto;
-      el.textContent = ALT_EMAIL;
-      el.style.textDecoration = "underline";
-    });
-
-    const altBtn = document.getElementById("emailAltBtn");
-    if(altBtn) altBtn.href = altMailto;
-
-    const supportTextIds = ["supportTop","supportInline"];
-    supportTextIds.forEach(id=>{
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.href = supportMailto;
-      el.textContent = SUPPORT_EMAIL;
-      el.style.textDecoration = "underline";
-    });
-
-    const supportBtn = document.getElementById("supportBtn");
-    if(supportBtn) supportBtn.href = supportMailto;
-
-    ["waTopBtn","waTopBtnMobile","waDrawerBtn","waHeroBtn","waContactBtn","floatWaBtn"].forEach(id=>{
+    // WhatsApp links
+    ["waTopBtn","waTopBtnMobile","waHeroBtn","waContactBtn","floatWaBtn","waInline"].forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
       el.href = WHATSAPP_URL;
@@ -1208,9 +770,7 @@ Thanks!`
       el.setAttribute("target","_blank");
     });
 
-    const drawerEmailQuick = document.getElementById("drawerEmailQuick");
-    if(drawerEmailQuick) drawerEmailQuick.setAttribute("href", "#contact");
-
+    // Smooth scroll
     function smoothTo(hash){
       const el = document.querySelector(hash);
       if(!el) return false;
@@ -1221,34 +781,11 @@ Thanks!`
       a.addEventListener("click",(ev)=>{
         const href = a.getAttribute("href");
         if(!href || href === "#") return;
-        if(smoothTo(href)){
-          ev.preventDefault();
-        }
+        if(smoothTo(href)) ev.preventDefault();
       });
     });
 
-    const CONSENT_KEY = "ap_cookie_consent_v1";
-    const banner = document.getElementById("cookieBanner");
-    const acceptBtn = document.getElementById("cookieAccept");
-    const rejectBtn = document.getElementById("cookieReject");
-    const settingsLink = document.getElementById("cookieSettingsLink");
-
-    function getConsent(){ try{ return localStorage.getItem(CONSENT_KEY); }catch(e){ return null; } }
-    function setConsent(v){ try{ localStorage.setItem(CONSENT_KEY, v); }catch(e){} }
-    function showBanner(){ if(banner) banner.style.display = "block"; }
-    function hideBanner(){ if(banner) banner.style.display = "none"; }
-
-    if(!getConsent()) showBanner();
-    if(acceptBtn) acceptBtn.addEventListener("click", ()=>{ setConsent("accept"); hideBanner(); });
-    if(rejectBtn) rejectBtn.addEventListener("click", ()=>{ setConsent("reject"); hideBanner(); });
-    if(settingsLink){
-      settingsLink.addEventListener("click", (e)=>{
-        e.preventDefault();
-        showBanner();
-        banner.scrollIntoView({behavior:"smooth", block:"end"});
-      });
-    }
-
+    // Reveal on scroll
     const reveals = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
@@ -1260,6 +797,7 @@ Thanks!`
     }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
     reveals.forEach(el=>io.observe(el));
 
+    // Floating CTA toggle
     const floatCta = document.getElementById("floatCta");
     function toggleFloat(){
       if(!floatCta) return;
@@ -1273,57 +811,7 @@ Thanks!`
     toggleFloat();
     window.addEventListener("scroll", toggleFloat, { passive:true });
 
-    function initialsFromDomain(domain){
-      try{
-        const host = (domain || "").toLowerCase().replace(/^https?:\/\//,"").replace(/^www\./,"").split("/")[0];
-        const parts = host.split(".");
-        const main = parts.length >= 2 ? parts[parts.length-2] : host;
-        const words = main.replace(/[-_]+/g," ").split(" ").filter(Boolean);
-        if(words.length === 1) return (words[0].slice(0,2)).toUpperCase();
-        return (words[0][0] + words[1][0]).toUpperCase();
-      }catch(e){
-        return "AP";
-      }
-    }
-    document.querySelectorAll("[data-domain]").forEach(card=>{
-      const domain = card.getAttribute("data-domain");
-      const el = card.querySelector("[data-initials]");
-      if(el) el.textContent = initialsFromDomain(domain);
-    });
-
-    const menuBtn = document.getElementById("menuBtn");
-    const drawer = document.getElementById("menuDrawer");
-    const overlay = document.getElementById("drawerOverlay");
-    const closeBtn = document.getElementById("closeMenuBtn");
-
-    function openDrawer(){
-      drawer.classList.add("drawer-open");
-      overlay.classList.add("drawer-open");
-      drawer.style.display = "block";
-      overlay.style.display = "block";
-      document.body.classList.add("lock");
-      if(menuBtn) menuBtn.setAttribute("aria-expanded","true");
-    }
-    function closeDrawer(){
-      drawer.classList.remove("drawer-open");
-      overlay.classList.remove("drawer-open");
-      drawer.style.display = "none";
-      overlay.style.display = "none";
-      document.body.classList.remove("lock");
-      if(menuBtn) menuBtn.setAttribute("aria-expanded","false");
-    }
-    if(menuBtn) menuBtn.addEventListener("click", openDrawer);
-    if(closeBtn) closeBtn.addEventListener("click", closeDrawer);
-    if(overlay) overlay.addEventListener("click", closeDrawer);
-
-    window.addEventListener("keydown", (e)=>{
-      if(e.key === "Escape" && drawer && drawer.style.display === "block") closeDrawer();
-    });
-
-    document.querySelectorAll("#menuDrawer a[href^='#']").forEach(a=>{
-      a.addEventListener("click", ()=> closeDrawer());
-    });
-
+    // Hero class toggle (mobile/desktop)
     const heroImg = document.getElementById("heroImg");
     function setHeroClass(){
       if(!heroImg) return;
@@ -1333,8 +821,65 @@ Thanks!`
     }
     setHeroClass();
     window.addEventListener("resize", setHeroClass, { passive:true });
+
+    // ===== Form -> Make webhook (with nice UX) =====
+    const form = document.getElementById("leadForm");
+    const okBox = document.getElementById("okBox");
+    const errBox = document.getElementById("errBox");
+    const submitBtn = document.getElementById("submitBtn");
+
+    // add context
+    document.getElementById("page_url").value = window.location.href;
+    document.getElementById("page_title").value = document.title;
+    document.getElementById("ts").value = new Date().toISOString();
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      okBox.style.display = "none";
+      errBox.style.display = "none";
+
+      // basic required check
+      const required = ["name","email","service","message"];
+      for(const id of required){
+        const el = document.getElementById(id);
+        if(!el || !el.value.trim()){
+          el?.focus();
+          errBox.textContent = "⚠️ Please fill the required fields.";
+          errBox.style.display = "block";
+          return;
+        }
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+
+      try{
+        // send as urlencoded (works reliably with Make webhooks)
+        const data = new URLSearchParams(new FormData(form));
+        const res = await fetch(form.action, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+          body: data.toString()
+        });
+
+        if(!res.ok) throw new Error("Bad response");
+        form.reset();
+        // re-set context after reset
+        document.getElementById("page_url").value = window.location.href;
+        document.getElementById("page_title").value = document.title;
+        document.getElementById("ts").value = new Date().toISOString();
+
+        okBox.style.display = "block";
+        okBox.scrollIntoView({behavior:"smooth", block:"center"});
+      }catch(err){
+        errBox.style.display = "block";
+      }finally{
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send request";
+      }
+    });
   </script>
 </body>
 </html>
 
-<!-- force deploy v501 -->
+<!-- force deploy v601 -->
