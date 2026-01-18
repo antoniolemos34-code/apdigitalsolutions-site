@@ -254,6 +254,11 @@
       background:linear-gradient(135deg, rgba(79,70,229,.12), rgba(6,182,212,.10));
       border:1px solid rgba(11,18,32,.10);
     }
+    .price{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:10px
+    }
+    .price b{font-size:16px;letter-spacing:-.2px}
+    .price small{color:rgba(11,18,32,.55);font-size:12px}
 
     .panel{
       grid-column:span 12;
@@ -344,15 +349,16 @@
     }
     .two{display:grid;grid-template-columns: 1fr 1fr;gap:10px;}
     .hint{font-size:11px;color:rgba(11,18,32,.55);line-height:1.5;}
-    .success,.error{
+    .error{
       display:none;
       margin-top:10px;
       padding:12px 12px;
       border-radius:16px;
       font-size:13px;
+      border:1px solid rgba(239,68,68,.25);
+      background:rgba(239,68,68,.10);
+      color:rgba(11,18,32,.82)
     }
-    .success{border:1px solid rgba(6,182,212,.22);background:rgba(6,182,212,.10);color:rgba(11,18,32,.82)}
-    .error{border:1px solid rgba(239,68,68,.25);background:rgba(239,68,68,.10);color:rgba(11,18,32,.82)}
 
     .reveal{opacity:0;transform: translateY(10px);transition: opacity .55s ease, transform .55s ease;will-change: opacity, transform;}
     .reveal.in{opacity:1;transform:translateY(0)}
@@ -427,6 +433,7 @@
         <nav class="nav-actions" aria-label="Primary">
           <div class="nav-desktop">
             <a class="btn" href="#services">Services</a>
+            <a class="btn" href="#pricing">Pricing</a>
             <a class="btn" href="#portfolio">Portfolio</a>
             <a class="btn" href="#process">Process</a>
             <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
@@ -453,7 +460,6 @@
             <source media="(max-width: 980px)" srcset="./transparent-hero.jpg">
             <img
               class="hero-image desktop"
-              id="heroImg"
               src="./transparent-hero.jpg"
               alt="A. Pereira — Websites & Google setup in Jersey"
               loading="eager"
@@ -482,7 +488,7 @@
           <div class="cta reveal">
             <a class="btn primary" href="#contact">Get a free website review</a>
             <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="btn ghost" href="#services">See services</a>
+            <a class="btn ghost" href="#pricing">See pricing</a>
           </div>
         </div>
       </div>
@@ -508,6 +514,70 @@
 
         <div class="panel reveal">
           <b>Best starting point:</b> a free review. I’ll tell you what’s missing and what to fix first — in order.
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING (SELL FASTER) -->
+    <section id="pricing" class="reveal">
+      <div class="section-title">
+        <div>
+          <h2>Simple pricing</h2>
+          <p>Fast, clear packages. Final quote after a free review (based on scope).</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card reveal">
+          <div class="ic">🟢</div>
+          <h3>Starter</h3>
+          <p>Get online fast and start receiving enquiries.</p>
+          <div class="price"><b>From £299</b><small>1-page / simple site</small></div>
+          <p style="margin-top:10px;">
+            • Mobile-first page<br>
+            • WhatsApp + contact form<br>
+            • Google Business setup
+          </p>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="btn primary" href="#contact">Request this</a>
+            <a class="btn wa" id="waStarterBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="ic">🔵</div>
+          <h3>Growth</h3>
+          <p>Professional website built to convert visitors into messages/calls.</p>
+          <div class="price"><b>From £799</b><small>4–6 pages</small></div>
+          <p style="margin-top:10px;">
+            • Multi-page website<br>
+            • SEO basics + setup<br>
+            • Business email (MX/SPF/DKIM)
+          </p>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="btn primary" href="#contact">Request this</a>
+            <a class="btn wa" id="waGrowthBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="ic">🟣</div>
+          <h3>Smart (Automation)</h3>
+          <p>Don’t lose leads — your enquiries are captured and organised automatically.</p>
+          <div class="price"><b>From £1,499</b><small>Website + automation</small></div>
+          <p style="margin-top:10px;">
+            • Lead capture automation<br>
+            • Instant notifications<br>
+            • Optional follow-up system
+          </p>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="btn primary" href="#contact">Request this</a>
+            <a class="btn wa" id="waSmartBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <b>Not sure which package you need?</b> Get a free review — I’ll tell you what to do first, in order. <a href="#contact" style="text-decoration:underline;">Start here</a>.
         </div>
       </div>
     </section>
@@ -578,14 +648,14 @@
       <div class="grid">
         <div class="card reveal"><div class="ic">1</div><h3>Free review</h3><p>You send your details. I reply with what to fix and best next steps.</p></div>
         <div class="card reveal"><div class="ic">2</div><h3>Build & setup</h3><p>Website, Google Business, email, WhatsApp — set up the right way.</p></div>
-        <div class="card reveal"><div class="ic">3</div><h3>Launch & improve</h3><p>Launch with lead capture + tracking. Improve based on real enquiries.</p></div>
+        <div class="card reveal"><div class="ic">3</div><h3>Launch</h3><p>Launch with lead capture. Improve based on real enquiries.</p></div>
         <div class="panel reveal">
           <b>Note:</b> I follow best practices, but no one can guarantee rankings/leads. What I can guarantee: clean work and clear steps.
         </div>
       </div>
     </section>
 
-    <!-- CONTACT (FORM -> FORMSPREE) -->
+    <!-- CONTACT (FORMSPREE) -->
     <section id="contact" class="reveal">
       <div class="section-title">
         <div>
@@ -608,7 +678,6 @@
                 accept-charset="UTF-8"
                 novalidate>
 
-            <!-- Formspree extras -->
             <input type="hidden" name="_subject" value="New Website Enquiry — antoniopereiraweb.co.uk" />
             <input type="hidden" name="_redirect" value="https://antoniopereiraweb.co.uk/thanks.html" />
 
@@ -723,6 +792,7 @@
 
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#process">Process</a>
           <a href="#contact">Free review</a>
@@ -767,7 +837,7 @@
     });
 
     // WhatsApp links
-    ["waTopBtn","waTopBtnMobile","waHeroBtn","waContactBtn","floatWaBtn","waInline"].forEach(id=>{
+    ["waTopBtn","waTopBtnMobile","waHeroBtn","waContactBtn","floatWaBtn","waInline","waStarterBtn","waGrowthBtn","waSmartBtn"].forEach(id=>{
       const el = document.getElementById(id);
       if(!el) return;
       el.href = WHATSAPP_URL;
@@ -816,18 +886,7 @@
     toggleFloat();
     window.addEventListener("scroll", toggleFloat, { passive:true });
 
-    // Hero class toggle (mobile/desktop)
-    const heroImg = document.getElementById("heroImg");
-    function setHeroClass(){
-      if(!heroImg) return;
-      const isMobile = window.matchMedia("(max-width: 520px)").matches;
-      heroImg.classList.toggle("mobile", isMobile);
-      heroImg.classList.toggle("desktop", !isMobile);
-    }
-    setHeroClass();
-    window.addEventListener("resize", setHeroClass, { passive:true });
-
-    // ===== Form validation (keeps Formspree super simple) =====
+    // ===== Form validation + context =====
     const form = document.getElementById("leadForm");
     const errBox = document.getElementById("errBox");
     const submitBtn = document.getElementById("submitBtn");
@@ -867,12 +926,11 @@
       setContext();
       document.getElementById("leadScore").value = calcLeadScore();
 
-      // UX (vai redirecionar para thanks.html)
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending...";
     });
   </script>
 
-  <!-- force deploy v701 -->
+  <!-- force deploy v710 -->
 </body>
 </html>
