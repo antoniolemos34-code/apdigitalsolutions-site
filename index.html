@@ -27,6 +27,10 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
 
+  <!-- Profile association (identity linking) -->
+  <link rel="me" href="https://www.instagram.com/antoniopereiraweb?igsh=MXhucHVqNTNiMTBuOA==" />
+  <link rel="me" href="https://www.facebook.com/share/185Rz8ZEYi/" />
+
   <!-- Structured data -->
   <script type="application/ld+json">
   {
@@ -50,6 +54,10 @@
       "Business Email Setup",
       "WhatsApp Business Setup",
       "Lead Capture Automation"
+    ],
+    "sameAs":[
+      "https://www.facebook.com/share/185Rz8ZEYi/",
+      "https://www.instagram.com/antoniopereiraweb?igsh=MXhucHVqNTNiMTBuOA=="
     ]
   }
   </script>
@@ -393,8 +401,19 @@
     .foot{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
     .foot a{color:var(--muted2)}
     .foot a:hover{color:rgba(11,18,32,.92)}
+    .socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .socials a{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(11,18,32,.10);
+      background:rgba(255,255,255,.72);
+      text-decoration:none;
+      color:rgba(11,18,32,.74);
+      box-shadow:0 12px 26px rgba(2,6,23,.05);
+      font-weight:850;font-size:12px;
+    }
+    .socials a:hover{background:#fff;transform:translateY(-1px)}
 
-    /* Honeypot field (anti-spam) */
     .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;pointer-events:none}
 
     @media (max-width: 980px){
@@ -436,12 +455,16 @@
             <a class="btn" href="#pricing">Pricing</a>
             <a class="btn" href="#portfolio">Portfolio</a>
             <a class="btn" href="#process">Process</a>
-            <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+            <a class="btn" id="igTopBtn" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn" id="fbTopBtn" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+
+            <a class="btn wa" id="waTopBtn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">WhatsApp</a>
             <a class="btn primary" href="#contact">Get a free review</a>
           </div>
 
           <div class="nav-mobile">
-            <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+            <a class="btn wa" id="waTopBtnMobile" href="#" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">WhatsApp</a>
             <a class="btn primary" href="#contact" id="topCta">Free review</a>
           </div>
         </nav>
@@ -458,8 +481,7 @@
           <picture>
             <source media="(max-width: 520px)" srcset="./transparent-hero-mobile.jpg">
             <source media="(max-width: 980px)" srcset="./transparent-hero.jpg">
-            <img
-              class="hero-image desktop"
+            <img class="hero-image desktop"
               src="./transparent-hero.jpg"
               alt="A. Pereira — Websites & Google setup in Jersey"
               loading="eager"
@@ -487,7 +509,8 @@
 
           <div class="cta reveal">
             <a class="btn primary" href="#contact">Get a free website review</a>
-            <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn wa" id="waHeroBtn" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn" id="igHeroBtn" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a class="btn ghost" href="#pricing">See pricing</a>
           </div>
         </div>
@@ -518,7 +541,7 @@
       </div>
     </section>
 
-    <!-- PRICING (SELL FASTER) -->
+    <!-- PRICING -->
     <section id="pricing" class="reveal">
       <div class="section-title">
         <div>
@@ -540,7 +563,7 @@
           </p>
           <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn primary" href="#contact">Request this</a>
-            <a class="btn wa" id="waStarterBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn wa" id="waStarterBtn" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
 
@@ -556,7 +579,7 @@
           </p>
           <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn primary" href="#contact">Request this</a>
-            <a class="btn wa" id="waGrowthBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn wa" id="waGrowthBtn" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
 
@@ -572,12 +595,13 @@
           </p>
           <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
             <a class="btn primary" href="#contact">Request this</a>
-            <a class="btn wa" id="waSmartBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn wa" id="waSmartBtn" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
 
         <div class="panel reveal">
-          <b>Not sure which package you need?</b> Get a free review — I’ll tell you what to do first, in order. <a href="#contact" style="text-decoration:underline;">Start here</a>.
+          <b>Not sure which package you need?</b> Get a free review — I’ll tell you what to do first, in order.
+          <a href="#contact" style="text-decoration:underline;">Start here</a>.
         </div>
       </div>
     </section>
@@ -605,7 +629,7 @@
           <div class="pbody">
             <p>A clean, trustworthy layout designed to help visitors understand the service quickly and get in touch.</p>
             <div class="pactions">
-              <a class="plink primary" href="https://ajudatotal.com" target="_blank" rel="noopener">Visit website</a>
+              <a class="plink primary" href="https://ajudatotal.com" target="_blank" rel="noopener noreferrer">Visit website</a>
               <a class="plink" href="#contact">Get a similar site</a>
             </div>
           </div>
@@ -624,7 +648,7 @@
           <div class="pbody">
             <p>A calm, premium design with clear navigation and a straightforward contact journey.</p>
             <div class="pactions">
-              <a class="plink primary" href="https://catiacoutinhoholistica.com" target="_blank" rel="noopener">Visit website</a>
+              <a class="plink primary" href="https://catiacoutinhoholistica.com" target="_blank" rel="noopener noreferrer">Visit website</a>
               <a class="plink" href="#contact">Request a review</a>
             </div>
           </div>
@@ -655,7 +679,7 @@
       </div>
     </section>
 
-    <!-- CONTACT (FORMSPREE) -->
+    <!-- CONTACT -->
     <section id="contact" class="reveal">
       <div class="section-title">
         <div>
@@ -667,7 +691,7 @@
       <div class="grid">
         <div class="panel reveal" style="grid-column:span 12;">
           <b>Contact</b><br>
-          Email: <a id="emailInline" href="#">info@antoniopereiraweb.co.uk</a> • WhatsApp: <a id="waInline" href="#" target="_blank" rel="noopener">Message me</a>
+          Email: <a id="emailInline" href="#">info@antoniopereiraweb.co.uk</a> • WhatsApp: <a id="waInline" href="#" target="_blank" rel="noopener noreferrer">Message me</a>
           <div class="hint" style="margin-top:8px;">
             This form sends to my inbox via Formspree, so I never miss your enquiry.
           </div>
@@ -681,10 +705,8 @@
             <input type="hidden" name="_subject" value="New Website Enquiry — antoniopereiraweb.co.uk" />
             <input type="hidden" name="_redirect" value="https://antoniopereiraweb.co.uk/thanks.html" />
 
-            <!-- Honeypot (spam trap) -->
             <label class="hp">Leave this empty if you're human: <input name="_gotcha" /></label>
 
-            <!-- Context -->
             <input type="hidden" name="Timestamp" id="ts" value="" />
             <input type="hidden" name="Page URL" id="page_url" value="" />
             <input type="hidden" name="Page Title" id="page_title" value="" />
@@ -769,7 +791,7 @@
 
             <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:6px;">
               <button class="btn primary" id="submitBtn" type="submit">Send request</button>
-              <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener">WhatsApp instead</a>
+              <a class="btn wa" id="waContactBtn" href="#" target="_blank" rel="noopener noreferrer">WhatsApp instead</a>
               <span class="hint" id="formHint">No spam. Your details are used only to reply.</span>
             </div>
 
@@ -785,7 +807,13 @@
           <b style="color:rgba(11,18,32,.92)">A. Pereira</b><br/>
           <span>Web design • Google Business setup • Business email.</span><br/>
           <span>Jersey, Channel Islands • <a id="emailFooter" href="#">info@antoniopereiraweb.co.uk</a></span><br/>
-          <span style="display:block;margin-top:6px;color:rgba(11,18,32,.55);font-size:11px;">
+
+          <div class="socials" aria-label="Social links">
+            <a id="igFooter" href="#" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+            <a id="fbFooter" href="#" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+          </div>
+
+          <span style="display:block;margin-top:10px;color:rgba(11,18,32,.55);font-size:11px;">
             General info only. No ranking/lead guarantees.
           </span>
         </div>
@@ -809,12 +837,16 @@
       <span style="font-size:11.5px;color:rgba(11,18,32,.60)">Reply within 24–48h (usually faster)</span>
     </div>
     <div style="display:flex;gap:10px;align-items:center;">
-      <a class="btn wa" id="floatWaBtn" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn wa" id="floatWaBtn" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       <a class="btn primary" href="#contact">Send request</a>
     </div>
   </div>
 
   <script>
+    // ===== Identity links (Social) =====
+    const INSTAGRAM_URL = "https://www.instagram.com/antoniopereiraweb?igsh=MXhucHVqNTNiMTBuOA==";
+    const FACEBOOK_URL  = "https://www.facebook.com/share/185Rz8ZEYi/";
+
     // ===== Contact setup =====
     const ENQUIRIES_EMAIL = "info@antoniopereiraweb.co.uk";
 
@@ -841,8 +873,25 @@
       const el = document.getElementById(id);
       if(!el) return;
       el.href = WHATSAPP_URL;
-      el.setAttribute("rel","noopener");
+      el.setAttribute("rel","noopener noreferrer");
       el.setAttribute("target","_blank");
+    });
+
+    // Social links
+    ["igTopBtn","igHeroBtn","igFooter"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.href = INSTAGRAM_URL;
+      el.setAttribute("target","_blank");
+      el.setAttribute("rel","noopener noreferrer");
+    });
+
+    ["fbTopBtn","fbFooter"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.href = FACEBOOK_URL;
+      el.setAttribute("target","_blank");
+      el.setAttribute("rel","noopener noreferrer");
     });
 
     // Smooth scroll
@@ -931,6 +980,6 @@
     });
   </script>
 
-  <!-- force deploy v710 -->
+  <!-- force deploy v712 -->
 </body>
 </html>
