@@ -1,11 +1,6 @@
 {
-  "name": "A. Pereira — Web Design & Business Email",
-  "short_name": "A. Pereira",
-  "description": "Premium web design and professional business email setup. Freelance / sole trader based in Jersey.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#F5F7FB",
-  "theme_color": "#F5F7FB",
+  "name": "Antonio Pereira",
+  "short_name": "Antonio",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -17,5 +12,8 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#0B1220",
+  "background_color": "#0B1220",
+  "display": "standalone"
 }
