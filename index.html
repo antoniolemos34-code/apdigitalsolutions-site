@@ -1,13 +1,17 @@
+<!-- =========================
+FILE: index.html
+PASTE AS: /index.html
+========================= -->
 <!doctype html>
 <html lang="en-GB">
 <head>
   <title>Google Maps & Local Visibility (UK) | Antonio Pereira</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0B3A3A" />
-  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#0E6B64" />
+  <meta name="color-scheme" content="light" />
 
-  <meta name="description" content="I help UK local service businesses increase Google Maps visibility and turn searches into enquiries. Clear process, measurable priorities, built for competitive UK cities. Free visibility audit available." />
+  <meta name="description" content="I help UK local service businesses increase Google Maps visibility and turn “near me” searches into enquiries. Clear process, measurable priorities, built for competitive UK cities. Free visibility audit via WhatsApp or email." />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
   <!-- Favicons -->
@@ -21,7 +25,7 @@
   <!-- Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Google Maps & Local Visibility (UK) | Antonio Pereira" />
-  <meta property="og:description" content="Increase Google Maps visibility and turn local searches into enquiries. Free visibility audit available." />
+  <meta property="og:description" content="Turn “near me” searches into enquiries. Free visibility audit via WhatsApp or email." />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
   <meta property="og:image" content="https://antoniopereiraweb.co.uk/logo-antoniopereiraweb.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -72,7 +76,6 @@
 </head>
 
 <body>
-
 <header class="nav" id="top">
   <div class="container nav-inner">
 
@@ -89,23 +92,20 @@
     </button>
 
     <nav class="links" id="site-menu" aria-label="Primary navigation">
-      <a href="/birmingham-cleaning.html">Birmingham</a>
-      <a href="/case-studies.html">Proof</a>
-      <a href="/audit.html">Free Audit</a>
-      <a href="/privacy.html">Privacy</a>
+      <a href="#how" data-track="nav_how">How it works</a>
+      <a href="/birmingham-cleaning.html" data-track="nav_birmingham">Birmingham</a>
+      <a href="/case-studies.html" data-track="nav_proof">Proof</a>
+      <a href="/privacy.html" data-track="nav_privacy">Privacy</a>
     </nav>
 
     <div class="nav-actions">
-      <a class="icon-btn" href="https://www.instagram.com/antoniopereira.je?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener" aria-label="Instagram" data-track="social_instagram">
-        IG
-      </a>
-      <a class="icon-btn" href="https://www.facebook.com/share/185ZekGjnu/" target="_blank" rel="noopener" aria-label="Facebook" data-track="social_facebook">
-        FB
-      </a>
+      <a class="icon-btn" href="https://www.instagram.com/antoniopereira.je?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener" aria-label="Instagram" data-track="social_instagram">IG</a>
+      <a class="icon-btn" href="https://www.facebook.com/share/185ZekGjnu/" target="_blank" rel="noopener" aria-label="Facebook" data-track="social_facebook">FB</a>
 
+      <!-- ONE PRIMARY CTA (WhatsApp) -->
       <a class="cta"
-         href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20free%20visibility%20audit.%20My%20website%3A%20%20My%20city%3A%20"
-         target="_blank" rel="noopener" aria-label="WhatsApp" data-track="cta_whatsapp">WhatsApp</a>
+         href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+         target="_blank" rel="noopener" data-track="cta_whatsapp_top">WhatsApp</a>
     </div>
 
   </div>
@@ -128,12 +128,23 @@
         so you show up for non-brand searches and win more calls/messages.
       </p>
 
+      <!-- SINGLE PRIMARY ACTION -->
       <div class="hero-actions">
-        <a class="cta" href="/audit.html" data-track="cta_audit">Get a free visibility audit</a>
-        <a class="cta secondary" href="/birmingham-cleaning.html" data-track="cta_birmingham">Birmingham cleaning offer</a>
+        <a class="cta big"
+           href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+           target="_blank" rel="noopener" data-track="cta_whatsapp_hero">
+          Get a free audit on WhatsApp
+        </a>
+
+        <!-- Secondary, low-friction -->
+        <a class="cta secondary"
+           href="mailto:info@antoniopereiraweb.co.uk?subject=Free%20visibility%20audit%20request&body=Hi%20Antonio%2C%0A%0AI%27d%20like%20a%20free%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20%0AGBP%20link%20(optional)%3A%20"
+           data-track="cta_email_hero">
+          Or request by email
+        </a>
       </div>
 
-      <div class="trust-row">
+      <div class="trust-row" id="how">
         <div class="trust-card">
           <div class="trust-title">What you get</div>
           <div class="trust-pills">
@@ -156,25 +167,31 @@
               <div class="num">1</div>
               <div>
                 <div class="mini-h">Send details</div>
-                <div class="mini-p">Website + your city + (optional) GBP link.</div>
+                <div class="mini-p">Website + city + (optional) GBP link.</div>
               </div>
             </div>
             <div class="mini">
               <div class="num">2</div>
               <div>
                 <div class="mini-h">Get the plan</div>
-                <div class="mini-p">A short report with top fixes in order.</div>
+                <div class="mini-p">A short audit + top fixes in order.</div>
               </div>
             </div>
           </div>
+
           <div class="cta-row">
-            <a class="cta" href="/audit.html" data-track="cta_audit2">Request free audit</a>
+            <a class="cta"
+               href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+               target="_blank" rel="noopener" data-track="cta_whatsapp_faststart">
+              Message for the free audit
+            </a>
           </div>
           <p class="help">Typical response time: 24–48 hours.</p>
         </div>
       </div>
 
-      <div class="micro-proof">
+      <!-- Micro proof (real asset you uploaded) -->
+      <div class="micro-proof" aria-label="Social proof">
         <div class="mp-left">
           <div class="badge">Google reviews</div>
           <div class="mp-title">5.0 rating</div>
@@ -191,33 +208,36 @@
     <div class="container">
       <div class="section-head">
         <h2 class="h2">Why this works (without gimmicks)</h2>
-        <p class="lead">Google Maps ranking is a mix of relevance, distance and prominence. We focus on what you can control: profile quality, trust signals and conversion.</p>
+        <p class="lead">
+          Google Maps ranking is a mix of relevance, distance and prominence. We focus on what you can control:
+          profile quality, trust signals and conversion.
+        </p>
       </div>
 
       <div class="grid3">
         <div class="card pad">
           <div class="badge">Visibility</div>
           <h3 class="h3">Show up for non-brand searches</h3>
-          <p class="p">Most businesses only appear when people search the business name. We aim for “service + city” and “near me”.</p>
+          <p class="p">Most businesses only appear when people search the name. We aim for “service + city” and “near me”.</p>
         </div>
 
         <div class="card pad">
           <div class="badge">Trust</div>
           <h3 class="h3">Increase trust signals</h3>
-          <p class="p">Reviews, photos and a complete profile build prominence and reduce hesitation when people compare options.</p>
+          <p class="p">Reviews, photos and a complete profile build prominence and reduce hesitation when customers compare options.</p>
         </div>
 
         <div class="card pad">
           <div class="badge">Conversion</div>
           <h3 class="h3">Turn views into calls/messages</h3>
-          <p class="p">Better listings don’t help if people don’t act. We tighten your call/message path so enquiries actually happen.</p>
+          <p class="p">Better listings don’t help if people don’t act. We tighten your call/message path so enquiries happen.</p>
         </div>
       </div>
 
       <div class="note-card">
         <div class="note-strong">No ranking guarantees.</div>
         <div class="note-text">
-          Nobody can promise #1. What I do guarantee: a clear roadmap, best-practice execution, and measurable improvements in your local visibility signals.
+          Nobody can promise #1. What I guarantee: clear priorities, best-practice execution, and measurable improvements to local visibility signals.
         </div>
       </div>
     </div>
@@ -228,7 +248,7 @@
     <div class="container">
       <div class="section-head">
         <h2 class="h2">What “no visibility” vs “visibility” looks like</h2>
-        <p class="lead">Example visuals (not a client screenshot). This is the outcome we’re aiming for: appearing for non-brand searches and converting to calls.</p>
+        <p class="lead">Example visuals (not a client screenshot). The goal: show up for non-brand searches and convert to calls.</p>
       </div>
 
       <div class="comparison">
@@ -246,16 +266,14 @@
                   </linearGradient>
                 </defs>
                 <rect x="0" y="0" width="900" height="520" rx="18" fill="url(#g1)"/>
-                <rect x="40" y="40" width="820" height="70" rx="14" fill="rgba(255,255,255,.55)"/>
+                <rect x="40" y="40" width="820" height="70" rx="14" fill="rgba(255,255,255,.65)"/>
                 <rect x="60" y="58" width="260" height="10" rx="6" fill="rgba(15,23,42,.35)"/>
                 <rect x="60" y="78" width="380" height="10" rx="6" fill="rgba(15,23,42,.22)"/>
-
-                <rect x="40" y="140" width="820" height="140" rx="18" fill="rgba(255,255,255,.40)"/>
+                <rect x="40" y="140" width="820" height="140" rx="18" fill="rgba(255,255,255,.55)"/>
                 <text x="70" y="190" font-family="Inter, Arial" font-size="18" fill="rgba(15,23,42,.45)">Map pack (your business missing)</text>
                 <rect x="70" y="210" width="760" height="16" rx="8" fill="rgba(15,23,42,.18)"/>
                 <rect x="70" y="240" width="640" height="16" rx="8" fill="rgba(15,23,42,.12)"/>
-
-                <rect x="40" y="310" width="820" height="160" rx="18" fill="rgba(255,255,255,.40)"/>
+                <rect x="40" y="310" width="820" height="160" rx="18" fill="rgba(255,255,255,.55)"/>
                 <text x="70" y="360" font-family="Inter, Arial" font-size="18" fill="rgba(15,23,42,.45)">Organic results only</text>
                 <rect x="70" y="380" width="760" height="16" rx="8" fill="rgba(15,23,42,.18)"/>
                 <rect x="70" y="410" width="520" height="16" rx="8" fill="rgba(15,23,42,.12)"/>
@@ -278,22 +296,22 @@
                     <stop offset="1" stop-color="rgba(59,130,246,.16)"/>
                   </linearGradient>
                 </defs>
-                <rect x="0" y="0" width="900" height="520" rx="18" fill="rgba(255,255,255,.45)"/>
-                <rect x="40" y="40" width="820" height="70" rx="14" fill="rgba(255,255,255,.65)"/>
+                <rect x="0" y="0" width="900" height="520" rx="18" fill="rgba(255,255,255,.60)"/>
+                <rect x="40" y="40" width="820" height="70" rx="14" fill="rgba(255,255,255,.75)"/>
                 <rect x="60" y="58" width="260" height="10" rx="6" fill="rgba(15,23,42,.35)"/>
                 <rect x="60" y="78" width="420" height="10" rx="6" fill="rgba(15,23,42,.22)"/>
 
                 <rect x="40" y="140" width="820" height="180" rx="18" fill="url(#g2)"/>
-                <text x="70" y="190" font-family="Inter, Arial" font-size="18" fill="rgba(15,23,42,.80)" font-weight="800">Map pack (you appear)</text>
+                <text x="70" y="190" font-family="Inter, Arial" font-size="18" fill="rgba(15,23,42,.82)" font-weight="800">Map pack (you appear)</text>
 
-                <rect x="70" y="210" width="760" height="80" rx="16" fill="rgba(15,23,42,.82)"/>
+                <rect x="70" y="210" width="760" height="80" rx="16" fill="rgba(15,23,42,.84)"/>
                 <circle cx="110" cy="250" r="18" fill="rgba(94,234,212,.98)"/>
                 <rect x="145" y="234" width="260" height="12" rx="6" fill="rgba(255,255,255,.92)"/>
                 <rect x="145" y="256" width="200" height="10" rx="5" fill="rgba(255,255,255,.65)"/>
                 <rect x="680" y="232" width="130" height="38" rx="14" fill="rgba(253,224,71,.92)"/>
                 <text x="716" y="257" font-family="Inter, Arial" font-size="14" fill="rgba(15,23,42,.95)" font-weight="900">CALL</text>
 
-                <rect x="40" y="340" width="820" height="130" rx="18" fill="rgba(255,255,255,.45)"/>
+                <rect x="40" y="340" width="820" height="130" rx="18" fill="rgba(255,255,255,.60)"/>
                 <text x="70" y="385" font-family="Inter, Arial" font-size="18" fill="rgba(15,23,42,.70)" font-weight="700">More visibility → more enquiries</text>
                 <rect x="70" y="405" width="760" height="16" rx="8" fill="rgba(15,23,42,.18)"/>
                 <rect x="70" y="435" width="520" height="16" rx="8" fill="rgba(15,23,42,.12)"/>
@@ -305,10 +323,14 @@
 
       <div class="cta-strip">
         <div>
-          <div class="cta-strip-title">Want to know what’s holding you back?</div>
-          <div class="cta-strip-sub">Send your website + city. I’ll reply with a short audit and priorities.</div>
+          <div class="cta-strip-title">Want a free audit + priorities?</div>
+          <div class="cta-strip-sub">Send your website + city. I’ll reply with what’s holding you back and the top fixes.</div>
         </div>
-        <a class="cta" href="/audit.html" data-track="cta_audit3">Get the free audit</a>
+        <a class="cta"
+           href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+           target="_blank" rel="noopener" data-track="cta_whatsapp_strip">
+          WhatsApp me
+        </a>
       </div>
     </div>
   </section>
@@ -335,14 +357,14 @@
         <div class="card pad">
           <div class="num-badge">03</div>
           <h3 class="h3">Compounding signals</h3>
-          <p class="p">Ongoing improvements + review rhythm + monthly priorities to keep moving up.</p>
+          <p class="p">Monthly priorities + review rhythm + refinements that keep you moving up.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
-  <section class="section">
+  <section class="section" id="pricing">
     <div class="container">
       <div class="section-head">
         <h2 class="h2">Packages</h2>
@@ -365,7 +387,11 @@
             <li>Review & photos guidance</li>
           </ul>
           <div class="price-cta">
-            <a class="cta secondary" href="/audit.html" data-track="cta_setup_audit">Start with the free audit</a>
+            <a class="cta secondary"
+               href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit%20to%20see%20if%20Setup%20%C2%A3500%20is%20right%20for%20me.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+               target="_blank" rel="noopener" data-track="cta_setup_whatsapp">
+              Start with the free audit
+            </a>
           </div>
         </div>
 
@@ -387,9 +413,18 @@
 
           <div class="price-cta">
             <a class="cta"
-               href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27m%20interested%20in%20the%20%C2%A3400%2Fmonth%20local%20visibility%20plan.%20My%20website%3A%20%20My%20city%3A%20"
-               target="_blank" rel="noopener" data-track="cta_monthly_whatsapp">Message on WhatsApp</a>
+               href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27m%20interested%20in%20the%20%C2%A3400%2Fmonth%20plan.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+               target="_blank" rel="noopener" data-track="cta_monthly_whatsapp">
+              Message on WhatsApp
+            </a>
+
+            <a class="link"
+               href="mailto:info@antoniopereiraweb.co.uk?subject=%C2%A3400%2Fmonth%20local%20visibility%20plan&body=Hi%20Antonio%2C%0A%0AI%27m%20interested%20in%20the%20%C2%A3400%2Fmonth%20plan.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20%0AGBP%20link%20(optional)%3A%20"
+               data-track="cta_monthly_email">
+              Prefer email? Send details
+            </a>
           </div>
+
           <p class="help">Best fit: cleaning, trades, clinics, local services in UK cities.</p>
         </div>
       </div>
@@ -440,24 +475,27 @@
     </div>
 
     <div class="foot-links">
-      <a href="/audit.html">Free Audit</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="https://www.instagram.com/antoniopereira.je?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.facebook.com/share/185ZekGjnu/" target="_blank" rel="noopener">Facebook</a>
-      <a href="mailto:info@antoniopereiraweb.co.uk">info@antoniopereiraweb.co.uk</a>
+      <a href="#top" data-track="footer_top">Top</a>
+      <a href="/privacy.html" data-track="footer_privacy">Privacy</a>
+      <a href="/birmingham-cleaning.html" data-track="footer_birmingham">Birmingham</a>
+      <a href="/case-studies.html" data-track="footer_proof">Proof</a>
+      <a href="https://www.instagram.com/antoniopereira.je?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener" data-track="footer_instagram">Instagram</a>
+      <a href="https://www.facebook.com/share/185ZekGjnu/" target="_blank" rel="noopener" data-track="footer_facebook">Facebook</a>
+      <a href="mailto:info@antoniopereiraweb.co.uk" data-track="footer_email">info@antoniopereiraweb.co.uk</a>
     </div>
   </div>
 </footer>
 
-<!-- Sticky mobile CTA -->
+<!-- Sticky mobile CTA (ONE button only) -->
 <div class="sticky-cta" aria-hidden="false">
-  <a class="sticky-btn secondary" href="/audit.html" data-track="sticky_audit">Free audit</a>
   <a class="sticky-btn"
-     href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20free%20visibility%20audit.%20My%20website%3A%20%20My%20city%3A%20"
-     target="_blank" rel="noopener" data-track="sticky_whatsapp">WhatsApp</a>
+     href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+     target="_blank" rel="noopener" data-track="sticky_whatsapp">
+     WhatsApp for free audit
+  </a>
 </div>
 
 <script src="/script.js" defer></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
-</html>
+                  </html>
