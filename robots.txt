@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://antoniopereiraweb.co.uk/sitemap.xml
