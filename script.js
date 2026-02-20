@@ -1,42 +1,36 @@
-// =========================
-// FILE: script.js
-// PASTE AS: /script.js
-// =========================
-(function(){
-  const btn = document.querySelector('.menu-btn');
-  const menu = document.getElementById('site-menu');
+(() => {
+  const btn = document.querySelector("[data-menu-button]");
+  const menu = document.querySelector("[data-menu]");
+  const overlay = document.querySelector("[data-overlay]");
 
-  if (btn && menu){
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+  if (!btn || !menu || !overlay) return;
 
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        menu.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
+  const open = () => {
+    menu.classList.add("is-open");
+    overlay.hidden = false;
+    btn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  };
 
-    document.addEventListener('click', (e) => {
-      if (!menu.classList.contains('is-open')) return;
-      const within = menu.contains(e.target) || btn.contains(e.target);
-      if (!within){
-        menu.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
+  const close = () => {
+    menu.classList.remove("is-open");
+    overlay.hidden = true;
+    btn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  };
 
-  // Simple client-side click tracking (no backend, just for debugging)
-  document.querySelectorAll('[data-track]').forEach(el => {
-    el.addEventListener('click', () => {
-      try{
-        const key = 'ap_track_' + el.getAttribute('data-track');
-        const n = Number(localStorage.getItem(key) || '0') + 1;
-        localStorage.setItem(key, String(n));
-      }catch(e){}
-    });
+  btn.addEventListener("click", () => {
+    const isOpen = menu.classList.contains("is-open");
+    isOpen ? close() : open();
+  });
+
+  overlay.addEventListener("click", close);
+
+  // close when clicking any menu link
+  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+
+  // close on ESC
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
   });
 })();
