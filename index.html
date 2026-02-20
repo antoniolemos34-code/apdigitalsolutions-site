@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:url" content="https://antoniopereiraweb.co.uk/" />
-  <meta property="og:image" content="https://antoniopereiraweb.co.uk/transparent-hero.jpg" />
+  <meta property="og:image" content="https://antoniopereiraweb.co.uk/transparent-hero-mobile.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicons -->
@@ -39,7 +39,7 @@
     "@id":"https://antoniopereiraweb.co.uk/#business",
     "name":"Antonio Pereira",
     "url":"https://antoniopereiraweb.co.uk/",
-    "image":"https://antoniopereiraweb.co.uk/transparent-hero.jpg",
+    "image":"https://antoniopereiraweb.co.uk/transparent-hero-mobile.jpg",
     "description":"Google Maps optimisation and Google Business Profile setup for small businesses in Jersey. Focused on visibility that generates calls and enquiries.",
     "email":"info@antoniopereiraweb.co.uk",
     "areaServed":[
@@ -179,9 +179,22 @@
     }
 
     .hero-media{position:relative;z-index:1}
-    .hero-image{display:block;width:100%;height:auto;background: rgba(11,18,32,.03)}
-    .hero-image.desktop{aspect-ratio: 16 / 9; object-fit: cover; object-position: 70% 30%;}
-    .hero-image.mobile{aspect-ratio: 4 / 5; object-fit: cover; object-position: 72% 22%;}
+    /* Professional fix: single image, predictable height on desktop */
+    .hero-image{
+      display:block;
+      width:100%;
+      height: clamp(320px, 46vw, 520px);
+      object-fit: cover;
+      object-position: 72% 25%;
+      background: rgba(11,18,32,.03);
+    }
+    @media (max-width: 520px){
+      .hero-image{
+        height: auto;               /* allow natural height on small screens */
+        aspect-ratio: 4 / 5;        /* keep nice mobile ratio */
+        object-position: 72% 22%;
+      }
+    }
 
     .hero-body{
       position:relative;z-index:1;
@@ -477,16 +490,12 @@
     <section class="hero reveal" id="top">
       <div class="shell">
         <div class="hero-media" aria-label="Hero banner">
-          <picture>
-            <source media="(max-width: 520px)" srcset="./transparent-hero-mobile.jpg">
-            <source media="(max-width: 980px)" srcset="./transparent-hero.jpg">
-            <img class="hero-image desktop"
-              src="./transparent-hero.jpg"
-              alt="Google Maps optimisation in Jersey"
-              loading="eager"
-              decoding="async"
-            />
-          </picture>
+          <img class="hero-image"
+            src="./transparent-hero-mobile.jpg"
+            alt="Google Maps optimisation in Jersey"
+            loading="eager"
+            decoding="async"
+          />
         </div>
 
         <div class="hero-body">
@@ -979,6 +988,6 @@
     });
   </script>
 
-  <!-- force deploy v800 -->
+  <!-- force deploy v801 -->
 </body>
-  </html>
+</html>
