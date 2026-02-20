@@ -1,43 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-<title>Free Google Visibility Audit</title>
+  <title>Free Google Visibility Audit (UK) | Antonio Pereira</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0B1220" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="description" content="Request a free visibility audit to identify the top fixes holding back your Google Maps and local search performance. Clear priorities, UK-focused." />
+  <link rel="canonical" href="https://antoniopereiraweb.co.uk/audit.html" />
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-<link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="style.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">
+      <img src="/logo-antoniopereiraweb.png" alt="Antonio Pereira" />
+      <div><strong>Antonio Pereira</strong><span>Local Visibility Consultant</span></div>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="/birmingham-cleaning.html">Birmingham</a>
+      <a href="/case-studies.html">Proof</a>
+      <a href="/audit.html" aria-current="page">Free Audit</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+    <a class="cta" data-track="cta_whatsapp"
+       href="https://wa.me/?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20free%20visibility%20audit.%20My%20website%3A%20"
+       target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
 
-<div class="container">
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="kicker"><b>Free audit</b> • Clear priorities • No fluff</div>
+      <h1>Request your free Google visibility audit.</h1>
+      <p class="sub">Fill this in and I’ll reply with what’s holding you back and the top fixes in order. Built for UK cities like Birmingham.</p>
 
-<h1>Free Visibility Audit</h1>
+      <div class="card pad" style="margin-top:22px">
+        <!-- IMPORTANT: Replace YOUR_FORM_ID with your real Formspree endpoint -->
+        <form data-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form">
+            <div>
+              <label for="name">Name *</label>
+              <input id="name" name="name" required autocomplete="name" />
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input id="email" type="email" name="email" required autocomplete="email" />
+            </div>
 
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="full">
+              <label for="business">Business name *</label>
+              <input id="business" name="business" required />
+            </div>
 
-<label>Your Name</label><br>
-<input type="text" name="name" required><br><br>
+            <div>
+              <label for="website">Website (optional)</label>
+              <input id="website" name="website" placeholder="https://…" />
+            </div>
+            <div>
+              <label for="gbp">Google Business Profile link (optional)</label>
+              <input id="gbp" name="gbp" placeholder="Paste the GBP URL if you have one" />
+            </div>
 
-<label>Your Email</label><br>
-<input type="email" name="email" required><br><br>
+            <div>
+              <label for="industry">Industry *</label>
+              <select id="industry" name="industry" required>
+                <option value="" selected disabled>Select…</option>
+                <option>Cleaning</option>
+                <option>Trades / Home services</option>
+                <option>Beauty / Aesthetics</option>
+                <option>Health / Clinics</option>
+                <option>Other local service</option>
+              </select>
+            </div>
+            <div>
+              <label for="area">Service area *</label>
+              <input id="area" name="area" required placeholder="e.g., Birmingham, Solihull, Wolverhampton" />
+            </div>
 
-<label>Business Name</label><br>
-<input type="text" name="business" required><br><br>
+            <div class="full">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell me what you do + who you want to attract."></textarea>
+            </div>
 
-<label>Website</label><br>
-<input type="text" name="website"><br><br>
+            <div class="full" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+              <button class="cta" type="submit">Send audit request</button>
+              <a class="cta secondary" data-track="audit_whatsapp"
+                 href="https://wa.me/?text=Hi%20Antonio%20%E2%80%94%20Free%20audit%20request%3A%20Business%3A%20%20Website%3A%20%20GBP%3A%20%20Area%3A%20%20Goal%3A%20"
+                 target="_blank" rel="noopener">WhatsApp instead</a>
+            </div>
+          </div>
 
-<button class="btn" type="submit">Send Audit Request</button>
+          <p class="help">After you set Formspree, set the redirect/thank-you to: <b>/thanks.html</b></p>
+          <p class="note">Privacy: I use your details only to reply to this request. See <a href="/privacy.html">Privacy</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 
-</form>
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center">
+      <div>© <span id="y"></span> Antonio Pereira — Local Visibility Consultant.</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="/privacy.html">Privacy</a>
+        <a href="mailto:info@antoniopereiraweb.co.uk">info@antoniopereiraweb.co.uk</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-</div>
-
-<script src="script.js"></script>
-
+<script src="/script.js" defer></script>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
