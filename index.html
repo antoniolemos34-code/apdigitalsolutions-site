@@ -1,7 +1,3 @@
-<!-- =========================
-FILE: index.html
-PASTE AS: /index.html
-========================= -->
 <!doctype html>
 <html lang="en-GB">
 <head>
@@ -14,7 +10,7 @@ PASTE AS: /index.html
   <meta name="description" content="I help UK local service businesses increase Google Maps visibility and turn “near me” searches into enquiries. Clear process, measurable priorities, built for competitive UK cities. Free visibility audit via WhatsApp or email." />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
-  <!-- Favicons -->
+  <!-- Favicons (root) -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -34,7 +30,7 @@ PASTE AS: /index.html
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -76,22 +72,27 @@ PASTE AS: /index.html
 </head>
 
 <body>
+
 <header class="nav" id="top">
   <div class="container nav-inner">
-
     <a class="brand" href="/" aria-label="Home">
-      <img src="/logo-antoniopereiraweb.jpg" alt="Antonio Pereira" />
+      <!-- ✅ FIX: relative path -->
+      <img class="brand-logo" src="logo-antoniopereiraweb.jpg" alt="Antonio Pereira" loading="eager" decoding="async" />
       <div class="brand-text">
         <strong>Antonio Pereira</strong>
         <span>Google Maps & Local Visibility (UK)</span>
       </div>
     </a>
 
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+    <button class="menu-btn" type="button"
+      aria-label="Open menu"
+      aria-controls="site-menu"
+      aria-expanded="false"
+      data-menu-button>
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="links" id="site-menu" aria-label="Primary navigation">
+    <nav class="links" id="site-menu" aria-label="Primary navigation" data-menu>
       <a href="#how" data-track="nav_how">How it works</a>
       <a href="/birmingham-cleaning.html" data-track="nav_birmingham">Birmingham</a>
       <a href="/case-studies.html" data-track="nav_proof">Proof</a>
@@ -102,21 +103,22 @@ PASTE AS: /index.html
       <a class="icon-btn" href="https://www.instagram.com/antoniopereira.je?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener" aria-label="Instagram" data-track="social_instagram">IG</a>
       <a class="icon-btn" href="https://www.facebook.com/share/185ZekGjnu/" target="_blank" rel="noopener" aria-label="Facebook" data-track="social_facebook">FB</a>
 
-      <!-- ONE PRIMARY CTA (WhatsApp) -->
       <a class="cta"
-         href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-         target="_blank" rel="noopener" data-track="cta_whatsapp_top">WhatsApp</a>
+        href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+        target="_blank" rel="noopener" data-track="cta_whatsapp_top">
+        WhatsApp
+      </a>
     </div>
-
   </div>
 </header>
 
+<!-- mobile menu overlay -->
+<div class="menu-overlay" hidden data-overlay></div>
+
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
-
       <div class="kicker">
         <b>UK-focused</b> • Google Maps & Local Search • Built for competitive cities
       </div>
@@ -128,18 +130,16 @@ PASTE AS: /index.html
         so you show up for non-brand searches and win more calls/messages.
       </p>
 
-      <!-- SINGLE PRIMARY ACTION -->
       <div class="hero-actions">
         <a class="cta big"
-           href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-           target="_blank" rel="noopener" data-track="cta_whatsapp_hero">
+          href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+          target="_blank" rel="noopener" data-track="cta_whatsapp_hero">
           Get a free audit on WhatsApp
         </a>
 
-        <!-- Secondary, low-friction -->
         <a class="cta secondary"
-           href="mailto:info@antoniopereiraweb.co.uk?subject=Free%20visibility%20audit%20request&body=Hi%20Antonio%2C%0A%0AI%27d%20like%20a%20free%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20%0AGBP%20link%20(optional)%3A%20"
-           data-track="cta_email_hero">
+          href="mailto:info@antoniopereiraweb.co.uk?subject=Free%20visibility%20audit%20request&body=Hi%20Antonio%2C%0A%0AI%27d%20like%20a%20free%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20%0AGBP%20link%20(optional)%3A%20"
+          data-track="cta_email_hero">
           Or request by email
         </a>
       </div>
@@ -181,8 +181,8 @@ PASTE AS: /index.html
 
           <div class="cta-row">
             <a class="cta"
-               href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-               target="_blank" rel="noopener" data-track="cta_whatsapp_faststart">
+              href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+              target="_blank" rel="noopener" data-track="cta_whatsapp_faststart">
               Message for the free audit
             </a>
           </div>
@@ -190,20 +190,18 @@ PASTE AS: /index.html
         </div>
       </div>
 
-      <!-- Micro proof (real asset you uploaded) -->
       <div class="micro-proof" aria-label="Social proof">
         <div class="mp-left">
           <div class="badge">Google reviews</div>
           <div class="mp-title">5.0 rating</div>
           <div class="mp-sub">Real reviews • trust signal for new prospects</div>
         </div>
-        <img class="mp-img" src="/proof-rating.jpg" alt="Google rating screenshot" loading="lazy">
+        <!-- ✅ FIX: relative path -->
+        <img class="mp-img" src="proof-rating.jpg" alt="Google rating screenshot" loading="lazy" decoding="async">
       </div>
-
     </div>
   </section>
 
-  <!-- WHY -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -243,7 +241,6 @@ PASTE AS: /index.html
     </div>
   </section>
 
-  <!-- BEFORE / AFTER -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -300,17 +297,14 @@ PASTE AS: /index.html
                 <rect x="40" y="40" width="820" height="70" rx="14" fill="rgba(255,255,255,.75)"/>
                 <rect x="60" y="58" width="260" height="10" rx="6" fill="rgba(15,23,42,.35)"/>
                 <rect x="60" y="78" width="420" height="10" rx="6" fill="rgba(15,23,42,.22)"/>
-
                 <rect x="40" y="140" width="820" height="180" rx="18" fill="url(#g2)"/>
                 <text x="70" y="190" font-family="Inter, Arial" font-size="18" fill="rgba(15,23,42,.82)" font-weight="800">Map pack (you appear)</text>
-
                 <rect x="70" y="210" width="760" height="80" rx="16" fill="rgba(15,23,42,.84)"/>
                 <circle cx="110" cy="250" r="18" fill="rgba(94,234,212,.98)"/>
                 <rect x="145" y="234" width="260" height="12" rx="6" fill="rgba(255,255,255,.92)"/>
                 <rect x="145" y="256" width="200" height="10" rx="5" fill="rgba(255,255,255,.65)"/>
                 <rect x="680" y="232" width="130" height="38" rx="14" fill="rgba(253,224,71,.92)"/>
                 <text x="716" y="257" font-family="Inter, Arial" font-size="14" fill="rgba(15,23,42,.95)" font-weight="900">CALL</text>
-
                 <rect x="40" y="340" width="820" height="130" rx="18" fill="rgba(255,255,255,.60)"/>
                 <text x="70" y="385" font-family="Inter, Arial" font-size="18" fill="rgba(15,23,42,.70)" font-weight="700">More visibility → more enquiries</text>
                 <rect x="70" y="405" width="760" height="16" rx="8" fill="rgba(15,23,42,.18)"/>
@@ -327,15 +321,14 @@ PASTE AS: /index.html
           <div class="cta-strip-sub">Send your website + city. I’ll reply with what’s holding you back and the top fixes.</div>
         </div>
         <a class="cta"
-           href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-           target="_blank" rel="noopener" data-track="cta_whatsapp_strip">
+          href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+          target="_blank" rel="noopener" data-track="cta_whatsapp_strip">
           WhatsApp me
         </a>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -363,7 +356,6 @@ PASTE AS: /index.html
     </div>
   </section>
 
-  <!-- PRICING -->
   <section class="section" id="pricing">
     <div class="container">
       <div class="section-head">
@@ -388,8 +380,8 @@ PASTE AS: /index.html
           </ul>
           <div class="price-cta">
             <a class="cta secondary"
-               href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit%20to%20see%20if%20Setup%20%C2%A3500%20is%20right%20for%20me.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-               target="_blank" rel="noopener" data-track="cta_setup_whatsapp">
+              href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit%20to%20see%20if%20Setup%20%C2%A3500%20is%20right%20for%20me.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+              target="_blank" rel="noopener" data-track="cta_setup_whatsapp">
               Start with the free audit
             </a>
           </div>
@@ -413,14 +405,14 @@ PASTE AS: /index.html
 
           <div class="price-cta">
             <a class="cta"
-               href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27m%20interested%20in%20the%20%C2%A3400%2Fmonth%20plan.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-               target="_blank" rel="noopener" data-track="cta_monthly_whatsapp">
+              href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27m%20interested%20in%20the%20%C2%A3400%2Fmonth%20plan.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+              target="_blank" rel="noopener" data-track="cta_monthly_whatsapp">
               Message on WhatsApp
             </a>
 
             <a class="link"
-               href="mailto:info@antoniopereiraweb.co.uk?subject=%C2%A3400%2Fmonth%20local%20visibility%20plan&body=Hi%20Antonio%2C%0A%0AI%27m%20interested%20in%20the%20%C2%A3400%2Fmonth%20plan.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20%0AGBP%20link%20(optional)%3A%20"
-               data-track="cta_monthly_email">
+              href="mailto:info@antoniopereiraweb.co.uk?subject=%C2%A3400%2Fmonth%20local%20visibility%20plan&body=Hi%20Antonio%2C%0A%0AI%27m%20interested%20in%20the%20%C2%A3400%2Fmonth%20plan.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20%0AGBP%20link%20(optional)%3A%20"
+              data-track="cta_monthly_email">
               Prefer email? Send details
             </a>
           </div>
@@ -431,7 +423,6 @@ PASTE AS: /index.html
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -486,16 +477,15 @@ PASTE AS: /index.html
   </div>
 </footer>
 
-<!-- Sticky mobile CTA (ONE button only) -->
 <div class="sticky-cta" aria-hidden="false">
   <a class="sticky-btn"
-     href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-     target="_blank" rel="noopener" data-track="sticky_whatsapp">
-     WhatsApp for free audit
+    href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+    target="_blank" rel="noopener" data-track="sticky_whatsapp">
+    WhatsApp for free audit
   </a>
 </div>
 
-<script src="/script.js" defer></script>
+<script src="script.js" defer></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
                   </html>
