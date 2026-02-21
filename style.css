@@ -103,24 +103,6 @@ img{ max-width:100%; height:auto; display:block; }
   align-items:center;
   gap:10px;
 }
-.icon-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  height: 40px;
-  min-width: 44px;
-  padding: 0 12px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.65);
-  font-weight: 800;
-  font-size: 13px;
-  color: rgba(15,23,42,.78);
-}
-.icon-btn:hover{
-  border-color: rgba(14,107,100,.28);
-  background: rgba(255,255,255,.9);
-}
 
 .cta{
   display:inline-flex;
@@ -164,7 +146,6 @@ img{ max-width:100%; height:auto; display:block; }
   border-radius: 14px;
   border: 1px solid var(--line);
   background: rgba(255,255,255,.7);
-  box-shadow: none;
 }
 .menu-btn span{
   display:block;
@@ -219,6 +200,7 @@ h1{
   flex-wrap: wrap;
   align-items:center;
 }
+
 .hero-link{
   font-weight: 900;
   color: rgba(14,107,100,.95);
@@ -312,9 +294,7 @@ h1{
   background:#fff;
 }
 
-.section{
-  padding: 34px 0;
-}
+.section{ padding: 34px 0; }
 .section-head{ margin-bottom: 14px; }
 .h2{
   margin:0;
@@ -369,31 +349,6 @@ h1{
 .note-strong{ font-weight: 900; }
 .note-text{ color: rgba(15,23,42,.70); line-height: 1.6; }
 
-.comparison{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 14px;
-}
-.mock .bar{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  font-weight: 800;
-  color: rgba(15,23,42,.60);
-  margin-bottom: 8px;
-}
-.dot{
-  width: 9px; height: 9px; border-radius: 999px;
-  background: rgba(15,23,42,.22);
-}
-.mock .label{
-  display:block;
-  font-weight: 900;
-  margin-bottom: 8px;
-  color: rgba(15,23,42,.78);
-}
-
 .cta-strip{
   margin-top: 14px;
   display:flex;
@@ -408,73 +363,6 @@ h1{
 }
 .cta-strip-title{ font-weight: 900; letter-spacing:-0.02em; }
 .cta-strip-sub{ color: rgba(15,23,42,.62); margin-top: 2px; }
-
-.pricing{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 14px;
-}
-.price{ padding: 16px; }
-.price-top{
-  display:flex;
-  align-items:flex-start;
-  justify-content: space-between;
-  gap: 10px;
-}
-.amount{
-  font-weight: 900;
-  font-size: 28px;
-  letter-spacing: -0.03em;
-}
-.per{ font-size: 14px; font-weight: 800; color: rgba(15,23,42,.60); margin-left: 4px; }
-.ul{
-  margin: 12px 0 0;
-  padding-left: 18px;
-  color: rgba(15,23,42,.68);
-  line-height: 1.7;
-}
-.price-cta{ margin-top: 12px; display:flex; flex-direction:column; gap:10px; }
-.link{
-  font-weight: 900;
-  color: rgba(14,107,100,.95);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.featured{
-  border-color: rgba(14,107,100,.22);
-  box-shadow: 0 22px 55px rgba(14,107,100,.16);
-  background: linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.72));
-}
-
-/* num-badge */
-.num-badge{
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  display:grid;
-  place-items:center;
-  font-weight: 900;
-  color:#fff;
-  background: linear-gradient(180deg, rgba(14,107,100,1), rgba(11,90,84,1));
-  box-shadow: 0 14px 30px rgba(14,107,100,.22);
-  margin-bottom: 10px;
-}
-
-.faq{ margin-top: 14px; display:flex; flex-direction:column; gap: 10px; }
-.faq-item{
-  background: rgba(255,255,255,.78);
-  border: 1px solid var(--line);
-  border-radius: var(--radius2);
-  padding: 12px 14px;
-}
-.faq-item summary{
-  cursor:pointer;
-  font-weight: 900;
-  list-style:none;
-}
-.faq-item summary::-webkit-details-marker{ display:none; }
-.faq-item p{ margin: 10px 0 0; color: rgba(15,23,42,.68); line-height: 1.6; }
 
 .footer{
   padding: 30px 0 40px;
@@ -510,8 +398,6 @@ h1{
 @media (max-width: 980px){
   .trust-row{ grid-template-columns: 1fr; }
   .grid3{ grid-template-columns: 1fr; }
-  .comparison{ grid-template-columns: 1fr; }
-  .pricing{ grid-template-columns: 1fr; }
   .cta-strip{ flex-direction: column; align-items:flex-start; }
   .micro-proof{ flex-direction: column; align-items:flex-start; }
   .mp-img{ width: 100%; }
@@ -521,35 +407,21 @@ h1{
   .hero-link{ width: 100%; }
 }
 
-/* =========================================
-   MOBILE HEADER: ONLY WHATSAPP ON TOP
-   ========================================= */
+/* ✅ MOBILE: top clean (no IG/FB, no nav links), keep WhatsApp only */
 @media (max-width: 860px){
-
-  /* keep menu button available (optional) */
   .menu-btn{ display:inline-flex; align-items:center; justify-content:center; }
 
-  /* HIDE IG/FB buttons completely */
-  .icon-btn{ display:none !important; }
-
-  /* OPTION A (recommended): hide the nav links bar entirely on mobile
-     (you said "only WhatsApp on top") */
+  /* hide nav links on mobile (top stays clean) */
   .links{ display:none !important; }
   .menu-overlay{ display:none !important; }
 
-  /* compact brand subtitle */
+  /* remove subtitle to reduce clutter */
   .brand-text span{ display:none; }
 
-  /* keep whatsapp aligned right */
-  .nav-actions{
-    gap: 10px;
-    justify-content: flex-end;
-  }
-
-  /* reduce whatsapp button size slightly */
+  /* WhatsApp button slightly tighter */
   .nav-actions .cta{
     height: 40px;
     padding: 0 16px;
     font-size: 13px;
   }
-  }
+                                  }
