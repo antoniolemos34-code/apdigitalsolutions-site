@@ -447,7 +447,7 @@ h1{
   background: linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.72));
 }
 
-/* ✅ Added: num-badge (you used it in HTML) */
+/* num-badge */
 .num-badge{
   width: 44px;
   height: 44px;
@@ -516,29 +516,40 @@ h1{
   .micro-proof{ flex-direction: column; align-items:flex-start; }
   .mp-img{ width: 100%; }
 
-  /* ✅ Mobile CTA layout: buttons become full width */
   .hero-actions{ align-items: stretch; }
   .hero-actions .cta{ width: 100%; justify-content:center; }
   .hero-link{ width: 100%; }
 }
 
+/* =========================================
+   MOBILE HEADER: ONLY WHATSAPP ON TOP
+   ========================================= */
 @media (max-width: 860px){
+
+  /* keep menu button available (optional) */
   .menu-btn{ display:inline-flex; align-items:center; justify-content:center; }
-  .links{
-    position: fixed;
-    top: 64px;
-    left: 12px;
-    right: 12px;
-    display:none;
-    flex-direction: column;
-    gap: 6px;
-    padding: 12px;
-    border-radius: 18px;
-    background: rgba(255,255,255,.92);
-    border: 1px solid rgba(15,23,42,.12);
-    box-shadow: var(--shadow);
-    z-index: 55;
+
+  /* HIDE IG/FB buttons completely */
+  .icon-btn{ display:none !important; }
+
+  /* OPTION A (recommended): hide the nav links bar entirely on mobile
+     (you said "only WhatsApp on top") */
+  .links{ display:none !important; }
+  .menu-overlay{ display:none !important; }
+
+  /* compact brand subtitle */
+  .brand-text span{ display:none; }
+
+  /* keep whatsapp aligned right */
+  .nav-actions{
+    gap: 10px;
+    justify-content: flex-end;
   }
-  .links a{ width: 100%; }
-  .links.is-open{ display:flex; }
-}
+
+  /* reduce whatsapp button size slightly */
+  .nav-actions .cta{
+    height: 40px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  }
