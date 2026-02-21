@@ -10,7 +10,7 @@
   <meta name="description" content="I help UK local service businesses increase Google Maps visibility and turn “near me” searches into enquiries. Clear process, measurable priorities, built for competitive UK cities. Free visibility audit via WhatsApp or email." />
   <link rel="canonical" href="https://antoniopereiraweb.co.uk/" />
 
-  <!-- Favicons (root) -->
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -30,7 +30,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- ✅ ALWAYS ABSOLUTE -->
   <link rel="stylesheet" href="/style.css" />
 
   <!-- Schema -->
@@ -77,7 +76,6 @@
 <header class="nav" id="top">
   <div class="container nav-inner">
     <a class="brand" href="/" aria-label="Home">
-      <!-- ✅ ALWAYS ABSOLUTE -->
       <img class="brand-logo" src="/logo-antoniopereiraweb.jpg" alt="Antonio Pereira" loading="eager" decoding="async" />
       <div class="brand-text">
         <strong>Antonio Pereira</strong>
@@ -104,6 +102,7 @@
       <a class="icon-btn" href="https://www.instagram.com/antoniopereira.je?igsh=MXhucHVqNTNiMTBuOA==" target="_blank" rel="noopener" aria-label="Instagram" data-track="social_instagram">IG</a>
       <a class="icon-btn" href="https://www.facebook.com/share/185ZekGjnu/" target="_blank" rel="noopener" aria-label="Facebook" data-track="social_facebook">FB</a>
 
+      <!-- ✅ Only ONE primary CTA in header -->
       <a class="cta"
         href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
         target="_blank" rel="noopener" data-track="cta_whatsapp_top">
@@ -130,17 +129,24 @@
         so you show up for non-brand searches and win more calls/messages.
       </p>
 
+      <!-- ✅ Clean CTA structure: 1 primary + 1 secondary + optional email link -->
       <div class="hero-actions">
         <a class="cta big"
           href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
           target="_blank" rel="noopener" data-track="cta_whatsapp_hero">
-          Get a free audit on WhatsApp
+          Request a free audit
         </a>
 
         <a class="cta secondary"
+          href="/birmingham-cleaning.html"
+          data-track="cta_birmingham_hero">
+          Birmingham offer
+        </a>
+
+        <a class="hero-link"
           href="mailto:info@antoniopereiraweb.co.uk?subject=Free%20visibility%20audit%20request&body=Hi%20Antonio%2C%0A%0AI%27d%20like%20a%20free%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20%0AGBP%20link%20(optional)%3A%20"
           data-track="cta_email_hero">
-          Or request by email
+          Prefer email? Send details
         </a>
       </div>
 
@@ -179,11 +185,12 @@
             </div>
           </div>
 
+          <!-- ✅ Keep ONE action here, but make it secondary so it doesn't compete with hero -->
           <div class="cta-row">
-            <a class="cta"
-              href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+            <a class="cta secondary"
+              href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20Quick%20audit%20request.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
               target="_blank" rel="noopener" data-track="cta_whatsapp_faststart">
-              Message for the free audit
+              Send details on WhatsApp
             </a>
           </div>
           <p class="help">Typical response time: 24–48 hours.</p>
@@ -196,7 +203,6 @@
           <div class="mp-title">5.0 rating</div>
           <div class="mp-sub">Real reviews • trust signal for new prospects</div>
         </div>
-        <!-- ✅ ALWAYS ABSOLUTE -->
         <img class="mp-img" src="/proof-rating.jpg" alt="Google rating screenshot" loading="lazy" decoding="async">
       </div>
     </div>
@@ -323,7 +329,7 @@
         <a class="cta"
           href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
           target="_blank" rel="noopener" data-track="cta_whatsapp_strip">
-          WhatsApp me
+          Request audit
         </a>
       </div>
     </div>
@@ -477,16 +483,7 @@
   </div>
 </footer>
 
-<div class="sticky-cta" aria-hidden="false">
-  <a class="sticky-btn"
-    href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
-    target="_blank" rel="noopener" data-track="sticky_whatsapp">
-    WhatsApp for free audit
-  </a>
-</div>
-
-<!-- ✅ ALWAYS ABSOLUTE -->
 <script src="/script.js" defer></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
-          </html>
+                  </html>
