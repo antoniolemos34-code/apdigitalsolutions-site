@@ -30,7 +30,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <!-- ✅ ALWAYS ABSOLUTE -->
+  <link rel="stylesheet" href="/style.css" />
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -76,8 +77,8 @@
 <header class="nav" id="top">
   <div class="container nav-inner">
     <a class="brand" href="/" aria-label="Home">
-      <!-- ✅ FIX: relative path -->
-      <img class="brand-logo" src="logo-antoniopereiraweb.jpg" alt="Antonio Pereira" loading="eager" decoding="async" />
+      <!-- ✅ ALWAYS ABSOLUTE -->
+      <img class="brand-logo" src="/logo-antoniopereiraweb.jpg" alt="Antonio Pereira" loading="eager" decoding="async" />
       <div class="brand-text">
         <strong>Antonio Pereira</strong>
         <span>Google Maps & Local Visibility (UK)</span>
@@ -112,7 +113,6 @@
   </div>
 </header>
 
-<!-- mobile menu overlay -->
 <div class="menu-overlay" hidden data-overlay></div>
 
 <main>
@@ -196,8 +196,8 @@
           <div class="mp-title">5.0 rating</div>
           <div class="mp-sub">Real reviews • trust signal for new prospects</div>
         </div>
-        <!-- ✅ FIX: relative path -->
-        <img class="mp-img" src="proof-rating.jpg" alt="Google rating screenshot" loading="lazy" decoding="async">
+        <!-- ✅ ALWAYS ABSOLUTE -->
+        <img class="mp-img" src="/proof-rating.jpg" alt="Google rating screenshot" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -485,7 +485,8 @@
   </a>
 </div>
 
-<script src="script.js" defer></script>
+<!-- ✅ ALWAYS ABSOLUTE -->
+<script src="/script.js" defer></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
-                  </html>
+          </html>
