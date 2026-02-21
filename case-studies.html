@@ -29,7 +29,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- ✅ MUST be absolute -->
   <link rel="stylesheet" href="/style.css" />
 
   <!-- Schema -->
@@ -98,7 +97,7 @@
 
 <main>
 
-  <!-- HERO (clean, mobile-first) -->
+  <!-- HERO -->
   <section class="hero proof-hero">
     <div class="container">
 
@@ -111,7 +110,6 @@
         the same signals that influence Google Maps rankings and customer trust.
       </p>
 
-      <!-- CTA row (tight + clear) -->
       <div class="proof-cta-row">
         <a class="cta big"
            href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
@@ -119,13 +117,11 @@
            Request a free audit
         </a>
 
-        <a class="cta secondary"
-           href="/birmingham-cleaning.html">
-          See the Birmingham offer
+        <a class="cta secondary" href="/birmingham-cleaning.html">
+          Birmingham offer
         </a>
       </div>
 
-      <!-- Strategic “what counts as proof” -->
       <div class="proof-grid">
 
         <div class="card pad">
@@ -190,41 +186,55 @@
 
       </div>
 
-      <!-- Proof wall (placeholders you can replace with real images) -->
-      <section class="section proof-wall">
-        <div class="section-head">
-          <h2 class="h2">Proof wall</h2>
-          <p class="lead">Add real screenshots here. Start with 3–6. Keep it simple and believable.</p>
+      <div class="note-card" style="margin-top:16px">
+        <div class="note-strong">Rule:</div>
+        <div class="note-text">
+          3–6 strong screenshots beat 20 weak ones. Keep it clean and believable.
         </div>
+      </div>
 
-        <div class="proof-wall-grid">
-          <figure class="card pad proof-shot">
-            <div class="badge">GBP Insights</div>
-            <div class="shot-placeholder">Drop screenshot here</div>
-            <figcaption class="muted">Calls / messages trend (before → after)</figcaption>
-          </figure>
+    </div>
+  </section>
 
-          <figure class="card pad proof-shot">
-            <div class="badge">Searches</div>
-            <div class="shot-placeholder">Drop screenshot here</div>
-            <figcaption class="muted">Discovery searches: “service + city”</figcaption>
-          </figure>
+  <!-- ✅ MOVED OUTSIDE HERO (fixes mobile mess) -->
+  <section class="section proof-wall">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Proof wall</h2>
+        <p class="lead">Add real screenshots here. Start with 3–6. Keep it simple and believable.</p>
+      </div>
 
-          <figure class="card pad proof-shot">
-            <div class="badge">Maps ranking</div>
-            <div class="shot-placeholder">Drop screenshot here</div>
-            <figcaption class="muted">Ranking example with date + location</figcaption>
-          </figure>
+      <div class="proof-wall-grid">
+        <figure class="card pad proof-shot">
+          <div class="badge">GBP Insights</div>
+          <div class="shot-placeholder">Drop screenshot here</div>
+          <figcaption class="muted">Calls / messages trend (before → after)</figcaption>
+        </figure>
+
+        <figure class="card pad proof-shot">
+          <div class="badge">Searches</div>
+          <div class="shot-placeholder">Drop screenshot here</div>
+          <figcaption class="muted">Discovery searches: “service + city”</figcaption>
+        </figure>
+
+        <figure class="card pad proof-shot">
+          <div class="badge">Maps ranking</div>
+          <div class="shot-placeholder">Drop screenshot here</div>
+          <figcaption class="muted">Ranking example with date + location</figcaption>
+        </figure>
+      </div>
+
+      <div class="cta-strip" style="margin-top:16px">
+        <div>
+          <div class="cta-strip-title">Want a free audit + priorities?</div>
+          <div class="cta-strip-sub">Send your website + city. I’ll reply with what’s holding you back and the top fixes.</div>
         </div>
-
-        <div class="note-card" style="margin-top:16px">
-          <div class="note-strong">Rule:</div>
-          <div class="note-text">
-            Don’t overload this page. 3–6 strong screenshots beat 20 weak ones.
-          </div>
-        </div>
-      </section>
-
+        <a class="cta"
+          href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
+          target="_blank" rel="noopener">
+          WhatsApp me
+        </a>
+      </div>
     </div>
   </section>
 
@@ -249,7 +259,6 @@
   </div>
 </footer>
 
-<!-- Sticky mobile CTA -->
 <div class="sticky-cta" aria-hidden="false">
   <a class="sticky-btn"
      href="https://wa.me/447700704591?text=Hi%20Antonio%20%E2%80%94%20I%27d%20like%20a%20FREE%20visibility%20audit.%0A%0AWebsite%3A%20%0ACity%3A%20%0AService%3A%20"
@@ -261,4 +270,4 @@
 <script src="/script.js" defer></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
-</html>
+        </html>
