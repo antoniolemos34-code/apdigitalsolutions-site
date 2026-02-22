@@ -26,9 +26,22 @@
 
   overlay.addEventListener("click", close);
 
+  // close when clicking any NORMAL menu link (but NOT the Cities toggle button)
   menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
 
+  // close on ESC
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
+
+  // Cities toggle (submenu)
+  const citiesToggle = menu.querySelector("[data-cities-toggle]");
+  const citiesPanel = menu.querySelector("[data-cities]");
+  if (citiesToggle && citiesPanel) {
+    citiesToggle.addEventListener("click", () => {
+      const expanded = citiesToggle.getAttribute("aria-expanded") === "true";
+      citiesToggle.setAttribute("aria-expanded", String(!expanded));
+      citiesPanel.hidden = expanded; // if expanded -> hide
+    });
+  }
 })();
