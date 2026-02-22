@@ -20,7 +20,8 @@
   };
 
   btn.addEventListener("click", () => {
-    menu.classList.contains("is-open") ? close() : open();
+    const isOpen = menu.classList.contains("is-open");
+    isOpen ? close() : open();
   });
 
   overlay.addEventListener("click", close);
