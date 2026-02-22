@@ -26,10 +26,8 @@
 
   overlay.addEventListener("click", close);
 
-  // close when clicking any menu link
   menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
 
-  // close on ESC
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
