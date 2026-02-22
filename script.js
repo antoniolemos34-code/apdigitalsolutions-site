@@ -26,7 +26,7 @@
 
   overlay.addEventListener("click", close);
 
-  // close when clicking any menu link
+  // close when clicking any menu link (including dropdown links)
   menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
 
   // close on ESC
