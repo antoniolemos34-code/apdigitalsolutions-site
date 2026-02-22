@@ -49,6 +49,7 @@ img{ max-width:100%; height:auto; display:block; }
   justify-content:space-between;
   gap:14px;
   padding: 12px 0;
+  position: relative; /* IMPORTANT: anchors dropdown menu */
 }
 .brand{
   display:flex;
@@ -357,3 +358,99 @@ h1{
   .brand-text span{ display:none; }
   .nav-actions .cta{ height: 40px; font-size: 13px; }
 }
+
+/* =========================================================
+   MOBILE MENU (script.js)
+   Requires:
+   - button.menu-btn[data-menu-button]
+   - nav.links[data-menu]
+   - .menu-overlay[data-overlay]
+   ========================================================= */
+
+/* Burger button (hidden on desktop) */
+.menu-btn{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,.12);
+  background: rgba(255,255,255,.72);
+  box-shadow: var(--shadow2);
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:0;
+}
+.menu-btn span{
+  display:block;
+  width:18px;
+  height:2px;
+  border-radius:999px;
+  background: rgba(15,23,42,.78);
+}
+
+/* Desktop nav links */
+nav.links{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+nav.links a{
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(15,23,42,.72);
+  border: 1px solid transparent;
+  background: transparent;
+}
+nav.links a:hover{
+  border-color: rgba(14,107,100,.18);
+  background: rgba(255,255,255,.70);
+}
+nav.links a[aria-current="page"]{
+  border-color: rgba(14,107,100,.22);
+  background: rgba(14,107,100,.08);
+  color: rgba(15,23,42,.86);
+}
+
+/* Overlay */
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  background: rgba(15,23,42,.18);
+  z-index:45;
+}
+
+/* Mobile dropdown behavior */
+@media (max-width: 860px){
+  .menu-btn{ display:inline-flex; }
+
+  nav.links{
+    display:none;
+    position:absolute;
+    top: 64px;
+    left: 12px;
+    right: 12px;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(15,23,42,.12);
+    box-shadow: var(--shadow);
+    z-index: 55;
+  }
+  nav.links.is-open{
+    display:grid;
+    gap:10px;
+  }
+  nav.links a{
+    width:100%;
+    padding: 12px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(15,23,42,.10);
+    background: rgba(255,255,255,.70);
+  }
+                   }
