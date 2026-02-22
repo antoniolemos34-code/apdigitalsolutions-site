@@ -20,16 +20,13 @@
   };
 
   btn.addEventListener("click", () => {
-    const isOpen = menu.classList.contains("is-open");
-    isOpen ? close() : open();
+    menu.classList.contains("is-open") ? close() : open();
   });
 
   overlay.addEventListener("click", close);
 
-  // close when clicking any menu link (including dropdown links)
   menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
 
-  // close on ESC
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
