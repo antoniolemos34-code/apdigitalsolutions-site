@@ -1,3 +1,4 @@
+// /script.js
 (() => {
   const btn = document.querySelector("[data-menu-button]");
   const menu = document.querySelector("[data-menu]");
@@ -24,12 +25,13 @@
     isOpen ? close() : open();
   });
 
+  // Close when clicking overlay
   overlay.addEventListener("click", close);
 
-  // close when clicking any menu link
-  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+  // Close when clicking any menu link
+  menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
 
-  // close on ESC
+  // Close on ESC
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
