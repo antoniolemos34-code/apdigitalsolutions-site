@@ -79,7 +79,7 @@ img{ max-width:100%; height:auto; display:block; }
 }
 .nav-actions{ display:flex; align-items:center; gap:10px; }
 
-/* MENU (desktop) */
+/* Desktop links (hidden on mobile via media query) */
 .links{
   display:flex;
   align-items:center;
@@ -96,7 +96,7 @@ img{ max-width:100%; height:auto; display:block; }
   border: 1px solid rgba(14,107,100,.14);
 }
 
-/* HAMBURGER */
+/* Hamburger */
 .menu-btn{
   display:none;
   width: 46px;
@@ -411,7 +411,7 @@ h1{
 
 /* FOOTER */
 .footer{
-  padding: 30px 0 86px;
+  padding: 30px 0 86px; /* extra space for sticky CTA */
   border-top: 1px solid var(--line);
   background: rgba(255,255,255,.45);
 }
@@ -478,8 +478,10 @@ h1{
   .cta-strip .cta{ width: 100%; justify-content:center; }
 }
 
+/* Mobile menu behavior */
 @media (max-width: 860px){
   .menu-btn{ display:inline-flex; }
+
   .links{
     position: fixed;
     left: 12px;
@@ -501,6 +503,10 @@ h1{
     border-radius: 14px;
     border: 1px solid rgba(15,23,42,.08);
     background: rgba(255,255,255,.75);
+  }
+  .links a:hover{
+    border-color: rgba(14,107,100,.22);
+    background: rgba(255,255,255,.95);
   }
   .links.is-open{ display:flex; }
 }
